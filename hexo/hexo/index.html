@@ -1,0 +1,507 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Hexo,shoya,网站" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/hexo/hexo/">
+
+
+
+  <title>
+关于hexo-shoka主题配置过程的补充 - hexo |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">关于hexo-shoka主题配置过程的补充
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-16 17:35:36">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-16T17:35:36+08:00">2022-11-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/F86poImfK4NwcLP.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/KA7WHtm61zLES9T.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/hcztLMjJBGdaslK.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/5xS8irIm4FqtwMC.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/mJcbwPV4zuS28ra.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/AxdIBGQtLV3iM2p.png"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/hexo/" itemprop="item" rel="index" title="分类于 hexo"><span itemprop="name">hexo</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/hexo/hexo/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <div class="note info">
+<p>本篇文章主要记录一些本人在根据 shoya 主题教程自定义配置的过程中遇到的教程尚未记录的要点，如果有的问题我没有提到一般是因为主题的那部分默认配置我没有修改。但以后如果我继续修改的话会在这里继续更新的</p>
+</div>
+<div class="note info">
+<p>有关于 shoya 主题配置教程，请前往<span class="exturl" data-url="aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv">霜月琉璃</span>大佬的博客查看</p>
+</div>
+<h1 id="基本设置"><a class="anchor" href="#基本设置">#</a> 基本设置</h1>
+<h2 id="网页在浏览器标签页的显示"><a class="anchor" href="#网页在浏览器标签页的显示">#</a> 网页在浏览器标签页的显示</h2>
+<p>文件位于 <code class="blue">./themes/shoka/languages</code>  目录下对应的语言文件，例如站点配置文件在先前的配置中选择的是 <code class="blue">zh-CN</code> ，则进入 <code class="blue">zh-CN.yml</code>  修改 <code class="blue">favicon</code>  即可</p>
+<p>原配置：</p>
+<figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">favicon</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">show</span><span class="token punctuation">:</span> （●´3｀●）やれやれだぜ</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token key atrule">hide</span><span class="token punctuation">:</span> (´Д｀)大変だ！</pre></td></tr></table></figure><h2 id="主页菜单自定义"><a class="anchor" href="#主页菜单自定义">#</a> 主页菜单自定义</h2>
+<p>修改 <code class="blue">./themes/shoka/languages</code>  目录下对应语言文件的 <code class="blue">menu</code></p>
+<p>修改 <code class="blue">./themes/shoka/_config.yml</code>  文件中的 <code class="blue">menu</code></p>
+<p>例如：</p>
+<figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">menu</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">home</span><span class="token punctuation">:</span> 首页</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token key atrule">posts</span><span class="token punctuation">:</span> 文章</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token key atrule">archives</span><span class="token punctuation">:</span> 归档</pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token key atrule">categories</span><span class="token punctuation">:</span> 分类</pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token key atrule">tags</span><span class="token punctuation">:</span> 标签</pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token key atrule">about</span><span class="token punctuation">:</span> 关于</pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token key atrule">search</span><span class="token punctuation">:</span> 搜索</pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token key atrule">friends</span><span class="token punctuation">:</span> 友链</pre></td></tr><tr><td data-num="10"></td><td><pre>  <span class="token key atrule">favorites</span><span class="token punctuation">:</span> 收藏</pre></td></tr></table></figure><figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">menu</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">home</span><span class="token punctuation">:</span> / <span class="token punctuation">|</span><span class="token punctuation">|</span> home</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token key atrule">about</span><span class="token punctuation">:</span> /about/ <span class="token punctuation">|</span><span class="token punctuation">|</span> user</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token key atrule">posts</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token key atrule">default</span><span class="token punctuation">:</span> / <span class="token punctuation">|</span><span class="token punctuation">|</span> feather</pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token key atrule">archives</span><span class="token punctuation">:</span> /archives/ <span class="token punctuation">|</span><span class="token punctuation">|</span> list<span class="token punctuation">-</span>alt</pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token key atrule">categories</span><span class="token punctuation">:</span> /categories/ <span class="token punctuation">|</span><span class="token punctuation">|</span> th</pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token key atrule">tags</span><span class="token punctuation">:</span> /tags/ <span class="token punctuation">|</span><span class="token punctuation">|</span> tags</pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token key atrule">friends</span><span class="token punctuation">:</span> /friends/ <span class="token punctuation">|</span><span class="token punctuation">|</span> heart</pre></td></tr><tr><td data-num="10"></td><td><pre>  <span class="token key atrule">favorites</span><span class="token punctuation">:</span> /favorites/ <span class="token punctuation">|</span><span class="token punctuation">|</span> star</pre></td></tr></table></figure><div class="note info">
+<p>但是在实际过程中也有发现也可以直接在 <code class="blue">./themes/shoka/_config.yml</code>  文件中以中文修改 <code class="blue">menu</code>  下元素也有效，不过还是建议采用上述方法</p>
+</div>
+<h2 id="主页搜索栏相关设置"><a class="anchor" href="#主页搜索栏相关设置">#</a> 主页搜索栏相关设置</h2>
+<h3 id="搜索配置"><a class="anchor" href="#搜索配置">#</a> 搜索配置</h3>
+<p>algolia 官网链接：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxnb2xpYS5jb20v">https://www.algolia.com/</span></p>
+<ul>
+<li>
+<p>注册登陆后点击 <code class="blue">Setting</code> ，点击 <code class="blue">API Keys</code>  进入页面，在 <code class="blue">All API Keys</code>  下选择 <code class="blue">New API Keys</code></p>
+<p><img data-src="https://s2.loli.net/2022/11/16/HoFOB3vNIxRXnfU.png" alt="" /></p>
+</li>
+<li>
+<p>完成后，在 Hexo 根目录下修改 <code class="blue">_config.yml</code>  文件，具体为增加如下内容：</p>
+<figure class="highlight yaml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">algolia</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token key atrule">appId</span><span class="token punctuation">:</span> <span class="token comment">#你的 Application ID</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token key atrule">apiKey</span><span class="token punctuation">:</span> <span class="token comment">#All API Keys 下新建的 API Key 的代码</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token key atrule">adminApiKey</span><span class="token punctuation">:</span> <span class="token comment">#你的 Admin API Key</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token key atrule">chunkSize</span><span class="token punctuation">:</span> <span class="token number">5000</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token key atrule">indexName</span><span class="token punctuation">:</span> <span class="token comment">#新建 API Key 中填写的 Indices 内容</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token key atrule">fields</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token punctuation">-</span> title <span class="token comment">#必须配置</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token punctuation">-</span> path <span class="token comment">#必须配置</span></pre></td></tr><tr><td data-num="10"></td><td><pre>  <span class="token punctuation">-</span> categories <span class="token comment">#推荐配置</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  <span class="token punctuation">-</span> content<span class="token punctuation">:</span>strip<span class="token punctuation">:</span>truncate<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2000</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  <span class="token punctuation">-</span> gallery</pre></td></tr><tr><td data-num="13"></td><td><pre>  <span class="token punctuation">-</span> photos</pre></td></tr><tr><td data-num="14"></td><td><pre>  <span class="token punctuation">-</span> tags</pre></td></tr></table></figure></li>
+<li>
+<p>完成后依次输入 <code class="blue">hexo clean</code> 、 <code class="blue">hexo g</code> 、 <code class="blue">hexo algolia</code>  即可</p>
+</li>
+<li>
+<p>每次发布新文章后都需要重新输入 <code class="blue">hexo g</code> 、 <code class="blue">hexo algolia</code></p>
+</li>
+</ul>
+<h3 id="搜索背景设置"><a class="anchor" href="#搜索背景设置">#</a> 搜索背景设置</h3>
+<ul>
+<li>
+<p>搜索背景可以在 <code class="blue">./source/_data/images</code>  文件夹下（没有的新建一个）增加自己的 <code class="blue">search.png</code>  覆盖掉 <code class="blue">./themes/shoka/source/images/</code>  文件夹下的同名文件，原理与教程中替换头像等图片一致</p>
+</li>
+<li>
+<p>修改背景图片位置在 <code class="blue">./themes/shoka/source/css/_common/components/third-party/</code>  文件夹下的 <code class="blue">search.styl</code>  文件中约 74 行处：</p>
+<figure class="highlight stylus"><figcaption data-lang="stylus"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token property-declaration"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token func"><span class="token function">var</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token operator">-</span><span class="token color">grey</span><span class="token number">-1</span>-a7<span class="token punctuation">)</span> </span><span class="token url">url(../images/search.png)</span> no-repeat bottom right<span class="token punctuation">;</span></span></pre></td></tr></table></figure><p>其中 bottom right 即图片位于右下角，可根据需要自行修改为 center 中央或 top 顶部等</p>
+</li>
+</ul>
+<h1 id="图片设置"><a class="anchor" href="#图片设置">#</a> 图片设置</h1>
+<h2 id="图片"><a class="anchor" href="#图片">#</a> 图片</h2>
+<p>主要的图片都在 <code class="blue">./themes/shoka/source/images</code>  文件下了，可以直接在这里替换，也可以在 <code class="blue">./source/_data/</code>  文件夹下新建 <code class="blue">images</code>  文件夹存放同名文件替换</p>
+<h2 id="图床"><a class="anchor" href="#图床">#</a> 图床</h2>
+<h3 id="方法一"><a class="anchor" href="#方法一">#</a> 方法一</h3>
+<p>我用的是使用图床网站进行托管的方法，这里贴两个我用过的图床网站<br />
+ <div class="links"><div class="item" title="SM.MS图床" style="--block-color:#1FE363;"><span class="exturl image" data-url="aHR0cHM6Ly9zbW1zLmFwcC8=" data-background-image="https://s2.loli.net/2022/11/16/uvye9sMBR7Xq4jQ.png"></span>
+          <div class="info">
+          <span class="exturl title" data-url="aHR0cHM6Ly9zbW1zLmFwcC8=">SM.MS图床</span>
+          <p class="desc">有名的图片免费托管网站</p>
+          </div></div><div class="item" title="Gimhoy图床" style="--block-color:#1C8266;"><span class="exturl image" data-url="aHR0cHM6Ly9waWMuZ2ltaG95LmNvbS8=" data-background-image="https://s2.loli.net/2022/11/16/F9OtJ4rw2bhcUjX.png"></span>
+          <div class="info">
+          <span class="exturl title" data-url="aHR0cHM6Ly9waWMuZ2ltaG95LmNvbS8=">Gimhoy图床</span>
+          <p class="desc">基于微博图床的免费图床</p>
+          </div></div></div></p>
+<p>使用方法也很简单，直接登录上传图片获取链接就可以，不过第一个有空间限制，免费用户只有 5G 的存储空间。而第二个基于微博，需要微博登录，同时上传的图片也会同步到登录的微博账号上，账号的水印可以在微博设置里关闭</p>
+<h3 id="方法二"><a class="anchor" href="#方法二">#</a> 方法二</h3>
+<p>这个方法是利用 GitHub 作托管功能，理论上可以有无限的空间来存放，我曾经用过，但是由于大家懂得都懂的原因，这个方法下的图床确实很卡，但是在免费大容量且不用担心图床跑路的特点下，还是一个可选的选择。</p>
+<ul>
+<li>首先在 GitHub 上新建一个仓库并设置为公开，名字无所谓，我曾经的叫 CDN</li>
+<li>点击 <code class="blue">右上角头像</code> 进入 <code class="blue">setting</code> ，点击 <code class="blue">development setting</code>  选择 <code class="blue">personal access tokens</code>  下的 <code class="blue">tokens(classic)</code> ，点击 <code class="blue">generate new token</code>  获取，选项只选 repo 即可</li>
+<li>随后获得的 <code>token</code>  记得复制保存，因为这个只能看一次</li>
+<li>上述操作完成后，下载 [PicGo](<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz">Releases · Molunerfinn/PicGo (github.com)</span>) 安装</li>
+<li>图床设置中找到 GitHub 图床，进行相关配置，自定义域名通常为 <code class="blue">https://cdn.jsdelivr.net/gh/Github用户名/Github仓库名@master</code> <br />
+<img data-src="https://s2.loli.net/2022/11/18/8BGx3NwsRJ6HiLc.png" alt="" /></li>
+</ul>
+<div class="note info">
+<p>据个人使用经验，建议使用此方法时图片尽可能一张一张的上传，因为有时候多选图片上传会因为 GitHub 自身连接原因会出现部分图片上传失败导致上传不全</p>
+</div>
+
+      <div class="tags">
+          <a href="/tags/Hexo/" rel="tag"><i class="ic i-tag"></i> Hexo</a>
+          <a href="/tags/shoya/" rel="tag"><i class="ic i-tag"></i> shoya</a>
+          <a href="/tags/%E7%BD%91%E7%AB%99/" rel="tag"><i class="ic i-tag"></i> 网站</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-18 09:27:52" itemprop="dateModified" datetime="2022-11-18T09:27:52+08:00">2022-11-18</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/hexo/hexo/" title="关于hexo-shoka主题配置过程的补充">https://mobius-0.github.io/hexo/hexo/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/others/%E2%80%9C%E8%BF%90%E8%90%A5%E2%80%9D%E3%80%81%E2%80%9C%E6%88%98%E6%9C%AF%E2%80%9D%E3%80%81%E2%80%9C%E6%9D%82%E6%8A%80%E2%80%9D/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;LSJsm6Nq2gb3PQv.png" title="“运营”、“战术”、“杂技”">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂谈</span>
+  <h3>“运营”、“战术”、“杂技”</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/tools-1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;mJcbwPV4zuS28ra.png" title="工具集（长期更新……大概？）">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 安全</span>
+  <h3>工具集（长期更新……大概？）</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text"> 基本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E7%9A%84%E6%98%BE%E7%A4%BA"><span class="toc-number">1.1.</span> <span class="toc-text"> 网页在浏览器标签页的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E8%8F%9C%E5%8D%95%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text"> 主页菜单自定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E6%90%9C%E7%B4%A2%E6%A0%8F%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text"> 主页搜索栏相关设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 搜索配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E8%83%8C%E6%99%AF%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 搜索背景设置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text"> 图片设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">2.1.</span> <span class="toc-text"> 图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%BA%8A"><span class="toc-number">2.2.</span> <span class="toc-text"> 图床</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 方法二</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/hexo/hexo/" rel="bookmark" title="关于hexo-shoka主题配置过程的补充">关于hexo-shoka主题配置过程的补充</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">8</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/others/%E2%80%9C%E8%BF%90%E8%90%A5%E2%80%9D%E3%80%81%E2%80%9C%E6%88%98%E6%9C%AF%E2%80%9D%E3%80%81%E2%80%9C%E6%9D%82%E6%8A%80%E2%80%9D/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/tools-1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">6k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5 分钟</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'hexo/hexo/',
+    favicon: {
+      show: "Incomging Transmission",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

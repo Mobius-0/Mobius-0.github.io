@@ -1,0 +1,533 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="网络安全,工具" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/tools-1/">
+
+
+
+  <title>
+工具集（长期更新……大概？） - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">工具集（长期更新……大概？）
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-16 19:28:43">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-16T19:28:43+08:00">2022-11-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/5xS8irIm4FqtwMC.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/pfnwZodPzNcH7br.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/CBtsQKYJU5jMuag.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/HG4AMYUZjqP2EuK.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/mJcbwPV4zuS28ra.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/AxdIBGQtLV3iM2p.png"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/tools-1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="工具"><a class="anchor" href="#工具">#</a> 工具</h1>
+<ol>
+<li>Burp suite</li>
+</ol>
+<p>渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大</p>
+<ol start="2">
+<li>Wireshark</li>
+</ol>
+<p>实用的网络抓包分析软件</p>
+<ol start="3">
+<li>WinHex</li>
+</ol>
+<p>常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息</p>
+<ol start="4">
+<li>masscan</li>
+</ol>
+<p>一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用</p>
+<ol start="5">
+<li>nmap</li>
+</ol>
+<p>一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 <span class="spoiler" title="你知道的太多了">但是通常都很慢</span> 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查</p>
+<ol start="6">
+<li>sqlmap</li>
+</ol>
+<p>一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞</p>
+<ol start="7">
+<li>VirtualBox</li>
+</ol>
+<p>开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机</p>
+<ol start="8">
+<li>VMware Workstation</li>
+</ol>
+<p>业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试</p>
+<ol start="9">
+<li>Adobe Photoshop</li>
+</ol>
+<p>常用的图像处理软件</p>
+<ol start="10">
+<li>Adobe Audition</li>
+</ol>
+<p>常用的音频处理软件</p>
+<ol start="11">
+<li>AntSword</li>
+</ol>
+<p>一款开源的跨平台网站管理工具</p>
+<ol start="12">
+<li>IDA Pro</li>
+</ol>
+<p>一款功能丰富的跨平台多处理器反汇编程序和调试器</p>
+<ol start="13">
+<li>Elcomsoft Forensic Disk Decryptor</li>
+</ol>
+<p>实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。</p>
+<ol start="14">
+<li>Elcomsoft Wireless Security Auditor</li>
+</ol>
+<p>一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码</p>
+<ol start="15">
+<li>Advanced Archive Password Recovery</li>
+</ol>
+<p>一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件</p>
+<ol start="16">
+<li>Notepad++</li>
+</ol>
+<p>功能强大的记事本 max pro plus（bushi）</p>
+<h1 id="浏览器插件"><a class="anchor" href="#浏览器插件">#</a> 浏览器插件</h1>
+<ol>
+<li>Tamermonkey</li>
+</ol>
+<p>实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器</p>
+<ol start="2">
+<li>Wappalyzer</li>
+</ol>
+<p>一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息</p>
+<ol start="3">
+<li>Shodan</li>
+</ol>
+<p>Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。</p>
+<ol start="4">
+<li>FoxyProxy</li>
+</ol>
+<p>Firefox 浏览器上的一款代理管理工具</p>
+<ol start="5">
+<li>Proxy SwitchyOmega</li>
+</ol>
+<p>一款代理管理插件，可轻松快捷地管理和切换多个代理设置</p>
+<ol start="6">
+<li>HackBar</li>
+</ol>
+<p>Firefox 浏览器上的一款网站 URL 渗透工具</p>
+<ol start="7">
+<li>Flagfox</li>
+</ol>
+<p>Firefox 浏览器上的一款显示当前服务器位置国旗的插件</p>
+<h1 id="搜索引擎"><a class="anchor" href="#搜索引擎">#</a> 搜索引擎</h1>
+<ol>
+<li>fofa</li>
+</ol>
+<p><span class="exturl" data-url="aHR0cHM6Ly9mb2ZhLmluZm8v">FOFA</span> 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等</p>
+<ol start="2">
+<li>Zoomeye</li>
+</ol>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv">ZoomEye</span>（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。</p>
+<ol start="3">
+<li>shodan</li>
+</ol>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==">shodan</span> 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎</p>
+<ol start="4">
+<li>360quake</li>
+</ol>
+<p><span class="exturl" data-url="aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=">360 QUAKE Vscan</span> 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险</p>
+
+      <div class="tags">
+          <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"><i class="ic i-tag"></i> 网络安全</a>
+          <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="ic i-tag"></i> 工具</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-18 17:03:34" itemprop="dateModified" datetime="2022-11-18T17:03:34+08:00">2022-11-18</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/tools-1/" title="工具集（长期更新……大概？）">https://mobius-0.github.io/security/tools-1/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/hexo/hexo/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;pfnwZodPzNcH7br.png" title="关于hexo-shoka主题配置过程的补充">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> hexo</span>
+  <h3>关于hexo-shoka主题配置过程的补充</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text"> 工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text"> 浏览器插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E"><span class="toc-number">3.</span> <span class="toc-text"> 搜索引擎</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/security/tools-1/" rel="bookmark" title="工具集（长期更新……大概？）">工具集（长期更新……大概？）</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">8</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">6k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5 分钟</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/tools-1/',
+    favicon: {
+      show: "Incomging Transmission",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

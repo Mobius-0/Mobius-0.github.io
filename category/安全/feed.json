@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"安全\" category",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/tools-1/",
+            "url": "https://mobius-0.github.io/security/tools-1/",
+            "title": "工具集（长期更新……大概？）",
+            "date_published": "2022-11-16T11:28:43.000Z",
+            "content_html": "<h1 id=\"工具\"><a class=\"anchor\" href=\"#工具\">#</a> 工具</h1>\n<ol>\n<li>Burp suite</li>\n</ol>\n<p>渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大</p>\n<ol start=\"2\">\n<li>Wireshark</li>\n</ol>\n<p>实用的网络抓包分析软件</p>\n<ol start=\"3\">\n<li>WinHex</li>\n</ol>\n<p>常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息</p>\n<ol start=\"4\">\n<li>masscan</li>\n</ol>\n<p>一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用</p>\n<ol start=\"5\">\n<li>nmap</li>\n</ol>\n<p>一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 <span class=\"spoiler\" title=\"你知道的太多了\">但是通常都很慢</span> 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查</p>\n<ol start=\"6\">\n<li>sqlmap</li>\n</ol>\n<p>一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞</p>\n<ol start=\"7\">\n<li>VirtualBox</li>\n</ol>\n<p>开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机</p>\n<ol start=\"8\">\n<li>VMware Workstation</li>\n</ol>\n<p>业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试</p>\n<ol start=\"9\">\n<li>Adobe Photoshop</li>\n</ol>\n<p>常用的图像处理软件</p>\n<ol start=\"10\">\n<li>Adobe Audition</li>\n</ol>\n<p>常用的音频处理软件</p>\n<ol start=\"11\">\n<li>AntSword</li>\n</ol>\n<p>一款开源的跨平台网站管理工具</p>\n<ol start=\"12\">\n<li>IDA Pro</li>\n</ol>\n<p>一款功能丰富的跨平台多处理器反汇编程序和调试器</p>\n<ol start=\"13\">\n<li>Elcomsoft Forensic Disk Decryptor</li>\n</ol>\n<p>实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。</p>\n<ol start=\"14\">\n<li>Elcomsoft Wireless Security Auditor</li>\n</ol>\n<p>一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码</p>\n<ol start=\"15\">\n<li>Advanced Archive Password Recovery</li>\n</ol>\n<p>一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件</p>\n<ol start=\"16\">\n<li>Notepad++</li>\n</ol>\n<p>功能强大的记事本 max pro plus（bushi）</p>\n<h1 id=\"浏览器插件\"><a class=\"anchor\" href=\"#浏览器插件\">#</a> 浏览器插件</h1>\n<ol>\n<li>Tamermonkey</li>\n</ol>\n<p>实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器</p>\n<ol start=\"2\">\n<li>Wappalyzer</li>\n</ol>\n<p>一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息</p>\n<ol start=\"3\">\n<li>Shodan</li>\n</ol>\n<p>Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。</p>\n<ol start=\"4\">\n<li>FoxyProxy</li>\n</ol>\n<p>Firefox 浏览器上的一款代理管理工具</p>\n<ol start=\"5\">\n<li>Proxy SwitchyOmega</li>\n</ol>\n<p>一款代理管理插件，可轻松快捷地管理和切换多个代理设置</p>\n<ol start=\"6\">\n<li>HackBar</li>\n</ol>\n<p>Firefox 浏览器上的一款网站 URL 渗透工具</p>\n<ol start=\"7\">\n<li>Flagfox</li>\n</ol>\n<p>Firefox 浏览器上的一款显示当前服务器位置国旗的插件</p>\n<h1 id=\"搜索引擎\"><a class=\"anchor\" href=\"#搜索引擎\">#</a> 搜索引擎</h1>\n<ol>\n<li>fofa</li>\n</ol>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9mb2ZhLmluZm8v\">FOFA</span> 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等</p>\n<ol start=\"2\">\n<li>Zoomeye</li>\n</ol>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv\">ZoomEye</span>（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。</p>\n<ol start=\"3\">\n<li>shodan</li>\n</ol>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==\">shodan</span> 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎</p>\n<ol start=\"4\">\n<li>360quake</li>\n</ol>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=\">360 QUAKE Vscan</span> 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险</p>\n",
+            "tags": [
+                "网络安全",
+                "工具"
+            ]
+        }
+    ]
+}

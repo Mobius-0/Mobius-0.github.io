@@ -3,10 +3,219 @@
     <id>https://mobius-0.github.io</id>
     <title>Khala</title>
     <link href="https://mobius-0.github.io" />
-    <updated>2022-11-13T11:32:01.379Z</updated>
+    <updated>2022-11-16T11:28:43.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
     <category term="星际争霸2" />
     <category term="平衡" />
     <category term="杂谈" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <entry>
+        <id>https://mobius-0.github.io/security/tools-1/</id>
+        <title>工具集（长期更新……大概？）</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/tools-1/"/>
+        <content type="html">&lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Burp suite&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Wireshark&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实用的网络抓包分析软件&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;WinHex&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;masscan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;nmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;但是通常都很慢&lt;/span&gt; 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;sqlmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;VirtualBox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;VMware Workstation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Adobe Photoshop&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的图像处理软件&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;Adobe Audition&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的音频处理软件&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;AntSword&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的跨平台网站管理工具&lt;/p&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;IDA Pro&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款功能丰富的跨平台多处理器反汇编程序和调试器&lt;/p&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Elcomsoft Forensic Disk Decryptor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。&lt;/p&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;Elcomsoft Wireless Security Auditor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码&lt;/p&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;Advanced Archive Password Recovery&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件&lt;/p&gt;
+&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;Notepad++&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;功能强大的记事本 max pro plus（bushi）&lt;/p&gt;
+&lt;h1 id=&#34;浏览器插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浏览器插件&#34;&gt;#&lt;/a&gt; 浏览器插件&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Tamermonkey&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Wappalyzer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Shodan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;FoxyProxy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款代理管理工具&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Proxy SwitchyOmega&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款代理管理插件，可轻松快捷地管理和切换多个代理设置&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;HackBar&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款网站 URL 渗透工具&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Flagfox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款显示当前服务器位置国旗的插件&lt;/p&gt;
+&lt;h1 id=&#34;搜索引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎&#34;&gt;#&lt;/a&gt; 搜索引擎&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;fofa&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb2ZhLmluZm8v&#34;&gt;FOFA&lt;/span&gt; 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Zoomeye&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv&#34;&gt;ZoomEye&lt;/span&gt;（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;shodan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==&#34;&gt;shodan&lt;/span&gt; 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;360quake&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=&#34;&gt;360 QUAKE Vscan&lt;/span&gt; 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险&lt;/p&gt;
+</content>
+        <category term="网络安全" />
+        <category term="工具" />
+        <updated>2022-11-16T11:28:43.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/hexo/hexo/</id>
+        <title>关于hexo-shoka主题配置过程的补充</title>
+        <link rel="alternate" href="https://mobius-0.github.io/hexo/hexo/"/>
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;本篇文章主要记录一些本人在根据 shoya 主题教程自定义配置的过程中遇到的教程尚未记录的要点，如果有的问题我没有提到一般是因为主题的那部分默认配置我没有修改。但以后如果我继续修改的话会在这里继续更新的&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;有关于 shoya 主题配置教程，请前往&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv&#34;&gt;霜月琉璃&lt;/span&gt;大佬的博客查看&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;基本设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本设置&#34;&gt;#&lt;/a&gt; 基本设置&lt;/h1&gt;
+&lt;h2 id=&#34;网页在浏览器标签页的显示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网页在浏览器标签页的显示&#34;&gt;#&lt;/a&gt; 网页在浏览器标签页的显示&lt;/h2&gt;
+&lt;p&gt;文件位于 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/languages&lt;/code&gt;  目录下对应的语言文件，例如站点配置文件在先前的配置中选择的是 &lt;code class=&#34;blue&#34;&gt;zh-CN&lt;/code&gt; ，则进入 &lt;code class=&#34;blue&#34;&gt;zh-CN.yml&lt;/code&gt;  修改 &lt;code class=&#34;blue&#34;&gt;favicon&lt;/code&gt;  即可&lt;/p&gt;
+&lt;p&gt;原配置：&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;favicon&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; （●´3｀●）やれやれだぜ&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;hide&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; (´Д｀)大変だ！&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;主页菜单自定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主页菜单自定义&#34;&gt;#&lt;/a&gt; 主页菜单自定义&lt;/h2&gt;
+&lt;p&gt;修改 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/languages&lt;/code&gt;  目录下对应语言文件的 &lt;code class=&#34;blue&#34;&gt;menu&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;修改 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/_config.yml&lt;/code&gt;  文件中的 &lt;code class=&#34;blue&#34;&gt;menu&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;home&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 首页&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;posts&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 文章&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;archives&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 归档&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 分类&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 标签&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;about&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 关于&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 搜索&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;friends&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 友链&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;favorites&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 收藏&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;home&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; / &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; home&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;about&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; /about/ &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; user&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;posts&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; / &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; feather&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;archives&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; /archives/ &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; list&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;alt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; /categories/ &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; th&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; /tags/ &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;friends&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; /friends/ &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; heart&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;favorites&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; /favorites/ &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; star&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;但是在实际过程中也有发现也可以直接在 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/_config.yml&lt;/code&gt;  文件中以中文修改 &lt;code class=&#34;blue&#34;&gt;menu&lt;/code&gt;  下元素也有效，不过还是建议采用上述方法&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;主页搜索栏相关设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主页搜索栏相关设置&#34;&gt;#&lt;/a&gt; 主页搜索栏相关设置&lt;/h2&gt;
+&lt;h3 id=&#34;搜索配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索配置&#34;&gt;#&lt;/a&gt; 搜索配置&lt;/h3&gt;
+&lt;p&gt;algolia 官网链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYWxnb2xpYS5jb20v&#34;&gt;https://www.algolia.com/&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;注册登陆后点击 &lt;code class=&#34;blue&#34;&gt;Setting&lt;/code&gt; ，点击 &lt;code class=&#34;blue&#34;&gt;API Keys&lt;/code&gt;  进入页面，在 &lt;code class=&#34;blue&#34;&gt;All API Keys&lt;/code&gt;  下选择 &lt;code class=&#34;blue&#34;&gt;New API Keys&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/11/16/HoFOB3vNIxRXnfU.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;完成后，在 Hexo 根目录下修改 &lt;code class=&#34;blue&#34;&gt;_config.yml&lt;/code&gt;  文件，具体为增加如下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;algolia&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;appId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#你的 Application ID&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;apiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#All API Keys 下新建的 API Key 的代码&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;adminApiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#你的 Admin API Key&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;chunkSize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;indexName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#新建 API Key 中填写的 Indices 内容&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;fields&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; title &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; path &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; categories &lt;span class=&#34;token comment&#34;&gt;#推荐配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; content&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;strip&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;truncate&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; gallery&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; photos&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;完成后依次输入 &lt;code class=&#34;blue&#34;&gt;hexo clean&lt;/code&gt; 、 &lt;code class=&#34;blue&#34;&gt;hexo g&lt;/code&gt; 、 &lt;code class=&#34;blue&#34;&gt;hexo algolia&lt;/code&gt;  即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每次发布新文章后都需要重新输入 &lt;code class=&#34;blue&#34;&gt;hexo g&lt;/code&gt; 、 &lt;code class=&#34;blue&#34;&gt;hexo algolia&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;搜索背景设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索背景设置&#34;&gt;#&lt;/a&gt; 搜索背景设置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;搜索背景可以在 &lt;code class=&#34;blue&#34;&gt;./source/_data/images&lt;/code&gt;  文件夹下（没有的新建一个）增加自己的 &lt;code class=&#34;blue&#34;&gt;search.png&lt;/code&gt;  覆盖掉 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/source/images/&lt;/code&gt;  文件夹下的同名文件，原理与教程中替换头像等图片一致&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改背景图片位置在 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/source/css/_common/components/third-party/&lt;/code&gt;  文件夹下的 &lt;code class=&#34;blue&#34;&gt;search.styl&lt;/code&gt;  文件中约 74 行处：&lt;/p&gt;
+&lt;figure class=&#34;highlight stylus&#34;&gt;&lt;figcaption data-lang=&#34;stylus&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property-declaration&#34;&gt;&lt;span class=&#34;token property&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token func&#34;&gt;&lt;span class=&#34;token function&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token color&#34;&gt;grey&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;-1&lt;/span&gt;-a7&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/span&gt;&lt;span class=&#34;token url&#34;&gt;url(../images/search.png)&lt;/span&gt; no-repeat bottom right&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中 bottom right 即图片位于右下角，可根据需要自行修改为 center 中央或 top 顶部等&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;图片设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图片设置&#34;&gt;#&lt;/a&gt; 图片设置&lt;/h1&gt;
+&lt;h2 id=&#34;图片&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图片&#34;&gt;#&lt;/a&gt; 图片&lt;/h2&gt;
+&lt;p&gt;主要的图片都在 &lt;code class=&#34;blue&#34;&gt;./themes/shoka/source/images&lt;/code&gt;  文件下了，可以直接在这里替换，也可以在 &lt;code class=&#34;blue&#34;&gt;./source/_data/&lt;/code&gt;  文件夹下新建 &lt;code class=&#34;blue&#34;&gt;images&lt;/code&gt;  文件夹存放同名文件替换&lt;/p&gt;
+&lt;h2 id=&#34;图床&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图床&#34;&gt;#&lt;/a&gt; 图床&lt;/h2&gt;
+&lt;h3 id=&#34;方法一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法一&#34;&gt;#&lt;/a&gt; 方法一&lt;/h3&gt;
+&lt;p&gt;我用的是使用图床网站进行托管的方法，这里贴两个我用过的图床网站&lt;br /&gt;
+ &lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;SM.MS图床&#34; style=&#34;--block-color:#1FE363;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zbW1zLmFwcC8=&#34; data-background-image=&#34;https://s2.loli.net/2022/11/16/uvye9sMBR7Xq4jQ.png&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zbW1zLmFwcC8=&#34;&gt;SM.MS图床&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;有名的图片免费托管网站&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;Gimhoy图床&#34; style=&#34;--block-color:#1C8266;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9waWMuZ2ltaG95LmNvbS8=&#34; data-background-image=&#34;https://s2.loli.net/2022/11/16/F9OtJ4rw2bhcUjX.png&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9waWMuZ2ltaG95LmNvbS8=&#34;&gt;Gimhoy图床&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;基于微博图床的免费图床&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;使用方法也很简单，直接登录上传图片获取链接就可以，不过第一个有空间限制，免费用户只有 5G 的存储空间。而第二个基于微博，需要微博登录，同时上传的图片也会同步到登录的微博账号上，账号的水印可以在微博设置里关闭&lt;/p&gt;
+&lt;h3 id=&#34;方法二&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法二&#34;&gt;#&lt;/a&gt; 方法二&lt;/h3&gt;
+&lt;p&gt;这个方法是利用 GitHub 作托管功能，理论上可以有无限的空间来存放，我曾经用过，但是由于大家懂得都懂的原因，这个方法下的图床确实很卡，但是在免费大容量且不用担心图床跑路的特点下，还是一个可选的选择。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先在 GitHub 上新建一个仓库并设置为公开，名字无所谓，我曾经的叫 CDN&lt;/li&gt;
+&lt;li&gt;点击 &lt;code class=&#34;blue&#34;&gt;右上角头像&lt;/code&gt; 进入 &lt;code class=&#34;blue&#34;&gt;setting&lt;/code&gt; ，点击 &lt;code class=&#34;blue&#34;&gt;development setting&lt;/code&gt;  选择 &lt;code class=&#34;blue&#34;&gt;personal access tokens&lt;/code&gt;  下的 &lt;code class=&#34;blue&#34;&gt;tokens(classic)&lt;/code&gt; ，点击 &lt;code class=&#34;blue&#34;&gt;generate new token&lt;/code&gt;  获取，选项只选 repo 即可&lt;/li&gt;
+&lt;li&gt;随后获得的 &lt;code&gt;token&lt;/code&gt;  记得复制保存，因为这个只能看一次&lt;/li&gt;
+&lt;li&gt;上述操作完成后，下载 [PicGo](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt;Releases · Molunerfinn/PicGo (github.com)&lt;/span&gt;) 安装&lt;/li&gt;
+&lt;li&gt;图床设置中找到 GitHub 图床，进行相关配置，自定义域名通常为 &lt;code class=&#34;blue&#34;&gt;https://cdn.jsdelivr.net/gh/Github用户名/Github仓库名@master&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://s2.loli.net/2022/11/18/8BGx3NwsRJ6HiLc.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;据个人使用经验，建议使用此方法时图片尽可能一张一张的上传，因为有时候多选图片上传会因为 GitHub 自身连接原因会出现部分图片上传失败导致上传不全&lt;/p&gt;
+&lt;/div&gt;
+</content>
+        <category term="Hexo" />
+        <category term="shoya" />
+        <category term="网站" />
+        <updated>2022-11-16T09:35:36.000Z</updated>
+    </entry>
     <entry>
         <id>https://mobius-0.github.io/others/%E2%80%9C%E8%BF%90%E8%90%A5%E2%80%9D%E3%80%81%E2%80%9C%E6%88%98%E6%9C%AF%E2%80%9D%E3%80%81%E2%80%9C%E6%9D%82%E6%8A%80%E2%80%9D/</id>
         <title>“运营”、“战术”、“杂技”</title>
@@ -22,26 +231,26 @@
         <id>https://mobius-0.github.io/others/%E6%98%9F%E9%99%85%E4%BA%94%E8%A1%8C%E7%9B%B8%E5%85%8B%E5%AD%A6%E8%AF%B4/</id>
         <title>星际五行相克学说</title>
         <link rel="alternate" href="https://mobius-0.github.io/others/%E6%98%9F%E9%99%85%E4%BA%94%E8%A1%8C%E7%9B%B8%E5%85%8B%E5%AD%A6%E8%AF%B4/"/>
-        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/11/13/q28GnAcZpBWPfQV.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/11/13/q28GnAcZpBWPfQV.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;一般情况下，战术能用上图的五个流派归纳。在双方实力相当的情况下，一般遵循莽克狗、狗克偷、偷克稳、稳克谐、谐克莽原则。 在目前的比赛中多边形选手居多，不再为单一风格&lt;/p&gt;
-&lt;h1 id=&#34;稳&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#稳&#34;&gt;#&lt;/a&gt; 稳&lt;/h1&gt;
+&lt;h1 id=&#34;稳&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#稳&#34;&gt;#&lt;/a&gt; 稳&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;—— 不动如山，动如雷震&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;稳，即稳健，防守型打法，早期以守为主，稳健平衡地发展科技、兵力和经济，求得在中后期时高人口决战取胜。代表人物：大部分职业星际选手，星际争霸时期的 FlaSh &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（最终兵器，猥琐神教教主）&lt;/span&gt; 、MacSed（胡翔） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（怂神，万池王，momosed，sed 老师他不堵口）&lt;/span&gt; 、真实大帝 Reality、铁壁虫族 Soulkey、不动如山大雨神 Rain &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（最后变成了大狗神）&lt;/span&gt; 、打到后期的 Maru。&lt;/p&gt;
-&lt;h1 id=&#34;偷&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#偷&#34;&gt;#&lt;/a&gt; 偷&lt;/h1&gt;
+&lt;p&gt;稳，即稳健，防守型打法，早期以守为主，稳健平衡地发展科技、兵力和经济，求得在中后期时高人口决战取胜。代表人物：大部分职业星际选手，星际争霸时期的 FlaSh &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（最终兵器，猥琐神教教主）&lt;/span&gt; 、MacSed（胡翔） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（怂神，万池王，momosed，sed 老师他不堵口）&lt;/span&gt; 、真实大帝 Reality、铁壁虫族 Soulkey、不动如山大雨神 Rain &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（最后变成了大狗神）&lt;/span&gt; 、打到后期的 Maru。&lt;/p&gt;
+&lt;h1 id=&#34;偷&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#偷&#34;&gt;#&lt;/a&gt; 偷&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;—— 只要偷不死，就往死里偷&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;偷，即偷经济，最大化经济的打法，牺牲早期兵力，全力扩张以换取未来资源增长速度。代表人物：星际争霸 2 时期的 FlaSh &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（上天入地飞天遁地天下无敌世界无双宇宙第二无人第一烧酒蹭饭吃肉梅西最终兵器末日本座 start 狂魔肾大圣大胂大教主憋尿神功死亡冲锋 SCV 之友强行插眼全图开挂怒干跳跳屠鸡人族猥琐神教变鸡法爷运营如狗爆兵似马防奶神功提里奥运好弗丁刘欢李永菜灰烬使者大教主 flash 动画制作李永浩桑苏）&lt;/span&gt; 、以及教主真传弟子全教主 TY（农民比兵少算我输）。&lt;/p&gt;
-&lt;h1 id=&#34;狗&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#狗&#34;&gt;#&lt;/a&gt; 狗&lt;/h1&gt;
+&lt;p&gt;偷，即偷经济，最大化经济的打法，牺牲早期兵力，全力扩张以换取未来资源增长速度。代表人物：星际争霸 2 时期的 FlaSh &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（上天入地飞天遁地天下无敌世界无双宇宙第二无人第一烧酒蹭饭吃肉梅西最终兵器末日本座 start 狂魔肾大圣大胂大教主憋尿神功死亡冲锋 SCV 之友强行插眼全图开挂怒干跳跳屠鸡人族猥琐神教变鸡法爷运营如狗爆兵似马防奶神功提里奥运好弗丁刘欢李永菜灰烬使者大教主 flash 动画制作李永浩桑苏）&lt;/span&gt; 、以及教主真传弟子全教主 TY（农民比兵少算我输）。&lt;/p&gt;
+&lt;h1 id=&#34;狗&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#狗&#34;&gt;#&lt;/a&gt; 狗&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;——DvD&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;狗，即阴险、高风险、非常规的赌博性打法，一般用来形容野外藏生产或科技建筑、地堡 rush 等战术。代表人物：Slayer_BoxeR &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（上古大神，初代本座，众狗之祖）&lt;/span&gt; 、sOs &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（狗哥，天下三狗之首，匪夷所思狗，绿翼双犬之一，30 万美金的男人，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;）&lt;/span&gt; 、Jim（曹晋珲） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（天下三狗之一，霸王硬上狗，修地堡天赋 MAX）&lt;/span&gt; 、Has &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（天下三狗之一，台湾神皇，天马流星狗，在欧美被称作 Yoe 家族 Has 一世，水晶墙之主，最激进的野建筑，最具洞察力的先知，东方巨狼，Kaelaris 的破坏者（Kaelaris 是一个外国解说，有一次解说 Has 比赛的时候笑到抽筋），暴君驯服者，InCa 之子（InCa，在 GSL 决赛连续放了雀茶四把隐刀然后被横扫），sOs 之兄，聚焦一切光辉之棱镜）&lt;/span&gt; 、Maru &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（和狗哥一个卵里出来的双犬之一）&lt;/span&gt; 、绿翼第三犬 TRUE Cure Trap Rogue 等人。 &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;莽霸去了绿翼都变狗了，这就是近狗者狗吗？&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;莽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#莽&#34;&gt;#&lt;/a&gt; 莽&lt;/h1&gt;
+&lt;p&gt;狗，即阴险、高风险、非常规的赌博性打法，一般用来形容野外藏生产或科技建筑、地堡 rush 等战术。代表人物：Slayer_BoxeR &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（上古大神，初代本座，众狗之祖）&lt;/span&gt; 、sOs &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（狗哥，天下三狗之首，匪夷所思狗，绿翼双犬之一，30 万美金的男人，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;O&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;）&lt;/span&gt; 、Jim（曹晋珲） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（天下三狗之一，霸王硬上狗，修地堡天赋 MAX）&lt;/span&gt; 、Has &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（天下三狗之一，台湾神皇，天马流星狗，在欧美被称作 Yoe 家族 Has 一世，水晶墙之主，最激进的野建筑，最具洞察力的先知，东方巨狼，Kaelaris 的破坏者（Kaelaris 是一个外国解说，有一次解说 Has 比赛的时候笑到抽筋），暴君驯服者，InCa 之子（InCa，在 GSL 决赛连续放了雀茶四把隐刀然后被横扫），sOs 之兄，聚焦一切光辉之棱镜）&lt;/span&gt; 、Maru &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（和狗哥一个卵里出来的双犬之一）&lt;/span&gt; 、绿翼第三犬 TRUE Cure Trap Rogue 等人。 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;莽霸去了绿翼都变狗了，这就是近狗者狗吗？&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;莽&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#莽&#34;&gt;#&lt;/a&gt; 莽&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;—— 我叫钱赞企！！！&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;莽：即莽夫，极限进攻型打法，中前期有一定经济后，牺牲未来的发展，投入所有经济疯狂暴兵进攻，力求短时间内迅速打垮对手。代表人物：Courage（钱赞企） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（蟑螂，NO 总）&lt;/span&gt; 、枪兵王 MarineKing &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（山包，红粉娘娘）&lt;/span&gt; 、总统 MC &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（欧美捞钱王）&lt;/span&gt; 、Toodming（土豆明）、吕布 Innovation、输本 soO、莽霸 TRUE、不修地堡时的 Jim、TIME（李培楠） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（凯子人皇，野人，李老八）&lt;/span&gt; 。&lt;/p&gt;
-&lt;h1 id=&#34;谐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#谐&#34;&gt;#&lt;/a&gt; 谐&lt;/h1&gt;
+&lt;p&gt;莽：即莽夫，极限进攻型打法，中前期有一定经济后，牺牲未来的发展，投入所有经济疯狂暴兵进攻，力求短时间内迅速打垮对手。代表人物：Courage（钱赞企） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（蟑螂，NO 总）&lt;/span&gt; 、枪兵王 MarineKing &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（山包，红粉娘娘）&lt;/span&gt; 、总统 MC &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（欧美捞钱王）&lt;/span&gt; 、Toodming（土豆明）、吕布 Innovation、输本 soO、莽霸 TRUE、不修地堡时的 Jim、TIME（李培楠） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（凯子人皇，野人，李老八）&lt;/span&gt; 。&lt;/p&gt;
+&lt;h1 id=&#34;谐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谐&#34;&gt;#&lt;/a&gt; 谐&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;—— 遭不住了啊 xdm&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;谐，即谐星，不以胜利为第一要务，而是旨在彰显智商优越的观赏性 &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;侮辱性&lt;/span&gt; 战术，往往在低水平竞技中能发挥奇效。代表人物：F91（孙一峰） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（智障也有春天，谐会会长，说了算孙哥）&lt;/span&gt; 、小色（黄旭东） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（炸屎人皇，专业毒奶）&lt;/span&gt; 、XY（鸟哥） &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（夕阳红人族，XY U Suck）&lt;/span&gt; 、Parting（胖丁，跳跳、 &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;王丽萨&lt;/span&gt; ）。 其中 “稳”、“莽” 一般是比赛中的主流。&lt;/p&gt;
-&lt;h1 id=&#34;奶&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#奶&#34;&gt;#&lt;/a&gt; 奶&lt;/h1&gt;
+&lt;p&gt;谐，即谐星，不以胜利为第一要务，而是旨在彰显智商优越的观赏性 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;侮辱性&lt;/span&gt; 战术，往往在低水平竞技中能发挥奇效。代表人物：F91（孙一峰） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（智障也有春天，谐会会长，说了算孙哥）&lt;/span&gt; 、小色（黄旭东） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（炸屎人皇，专业毒奶）&lt;/span&gt; 、XY（鸟哥） &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;（夕阳红人族，XY U Suck）&lt;/span&gt; 、Parting（胖丁，跳跳、 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;王丽萨&lt;/span&gt; ）。 其中 “稳”、“莽” 一般是比赛中的主流。&lt;/p&gt;
+&lt;h1 id=&#34;奶&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#奶&#34;&gt;#&lt;/a&gt; 奶&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;—— 干死黄旭东，巨像能对空&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;在稳、偷、狗、莽、谐之上，有唯一神 “奶”，奶克一切。 &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;宝矿力能解解毒，减缓毒奶发作的时间与减小威力，然而最终还是要被毒死。旭东要奶死，最终还是要死的，“六君子” 音容犹在。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在稳、偷、狗、莽、谐之上，有唯一神 “奶”，奶克一切。 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;宝矿力能解解毒，减缓毒奶发作的时间与减小威力，然而最终还是要被毒死。旭东要奶死，最终还是要死的，“六君子” 音容犹在。&lt;/span&gt;&lt;/p&gt;
 </content>
         <category term="星际争霸2" />
         <category term="平衡" />
@@ -61,14 +270,14 @@
         <title>Hello World</title>
         <link rel="alternate" href="https://mobius-0.github.io/hello-world/"/>
         <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo new &lt;span class=&#34;token string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo generate&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo deploy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
 </content>
         <updated>2022-11-10T10:56:18.336Z</updated>
