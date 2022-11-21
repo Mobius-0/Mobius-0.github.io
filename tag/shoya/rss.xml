@@ -10,11 +10,15 @@
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
-        <category>网络安全</category>
-        <category>工具</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
         <item>
             <guid isPermalink="true">https://mobius-0.github.io/hexo/hexo/</guid>
             <title>关于hexo-shoka主题配置过程的补充</title>
@@ -89,8 +93,8 @@
 &lt;ul&gt;
 &lt;li&gt;首先在 GitHub 上新建一个仓库并设置为公开，名字无所谓，我曾经的叫 CDN&lt;/li&gt;
 &lt;li&gt;点击 &lt;code class=&#34;blue&#34;&gt;右上角头像&lt;/code&gt; 进入 &lt;code class=&#34;blue&#34;&gt;setting&lt;/code&gt; ，点击 &lt;code class=&#34;blue&#34;&gt;development setting&lt;/code&gt;  选择 &lt;code class=&#34;blue&#34;&gt;personal access tokens&lt;/code&gt;  下的 &lt;code class=&#34;blue&#34;&gt;tokens(classic)&lt;/code&gt; ，点击 &lt;code class=&#34;blue&#34;&gt;generate new token&lt;/code&gt;  获取，选项只选 repo 即可&lt;/li&gt;
-&lt;li&gt;随后获得的 &lt;code&gt;token&lt;/code&gt;  记得复制保存，因为这个只能看一次&lt;/li&gt;
-&lt;li&gt;上述操作完成后，下载 [PicGo](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt;Releases · Molunerfinn/PicGo (github.com)&lt;/span&gt;) 安装&lt;/li&gt;
+&lt;li&gt;随后获得的 &lt;code class=&#34;blue&#34;&gt;token&lt;/code&gt;  记得复制保存，因为这个只能看一次&lt;/li&gt;
+&lt;li&gt;上述操作完成后，下载&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt; PicGo&lt;/span&gt; 安装&lt;/li&gt;
 &lt;li&gt;图床设置中找到 GitHub 图床，进行相关配置，自定义域名通常为 &lt;code class=&#34;blue&#34;&gt;https://cdn.jsdelivr.net/gh/Github用户名/Github仓库名@master&lt;/code&gt; &lt;br /&gt;
 &lt;img data-src=&#34;https://s2.loli.net/2022/11/18/8BGx3NwsRJ6HiLc.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
