@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;虚拟机&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-23T02:52:33.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="计算机网络" />
+    <category term="网络协议" />
+    <category term="法律法规" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <entry>
+        <id>https://mobius-0.github.io/security/VMware/</id>
+        <title>虚拟机安装</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/VMware/"/>
+        <content type="html">&lt;h1 id=&#34;关于虚拟化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于虚拟化&#34;&gt;#&lt;/a&gt; 关于虚拟化&lt;/h1&gt;
+&lt;p&gt;虚拟化技术在目前的互联网中算是非常关键的基础技术之一，细分下去可以有服务器虚拟化、网络虚拟化、应用虚拟化等等，这里我们要做的主要是物理机的虚拟化，也可以说是服务器的虚拟化。&lt;/p&gt;
+&lt;p&gt;服务器的虚拟化又可以分为两种实现方式：寄居虚拟化和裸机虚拟化&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;寄居虚拟化即将虚拟化服务部署在物理机已经安装好的操作系统上，这样效率和稳定性较低，但模式简单；而裸机虚拟化则将虚拟化读物直接部署在物理机上，效率较高，且在合理的逻辑划分下安全性和稳定性都有了较大的提高&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里我们会用到的是寄居虚拟化，也就是在现有操作系统上安装虚拟化服务软件如 VMware Workstation、Virtual Box 等。&lt;/p&gt;
+&lt;h1 id=&#34;虚拟化服务软件的安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟化服务软件的安装&#34;&gt;#&lt;/a&gt; 虚拟化服务软件的安装&lt;/h1&gt;
+&lt;p&gt;各自虚拟化服务软件间其实大同小异，所以这里就只关注 Vmware Workstation 的安装&lt;/p&gt;
+&lt;h2 id=&#34;vmware安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vmware安装包&#34;&gt;#&lt;/a&gt; VMware 安装包&lt;/h2&gt;
+&lt;p&gt;在之前 VMware 还是免费的，但后来就开始收费购买使用，现在适用于桌面级的有三种版本：&lt;/p&gt;
+&lt;p&gt;VMware Fusion（for mac）：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudm13YXJlLmNvbS9wcm9kdWN0cy9mdXNpb24uaHRtbA==&#34;&gt;https://www.vmware.com/products/fusion.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;VMware Workstation Player（free for Windows and Linux）：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudm13YXJlLmNvbS9wcm9kdWN0cy93b3Jrc3RhdGlvbi1wbGF5ZXIuaHRtbA==&#34;&gt;https://www.vmware.com/products/workstation-player.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;VMware Workstation Pro（for Windows and Linux）：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudm13YXJlLmNvbS9wcm9kdWN0cy93b3Jrc3RhdGlvbi1wcm8uaHRtbA==&#34;&gt;https://www.vmware.com/products/workstation-pro.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;这里也贴一个 workstation pro 15.5 的破解安装包：链接: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMXB3WlFvcEJVM0tCWlRVaU9hSEwxSGc=&#34;&gt;https://pan.baidu.com/s/1pwZQopBU3KBZTUiOaHL1Hg&lt;/span&gt;  提取码: 1919&lt;/p&gt;
+&lt;h2 id=&#34;安装过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装过程&#34;&gt;#&lt;/a&gt; 安装过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;双击运行安装 exe&lt;/li&gt;
+&lt;li&gt;接受条款，下一步&lt;/li&gt;
+&lt;li&gt;选择安装目录，建议不要安装在 C 盘上，选项全部勾选&lt;/li&gt;
+&lt;li&gt;“检查更新” 和 “加入体验计划” 选项视情况而定，可选可不选&lt;/li&gt;
+&lt;li&gt;勾选创建快捷方式&lt;/li&gt;
+&lt;li&gt;下一步至安装，并等待安装完成&lt;/li&gt;
+&lt;li&gt;安装完成后双击快捷方式打开&lt;/li&gt;
+&lt;li&gt;此时会要求你输入激活码，可以选择试用，也可以上网百度一下激活码，有的可以用，多试一试，这里贴几个网络上的 workstation pro 15.5 的激活码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;VG5HH-D6E04-0889Y-QXZET-QGUC8
+CY55A-F6G80-H85HQ-WNN5X-W38W4
+AC11H-4HZ05-08EDQ-APQGX-YCUC8
+ZG780-8EZ9M-M89LY-M5PEG-W2AZ8
+AU15R-A0Z4N-M88HY-HQYNX-QYKD6
+VY110-4RD50-H886P-5FMN9-WPUUD
+GF302-4HW44-H88DQ-WZXNV-Q3R94
+UA752-0KF9J-0811Y-MQNEX-ZUAGF
+ZF3NU-D6XEJ-48E7Q-27YNC-PC8ED
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;激活成功进入首页即可完成安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;虚拟机的搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟机的搭建&#34;&gt;#&lt;/a&gt; 虚拟机的搭建&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;首先必须要下载好你想要安装的虚拟机的操作系统镜像，比如 Windows、Ubuntu 等，当然也会有有的操作系统已经帮你安装好虚拟机上打包好了的，比如 Kali。这里放两个示例镜像的连接&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Windows 10：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9zb2Z0d2FyZS1kb3dubG9hZC93aW5kb3dzMTA=&#34;&gt;https://www.microsoft.com/zh-cn/software-download/windows10&lt;/span&gt; （进入后点击 “立即下载工具” 即可，当然这个也需要激活才能使用全部功能，但实际上不激活也不影响正常使用）&lt;/p&gt;
+&lt;p&gt;Ubuntu：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91YnVudHUuY29tL2Rvd25sb2FkL2Rlc2t0b3A=&#34;&gt;https://ubuntu.com/download/desktop&lt;/span&gt; （进入点击 “download” 即可）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;打开虚拟机，点击 “创建虚拟机”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通常建议新手接下来选择 “典型” 配置，这样配置设置要简单一点，当然也可以选择 “自定义”，这样要选择的设置就多一点。 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;其实两种配置本质上没有多大区别，以后用的多了完全可以再修改虚拟机的设置，修改资源分配&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这里为了展示得更全面，选择 “自定义” 配置，在硬件兼容性上通常选择与当前虚拟机软件版本一致的选项，例如当前为 workstation pro 16，兼容性就选择 workstation 16.x&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择 “安装程序光盘映像文件”，然后浏览选择你下载好的系统镜像，下一步&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;命名请随意，位置建议不要放在 C 盘&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;处理器配置可默认，当然安装后也可以修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟机内存可用推荐设置，当然安装后也可以修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网络连接通常使用 NAT，如果使用环境不限制入网设备数量可以使用桥接模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随后一路使用默认设置一路 “下一步” 即可，在指定磁盘容量时建议先预设好自己所安装的虚拟机要用来做什么，会安装什么软件，然后设置好适当大小的最大磁盘大小，同时选择将虚拟磁盘拆分为多个文件，因为如果后期容量不足增加容量后，打开虚拟机进行磁盘分配的操作较为麻烦（其实和物理机上加装硬盘然后分区的操作大同小异，只是同样麻烦）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随后就是正常的系统安装过程，这部分就不再赘述，根据个人需求选择安装选项即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="网络安全" />
+        <category term="工具" />
+        <category term="虚拟机" />
+        <updated>2022-11-23T02:52:33.000Z</updated>
+    </entry>
+</feed>

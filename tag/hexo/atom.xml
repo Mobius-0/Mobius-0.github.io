@@ -9,6 +9,10 @@
     <category term="网站" />
     <category term="网络安全" />
     <category term="工具" />
+    <category term="虚拟机" />
+    <category term="计算机网络" />
+    <category term="网络协议" />
+    <category term="法律法规" />
     <category term="星际争霸2" />
     <category term="平衡" />
     <category term="杂谈" />
@@ -94,6 +98,8 @@
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;据个人使用经验，建议使用此方法时图片尽可能一张一张的上传，因为有时候多选图片上传会因为 GitHub 自身连接原因会出现部分图片上传失败导致上传不全&lt;/p&gt;
 &lt;/div&gt;
+&lt;h1 id=&#34;写在最后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写在最后&#34;&gt;#&lt;/a&gt; 写在最后&lt;/h1&gt;
+&lt;p&gt;当然还是有很多问题我没有写，主要还是因为我配置的过程中并没有做修改或者没有遇到，并且其中可能还有等待缓存刷新等玄学问题，就比如有时候我替换掉标签页图标或者是打开文章字数统计等等功能时，不论是本地测试还是推送至 GitHub 都没有变化，图片还是原来的图片，字数统计也不显示，后来过了几天才替换上去。总之 Hexo 确实很好用，但有时候总会出一些莫名其妙的问题，这个时候还是先耐心等待吧。&lt;/p&gt;
 </content>
         <category term="Hexo" />
         <category term="shoya" />

@@ -1,0 +1,1075 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="网络安全,工具" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/tools/">
+
+
+
+  <title>
+渗透测试工具收集 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">渗透测试工具收集
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-16 19:28:43">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-16T19:28:43+08:00">2022-11-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>18k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>23 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/1ZogVUDzq4LGuJh.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/WVDdEUPuXiHp4cj.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/xSBw39n6OLareXK.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/cQgHsNKJmoPZIA1.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/ySTw4XIBxPWReLv.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/KA7WHtm61zLES9T.png"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/tools/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="信息收集"><a class="anchor" href="#信息收集">#</a> 信息收集</h1>
+<h2 id="综合工具"><a class="anchor" href="#综合工具">#</a> 综合工具</h2>
+<h3 id="sitescan"><a class="anchor" href="#sitescan">#</a> SiteScan</h3>
+<blockquote>
+<p>专注一站式解决渗透测试的信息收集任务。包括域名 ip 历史解析、nmap 常见端口爆破、子域名信息收集、旁站信息收集、whois 信息收集、网站架构分析、cms 解析、备案号信息收集、CDN 信息解析、是否存在 waf 检测、后台寻找以及生成检测结果 html 报告表等。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tyYWNlcjEyNy9TaXRlU2Nhbg==">https://github.com/kracer127/SiteScan</span></p>
+<h3 id="nemo_go"><a class="anchor" href="#nemo_go">#</a> nemo_go</h3>
+<blockquote>
+<p>Nemo 是用来进行自动化信息收集的一个简单平台，通过集成常用的信息收集工具和技术，实现对内网及互联网资产信息的自动收集，提高隐患排查和渗透测试的工作效率，用 Golang 完全重构了原 Python 版本。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hhbmMwMGwvbmVtb19nbw==">https://github.com/hanc00l/nemo_go</span></p>
+<h3 id="linglong"><a class="anchor" href="#linglong">#</a> linglong</h3>
+<blockquote>
+<p>一款资产巡航扫描系统。系统定位是通过 masscan+nmap 无限循环去发现新增资产，自动进行端口弱口令爆破 /、指纹识别、XrayPoc 扫描。主要功能包括:  <code>资产探测</code> 、 <code>端口爆破</code> 、 <code>Poc扫描</code> 、 <code>指纹识别</code> 、 <code>定时任务</code> 、 <code>管理后台识别</code> 、 <code>报表展示</code></p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2F3YWtlMXQvbGluZ2xvbmc=">https://github.com/awake1t/linglong</span></p>
+<h3 id="appinfoscanner"><a class="anchor" href="#appinfoscanner">#</a> AppInfoScanner</h3>
+<blockquote>
+<p>一款适用于以 HW 行动 / 红队 / 渗透测试团队为场景的移动端 (Android、iOS、WEB、H5、静态网站) 信息收集扫描工具，可以帮助渗透测试工程师、攻击队成员、红队成员快速收集到移动端或者静态 WEB 站点中关键的资产信息并提供基本的信息输出，如：Title、Domain、CDN、指纹信息、状态信息等</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tlbHZpbkJlbi9BcHBJbmZvU2Nhbm5lcg==">https://github.com/kelvinBen/AppInfoScanner</span></p>
+<h3 id="banli-资产扫描工具"><a class="anchor" href="#banli-资产扫描工具">#</a> Banli - 资产扫描工具</h3>
+<blockquote>
+<p>Banli 是一款极其简单好用的高危资产识别和高危漏洞扫描工具。Banli 要解决的问题是如何快速识别企业的高危资产，如何快速扫描企业的高危漏洞。包括 Web 资产、中间件资产、框架资产、安全设备等高危资产的识别，包括 Web 漏洞、命令执行漏洞、反序列化等高危漏洞的扫描.</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dvcWkvQmFubGk=">https://github.com/Goqi/Banli</span></p>
+<h3 id="uture_box"><a class="anchor" href="#uture_box">#</a> uture_Box</h3>
+<blockquote>
+<p>集合渗透测试常用工具对目标进行一键扫描。包含多个 github 优秀的开源工具，只需传入目标，即可启动收集的工具同时对目标进行扫描，将结果统一格式化输出。现有两个模块的工具：collect（信息收集）与 vulscan（漏洞扫描）包含功能：目录扫描、子域名爆破、指纹识别、Cms 识别、Waf 识别、Js 检测 url、漏洞扫描</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Y2Sk8vU3V0dXJlX0JveA==">https://github.com/F6JO/Suture_Box</span></p>
+<h3 id="ip2domain"><a class="anchor" href="#ip2domain">#</a> ip2domain</h3>
+<blockquote>
+<p>批量查询 ip 对应域名、备案信息、百度权重。在批量挖 SRC 时，通常会用较新的漏洞 POC 批量跑 fofa 或其他空间测绘的相关资产 ip，该工具可用于对跑到的 ip 批量查询域名及百度权重、备案信息，快速确定 ip 所属企业，方便提交漏洞。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NtYTExTmV3L2lwMmRvbWFpbg==">https://github.com/Sma11New/ip2domain</span></p>
+<h3 id="enscan"><a class="anchor" href="#enscan">#</a> ENScan</h3>
+<blockquote>
+<p>企业基本信息（法人、电话、公司地址等等）* 企业 ICP 备案号以及网站企业 APP 信息企业微信公众号信息企业微博信息子公司的基本信息供应商信息</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dncHNlYy9FTlNjYW4=">https://github.com/wgpsec/ENScan</span></p>
+<h3 id="yakit"><a class="anchor" href="#yakit">#</a> YAKIT</h3>
+<blockquote>
+<p>YAK 是国际上首个致力于网络安全底层能力融合的垂直开发语言，提供了非常强大的安全能力。Yak 是绝大部分 “数据描述语言 / 容器语言” 的超集，具备 Go 所有能力与库生态，VSCode 插件等，语法可自定义，是图灵完备的脚本语言，完全国产。通过函数提供各类底层安全能力，包括端口扫描、指纹识别、poc 框架、shell 管理、MITM 劫持、强大的插件系统等。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lha2xhbmcveWFraXQ=">https://github.com/yaklang/yakit</span></p>
+<h3 id="水泽-信息收集自动化工具"><a class="anchor" href="#水泽-信息收集自动化工具">#</a> 水泽 - 信息收集自动化工具</h3>
+<blockquote>
+<p>协助红队人员快速的信息收集，测绘目标资产，寻找薄弱点。一条龙服务，只需要输入根域名即可全方位收集相关资产，并检测漏洞。也可以输入多个域名、C 段 IP 等。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzB4NzI3L1NodWlaZV8weDcyNw==">https://github.com/0x727/ShuiZe_0x727</span></p>
+<h3 id="goscan"><a class="anchor" href="#goscan">#</a> GoScan</h3>
+<blockquote>
+<p>GoScan 是采用 Golang 语言编写的一款分布式综合资产管理系统，Web 端负责展示数据和接受输入，Client 端负责任务运行。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NURi1NaXNzRmVuZy9Hb1NjYW4=">https://github.com/CTF-MissFeng/GoScan</span></p>
+<h3 id="szhe_scan"><a class="anchor" href="#szhe_scan">#</a> SZhe_Scan</h3>
+<blockquote>
+<p>碎遮 SZhe_Scan Web 漏洞扫描器，基于 python Flask 框架，对输入的域名 / IP 进行全面的信息搜集，漏洞扫描，可自主添加 POC</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NsMHVkRzBkL1NaaGVfU2Nhbg==">https://github.com/Cl0udG0d/SZhe_Scan</span></p>
+<h3 id="raccoon"><a class="anchor" href="#raccoon">#</a> Raccoon</h3>
+<blockquote>
+<p>一款用于侦察和漏洞扫描的高性能攻击性安全工具。从获取 DNS 记录，TLS 数据，WHOIS 信息检索，WAF 存在检测以及目录爆破，子域枚举等所有操作。每次扫描结果都将会输出保存到相应的文件中</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2V2eWF0YXJtZWdlZC9SYWNjb29u">https://github.com/evyatarmeged/Raccoon</span></p>
+<h3 id="scannn"><a class="anchor" href="#scannn">#</a> Scannn</h3>
+<blockquote>
+<p>一款红队辅助扫描工具，针对多端口多 IP 的端口扫描与特征分析程序</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1hpYW9CYWktMTIxMzgvU0NBTk5O">https://github.com/XiaoBai-12138/SCANNN</span></p>
+<h3 id="tsunami"><a class="anchor" href="#tsunami">#</a> Tsunami</h3>
+<blockquote>
+<p>Tsunami 是一款功能强大的通用网络安全扫描工具，除此之外，它还是一个可扩展的插件系统，可以帮助广大安全研究人员以高可信度的方式检测和扫描高危严重漏洞。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dvb2dsZS90c3VuYW1pLXNlY3VyaXR5LXNjYW5uZXI=">https://github.com/google/tsunami-security-scanner</span></p>
+<h3 id="ratel"><a class="anchor" href="#ratel">#</a> ratel</h3>
+<blockquote>
+<p>ratel (獾) 是一个由 rust 开发的信息搜集工具，专注 web 资产发现，支持从 fofa，zoomeye API 查询，提供详细的配置参数，可靠，可以从错误中恢复查询，自动去重。同时也支持主动扫描端口，探测 http，提取 https 证书中域名。ratel 提供细粒度的 http poc 探测模块，支持多请求的 poc，利用自定义正则表达式提取响应内容并作为后续请求的变量。ratel 输出格式为 csv。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2g0Y251bGwvcmF0ZWw=">https://github.com/h4cnull/ratel</span></p>
+<h3 id="onlinetools-线上信息收集工具"><a class="anchor" href="#onlinetools-线上信息收集工具">#</a> onlinetools - 线上信息收集工具</h3>
+<blockquote>
+<p>这是一款线上工具箱，收集整理了一些渗透测试过程中常见的需求（病句？）<br />
+现在已经包含的功能有：<br />
+在线 cms 识别 | 信息泄露 | 工控 | 系统 | 物联网安全 | cms 漏洞扫描 | nmap 端口扫描 | 子域名获取</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2ljZXloZXhtYW4vb25saW5ldG9vbHM=">https://github.com/iceyhexman/onlinetools</span></p>
+<h3 id="jud-scan"><a class="anchor" href="#jud-scan">#</a> JuD-Scan</h3>
+<blockquote>
+<p>JuD-Scan 定位是一个资产发现和识别工具；其特色功能在于快速识别 Web 指纹信息，定位资产类型。辅助红队快速定位目标资产信息。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL20wc3dheS9KdUQtU2Nhbg==">https://github.com/m0sway/JuD-Scan</span></p>
+<h3 id="searchmap"><a class="anchor" href="#searchmap">#</a> SearchMap</h3>
+<blockquote>
+<p>searchmap 是一款集域名解析、IP 反查域名、WHOIS 查询、CDN 检测、端口扫描、目录扫描、子域名挖掘为一体的前渗透测试综合信息收集工具。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FzYW90b21vL1NlYXJjaE1hcA==">https://github.com/asaotomo/SearchMap</span></p>
+<h3 id="apolloscanner"><a class="anchor" href="#apolloscanner">#</a> ApolloScanner</h3>
+<blockquote>
+<p>自动化巡航扫描框架（可用于红队打点评估）</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2IwYmFjL0Fwb2xsb1NjYW5uZXI=">https://github.com/b0bac/ApolloScanner</span></p>
+<h3 id="allin"><a class="anchor" href="#allin">#</a> ALLiN</h3>
+<blockquote>
+<p>一个辅助平常渗透测试项目或者攻防项目快速打点的综合工具，由之前写的工具 AG3 改名而来。是一款轻便、小巧、快速、全面的扫描工具。多用于渗透前资产收集和渗透后内网横向渗透。工具从项目上迭代了一些懒人功能（比如提供扫描资产文件中，可以写绝大部分的各种形式的链接 / CIDR, 并在此基础上可以添加任意端口和路径）。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1AxLVRlYW0vQWxsaU4=">https://github.com/P1-Team/AlliN</span></p>
+<h3 id="darkeye"><a class="anchor" href="#darkeye">#</a> DarkEye</h3>
+<blockquote>
+<p>一款主机发现、网段发现、协议爆破、IP 域名碰撞的工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2IxZ2NhdC9EYXJrRXll">https://github.com/b1gcat/DarkEye</span></p>
+<h3 id="wanli"><a class="anchor" href="#wanli">#</a> WanLi</h3>
+<blockquote>
+<p>使用 Dirsearch, Subfinder, Ksubdomain, Httpx、nuclei 工具进行快速目标资产检查并对目标资产进行敏感文件、敏感路径、漏洞验证检测。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0V4cExhbmdjbi9XYW5MaQ==">https://github.com/ExpLangcn/WanLi</span></p>
+<h3 id="autoscanner"><a class="anchor" href="#autoscanner">#</a> Autoscanner</h3>
+<blockquote>
+<p>输入域名 &gt; 爆破子域名 &gt; 扫描子域名端口 &gt; 发现扫描 web 服务 &gt; 集成报告的全流程全自动扫描器。集成 oneforall、masscan、nmap、dirsearch、crawlergo、xray 等工具，另支持 cdn 识别、网页截图、站点定位；动态识别域名并添加功能、工具超时中断等</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pvbmdkZWlxaWFueGluZy9BdXRvc2Nhbm5lcg==">https://github.com/zongdeiqianxing/Autoscanner</span></p>
+<h3 id="securityservicebox"><a class="anchor" href="#securityservicebox">#</a> SecurityServiceBox</h3>
+<blockquote>
+<p>一个既可以满足安服仔日常渗透工作也可以批量刷洞的工具盒子。集合了常见的域名收集、目录扫描、ip 扫描、指纹扫描、PoC 验证等常用工具，方便安服仔快速展开渗透测试</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dpdmVtZWZpdncvU2VjdXJpdHlTZXJ2aWNlQm94">https://github.com/givemefivw/SecurityServiceBox</span></p>
+<h3 id="domain_hunter_pro"><a class="anchor" href="#domain_hunter_pro">#</a> domain_hunter_pro</h3>
+<blockquote>
+<p>domain_hunter 的高级版本，SRC 挖洞、HW 打点之必备！自动化资产收集；快速 Title 获取；外部工具联动；等等</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JpdDR3b28vZG9tYWluX2h1bnRlcl9wcm8=">https://github.com/bit4woo/domain_hunter_pro</span></p>
+<h3 id="enscan_go"><a class="anchor" href="#enscan_go">#</a> ENScan_GO</h3>
+<blockquote>
+<p>一款基于各大企业信息 API 的工具，解决在遇到的各种针对国内企业信息收集难题。一键收集控股公司 ICP 备案、APP、小程序、微信公众号等信息聚合导出。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dncHNlYy9FTlNjYW5fR08=">https://github.com/wgpsec/ENScan_GO</span></p>
+<h3 id="reconftw"><a class="anchor" href="#reconftw">#</a> ReconFTW</h3>
+<blockquote>
+<p>ReconFTW 为您自动化侦察的整个过程。它比子域枚举以及各种漏洞检查和获取关于目标的最大信息的工作更出色。该工具使用了很多技术 (被动，蛮力，排列，证书透明，源代码抓取，分析，DNS 记录等) 用于子域枚举，帮助你获得最大和最有趣的子域，使你在竞争中领先。它还执行各种漏洞检查，如 XSS、打开重定向、SSRF、CRLF、LFI、SQLi、SSL 测试、SSTI、DNS 区域传输等等。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NpeDJkZXovcmVjb25mdHc=">https://github.com/six2dez/reconftw</span></p>
+<h3 id="dismap"><a class="anchor" href="#dismap">#</a> dismap</h3>
+<blockquote>
+<p>Dismap 定位是一个适用于内外网的资产发现和识别工具；其特色功能在于快速识别 Web 指纹信息，定位资产类型。辅助红队快速定位目标资产信息，辅助蓝队发现疑似脆弱点。<br />
+Dismap 拥有完善的指纹规则库，可轻松自定义新识别规则。<br />
+识别结果可直接丢给 Vulmap (&gt;=0.8) 进行漏洞扫描实现简易联动。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3poenlrZXIvZGlzbWFw">https://github.com/zhzyker/dismap</span></p>
+<h2 id="waf识别"><a class="anchor" href="#waf识别">#</a> waf 识别</h2>
+<h3 id="wafw00f"><a class="anchor" href="#wafw00f">#</a> wafw00f</h3>
+<blockquote>
+<p>waf 识别工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VuYWJsZVNlY3VyaXR5L3dhZncwMGY=">https://github.com/EnableSecurity/wafw00f</span></p>
+<h3 id="waf-a-mole针对web应用防火墙的基于变异的模糊测试工具"><a class="anchor" href="#waf-a-mole针对web应用防火墙的基于变异的模糊测试工具">#</a> WAF-A-MoLE：针对 Web 应用防火墙的基于变异的模糊测试工具</h3>
+<blockquote>
+<p>WAF-A-MoLE 是一款功能强大的基于变异的模糊测试工具，该工具可以帮助广大研究人员对基于 ML 的 Web 应用防火墙进行模糊测试。<br />
+只需提供一条 SQL 注入查询语句，该工具便能够尝试生成一个可绕过目标 WAF 的语义不变的变种查询。我们可以使用 WAF-A-MoLE 来探索解决方案空间，找到目标分类器未发现的危险 “盲点”，并且可以使用此工具评估产品的稳健性。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0F2YWxaL1dBRi1BLU1vTEU=">https://github.com/AvalZ/WAF-A-MoLE</span></p>
+<h2 id="指纹识别"><a class="anchor" href="#指纹识别">#</a> 指纹识别</h2>
+<h3 id="tidefinger"><a class="anchor" href="#tidefinger">#</a> TideFinger</h3>
+<blockquote>
+<p>TideFinger，一个开源的指纹识别小工具，使用了传统和现代检测技术相结合的指纹检测方法，让指纹检测更快捷、准确。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1RpZGVTZWMvVGlkZUZpbmdlcg==">https://github.com/TideSec/TideFinger</span></p>
+<h3 id="cms指纹识别-cmseek"><a class="anchor" href="#cms指纹识别-cmseek">#</a> CMS 指纹识别 - CMSeek</h3>
+<blockquote>
+<p>一款 cms 指纹识别工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1R1aGluc2h1YmhyYS9DTVNlZUs=">https://github.com/Tuhinshubhra/CMSeeK</span></p>
+<h3 id="cms指纹识别-webfinger"><a class="anchor" href="#cms指纹识别-webfinger">#</a> CMS 指纹识别 - Webfinger</h3>
+<blockquote>
+<p>web 指纹识别</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NlNTVpMG4vV2ViZmluZ2Vy">https://github.com/se55i0n/Webfinger</span></p>
+<h3 id="glass-指纹识别工具"><a class="anchor" href="#glass-指纹识别工具">#</a> Glass - 指纹识别工具</h3>
+<blockquote>
+<p>Glass 是一款针对资产列表的快速指纹识别工具，通过调用 Fofa/ZoomEye/Shodan/360 等 api 接口快速查询资产信息并识别重点资产的指纹，也可针对 IP/IP 段或资产列表进行快速的指纹识别。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3M3Y2tUZWFtL0dsYXNz">https://github.com/s7ckTeam/Glass</span></p>
+<h3 id="ehole棱洞30-红队重点攻击系统指纹探测工具"><a class="anchor" href="#ehole棱洞30-红队重点攻击系统指纹探测工具">#</a> EHole (棱洞) 3.0 红队重点攻击系统指纹探测工具</h3>
+<blockquote>
+<p>EHole 是一款对资产中重点系统指纹识别的工具，在红队作战中，信息收集是必不可少的环节，如何才能从大量的资产中提取有用的系统 (如 OA、VPN、Weblogic...)。EHole 旨在帮助红队人员在信息收集期间能够快速从 C 段、大量杂乱的资产中精准定位到易被攻击的系统，从而实施进一步攻击。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VkZ2VTZWN1cml0eVRlYW0vRUhvbGU=">https://github.com/EdgeSecurityTeam/EHole</span></p>
+<h2 id="cdn识别"><a class="anchor" href="#cdn识别">#</a> CDN 识别</h2>
+<h3 id="fuck-cdn"><a class="anchor" href="#fuck-cdn">#</a> FUCK CDN</h3>
+<blockquote>
+<p>CDN 真实 IP 扫描</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1RhaTdzeS9mdWNrY2Ru">https://github.com/Tai7sy/fuckcdn</span></p>
+<h3 id="w8fuckcdn"><a class="anchor" href="#w8fuckcdn">#</a> w8fuckcdn</h3>
+<blockquote>
+<p>通过扫描全网绕过 CDN 获取网站 IP 地址</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JveS1oYWNrL3c4ZnVja2Nkbi8=">https://github.com/boy-hack/w8fuckcdn/</span></p>
+<h2 id="端口扫描"><a class="anchor" href="#端口扫描">#</a> 端口扫描</h2>
+<h3 id="跨平台小巧的端口爆破工具"><a class="anchor" href="#跨平台小巧的端口爆破工具">#</a> 跨平台小巧的端口爆破工具</h3>
+<blockquote>
+<p>一款跨平台小巧的端口爆破工具，支持爆破 FTP/SSH/SMB/MSSQL/MYSQL/POSTGRESQL/MONGOD。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2F3YWtlMXQvUG9ydEJydXRl">https://github.com/awake1t/PortBrute</span></p>
+<h3 id="kscan-简单好用的资产测绘工具端口指纹存活自动探测"><a class="anchor" href="#kscan-简单好用的资产测绘工具端口指纹存活自动探测">#</a> Kscan - 简单好用的资产测绘工具 | 端口指纹存活自动探测</h3>
+<blockquote>
+<p>Kscan 是一款轻量级的资产发现工具，可针对 IP/IP 段或资产列表进行端口扫描以及 TCP 指纹识别和 Banner 抓取，在不发送更多的数据包的情况下尽可能的获取端口更多信息。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xjdnZ2di9rc2Nhbg==">https://github.com/lcvvvv/kscan</span></p>
+<h3 id="scaninfo"><a class="anchor" href="#scaninfo">#</a> scaninfo</h3>
+<blockquote>
+<p>开源、轻量、快速、跨平台 的红队内外网打点扫描器。快速的端口扫描和服务识别比 masscan 更快。包含 fscan 的绝大部份功能除了 poc 扫描和自定义字典</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlZHRvb2xza29iZS9zY2FuaW5mbw==">https://github.com/redtoolskobe/scaninfo</span></p>
+<h2 id="域名扫描"><a class="anchor" href="#域名扫描">#</a> 域名扫描</h2>
+<h3 id="ksubdomain-子域爆破工具"><a class="anchor" href="#ksubdomain-子域爆破工具">#</a> ksubdomain - 子域爆破工具</h3>
+<blockquote>
+<p>ksubdomain 是一款基于无状态的子域名爆破工具，类似无状态端口扫描，支持在 Windows/Linux/Mac 上进行快速的 DNS 爆破，拥有重发机制不用担心漏包。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JveS1oYWNrL2tzdWJkb21haW4=">https://github.com/boy-hack/ksubdomain</span></p>
+<h3 id="oneforall"><a class="anchor" href="#oneforall">#</a> OneForAll</h3>
+<blockquote>
+<p>OneForAll 是一款功能强大的子域收集工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NobWlseWx0eS9PbmVGb3JBbGw=">https://github.com/shmilylty/OneForAll</span></p>
+<h3 id="subfinder-快速被动子域枚举工具"><a class="anchor" href="#subfinder-快速被动子域枚举工具">#</a> subfinder - 快速被动子域枚举工具</h3>
+<blockquote>
+<p>子域名是一种子域名发现工具，通过使用被动在线资源发现网站的有效子域名。它具有简单的模块化架构，并针对速度进行了优化。子查找器仅用于执行一件事 - 被动子域枚举，并且它做得很好。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Byb2plY3RkaXNjb3Zlcnkvc3ViZmluZGVy">https://github.com/projectdiscovery/subfinder</span></p>
+<h3 id="ksubdomain"><a class="anchor" href="#ksubdomain">#</a> ksubdomain</h3>
+<blockquote>
+<p>ksubdomain 是一款基于无状态子域名爆破工具，支持在 Windows/Linux/Mac 上使用，它会很快的进行 DNS 爆破，在 Mac 和 Windows 上理论最大发包速度在 30w/s,linux 上为 160w/s 的速度。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JveS1oYWNrL2tzdWJkb21haW4=">https://github.com/boy-hack/ksubdomain</span></p>
+<h3 id="layer"><a class="anchor" href="#layer">#</a> Layer</h3>
+<blockquote>
+<p>Layer 子域名挖掘机使用方法简单，在域名对话框中直接输入域名就可以进行扫描，它的显示界面比较细致，有域名、解析 IP、CDN 列表、WEB 服务器和网站状态</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubGlrZWNzLmNvbS9zaG93LTIwMzM5NjI3OS5odG1s">https://www.likecs.com/show-203396279.html</span></p>
+<h3 id="subdomainsbrute"><a class="anchor" href="#subdomainsbrute">#</a> subDomainsBrute</h3>
+<blockquote>
+<p>subDomainsBrute 的特点是可以用小字典递归地发现三级域名、四级域名，甚至五级域名等不容易被探测到的域名</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpamllamllL3N1YkRvbWFpbnNCcnV0ZS8=">https://github.com/lijiejie/subDomainsBrute/</span></p>
+<h3 id="sublist3r"><a class="anchor" href="#sublist3r">#</a> sublist3r</h3>
+<blockquote>
+<p>Sublist3r 也是一个比较常用的工具，它能列举多种资源，如在 Google、Yahoo、Bing、Baidu 和 Ask 等搜索引擎中可查到的子域名，还可以列出 Netcraft、VirusTotal、ThreatCrowd、DNSdumpster 和 Reverse DNS 查到的子域名</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Fib3VsM2xhL1N1Ymxpc3Qzci8=">https://github.com/aboul3la/Sublist3r/</span></p>
+<h3 id="dnsenum"><a class="anchor" href="#dnsenum">#</a> dnsenum</h3>
+<blockquote>
+<p>dnsenum 的目的是尽可能收集一个域的信息，它能够通过谷歌或者字典文件猜测可能存在的域名，并对一个网段进行反向查询。它不仅可以查询网站的主机地址信息、域名服务器和邮件交换记录，还可以在域名服务器上执行 axfr 请求，然后通过谷歌脚本得到扩展域名信息，提取子域名并查询，最后计算 C 类地址并执行 whois 查询，执行反向查询，把地址段写入文件</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Z3YWV5dGVucy9kbnNlbnVtLw==">https://github.com/fwaeytens/dnsenum/</span></p>
+<h2 id="目录扫描"><a class="anchor" href="#目录扫描">#</a> 目录扫描</h2>
+<h3 id="dirsearch"><a class="anchor" href="#dirsearch">#</a> dirsearch</h3>
+<blockquote>
+<p>一种高级命令行工具，旨在暴力破解 Web 服务器中的目录和文件，AKA Web 路径扫描程序</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hdXJvc29yaWEvZGlyc2VhcmNo">https://github.com/maurosoria/dirsearch</span></p>
+<h3 id="crawler"><a class="anchor" href="#crawler">#</a> Crawler</h3>
+<blockquote>
+<p>一些爬虫 demo，比如用于渗透测试中 SQL 注入的 URL 收集脚本 (爬取必应和百度搜索结果的 URL)，子域名暴破，各大高校漏洞信息收集爬虫等，以及入门爬虫时写的一些基础代码等</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dnZmdoL0NyYXdsZXI=">https://github.com/ggfgh/Crawler</span></p>
+<h3 id="jsfinder"><a class="anchor" href="#jsfinder">#</a> JSFinder</h3>
+<blockquote>
+<p>JSFinder 是一款优秀的 github 开源工具，这款工具功能就是查找隐藏在 js 文件中的 api 接口和敏感目录，以及一些子域名。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1RocmVlemgxL0pTRmluZGVy">https://github.com/Threezh1/JSFinder</span></p>
+<h3 id="swagger-exp-信息泄露利用工具"><a class="anchor" href="#swagger-exp-信息泄露利用工具">#</a> swagger-exp -- 信息泄露利用工具</h3>
+<blockquote>
+<p>这是一个 Swagger REST API 信息泄露利用工具。主要功能有：<br />
+1、遍历所有 API 接口，自动填充参数<br />
+ 2、尝试 GET / POST 所有接口，返回 Response Code / Content-Type / Content-Length ，用于分析接口是否可以未授权访问利用<br />
+ 3、分析接口是否存在敏感参数，例如 url 参数，容易引入外网的 SSRF 漏洞<br />
+ 4、检测 API 认证绕过漏洞<br />
+ 5、在本地监听一个 Web Server，打开 Swagger UI 界面，供分析接口使用 &gt; 6、使用 Chrome 打开本地 Web 服务器，并禁用 CORS，解决部分 API 接口无法跨域请求的问题<br />
+ 7、当工具检测到 HTTP 认证绕过漏洞时，本地服务器拦截 API 文档，修改 path，以便直接在 Swagger UI 中进行测试</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpamllamllL3N3YWdnZXItZXhw">https://github.com/lijiejie/swagger-exp</span></p>
+<h3 id="arjun"><a class="anchor" href="#arjun">#</a> Arjun</h3>
+<blockquote>
+<p>Arjun 拥有一个包含 10,985 个参数名的巨大默认字典，在 10 秒内通过发送 20-30 个请求，找到该网站有效的 HTTP 参数，在渗透测试的信息收集阶段起很重要的作用</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3MwbWQzdi9Bcmp1bg==">https://github.com/s0md3v/Arjun</span></p>
+<h3 id="caesar"><a class="anchor" href="#caesar">#</a> Caesar</h3>
+<blockquote>
+<p>文件扫描是安服的一个基本环节，网络上关于文件扫描的工具也有很多，比如御剑，7kbscan，dirsearch 等，但是在实战的时候还是遇到不少的问题，比如跨平台问题以及动态 404 问题。所以按照自己的经验重新造了一个轮子。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzBwcy9DYWVzYXI=">https://github.com/0ps/Caesar</span></p>
+<h2 id="邮箱收集"><a class="anchor" href="#邮箱收集">#</a> 邮箱收集</h2>
+<h3 id="mailget"><a class="anchor" href="#mailget">#</a> Mailget</h3>
+<blockquote>
+<p>通过脉脉用户猜测企业邮箱</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JpZHRlci9tYWlsZ2V0">https://github.com/ridter/mailget</span></p>
+<h3 id="infoga"><a class="anchor" href="#infoga">#</a> Infoga</h3>
+<blockquote>
+<p>Infoga 是一款能够在搜索引擎（Google、Bing、Shodan）和 PGP 密钥服务器等多种公共资源中搜集邮箱账户的工具。使用方法十分简单，看以下截图就一目了然了。这款工具对<a target="_blank" rel="noopener" href="http://www.52bug.cn/Security"><strong>渗透</strong></a>测试前期阶段的作用显而易见。我们也可以使用这款工具来查看自己公司在互联网上的曝光度。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL200bGwway9pbmZvZ2E=">https://github.com/m4ll0k/infoga</span></p>
+<h2 id="资产整理"><a class="anchor" href="#资产整理">#</a> 资产整理</h2>
+<h3 id="arl-资产安全灯塔"><a class="anchor" href="#arl-资产安全灯塔">#</a> ARL - 资产安全灯塔</h3>
+<blockquote>
+<p>快速发现并整理企业外网资产，构建资产信息库，协助甲方安全团队或者渗透测试人员快速找到企业资产中的薄弱点和攻击面。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1RvcGhhbnRUZWNobm9sb2d5L0FSTA==">https://github.com/TophantTechnology/ARL</span></p>
+<h3 id="sec-分布式资产安全扫描"><a class="anchor" href="#sec-分布式资产安全扫描">#</a> SEC - 分布式资产安全扫描</h3>
+<blockquote>
+<p>SEC 可用于企业对服务器资源安全进行扫描排查，可控性强、可停止运行中的扫描任务、支持分布式多节点部署，更快的扫描进度 + 节点执行信息动态反馈，快速定位漏洞。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NtYWxsY2hhbS9zZWMtYWRtaW4=">https://github.com/smallcham/sec-admin</span></p>
+<h3 id="w12scan-网络安全资产扫描引擎"><a class="anchor" href="#w12scan-网络安全资产扫描引擎">#</a> w12scan - 网络安全资产扫描引擎</h3>
+<blockquote>
+<p>w12scan 是一款网络资产发现引擎，通过 WEB 接口下发任务，w12scan 会自动将相关的资产聚合在一起方便分析使用。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ctZGlnaXRhbC1zY2FubmVyL3cxMnNjYW4=">https://github.com/w-digital-scanner/w12scan</span></p>
+<h3 id="isee"><a class="anchor" href="#isee">#</a> iSee</h3>
+<blockquote>
+<p>iSee 支持 FOFA 爬虫模式并能够在 fofa 搜索结果中提取整理资产信息，同时也是一款 SRC 挖掘神器，将 SRC 的资产信息黏贴到文本导入 iSee，得到的 b 段，c 段可以直接用 nmap, masscan 等工具进行扫描，有助于发现目标厂商的更多资产信息，尤其是防火墙，VPN 等设备的弱口令！ip 和域名可以直接导入 goby,awvs 等扫描器。<br />
+在 SRC 挖掘或者 hvv 红队视角下 iSee 旨在帮助渗透测试人员快速在信息收集得到的杂乱文本信息中整理出目标所有资产，以快速发现目标的脆弱资产。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RyMHVibGUtbUFrZXIvaVNlZQ==">https://github.com/tr0uble-mAker/iSee</span></p>
+<h3 id="arl-资产侦察灯塔系统"><a class="anchor" href="#arl-资产侦察灯塔系统">#</a> ARL - 资产侦察灯塔系统</h3>
+<blockquote>
+<p>旨在快速侦察与目标关联的互联网资产，构建基础资产信息库。 协助甲方安全团队或者渗透测试人员有效侦察和检索资产，发现存在的薄弱点和攻击面。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1RvcGhhbnRUZWNobm9sb2d5L0FSTA==">https://github.com/TophantTechnology/ARL</span></p>
+<h1 id="漏洞检测利用"><a class="anchor" href="#漏洞检测利用">#</a> 漏洞检测利用</h1>
+<h2 id="脚本工具合集gui版"><a class="anchor" href="#脚本工具合集gui版">#</a> 脚本工具合集 GUI 版</h2>
+<blockquote>
+<p>本项目的主要目的：针对日常收集的 Python POC\EXP 测试脚本，使用可视化界面统一执行入口，方便运行。本项目适合人群：有 Python 基础的渗透测试人员（工具自带简易编辑器，可修改脚本内参数，重新加载后可灵活使用脚本进行测试）。内置漏洞验证、利用模块，可自定义脚本实现批量验证。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NvZGV5c28vQ29kZVRlc3QuZ2l0JTYw">https://github.com/codeyso/CodeTest.git</span></p>
+<h2 id="辅助渗透测试框架-polaris"><a class="anchor" href="#辅助渗透测试框架-polaris">#</a> 辅助渗透测试框架 -- Polaris</h2>
+<blockquote>
+<p>一个美观舒适的辅助渗透测试框架 (完善中)</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvaW1ldC9Qb2xhcmlz">https://github.com/doimet/Polaris</span></p>
+<h2 id="banli-高危资产识别和高危漏洞扫描"><a class="anchor" href="#banli-高危资产识别和高危漏洞扫描">#</a> Banli - 高危资产识别和高危漏洞扫描</h2>
+<blockquote>
+<p>Banli 是一款极其简单好用的高危资产识别和高危漏洞扫描工具。本项目也是自己深入学习理解 Go 语言后计划陆续发布的项目之一。本项目仅用于安全研究人员在授权的情况下使用，请遵守网络安全法，若因本工具产生任何问题，后果请自负，与作者无关！程序代码中不会添加任何形式的后门，运行程序一般情况不会对系统产生危害，请各位师傅放心使用！本项目会持续更新，直到海枯石烂。作者：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzBlMHc=">0e0w</span>。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0dvcWkvQmFubGk=">https://github.com/Goqi/Banli</span></p>
+<h2 id="mdat-一款用于数据库攻击的利用工具"><a class="anchor" href="#mdat-一款用于数据库攻击的利用工具">#</a> MDAT - 一款用于数据库攻击的利用工具</h2>
+<blockquote>
+<p>这是一款用于数据库攻击的利用工具，集合了多种主流的数据库类型。由团队成员 Ch1ng &amp; j1anFen 共同完成开发。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NhZmVHcm9jZXJ5U3RvcmUvTURBVA==">https://github.com/SafeGroceryStore/MDAT</span></p>
+<h2 id="webcrack-v22-弱口令检测工具"><a class="anchor" href="#webcrack-v22-弱口令检测工具">#</a> WebCrack  <code>v(2.2)</code>  - 弱口令检测工具</h2>
+<blockquote>
+<p>WebCrack 是一款 web 后台弱口令 / 万能密码批量检测工具，在工具中导入后台地址即可进行自动化检测。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3l6ZGRtcjYvV2ViQ3JhY2s=">https://github.com/yzddmr6/WebCrack</span></p>
+<h2 id="ppmap-基于go的漏洞扫描器"><a class="anchor" href="#ppmap-基于go的漏洞扫描器">#</a> ppmap - 基于 go 的漏洞扫描器</h2>
+<blockquote>
+<p>ppmap 是一款基于 Go 开发的漏洞扫描器 / 漏洞利用工具，该工具能够通过在全局上下文中检查特定变量来扫描、检测和利用 XSS 漏洞。该工具目前只能利用已知 Gadget（可能支持部分自定义开发的 Gadget）中的安全问题，但不支持代码分析或任何高级的漏洞扫描 / 利用方式。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tsZWl0b24weDAwL3BwbWFw">https://github.com/kleiton0x00/ppmap</span></p>
+<h2 id="a2sv-ssl漏洞扫描"><a class="anchor" href="#a2sv-ssl漏洞扫描">#</a> A2SV - SSL 漏洞扫描</h2>
+<blockquote>
+<p>自动扫描 SSL 漏洞。HeartBleed, CCS Injection, SSLv3 POODLE, FREAK... etc</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hhaHd1bC9hMnN2">https://github.com/hahwul/a2sv</span></p>
+<h2 id="siusiu-suitesuite-基于docker的渗透工具箱"><a class="anchor" href="#siusiu-suitesuite-基于docker的渗透工具箱">#</a> siusiu （suitesuite）- 基于 docker 的渗透工具箱</h2>
+<blockquote>
+<p>一款基于 docker 的渗透测试工具箱，致力于做到渗透工具随身携带、开箱即用。减少渗透测试工程师花在安装工具、记忆工具使用方法上的时间和精力。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NoYW5nUnVpLWhhc2gvc2l1c2l1">https://github.com/ShangRui-hash/siusiu</span></p>
+<h2 id="nginx漏洞扫描"><a class="anchor" href="#nginx漏洞扫描">#</a> Nginx 漏洞扫描</h2>
+<blockquote>
+<p>Nginxpwner 是一个简单的工具，可以查找常见的 Nginx 错误配置和漏洞</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N0YXJrMGRlL25naW54cHduZXI=">https://github.com/stark0de/nginxpwner</span></p>
+<h2 id="漏洞挖掘工具-afrog"><a class="anchor" href="#漏洞挖掘工具-afrog">#</a> 漏洞挖掘工具 -- afrog</h2>
+<blockquote>
+<p>afrog 是一个挖洞工具。如果你想挖 SQL 注入、XSS、文件包含等漏洞，可以试一下 afrog。软件有以下特点：<br />
+1、基于 xray 内核，又不像 xray<br />
+2、性能卓越，最少请求，最佳结果<br />
+ 3、实时显示，扫描进度<br />
+ 4、输出 html 报告，方便查看 request 和 response<br />
+5、启动程序，自动更新本地 PoC 库<br />
+ 6、长期维护、更新 PoC（afrog-pocs）<br />
+7、API 接口，轻松接入其他项目</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3phbjhpbi9hZnJvZw==">https://github.com/zan8in/afrog</span></p>
+<h2 id="bomber"><a class="anchor" href="#bomber">#</a> Bomber</h2>
+<blockquote>
+<p>POC bomber 是一款漏洞检测工具，旨在利用大量高危害漏洞的 POC/EXP 快速获取目标服务器权限</p>
+<p>本项目收集互联网各种危害性大的 RCE・任意文件上传・sql 注入 等高危害且能够获取到服务器核心权限的漏洞 POC/EXP，并集成在 POC bomber 武器库中，利用大量高危害 POC 对单个或多个目标进行模糊测试，以此快速获取目标服务器权限，适合在红蓝对抗或 hvv 中帮助红队快速找到突破口进入内网</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RyMHVibGUtbUFrZXIvUE9DLWJvbWJlcg==">https://github.com/tr0uble-mAker/POC-bomber</span></p>
+<h2 id="yaazhini-一款免费的android-apk和api漏洞扫描器"><a class="anchor" href="#yaazhini-一款免费的android-apk和api漏洞扫描器">#</a> Yaazhini - 一款免费的 Android APK 和 API 漏洞扫描器</h2>
+<blockquote>
+<p>Yaazhini 是一款针对 Android APK 和 API 的免费漏洞扫描工具，这款工具提供了用户友好的操作界面，广大移动端安全研究人员可以在 Yaazhini 的帮助下，轻松扫描任何 Android 应用程序的 APK 文件以及 API 接口，而且 Yaazhini 还会给你提供非常丰富的扫描结果数据。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cudmVnYWJpcmQuY29tL3lhYXpoaW5pLw==">https://www.vegabird.com/yaazhini/</span></p>
+<h2 id="fuxploider-文件上传漏洞扫描器和利用工具"><a class="anchor" href="#fuxploider-文件上传漏洞扫描器和利用工具">#</a> fuxploider - 文件上传漏洞扫描器和利用工具</h2>
+<blockquote>
+<p>Fuxploider 是一种开源渗透测试工具，可自动检测和利用文件上传表单缺陷的过程。该工具能够检测允许上传的文件类型，并能够检测哪种技术最适合在所需的 Web 服务器上上传  <code>Web Shell</code>  或任何恶意文件。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FsbWFuZGluL2Z1eHBsb2lkZXI=">https://github.com/almandin/fuxploider</span></p>
+<h2 id="xsstrike-xss扫描器"><a class="anchor" href="#xsstrike-xss扫描器">#</a> XSStrike - XSS 扫描器</h2>
+<blockquote>
+<p>XSStrike 是一个跨站点脚本检测套件，配备了四个手写解析器、一个智能负载生成器、一个强大的模糊引擎和一个非常快速的爬虫。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3MwbWQzdi9YU1N0cmlrZQ==">https://github.com/s0md3v/XSStrike</span></p>
+<h2 id="auxtools"><a class="anchor" href="#auxtools">#</a> AuxTools</h2>
+<blockquote>
+<p>使用 C++ 与 QML 混合编程开发的渗透辅助工具，其中包含：杀软识别、命令生成、编码解码、加密解密、端口扫描等功能，</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvaW1ldC9BdXhUb29scw==">https://github.com/doimet/AuxTools</span></p>
+<h2 id="poc2jar"><a class="anchor" href="#poc2jar">#</a> poc2jar</h2>
+<blockquote>
+<p>Java 编写，Python 作为辅助依赖的漏洞验证、利用工具，添加了进程查找模块、编码模块、命令模块、常见漏洞利用 GUI 模块、shiro rememberMe 解密模块，加快测试效率。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2YwbmcvcG9jMmphcg==">https://github.com/f0ng/poc2jar</span></p>
+<h2 id="ethereal"><a class="anchor" href="#ethereal">#</a> Ethereal</h2>
+<blockquote>
+<p>Ethereal 是一款免费的网络协议分析程序，支持 Unix、Windows。借助这个程序，你既可以直接从网络上抓取数据进行分析，也可以对由其他嗅探器抓取后保存在硬盘上的数据进行分析。你能交互式地浏览抓取到的数据包，查看每一个数据包的摘要和详细信息。Ethereal 有多种强大的特征，如支持几乎所有的协议、丰富的过滤语言、易于查看 TCP 会话经重构后的数据流等。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5ldGhlcmVhbC5jb20v">http://www.ethereal.com/</span></p>
+<h2 id="cvechecker"><a class="anchor" href="#cvechecker">#</a> cvechecker</h2>
+<blockquote>
+<p>cvechecker 的目标是通过扫描已安装的软件并将结果与 CVE 数据库进行匹配来报告系统上可能存在的漏洞。<br />
+官方提示：</p>
+</blockquote>
+<ul>
+<li>可能会产生许多误报（漏洞已通过修订版本修复，但该工具无法检测修订本身）。</li>
+<li>但是该工具也需要您的帮助。最多的工作是告诉 cvechecker 如何检测安装了哪个软件以及哪个版本。</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAxOTAzNi9hcnRpY2xlL2RldGFpbHMvMTEzNzY3MDE4">https://blog.csdn.net/weixin_44019036/article/details/113767018</span></p>
+<h2 id="jsql"><a class="anchor" href="#jsql">#</a> jSQL</h2>
+<blockquote>
+<p>jSQL 是一款轻量级安全测试工具，可以检测 SQL 注入漏洞。它跨平台（Windows, Linux, Mac OS X, Solaris）、开源且免费。<br />
+它提供了数据库查询、后台爆破、文件读取、Web shell、SQL Shell、文件上传、暴力枚举、编码、批量注入测试等强大的功能，是一款非常不错的工具，也是渗透测试人员的强大助手。它支持 GET\POST 注入，同时也可以进行 HTTP 头注入（这个需要用户自动构建）</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JvbjE5MC9qc3FsLWluamVjdGlvbg==">https://github.com/ron190/jsql-injection</span></p>
+<h2 id="nikto"><a class="anchor" href="#nikto">#</a> Nikto</h2>
+<blockquote>
+<p>Nikto 是一款开放源代码的、功能强大的 WEB 扫描评估软件，能对 web 服务器多种安全项目进行测试的扫描软件，能在 230 多种服务器上扫描出 2600 多种有潜在危险的文件、CGI 及其他问题，它可以扫描指定主机的 WEB 类型、主机名、特定目录、COOKIE、特定 CGI 漏洞、返回主机允许的 http 模式等等。它也使用 LibWhiske 库，但通常比 Whisker 更新的更为频繁。Nikto 是网管安全人员必备的 WEB 审计工具之一。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N1bGxvL25pa3Rv">https://github.com/sullo/nikto</span></p>
+<h2 id="dradis-漏洞利用工具"><a class="anchor" href="#dradis-漏洞利用工具">#</a> Dradis - 漏洞利用工具</h2>
+<blockquote>
+<p>Dradis 框架是一种开源工具，使用户能够在安全评估期间特别是有效的信息和数据共享。功能包括简单的报告生成，附件支持，通过服务器插件和独立平台与现有系统和工具集成。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjk1MjUwOC9hcnRpY2xlL2RldGFpbHMvMTI0Mjg5ODA4">https://blog.csdn.net/weixin_42952508/article/details/124289808</span></p>
+<h2 id="routersploit-路由器漏洞检测及利用框架"><a class="anchor" href="#routersploit-路由器漏洞检测及利用框架">#</a> RouterSploit - 路由器漏洞检测及利用框架</h2>
+<blockquote>
+<p><strong>RouteSploit 框架</strong>是一款开源的漏洞检测及利用框架，其针对的对象主要为路由器等嵌入式设备。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RocmVhdDkvcm91dGVyc3Bsb2l0">https://github.com/threat9/routersploit</span></p>
+<h2 id="vega-platform-web安全测试平台"><a class="anchor" href="#vega-platform-web安全测试平台">#</a> Vega Platform - Web 安全测试平台</h2>
+<blockquote>
+<p>Vega 是一个开放源代码的 web 应用程序安全测试平台，Vega 能够帮助你验证 SQL 注入、跨站脚本（XSS）、敏感信息泄露和其它一些安全漏洞。 Vega 使用 Java 编写，有 GUI，可以在 Linux、OS X 和 windows 下运行。Vega 类似于 Paros Proxy, Fiddler, Skipfish and ZAproxy。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3N1YmdyYXBoLmNvbS9wcm9kdWN0cy5odG1s">http://subgraph.com/products.html</span></p>
+<h2 id="xenotix"><a class="anchor" href="#xenotix">#</a> Xenotix</h2>
+<blockquote>
+<p><strong>Xenotix XSS Exploit Framework</strong> 是一款用于检测和利用 WEB 应用程序中的 XSS 漏洞的渗透测试工具。通过使用真实的浏览器引擎执行扫描，可以将代码注入到含有 xss 漏洞的 web 页面中，识别 payload 的反馈，来确保零误报的 XSS 检测。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FqaW5hYnJhaGFtL09XQVNQLVhlbm90aXgtWFNTLUV4cGxvaXQtRnJhbWV3b3Jr">https://github.com/ajinabraham/OWASP-Xenotix-XSS-Exploit-Framework</span></p>
+<h2 id="http-请求走私检测工具"><a class="anchor" href="#http-请求走私检测工具">#</a> HTTP 请求走私检测工具</h2>
+<blockquote>
+<p>HTTP 请求走私是一种高危漏洞，是一种攻击者走私模糊的 HTTP 请求以绕过安全控制并获得未经授权的访问以执行恶意活动的技术，该漏洞早在 2005 年就被 watchfire 发现，后来在 2019 年 8 月重新发现由 James Kettle - (albinowax) 发现并在 DEF CON 27 和 Black-Hat USA 上展示，要了解有关此漏洞的更多信息，您可以参考他在 Portswigger 网站上的详细研究博客。所以这个安全工具背后的想法是检测给定主机的 HRS 漏洞，检测基于给定排列的时间延迟技术，所以要了解更多关于这个工具的信息，我强烈建议你阅读我的博客文章这个工具。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Fuc2h1bWFucGF0dG5haWsvaHR0cC1yZXF1ZXN0LXNtdWdnbGluZw==">https://github.com/anshumanpattnaik/http-request-smuggling</span></p>
+<h1 id="内网渗透"><a class="anchor" href="#内网渗透">#</a> 内网渗透</h1>
+<h2 id="内网扫描以及验证工具-requesttemplate"><a class="anchor" href="#内网扫描以及验证工具-requesttemplate">#</a> 内网扫描以及验证工具 -- RequestTemplate</h2>
+<blockquote>
+<p>1、可以快速、准确、全面、利用、检测内网当中存在的漏洞<br />
+ 2、在内网渗透的过程当中，收集网段的连通性往往意味着攻击面的大小。常用的收集网段的命令并不能收集全面，只有爆破才是最全面的解决办法。<br />
+3、在内网渗透的过程当中，凭据的复用往往使我们的内网横向事半功倍。使用配置文件的方式配置密码字典效果显著。<br />
+4、使用 xray 的 poc 对内网的 web 服务进行漏洞扫描。<br />
+5、内置默认字典爆破 FTP、Memcached、MongoDB、MySQL、Oracle、Postgres、Redis、SMB、MSSQL、SSH、17010 的检测。<br />
+6、使用 java 语言对漏洞进行复现，验证，后利用。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzFuN2VyZmFjZS9SZXF1ZXN0VGVtcGxhdGU=">https://github.com/1n7erface/RequestTemplate</span></p>
+<h2 id="requesttemplate"><a class="anchor" href="#requesttemplate">#</a> RequestTemplate</h2>
+<blockquote>
+<p>首款双语双端内网扫描以及验证工具<br />
+快速、准确、全面、利用、检测内网当中存在的漏洞</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzFuN2VyZmFjZS9SZXF1ZXN0VGVtcGxhdGU=">https://github.com/1n7erface/RequestTemplate</span></p>
+<h2 id="inscan-开源扫描器"><a class="anchor" href="#inscan-开源扫描器">#</a> InScan - 开源扫描器</h2>
+<blockquote>
+<p>边界打点后的自动化内网工具，完全与服务端脱离。服务端只用于生成 poc，网段信息等配置。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2luYnVnLXRlYW0vSW5TY2FuLw==">https://github.com/inbug-team/InScan/</span></p>
+<h2 id="yasso-亚索"><a class="anchor" href="#yasso-亚索">#</a> Yasso - 亚索</h2>
+<blockquote>
+<p>Yasso 将作为一款内网辅助渗透工具集发布，它集合了许多实用功能，来帮助  <code>Red team</code>  成员在内网极端环境下的工具使用以及  <code>Blue team</code>  成员的内网自检，并且程序加入了代理功能以及  <code>ants</code>  的扫描并发，在实现功能的同时追求准确和速度</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NhaXJzb24vWWFzc28=">https://github.com/sairson/Yasso</span></p>
+<h2 id="本地端口扫描"><a class="anchor" href="#本地端口扫描">#</a> 本地端口扫描</h2>
+<blockquote>
+<p>多线程扫描本机使用的端口</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xlbmdqaWJvL1JlZFRlYW1Ub29scy90cmVlL21hc3Rlci93aW5kb3dzLyVFNiU5QyVBQyVFNSU5QyVCMCVFNyVBQiVBRiVFNSU4RiVBMyVFNiU4OSVBQiVFNiU4RiU4Rg==">https://github.com/lengjibo/RedTeamTools/tree/master/windows/%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F</span></p>
+<h2 id="camover一款功能强大的摄像头漏洞利用工具"><a class="anchor" href="#camover一款功能强大的摄像头漏洞利用工具">#</a> CamOver：一款功能强大的摄像头漏洞利用工具</h2>
+<blockquote>
+<p>CamOver 是一款功能强大的摄像头漏洞利用工具，在该工具的帮助下，广大研究人员可以轻松破解掉你家网络摄像头的管理员密码，并接管你的摄像头。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0VudHlTZWMvQ2FtT3Zlcg==">https://github.com/EntySec/CamOver</span></p>
+<h2 id="nishang"><a class="anchor" href="#nishang">#</a> Nishang</h2>
+<blockquote>
+<p>Nishang 是一个框架以及脚本和有效负载的集合，它允许使用 PowerShell 进行进攻性安全，渗透测试和红色团队。Nishang 在渗透测试的所有阶段都很有用。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NhbXJhdGFzaG9rL25pc2hhbmc=">https://github.com/samratashok/nishang</span></p>
+<h2 id="firebuster-firelistener"><a class="anchor" href="#firebuster-firelistener">#</a> FireBuster FireListener</h2>
+<blockquote>
+<p>FireBuster 可以对内网进行扫描，它会把包发给 FireListener.</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JvbzdicmVhay9Qb3dlclNoZWxsLVNjcmlwdHM=">https://github.com/roo7break/PowerShell-Scripts</span></p>
+<h2 id="xy_cross-domain"><a class="anchor" href="#xy_cross-domain">#</a> XY_Cross-domain</h2>
+<blockquote>
+<p>一款内网横向渗透辅助工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2lzeGlhbmd5YW5nL1hZX0Nyb3NzLWRvbWFpbg==">https://github.com/isxiangyang/XY_Cross-domain</span></p>
+<h2 id="aopo-内网自动化快速打点工具资产探测漏洞扫描服务扫描弱口令爆破"><a class="anchor" href="#aopo-内网自动化快速打点工具资产探测漏洞扫描服务扫描弱口令爆破">#</a> Aopo - 内网自动化快速打点工具｜资产探测｜漏洞扫描｜服务扫描｜弱口令爆破</h2>
+<blockquote>
+<p>内网自动化快速打点工具｜资产探测｜漏洞扫描｜服务扫描｜弱口令爆破</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0V4cExhbmdjbi9Bb3Bv">https://github.com/ExpLangcn/Aopo</span></p>
+<h2 id="netspy"><a class="anchor" href="#netspy">#</a> netspy</h2>
+<blockquote>
+<p>netspy 是一款快速探测内网可达网段工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NobWlseWx0eS9uZXRzcHk=">https://github.com/shmilylty/netspy</span></p>
+<h2 id="edrhunt"><a class="anchor" href="#edrhunt">#</a> EDRHunt</h2>
+<blockquote>
+<p>由于 Windows 市场上提供了大量端点检测和响应系统 (EDR) 和防病毒解决方案，因此在红队操作期间，迫切需要在目标端点上对这些已安装的解决方案进行指纹识别。事实证明，这些信息对于定制自定义漏洞利用和攻击技术以成功渗透和对目标进行操作至关重要。EDRHunt 是一个实用程序，可通过查询服务、驱动程序、运行进程和注册表项来扫描和识别 Windows 端点上已安装的 EDR 和 AV。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0ZvdXJDb3JlTGFicy9FRFJIdW50">https://github.com/FourCoreLabs/EDRHunt</span></p>
+<h2 id="viper"><a class="anchor" href="#viper">#</a> Viper</h2>
+<blockquote>
+<p>Viper (炫彩蛇) 是一款图形化内网渗透工具，将内网渗透过程中常用的战术及技术进行模块化及武器化，集成杀软绕过，内网隧道，文件管理，命令行等基础功能，当前已集成 70 + 个模块，覆盖初始访问 / 持久化 / 权限提升 / 防御绕过 / 凭证访问 / 信息收集 / 横向移动等大类，目标是帮助红队工程师提高攻击效率，简化操作，降低技术门槛，支持在浏览器中运行原生 msfconsole, 且支持多人协作。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Z1bm55V29sZi9WaXBlcg==">https://github.com/FunnyWolf/Viper</span></p>
+<h1 id="蓝队工具"><a class="anchor" href="#蓝队工具">#</a> 蓝队工具</h1>
+<h2 id="web-log-parser-web日志工具"><a class="anchor" href="#web-log-parser-web日志工具">#</a> web-log-parser - web 日志工具</h2>
+<blockquote>
+<p><strong>web-log-parser</strong> 为开源的分析 web 日志工具，采用 python 语言开发，具有灵活的日志格式配置。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0plZmZYdWUvd2ViLWxvZy1wYXJzZXI=">https://github.com/JeffXue/web-log-parser</span></p>
+<h2 id="rkhunter"><a class="anchor" href="#rkhunter">#</a> RKHunter</h2>
+<blockquote>
+<p>RKHunter 是专业检测系统是否感染 rootkit 的工具，通过执行一系列脚本来确定服务器是否感染 rootkit。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5yb290a2l0Lm5sL3Byb2plY3RzL3Jvb3RraXRfaHVudGVyLmh0bWw=">http://www.rootkit.nl/projects/rootkit_hunter.html</span></p>
+<h2 id="duckmemoryscan-内存马免杀马查杀工具"><a class="anchor" href="#duckmemoryscan-内存马免杀马查杀工具">#</a> DuckMemoryScan - 内存马免杀马查杀工具</h2>
+<blockquote>
+<p>一个简单寻找包括不限于 iis 劫持，无文件木马，shellcode 免杀后门的工具，由 huoji 花了 1 天编写，编写时间 2021-02-24 !<span class="spoiler" title="你知道的太多了"> 本程序需要 64 位编译才能回溯 x64 的程序堆栈，请勿执行 32 位编译</span>！!<span class="spoiler" title="你知道的太多了"> 本工具不能代替杀毒软件</span>！</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1b2ppMTIwL0R1Y2tNZW1vcnlTY2Fu">https://github.com/huoji120/DuckMemoryScan</span></p>
+<h2 id="pchunter"><a class="anchor" href="#pchunter">#</a> PCHunter</h2>
+<blockquote>
+<pre><code>PCHunter是一款知名的Windows系统底层反内核工具，系统信息检测工具、手工杀毒工具、系统安全辅助工具。这款ARK工具有内核级驱动检测、内核对象劫持、Hook 、MBR Rootkit、文件管理、进程管理、启动项管理、注册表管理、服务管理、驱动模块、网络管理、系统内核查看、应用层钩子、系统修复等功能。
+</code></pre>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy54dWV0ci5jb20v">http://www.xuetr.com/</span></p>
+<h2 id="openvas-漏洞评估系统"><a class="anchor" href="#openvas-漏洞评估系统">#</a> OpenVAS - 漏洞评估系统</h2>
+<blockquote>
+<p>OpenVAS 是开放式漏洞评估系统，也可以说它是一个包含着相关工具的网络扫描器。其核心部件是一个服务器，包括一套网络漏洞测试程序，可以检测远程系统和应用程序中的安全问题。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cub3BlbnZhcy5vcmcv">https://www.openvas.org/</span></p>
+<h2 id="pestudio"><a class="anchor" href="#pestudio">#</a> PeStudio</h2>
+<blockquote>
+<p>PeStudio 是一款独特的工具，执行静态校验 32 位和 64-bit 为的可执行文件。PEStudio 针对个人非商业用途是免费的。恶意可执行程序通常隐藏其恶意行为，避免被查出。因此，恶意程序通常呈现存在异常并且可疑的状态。PEStudio 的目标就是检测这些异常，评估被分析的可执行文件的可信度。由于这些被分析的可执行文件并没有执行，你可以无风险的检测未知以及恶意的可执行文件。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cud2luaXRvci5jb20v">https://www.winitor.com/</span></p>
+<h1 id="其他"><a class="anchor" href="#其他">#</a> 其他</h1>
+<h2 id="savior"><a class="anchor" href="#savior">#</a> Savior</h2>
+<blockquote>
+<p>渗透测试报告自动生成工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL011c3RhcmQ0MDQvU2F2aW9y">https://github.com/Mustard404/Savior</span></p>
+<h2 id="moonwalk-linux系统日志清除工具"><a class="anchor" href="#moonwalk-linux系统日志清除工具">#</a> Moonwalk - Linux 系统日志清除工具</h2>
+<blockquote>
+<p>moonwalk 是一个 400 KB 的单二进制可执行文件，可以在渗透测试 Unix 机器时清除您的痕迹。它保存系统日志开发前的状态，并恢复该状态，包括开发后的文件系统时间戳，在 shell 中留下零幽灵的痕迹。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL211ZmVlZHZoL21vb253YWxrLw==">https://github.com/mufeedvh/moonwalk/</span></p>
+<h2 id="渗透测试工具集合"><a class="anchor" href="#渗透测试工具集合">#</a> 渗透测试工具集合</h2>
+<blockquote>
+<p>这是我多年来为渗透测试和 IT 安全审计目的而开发的<strong> 160 多种</strong>工具，脚本，备忘单和其他战利品的集合。在我的现实世界中，它们中的大多数至少派上了用场一次。<br />
+该系列进一步分为以下几个部分：</p>
+</blockquote>
+<ul>
+<li><code>clouds</code> - 我在云评估期间想到的工具</li>
+<li><code>file-formats</code> - 文件格式相关的实用程序，模糊器等。</li>
+<li><code>linux</code> - 一小堆基于 Linux 的脚本和工具。</li>
+<li><code>networks</code> - 网络设备和协议渗透测试工具</li>
+<li><code>others</code> - 其他与这种工艺有关</li>
+<li><code>phishing</code> - 用于提供网络钓鱼意识和红队模拟的脚本和工具</li>
+<li><code>red-teaming</code> - 我在紫色 / 红色团队活动期间一直在使用的许多工具</li>
+<li><code>web</code> - Web 应用程序安全评估相关实用程序。</li>
+<li><code>windows</code> - Windows 好东西，脚本，漏洞利用</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21nZWVreS9QZW5ldHJhdGlvbi1UZXN0aW5nLVRvb2xz">https://github.com/mgeeky/Penetration-Testing-Tools</span></p>
+<h2 id="掩日-适用于红队的综合免杀工具"><a class="anchor" href="#掩日-适用于红队的综合免杀工具">#</a> 掩日 - 适用于红队的综合免杀工具</h2>
+<blockquote>
+<p>掩日是一款适用于红队的综合免杀工具，其中包括有：通用免杀、本地分离、网络分离等多种免杀方式和杀软识别等功能，至于免杀效果还行自行测试。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzF5MG4vQVZfRXZhc2lvbl9Ub29s">https://github.com/1y0n/AV_Evasion_Tool</span></p>
+<h2 id="cloud-bucket-leak-detection-tools"><a class="anchor" href="#cloud-bucket-leak-detection-tools">#</a> Cloud-Bucket-Leak-Detection-Tools</h2>
+<blockquote>
+<p>阿里云、腾讯云等泄露利用检测工具</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1V6SnUvQ2xvdWQtQnVja2V0LUxlYWstRGV0ZWN0aW9uLVRvb2xz">https://github.com/UzJu/Cloud-Bucket-Leak-Detection-Tools</span></p>
+<h2 id="thundersearch-gui图形化渗透测试信息搜集工具"><a class="anchor" href="#thundersearch-gui图形化渗透测试信息搜集工具">#</a> ThunderSearch - GUI 图形化渗透测试信息搜集工具</h2>
+<blockquote>
+<p>调用 ZoomEye 的官方 api，结合开发文档，开发的 GUI 界面的信息搜集工具。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3h6YWp5anMvVGh1bmRlclNlYXJjaA==">https://github.com/xzajyjs/ThunderSearch</span></p>
+<h2 id="lynis"><a class="anchor" href="#lynis">#</a> Lynis</h2>
+<blockquote>
+<p><strong>Lynis</strong> 是一款 Unix 系统的安全审计以及加固工具，能够进行深层次的安全扫描，其目的是检测潜在的时间并对未来的系统加固提供建议。这款软件会扫描一般系统信息，脆弱软件包以及潜在的错误配置。扫描完成后，Lynis 还会为我们生成一份包含所有扫描结果的安全报告。<br />
+Lynis 是 Unix/Linux 系统用于软件补丁管理，恶意软件扫描和漏洞检测的最值得信赖的自动化审计工具之一。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NJU09meS9seW5pcw==">https://github.com/CISOfy/lynis</span></p>
+<h2 id="gc2"><a class="anchor" href="#gc2">#</a> GC2</h2>
+<blockquote>
+<p>GC2 是一款功能强大的命令控制应用工具，该工具将允许广大安全研究人员或渗透测试人员使用 Google Sheet 来在目标设备上执行远程控制命令，并使用 Google Drive 来提取目标设备中的敏感数据。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvb0NpcHJpYW4vR0MyLXNoZWV0">https://github.com/looCiprian/GC2-sheet</span></p>
+<h2 id="moonwalk"><a class="anchor" href="#moonwalk">#</a> moonwalk</h2>
+<blockquote>
+<p><strong>通过在系统日志和文件系统时间戳上留下零痕迹，在 Linux 漏洞利用 / 渗透测试期间覆盖您的踪迹。</strong></p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL211ZmVlZHZoL21vb253YWxr">https://github.com/mufeedvh/moonwalk</span></p>
+<h2 id="spacecore-集成化渗透测试工具"><a class="anchor" href="#spacecore-集成化渗透测试工具">#</a> SpaceCore - 集成化渗透测试工具</h2>
+<blockquote>
+<p>一个简单的集成化渗透测试工具，该工具在于帮助您更好的完成渗透测试</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Vyb3Npb24yMDIwL1NwYWNlQ29yZQ==">https://github.com/Erosion2020/SpaceCore</span></p>
+
+      <div class="tags">
+          <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"><i class="ic i-tag"></i> 网络安全</a>
+          <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="ic i-tag"></i> 工具</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-23 10:46:02" itemprop="dateModified" datetime="2022-11-23T10:46:02+08:00">2022-11-23</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/tools/" title="渗透测试工具收集">https://mobius-0.github.io/security/tools/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/hexo/hexo/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;KA7WHtm61zLES9T.png" title="关于hexo-shoka主题配置过程的补充">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> hexo</span>
+  <h3>关于hexo-shoka主题配置过程的补充</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/tools-1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;5xS8irIm4FqtwMC.png" title="工具集（长期更新……大概？）">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 安全</span>
+  <h3>工具集（长期更新……大概？）</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-number">1.</span> <span class="toc-text"> 信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BC%E5%90%88%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.</span> <span class="toc-text"> 综合工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sitescan"><span class="toc-number">1.1.1.</span> <span class="toc-text"> SiteScan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nemo_go"><span class="toc-number">1.1.2.</span> <span class="toc-text"> nemo_go</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linglong"><span class="toc-number">1.1.3.</span> <span class="toc-text"> linglong</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#appinfoscanner"><span class="toc-number">1.1.4.</span> <span class="toc-text"> AppInfoScanner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#banli-%E8%B5%84%E4%BA%A7%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.5.</span> <span class="toc-text"> Banli - 资产扫描工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uture_box"><span class="toc-number">1.1.6.</span> <span class="toc-text"> uture_Box</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ip2domain"><span class="toc-number">1.1.7.</span> <span class="toc-text"> ip2domain</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enscan"><span class="toc-number">1.1.8.</span> <span class="toc-text"> ENScan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yakit"><span class="toc-number">1.1.9.</span> <span class="toc-text"> YAKIT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E6%B3%BD-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.10.</span> <span class="toc-text"> 水泽 - 信息收集自动化工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#goscan"><span class="toc-number">1.1.11.</span> <span class="toc-text"> GoScan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#szhe_scan"><span class="toc-number">1.1.12.</span> <span class="toc-text"> SZhe_Scan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raccoon"><span class="toc-number">1.1.13.</span> <span class="toc-text"> Raccoon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scannn"><span class="toc-number">1.1.14.</span> <span class="toc-text"> Scannn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tsunami"><span class="toc-number">1.1.15.</span> <span class="toc-text"> Tsunami</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ratel"><span class="toc-number">1.1.16.</span> <span class="toc-text"> ratel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onlinetools-%E7%BA%BF%E4%B8%8A%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.17.</span> <span class="toc-text"> onlinetools - 线上信息收集工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jud-scan"><span class="toc-number">1.1.18.</span> <span class="toc-text"> JuD-Scan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#searchmap"><span class="toc-number">1.1.19.</span> <span class="toc-text"> SearchMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#apolloscanner"><span class="toc-number">1.1.20.</span> <span class="toc-text"> ApolloScanner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#allin"><span class="toc-number">1.1.21.</span> <span class="toc-text"> ALLiN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#darkeye"><span class="toc-number">1.1.22.</span> <span class="toc-text"> DarkEye</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wanli"><span class="toc-number">1.1.23.</span> <span class="toc-text"> WanLi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#autoscanner"><span class="toc-number">1.1.24.</span> <span class="toc-text"> Autoscanner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#securityservicebox"><span class="toc-number">1.1.25.</span> <span class="toc-text"> SecurityServiceBox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#domain_hunter_pro"><span class="toc-number">1.1.26.</span> <span class="toc-text"> domain_hunter_pro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enscan_go"><span class="toc-number">1.1.27.</span> <span class="toc-text"> ENScan_GO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reconftw"><span class="toc-number">1.1.28.</span> <span class="toc-text"> ReconFTW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dismap"><span class="toc-number">1.1.29.</span> <span class="toc-text"> dismap</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#waf%E8%AF%86%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text"> waf 识别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#wafw00f"><span class="toc-number">1.2.1.</span> <span class="toc-text"> wafw00f</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#waf-a-mole%E9%92%88%E5%AF%B9web%E5%BA%94%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E5%9F%BA%E4%BA%8E%E5%8F%98%E5%BC%82%E7%9A%84%E6%A8%A1%E7%B3%8A%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.2.</span> <span class="toc-text"> WAF-A-MoLE：针对 Web 应用防火墙的基于变异的模糊测试工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB"><span class="toc-number">1.3.</span> <span class="toc-text"> 指纹识别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tidefinger"><span class="toc-number">1.3.1.</span> <span class="toc-text"> TideFinger</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cms%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB-cmseek"><span class="toc-number">1.3.2.</span> <span class="toc-text"> CMS 指纹识别 - CMSeek</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cms%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB-webfinger"><span class="toc-number">1.3.3.</span> <span class="toc-text"> CMS 指纹识别 - Webfinger</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#glass-%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB%E5%B7%A5%E5%85%B7"><span class="toc-number">1.3.4.</span> <span class="toc-text"> Glass - 指纹识别工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ehole%E6%A3%B1%E6%B4%9E30-%E7%BA%A2%E9%98%9F%E9%87%8D%E7%82%B9%E6%94%BB%E5%87%BB%E7%B3%BB%E7%BB%9F%E6%8C%87%E7%BA%B9%E6%8E%A2%E6%B5%8B%E5%B7%A5%E5%85%B7"><span class="toc-number">1.3.5.</span> <span class="toc-text"> EHole (棱洞) 3.0 红队重点攻击系统指纹探测工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E8%AF%86%E5%88%AB"><span class="toc-number">1.4.</span> <span class="toc-text"> CDN 识别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fuck-cdn"><span class="toc-number">1.4.1.</span> <span class="toc-text"> FUCK CDN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#w8fuckcdn"><span class="toc-number">1.4.2.</span> <span class="toc-text"> w8fuckcdn</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="toc-number">1.5.</span> <span class="toc-text"> 端口扫描</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%B0%8F%E5%B7%A7%E7%9A%84%E7%AB%AF%E5%8F%A3%E7%88%86%E7%A0%B4%E5%B7%A5%E5%85%B7"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 跨平台小巧的端口爆破工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kscan-%E7%AE%80%E5%8D%95%E5%A5%BD%E7%94%A8%E7%9A%84%E8%B5%84%E4%BA%A7%E6%B5%8B%E7%BB%98%E5%B7%A5%E5%85%B7%E7%AB%AF%E5%8F%A3%E6%8C%87%E7%BA%B9%E5%AD%98%E6%B4%BB%E8%87%AA%E5%8A%A8%E6%8E%A2%E6%B5%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text"> Kscan - 简单好用的资产测绘工具 | 端口指纹存活自动探测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scaninfo"><span class="toc-number">1.5.3.</span> <span class="toc-text"> scaninfo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E6%89%AB%E6%8F%8F"><span class="toc-number">1.6.</span> <span class="toc-text"> 域名扫描</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ksubdomain-%E5%AD%90%E5%9F%9F%E7%88%86%E7%A0%B4%E5%B7%A5%E5%85%B7"><span class="toc-number">1.6.1.</span> <span class="toc-text"> ksubdomain - 子域爆破工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#oneforall"><span class="toc-number">1.6.2.</span> <span class="toc-text"> OneForAll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subfinder-%E5%BF%AB%E9%80%9F%E8%A2%AB%E5%8A%A8%E5%AD%90%E5%9F%9F%E6%9E%9A%E4%B8%BE%E5%B7%A5%E5%85%B7"><span class="toc-number">1.6.3.</span> <span class="toc-text"> subfinder - 快速被动子域枚举工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ksubdomain"><span class="toc-number">1.6.4.</span> <span class="toc-text"> ksubdomain</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#layer"><span class="toc-number">1.6.5.</span> <span class="toc-text"> Layer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subdomainsbrute"><span class="toc-number">1.6.6.</span> <span class="toc-text"> subDomainsBrute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sublist3r"><span class="toc-number">1.6.7.</span> <span class="toc-text"> sublist3r</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dnsenum"><span class="toc-number">1.6.8.</span> <span class="toc-text"> dnsenum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F"><span class="toc-number">1.7.</span> <span class="toc-text"> 目录扫描</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dirsearch"><span class="toc-number">1.7.1.</span> <span class="toc-text"> dirsearch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#crawler"><span class="toc-number">1.7.2.</span> <span class="toc-text"> Crawler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jsfinder"><span class="toc-number">1.7.3.</span> <span class="toc-text"> JSFinder</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#swagger-exp-%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">1.7.4.</span> <span class="toc-text"> swagger-exp -- 信息泄露利用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arjun"><span class="toc-number">1.7.5.</span> <span class="toc-text"> Arjun</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#caesar"><span class="toc-number">1.7.6.</span> <span class="toc-text"> Caesar</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%AE%E7%AE%B1%E6%94%B6%E9%9B%86"><span class="toc-number">1.8.</span> <span class="toc-text"> 邮箱收集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mailget"><span class="toc-number">1.8.1.</span> <span class="toc-text"> Mailget</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#infoga"><span class="toc-number">1.8.2.</span> <span class="toc-text"> Infoga</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E4%BA%A7%E6%95%B4%E7%90%86"><span class="toc-number">1.9.</span> <span class="toc-text"> 资产整理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#arl-%E8%B5%84%E4%BA%A7%E5%AE%89%E5%85%A8%E7%81%AF%E5%A1%94"><span class="toc-number">1.9.1.</span> <span class="toc-text"> ARL - 资产安全灯塔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sec-%E5%88%86%E5%B8%83%E5%BC%8F%E8%B5%84%E4%BA%A7%E5%AE%89%E5%85%A8%E6%89%AB%E6%8F%8F"><span class="toc-number">1.9.2.</span> <span class="toc-text"> SEC - 分布式资产安全扫描</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#w12scan-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%B5%84%E4%BA%A7%E6%89%AB%E6%8F%8F%E5%BC%95%E6%93%8E"><span class="toc-number">1.9.3.</span> <span class="toc-text"> w12scan - 网络安全资产扫描引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#isee"><span class="toc-number">1.9.4.</span> <span class="toc-text"> iSee</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arl-%E8%B5%84%E4%BA%A7%E4%BE%A6%E5%AF%9F%E7%81%AF%E5%A1%94%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.9.5.</span> <span class="toc-text"> ARL - 资产侦察灯塔系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E5%88%A9%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text"> 漏洞检测利用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86gui%E7%89%88"><span class="toc-number">2.1.</span> <span class="toc-text"> 脚本工具合集 GUI 版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6-polaris"><span class="toc-number">2.2.</span> <span class="toc-text"> 辅助渗透测试框架 -- Polaris</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#banli-%E9%AB%98%E5%8D%B1%E8%B5%84%E4%BA%A7%E8%AF%86%E5%88%AB%E5%92%8C%E9%AB%98%E5%8D%B1%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"><span class="toc-number">2.3.</span> <span class="toc-text"> Banli - 高危资产识别和高危漏洞扫描</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mdat-%E4%B8%80%E6%AC%BE%E7%94%A8%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E6%94%BB%E5%87%BB%E7%9A%84%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.4.</span> <span class="toc-text"> MDAT - 一款用于数据库攻击的利用工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webcrack-v22-%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7"><span class="toc-number">2.5.</span> <span class="toc-text"> WebCrack  v(2.2)  - 弱口令检测工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ppmap-%E5%9F%BA%E4%BA%8Ego%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="toc-number">2.6.</span> <span class="toc-text"> ppmap - 基于 go 的漏洞扫描器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a2sv-ssl%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"><span class="toc-number">2.7.</span> <span class="toc-text"> A2SV - SSL 漏洞扫描</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#siusiu-suitesuite-%E5%9F%BA%E4%BA%8Edocker%E7%9A%84%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-number">2.8.</span> <span class="toc-text"> siusiu （suitesuite）- 基于 docker 的渗透工具箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"><span class="toc-number">2.9.</span> <span class="toc-text"> Nginx 漏洞扫描</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E5%B7%A5%E5%85%B7-afrog"><span class="toc-number">2.10.</span> <span class="toc-text"> 漏洞挖掘工具 -- afrog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bomber"><span class="toc-number">2.11.</span> <span class="toc-text"> Bomber</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yaazhini-%E4%B8%80%E6%AC%BE%E5%85%8D%E8%B4%B9%E7%9A%84android-apk%E5%92%8Capi%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="toc-number">2.12.</span> <span class="toc-text"> Yaazhini - 一款免费的 Android APK 和 API 漏洞扫描器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fuxploider-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E5%99%A8%E5%92%8C%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.13.</span> <span class="toc-text"> fuxploider - 文件上传漏洞扫描器和利用工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xsstrike-xss%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="toc-number">2.14.</span> <span class="toc-text"> XSStrike - XSS 扫描器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#auxtools"><span class="toc-number">2.15.</span> <span class="toc-text"> AuxTools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#poc2jar"><span class="toc-number">2.16.</span> <span class="toc-text"> poc2jar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ethereal"><span class="toc-number">2.17.</span> <span class="toc-text"> Ethereal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cvechecker"><span class="toc-number">2.18.</span> <span class="toc-text"> cvechecker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jsql"><span class="toc-number">2.19.</span> <span class="toc-text"> jSQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nikto"><span class="toc-number">2.20.</span> <span class="toc-text"> Nikto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dradis-%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">2.21.</span> <span class="toc-text"> Dradis - 漏洞利用工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#routersploit-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E5%8F%8A%E5%88%A9%E7%94%A8%E6%A1%86%E6%9E%B6"><span class="toc-number">2.22.</span> <span class="toc-text"> RouterSploit - 路由器漏洞检测及利用框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vega-platform-web%E5%AE%89%E5%85%A8%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0"><span class="toc-number">2.23.</span> <span class="toc-text"> Vega Platform - Web 安全测试平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xenotix"><span class="toc-number">2.24.</span> <span class="toc-text"> Xenotix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http-%E8%AF%B7%E6%B1%82%E8%B5%B0%E7%A7%81%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7"><span class="toc-number">2.25.</span> <span class="toc-text"> HTTP 请求走私检测工具</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F"><span class="toc-number">3.</span> <span class="toc-text"> 内网渗透</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E7%BD%91%E6%89%AB%E6%8F%8F%E4%BB%A5%E5%8F%8A%E9%AA%8C%E8%AF%81%E5%B7%A5%E5%85%B7-requesttemplate"><span class="toc-number">3.1.</span> <span class="toc-text"> 内网扫描以及验证工具 -- RequestTemplate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#requesttemplate"><span class="toc-number">3.2.</span> <span class="toc-text"> RequestTemplate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#inscan-%E5%BC%80%E6%BA%90%E6%89%AB%E6%8F%8F%E5%99%A8"><span class="toc-number">3.3.</span> <span class="toc-text"> InScan - 开源扫描器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yasso-%E4%BA%9A%E7%B4%A2"><span class="toc-number">3.4.</span> <span class="toc-text"> Yasso - 亚索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="toc-number">3.5.</span> <span class="toc-text"> 本地端口扫描</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#camover%E4%B8%80%E6%AC%BE%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%91%84%E5%83%8F%E5%A4%B4%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">3.6.</span> <span class="toc-text"> CamOver：一款功能强大的摄像头漏洞利用工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nishang"><span class="toc-number">3.7.</span> <span class="toc-text"> Nishang</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#firebuster-firelistener"><span class="toc-number">3.8.</span> <span class="toc-text"> FireBuster FireListener</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xy_cross-domain"><span class="toc-number">3.9.</span> <span class="toc-text"> XY_Cross-domain</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#aopo-%E5%86%85%E7%BD%91%E8%87%AA%E5%8A%A8%E5%8C%96%E5%BF%AB%E9%80%9F%E6%89%93%E7%82%B9%E5%B7%A5%E5%85%B7%E8%B5%84%E4%BA%A7%E6%8E%A2%E6%B5%8B%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E6%9C%8D%E5%8A%A1%E6%89%AB%E6%8F%8F%E5%BC%B1%E5%8F%A3%E4%BB%A4%E7%88%86%E7%A0%B4"><span class="toc-number">3.10.</span> <span class="toc-text"> Aopo - 内网自动化快速打点工具｜资产探测｜漏洞扫描｜服务扫描｜弱口令爆破</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#netspy"><span class="toc-number">3.11.</span> <span class="toc-text"> netspy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#edrhunt"><span class="toc-number">3.12.</span> <span class="toc-text"> EDRHunt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#viper"><span class="toc-number">3.13.</span> <span class="toc-text"> Viper</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%93%9D%E9%98%9F%E5%B7%A5%E5%85%B7"><span class="toc-number">4.</span> <span class="toc-text"> 蓝队工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#web-log-parser-web%E6%97%A5%E5%BF%97%E5%B7%A5%E5%85%B7"><span class="toc-number">4.1.</span> <span class="toc-text"> web-log-parser - web 日志工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rkhunter"><span class="toc-number">4.2.</span> <span class="toc-text"> RKHunter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#duckmemoryscan-%E5%86%85%E5%AD%98%E9%A9%AC%E5%85%8D%E6%9D%80%E9%A9%AC%E6%9F%A5%E6%9D%80%E5%B7%A5%E5%85%B7"><span class="toc-number">4.3.</span> <span class="toc-text"> DuckMemoryScan - 内存马免杀马查杀工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pchunter"><span class="toc-number">4.4.</span> <span class="toc-text"> PCHunter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#openvas-%E6%BC%8F%E6%B4%9E%E8%AF%84%E4%BC%B0%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.5.</span> <span class="toc-text"> OpenVAS - 漏洞评估系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pestudio"><span class="toc-number">4.6.</span> <span class="toc-text"> PeStudio</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">5.</span> <span class="toc-text"> 其他</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#savior"><span class="toc-number">5.1.</span> <span class="toc-text"> Savior</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#moonwalk-linux%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%BF%97%E6%B8%85%E9%99%A4%E5%B7%A5%E5%85%B7"><span class="toc-number">5.2.</span> <span class="toc-text"> Moonwalk - Linux 系统日志清除工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88"><span class="toc-number">5.3.</span> <span class="toc-text"> 渗透测试工具集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A9%E6%97%A5-%E9%80%82%E7%94%A8%E4%BA%8E%E7%BA%A2%E9%98%9F%E7%9A%84%E7%BB%BC%E5%90%88%E5%85%8D%E6%9D%80%E5%B7%A5%E5%85%B7"><span class="toc-number">5.4.</span> <span class="toc-text"> 掩日 - 适用于红队的综合免杀工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cloud-bucket-leak-detection-tools"><span class="toc-number">5.5.</span> <span class="toc-text"> Cloud-Bucket-Leak-Detection-Tools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#thundersearch-gui%E5%9B%BE%E5%BD%A2%E5%8C%96%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86%E5%B7%A5%E5%85%B7"><span class="toc-number">5.6.</span> <span class="toc-text"> ThunderSearch - GUI 图形化渗透测试信息搜集工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lynis"><span class="toc-number">5.7.</span> <span class="toc-text"> Lynis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gc2"><span class="toc-number">5.8.</span> <span class="toc-text"> GC2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#moonwalk"><span class="toc-number">5.9.</span> <span class="toc-text"> moonwalk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spacecore-%E9%9B%86%E6%88%90%E5%8C%96%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">5.10.</span> <span class="toc-text"> SpaceCore - 集成化渗透测试工具</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/tools-1/" rel="bookmark" title="工具集（长期更新……大概？）">工具集（长期更新……大概？）</a></li><li class="active"><a href="/security/tools/" rel="bookmark" title="渗透测试工具收集">渗透测试工具收集</a></li><li><a href="/security/VMware/" rel="bookmark" title="虚拟机安装">虚拟机安装</a></li><li><a href="/security/netwsecu/" rel="bookmark" title="网络安全观">网络安全观</a></li><li><a href="/security/netw/" rel="bookmark" title="计算机网络基础">计算机网络基础</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">16</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/hexo/hexo/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/tools-1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">30k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">40 分钟</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/tools/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

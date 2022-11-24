@@ -1123,6 +1123,7 @@ const sideBar = $('#sidebar');
 const siteBrand = $('#brand');
 var toolBtn = $('#tool'), toolPlayer, backToTop, goToComment, showContents;
 var siteSearch = $('#search');
+var angleBtn = $('#angle');
 var siteNavHeight, headerHightInner, headerHight;
 var oWinHeight = window.innerHeight;
 var oWinWidth = window.innerWidth;
@@ -1613,6 +1614,10 @@ const goToBottomHandle = function () {
 
 const goToCommentHandle = function () {
   pageScroll($('#comments'));
+}
+
+const headertopdown = function () {
+  pageScroll($('#main'));
 }
 
 const menuActive = function () {
@@ -2207,12 +2212,18 @@ const domInit = function() {
       innerHTML: '<div class="item player"></div><div class="item contents"><i class="ic i-list-ol"></i></div><div class="item chat"><i class="ic i-comments"></i></div><div class="item back-to-top"><i class="ic i-arrow-up"></i><span>0%</span></div>'
     });
   }
-
+  if(!angleBtn) {
+    angleBtn = siteHeader.createChild('div', {
+      id: 'angle',
+      innerHTML: '<span><i class="ic i-angle-down" aria-hidden="true"></i></span>'
+    });
+ }
   toolPlayer = toolBtn.child('.player');
   backToTop = toolBtn.child('.back-to-top');
   goToComment = toolBtn.child('.chat');
   showContents = toolBtn.child('.contents');
-
+  
+  angleBtn.addEventListener('click',headertopdown);
   backToTop.addEventListener('click', backToTopHandle);
   goToComment.addEventListener('click', goToCommentHandle);
   showContents.addEventListener('click', sideBarToggleHandle);

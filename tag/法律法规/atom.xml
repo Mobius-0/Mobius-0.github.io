@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;法律法规&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-24T02:25:18.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="计算机网络" />
+    <category term="网络协议" />
+    <category term="法律法规" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <entry>
+        <id>https://mobius-0.github.io/security/netwsecu/</id>
+        <title>网络安全观</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/netwsecu/"/>
+        <content type="html">&lt;h1 id=&#34;网络安全定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络安全定义&#34;&gt;#&lt;/a&gt; 网络安全定义&lt;/h1&gt;
+&lt;p&gt;网络安全的一个通用定义指网络信息系统的硬件、软件及其系统中的数据受到保护，不因偶然的或者恶意的破坏、更改、泄露，系统能连续、可靠、正常地运行，服务不中断。网络安全简单的说是在网络环境下能够识别和消除不安全因素的能力。&lt;/p&gt;
+&lt;p&gt;网络安全在不同环境和应用中有不同的解释，例如系统运行的安全、系统信息内容的安全、信息通信与传播的安全等。&lt;/p&gt;
+&lt;p&gt;网络安全的基本需求包括可靠性、可用性、保密性、完整性、不可抵赖性、可控性、可审查性、真实性等。其中三个最基本的要素是机密性 (Confidentiality)、完整性 (Integrity)、可用性 (Availability)。&lt;/p&gt;
+&lt;p&gt;机密性是不将有用信息泄漏给非授权用户的特性。可以通过信息加密、身份认证、访问控制、安全通信协议等技术实现，信息加密是防止信息非法泄露的最基本手段，主要强调有用信息只被授权对象使用的特征。&lt;/p&gt;
+&lt;p&gt;完整性是指信息在传输、交换、存储和处理过程中，保持信息不被破坏或修改、不丢失和信息未经授权不能改变的特性，也是最基本的安全特征。&lt;/p&gt;
+&lt;p&gt;可用性指信息资源可被授权实体按要求访问、正常使用或在非正常情况下能恢复使用的特性。在系统运行时正确存取所需信息，当系统遭受意外攻击或破坏时，可以迅速恢复并能投入使用。是衡量网络信息系统面向用户的一种安全性能，以保障为用户提供服务。&lt;/p&gt;
+&lt;p&gt;网络安全的主体是保护网络上的数据和通信的安全，数据安全性是指软硬件保护措施，用来阻止对数据进行非授权的泄漏、转移、修改和破坏等，通信安全性是通信保护措施，要求在通信中采用保密安全性、传输安全性、辐射安全性等措施。&lt;/p&gt;
+&lt;h1 id=&#34;相关法律法规&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关法律法规&#34;&gt;#&lt;/a&gt; 相关法律法规&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ucGMuZ292LmNuL25wYy9jMzA4MzQvMjAxNjExLzI3MGI0M2U4YjM1ZTRmN2VhOTg1MDJiNmYwZTI2ZjhhLnNodG1s&#34;&gt;中华人民共和国网络安全法&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5nb3YuY24vemhlbmdjZS96aGVuZ2Nla3UvMjAyMS0wNy8xNC9jb250ZW50XzU2MjQ5NjUuaHRt&#34;&gt;网络产品安全漏洞管理规定&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5nb3YuY24vemhlbmdjZS9jb250ZW50LzIwMjEtMDgvMTcvY29udGVudF81NjMxNjcxLmh0bQ==&#34;&gt;关键信息基础设施安全保护条例&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ucGMuZ292LmNuL25wYy9jMzA4MzQvMjAyMTA4L2E4YzRlMzY3MmM3NDQ5MWE4MGI1M2ExNzJiYjc1M2ZlLnNodG1s&#34;&gt;中华人民共和国个人信息保护法&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ucGMuZ292LmNuL25wYy9jMzA4MzQvMjAyMTA2LzdjOWFmMTJmNTEzMzRhNzNiNTZkNzkzOGY5OWE3ODhhLnNodG1s&#34;&gt;中华人民共和国数据安全法&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络安全" />
+        <category term="法律法规" />
+        <updated>2022-11-24T02:25:18.000Z</updated>
+    </entry>
+</feed>
