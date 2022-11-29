@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;服务器&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-27T07:47:26.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/HTTP%20request/</id>
+        <title>HTTP请求走私</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/HTTP%20request/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;HTTP 请求走私是一种干扰网站处理 HTTP 请求序列方式的技术，最早在 2005 年的一篇 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2dpc2VjdXJpdHkuY29tL2xpYi9IVFRQLVJlcXVlc3QtU211Z2dsaW5nLnBkZg==&#34;&gt;文章&lt;/span&gt; 中被提出。&lt;/p&gt;
+&lt;h1 id=&#34;成因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#成因&#34;&gt;#&lt;/a&gt; 成因&lt;/h1&gt;
+&lt;p&gt;请求走私大多发生于前端服务器和后端服务器对客户端传入的数据理解不一致的情况。这是因为 HTTP 规范提供了两种不同的方法来指定请求的结束位置，即  &lt;code&gt;Content-Length&lt;/code&gt;  和  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  标头。&lt;/p&gt;
+&lt;h1 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CLTE：前端服务器使用  &lt;code&gt;Content-Length&lt;/code&gt;  头，后端服务器使用  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  头&lt;/li&gt;
+&lt;li&gt;TECL：前端服务器使用  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  标头，后端服务器使用  &lt;code&gt;Content-Length&lt;/code&gt;  标头。&lt;/li&gt;
+&lt;li&gt;TETE：前端和后端服务器都支持  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  标头，但是可以通过以某种方式来诱导其中一个服务器不处理它。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h1&gt;
+&lt;h2 id=&#34;cl不为0的get请求&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cl不为0的get请求&#34;&gt;#&lt;/a&gt; CL 不为 0 的 GET 请求&lt;/h2&gt;
+&lt;p&gt;当前端服务器允许 GET 请求携带请求体，而后端服务器不允许 GET 请求携带请求体，它会直接忽略掉 GET 请求中的  &lt;code&gt;Content-Length&lt;/code&gt;  头，不进行处理。例如下面这个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET / HTTP/1.1\r\n
+Host: example.com\r\n
+Content-Length: 44\r\n
+
+GET /secret HTTP/1.1\r\n
+Host: example.com\r\n
+\r\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;前端服务器处理了  &lt;code&gt;Content-Length&lt;/code&gt;  ，而后端服务器没有处理  &lt;code&gt;Content-Length&lt;/code&gt;  ，基于 pipeline 机制认为这是两个独立的请求，就造成了漏洞的发生。&lt;/p&gt;
+&lt;h2 id=&#34;cl-cl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cl-cl&#34;&gt;#&lt;/a&gt; CL-CL&lt;/h2&gt;
+&lt;p&gt;根据 RFC 7230，当服务器收到的请求中包含两个  &lt;code&gt;Content-Length&lt;/code&gt;  ，而且两者的值不同时，需要返回 400 错误，但是有的服务器并没有严格实现这个规范。这种情况下，当前后端各取不同的  &lt;code&gt;Content-Length&lt;/code&gt;  值时，就会出现漏洞。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+Content-Length: 8\r\n
+Content-Length: 7\r\n
+
+12345\r\n
+a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个例子中 a 就会被带入下一个请求，变为  &lt;code&gt;aGET / HTTP/1.1\r\n&lt;/code&gt;  。&lt;/p&gt;
+&lt;h2 id=&#34;cl-te&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cl-te&#34;&gt;#&lt;/a&gt; CL-TE&lt;/h2&gt;
+&lt;p&gt;CL-TE 指前端服务器处理  &lt;code&gt;Content-Length&lt;/code&gt;  这一请求头，而后端服务器遵守 RFC2616 的规定，忽略掉  &lt;code&gt;Content-Length&lt;/code&gt;  ，处理  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+...
+Connection: keep-alive\r\n
+Content-Length: 6\r\n
+Transfer-Encoding: chunked\r\n
+\r\n
+0\r\n
+\r\n
+a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个例子中 a 同样会被带入下一个请求，变为  &lt;code&gt;aGET / HTTP/1.1\r\n&lt;/code&gt;  。&lt;/p&gt;
+&lt;h2 id=&#34;te-cl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#te-cl&#34;&gt;#&lt;/a&gt; TE-CL&lt;/h2&gt;
+&lt;p&gt;TE-CL 指前端服务器处理  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  请求头，而后端服务器处理  &lt;code&gt;Content-Length&lt;/code&gt;  请求头。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+...
+Content-Length: 4\r\n
+Transfer-Encoding: chunked\r\n
+\r\n
+12\r\n
+aPOST / HTTP/1.1\r\n
+\r\n
+0\r\n
+\r\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;te-te&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#te-te&#34;&gt;#&lt;/a&gt; TE-TE&lt;/h2&gt;
+&lt;p&gt;TE-TE 指前后端服务器都处理  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  请求头，但是在容错性上表现不同，例如有的服务器可能会处理  &lt;code&gt;Transfer-encoding&lt;/code&gt;  ，测试例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+...
+Content-length: 4\r\n
+Transfer-Encoding: chunked\r\n
+Transfer-encoding: cow\r\n
+\r\n
+5c\r\n
+aPOST / HTTP/1.1\r\n
+Content-Type: application/x-www-form-urlencoded\r\n
+Content-Length: 15\r\n
+\r\n
+x=1\r\n
+0\r\n
+\r\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御&#34;&gt;#&lt;/a&gt; 防御&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;禁用后端连接重用&lt;/li&gt;
+&lt;li&gt;确保连接中的所有服务器具有相同的配置&lt;/li&gt;
+&lt;li&gt;拒绝有二义性的请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI2MTY=&#34;&gt;RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzcyMzA=&#34;&gt;RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing -- HTTP/1.1&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blog-whitepaper&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#blog-whitepaper&#34;&gt;#&lt;/a&gt; Blog / Whitepaper&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2dpc2VjdXJpdHkuY29tL2xpYi9IVFRQLVJlcXVlc3QtU211Z2dsaW5nLnBkZg==&#34;&gt;HTTP Request Smuggling by chaiml&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3J0c3dpZ2dlci5uZXQvd2ViLXNlY3VyaXR5L3JlcXVlc3Qtc211Z2dsaW5n&#34;&gt;HTTP request smuggling by portswigger&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNjY1NA==&#34;&gt;从一道题到协议层攻击之 HTTP 请求走私&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2kuYmxhY2toYXQuY29tL1VTQS0yMC9XZWRuZXNkYXkvdXMtMjAtS2xlaW4tSFRUUC1SZXF1ZXN0LVNtdWdnbGluZy1Jbi0yMDIwLU5ldy1WYXJpYW50cy1OZXctRGVmZW5zZXMtQW5kLU5ldy1DaGFsbGVuZ2VzLnBkZg==&#34;&gt;HTTP Request Smuggling in 2020&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sYWJzLmJpc2hvcGZveC5jb20vdGVjaC1ibG9nL2gyYy1zbXVnZ2xpbmctcmVxdWVzdC1zbXVnZ2xpbmctdmlhLWh0dHAvMi1jbGVhcnRleHQtaDJj&#34;&gt;h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext (h2c)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络安全" />
+        <category term="HTTP" />
+        <category term="服务器" />
+        <updated>2022-11-27T07:47:26.000Z</updated>
+    </entry>
+</feed>

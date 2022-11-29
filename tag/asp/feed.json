@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"asp\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/ASP/",
+            "url": "https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/ASP/",
+            "title": "ASP",
+            "date_published": "2022-11-28T02:36:11.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>ASP 是动态服务器页面 (Active Server Page)，是微软开发的类似 CGI 脚本程序的一种应用，其网页文件的格式是  <code>.asp</code>  。</p>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vTGl0dGxlSGFubi9wLzUwMTY5OTkuaHRtbA==\">Deformity ASP/ASPX Webshell、Webshell Hidden Learning</span></li>\n</ul>\n",
+            "tags": [
+                "ASP"
+            ]
+        }
+    ]
+}

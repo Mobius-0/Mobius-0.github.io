@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"wifi\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/",
+            "url": "https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/",
+            "title": "WiFi",
+            "date_published": "2022-11-26T08:48:19.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>Wi-Fi 又称 “无线热点” 或 “无线网络”，是 Wi-Fi 联盟的商标，一个基于 IEEE 802.11 标准的无线局域网技术。</p>\n<h1 id=\"攻击\"><a class=\"anchor\" href=\"#攻击\">#</a> 攻击</h1>\n<h2 id=\"暴力破解\"><a class=\"anchor\" href=\"#暴力破解\">#</a> 暴力破解</h2>\n<p>WiFi 密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。</p>\n<h2 id=\"伪造热点\"><a class=\"anchor\" href=\"#伪造热点\">#</a> 伪造热点</h2>\n<p>AP 可以动态的广播自己，客户也可以主动发送探针请求。可以伪造 AP 发送对探针请求的响应包，来让客户端错误的识别。</p>\n<h2 id=\"秘钥重装攻击\"><a class=\"anchor\" href=\"#秘钥重装攻击\">#</a> 秘钥重装攻击</h2>\n<p>该漏洞由 Vanhoef 发现。Wi-Fi 在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。</p>\n<h2 id=\"dragonblood\"><a class=\"anchor\" href=\"#dragonblood\">#</a> Dragonblood</h2>\n<p>最新版的 WPA3 标准在实现上存在一些问题，同样由 Vanhoef 发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。</p>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cud2ktZmkub3JnLw==\">Wi-Fi Alliance</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9kcmFnb25ibG9vZC5wZGY=\">Dragonblood</span> : Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ub3Jkc2VjMjAxOS5wZGY=\">Improving Privacy through Fast Passive Wi-Fi Scanning</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9hc2lhY2NzMjAxOS5wZGY=\">Practical Side-Channel Attacks against WPA-TKIP</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ibGFja2hhdC1ldTIwMTcucGRm\">Key Reinstallation Attacks: Breaking the WPA2 Protocol</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc2NjQ=\">RFC 7664 Dragonfly Key Exchange</span></li>\n</ul>\n",
+            "tags": [
+                "计算机网络",
+                "WiFi"
+            ]
+        }
+    ]
+}

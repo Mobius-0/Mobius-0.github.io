@@ -3,16 +3,13 @@
     <id>https://mobius-0.github.io</id>
     <title>Khala • Posts by &#34;网站&#34; tag</title>
     <link href="https://mobius-0.github.io" />
-    <updated>2022-11-16T09:35:36.000Z</updated>
+    <updated>2022-11-26T02:03:09.000Z</updated>
     <category term="Hexo" />
     <category term="shoya" />
     <category term="网站" />
     <category term="网络安全" />
     <category term="工具" />
     <category term="虚拟机" />
-    <category term="计算机网络" />
-    <category term="网络协议" />
-    <category term="法律法规" />
     <category term="星际争霸2" />
     <category term="平衡" />
     <category term="杂谈" />
@@ -20,6 +17,172 @@
     <category term="江南" />
     <category term="龙族" />
     <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/information%20gathering/website%20information/</id>
+        <title>站点信息</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/information%20gathering/website%20information/"/>
+        <content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;判断网站操作系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux 大小写敏感&lt;/li&gt;
+&lt;li&gt;Windows 大小写不敏感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扫描敏感文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;robots.txt&lt;/li&gt;
+&lt;li&gt;crossdomain.xml&lt;/li&gt;
+&lt;li&gt;sitemap.xml&lt;/li&gt;
+&lt;li&gt;xx.tar.gz&lt;/li&gt;
+&lt;li&gt;xx.bak 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确定网站采用的语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 PHP / Java / Python 等&lt;/li&gt;
+&lt;li&gt;找后缀，比如 php/asp/jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前端框架&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 jQuery / BootStrap / Vue / React / Angular 等&lt;/li&gt;
+&lt;li&gt;查看源代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中间服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 Apache / Nginx / IIS 等&lt;/li&gt;
+&lt;li&gt;查看 header 中的信息&lt;/li&gt;
+&lt;li&gt;根据报错信息判断&lt;/li&gt;
+&lt;li&gt;根据默认页面判断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web 容器服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 Tomcat / Jboss / Weblogic 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后端框架&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 Cookie 判断&lt;/li&gt;
+&lt;li&gt;根据 CSS / 图片等资源的 hash 值判断&lt;/li&gt;
+&lt;li&gt;根据 URL 路由判断
+&lt;ul&gt;
+&lt;li&gt;如 wp-admin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;根据网页中的关键字判断&lt;/li&gt;
+&lt;li&gt;根据响应头中的 X-Powered-By&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CDN 信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见的有 Cloudflare、yunjiasu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;探测有没有 WAF，如果有，什么类型的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有 WAF，找绕过方式&lt;/li&gt;
+&lt;li&gt;没有，进入下一步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扫描敏感目录，看是否存在信息泄漏&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扫描之前先自己尝试几个的 url，人为看看反应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用爬虫爬取网站信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿到一定信息后，通过拿到的目录名称，文件名称及文件扩展名了解网站开发人员的命名思路，确定其命名规则，推测出更多的目录及文件名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常见入口目标&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关注度低的系统&lt;/li&gt;
+&lt;li&gt;业务线较长的系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网站" />
+        <category term="信息收集" />
+        <category term="搜索" />
+        <updated>2022-11-26T02:03:09.000Z</updated>
+    </entry>
     <entry>
         <id>https://mobius-0.github.io/hexo/hexo/</id>
         <title>关于hexo-shoka主题配置过程的补充</title>

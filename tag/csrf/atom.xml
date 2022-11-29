@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;csrf&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T08:58:44.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/</id>
+        <title>CSRF</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;跨站请求伪造 (Cross-Site Request Forgery, CSRF)，也被称为 One Click Attack 或者 Session Riding ，通常缩写为 CSRF，是一种对网站的恶意利用。尽管听起来像 XSS，但它与 XSS 非常不同，XSS 利用站点内的信任用户，而 CSRF 则通过伪装来自受信任用户的请求来利用受信任的网站。&lt;/p&gt;
+&lt;h1 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h1&gt;
+&lt;h2 id=&#34;资源包含&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#资源包含&#34;&gt;#&lt;/a&gt; 资源包含&lt;/h2&gt;
+&lt;p&gt;资源包含是在大多数介绍 CSRF 概念的演示或基础课程中可能看到的类型。这种类型归结为控制 HTML 标签（例如 &amp;lt;image&amp;gt;、&amp;lt;audio&amp;gt;、&amp;lt;video&amp;gt;、&amp;lt;object&amp;gt;、&amp;lt;script &amp;gt; 等）所包含的资源的攻击者。如果攻击者能够影响 URL 被加载的话，包含远程资源的任何标签都可以完成攻击。&lt;/p&gt;
+&lt;p&gt;由于缺少对 Cookie 的源点检查，如上所述，此攻击不需要 XSS，可以由任何攻击者控制的站点或站点本身执行。此类型仅限于 GET 请求，因为这些是浏览器对资源 URL 唯一的请求类型。这种类型的主要限制是它需要错误地使用安全的 HTTP 请求方式。&lt;/p&gt;
+&lt;h2 id=&#34;基于表单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于表单&#34;&gt;#&lt;/a&gt; 基于表单&lt;/h2&gt;
+&lt;p&gt;通常在正确使用安全的请求方式时看到。攻击者创建一个想要受害者提交的表单；其包含一个 JavaScript 片段，强制受害者的浏览器提交。&lt;/p&gt;
+&lt;p&gt;该表单可以完全由隐藏的元素组成，以致受害者很难发现它。&lt;/p&gt;
+&lt;p&gt;如果处理 cookies 不当，攻击者可以在任何站点上发动攻击，只要受害者使用有效的 cookie 登录，攻击就会成功。如果请求是有目的性的，成功的攻击将使受害者回到他们平时正常的页面。该方法对于攻击者可以将受害者指向特定页面的网络钓鱼攻击特别有效。&lt;/p&gt;
+&lt;h2 id=&#34;xmlhttprequest&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xmlhttprequest&#34;&gt;#&lt;/a&gt; XMLHttpRequest&lt;/h2&gt;
+&lt;p&gt;XMLHttpRequest 可能是最少看到的方式，由于许多现代 Web 应用程序依赖 XHR，许多应用花费大量的时间来构建和实现这一特定的对策。&lt;/p&gt;
+&lt;p&gt;基于 XHR 的 CSRF 通常由于 SOP 而以 XSS 有效载荷的形式出现。没有跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)，XHR 仅限于攻击者托管自己的有效载荷的原始请求。&lt;/p&gt;
+&lt;p&gt;这种类型的 CSRF 的攻击有效载荷基本上是一个标准的 XHR，攻击者已经找到了一些注入受害者浏览器 DOM 的方式。&lt;/p&gt;
+&lt;h1 id=&#34;防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御&#34;&gt;#&lt;/a&gt; 防御&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 CSRF-token 或者验证码来检测用户提交&lt;/li&gt;
+&lt;li&gt;验证 Referer/Content-Type&lt;/li&gt;
+&lt;li&gt;对于用户修改删除等操作最好都使用 POST 操作&lt;/li&gt;
+&lt;li&gt;避免全站通用的 Cookie，严格设置 Cookie 的域&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0aHViLmNvbS9qcm96bmVyL2NzcmYtZGVtbw==&#34;&gt;demo&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tZWRpdW0uY29tL0Bqcm96bmVyL3dpcGluZy1vdXQtY3NyZi1kZWQ5N2FlN2U4M2Y=&#34;&gt;Wiping Out CSRF&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuc2xpZGVzaGFyZS5uZXQvMGFuZzNlbC9uZWF0LXRyaWNrcy10by1ieXBhc3MtY3NyZnByb3RlY3Rpb24=&#34;&gt;Neat tricks to bypass CSRF protection&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络安全" />
+        <category term="漏洞" />
+        <category term="CSRF" />
+        <updated>2022-11-26T08:58:44.000Z</updated>
+    </entry>
+</feed>

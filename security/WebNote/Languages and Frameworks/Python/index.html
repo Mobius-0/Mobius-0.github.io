@@ -1,0 +1,602 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="语言,反序列化,混淆,沙箱,Python" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Python/">
+
+
+
+  <title>
+Python - 语言与框架 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Python
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-27 16:42:11">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-27T16:42:11+08:00">2022-11-27</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/LdM6nuy1WChDaVA.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/cQgHsNKJmoPZIA1.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/25/l2B5FAn7XYpwq4i.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/28/XGLhv9CZ7VyOrw6.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/mJcbwPV4zuS28ra.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/25/ub4WJPITVGQxkeo.png"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Languages-and-Frameworks/" itemprop="item" rel="index" title="分类于 语言与框架"><span itemprop="name">语言与框架</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Python/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="格式化字符串"><a class="anchor" href="#格式化字符串">#</a> 格式化字符串</h1>
+<p>在 Python 中，有两种格式化字符串的方式，在 Python2 的较低版本中，格式化字符串的方式为  <code>&quot;this is a %s&quot; % &quot;test&quot;</code>  ，之后增加了 format 的方式， 语法为  <code>&quot;this is a &#123;&#125;&quot;.format('test')</code>  或者  <code>&quot;this is a &#123;test&#125;&quot;.format(test='test')</code></p>
+<p>当格式化字符串由用户输入时，则可能会造成一些问题，下面是一个最简单的例子</p>
+<pre><code>&gt;&gt;&gt; 'class of &#123;0&#125; is &#123;0.__class__&#125;'.format(42)
+&quot;class of 42 is &lt;class 'int'&gt;&quot;
+</code></pre>
+<p>从上面这个简单的例子不难知道，当我们可以控制要 format 的字符串时，则可以使用  <code>__init__</code>  /  <code>__globals__</code>  等属性读取一些比较敏感的值，甚至任意执行代码。</p>
+<h1 id="反序列化"><a class="anchor" href="#反序列化">#</a> 反序列化</h1>
+<h2 id="pickle-demo"><a class="anchor" href="#pickle-demo">#</a> pickle demo</h2>
+<p>Python Pickle 在反序列化时会调用  <code>__reduce__</code>  ，可用自定义的  <code>__reduce__</code>  函数来实现攻击。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> pickle</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> pickletools</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> subprocess</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    a <span class="token operator">=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    b <span class="token operator">=</span> <span class="token number">2</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__reduce__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token keyword">return</span> <span class="token punctuation">(</span>subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'cmd.exe'</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>A<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>pickletools<span class="token punctuation">.</span>dis<span class="token punctuation">(</span>data<span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="其他序列化库"><a class="anchor" href="#其他序列化库">#</a> 其他序列化库</h2>
+<ul>
+<li>PyYAML</li>
+<li>marshal</li>
+<li>shelve</li>
+</ul>
+<h1 id="沙箱"><a class="anchor" href="#沙箱">#</a> 沙箱</h1>
+<h2 id="常用函数"><a class="anchor" href="#常用函数">#</a> 常用函数</h2>
+<ul>
+<li>eval / exec / compile</li>
+<li>dir / type</li>
+<li>globals / locals / vars</li>
+<li>getattr / setattr</li>
+</ul>
+<h2 id="导入包方式"><a class="anchor" href="#导入包方式">#</a> 导入包方式</h2>
+<ul>
+<li><code>import os</code></li>
+<li><code>from os import *</code></li>
+<li><code>__import__(&quot;os&quot;)</code></li>
+<li><code>importlib</code></li>
+<li><code>imp</code></li>
+<li><code>reload(os)</code></li>
+<li><code>execfile</code>  仅 Python2 支持</li>
+</ul>
+<h2 id="绕过"><a class="anchor" href="#绕过">#</a> 绕过</h2>
+<ul>
+<li><code>dir(__builtins__)</code>  查看内置模块</li>
+<li>最简单的思路是在已有的模块中 import，如果那个模块中已经 import 可以利用的模块就可以使用了</li>
+<li>在父类中寻找可用的模块，最常见 payload 是  <code>().__class__.__bases__[0].__subclasses__()</code>  或者用魔术方法获取全局作用域  <code>__init__.__func__.__globals__</code></li>
+<li>有些网站没有过滤 pickle 模块，可以使用 pickle 实现任意代码执行，生成 payload 可以使用  <code>https://gist.github.com/freddyb/3360650</code></li>
+<li>有的沙箱把相关的模块代码都被删除了，则可以使用 libc 中的函数，Python 中调用一般可以使用 ctypes 或者 cffi。</li>
+<li><code>&quot;A&quot;&quot;B&quot; == &quot;AB&quot;</code></li>
+</ul>
+<h2 id="防御"><a class="anchor" href="#防御">#</a> 防御</h2>
+<p>Python 官方给出了一些防御的建议</p>
+<ul>
+<li>使用 Jython 并尝试使用 Java 平台来锁定程序的权限</li>
+<li>使用 fakeroot 来避免</li>
+<li>使用一些 rootjail 的技术</li>
+</ul>
+<h1 id="框架"><a class="anchor" href="#框架">#</a> 框架</h1>
+<h2 id="django"><a class="anchor" href="#django">#</a> Django</h2>
+<h3 id="历史漏洞"><a class="anchor" href="#历史漏洞">#</a> 历史漏洞</h3>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9wYXBlci5zZWVidWcub3JnLzU4Lw==">CVE-2016-7401 CSRF Bypass</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGphbmdvcHJvamVjdC5jb20vd2VibG9nLzIwMTcvYXByLzA0L3NlY3VyaXR5LXJlbGVhc2VzLw==">CVE-2017-7233/7234 Open redirect vulnerability</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cubGVhdmVzb25ncy5jb20vUEVORVRSQVRJT04vZGphbmdvLWRlYnVnLXBhZ2UteHNzLmh0bWw=">CVE-2017-12794 debug page XSS</span></li>
+</ul>
+<h3 id="配置相关"><a class="anchor" href="#配置相关">#</a> 配置相关</h3>
+<ul>
+<li>Nginx 在为 Django 做反向代理时，静态文件目录配置错误会导致源码泄露。访问 /static.. 会 301 重定向到 /static../</li>
+</ul>
+<h2 id="flask"><a class="anchor" href="#flask">#</a> Flask</h2>
+<p>Flask 默认使用客户端 session，使得 session 可以被伪造</p>
+<h1 id="代码混淆"><a class="anchor" href="#代码混淆">#</a> 代码混淆</h1>
+<h2 id="常见混淆方式"><a class="anchor" href="#常见混淆方式">#</a> 常见混淆方式</h2>
+<ul>
+<li>基于 AST 变换</li>
+<li>编译为 pyc 文件</li>
+<li>Pyinstaller</li>
+<li>PyArmor</li>
+<li>通过 AES 加密为 pye 文件</li>
+</ul>
+<h1 id="sink"><a class="anchor" href="#sink">#</a> Sink</h1>
+<h2 id="命令执行"><a class="anchor" href="#命令执行">#</a> 命令执行</h2>
+<ul>
+<li>asyncio.new_event_loop().subprocess_exec</li>
+<li>asyncio.subprocess</li>
+<li>bdb.os</li>
+<li>cgi.os.system</li>
+<li>cgi.sys</li>
+<li>code.InteractiveInterpreter</li>
+<li>commands</li>
+<li>ctypes.CDLL</li>
+<li>eval</li>
+<li>exec</li>
+<li>execfile</li>
+<li>input // python2 only</li>
+<li>os.exec</li>
+<li>os.exec*</li>
+<li>os.fork</li>
+<li>os.popen</li>
+<li>os.spawn</li>
+<li>os.system</li>
+<li>platform.os</li>
+<li>platform.popen</li>
+<li>platform.sys</li>
+<li>popen2</li>
+<li>pty.os</li>
+<li>pty.spawn</li>
+<li>subprocess</li>
+<li>timeit.sys</li>
+<li>timeit.timeit</li>
+<li>typing.get_type_hints() +  <code>__annotations__</code></li>
+<li>...</li>
+</ul>
+<h2 id="文件读取"><a class="anchor" href="#文件读取">#</a> 文件读取</h2>
+<ul>
+<li>open</li>
+<li>os.open</li>
+<li>urllib.request.urlopen('[file:///](file:///)')</li>
+<li>codecs.open</li>
+<li>fileinput</li>
+<li>仅 Python2
+<ul>
+<li>types.FileType</li>
+</ul>
+</li>
+</ul>
+<h2 id="危险第三方库"><a class="anchor" href="#危险第三方库">#</a> 危险第三方库</h2>
+<ul>
+<li>Template</li>
+<li>subprocess32</li>
+</ul>
+<h2 id="反序列化-2"><a class="anchor" href="#反序列化-2">#</a> 反序列化</h2>
+<ul>
+<li>marshal</li>
+<li>PyYAML</li>
+<li>pickle</li>
+<li>cPickle</li>
+<li>shelve</li>
+<li>PIL</li>
+</ul>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<h2 id="反序列化-3"><a class="anchor" href="#反序列化-3">#</a> 反序列化</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy45MXJpLm9yZy85NTc2Lmh0bWw=">Python pickle 反序列化</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93aWtpLnB5dGhvbi5vcmcvbW9pbi9TYW5kYm94ZWRQeXRob24=">Python 沙箱 官方 wiki</span></li>
+<li>[Python eval 的常见错误封装及利用原理](<span class="exturl" data-url="aHR0cDovL3h4bGVnZW5kLmNvbS8yMDE1LzA3LzMxL1B5dGhvbg==">http://xxlegend.com/2015/07/31/Python</span> eval 的常见错误封装及利用原理 /)</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvemgtY24vMy9saWJyYXJ5L3BpY2tsZS5odG1s">pickle Python 对象序列化</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9tZWRpYS5ibGFja2hhdC5jb20vYmgtdXMtMTEvU2xhdmllcm8vQkhfVVNfMTFfU2xhdmllcm9fU291cl9QaWNrbGVzX1NsaWRlcy5wZGY=">Sour Pickles A serialised exploitation guide in one part</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ydXNodGVyLmNvbS9ibG9nL3BpY2tsZS1zZXJpYWxpemF0aW9uLWludGVybmFscy8=">How pickle works in Python</span></li>
+</ul>
+<h2 id="沙箱-2"><a class="anchor" href="#沙箱-2">#</a> 沙箱</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvODYzNjY=">Python 沙箱通用绕过</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvc3lzdGVtLzIwMzIwOC5odG1s">一文看懂 Python 沙箱逃逸</span></li>
+</ul>
+<h2 id="格式化字符串-2"><a class="anchor" href="#格式化字符串-2">#</a> 格式化字符串</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cubGVhdmVzb25ncy5jb20vUEVORVRSQVRJT04vcHl0aG9uLXN0cmluZy1mb3JtYXQtdnVsbmVyYWJpbGl0eS5odG1s">Python 字符串格式化漏洞</span></li>
+<li><span class="exturl" data-url="aHR0cDovL2x1Y3Vtci5wb2Nvby5vcmcvMjAxNi8xMi8yOS9jYXJlZnVsLXdpdGgtc3RyLWZvcm1hdC8=">Be Careful with Python's New-Style String Format</span></li>
+</ul>
+<h2 id="综合"><a class="anchor" href="#综合">#</a> 综合</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZzdGlubmVyL3B5dGhvbi1zZWN1cml0eS5naXQ=">python security</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JpdDR3b28vcHl0aG9uX3NlYw==">Python 安全和代码审计相关资料收集</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E8%AF%AD%E8%A8%80/" rel="tag"><i class="ic i-tag"></i> 语言</a>
+          <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" rel="tag"><i class="ic i-tag"></i> 反序列化</a>
+          <a href="/tags/%E6%B7%B7%E6%B7%86/" rel="tag"><i class="ic i-tag"></i> 混淆</a>
+          <a href="/tags/%E6%B2%99%E7%AE%B1/" rel="tag"><i class="ic i-tag"></i> 沙箱</a>
+          <a href="/tags/Python/" rel="tag"><i class="ic i-tag"></i> Python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-27 16:47:20" itemprop="dateModified" datetime="2022-11-27T16:47:20+08:00">2022-11-27</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Python/" title="Python">https://mobius-0.github.io/security/WebNote/Languages and Frameworks/Python/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Languages%20and%20Frameworks/PHP/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;27&#x2F;9NQXTSUlr4W37qg.jpg" title="PHP">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 语言与框架</span>
+  <h3>PHP</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Languages%20and%20Frameworks/Java/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;FsDRNzyW3YfCE2S.jpg" title="Java">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 语言与框架</span>
+  <h3>Java</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.</span> <span class="toc-text"> 格式化字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text"> 反序列化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pickle-demo"><span class="toc-number">2.1.</span> <span class="toc-text"> pickle demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%BA%8F%E5%88%97%E5%8C%96%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text"> 其他序列化库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B2%99%E7%AE%B1"><span class="toc-number">3.</span> <span class="toc-text"> 沙箱</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">3.1.</span> <span class="toc-text"> 常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E5%8C%85%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text"> 导入包方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87"><span class="toc-number">3.3.</span> <span class="toc-text"> 绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E5%BE%A1"><span class="toc-number">3.4.</span> <span class="toc-text"> 防御</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-number">4.</span> <span class="toc-text"> 框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#django"><span class="toc-number">4.1.</span> <span class="toc-text"> Django</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2%E6%BC%8F%E6%B4%9E"><span class="toc-number">4.1.1.</span> <span class="toc-text"> 历史漏洞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3"><span class="toc-number">4.1.2.</span> <span class="toc-text"> 配置相关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flask"><span class="toc-number">4.2.</span> <span class="toc-text"> Flask</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B7%B7%E6%B7%86"><span class="toc-number">5.</span> <span class="toc-text"> 代码混淆</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%B7%B7%E6%B7%86%E6%96%B9%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text"> 常见混淆方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sink"><span class="toc-number">6.</span> <span class="toc-text"> Sink</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="toc-number">6.1.</span> <span class="toc-text"> 命令执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="toc-number">6.2.</span> <span class="toc-text"> 文件读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B1%E9%99%A9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">6.3.</span> <span class="toc-text"> 危险第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96-2"><span class="toc-number">6.4.</span> <span class="toc-text"> 反序列化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text"> 参考链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96-3"><span class="toc-number">7.1.</span> <span class="toc-text"> 反序列化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%99%E7%AE%B1-2"><span class="toc-number">7.2.</span> <span class="toc-text"> 沙箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2-2"><span class="toc-number">7.3.</span> <span class="toc-text"> 格式化字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BC%E5%90%88"><span class="toc-number">7.4.</span> <span class="toc-text"> 综合</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Languages%20and%20Frameworks/PHP/" rel="bookmark" title="PHP">PHP</a></li><li class="active"><a href="/security/WebNote/Languages%20and%20Frameworks/Python/" rel="bookmark" title="Python">Python</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/Java/" rel="bookmark" title="Java">Java</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/JavaScript/" rel="bookmark" title="JavaScript">JavaScript</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/Golang/" rel="bookmark" title="Golang">Golang</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/ASP/" rel="bookmark" title="ASP">ASP</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/Ruby/" rel="bookmark" title="Ruby">Ruby</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/PowerShell/" rel="bookmark" title="PowerShell">PowerShell</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/Shell/" rel="bookmark" title="Shell">Shell</a></li><li><a href="/security/WebNote/Languages%20and%20Frameworks/CSharp/" rel="bookmark" title="C#">C#</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">52</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">75</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/Languages%20and%20Frameworks/PHP/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Languages%20and%20Frameworks/Java/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">174k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:31</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Languages and Frameworks/Python/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

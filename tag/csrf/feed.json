@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"csrf\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/",
+            "url": "https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/",
+            "title": "CSRF",
+            "date_published": "2022-11-26T08:58:44.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>跨站请求伪造 (Cross-Site Request Forgery, CSRF)，也被称为 One Click Attack 或者 Session Riding ，通常缩写为 CSRF，是一种对网站的恶意利用。尽管听起来像 XSS，但它与 XSS 非常不同，XSS 利用站点内的信任用户，而 CSRF 则通过伪装来自受信任用户的请求来利用受信任的网站。</p>\n<h1 id=\"分类\"><a class=\"anchor\" href=\"#分类\">#</a> 分类</h1>\n<h2 id=\"资源包含\"><a class=\"anchor\" href=\"#资源包含\">#</a> 资源包含</h2>\n<p>资源包含是在大多数介绍 CSRF 概念的演示或基础课程中可能看到的类型。这种类型归结为控制 HTML 标签（例如 &lt;image&gt;、&lt;audio&gt;、&lt;video&gt;、&lt;object&gt;、&lt;script &gt; 等）所包含的资源的攻击者。如果攻击者能够影响 URL 被加载的话，包含远程资源的任何标签都可以完成攻击。</p>\n<p>由于缺少对 Cookie 的源点检查，如上所述，此攻击不需要 XSS，可以由任何攻击者控制的站点或站点本身执行。此类型仅限于 GET 请求，因为这些是浏览器对资源 URL 唯一的请求类型。这种类型的主要限制是它需要错误地使用安全的 HTTP 请求方式。</p>\n<h2 id=\"基于表单\"><a class=\"anchor\" href=\"#基于表单\">#</a> 基于表单</h2>\n<p>通常在正确使用安全的请求方式时看到。攻击者创建一个想要受害者提交的表单；其包含一个 JavaScript 片段，强制受害者的浏览器提交。</p>\n<p>该表单可以完全由隐藏的元素组成，以致受害者很难发现它。</p>\n<p>如果处理 cookies 不当，攻击者可以在任何站点上发动攻击，只要受害者使用有效的 cookie 登录，攻击就会成功。如果请求是有目的性的，成功的攻击将使受害者回到他们平时正常的页面。该方法对于攻击者可以将受害者指向特定页面的网络钓鱼攻击特别有效。</p>\n<h2 id=\"xmlhttprequest\"><a class=\"anchor\" href=\"#xmlhttprequest\">#</a> XMLHttpRequest</h2>\n<p>XMLHttpRequest 可能是最少看到的方式，由于许多现代 Web 应用程序依赖 XHR，许多应用花费大量的时间来构建和实现这一特定的对策。</p>\n<p>基于 XHR 的 CSRF 通常由于 SOP 而以 XSS 有效载荷的形式出现。没有跨域资源共享策略 (Cross-Origin Resource Sharing, CORS)，XHR 仅限于攻击者托管自己的有效载荷的原始请求。</p>\n<p>这种类型的 CSRF 的攻击有效载荷基本上是一个标准的 XHR，攻击者已经找到了一些注入受害者浏览器 DOM 的方式。</p>\n<h1 id=\"防御\"><a class=\"anchor\" href=\"#防御\">#</a> 防御</h1>\n<ul>\n<li>通过 CSRF-token 或者验证码来检测用户提交</li>\n<li>验证 Referer/Content-Type</li>\n<li>对于用户修改删除等操作最好都使用 POST 操作</li>\n<li>避免全站通用的 Cookie，严格设置 Cookie 的域</li>\n</ul>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuZ2l0aHViLmNvbS9qcm96bmVyL2NzcmYtZGVtbw==\">demo</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tZWRpdW0uY29tL0Bqcm96bmVyL3dpcGluZy1vdXQtY3NyZi1kZWQ5N2FlN2U4M2Y=\">Wiping Out CSRF</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuc2xpZGVzaGFyZS5uZXQvMGFuZzNlbC9uZWF0LXRyaWNrcy10by1ieXBhc3MtY3NyZnByb3RlY3Rpb24=\">Neat tricks to bypass CSRF protection</span></li>\n</ul>\n",
+            "tags": [
+                "网络安全",
+                "漏洞",
+                "CSRF"
+            ]
+        }
+    ]
+}

@@ -5,17 +5,14 @@
         <link>https://mobius-0.github.io</link>
         <description>GLHF</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 24 Nov 2022 10:45:44 +0800</pubDate>
-        <lastBuildDate>Thu, 24 Nov 2022 10:45:44 +0800</lastBuildDate>
+        <pubDate>Sat, 26 Nov 2022 16:48:19 +0800</pubDate>
+        <lastBuildDate>Sat, 26 Nov 2022 16:48:19 +0800</lastBuildDate>
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
         <category>网络安全</category>
         <category>工具</category>
         <category>虚拟机</category>
-        <category>计算机网络</category>
-        <category>网络协议</category>
-        <category>法律法规</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -23,10 +20,365 @@
         <category>江南</category>
         <category>龙族</category>
         <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
         <item>
-            <guid isPermalink="true">https://mobius-0.github.io/security/netw/</guid>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/</guid>
+            <title>WiFi</title>
+            <link>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/</link>
+            <category>计算机网络</category>
+            <category>WiFi</category>
+            <pubDate>Sat, 26 Nov 2022 16:48:19 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Wi-Fi 又称 “无线热点” 或 “无线网络”，是 Wi-Fi 联盟的商标，一个基于 IEEE 802.11 标准的无线局域网技术。&lt;/p&gt;
+&lt;h1 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h1&gt;
+&lt;h2 id=&#34;暴力破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#暴力破解&#34;&gt;#&lt;/a&gt; 暴力破解&lt;/h2&gt;
+&lt;p&gt;WiFi 密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。&lt;/p&gt;
+&lt;h2 id=&#34;伪造热点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#伪造热点&#34;&gt;#&lt;/a&gt; 伪造热点&lt;/h2&gt;
+&lt;p&gt;AP 可以动态的广播自己，客户也可以主动发送探针请求。可以伪造 AP 发送对探针请求的响应包，来让客户端错误的识别。&lt;/p&gt;
+&lt;h2 id=&#34;秘钥重装攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#秘钥重装攻击&#34;&gt;#&lt;/a&gt; 秘钥重装攻击&lt;/h2&gt;
+&lt;p&gt;该漏洞由 Vanhoef 发现。Wi-Fi 在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。&lt;/p&gt;
+&lt;h2 id=&#34;dragonblood&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dragonblood&#34;&gt;#&lt;/a&gt; Dragonblood&lt;/h2&gt;
+&lt;p&gt;最新版的 WPA3 标准在实现上存在一些问题，同样由 Vanhoef 发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2ktZmkub3JnLw==&#34;&gt;Wi-Fi Alliance&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9kcmFnb25ibG9vZC5wZGY=&#34;&gt;Dragonblood&lt;/span&gt; : Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ub3Jkc2VjMjAxOS5wZGY=&#34;&gt;Improving Privacy through Fast Passive Wi-Fi Scanning&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9hc2lhY2NzMjAxOS5wZGY=&#34;&gt;Practical Side-Channel Attacks against WPA-TKIP&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ibGFja2hhdC1ldTIwMTcucGRm&#34;&gt;Key Reinstallation Attacks: Breaking the WPA2 Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc2NjQ=&#34;&gt;RFC 7664 Dragonfly Key Exchange&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/</guid>
+            <title>IPSec</title>
+            <link>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/</link>
+            <category>计算机网络</category>
+            <category>IPSec</category>
+            <category>VPN</category>
+            <pubDate>Sat, 26 Nov 2022 16:47:59 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;IPsec（IP Security）是 IETF 制定的三层隧道加密协议，它为 Internet 上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在 IP 层通过加密与数据源认证等方式，提供了以下的安全服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据机密性（Confidentiality）：IPsec 发送方在通过网络传输包前对包进行加密。&lt;/li&gt;
+&lt;li&gt;数据完整性（Data Integrity）：IPsec 接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。&lt;/li&gt;
+&lt;li&gt;数据来源认证（Data Authentication）：IPsec 在接收端可以认证发送 IPsec 报文的发送端是否合法。&lt;/li&gt;
+&lt;li&gt;防重放（Anti-Replay）：IPsec 接收方可检测并拒绝接收过时或重复的报文。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h1&gt;
+&lt;p&gt;IPsec 具有以下优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 IKE（Internet Key Exchange，因特网密钥交换），可实现密钥的自动协商功能，减少了密钥协商的开销。可以通过 IKE 建立和维护 SA 的服务，简化了 IPsec 的使用和管理。&lt;/li&gt;
+&lt;li&gt;所有使用 IP 协议进行数据传输的应用系统和服务都可以使用 IPsec，而不必对这些应用系统和服务本身做任何修改。&lt;/li&gt;
+&lt;li&gt;对数据的加密是以数据包为单位的，而不是以整个数据流为单位，这不仅灵活而且有助于进一步提高 IP 数据包的安全性，可以有效防范网络攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;构成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构成&#34;&gt;#&lt;/a&gt; 构成&lt;/h1&gt;
+&lt;p&gt;IPsec 由四部分内容构成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责密钥管理的 Internet 密钥交换协议 IKE（Internet Key Exchange Protocol）&lt;/li&gt;
+&lt;li&gt;负责将安全服务与使用该服务的通信流相联系的安全关联 SA（Security Associations）&lt;/li&gt;
+&lt;li&gt;直接操作数据包的认证头协议 AH（IP Authentication Header）和安全载荷协议 ESP（IP Encapsulating Security Payload）&lt;/li&gt;
+&lt;li&gt;若干用于加密和认证的算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安全联盟security-associationsa&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全联盟security-associationsa&#34;&gt;#&lt;/a&gt; 安全联盟（Security Association，SA）&lt;/h1&gt;
+&lt;p&gt;IPsec 在两个端点之间提供安全通信，端点被称为 IPsec 对等体。&lt;/p&gt;
+&lt;p&gt;SA 是 IPsec 的基础，也是 IPsec 的本质。SA 是通信对等体间对某些要素的约定，例如，使用哪种协议（AH、ESP 还是两者结合使用）、协议的封装模式（传输模式和隧道模式）、加密算法（DES、3DES 和 AES）、特定流中保护数据的共享密钥以及密钥的生存周期等。建立 SA 的方式有手工配置和 IKE 自动协商两种。&lt;/p&gt;
+&lt;p&gt;SA 是单向的，在两个对等体之间的双向通信，最少需要两个 SA 来分别对两个方向的数据流进行安全保护。同时，如果两个对等体希望同时使用 AH 和 ESP 来进行安全通信，则每个对等体都会针对每一种协议来构建一个独立的 SA。&lt;/p&gt;
+&lt;p&gt;SA 由一个三元组来唯一标识，这个三元组包括 SPI（Security Parameter Index，安全参数索引）、目的 IP 地址、安全协议号（AH 或 ESP）。&lt;/p&gt;
+&lt;p&gt;SPI 是用于唯一标识 SA 的一个 32 比特数值，它在 AH 和 ESP 头中传输。在手工配置 SA 时，需要手工指定 SPI 的取值。使用 IKE 协商产生 SA 时，SPI 将随机生成。&lt;/p&gt;
+&lt;h1 id=&#34;ike&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ike&#34;&gt;#&lt;/a&gt; IKE&lt;/h1&gt;
+&lt;p&gt;IKE（RFC2407，RFC2408、RFC2409）属于一种混合型协议，由 Internet 安全关联和密钥管理协议（ISAKMP）和两种密钥交换协议 OAKLEY 与 SKEME 组成。IKE 创建在由 ISAKMP 定义的框架上，沿用了 OAKLEY 的密钥交换模式以及 SKEME 的共享和密钥更新技术，还定义了它自己的两种密钥交换方式。&lt;/p&gt;
+&lt;p&gt;IKE 使用了两个阶段的 ISAKMP：&lt;/p&gt;
+&lt;p&gt;第一阶段，协商创建一个通信信道（IKE SA），并对该信道进行验证，为双方进一步的 IKE 通信提供机密性、消息完整性以及消息源验证服务； 第二阶段，使用已建立的 IKE SA 建立 IPsec SA（V2 中叫 Child SA）。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/</guid>
+            <title>SSL/TLS</title>
+            <link>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/</link>
+            <category>计算机网络</category>
+            <category>SSL</category>
+            <category>TLS</category>
+            <pubDate>Sat, 26 Nov 2022 16:42:19 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;SSL 全称是 Secure Sockets Layer，安全套接字层，它是由网景公司 (Netscape) 在 1994 年时设计，主要用于 Web 的安全传输协议，目的是为网络通信提供机密性、认证性及数据完整性保障。如今，SSL 已经成为互联网保密通信的工业标准。&lt;/p&gt;
+&lt;p&gt;SSL 最初的几个版本 (SSL 1.0、SSL2.0、SSL 3.0) 由网景公司设计和维护，从 3.1 版本开始，SSL 协议由因特网工程任务小组 (IETF) 正式接管，并更名为 TLS (Transport Layer Security)，发展至今已有 TLS 1.0、TLS1.1、TLS1.2、TLS1.3 这几个版本。&lt;/p&gt;
+&lt;p&gt;如 TLS 名字所说，SSL/TLS 协议仅保障传输层安全。同时，由于协议自身特性 (数字证书机制)，SSL/TLS 不能被用于保护多跳 (multi-hop) 端到端通信，而只能保护点到点通信。&lt;/p&gt;
+&lt;p&gt;SSL/TLS 协议能够提供的安全目标主要包括如下几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;认证性：借助数字证书认证服务端端和客户端身份，防止身份伪造&lt;/li&gt;
+&lt;li&gt;机密性：借助加密防止第三方窃听&lt;/li&gt;
+&lt;li&gt;完整性：借助消息认证码 (MAC) 保障数据完整性，防止消息篡改&lt;/li&gt;
+&lt;li&gt;重放保护：通过使用隐式序列号防止重放攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为了实现这些安全目标，SSL/TLS 协议被设计为一个两阶段协议，分为握手阶段和应用阶段：&lt;/p&gt;
+&lt;p&gt;握手阶段也称协商阶段，在这一阶段，客户端和服务端端会认证对方身份 (依赖于 PKI 体系，利用数字证书进行身份认证)，并协商通信中使用的安全参数、密码套件以及 MasterSecret。后续通信使用的所有密钥都是通过 MasterSecret 生成。 在握手阶段完成后，进入应用阶段。在应用阶段通信双方使用握手阶段协商好的密钥进行安全通信。&lt;/p&gt;
+&lt;h1 id=&#34;协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议&#34;&gt;#&lt;/a&gt; 协议&lt;/h1&gt;
+&lt;p&gt;TLS 包含几个子协议，比较常用的有记录协议、警报协议、握手协议、变更密码规范协议等。&lt;/p&gt;
+&lt;h2 id=&#34;记录协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#记录协议&#34;&gt;#&lt;/a&gt; 记录协议&lt;/h2&gt;
+&lt;p&gt;记录协议 (Record Protocol) 规定了 TLS 收发数据的基本单位记录 (record)。&lt;/p&gt;
+&lt;h2 id=&#34;警报协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#警报协议&#34;&gt;#&lt;/a&gt; 警报协议&lt;/h2&gt;
+&lt;p&gt;警报协议 (Alert Protocol) 用于提示协议交互过程出现错误。&lt;/p&gt;
+&lt;h2 id=&#34;握手协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#握手协议&#34;&gt;#&lt;/a&gt; 握手协议&lt;/h2&gt;
+&lt;p&gt;握手协议 (Handshake Protocol) 是 TLS 里最复杂的子协议，在握手过程中协商 TLS 版本号、随机数、密码套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。&lt;/p&gt;
+&lt;h2 id=&#34;变更密码规范协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#变更密码规范协议&#34;&gt;#&lt;/a&gt; 变更密码规范协议&lt;/h2&gt;
+&lt;p&gt;变更密码规范协议 (Change Cipher Spec Protocol) 是一个 “通知”，告诉对方，后续的数据都将使用加密保护。&lt;/p&gt;
+&lt;h1 id=&#34;交互过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互过程&#34;&gt;#&lt;/a&gt; 交互过程&lt;/h1&gt;
+&lt;h2 id=&#34;client-hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client-hello&#34;&gt;#&lt;/a&gt; Client Hello&lt;/h2&gt;
+&lt;p&gt;Client Hello 由客户端发送，内容包括客户端的一个 Unix 时间戳 (GMT Unix Time)、一些随机的字节 (Random Bytes)，还包括了客户端接受的算法类型 (Cipher Suites)。&lt;/p&gt;
+&lt;h2 id=&#34;server-hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-hello&#34;&gt;#&lt;/a&gt; Server Hello&lt;/h2&gt;
+&lt;p&gt;Server Hello 由服务端发送，内容包括服务端支持的算法类型、GMT Unix Time 以及 Random Bytes。&lt;/p&gt;
+&lt;h2 id=&#34;certificate&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#certificate&#34;&gt;#&lt;/a&gt; Certificate&lt;/h2&gt;
+&lt;p&gt;由服务端或者客户端发送，发送方会会将自己的数字证书发送给接收方，由接收方进行证书验证，如果不通过的话，接收方会中断握手的过程。一般跟在 Client / Server Hello 报文之后。&lt;/p&gt;
+&lt;h2 id=&#34;server-key-exchange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-key-exchange&#34;&gt;#&lt;/a&gt; Server Key Exchange&lt;/h2&gt;
+&lt;p&gt;由服务端发送，将自己的公钥参数传输给了客户端，一般也和 Server Hello 与 Certificate 在一个 TCP 报文中。&lt;/p&gt;
+&lt;h2 id=&#34;server-hello-done&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-hello-done&#34;&gt;#&lt;/a&gt; Server Hello Done&lt;/h2&gt;
+&lt;p&gt;服务端发送，一般也和 Server Hello、Certificate 和 Server Key Exchange 在一个 TCP 报文中。&lt;/p&gt;
+&lt;h2 id=&#34;client-key-exchange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client-key-exchange&#34;&gt;#&lt;/a&gt; Client Key Exchange&lt;/h2&gt;
+&lt;p&gt;客户端发送，向服务端发送自己的公钥参数，与服务端协商密钥。&lt;/p&gt;
+&lt;h2 id=&#34;change-cipher-spec&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#change-cipher-spec&#34;&gt;#&lt;/a&gt; Change Cipher Spec&lt;/h2&gt;
+&lt;p&gt;客户端或者服务端发送，紧跟着 Key Exchange 发送，代表自己生成了新的密钥，通知对方以后将更换密钥，使用新的密钥进行通信。&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-handshake-message&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#encrypted-handshake-message&#34;&gt;#&lt;/a&gt; Encrypted Handshake Message&lt;/h2&gt;
+&lt;p&gt;客户端或者服务端发送，紧跟着 Key Exchange 发送。进行测试，一方用自己的刚刚生成的密钥加密一段固定的消息发送给对方，如果密钥协商正确无误的话，对方可以正确解密。&lt;/p&gt;
+&lt;h2 id=&#34;new-session-ticket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#new-session-ticket&#34;&gt;#&lt;/a&gt; New Session Ticket&lt;/h2&gt;
+&lt;p&gt;服务端发送，表示发起会话，在一段时间之内 (超时时间到来之前)，双方都以刚刚交换的密钥进行通信。从这以后，加密通信正式开始。&lt;/p&gt;
+&lt;h2 id=&#34;application-data&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#application-data&#34;&gt;#&lt;/a&gt; Application Data&lt;/h2&gt;
+&lt;p&gt;使用密钥交换协议协商出来的密钥加密的应用层的数据。&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-alert&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#encrypted-alert&#34;&gt;#&lt;/a&gt; Encrypted Alert&lt;/h2&gt;
+&lt;p&gt;客户端或服务端发送，意味着加密通信因为某些原因需要中断，警告对方不要再发送敏感的数据。&lt;/p&gt;
+&lt;h1 id=&#34;版本更新内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#版本更新内容&#34;&gt;#&lt;/a&gt; 版本更新内容&lt;/h1&gt;
+&lt;h2 id=&#34;tls-13&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tls-13&#34;&gt;#&lt;/a&gt; TLS 1.3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引入了 PSK 作为新的密钥协商机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持 0-RTT 模式，以安全性降低为代价，在建立连接时节省了往返时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ServerHello 之后的所有握手消息采取了加密操作，可见明文减少&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不再允许对加密报文进行压缩、不再允许双方发起重协商&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DSA 证书不再允许在 TLS 1.3 中使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除不安全的密码算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RSA 密钥传输 - 不支持前向安全性&lt;/li&gt;
+&lt;li&gt;CBC 模式密码 - 易受 BEAST 和 Lucky 13 攻击&lt;/li&gt;
+&lt;li&gt;RC4 流密码 - 在 HTTPS 中使用并不安全&lt;/li&gt;
+&lt;li&gt;SHA-1 哈希函数 - 建议以 SHA-2 取而代之&lt;/li&gt;
+&lt;li&gt;任意 Diffie-Hellman 组 - CVE-2016-0701 漏洞&lt;/li&gt;
+&lt;li&gt;输出密码 - 易受 FREAK 和 LogJam 攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;子协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#子协议&#34;&gt;#&lt;/a&gt; 子协议&lt;/h1&gt;
+&lt;p&gt;SSL/TLS 协议有一个高度模块化的架构，分为很多子协议，主要是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Handshake 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括协商安全参数和密码套件、服务端身份认证 (客户端身份认证可选)、密钥交换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ChangeCipherSpec 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一条消息表明握手协议已经完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alert 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对握手协议中一些异常的错误提醒，分为 fatal 和 warning 两个级别，fatal 类型的错误会直接中断 SSL 链接，而 warning 级别的错误 SSL 链接仍可继续，只是会给出错误警告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Record 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括对消息的分段、压缩、消息认证和完整性保护、加密等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzIyNDY=&#34;&gt;RFC 2246 The TLS Protocol Version 1.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQzNDY=&#34;&gt;RFC 4346 The Transport Layer Security (TLS) Protocol Version 1.1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUyNDY=&#34;&gt;RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxMDE=&#34;&gt;RFC 6101 The Secure Sockets Layer (SSL) Protocol Version 3.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxNzY=&#34;&gt;RFC 6176 Prohibiting Secure Sockets Layer (SSL) Version 2.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc1Njg=&#34;&gt;RFC 7568 Deprecating Secure Sockets Layer Version 3.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0NDY=&#34;&gt;RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;document&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#document&#34;&gt;#&lt;/a&gt; Document&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVHJhbnNwb3J0X0xheWVyX1NlY3VyaXR5&#34;&gt;Wikipedia Transport Layer Security&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/protocol/</guid>
+            <title>网络协议</title>
+            <link>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/protocol/</link>
+            <category>计算机网络</category>
+            <category>网络协议</category>
+            <pubDate>Thu, 24 Nov 2022 11:16:26 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;udp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp协议&#34;&gt;#&lt;/a&gt; UDP 协议&lt;/h1&gt;
+&lt;h2 id=&#34;主要特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要特点&#34;&gt;#&lt;/a&gt; 主要特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;协议开销小、效率高。&lt;/li&gt;
+&lt;li&gt;UDP 是无连接的，即发送数据之前不需要建立连接。&lt;/li&gt;
+&lt;li&gt;UDP 使用尽最大努力交付，即不保证可靠交付。&lt;/li&gt;
+&lt;li&gt;UDP 没有拥塞控制。&lt;/li&gt;
+&lt;li&gt;UDP 支持一对一、一对多、多对一和多对多交互通信。&lt;/li&gt;
+&lt;li&gt;UDP 的首部开销小，只有 8 个字节。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;tcp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp协议&#34;&gt;#&lt;/a&gt; TCP 协议&lt;/h1&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由 RFC 793 定义。&lt;/p&gt;
+&lt;h2 id=&#34;三次握手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三次握手&#34;&gt;#&lt;/a&gt; 三次握手&lt;/h2&gt;
+&lt;p&gt;三次握手（Three-Way Handshake）是指建立一个 TCP 连接时，需要客户端和服务端总共发送 3 个包以确认连接的建立。&lt;/p&gt;
+&lt;p&gt;第一次握手客户端将标志位 SYN 置为 1，随机产生一个值 seq=s ，并将该数据包发送给服务端，客户端进入 SYN_SENT 状态，等待服务端确认。&lt;/p&gt;
+&lt;p&gt;第二次握手服务端收到数据包后由标志位 SYN=1 知道客户端请求建立连接，服务端将标志位 SYN 和 ACK 都置为 1，ack=s+1，随机产生一个值 seq=k ，并将该数据包发送给客户端以确认连接请求，服务端进入 SYN_RCVD 状态。&lt;/p&gt;
+&lt;p&gt;第三次握手客户端收到确认后，检查 ack 值是否为 s+1，ACK 标志位是否为 1，如果正确则将标志位 ACK 置为 1，ack=k+1，并将该数据包发送给服务端，服务端检查 ack 值是否为 k+1，ACK 标志位是否为 1，如果正确则连接建立成功，客户端和服务端进入 ESTABLISHED 状态，完成三次握手。&lt;/p&gt;
+&lt;h2 id=&#34;四次挥手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四次挥手&#34;&gt;#&lt;/a&gt; 四次挥手&lt;/h2&gt;
+&lt;p&gt;四次挥手（Four-Way Wavehand）指断开一个 TCP 连接时，需要客户端和服务端总共发送 4 个包以确认连接的断开。&lt;/p&gt;
+&lt;p&gt;第一次挥手客户端发送一个 FIN ，用来关闭客户端到服务端的数据传送，客户端进入 FIN_WAIT_1 状态。&lt;/p&gt;
+&lt;p&gt;第二次挥手服务端收到 FIN 后，发送一个 ACK 给客户端，确认序号为收到序号 + 1，服务端进入 CLOSE_WAIT 状态。&lt;/p&gt;
+&lt;p&gt;第三次挥手服务端发送一个 FIN ，用来关闭服务端到客户端的数据传送，服务端进入 LAST_ACK 状态。&lt;/p&gt;
+&lt;p&gt;第四次挥手客户端收到 FIN 后，客户端进入 TIME_WAIT 状态，接着发送一个 ACK 给服务端，确认序号为收到序号 + 1，服务端进入 CLOSED 状态，完成四次挥手。&lt;/p&gt;
+&lt;h2 id=&#34;拥塞控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制&#34;&gt;#&lt;/a&gt; 拥塞控制&lt;/h2&gt;
+&lt;p&gt;拥塞是指网络中报文数量过多，使得服务端来不及处理，以致引起这部分乃至整个网络性能下降的现象，严重时甚至会导致网络通信业务陷入停顿即出现死锁现象。&lt;/p&gt;
+&lt;p&gt;TCP 采用拥塞控制算法来减少或者避免拥塞现象的发生，TCP 的拥塞算法有过多种实现，包括 Tahoe、Reno、NewReno、Vegas、Hybla、BIC 、CUBIC、SACK、Westwood、PRR、BBR 等。&lt;/p&gt;
+&lt;h1 id=&#34;dhcp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dhcp协议&#34;&gt;#&lt;/a&gt; DHCP 协议&lt;/h1&gt;
+&lt;h2 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP) 是一个用于局域网的网络协议，位于 OSI 模型的应用层，使用 UDP 协议工作，主要用于自动分配 IP 地址给用户，方便管理员进行统一管理。&lt;/p&gt;
+&lt;p&gt;DHCP 服务器端使用 67/udp，客户端使用 68/udp。DHCP 运行分为四个基本过程，分别为请求 IP 租约、提供 IP 租约、选择 IP 租约和确认 IP 租约。客户端在获得了一个 IP 地址以后，就可以发送一个 ARP 请求来避免由于 DHCP 服务器地址池重叠而引发的 IP 冲突。&lt;/p&gt;
+&lt;h2 id=&#34;dhcp报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dhcp报文格式&#34;&gt;#&lt;/a&gt; DHCP 报文格式&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     op (1)    |   htype (1)   |   hlen (1)    |   hops (1)    |
++---------------+---------------+---------------+---------------+
+|                            xid (4)                            |
++-------------------------------+-------------------------------+
+|           secs (2)            |           flags (2)           |
++-------------------------------+-------------------------------+
+|                          ciaddr  (4)                          |
++---------------------------------------------------------------+
+|                          yiaddr  (4)                          |
++---------------------------------------------------------------+
+|                          siaddr  (4)                          |
++---------------------------------------------------------------+
+|                          giaddr  (4)                          |
++---------------------------------------------------------------+
+|                          chaddr  (16)                         |
++---------------------------------------------------------------+
+|                          sname   (64)                         |
++---------------------------------------------------------------+
+|                          file    (128)                        |
++---------------------------------------------------------------+
+|                          options (variable)                   |
++---------------------------------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;路由算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由算法&#34;&gt;#&lt;/a&gt; 路由算法&lt;/h1&gt;
+&lt;h2 id=&#34;简介-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-3&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;路由算法是用于找到一条从源路由器到目的路由器的最佳路径的算法。存在着多种路由算法，每种算法对网络和路由器资源的影响都不同；由于路由算法使用多种度量标准 (metric)，所以不同路由算法的最佳路径选择也有所不同。&lt;/p&gt;
+&lt;h2 id=&#34;路由选择算法的功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由选择算法的功能&#34;&gt;#&lt;/a&gt; 路由选择算法的功能&lt;/h2&gt;
+&lt;p&gt;源 / 宿对之间的路径选择，以及选定路由之后将报文传送到它们的目的地。&lt;/p&gt;
+&lt;p&gt;路由选择算法的要求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性：确保分组从源节点传送到目的节点&lt;/li&gt;
+&lt;li&gt;简单性：实现方便，软硬件开销小&lt;/li&gt;
+&lt;li&gt;自适应性：也称健壮性，算法能够适应业务量和网络拓扑的变化&lt;/li&gt;
+&lt;li&gt;稳定性：能长时间无故障运行&lt;/li&gt;
+&lt;li&gt;公平性：每个节点都有机会传送信息&lt;/li&gt;
+&lt;li&gt;最优性：尽量选取好的路由&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;自治系统autonomous-system&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自治系统autonomous-system&#34;&gt;#&lt;/a&gt; 自治系统（Autonomous System）&lt;/h2&gt;
+&lt;p&gt;经典定义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由一个组织管理的一整套路由器和网络。&lt;/li&gt;
+&lt;li&gt;使用一种 AS 内部的路由选择协议和共同的度量以确定分组在该 AS 内的路由。&lt;/li&gt;
+&lt;li&gt;使用一种 AS 之间的路由选择协议用以确定分组在 AS 之间的路由。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尽管一个 AS 使用了多种内部路由选择协议和度量，但对其他 AS 表现出的是一个单一的和一致的路由选择策略。&lt;/p&gt;
+&lt;h2 id=&#34;rip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rip&#34;&gt;#&lt;/a&gt; RIP&lt;/h2&gt;
+&lt;p&gt;路由信息协议 (Routing Information Protocol, RIP) 是一种基于距离 向量的路由选择协议。RIP 协议要求网络中的每一个路由器都要维护从它自己到自治系统内其他每一个目的网络的距离和下一跳路由器地址。&lt;/p&gt;
+&lt;h2 id=&#34;ospf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ospf&#34;&gt;#&lt;/a&gt; OSPF&lt;/h2&gt;
+&lt;p&gt;开放最短路径优先 (Open Shortest Path First，OSPF)，这个算法名为 “最短路径优先” 是因为使用了 Dijkstra 提出的最短路径算法 SPF，只是一个协议的名字，它并不表示其他的路由选择协议不是 “最短路径优先”。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/netw/</guid>
             <title>计算机网络基础</title>
-            <link>https://mobius-0.github.io/security/netw/</link>
+            <link>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/netw/</link>
             <category>计算机网络</category>
             <category>网络协议</category>
             <pubDate>Thu, 24 Nov 2022 10:45:44 +0800</pubDate>

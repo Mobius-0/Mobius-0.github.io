@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;策略配置&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-27T02:57:09.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/%E9%85%8D%E7%BD%AE%E4%B8%8E%E7%AD%96%E7%95%A5%E5%AE%89%E5%85%A8/</id>
+        <title>配置与策略安全</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/%E9%85%8D%E7%BD%AE%E4%B8%8E%E7%AD%96%E7%95%A5%E5%AE%89%E5%85%A8/"/>
+        <content type="html">&lt;h1 id=&#34;认证策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#认证策略&#34;&gt;#&lt;/a&gt; 认证策略&lt;/h1&gt;
+&lt;h2 id=&#34;密码策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码策略&#34;&gt;#&lt;/a&gt; 密码策略&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;未限制密码最低位数&lt;/li&gt;
+&lt;li&gt;未限制密码必须包含字符集&lt;/li&gt;
+&lt;li&gt;为常用密码&lt;/li&gt;
+&lt;li&gt;个人信息相关
+&lt;ul&gt;
+&lt;li&gt;手机号&lt;/li&gt;
+&lt;li&gt;生日&lt;/li&gt;
+&lt;li&gt;姓名&lt;/li&gt;
+&lt;li&gt;用户名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;未检测常见弱密码
+&lt;ul&gt;
+&lt;li&gt;已泄露的常用密码&lt;/li&gt;
+&lt;li&gt;键盘模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;加密实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加密实现&#34;&gt;#&lt;/a&gt; 加密实现&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在客户端存储私钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;权限配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限配置&#34;&gt;#&lt;/a&gt; 权限配置&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;运维人员权限粒度过大&lt;/li&gt;
+&lt;li&gt;客服人员权限粒度过大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;供应链安全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#供应链安全&#34;&gt;#&lt;/a&gt; 供应链安全&lt;/h1&gt;
+&lt;h2 id=&#34;三方认证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三方认证&#34;&gt;#&lt;/a&gt; 三方认证&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;利用被攻击的第三方服务账号登录其他平台账号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;三方库软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三方库软件&#34;&gt;#&lt;/a&gt; 三方库 / 软件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;公开漏洞后没有及时更新&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络安全" />
+        <category term="策略配置" />
+        <updated>2022-11-27T02:57:09.000Z</updated>
+    </entry>
+</feed>

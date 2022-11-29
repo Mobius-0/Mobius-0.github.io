@@ -1,0 +1,561 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="计算机网络,SSL,TLS" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/">
+
+
+
+  <title>
+SSL/TLS - 计算机网络与协议 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">SSL/TLS
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 16:42:19">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T16:42:19+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/27/h2snmUgZ7lTdFkj.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/MtlRJ8ajzQwO5gu.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/XkVn93hwIcpaQO6.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/bfuZReITBJPaij3.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/24/eFREUtlVwC3hfTA.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/e3McBIsWlNF8dHb.jpg"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Computer-Network-and-Protocol/" itemprop="item" rel="index" title="分类于 计算机网络与协议"><span itemprop="name">计算机网络与协议</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="简介"><a class="anchor" href="#简介">#</a> 简介</h1>
+<p>SSL 全称是 Secure Sockets Layer，安全套接字层，它是由网景公司 (Netscape) 在 1994 年时设计，主要用于 Web 的安全传输协议，目的是为网络通信提供机密性、认证性及数据完整性保障。如今，SSL 已经成为互联网保密通信的工业标准。</p>
+<p>SSL 最初的几个版本 (SSL 1.0、SSL2.0、SSL 3.0) 由网景公司设计和维护，从 3.1 版本开始，SSL 协议由因特网工程任务小组 (IETF) 正式接管，并更名为 TLS (Transport Layer Security)，发展至今已有 TLS 1.0、TLS1.1、TLS1.2、TLS1.3 这几个版本。</p>
+<p>如 TLS 名字所说，SSL/TLS 协议仅保障传输层安全。同时，由于协议自身特性 (数字证书机制)，SSL/TLS 不能被用于保护多跳 (multi-hop) 端到端通信，而只能保护点到点通信。</p>
+<p>SSL/TLS 协议能够提供的安全目标主要包括如下几个：</p>
+<ul>
+<li>认证性：借助数字证书认证服务端端和客户端身份，防止身份伪造</li>
+<li>机密性：借助加密防止第三方窃听</li>
+<li>完整性：借助消息认证码 (MAC) 保障数据完整性，防止消息篡改</li>
+<li>重放保护：通过使用隐式序列号防止重放攻击</li>
+</ul>
+<p>为了实现这些安全目标，SSL/TLS 协议被设计为一个两阶段协议，分为握手阶段和应用阶段：</p>
+<p>握手阶段也称协商阶段，在这一阶段，客户端和服务端端会认证对方身份 (依赖于 PKI 体系，利用数字证书进行身份认证)，并协商通信中使用的安全参数、密码套件以及 MasterSecret。后续通信使用的所有密钥都是通过 MasterSecret 生成。 在握手阶段完成后，进入应用阶段。在应用阶段通信双方使用握手阶段协商好的密钥进行安全通信。</p>
+<h1 id="协议"><a class="anchor" href="#协议">#</a> 协议</h1>
+<p>TLS 包含几个子协议，比较常用的有记录协议、警报协议、握手协议、变更密码规范协议等。</p>
+<h2 id="记录协议"><a class="anchor" href="#记录协议">#</a> 记录协议</h2>
+<p>记录协议 (Record Protocol) 规定了 TLS 收发数据的基本单位记录 (record)。</p>
+<h2 id="警报协议"><a class="anchor" href="#警报协议">#</a> 警报协议</h2>
+<p>警报协议 (Alert Protocol) 用于提示协议交互过程出现错误。</p>
+<h2 id="握手协议"><a class="anchor" href="#握手协议">#</a> 握手协议</h2>
+<p>握手协议 (Handshake Protocol) 是 TLS 里最复杂的子协议，在握手过程中协商 TLS 版本号、随机数、密码套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。</p>
+<h2 id="变更密码规范协议"><a class="anchor" href="#变更密码规范协议">#</a> 变更密码规范协议</h2>
+<p>变更密码规范协议 (Change Cipher Spec Protocol) 是一个 “通知”，告诉对方，后续的数据都将使用加密保护。</p>
+<h1 id="交互过程"><a class="anchor" href="#交互过程">#</a> 交互过程</h1>
+<h2 id="client-hello"><a class="anchor" href="#client-hello">#</a> Client Hello</h2>
+<p>Client Hello 由客户端发送，内容包括客户端的一个 Unix 时间戳 (GMT Unix Time)、一些随机的字节 (Random Bytes)，还包括了客户端接受的算法类型 (Cipher Suites)。</p>
+<h2 id="server-hello"><a class="anchor" href="#server-hello">#</a> Server Hello</h2>
+<p>Server Hello 由服务端发送，内容包括服务端支持的算法类型、GMT Unix Time 以及 Random Bytes。</p>
+<h2 id="certificate"><a class="anchor" href="#certificate">#</a> Certificate</h2>
+<p>由服务端或者客户端发送，发送方会会将自己的数字证书发送给接收方，由接收方进行证书验证，如果不通过的话，接收方会中断握手的过程。一般跟在 Client / Server Hello 报文之后。</p>
+<h2 id="server-key-exchange"><a class="anchor" href="#server-key-exchange">#</a> Server Key Exchange</h2>
+<p>由服务端发送，将自己的公钥参数传输给了客户端，一般也和 Server Hello 与 Certificate 在一个 TCP 报文中。</p>
+<h2 id="server-hello-done"><a class="anchor" href="#server-hello-done">#</a> Server Hello Done</h2>
+<p>服务端发送，一般也和 Server Hello、Certificate 和 Server Key Exchange 在一个 TCP 报文中。</p>
+<h2 id="client-key-exchange"><a class="anchor" href="#client-key-exchange">#</a> Client Key Exchange</h2>
+<p>客户端发送，向服务端发送自己的公钥参数，与服务端协商密钥。</p>
+<h2 id="change-cipher-spec"><a class="anchor" href="#change-cipher-spec">#</a> Change Cipher Spec</h2>
+<p>客户端或者服务端发送，紧跟着 Key Exchange 发送，代表自己生成了新的密钥，通知对方以后将更换密钥，使用新的密钥进行通信。</p>
+<h2 id="encrypted-handshake-message"><a class="anchor" href="#encrypted-handshake-message">#</a> Encrypted Handshake Message</h2>
+<p>客户端或者服务端发送，紧跟着 Key Exchange 发送。进行测试，一方用自己的刚刚生成的密钥加密一段固定的消息发送给对方，如果密钥协商正确无误的话，对方可以正确解密。</p>
+<h2 id="new-session-ticket"><a class="anchor" href="#new-session-ticket">#</a> New Session Ticket</h2>
+<p>服务端发送，表示发起会话，在一段时间之内 (超时时间到来之前)，双方都以刚刚交换的密钥进行通信。从这以后，加密通信正式开始。</p>
+<h2 id="application-data"><a class="anchor" href="#application-data">#</a> Application Data</h2>
+<p>使用密钥交换协议协商出来的密钥加密的应用层的数据。</p>
+<h2 id="encrypted-alert"><a class="anchor" href="#encrypted-alert">#</a> Encrypted Alert</h2>
+<p>客户端或服务端发送，意味着加密通信因为某些原因需要中断，警告对方不要再发送敏感的数据。</p>
+<h1 id="版本更新内容"><a class="anchor" href="#版本更新内容">#</a> 版本更新内容</h1>
+<h2 id="tls-13"><a class="anchor" href="#tls-13">#</a> TLS 1.3</h2>
+<ul>
+<li>
+<p>引入了 PSK 作为新的密钥协商机制</p>
+</li>
+<li>
+<p>支持 0-RTT 模式，以安全性降低为代价，在建立连接时节省了往返时间</p>
+</li>
+<li>
+<p>ServerHello 之后的所有握手消息采取了加密操作，可见明文减少</p>
+</li>
+<li>
+<p>不再允许对加密报文进行压缩、不再允许双方发起重协商</p>
+</li>
+<li>
+<p>DSA 证书不再允许在 TLS 1.3 中使用</p>
+</li>
+<li>
+<p>删除不安全的密码算法</p>
+<ul>
+<li>RSA 密钥传输 - 不支持前向安全性</li>
+<li>CBC 模式密码 - 易受 BEAST 和 Lucky 13 攻击</li>
+<li>RC4 流密码 - 在 HTTPS 中使用并不安全</li>
+<li>SHA-1 哈希函数 - 建议以 SHA-2 取而代之</li>
+<li>任意 Diffie-Hellman 组 - CVE-2016-0701 漏洞</li>
+<li>输出密码 - 易受 FREAK 和 LogJam 攻击</li>
+</ul>
+</li>
+</ul>
+<h1 id="子协议"><a class="anchor" href="#子协议">#</a> 子协议</h1>
+<p>SSL/TLS 协议有一个高度模块化的架构，分为很多子协议，主要是：</p>
+<ul>
+<li>
+<p>Handshake 协议</p>
+<ul>
+<li>包括协商安全参数和密码套件、服务端身份认证 (客户端身份认证可选)、密钥交换</li>
+</ul>
+</li>
+<li>
+<p>ChangeCipherSpec 协议</p>
+<ul>
+<li>一条消息表明握手协议已经完成</li>
+</ul>
+</li>
+<li>
+<p>Alert 协议</p>
+<ul>
+<li>对握手协议中一些异常的错误提醒，分为 fatal 和 warning 两个级别，fatal 类型的错误会直接中断 SSL 链接，而 warning 级别的错误 SSL 链接仍可继续，只是会给出错误警告</li>
+</ul>
+</li>
+<li>
+<p>Record 协议</p>
+<ul>
+<li>包括对消息的分段、压缩、消息认证和完整性保护、加密等</li>
+</ul>
+</li>
+</ul>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<h2 id="rfc"><a class="anchor" href="#rfc">#</a> RFC</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzIyNDY=">RFC 2246 The TLS Protocol Version 1.0</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQzNDY=">RFC 4346 The Transport Layer Security (TLS) Protocol Version 1.1</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUyNDY=">RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxMDE=">RFC 6101 The Secure Sockets Layer (SSL) Protocol Version 3.0</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxNzY=">RFC 6176 Prohibiting Secure Sockets Layer (SSL) Version 2.0</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc1Njg=">RFC 7568 Deprecating Secure Sockets Layer Version 3.0</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0NDY=">RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3</span></li>
+</ul>
+<h2 id="document"><a class="anchor" href="#document">#</a> Document</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVHJhbnNwb3J0X0xheWVyX1NlY3VyaXR5">Wikipedia Transport Layer Security</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"><i class="ic i-tag"></i> 计算机网络</a>
+          <a href="/tags/SSL/" rel="tag"><i class="ic i-tag"></i> SSL</a>
+          <a href="/tags/TLS/" rel="tag"><i class="ic i-tag"></i> TLS</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-26 16:55:07" itemprop="dateModified" datetime="2022-11-26T16:55:07+08:00">2022-11-26</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/" title="SSL&#x2F;TLS">https://mobius-0.github.io/security/WebNote/Computer Network and Protocol/SSL、TLS/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;27&#x2F;mhkPB2Do5UAej3y.jpg" title="XSS">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 常见漏洞攻防</span>
+  <h3>XSS</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;24&#x2F;nxardNToLgEz5qh.png" title="IPSec">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机网络与协议</span>
+  <h3>IPSec</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.</span> <span class="toc-text"> 协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.1.</span> <span class="toc-text"> 记录协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AD%A6%E6%8A%A5%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.2.</span> <span class="toc-text"> 警报协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%A1%E6%89%8B%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.3.</span> <span class="toc-text"> 握手协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4%E5%AF%86%E7%A0%81%E8%A7%84%E8%8C%83%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.4.</span> <span class="toc-text"> 变更密码规范协议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text"> 交互过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#client-hello"><span class="toc-number">3.1.</span> <span class="toc-text"> Client Hello</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server-hello"><span class="toc-number">3.2.</span> <span class="toc-text"> Server Hello</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#certificate"><span class="toc-number">3.3.</span> <span class="toc-text"> Certificate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server-key-exchange"><span class="toc-number">3.4.</span> <span class="toc-text"> Server Key Exchange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server-hello-done"><span class="toc-number">3.5.</span> <span class="toc-text"> Server Hello Done</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#client-key-exchange"><span class="toc-number">3.6.</span> <span class="toc-text"> Client Key Exchange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#change-cipher-spec"><span class="toc-number">3.7.</span> <span class="toc-text"> Change Cipher Spec</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#encrypted-handshake-message"><span class="toc-number">3.8.</span> <span class="toc-text"> Encrypted Handshake Message</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-session-ticket"><span class="toc-number">3.9.</span> <span class="toc-text"> New Session Ticket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#application-data"><span class="toc-number">3.10.</span> <span class="toc-text"> Application Data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#encrypted-alert"><span class="toc-number">3.11.</span> <span class="toc-text"> Encrypted Alert</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9"><span class="toc-number">4.</span> <span class="toc-text"> 版本更新内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tls-13"><span class="toc-number">4.1.</span> <span class="toc-text"> TLS 1.3</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%90%E5%8D%8F%E8%AE%AE"><span class="toc-number">5.</span> <span class="toc-text"> 子协议</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text"> 参考链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#rfc"><span class="toc-number">6.1.</span> <span class="toc-text"> RFC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#document"><span class="toc-number">6.2.</span> <span class="toc-text"> Document</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/netw/" rel="bookmark" title="计算机网络基础">计算机网络基础</a></li><li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/protocol/" rel="bookmark" title="网络协议">网络协议</a></li><li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/DNS/" rel="bookmark" title="域名系统">域名系统</a></li><li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/HTTP/" rel="bookmark" title="HTTP协议簇">HTTP协议簇</a></li><li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/mail/" rel="bookmark" title="邮件协议簇">邮件协议簇</a></li><li class="active"><a href="/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/" rel="bookmark" title="SSL/TLS">SSL/TLS</a></li><li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/" rel="bookmark" title="IPSec">IPSec</a></li><li><a href="/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/" rel="bookmark" title="WiFi">WiFi</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">52</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">75</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">174k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:31</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Computer Network and Protocol/SSL、TLS/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;tls&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T08:42:19.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/</id>
+        <title>SSL/TLS</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;SSL 全称是 Secure Sockets Layer，安全套接字层，它是由网景公司 (Netscape) 在 1994 年时设计，主要用于 Web 的安全传输协议，目的是为网络通信提供机密性、认证性及数据完整性保障。如今，SSL 已经成为互联网保密通信的工业标准。&lt;/p&gt;
+&lt;p&gt;SSL 最初的几个版本 (SSL 1.0、SSL2.0、SSL 3.0) 由网景公司设计和维护，从 3.1 版本开始，SSL 协议由因特网工程任务小组 (IETF) 正式接管，并更名为 TLS (Transport Layer Security)，发展至今已有 TLS 1.0、TLS1.1、TLS1.2、TLS1.3 这几个版本。&lt;/p&gt;
+&lt;p&gt;如 TLS 名字所说，SSL/TLS 协议仅保障传输层安全。同时，由于协议自身特性 (数字证书机制)，SSL/TLS 不能被用于保护多跳 (multi-hop) 端到端通信，而只能保护点到点通信。&lt;/p&gt;
+&lt;p&gt;SSL/TLS 协议能够提供的安全目标主要包括如下几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;认证性：借助数字证书认证服务端端和客户端身份，防止身份伪造&lt;/li&gt;
+&lt;li&gt;机密性：借助加密防止第三方窃听&lt;/li&gt;
+&lt;li&gt;完整性：借助消息认证码 (MAC) 保障数据完整性，防止消息篡改&lt;/li&gt;
+&lt;li&gt;重放保护：通过使用隐式序列号防止重放攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为了实现这些安全目标，SSL/TLS 协议被设计为一个两阶段协议，分为握手阶段和应用阶段：&lt;/p&gt;
+&lt;p&gt;握手阶段也称协商阶段，在这一阶段，客户端和服务端端会认证对方身份 (依赖于 PKI 体系，利用数字证书进行身份认证)，并协商通信中使用的安全参数、密码套件以及 MasterSecret。后续通信使用的所有密钥都是通过 MasterSecret 生成。 在握手阶段完成后，进入应用阶段。在应用阶段通信双方使用握手阶段协商好的密钥进行安全通信。&lt;/p&gt;
+&lt;h1 id=&#34;协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议&#34;&gt;#&lt;/a&gt; 协议&lt;/h1&gt;
+&lt;p&gt;TLS 包含几个子协议，比较常用的有记录协议、警报协议、握手协议、变更密码规范协议等。&lt;/p&gt;
+&lt;h2 id=&#34;记录协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#记录协议&#34;&gt;#&lt;/a&gt; 记录协议&lt;/h2&gt;
+&lt;p&gt;记录协议 (Record Protocol) 规定了 TLS 收发数据的基本单位记录 (record)。&lt;/p&gt;
+&lt;h2 id=&#34;警报协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#警报协议&#34;&gt;#&lt;/a&gt; 警报协议&lt;/h2&gt;
+&lt;p&gt;警报协议 (Alert Protocol) 用于提示协议交互过程出现错误。&lt;/p&gt;
+&lt;h2 id=&#34;握手协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#握手协议&#34;&gt;#&lt;/a&gt; 握手协议&lt;/h2&gt;
+&lt;p&gt;握手协议 (Handshake Protocol) 是 TLS 里最复杂的子协议，在握手过程中协商 TLS 版本号、随机数、密码套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。&lt;/p&gt;
+&lt;h2 id=&#34;变更密码规范协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#变更密码规范协议&#34;&gt;#&lt;/a&gt; 变更密码规范协议&lt;/h2&gt;
+&lt;p&gt;变更密码规范协议 (Change Cipher Spec Protocol) 是一个 “通知”，告诉对方，后续的数据都将使用加密保护。&lt;/p&gt;
+&lt;h1 id=&#34;交互过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互过程&#34;&gt;#&lt;/a&gt; 交互过程&lt;/h1&gt;
+&lt;h2 id=&#34;client-hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client-hello&#34;&gt;#&lt;/a&gt; Client Hello&lt;/h2&gt;
+&lt;p&gt;Client Hello 由客户端发送，内容包括客户端的一个 Unix 时间戳 (GMT Unix Time)、一些随机的字节 (Random Bytes)，还包括了客户端接受的算法类型 (Cipher Suites)。&lt;/p&gt;
+&lt;h2 id=&#34;server-hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-hello&#34;&gt;#&lt;/a&gt; Server Hello&lt;/h2&gt;
+&lt;p&gt;Server Hello 由服务端发送，内容包括服务端支持的算法类型、GMT Unix Time 以及 Random Bytes。&lt;/p&gt;
+&lt;h2 id=&#34;certificate&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#certificate&#34;&gt;#&lt;/a&gt; Certificate&lt;/h2&gt;
+&lt;p&gt;由服务端或者客户端发送，发送方会会将自己的数字证书发送给接收方，由接收方进行证书验证，如果不通过的话，接收方会中断握手的过程。一般跟在 Client / Server Hello 报文之后。&lt;/p&gt;
+&lt;h2 id=&#34;server-key-exchange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-key-exchange&#34;&gt;#&lt;/a&gt; Server Key Exchange&lt;/h2&gt;
+&lt;p&gt;由服务端发送，将自己的公钥参数传输给了客户端，一般也和 Server Hello 与 Certificate 在一个 TCP 报文中。&lt;/p&gt;
+&lt;h2 id=&#34;server-hello-done&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-hello-done&#34;&gt;#&lt;/a&gt; Server Hello Done&lt;/h2&gt;
+&lt;p&gt;服务端发送，一般也和 Server Hello、Certificate 和 Server Key Exchange 在一个 TCP 报文中。&lt;/p&gt;
+&lt;h2 id=&#34;client-key-exchange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client-key-exchange&#34;&gt;#&lt;/a&gt; Client Key Exchange&lt;/h2&gt;
+&lt;p&gt;客户端发送，向服务端发送自己的公钥参数，与服务端协商密钥。&lt;/p&gt;
+&lt;h2 id=&#34;change-cipher-spec&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#change-cipher-spec&#34;&gt;#&lt;/a&gt; Change Cipher Spec&lt;/h2&gt;
+&lt;p&gt;客户端或者服务端发送，紧跟着 Key Exchange 发送，代表自己生成了新的密钥，通知对方以后将更换密钥，使用新的密钥进行通信。&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-handshake-message&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#encrypted-handshake-message&#34;&gt;#&lt;/a&gt; Encrypted Handshake Message&lt;/h2&gt;
+&lt;p&gt;客户端或者服务端发送，紧跟着 Key Exchange 发送。进行测试，一方用自己的刚刚生成的密钥加密一段固定的消息发送给对方，如果密钥协商正确无误的话，对方可以正确解密。&lt;/p&gt;
+&lt;h2 id=&#34;new-session-ticket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#new-session-ticket&#34;&gt;#&lt;/a&gt; New Session Ticket&lt;/h2&gt;
+&lt;p&gt;服务端发送，表示发起会话，在一段时间之内 (超时时间到来之前)，双方都以刚刚交换的密钥进行通信。从这以后，加密通信正式开始。&lt;/p&gt;
+&lt;h2 id=&#34;application-data&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#application-data&#34;&gt;#&lt;/a&gt; Application Data&lt;/h2&gt;
+&lt;p&gt;使用密钥交换协议协商出来的密钥加密的应用层的数据。&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-alert&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#encrypted-alert&#34;&gt;#&lt;/a&gt; Encrypted Alert&lt;/h2&gt;
+&lt;p&gt;客户端或服务端发送，意味着加密通信因为某些原因需要中断，警告对方不要再发送敏感的数据。&lt;/p&gt;
+&lt;h1 id=&#34;版本更新内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#版本更新内容&#34;&gt;#&lt;/a&gt; 版本更新内容&lt;/h1&gt;
+&lt;h2 id=&#34;tls-13&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tls-13&#34;&gt;#&lt;/a&gt; TLS 1.3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引入了 PSK 作为新的密钥协商机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持 0-RTT 模式，以安全性降低为代价，在建立连接时节省了往返时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ServerHello 之后的所有握手消息采取了加密操作，可见明文减少&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不再允许对加密报文进行压缩、不再允许双方发起重协商&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DSA 证书不再允许在 TLS 1.3 中使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除不安全的密码算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RSA 密钥传输 - 不支持前向安全性&lt;/li&gt;
+&lt;li&gt;CBC 模式密码 - 易受 BEAST 和 Lucky 13 攻击&lt;/li&gt;
+&lt;li&gt;RC4 流密码 - 在 HTTPS 中使用并不安全&lt;/li&gt;
+&lt;li&gt;SHA-1 哈希函数 - 建议以 SHA-2 取而代之&lt;/li&gt;
+&lt;li&gt;任意 Diffie-Hellman 组 - CVE-2016-0701 漏洞&lt;/li&gt;
+&lt;li&gt;输出密码 - 易受 FREAK 和 LogJam 攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;子协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#子协议&#34;&gt;#&lt;/a&gt; 子协议&lt;/h1&gt;
+&lt;p&gt;SSL/TLS 协议有一个高度模块化的架构，分为很多子协议，主要是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Handshake 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括协商安全参数和密码套件、服务端身份认证 (客户端身份认证可选)、密钥交换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ChangeCipherSpec 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一条消息表明握手协议已经完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alert 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对握手协议中一些异常的错误提醒，分为 fatal 和 warning 两个级别，fatal 类型的错误会直接中断 SSL 链接，而 warning 级别的错误 SSL 链接仍可继续，只是会给出错误警告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Record 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括对消息的分段、压缩、消息认证和完整性保护、加密等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzIyNDY=&#34;&gt;RFC 2246 The TLS Protocol Version 1.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQzNDY=&#34;&gt;RFC 4346 The Transport Layer Security (TLS) Protocol Version 1.1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUyNDY=&#34;&gt;RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxMDE=&#34;&gt;RFC 6101 The Secure Sockets Layer (SSL) Protocol Version 3.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxNzY=&#34;&gt;RFC 6176 Prohibiting Secure Sockets Layer (SSL) Version 2.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc1Njg=&#34;&gt;RFC 7568 Deprecating Secure Sockets Layer Version 3.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0NDY=&#34;&gt;RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;document&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#document&#34;&gt;#&lt;/a&gt; Document&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVHJhbnNwb3J0X0xheWVyX1NlY3VyaXR5&#34;&gt;Wikipedia Transport Layer Security&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="SSL" />
+        <category term="TLS" />
+        <updated>2022-11-26T08:42:19.000Z</updated>
+    </entry>
+</feed>

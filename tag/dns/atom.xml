@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;dns&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-25T02:06:09.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/DNS/</id>
+        <title>域名系统</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/DNS/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;DNS 是一个简单的请求 - 响应协议，是将域名和 IP 地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS 使用 TCP 和 UDP 协议的 53 端口。&lt;/p&gt;
+&lt;h1 id=&#34;请求响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请求响应&#34;&gt;#&lt;/a&gt; 请求响应&lt;/h1&gt;
+&lt;h2 id=&#34;dns记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns记录&#34;&gt;#&lt;/a&gt; DNS 记录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回域名对应的 IPv4 地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AAAA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;域名服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回该域名由哪台域名服务器解析&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PTR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;反向记录&lt;/li&gt;
+&lt;li&gt;从 IP 地址到域名的记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MX&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电子邮件交换记录&lt;/li&gt;
+&lt;li&gt;记录邮件域名对应的 IP 地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;响应码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应码&#34;&gt;#&lt;/a&gt; 响应码&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NOERROR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;No error condition
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;FORMERR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Format error - The name server was unable to interpret the query
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;SERVFAIL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Server failure - The name server was unable to process this query due to a problem with the name server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;NXDOMAIN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;this code signifies that the domain name referenced in the query does not exist
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;NOTIMP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Not Implemented - The name server does not support the requested kind of query
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;REFUSED&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Refused - The name server refuses to perform the specified operation for policy reasons
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;NODATA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;A pseudo RCODE which indicates that the name is valid, for the given class, but [there] are no records of the given type A NODATA response has to be inferred from the answer.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;域名系统工作原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名系统工作原理&#34;&gt;#&lt;/a&gt; 域名系统工作原理&lt;/h1&gt;
+&lt;h2 id=&#34;解析过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解析过程&#34;&gt;#&lt;/a&gt; 解析过程&lt;/h2&gt;
+&lt;p&gt;DNS 解析过程是递归查询的，具体过程如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户要访问域名 www.example.com 时，先查看本机 hosts 是否有记录或者本机是否有 DNS 缓存，如果有，直接返回结果，否则向递归服务器查询该域名的 IP 地址&lt;/li&gt;
+&lt;li&gt;递归缓存为空时，首先向根服务器查询 com 顶级域的 IP 地址&lt;/li&gt;
+&lt;li&gt;根服务器告知递归服务器 com 顶级域名服务器的 IP 地址&lt;/li&gt;
+&lt;li&gt;递归向 com 顶级域名服务器查询负责 example.com 的权威服务器的 IP&lt;/li&gt;
+&lt;li&gt;com 顶级域名服务器返回相应的 IP 地址&lt;/li&gt;
+&lt;li&gt;递归向 example.com 的权威服务器查询 www.example.com 的地址记录&lt;/li&gt;
+&lt;li&gt;权威服务器告知 www.example.com 的地址记录&lt;/li&gt;
+&lt;li&gt;递归服务器将查询结果返回客户端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;域传送&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域传送&#34;&gt;#&lt;/a&gt; 域传送&lt;/h2&gt;
+&lt;p&gt;DNS 服务器可以分为主服务器、备份服务器和缓存服务器。域传送是指备份服务器从主服务器拷贝数据，并使用得到的数据更新自身数据库。域传送是在主备服务器之间同步数据库的机制。&lt;/p&gt;
+&lt;h1 id=&#34;服务器类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器类型&#34;&gt;#&lt;/a&gt; 服务器类型&lt;/h1&gt;
+&lt;h2 id=&#34;根服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#根服务器&#34;&gt;#&lt;/a&gt; 根服务器&lt;/h2&gt;
+&lt;p&gt;根服务器是 DNS 的核心，负责互联网顶级域名的解析，用于维护域的权威信息，并将 DNS 查询引导到相应的域名服务器。&lt;/p&gt;
+&lt;p&gt;根服务器在域名树中代表最顶级的  &lt;code&gt;.&lt;/code&gt;  域， 一般省略。&lt;/p&gt;
+&lt;p&gt;13 台 IPv4 根服务器的域名标号为 a 到 m，即 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Eucm9vdC1zZXJ2ZXJzLm9yZw==&#34;&gt;a.root-servers.org&lt;/span&gt; 到 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL20ucm9vdC1zZXJ2ZXJzLm9yZw==&#34;&gt;m.root-servers.org&lt;/span&gt;，所有服务器存储的数据相同，仅包含 ICANN 批准的 TLD 域名权威信息。&lt;/p&gt;
+&lt;h2 id=&#34;权威服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权威服务器&#34;&gt;#&lt;/a&gt; 权威服务器&lt;/h2&gt;
+&lt;p&gt;权威服务器上存储域名 Zone 文件，维护域内域名的权威信息，递归服务器可以从权威服务器获得 DNS 查询的资源记录。&lt;/p&gt;
+&lt;p&gt;权威服务器需要在所承载的域名所属的 TLD 管理局注册，同一个权威服务器可以承载不同 TLD 域名，同一个域也可以有多个权威服务器。&lt;/p&gt;
+&lt;h2 id=&#34;递归服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归服务器&#34;&gt;#&lt;/a&gt; 递归服务器&lt;/h2&gt;
+&lt;p&gt;递归服务器负责接收用户的查询请求，进行递归查询并响应用户查询请求。在初始时递归服务器仅有记录了根域名的 Hint 文件。&lt;/p&gt;
+&lt;h1 id=&#34;加密方案&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加密方案&#34;&gt;#&lt;/a&gt; 加密方案&lt;/h1&gt;
+&lt;p&gt;作为主流的防御方案，DNS 加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-over-HTTPS (DoH)、DNS-over-QUIC 以及 DNSCrypt。&lt;/p&gt;
+&lt;h2 id=&#34;dot&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dot&#34;&gt;#&lt;/a&gt; DoT&lt;/h2&gt;
+&lt;p&gt;DoT 方案在 2016 年发表于 RFC7858，使用 853 端口。主要思想是 Client 和 Server 通过 TCP 协议建立 TLS 会话后再进行 DNS 传输，Client 通过 SSL 证书验证服务器身份。&lt;/p&gt;
+&lt;h2 id=&#34;dns-over-dtls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns-over-dtls&#34;&gt;#&lt;/a&gt; DNS-over-DTLS&lt;/h2&gt;
+&lt;p&gt;DNS-over-DTLS 和 DoT 类似，区别在于使用 UDP 协议而不是 TCP 协议。&lt;/p&gt;
+&lt;h2 id=&#34;doh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#doh&#34;&gt;#&lt;/a&gt; DoH&lt;/h2&gt;
+&lt;p&gt;DoH 方案在发表 RFC8484，使用  &lt;code&gt;https://dns.example.com/dns-query&amp;#123;?dns&amp;#125;&lt;/code&gt;  来查询服务器的 IP，复用 https 的 443 端口，流量特征比较小。DoH 会对 DNS 服务器进行加密认证，不提供 fallback 选项。目前 Cloudflare、Google 等服务商对 DoH 提供了支持。&lt;/p&gt;
+&lt;h2 id=&#34;dns-over-quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns-over-quic&#34;&gt;#&lt;/a&gt; DNS-over-QUIC&lt;/h2&gt;
+&lt;p&gt;DNS-over-QUIC 安全特性和 DoT 类似，但是性能更高，目前没有合适的软件实现。&lt;/p&gt;
+&lt;h2 id=&#34;dnscrypt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dnscrypt&#34;&gt;#&lt;/a&gt; DNSCrypt&lt;/h2&gt;
+&lt;p&gt;DNSCrypt 使用 X25519-XSalsa20Poly1305 而非标准的 TLS，且 DNSCrypt 的 Client 需要额外的软件，Server 需要的专门的证书。&lt;/p&gt;
+&lt;h1 id=&#34;dns利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns利用&#34;&gt;#&lt;/a&gt; DNS 利用&lt;/h1&gt;
+&lt;h2 id=&#34;dga&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dga&#34;&gt;#&lt;/a&gt; DGA&lt;/h2&gt;
+&lt;p&gt;DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字符来生成 C&amp;amp;C 域名，从而逃避域名黑名单检测的技术手段，常见于 botnet 中。一般来说，一个 DGA 域名的存活时间约在 1-7 天左右。&lt;/p&gt;
+&lt;p&gt;通信时，客户端和服务端都运行同一套 DGA 算法，生成相同的备选域名列表，当需要发动攻击的时候，选择其中少量进行注册，便可以建立通信，并且可以对注册的域名应用速变 IP 技术，快速变换 IP，从而域名和 IP 都可以进行快速变化。&lt;/p&gt;
+&lt;p&gt;DGA 域名有多种生成方式，根据种子类型可以分为确定性和不确定性的生成。不确定性的种子可能会选用当天的一些即时数据，如汇率信息等。&lt;/p&gt;
+&lt;h2 id=&#34;dns隧道&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns隧道&#34;&gt;#&lt;/a&gt; DNS 隧道&lt;/h2&gt;
+&lt;p&gt;DNS 隧道工具将进入隧道的其他协议流量封装到 DNS 协议内，在隧道上传输。这些数据包出隧道时进行解封装，还原数据。&lt;/p&gt;
+&lt;h1 id=&#34;rdap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdap&#34;&gt;#&lt;/a&gt; RDAP&lt;/h1&gt;
+&lt;p&gt;RDAP (Registration Data Access Protocol) 协议是 Whois 协议的后继，和 Whois 协议类似，RDAP 协议提供了域名、自治系统、IP 地址的信息查询。&lt;/p&gt;
+&lt;h1 id=&#34;相关漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关漏洞&#34;&gt;#&lt;/a&gt; 相关漏洞&lt;/h1&gt;
+&lt;h2 id=&#34;dns劫持&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns劫持&#34;&gt;#&lt;/a&gt; DNS 劫持&lt;/h2&gt;
+&lt;p&gt;DNS 劫持有多种方式，比较早期的攻击方式是通过攻击域名解析服务器，或是伪造 DNS 响应的方法，来将域名解析到恶意的 IP 地址。&lt;/p&gt;
+&lt;p&gt;随着互联网应用的不断发展，出现了基于废弃记录的劫持方式。这种方式发生的场景是次级域名的解析记录指向第三方资源，而第三方资源被释放后，解析记录并没有取消，在这种场景下，可以对应申请第三方资源，以获取控制解析记录的能力。&lt;/p&gt;
+&lt;h2 id=&#34;拒绝服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拒绝服务&#34;&gt;#&lt;/a&gt; 拒绝服务&lt;/h2&gt;
+&lt;p&gt;DNS 服务通常会开启 UDP 端口，当 DNS 服务器拥有大量二级域 NS 记录时，通过 DNS 的 UDP 反射攻击可以实现高倍的拒绝服务。&lt;/p&gt;
+&lt;h1 id=&#34;相关机构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关机构&#34;&gt;#&lt;/a&gt; 相关机构&lt;/h1&gt;
+&lt;h2 id=&#34;icann&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#icann&#34;&gt;#&lt;/a&gt; ICANN&lt;/h2&gt;
+&lt;p&gt;互联网名称与数字地址分配机构 (Internet Corporation for Assigned Names and Numbers, ICANN) 创建于 1998 年 9 月 18 日，职能包括管理域名和 IP 地址的分配等与互联网相关的任务。&lt;/p&gt;
+&lt;h2 id=&#34;iana&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#iana&#34;&gt;#&lt;/a&gt; IANA&lt;/h2&gt;
+&lt;p&gt;互联网号码分配局 (Internet Assigned Numbers Authority, IANA) ，是一家互联网地址指派机构，管理国际互联网中使用的 IP 地址、域名和许多其它参数的机构。&lt;/p&gt;
+&lt;h1 id=&#34;术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#术语&#34;&gt;#&lt;/a&gt; 术语&lt;/h1&gt;
+&lt;h2 id=&#34;mdns&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mdns&#34;&gt;#&lt;/a&gt; mDNS&lt;/h2&gt;
+&lt;p&gt;Multicast DNS (mDNS)，多播 DNS，使用 5353 端口，组播地址为  &lt;code&gt;224.0.0.251&lt;/code&gt;  或  &lt;code&gt;[FF02::FB]&lt;/code&gt;  。在一个没有常规 DNS 服务器的小型网络内可以使用 mDNS 来实现类似 DNS 的编程接口、包格式和操作语义。mDNS 协议的报文与 DNS 的报文结构相同，但有些字段对于 mDNS 来说有新的含义。&lt;/p&gt;
+&lt;p&gt;启动 mDNS 的主机会在进入局域网后向所有主机组播消息，包含主机名、IP 等信息，其他拥有相应服务的主机也会响应含有主机名和 IP 的信息。&lt;/p&gt;
+&lt;p&gt;mDNS 的域名是用  &lt;code&gt;.local&lt;/code&gt;  和普通域名区分开的。&lt;/p&gt;
+&lt;h2 id=&#34;fqdn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fqdn&#34;&gt;#&lt;/a&gt; FQDN&lt;/h2&gt;
+&lt;p&gt;FQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如  &lt;code&gt;www.example.com.&lt;/code&gt;  。&lt;/p&gt;
+&lt;h2 id=&#34;tld&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tld&#34;&gt;#&lt;/a&gt; TLD&lt;/h2&gt;
+&lt;p&gt;Top-Level Domain (TLD) 是属于根域的一个域，例如  &lt;code&gt;com&lt;/code&gt;  或  &lt;code&gt;jp&lt;/code&gt;  。&lt;/p&gt;
+&lt;p&gt;TLD 一般可以分为 Country Code Top-Level Domains (ccTLDs) 、Generic Top-Level Domains (gTLDs) 以及其它。&lt;/p&gt;
+&lt;h2 id=&#34;idn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#idn&#34;&gt;#&lt;/a&gt; IDN&lt;/h2&gt;
+&lt;p&gt;Internationalized Domain Names for Applications (IDNA) 是为了处理非 ASCII 字符的情况。&lt;/p&gt;
+&lt;h2 id=&#34;cname&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cname&#34;&gt;#&lt;/a&gt; CNAME&lt;/h2&gt;
+&lt;p&gt;CNAME 即 Canonical name，又称 alias，将域名指向另一个域名。&lt;/p&gt;
+&lt;h2 id=&#34;ttl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ttl&#34;&gt;#&lt;/a&gt; TTL&lt;/h2&gt;
+&lt;p&gt;Time To Live，无符号整数，记录 DNS 记录过期的时间，最小是 0，最大是 2147483647 (2^31 - 1)。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucmZjLWVkaXRvci5vcmcvcmZjL3JmYzkyMA==&#34;&gt;RFC 920 Domain Requirements&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzEwMzQ=&#34;&gt;RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzEwMzU=&#34;&gt;RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzExMjM=&#34;&gt;RFC 1123 Requirements for Internet Hosts -- Application and Support&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI1MzU=&#34;&gt;RFC 2535 Domain Name System Security Extensions&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI5MzA=&#34;&gt;RFC 2930 Secret Key Establishment for DNS (TKEY RR)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI5MzE=&#34;&gt;RFC 2931 DNS Request and Transaction Signatures ( SIG(0)s )&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM1OTY=&#34;&gt;RFC 3596 Legacy Resolver Compatibility for Delegation Signer (DS)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM3NTU=&#34;&gt;RFC 3755 DNS Extensions to Support IP Version 6&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUwMDE=&#34;&gt;RFC 5001 Automated Updates of DNS Security (DNSSEC) Trust Anchors&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzU5MzY=&#34;&gt;RFC 5936 DNS Zone Transfer Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzU5NjY=&#34;&gt;RFC 5966 DNS Transport over TCP - Implementation Requirements&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYzNzY=&#34;&gt;RFC 6376 DomainKeys Identified Mail (DKIM) Signatures&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzY3NjI=&#34;&gt;RFC 6762 Multicast DNS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzY4OTE=&#34;&gt;RFC 6891 Extension Mechanisms for DNS (EDNS(0))&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzY4OTU=&#34;&gt;RFC 6895 DNS IANA Considerations&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc3NjY=&#34;&gt;RFC 7766 DNS Transport over TCP - Implementation Requirements&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc4NTg=&#34;&gt;RFC 7858 Specification for DNS over Transport Layer Security (TLS)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc4NzE=&#34;&gt;RFC 7871 Client Subnet in DNS Queries&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgwODI=&#34;&gt;RFC 8082 NXDOMAIN&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0ODI=&#34;&gt;RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0ODQ=&#34;&gt;RFC 8484 DNS Queries over HTTPS (DoH)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0OTA=&#34;&gt;RFC 8490 DNS Stateful Operations&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0OTk=&#34;&gt;RFC 8499 DNS Terminology&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;whois-相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#whois-相关&#34;&gt;#&lt;/a&gt; Whois 相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgxMg==&#34;&gt;RFC 812 NICNAME/WHOIS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzk1NA==&#34;&gt;RFC 954 NICNAME/WHOIS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzIxNjc=&#34;&gt;RFC 2167 Referral Whois (RWhois) Protocol V1.5&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM5MTI=&#34;&gt;RFC 3912 WHOIS Protocol Specification&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODU=&#34;&gt;RFC 7485 Inventory and Analysis of WHOIS Registration Objects&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rdap-相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdap-相关&#34;&gt;#&lt;/a&gt; RDAP 相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODA=&#34;&gt;RFC7480 HTTP Usage in the Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODE=&#34;&gt;RFC7481 Security Services for the Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODQ=&#34;&gt;RFC7484 Finding the Authoritative Registration Data (RDAP) Service&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgwNTY=&#34;&gt;RFC8056 Registration Data Access Protocol (RDAP) Object Tagging&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzkwODI=&#34;&gt;RFC9082 Registration Data Access Protocol (RDAP) Query Format&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzkwODM=&#34;&gt;RFC9083 JSON Responses for the Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关标准&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关标准&#34;&gt;#&lt;/a&gt; 相关标准&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hYm91dC5yZGFwLm9yZy8=&#34;&gt;Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL05MbmV0TGFicy91bmJvdW5k&#34;&gt;Unbound&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2lzYy1wcm9qZWN0cy9iaW5kOQ==&#34;&gt;bind9&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;研究文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#研究文章&#34;&gt;#&lt;/a&gt; 研究文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MveGJmMFFicHBrOFIwbng4OVBiNFlUZw==&#34;&gt;DGA 域名的今生前世：缘起、检测、与发展&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLnRoZWNqdy5tZS8/cD0xMjIx&#34;&gt;DNSSEC 原理和分析&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study of domain generating malware[C]//25th {USENIX} Security Symposium ({USENIX} Security 16). 2016: 263-278.&lt;/li&gt;
+&lt;li&gt;An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关cve&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关cve&#34;&gt;#&lt;/a&gt; 相关 CVE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZXNlYXJjaC5jaGVja3BvaW50LmNvbS8yMDIwL3Jlc29sdmluZy15b3VyLXdheS1pbnRvLWRvbWFpbi1hZG1pbi1leHBsb2l0aW5nLWEtMTcteWVhci1vbGQtYnVnLWluLXdpbmRvd3MtZG5zLXNlcnZlcnMv&#34;&gt;SIGRed – Resolving Your Way into Domain Admin: Exploiting a 17 Year-old Bug in Windows DNS Servers&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="域名" />
+        <category term="DNS" />
+        <category term="WEB" />
+        <updated>2022-11-25T02:06:09.000Z</updated>
+    </entry>
+</feed>

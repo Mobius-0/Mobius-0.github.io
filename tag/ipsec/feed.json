@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"ipsec\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/",
+            "url": "https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/",
+            "title": "IPSec",
+            "date_published": "2022-11-26T08:47:59.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>IPsec（IP Security）是 IETF 制定的三层隧道加密协议，它为 Internet 上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在 IP 层通过加密与数据源认证等方式，提供了以下的安全服务：</p>\n<ul>\n<li>数据机密性（Confidentiality）：IPsec 发送方在通过网络传输包前对包进行加密。</li>\n<li>数据完整性（Data Integrity）：IPsec 接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。</li>\n<li>数据来源认证（Data Authentication）：IPsec 在接收端可以认证发送 IPsec 报文的发送端是否合法。</li>\n<li>防重放（Anti-Replay）：IPsec 接收方可检测并拒绝接收过时或重复的报文。</li>\n</ul>\n<h1 id=\"优点\"><a class=\"anchor\" href=\"#优点\">#</a> 优点</h1>\n<p>IPsec 具有以下优点：</p>\n<ul>\n<li>支持 IKE（Internet Key Exchange，因特网密钥交换），可实现密钥的自动协商功能，减少了密钥协商的开销。可以通过 IKE 建立和维护 SA 的服务，简化了 IPsec 的使用和管理。</li>\n<li>所有使用 IP 协议进行数据传输的应用系统和服务都可以使用 IPsec，而不必对这些应用系统和服务本身做任何修改。</li>\n<li>对数据的加密是以数据包为单位的，而不是以整个数据流为单位，这不仅灵活而且有助于进一步提高 IP 数据包的安全性，可以有效防范网络攻击。</li>\n</ul>\n<h1 id=\"构成\"><a class=\"anchor\" href=\"#构成\">#</a> 构成</h1>\n<p>IPsec 由四部分内容构成：</p>\n<ul>\n<li>负责密钥管理的 Internet 密钥交换协议 IKE（Internet Key Exchange Protocol）</li>\n<li>负责将安全服务与使用该服务的通信流相联系的安全关联 SA（Security Associations）</li>\n<li>直接操作数据包的认证头协议 AH（IP Authentication Header）和安全载荷协议 ESP（IP Encapsulating Security Payload）</li>\n<li>若干用于加密和认证的算法</li>\n</ul>\n<h1 id=\"安全联盟security-associationsa\"><a class=\"anchor\" href=\"#安全联盟security-associationsa\">#</a> 安全联盟（Security Association，SA）</h1>\n<p>IPsec 在两个端点之间提供安全通信，端点被称为 IPsec 对等体。</p>\n<p>SA 是 IPsec 的基础，也是 IPsec 的本质。SA 是通信对等体间对某些要素的约定，例如，使用哪种协议（AH、ESP 还是两者结合使用）、协议的封装模式（传输模式和隧道模式）、加密算法（DES、3DES 和 AES）、特定流中保护数据的共享密钥以及密钥的生存周期等。建立 SA 的方式有手工配置和 IKE 自动协商两种。</p>\n<p>SA 是单向的，在两个对等体之间的双向通信，最少需要两个 SA 来分别对两个方向的数据流进行安全保护。同时，如果两个对等体希望同时使用 AH 和 ESP 来进行安全通信，则每个对等体都会针对每一种协议来构建一个独立的 SA。</p>\n<p>SA 由一个三元组来唯一标识，这个三元组包括 SPI（Security Parameter Index，安全参数索引）、目的 IP 地址、安全协议号（AH 或 ESP）。</p>\n<p>SPI 是用于唯一标识 SA 的一个 32 比特数值，它在 AH 和 ESP 头中传输。在手工配置 SA 时，需要手工指定 SPI 的取值。使用 IKE 协商产生 SA 时，SPI 将随机生成。</p>\n<h1 id=\"ike\"><a class=\"anchor\" href=\"#ike\">#</a> IKE</h1>\n<p>IKE（RFC2407，RFC2408、RFC2409）属于一种混合型协议，由 Internet 安全关联和密钥管理协议（ISAKMP）和两种密钥交换协议 OAKLEY 与 SKEME 组成。IKE 创建在由 ISAKMP 定义的框架上，沿用了 OAKLEY 的密钥交换模式以及 SKEME 的共享和密钥更新技术，还定义了它自己的两种密钥交换方式。</p>\n<p>IKE 使用了两个阶段的 ISAKMP：</p>\n<p>第一阶段，协商创建一个通信信道（IKE SA），并对该信道进行验证，为双方进一步的 IKE 通信提供机密性、消息完整性以及消息源验证服务； 第二阶段，使用已建立的 IKE SA 建立 IPsec SA（V2 中叫 Child SA）。</p>\n",
+            "tags": [
+                "计算机网络",
+                "IPSec",
+                "VPN"
+            ]
+        }
+    ]
+}

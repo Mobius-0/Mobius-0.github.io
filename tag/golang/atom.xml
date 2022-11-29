@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;golang&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-28T02:34:11.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Golang/</id>
+        <title>Golang</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Golang/"/>
+        <content type="html">&lt;h1 id=&#34;golang-runtime&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#golang-runtime&#34;&gt;#&lt;/a&gt; Golang Runtime&lt;/h1&gt;
+&lt;p&gt;Go 中的线程被称为 Goroutine 或 G，内核线程被称为 M。这些 G 被调度到 M 上，即所谓的 G：M 线程模型，或更常用的 M：N 线程模型，用户空间线程或 green 线程模型。&lt;/p&gt;
+&lt;h1 id=&#34;字符串处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#字符串处理&#34;&gt;#&lt;/a&gt; 字符串处理&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Go 源代码始终为 UTF-8&lt;/li&gt;
+&lt;li&gt;代表 Unicode 码点的字节序列称为  &lt;code&gt;rune&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Go 不保证字符串中的字符被规范化&lt;/li&gt;
+&lt;li&gt;字符串可以包含任意字节&lt;/li&gt;
+&lt;li&gt;字符串中不包含字节级转义符时，字符串始终包含有效的 UTF-8 序列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmdvbGFuZy5vcmcvc3RyaW5ncw==&#34;&gt;Strings, bytes, runes and characters in Go&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="Golang" />
+        <updated>2022-11-28T02:34:11.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;linux&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-28T13:35:20.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</id>
+        <title>Linux内网渗透</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+        <content type="html">&lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
+&lt;h2 id=&#34;获取内核操作系统和设备信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取内核操作系统和设备信息&#34;&gt;#&lt;/a&gt; 获取内核，操作系统和设备信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;版本信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uname -a&lt;/code&gt;  所有版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -r&lt;/code&gt;  内核版本信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -n&lt;/code&gt;  系统主机名字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -m&lt;/code&gt;  Linux 内核架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核信息  &lt;code&gt;cat /proc/version&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPU 信息  &lt;code&gt;cat /proc/cpuinfo&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发布信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/*-release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/issue&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主机名  &lt;code&gt;hostname&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件系统  &lt;code&gt;df -a&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核日志  &lt;code&gt;dmesg&lt;/code&gt;  /  &lt;code&gt;/var/log/dmesg&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户和组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户和组&#34;&gt;#&lt;/a&gt; 用户和组&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;列出系统所有用户  &lt;code&gt;cat /etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出系统所有组  &lt;code&gt;cat /etc/group&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出所有用户 hash（root） &lt;code&gt;cat /etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询用户的基本信息  &lt;code&gt;finger&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;当前登录的用户  &lt;code&gt;users&lt;/code&gt;   &lt;code&gt;who -a&lt;/code&gt;   &lt;code&gt;/var/log/utmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查询无密码用户  &lt;code&gt;grep &#39;x:0:&#39; /etc/passwd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目前登录的用户  &lt;code&gt;w&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登入过的用户信息  &lt;code&gt;last&lt;/code&gt;  /  &lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;显示系统中所有用户最近一次登录信息  &lt;code&gt;lastlog&lt;/code&gt;  /  &lt;code&gt;/var/log/lastlog&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录成功日志  &lt;code&gt;/var/log/secure&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录失败日志  &lt;code&gt;/var/log/faillog&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看特权用户  &lt;code&gt;grep :0 /etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看 passwd 最后修改时间  &lt;code&gt;ls -l /etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看是否存在空口令用户  &lt;code&gt;awk -F: &#39;length($2)==0 &amp;#123;print $1&amp;#125;&#39; /etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看远程登录的账号  &lt;code&gt;awk &#39;/\$1|\$6/&amp;#123;print $1&amp;#125;&#39; /etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看具有 sudo 权限的用户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/sudoers | grep -v &amp;quot;^#\|^$&amp;quot; | grep &amp;quot;ALL=(ALL)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户和权限信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户和权限信息&#34;&gt;#&lt;/a&gt; 用户和权限信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当前用户  &lt;code&gt;whoami&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;当前用户信息  &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以使用 sudo 提升到 root 的用户（root）  &lt;code&gt;cat /etc/sudoers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;列出目前用户可执行与无法执行的指令  &lt;code&gt;sudo -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;环境信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境信息&#34;&gt;#&lt;/a&gt; 环境信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;打印系统环境信息  &lt;code&gt;env&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印系统环境信息  &lt;code&gt;set&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;环境变量中的路径信息  &lt;code&gt;echo $PATH&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印历史命令  &lt;code&gt;history&lt;/code&gt;  /  &lt;code&gt;~/.bash_history&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示当前路径  &lt;code&gt;pwd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示默认系统遍历  &lt;code&gt;cat /etc/profile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示可用的 shell  &lt;code&gt;cat /etc/shells&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程信息&#34;&gt;#&lt;/a&gt; 进程信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看进程信息  &lt;code&gt;ps aux&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;资源占有情况  &lt;code&gt;top -c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看进程关联文件  &lt;code&gt;lsof -c $PID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;完整命令行信息  &lt;code&gt;/proc/$PID/cmdline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程的命令名  &lt;code&gt;/proc/$PID/comm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程当前工作目录的符号链接  &lt;code&gt;/proc/$PID/cwd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;运行程序的符号链接  &lt;code&gt;/proc/$PID/exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程的环境变量  &lt;code&gt;/proc/$PID/environ&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程打开文件的情况  &lt;code&gt;/proc/$PID/fd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;服务信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务信息&#34;&gt;#&lt;/a&gt; 服务信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;由 inetd 管理的服务列表  &lt;code&gt;cat /etc/inetd.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;由 xinetd 管理的服务列表  &lt;code&gt;cat /etc/xinetd.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;nfs 服务器的配置  &lt;code&gt;cat /etc/exports&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;邮件信息  &lt;code&gt;/var/log/mailog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ssh 配置  &lt;code&gt;sshd_config&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计划任务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计划任务&#34;&gt;#&lt;/a&gt; 计划任务&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;显示指定用户的计划作业（root）  &lt;code&gt;crontab -l -u %user%&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;计划任务
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/spool/cron/*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/spool/anacron/*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/crontab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/anacrontab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/cron.*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/anacrontab&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开机启动项
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/rc.d/init.d/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络-路由和通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络-路由和通信&#34;&gt;#&lt;/a&gt; 网络、路由和通信&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;列出网络接口信息  &lt;code&gt;/sbin/ifconfig -a&lt;/code&gt;  /  &lt;code&gt;ip addr show&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;列出网络接口信息  &lt;code&gt;cat /etc/network/interfaces&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看系统 arp 表  &lt;code&gt;arp -a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印路由信息  &lt;code&gt;route&lt;/code&gt;  /  &lt;code&gt;ip ro show&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看 dns 配置信息  &lt;code&gt;cat /etc/resolv.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印本地端口开放信息  &lt;code&gt;netstat -an&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;列出 iptable 的配置规则  &lt;code&gt;iptables -L&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看端口服务映射  &lt;code&gt;cat /etc/services&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hostname  &lt;code&gt;hostname -f&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看进程端口情况  &lt;code&gt;netstat -anltp | grep $PID&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;已安装程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#已安装程序&#34;&gt;#&lt;/a&gt; 已安装程序&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rpm -qa --last&lt;/code&gt;  Redhat&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yum list | grep installed&lt;/code&gt;  CentOS&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l /etc/yum.repos.d/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dpkg -l&lt;/code&gt;  Debian&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/apt/sources.list&lt;/code&gt;  Debian APT&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkg_info&lt;/code&gt;  xBSD&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkginfo&lt;/code&gt;  Solaris&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pacman -Q&lt;/code&gt;  Arch Linux&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;emerge&lt;/code&gt;  Gentoo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件&#34;&gt;#&lt;/a&gt; 文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;最近五天的文件  &lt;code&gt;find / -ctime +1 -ctime -5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;文件系统细节  &lt;code&gt;debugfs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;公私钥信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#公私钥信息&#34;&gt;#&lt;/a&gt; 公私钥信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/ssh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/log/boot.log&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/cron&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/faillog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/lastlog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/messages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/secure&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/run/utmp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;虚拟环境检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟环境检测&#34;&gt;#&lt;/a&gt; 虚拟环境检测&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;vboxsf\|vboxguest&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;vmw_baloon\|vmxnet&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;xen-vbd\|xen-vnif&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;virtio_pci\|virtio_net&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;hv_vmbus\|hv_blkvsc\|hv_netvsc\|hv_utils\|hv_storvsc&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;容器内信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#容器内信息收集&#34;&gt;#&lt;/a&gt; 容器内信息收集&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;capsh --print&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /proc/1/cgroup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;env | grep KUBE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l .dockerenv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l /run/secrets/Kubernetes.io/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mount&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ps aux&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h1&gt;
+&lt;h2 id=&#34;权限提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限提升&#34;&gt;#&lt;/a&gt; 权限提升&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;内核漏洞利用&lt;/li&gt;
+&lt;li&gt;攻击有 root 权限的服务&lt;/li&gt;
+&lt;li&gt;利用第三方服务提权&lt;/li&gt;
+&lt;li&gt;通过有 SUID 属性的可执行文件
+&lt;ul&gt;
+&lt;li&gt;查找可能提权的可执行文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -perm +4000 -ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -perm -u=s -type f 2&amp;gt;/dev/null&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -user root -perm -4000 -print 2&amp;gt;/dev/null&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -user root -perm -4000 -exec ls -ldb &amp;#123;&amp;#125; \; 2&amp;gt;/dev/null&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用可用的 root 权限
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用误配置的 crontab 任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;自启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自启动&#34;&gt;#&lt;/a&gt; 自启动&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/init.d&lt;/li&gt;
+&lt;li&gt;/etc/rc.d/rc.local&lt;/li&gt;
+&lt;li&gt;~/.bashrc&lt;/li&gt;
+&lt;li&gt;~/.zshrc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后门&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后门&#34;&gt;#&lt;/a&gt; 后门&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ssh 后门
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alias ssh=&#39;strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后门账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;常见应用
+&lt;ul&gt;
+&lt;li&gt;ICMP&lt;/li&gt;
+&lt;li&gt;DNS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;icmp 后门&lt;/li&gt;
+&lt;li&gt;后门端口复用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;  开头隐藏文件&lt;/li&gt;
+&lt;li&gt;rootkit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;痕迹清理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#痕迹清理&#34;&gt;#&lt;/a&gt; 痕迹清理&lt;/h1&gt;
+&lt;h2 id=&#34;历史命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#历史命令&#34;&gt;#&lt;/a&gt; 历史命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export HISTFILE=/dev/null;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kill -9 $$&lt;/code&gt;  kill history&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;history -c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在  &lt;code&gt;HISTSIZE=0&lt;/code&gt;  中设置  &lt;code&gt;HISTSIZE=0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;清除修改日志文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#清除修改日志文件&#34;&gt;#&lt;/a&gt; 清除 / 修改日志文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/log/btmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/lastlog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/utmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/secure&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/message&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;登录痕迹&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#登录痕迹&#34;&gt;#&lt;/a&gt; 登录痕迹&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;删除  &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt;  中记录&lt;/li&gt;
+&lt;li&gt;修改文件时间戳
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;touch –r&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;删除 tmp 目录临时文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作痕迹&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作痕迹&#34;&gt;#&lt;/a&gt; 操作痕迹&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vim 不记录历史命令  &lt;code&gt;:set history=0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ssh 登录痕迹
+&lt;ul&gt;
+&lt;li&gt;无痕登录  &lt;code&gt;ssh -T user@host /bin/bash -i&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;覆写文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#覆写文件&#34;&gt;#&lt;/a&gt; 覆写文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;shred&lt;/li&gt;
+&lt;li&gt;dd&lt;/li&gt;
+&lt;li&gt;wipe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;难点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#难点&#34;&gt;#&lt;/a&gt; 难点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征&lt;/li&gt;
+&lt;li&gt;即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录&lt;/li&gt;
+&lt;li&gt;留存的后门包含攻击者的信息&lt;/li&gt;
+&lt;li&gt;使用的代理或跳板可能会被反向入侵&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意&#34;&gt;#&lt;/a&gt; 注意&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在操作前检查是否有用户在线&lt;/li&gt;
+&lt;li&gt;删除文件使用磁盘覆写的功能删除&lt;/li&gt;
+&lt;li&gt;尽量和攻击前状态保持一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvaTJXdkZtRjFxUWpieC1CYVN0WGIxUQ==&#34;&gt;Linux 入侵痕迹清理技巧&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="Linux" />
+        <category term="渗透" />
+        <category term="信息收集" />
+        <category term="痕迹清理" />
+        <updated>2022-11-28T13:35:20.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Shell/</id>
+        <title>Shell</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Shell/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Shell 是一个特殊的程序，是用户使用 Linux 的桥梁。Shell 既是一种命令，又是一种程序设计语言。&lt;/p&gt;
+&lt;p&gt;Linux 包含多种 Shell ，常见的有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bourne Shell（ATT 的 Bourne 开发，名为 sh）&lt;/li&gt;
+&lt;li&gt;Bourne Again Shell（/bin/bash）&lt;/li&gt;
+&lt;li&gt;C Shell（Bill Joy 开发，名为 csh）&lt;/li&gt;
+&lt;li&gt;K Shell（ATT 的 David G.koun 开发，名为 ksh）&lt;/li&gt;
+&lt;li&gt;Z Shell（Paul Falstad 开发，名为 zsh）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;元字符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#元字符&#34;&gt;#&lt;/a&gt; 元字符&lt;/h1&gt;
+&lt;p&gt;shell 一般会有一系列特殊字符，用来实现的一定的效果，这种字符被称为元字符（Meta），不同的 Shell 支持的元字符可能会不相同。&lt;/p&gt;
+&lt;p&gt;常见的元字符如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;IFS&lt;/code&gt;  由 &amp;lt;space&amp;gt; 或 &amp;lt;tab&amp;gt; 或 &amp;lt;enter&amp;gt; 三者之一组成&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CR&lt;/code&gt;  由 &amp;lt;enter&amp;gt; 产生。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;=&lt;/code&gt;  设定变量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$&lt;/code&gt;  作变量或运算替换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;  重定向 stdout&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;  追加到文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;  重定向 stdin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;|&lt;/code&gt;  命令管道&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;  后台执行命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt;  在前一个命令结束后，执行下一个命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;  在前一个命令未报错执行后，执行下一个命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;||&lt;/code&gt;  在前一个命令执行报错后，执行下一个命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;&lt;/code&gt;  在单引号内的命令会保留原来的值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;  在双引号内的命令会允许变量替换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;`&lt;/code&gt;  在反引号内的内容会当成命令执行并替换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;()&lt;/code&gt;  在子 Shell 中执行命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;&amp;#125;&lt;/code&gt;  在当前 Shell 中执行命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;  当前用户的主目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!number&lt;/code&gt;  执行历史命令，如  &lt;code&gt;!1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;通配符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通配符&#34;&gt;#&lt;/a&gt; 通配符&lt;/h1&gt;
+&lt;p&gt;除元字符外，通配符（wildcard）也是 shell 中的一种特殊字符。当 shell 在参数中遇到了通配符时，shell 会将其当作路径或文件名去在磁盘上搜寻可能的匹配：若符合要求的匹配存在，则进行替换，否则就将该通配符作为一个普通字符直接传递。&lt;/p&gt;
+&lt;p&gt;常见的通配符如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;  匹配 0 或多个字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt;  匹配任意一个字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[list]&lt;/code&gt;  匹配 list 中的任意一个字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[!list]&lt;/code&gt;  匹配除 list 外的任意一个字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[a-c]&lt;/code&gt;  匹配 a-c 中的任意一个字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;#123;string1,string2,...&amp;#125;&lt;/code&gt;  分别匹配其中字符串&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="Linux" />
+        <category term="Shell" />
+        <updated>2022-11-28T02:48:11.000Z</updated>
+    </entry>
+</feed>

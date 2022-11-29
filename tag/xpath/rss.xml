@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;xpath&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 27 Nov 2022 10:44:09 +0800</pubDate>
+        <lastBuildDate>Sun, 27 Nov 2022 10:44:09 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/Xpath/</guid>
+            <title>Xpath</title>
+            <link>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/Xpath/</link>
+            <category>网络安全</category>
+            <category>漏洞</category>
+            <category>Xpath</category>
+            <pubDate>Sun, 27 Nov 2022 10:44:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;xpath定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xpath定义&#34;&gt;#&lt;/a&gt; Xpath 定义&lt;/h1&gt;
+&lt;p&gt;XPath 注入攻击是指利用 XPath 解析器的松散输入和容错特性，能够在 URL、表单或其它信息上附带恶意的 XPath 查询代码，以获得权限信息的访问权并更改这些信息。XPath 注入攻击是针对 Web 服务应用新的攻击方法，它允许攻击者在事先不知道 XPath 查询相关知识的情况下，通过 XPath 查询得到一个 XML 文档的完整内容。&lt;/p&gt;
+&lt;h1 id=&#34;xpath注入攻击原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xpath注入攻击原理&#34;&gt;#&lt;/a&gt; Xpath 注入攻击原理&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;XPath 注入攻击主要是通过构建特殊的输入，这些输入往往是 XPath 语法中的一些组合，这些输入将作为参数传入 Web 应用程序，通过执行 XPath 查询而执行入侵者想要的操作，下面以登录验证中的模块为例，说明 XPath 注入攻击的实现原理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在 Web 应用程序的登录验证程序中，一般有用户名（username）和密码（password） 两个参数，程序会通过用户所提交输入的用户名和密码来执行授权操作。若验证数据存放在 XML 文件中，其原理是通过查找 user 表中的用户名 （username）和密码（password）的结果来进行授权访问，&lt;/p&gt;
+&lt;p&gt;例存在 user.xml 文件如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;users&amp;gt;
+     &amp;lt;user&amp;gt;
+         &amp;lt;firstname&amp;gt;Ben&amp;lt;/firstname&amp;gt;
+         &amp;lt;lastname&amp;gt;Elmore&amp;lt;/lastname&amp;gt;
+         &amp;lt;loginID&amp;gt;abc&amp;lt;/loginID&amp;gt;
+         &amp;lt;password&amp;gt;test123&amp;lt;/password&amp;gt;
+     &amp;lt;/user&amp;gt;
+     &amp;lt;user&amp;gt;
+         &amp;lt;firstname&amp;gt;Shlomy&amp;lt;/firstname&amp;gt;
+         &amp;lt;lastname&amp;gt;Gantz&amp;lt;/lastname&amp;gt;
+         &amp;lt;loginID&amp;gt;xyz&amp;lt;/loginID&amp;gt;
+         &amp;lt;password&amp;gt;123test&amp;lt;/password&amp;gt;
+     &amp;lt;/user&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;则在 XPath 中其典型的查询语句为：  &lt;code&gt;//users/user[loginID/text()=&#39;xyz&#39;and password/text()=&#39;123test&#39;]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;但是，可以采用如下的方法实施注入攻击，绕过身份验证。如果用 户传入一个 login 和 password，例如  &lt;code&gt;loginID = &#39;xyz&#39; 和 password = &#39;123test&#39;&lt;/code&gt;  ，则该查询语句将返回 true。但如果用户传入类似  &lt;code&gt;&#39; or 1=1 or &#39;&#39;=&#39;&lt;/code&gt;  的值，那么该查询语句也会得到 true 返回值，因为 XPath 查询语句最终会变成如下代码： &lt;code&gt;//users/user[loginID/text()=&#39;&#39;or 1=1 or &#39;&#39;=&#39;&#39; and password/text()=&#39;&#39; or 1=1 or &#39;&#39;=&#39;&#39;]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这个字符串会在逻辑上使查询一直返回 true 并将一直允许攻击者访问系统。攻击者可以利用 XPath 在应用程序中动态地操作 XML 文档。攻击完成登录可以再通过 XPath 盲入技术获取最高权限帐号和其它重要文档信息。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

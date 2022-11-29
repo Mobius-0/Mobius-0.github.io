@@ -1,0 +1,1560 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;计算机网络与协议&#34; category</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T08:48:19.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/</id>
+        <title>WiFi</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Wi-Fi 又称 “无线热点” 或 “无线网络”，是 Wi-Fi 联盟的商标，一个基于 IEEE 802.11 标准的无线局域网技术。&lt;/p&gt;
+&lt;h1 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h1&gt;
+&lt;h2 id=&#34;暴力破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#暴力破解&#34;&gt;#&lt;/a&gt; 暴力破解&lt;/h2&gt;
+&lt;p&gt;WiFi 密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。&lt;/p&gt;
+&lt;h2 id=&#34;伪造热点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#伪造热点&#34;&gt;#&lt;/a&gt; 伪造热点&lt;/h2&gt;
+&lt;p&gt;AP 可以动态的广播自己，客户也可以主动发送探针请求。可以伪造 AP 发送对探针请求的响应包，来让客户端错误的识别。&lt;/p&gt;
+&lt;h2 id=&#34;秘钥重装攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#秘钥重装攻击&#34;&gt;#&lt;/a&gt; 秘钥重装攻击&lt;/h2&gt;
+&lt;p&gt;该漏洞由 Vanhoef 发现。Wi-Fi 在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。&lt;/p&gt;
+&lt;h2 id=&#34;dragonblood&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dragonblood&#34;&gt;#&lt;/a&gt; Dragonblood&lt;/h2&gt;
+&lt;p&gt;最新版的 WPA3 标准在实现上存在一些问题，同样由 Vanhoef 发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2ktZmkub3JnLw==&#34;&gt;Wi-Fi Alliance&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9kcmFnb25ibG9vZC5wZGY=&#34;&gt;Dragonblood&lt;/span&gt; : Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ub3Jkc2VjMjAxOS5wZGY=&#34;&gt;Improving Privacy through Fast Passive Wi-Fi Scanning&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9hc2lhY2NzMjAxOS5wZGY=&#34;&gt;Practical Side-Channel Attacks against WPA-TKIP&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ibGFja2hhdC1ldTIwMTcucGRm&#34;&gt;Key Reinstallation Attacks: Breaking the WPA2 Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc2NjQ=&#34;&gt;RFC 7664 Dragonfly Key Exchange&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="WiFi" />
+        <updated>2022-11-26T08:48:19.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/</id>
+        <title>IPSec</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;IPsec（IP Security）是 IETF 制定的三层隧道加密协议，它为 Internet 上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在 IP 层通过加密与数据源认证等方式，提供了以下的安全服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据机密性（Confidentiality）：IPsec 发送方在通过网络传输包前对包进行加密。&lt;/li&gt;
+&lt;li&gt;数据完整性（Data Integrity）：IPsec 接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。&lt;/li&gt;
+&lt;li&gt;数据来源认证（Data Authentication）：IPsec 在接收端可以认证发送 IPsec 报文的发送端是否合法。&lt;/li&gt;
+&lt;li&gt;防重放（Anti-Replay）：IPsec 接收方可检测并拒绝接收过时或重复的报文。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h1&gt;
+&lt;p&gt;IPsec 具有以下优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 IKE（Internet Key Exchange，因特网密钥交换），可实现密钥的自动协商功能，减少了密钥协商的开销。可以通过 IKE 建立和维护 SA 的服务，简化了 IPsec 的使用和管理。&lt;/li&gt;
+&lt;li&gt;所有使用 IP 协议进行数据传输的应用系统和服务都可以使用 IPsec，而不必对这些应用系统和服务本身做任何修改。&lt;/li&gt;
+&lt;li&gt;对数据的加密是以数据包为单位的，而不是以整个数据流为单位，这不仅灵活而且有助于进一步提高 IP 数据包的安全性，可以有效防范网络攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;构成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构成&#34;&gt;#&lt;/a&gt; 构成&lt;/h1&gt;
+&lt;p&gt;IPsec 由四部分内容构成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责密钥管理的 Internet 密钥交换协议 IKE（Internet Key Exchange Protocol）&lt;/li&gt;
+&lt;li&gt;负责将安全服务与使用该服务的通信流相联系的安全关联 SA（Security Associations）&lt;/li&gt;
+&lt;li&gt;直接操作数据包的认证头协议 AH（IP Authentication Header）和安全载荷协议 ESP（IP Encapsulating Security Payload）&lt;/li&gt;
+&lt;li&gt;若干用于加密和认证的算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安全联盟security-associationsa&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全联盟security-associationsa&#34;&gt;#&lt;/a&gt; 安全联盟（Security Association，SA）&lt;/h1&gt;
+&lt;p&gt;IPsec 在两个端点之间提供安全通信，端点被称为 IPsec 对等体。&lt;/p&gt;
+&lt;p&gt;SA 是 IPsec 的基础，也是 IPsec 的本质。SA 是通信对等体间对某些要素的约定，例如，使用哪种协议（AH、ESP 还是两者结合使用）、协议的封装模式（传输模式和隧道模式）、加密算法（DES、3DES 和 AES）、特定流中保护数据的共享密钥以及密钥的生存周期等。建立 SA 的方式有手工配置和 IKE 自动协商两种。&lt;/p&gt;
+&lt;p&gt;SA 是单向的，在两个对等体之间的双向通信，最少需要两个 SA 来分别对两个方向的数据流进行安全保护。同时，如果两个对等体希望同时使用 AH 和 ESP 来进行安全通信，则每个对等体都会针对每一种协议来构建一个独立的 SA。&lt;/p&gt;
+&lt;p&gt;SA 由一个三元组来唯一标识，这个三元组包括 SPI（Security Parameter Index，安全参数索引）、目的 IP 地址、安全协议号（AH 或 ESP）。&lt;/p&gt;
+&lt;p&gt;SPI 是用于唯一标识 SA 的一个 32 比特数值，它在 AH 和 ESP 头中传输。在手工配置 SA 时，需要手工指定 SPI 的取值。使用 IKE 协商产生 SA 时，SPI 将随机生成。&lt;/p&gt;
+&lt;h1 id=&#34;ike&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ike&#34;&gt;#&lt;/a&gt; IKE&lt;/h1&gt;
+&lt;p&gt;IKE（RFC2407，RFC2408、RFC2409）属于一种混合型协议，由 Internet 安全关联和密钥管理协议（ISAKMP）和两种密钥交换协议 OAKLEY 与 SKEME 组成。IKE 创建在由 ISAKMP 定义的框架上，沿用了 OAKLEY 的密钥交换模式以及 SKEME 的共享和密钥更新技术，还定义了它自己的两种密钥交换方式。&lt;/p&gt;
+&lt;p&gt;IKE 使用了两个阶段的 ISAKMP：&lt;/p&gt;
+&lt;p&gt;第一阶段，协商创建一个通信信道（IKE SA），并对该信道进行验证，为双方进一步的 IKE 通信提供机密性、消息完整性以及消息源验证服务； 第二阶段，使用已建立的 IKE SA 建立 IPsec SA（V2 中叫 Child SA）。&lt;/p&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="IPSec" />
+        <category term="VPN" />
+        <updated>2022-11-26T08:47:59.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/</id>
+        <title>SSL/TLS</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;SSL 全称是 Secure Sockets Layer，安全套接字层，它是由网景公司 (Netscape) 在 1994 年时设计，主要用于 Web 的安全传输协议，目的是为网络通信提供机密性、认证性及数据完整性保障。如今，SSL 已经成为互联网保密通信的工业标准。&lt;/p&gt;
+&lt;p&gt;SSL 最初的几个版本 (SSL 1.0、SSL2.0、SSL 3.0) 由网景公司设计和维护，从 3.1 版本开始，SSL 协议由因特网工程任务小组 (IETF) 正式接管，并更名为 TLS (Transport Layer Security)，发展至今已有 TLS 1.0、TLS1.1、TLS1.2、TLS1.3 这几个版本。&lt;/p&gt;
+&lt;p&gt;如 TLS 名字所说，SSL/TLS 协议仅保障传输层安全。同时，由于协议自身特性 (数字证书机制)，SSL/TLS 不能被用于保护多跳 (multi-hop) 端到端通信，而只能保护点到点通信。&lt;/p&gt;
+&lt;p&gt;SSL/TLS 协议能够提供的安全目标主要包括如下几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;认证性：借助数字证书认证服务端端和客户端身份，防止身份伪造&lt;/li&gt;
+&lt;li&gt;机密性：借助加密防止第三方窃听&lt;/li&gt;
+&lt;li&gt;完整性：借助消息认证码 (MAC) 保障数据完整性，防止消息篡改&lt;/li&gt;
+&lt;li&gt;重放保护：通过使用隐式序列号防止重放攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为了实现这些安全目标，SSL/TLS 协议被设计为一个两阶段协议，分为握手阶段和应用阶段：&lt;/p&gt;
+&lt;p&gt;握手阶段也称协商阶段，在这一阶段，客户端和服务端端会认证对方身份 (依赖于 PKI 体系，利用数字证书进行身份认证)，并协商通信中使用的安全参数、密码套件以及 MasterSecret。后续通信使用的所有密钥都是通过 MasterSecret 生成。 在握手阶段完成后，进入应用阶段。在应用阶段通信双方使用握手阶段协商好的密钥进行安全通信。&lt;/p&gt;
+&lt;h1 id=&#34;协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议&#34;&gt;#&lt;/a&gt; 协议&lt;/h1&gt;
+&lt;p&gt;TLS 包含几个子协议，比较常用的有记录协议、警报协议、握手协议、变更密码规范协议等。&lt;/p&gt;
+&lt;h2 id=&#34;记录协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#记录协议&#34;&gt;#&lt;/a&gt; 记录协议&lt;/h2&gt;
+&lt;p&gt;记录协议 (Record Protocol) 规定了 TLS 收发数据的基本单位记录 (record)。&lt;/p&gt;
+&lt;h2 id=&#34;警报协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#警报协议&#34;&gt;#&lt;/a&gt; 警报协议&lt;/h2&gt;
+&lt;p&gt;警报协议 (Alert Protocol) 用于提示协议交互过程出现错误。&lt;/p&gt;
+&lt;h2 id=&#34;握手协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#握手协议&#34;&gt;#&lt;/a&gt; 握手协议&lt;/h2&gt;
+&lt;p&gt;握手协议 (Handshake Protocol) 是 TLS 里最复杂的子协议，在握手过程中协商 TLS 版本号、随机数、密码套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。&lt;/p&gt;
+&lt;h2 id=&#34;变更密码规范协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#变更密码规范协议&#34;&gt;#&lt;/a&gt; 变更密码规范协议&lt;/h2&gt;
+&lt;p&gt;变更密码规范协议 (Change Cipher Spec Protocol) 是一个 “通知”，告诉对方，后续的数据都将使用加密保护。&lt;/p&gt;
+&lt;h1 id=&#34;交互过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互过程&#34;&gt;#&lt;/a&gt; 交互过程&lt;/h1&gt;
+&lt;h2 id=&#34;client-hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client-hello&#34;&gt;#&lt;/a&gt; Client Hello&lt;/h2&gt;
+&lt;p&gt;Client Hello 由客户端发送，内容包括客户端的一个 Unix 时间戳 (GMT Unix Time)、一些随机的字节 (Random Bytes)，还包括了客户端接受的算法类型 (Cipher Suites)。&lt;/p&gt;
+&lt;h2 id=&#34;server-hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-hello&#34;&gt;#&lt;/a&gt; Server Hello&lt;/h2&gt;
+&lt;p&gt;Server Hello 由服务端发送，内容包括服务端支持的算法类型、GMT Unix Time 以及 Random Bytes。&lt;/p&gt;
+&lt;h2 id=&#34;certificate&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#certificate&#34;&gt;#&lt;/a&gt; Certificate&lt;/h2&gt;
+&lt;p&gt;由服务端或者客户端发送，发送方会会将自己的数字证书发送给接收方，由接收方进行证书验证，如果不通过的话，接收方会中断握手的过程。一般跟在 Client / Server Hello 报文之后。&lt;/p&gt;
+&lt;h2 id=&#34;server-key-exchange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-key-exchange&#34;&gt;#&lt;/a&gt; Server Key Exchange&lt;/h2&gt;
+&lt;p&gt;由服务端发送，将自己的公钥参数传输给了客户端，一般也和 Server Hello 与 Certificate 在一个 TCP 报文中。&lt;/p&gt;
+&lt;h2 id=&#34;server-hello-done&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#server-hello-done&#34;&gt;#&lt;/a&gt; Server Hello Done&lt;/h2&gt;
+&lt;p&gt;服务端发送，一般也和 Server Hello、Certificate 和 Server Key Exchange 在一个 TCP 报文中。&lt;/p&gt;
+&lt;h2 id=&#34;client-key-exchange&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#client-key-exchange&#34;&gt;#&lt;/a&gt; Client Key Exchange&lt;/h2&gt;
+&lt;p&gt;客户端发送，向服务端发送自己的公钥参数，与服务端协商密钥。&lt;/p&gt;
+&lt;h2 id=&#34;change-cipher-spec&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#change-cipher-spec&#34;&gt;#&lt;/a&gt; Change Cipher Spec&lt;/h2&gt;
+&lt;p&gt;客户端或者服务端发送，紧跟着 Key Exchange 发送，代表自己生成了新的密钥，通知对方以后将更换密钥，使用新的密钥进行通信。&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-handshake-message&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#encrypted-handshake-message&#34;&gt;#&lt;/a&gt; Encrypted Handshake Message&lt;/h2&gt;
+&lt;p&gt;客户端或者服务端发送，紧跟着 Key Exchange 发送。进行测试，一方用自己的刚刚生成的密钥加密一段固定的消息发送给对方，如果密钥协商正确无误的话，对方可以正确解密。&lt;/p&gt;
+&lt;h2 id=&#34;new-session-ticket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#new-session-ticket&#34;&gt;#&lt;/a&gt; New Session Ticket&lt;/h2&gt;
+&lt;p&gt;服务端发送，表示发起会话，在一段时间之内 (超时时间到来之前)，双方都以刚刚交换的密钥进行通信。从这以后，加密通信正式开始。&lt;/p&gt;
+&lt;h2 id=&#34;application-data&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#application-data&#34;&gt;#&lt;/a&gt; Application Data&lt;/h2&gt;
+&lt;p&gt;使用密钥交换协议协商出来的密钥加密的应用层的数据。&lt;/p&gt;
+&lt;h2 id=&#34;encrypted-alert&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#encrypted-alert&#34;&gt;#&lt;/a&gt; Encrypted Alert&lt;/h2&gt;
+&lt;p&gt;客户端或服务端发送，意味着加密通信因为某些原因需要中断，警告对方不要再发送敏感的数据。&lt;/p&gt;
+&lt;h1 id=&#34;版本更新内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#版本更新内容&#34;&gt;#&lt;/a&gt; 版本更新内容&lt;/h1&gt;
+&lt;h2 id=&#34;tls-13&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tls-13&#34;&gt;#&lt;/a&gt; TLS 1.3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引入了 PSK 作为新的密钥协商机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持 0-RTT 模式，以安全性降低为代价，在建立连接时节省了往返时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ServerHello 之后的所有握手消息采取了加密操作，可见明文减少&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不再允许对加密报文进行压缩、不再允许双方发起重协商&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DSA 证书不再允许在 TLS 1.3 中使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除不安全的密码算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RSA 密钥传输 - 不支持前向安全性&lt;/li&gt;
+&lt;li&gt;CBC 模式密码 - 易受 BEAST 和 Lucky 13 攻击&lt;/li&gt;
+&lt;li&gt;RC4 流密码 - 在 HTTPS 中使用并不安全&lt;/li&gt;
+&lt;li&gt;SHA-1 哈希函数 - 建议以 SHA-2 取而代之&lt;/li&gt;
+&lt;li&gt;任意 Diffie-Hellman 组 - CVE-2016-0701 漏洞&lt;/li&gt;
+&lt;li&gt;输出密码 - 易受 FREAK 和 LogJam 攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;子协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#子协议&#34;&gt;#&lt;/a&gt; 子协议&lt;/h1&gt;
+&lt;p&gt;SSL/TLS 协议有一个高度模块化的架构，分为很多子协议，主要是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Handshake 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括协商安全参数和密码套件、服务端身份认证 (客户端身份认证可选)、密钥交换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ChangeCipherSpec 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一条消息表明握手协议已经完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alert 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对握手协议中一些异常的错误提醒，分为 fatal 和 warning 两个级别，fatal 类型的错误会直接中断 SSL 链接，而 warning 级别的错误 SSL 链接仍可继续，只是会给出错误警告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Record 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括对消息的分段、压缩、消息认证和完整性保护、加密等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzIyNDY=&#34;&gt;RFC 2246 The TLS Protocol Version 1.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQzNDY=&#34;&gt;RFC 4346 The Transport Layer Security (TLS) Protocol Version 1.1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUyNDY=&#34;&gt;RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxMDE=&#34;&gt;RFC 6101 The Secure Sockets Layer (SSL) Protocol Version 3.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYxNzY=&#34;&gt;RFC 6176 Prohibiting Secure Sockets Layer (SSL) Version 2.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc1Njg=&#34;&gt;RFC 7568 Deprecating Secure Sockets Layer Version 3.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0NDY=&#34;&gt;RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;document&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#document&#34;&gt;#&lt;/a&gt; Document&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVHJhbnNwb3J0X0xheWVyX1NlY3VyaXR5&#34;&gt;Wikipedia Transport Layer Security&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="SSL" />
+        <category term="TLS" />
+        <updated>2022-11-26T08:42:19.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/mail/</id>
+        <title>邮件协议簇</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/mail/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;h2 id=&#34;smtp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#smtp&#34;&gt;#&lt;/a&gt; SMTP&lt;/h2&gt;
+&lt;p&gt;SMTP (Simple Mail Transfer Protocol) 是一种电子邮件传输的协议，是一组用于从源地址到目的地址传输邮件的规范。不启用 SSL 时端口号为 25，启用 SSL 时端口号多为 465 或 994。&lt;/p&gt;
+&lt;h2 id=&#34;pop3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pop3&#34;&gt;#&lt;/a&gt; POP3&lt;/h2&gt;
+&lt;p&gt;POP3 (Post Office Protocol 3) 用于支持使用客户端远程管理在服务器上的电子邮件。不启用 SSL 时端口号为 110，启用 SSL 时端口号多为 995。&lt;/p&gt;
+&lt;h2 id=&#34;imap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#imap&#34;&gt;#&lt;/a&gt; IMAP&lt;/h2&gt;
+&lt;p&gt;IMAP (Internet Mail Access Protocol)，即交互式邮件存取协议，它是跟 POP3 类似邮件访问标准协议之一。不同的是，开启了 IMAP 后，您在电子邮件客户端收取的邮件仍然保留在服务器上，同时在客户端上的操作都会反馈到服务器上，如：删除邮件，标记已读等，服务器上的邮件也会做相应的动作。不启用 SSL 时端口号为 143，启用 SSL 时端口号多为 993。&lt;/p&gt;
+&lt;h1 id=&#34;防护策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防护策略&#34;&gt;#&lt;/a&gt; 防护策略&lt;/h1&gt;
+&lt;h2 id=&#34;spf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spf&#34;&gt;#&lt;/a&gt; SPF&lt;/h2&gt;
+&lt;p&gt;发件人策略框架 (Sender Policy Framework, SPF) 是一套电子邮件认证机制，用于确认电子邮件是否由网域授权的邮件服务器寄出，防止有人伪冒身份网络钓鱼或寄出垃圾邮件。SPF 允许管理员设定一个 DNS TXT 记录或 SPF 记录设定发送邮件服务器的 IP 范围，如有任何邮件并非从上述指明授权的 IP 地址寄出，则很可能该邮件并非确实由真正的寄件者寄出。&lt;/p&gt;
+&lt;h2 id=&#34;dkim&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dkim&#34;&gt;#&lt;/a&gt; DKIM&lt;/h2&gt;
+&lt;p&gt;域名密钥识别邮件 (DomainKeys Identified Mail, DKIM) 是一种检测电子邮件发件人地址伪造的方法。发送方会在邮件的头中插入 DKIM-Signature，收件方通过查询 DNS 记录中的公钥来验证发件人的信息。&lt;/p&gt;
+&lt;h2 id=&#34;dmarc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dmarc&#34;&gt;#&lt;/a&gt; DMARC&lt;/h2&gt;
+&lt;p&gt;基于网域的消息认证、报告和一致性 (Domain-based Message Authentication, Reporting and Conformance, DMARC) 是电子邮件身份验证协议，用于解决在邮件栏中显示的域名和验证的域名不一致的问题。要通过 DMARC 检查，必须通过 SPF 或 / 和 DKIM 的身份验证，且需要标头地址中的域名必须与经过身份验证的域名一致。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQ0MDg=&#34;&gt;RFC 4408 Sender Policy Framework (SPF) for Authorizing Use of Domains in E-Mail, Version 1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYzNzY=&#34;&gt;RFC 6376 DomainKeys Identified Mail (DKIM) Signatures&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzcyMDg=&#34;&gt;RFC 7208 Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODk=&#34;&gt;RFC 7489 Domain-based Message Authentication, Reporting, and Conformance (DMARC)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgzMDE=&#34;&gt;RFC 8301 Cryptographic Algorithm and Key Usage Update to DomainKeys Identified Mail (DKIM)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0NjM=&#34;&gt;RFC 8463 A New Cryptographic Signature Method for DomainKeys Identified Mail (DKIM)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg2MTY=&#34;&gt;RFC 8616 Email Authentication for Internationalized Mail&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg2MTE=&#34;&gt;RFC 8611 Mail&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关文档&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关文档&#34;&gt;#&lt;/a&gt; 相关文档&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2VuZGVyX1BvbGljeV9GcmFtZXdvcms=&#34;&gt;Sender Policy Framework wikipedia&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRG9tYWluS2V5c19JZGVudGlmaWVkX01haWw=&#34;&gt;DomainKeys Identified Mail wikipedia&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRE1BUkM=&#34;&gt;DMARC wikipedia&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;研究文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#研究文章&#34;&gt;#&lt;/a&gt; 研究文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2kuYmxhY2toYXQuY29tL1VTQS0yMC9UaHVyc2RheS91cy0yMC1DaGVuLVlvdS1IYXZlLU5vLUlkZWEtV2hvLVNlbnQtVGhhdC1FbWFpbC0xOC1BdHRhY2tzLU9uLUVtYWlsLVNlbmRlci1BdXRoZW50aWNhdGlvbi13cC5wZGY=&#34;&gt;Composition Kills:A Case Study of Email Sender Authentication&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="邮件" />
+        <category term="网络协议" />
+        <updated>2022-11-25T07:58:31.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/HTTP/</id>
+        <title>HTTP协议簇</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/HTTP/"/>
+        <content type="html">&lt;h1 id=&#34;http标准&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http标准&#34;&gt;#&lt;/a&gt; HTTP 标准&lt;/h1&gt;
+&lt;h2 id=&#34;报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报文格式&#34;&gt;#&lt;/a&gt; 报文格式&lt;/h2&gt;
+&lt;h3 id=&#34;请求报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请求报文格式&#34;&gt;#&lt;/a&gt; 请求报文格式&lt;/h3&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;method&gt;&amp;lt;request-URL&gt;&amp;lt;version&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;headers&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;entity-body&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;响应报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应报文格式&#34;&gt;#&lt;/a&gt; 响应报文格式&lt;/h3&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;version&gt;&amp;lt;status&gt;&amp;lt;reason-phrase&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;headers&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;entity-body&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;字段解释&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#字段解释&#34;&gt;#&lt;/a&gt; 字段解释&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;method
+&lt;ul&gt;
+&lt;li&gt;HTTP 动词&lt;/li&gt;
+&lt;li&gt;常见方法：HEAD / GET / POST / PUT / DELETE / PATCH / OPTIONS / TRACE&lt;/li&gt;
+&lt;li&gt;扩展方法：LOCK / MKCOL / COPY / MOVE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;version
+&lt;ul&gt;
+&lt;li&gt;报文使用的 HTTP 版本&lt;/li&gt;
+&lt;li&gt;格式为 HTTP/&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;url
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;scheme&amp;gt;://&amp;lt;user&amp;gt;:&amp;lt;password&amp;gt;@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;path&amp;gt;;&amp;lt;params&amp;gt;?&amp;lt;query&amp;gt;#&amp;lt;frag&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;请求头列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请求头列表&#34;&gt;#&lt;/a&gt; 请求头列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept
+&lt;ul&gt;
+&lt;li&gt;指定客户端能够接收的内容类型&lt;/li&gt;
+&lt;li&gt;Accept: text/plain, text/html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Charset
+&lt;ul&gt;
+&lt;li&gt;浏览器可以接受的字符编码集&lt;/li&gt;
+&lt;li&gt;Accept-Charset: iso-8859-5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Encoding
+&lt;ul&gt;
+&lt;li&gt;指定浏览器可以支持的 web 服务器返回内容压缩编码类型&lt;/li&gt;
+&lt;li&gt;Accept-Encoding: compress, gzip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Language
+&lt;ul&gt;
+&lt;li&gt;浏览器可接受的语言&lt;/li&gt;
+&lt;li&gt;Accept-Language: en,zh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Ranges
+&lt;ul&gt;
+&lt;li&gt;可以请求网页实体的一个或者多个子范围字段&lt;/li&gt;
+&lt;li&gt;Accept-Ranges: bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Authorization
+&lt;ul&gt;
+&lt;li&gt;HTTP 授权的授权证书&lt;/li&gt;
+&lt;li&gt;Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cache-Control
+&lt;ul&gt;
+&lt;li&gt;指定请求和响应遵循的缓存机制 Cache-Control: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connection
+&lt;ul&gt;
+&lt;li&gt;表示是否需要持久连接 // HTTP 1.1 默认进行持久连接&lt;/li&gt;
+&lt;li&gt;Connection: close&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cookie
+&lt;ul&gt;
+&lt;li&gt;HTTP 请求发送时，会把保存在该请求域名下的所有 cookie 值一起发送给 web 服务器&lt;/li&gt;
+&lt;li&gt;Cookie: role=admin;ssid=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Length
+&lt;ul&gt;
+&lt;li&gt;请求的内容长度&lt;/li&gt;
+&lt;li&gt;Content-Length: 348&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Type
+&lt;ul&gt;
+&lt;li&gt;请求的与实体对应的 MIME 信息&lt;/li&gt;
+&lt;li&gt;Content-Type: application/x-www-form-urlencoded&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Date
+&lt;ul&gt;
+&lt;li&gt;请求发送的日期和时间&lt;/li&gt;
+&lt;li&gt;Date: Tue, 15 Nov 2010 08:12:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expect
+&lt;ul&gt;
+&lt;li&gt;请求的特定的服务器行为&lt;/li&gt;
+&lt;li&gt;Expect: 100-continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;From
+&lt;ul&gt;
+&lt;li&gt;发出请求的用户的&lt;/li&gt;
+&lt;li&gt;EmailFrom: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOnVzZXJAZW1haWwuY29t&#34;&gt;user@email.com&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Host
+&lt;ul&gt;
+&lt;li&gt;指定请求的服务器的域名和端口号&lt;/li&gt;
+&lt;li&gt;Host: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5naXRodWIuY29t&#34;&gt;www.github.com&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Match
+&lt;ul&gt;
+&lt;li&gt;只有请求内容与实体相匹配才有效&lt;/li&gt;
+&lt;li&gt;If-Match: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Modified-Since
+&lt;ul&gt;
+&lt;li&gt;如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回 304 代码&lt;/li&gt;
+&lt;li&gt;If-Modified-Since: Sat, 29 Oct 2018 19:43:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-None-Match
+&lt;ul&gt;
+&lt;li&gt;如果内容未改变返回 304 代码，参数为服务器先前发送的 Etag，与服务器回应的 Etag 比较判断是否改变&lt;/li&gt;
+&lt;li&gt;If-None-Match: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Range
+&lt;ul&gt;
+&lt;li&gt;如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为 Etag&lt;/li&gt;
+&lt;li&gt;If-Range: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Unmodified-Since
+&lt;ul&gt;
+&lt;li&gt;只在实体在指定时间之后未被修改才请求成功&lt;/li&gt;
+&lt;li&gt;If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Max-Forwards
+&lt;ul&gt;
+&lt;li&gt;限制信息通过代理和网关传送的时间&lt;/li&gt;
+&lt;li&gt;Max-Forwards: 10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pragma
+&lt;ul&gt;
+&lt;li&gt;用来包含实现特定的指令&lt;/li&gt;
+&lt;li&gt;Pragma: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proxy-Authorization
+&lt;ul&gt;
+&lt;li&gt;连接到代理的授权证书&lt;/li&gt;
+&lt;li&gt;Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Range
+&lt;ul&gt;
+&lt;li&gt;只请求实体的一部分，指定范围&lt;/li&gt;
+&lt;li&gt;Range: bytes=500-999&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Referer
+&lt;ul&gt;
+&lt;li&gt;先前网页的地址，当前请求网页紧随其后，即来路&lt;/li&gt;
+&lt;li&gt;Referer: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy56Y21oaS5jb20vYXJjaGl2ZXMvNzEuaHRtbA==&#34;&gt;http://www.zcmhi.com/archives/71.html&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TE
+&lt;ul&gt;
+&lt;li&gt;客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息&lt;/li&gt;
+&lt;li&gt;TE: trailers,deflate;q=0.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Upgrade
+&lt;ul&gt;
+&lt;li&gt;向服务器指定某种传输协议以便服务器进行转换（如果支持）&lt;/li&gt;
+&lt;li&gt;Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User-Agent
+&lt;ul&gt;
+&lt;li&gt;User-Agent 的内容包含发出请求的用户信息&lt;/li&gt;
+&lt;li&gt;User-Agent: Mozilla/5.0 (Linux; X11)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Via
+&lt;ul&gt;
+&lt;li&gt;通知中间网关或代理服务器地址，通信协议&lt;/li&gt;
+&lt;li&gt;Via: 1.0 fred, 1.1 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vd2hlcmUuY29t&#34;&gt;nowhere.com&lt;/span&gt; (Apache/1.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Warning
+&lt;ul&gt;
+&lt;li&gt;关于消息实体的警告信息&lt;/li&gt;
+&lt;li&gt;Warn: 199 Miscellaneous warning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;响应头列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应头列表&#34;&gt;#&lt;/a&gt; 响应头列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept-Ranges
+&lt;ul&gt;
+&lt;li&gt;表明服务器是否支持指定范围请求及哪种类型的分段请求&lt;/li&gt;
+&lt;li&gt;Accept-Ranges: bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Access-Control-Allow-Origin
+&lt;ul&gt;
+&lt;li&gt;配置有权限访问资源的域&lt;/li&gt;
+&lt;li&gt;Access-Control-Allow-Origin: &amp;lt;origin&amp;gt;|*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Age
+&lt;ul&gt;
+&lt;li&gt;从原始服务器到代理缓存形成的估算时间（以秒计，非负）&lt;/li&gt;
+&lt;li&gt;Age: 12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Allow
+&lt;ul&gt;
+&lt;li&gt;对某网络资源的有效的请求行为，不允许则返回 405&lt;/li&gt;
+&lt;li&gt;Allow: GET, HEAD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cache-Control
+&lt;ul&gt;
+&lt;li&gt;告诉所有的缓存机制是否可以缓存及哪种类型&lt;/li&gt;
+&lt;li&gt;Cache-Control: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Encoding
+&lt;ul&gt;
+&lt;li&gt;web 服务器支持的返回内容压缩编码类型&lt;/li&gt;
+&lt;li&gt;Content-Encoding: gzip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Language
+&lt;ul&gt;
+&lt;li&gt;响应体的语言&lt;/li&gt;
+&lt;li&gt;Content-Language: en,zh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Length
+&lt;ul&gt;
+&lt;li&gt;响应体的长度&lt;/li&gt;
+&lt;li&gt;Content-Length: 348&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Location
+&lt;ul&gt;
+&lt;li&gt;请求资源可替代的备用的另一地址&lt;/li&gt;
+&lt;li&gt;Content-Location: /index.htm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-MD5
+&lt;ul&gt;
+&lt;li&gt;返回资源的 MD5 校验值&lt;/li&gt;
+&lt;li&gt;Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Range
+&lt;ul&gt;
+&lt;li&gt;在整个返回体中本部分的字节位置&lt;/li&gt;
+&lt;li&gt;Content-Range: bytes 21010-47021/47022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Type
+&lt;ul&gt;
+&lt;li&gt;返回内容的 MIME 类型&lt;/li&gt;
+&lt;li&gt;Content-Type: text/html; charset=utf-8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Date
+&lt;ul&gt;
+&lt;li&gt;原始服务器消息发出的时间&lt;/li&gt;
+&lt;li&gt;Date: Tue, 15 Nov 2010 08:12:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ETag
+&lt;ul&gt;
+&lt;li&gt;请求变量的实体标签的当前值&lt;/li&gt;
+&lt;li&gt;ETag: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expires
+&lt;ul&gt;
+&lt;li&gt;响应过期的日期和时间&lt;/li&gt;
+&lt;li&gt;Expires: Thu, 01 Dec 2010 16:00:00 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Last-Modified
+&lt;ul&gt;
+&lt;li&gt;请求资源的最后修改时间&lt;/li&gt;
+&lt;li&gt;Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Location
+&lt;ul&gt;
+&lt;li&gt;用来重定向接收方到非请求 URL 的位置来完成请求或标识新的资源&lt;/li&gt;
+&lt;li&gt;Location: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy56Y21oaS5jb20vYXJjaGl2ZXMvOTQuaHRtbA==&#34;&gt;http://www.zcmhi.com/archives/94.html&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pragma
+&lt;ul&gt;
+&lt;li&gt;包括实现特定的指令，它可应用到响应链上的任何接收方&lt;/li&gt;
+&lt;li&gt;Pragma: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proxy-Authenticate
+&lt;ul&gt;
+&lt;li&gt;它指出认证方案和可应用到代理的该 URL 上的参数&lt;/li&gt;
+&lt;li&gt;Proxy-Authenticate: Basic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Refresh
+&lt;ul&gt;
+&lt;li&gt;应用于重定向或一个新的资源被创造，在 5 秒之后重定向（由网景提出，被大部分浏览器支持）&lt;/li&gt;
+&lt;li&gt;Refresh: 5; url=http://www.zcmhi.com/archives/94.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Retry-After
+&lt;ul&gt;
+&lt;li&gt;如果实体暂时不可取，通知客户端在指定时间之后再次尝试&lt;/li&gt;
+&lt;li&gt;Retry-After: 120&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Server
+&lt;ul&gt;
+&lt;li&gt;web 服务器软件名称&lt;/li&gt;
+&lt;li&gt;Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set-Cookie
+&lt;ul&gt;
+&lt;li&gt;设置 Http Cookie&lt;/li&gt;
+&lt;li&gt;Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security
+&lt;ul&gt;
+&lt;li&gt;设置浏览器强制使用 HTTPS 访问&lt;/li&gt;
+&lt;li&gt;max-age: x 秒的时间内 访问对应域名都使用 HTTPS 请求&lt;/li&gt;
+&lt;li&gt;includeSubDomains: 网站的子域名也启用规则&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security: max-age=1000; includeSubDomains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Trailer
+&lt;ul&gt;
+&lt;li&gt;指出头域在分块传输编码的尾部存在&lt;/li&gt;
+&lt;li&gt;Trailer: Max-Forwards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transfer-Encoding
+&lt;ul&gt;
+&lt;li&gt;文件传输编码&lt;/li&gt;
+&lt;li&gt;Transfer-Encoding:chunked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vary
+&lt;ul&gt;
+&lt;li&gt;告诉下游代理是使用缓存响应还是从原始服务器请求&lt;/li&gt;
+&lt;li&gt;Vary: *&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Via
+&lt;ul&gt;
+&lt;li&gt;告知代理客户端响应是通过哪里发送的&lt;/li&gt;
+&lt;li&gt;Via: 1.0 fred, 1.1 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vd2hlcmUuY29t&#34;&gt;nowhere.com&lt;/span&gt; (Apache/1.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Warning
+&lt;ul&gt;
+&lt;li&gt;警告实体可能存在的问题&lt;/li&gt;
+&lt;li&gt;Warning: 199 Miscellaneous warning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WWW-Authenticate
+&lt;ul&gt;
+&lt;li&gt;表明客户端请求实体应该使用的授权方案&lt;/li&gt;
+&lt;li&gt;WWW-Authenticate: Basic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;X-Content-Type-Options
+&lt;ul&gt;
+&lt;li&gt;配置禁止 MIME 类型嗅探&lt;/li&gt;
+&lt;li&gt;X-Content-Type-Options: nosniff&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;X-Frame-Options
+&lt;ul&gt;
+&lt;li&gt;配置页面是否能出现在 &amp;lt;frame&amp;gt;, &amp;lt;iframe&amp;gt;, &amp;lt;embed&amp;gt;, &amp;lt;object&amp;gt; 等标签中，防止点击劫持&lt;/li&gt;
+&lt;li&gt;X-Frame-Options: deny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;X-XSS-Protection
+&lt;ul&gt;
+&lt;li&gt;配置 XSS 防护机制&lt;/li&gt;
+&lt;li&gt;X-XSS-Protection: 1; mode=block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;http状态返回代码-1xx临时响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-1xx临时响应&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 1xx（临时响应）&lt;/h2&gt;
+&lt;p&gt;表示临时响应并需要请求者继续执行操作的状态代码。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;继续&lt;/td&gt;
+&lt;td&gt;服务器返回此代码表示已收到请求的第一部分，正在等待其余部分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td&gt;切换协议&lt;/td&gt;
+&lt;td&gt;请求者已要求服务器切换协议，服务器已确认并准备切换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-2xx-成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-2xx-成功&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 2xx （成功）&lt;/h2&gt;
+&lt;p&gt;表示成功处理了请求的状态代码。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;成功&lt;/td&gt;
+&lt;td&gt;服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;201&lt;/td&gt;
+&lt;td&gt;已创建&lt;/td&gt;
+&lt;td&gt;请求成功并且服务器创建了新的资源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;202&lt;/td&gt;
+&lt;td&gt;已接受&lt;/td&gt;
+&lt;td&gt;服务器已接受请求，但尚未处理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;203&lt;/td&gt;
+&lt;td&gt;非授权信息&lt;/td&gt;
+&lt;td&gt;服务器已成功处理了请求，但返回的信息可能来自另一来源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;无内容&lt;/td&gt;
+&lt;td&gt;服务器成功处理了请求，但没有返回任何内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;205&lt;/td&gt;
+&lt;td&gt;重置内容&lt;/td&gt;
+&lt;td&gt;m 服务器成功处理了请求，但没有返回任何内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;206&lt;/td&gt;
+&lt;td&gt;部分内容&lt;/td&gt;
+&lt;td&gt;服务器成功处理了部分 GET 请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-3xx-重定向&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-3xx-重定向&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 3xx （重定向）&lt;/h2&gt;
+&lt;p&gt;表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;td&gt;多种选择&lt;/td&gt;
+&lt;td&gt;针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;301&lt;/td&gt;
+&lt;td&gt;永久移动&lt;/td&gt;
+&lt;td&gt;请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;302&lt;/td&gt;
+&lt;td&gt;临时移动&lt;/td&gt;
+&lt;td&gt;服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;303&lt;/td&gt;
+&lt;td&gt;查看其他位置&lt;/td&gt;
+&lt;td&gt;请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;304&lt;/td&gt;
+&lt;td&gt;未修改&lt;/td&gt;
+&lt;td&gt;自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;305&lt;/td&gt;
+&lt;td&gt;使用代理&lt;/td&gt;
+&lt;td&gt;请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;307&lt;/td&gt;
+&lt;td&gt;临时重定向&lt;/td&gt;
+&lt;td&gt;服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-4xx请求错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-4xx请求错误&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 4xx（请求错误）&lt;/h2&gt;
+&lt;p&gt;这些状态代码表示请求可能出错，妨碍了服务器的处理。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;错误请求&lt;/td&gt;
+&lt;td&gt;服务器不理解请求的语法。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;未授权&lt;/td&gt;
+&lt;td&gt;请求要求身份验证。对于需要登录的网页，服务器可能返回此响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;禁止&lt;/td&gt;
+&lt;td&gt;服务器拒绝请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;未找到&lt;/td&gt;
+&lt;td&gt;服务器找不到请求的网页。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;405&lt;/td&gt;
+&lt;td&gt;方法禁用&lt;/td&gt;
+&lt;td&gt;禁用请求中指定的方法。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;406&lt;/td&gt;
+&lt;td&gt;不接受&lt;/td&gt;
+&lt;td&gt;无法使用请求的内容特性响应请求的网页。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;407&lt;/td&gt;
+&lt;td&gt;需要代理授权&lt;/td&gt;
+&lt;td&gt;此状态代码与 401（未授权）类似，但指定请求者应当授权使用代理。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;408&lt;/td&gt;
+&lt;td&gt;请求超时&lt;/td&gt;
+&lt;td&gt;服务器等候请求时发生超时。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;409&lt;/td&gt;
+&lt;td&gt;冲突&lt;/td&gt;
+&lt;td&gt;服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;410&lt;/td&gt;
+&lt;td&gt;已删除&lt;/td&gt;
+&lt;td&gt;如果请求的资源已永久删除，服务器就会返回此响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;411&lt;/td&gt;
+&lt;td&gt;需要有效长度&lt;/td&gt;
+&lt;td&gt;服务器不接受不含有效内容长度标头字段的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;412&lt;/td&gt;
+&lt;td&gt;未满足前提条件&lt;/td&gt;
+&lt;td&gt;服务器未满足请求者在请求中设置的其中一个前提条件。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;413&lt;/td&gt;
+&lt;td&gt;请求实体过大&lt;/td&gt;
+&lt;td&gt;服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;414&lt;/td&gt;
+&lt;td&gt;请求的 URI 过长&lt;/td&gt;
+&lt;td&gt;请求的 URI（通常为网址）过长，服务器无法处理。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;415&lt;/td&gt;
+&lt;td&gt;不支持的媒体类型&lt;/td&gt;
+&lt;td&gt;请求的格式不受请求页面的支持。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;416&lt;/td&gt;
+&lt;td&gt;请求范围不符合要求&lt;/td&gt;
+&lt;td&gt;如果页面无法提供请求的范围，则服务器会返回此状态代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;417&lt;/td&gt;
+&lt;td&gt;未满足期望值&lt;/td&gt;
+&lt;td&gt;服务器未满足 &amp;quot;期望&amp;quot; 请求标头字段的要求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-5xx服务器错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-5xx服务器错误&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 5xx（服务器错误）&lt;/h2&gt;
+&lt;p&gt;这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;服务器内部错误&lt;/td&gt;
+&lt;td&gt;服务器遇到错误，无法完成请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;501&lt;/td&gt;
+&lt;td&gt;尚未实施&lt;/td&gt;
+&lt;td&gt;服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;502&lt;/td&gt;
+&lt;td&gt;错误网关&lt;/td&gt;
+&lt;td&gt;服务器作为网关或代理，从上游服务器收到无效响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;503&lt;/td&gt;
+&lt;td&gt;服务不可用&lt;/td&gt;
+&lt;td&gt;服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;504&lt;/td&gt;
+&lt;td&gt;网关超时&lt;/td&gt;
+&lt;td&gt;服务器作为网关或代理，但是没有及时从上游服务器收到请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;505&lt;/td&gt;
+&lt;td&gt;HTTP 版本不受支持&lt;/td&gt;
+&lt;td&gt;服务器不支持请求中所用的 HTTP 协议版本。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;http-版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-版本&#34;&gt;#&lt;/a&gt; HTTP 版本&lt;/h1&gt;
+&lt;h2 id=&#34;http&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http&#34;&gt;#&lt;/a&gt; HTTP&lt;/h2&gt;
+&lt;p&gt;HTTP 是基于 TCP/IP 协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用 80 端口。&lt;/p&gt;
+&lt;h2 id=&#34;http-09&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-09&#34;&gt;#&lt;/a&gt; HTTP 0.9&lt;/h2&gt;
+&lt;p&gt;HTTP 0.9 最早在 1991 年发布，仅支持 GET 命令，请求格式只有简单的  &lt;code&gt;GET /url&lt;/code&gt;  ，服务端仅响应 HTML，响应完毕后关闭 TCP 连接。&lt;/p&gt;
+&lt;h2 id=&#34;http-10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-10&#34;&gt;#&lt;/a&gt; HTTP 1.0&lt;/h2&gt;
+&lt;p&gt;1996 年 5 月，HTTP/1.0 版本发布，丰富了传输的格式和内容，还引入了 POST、HEAD 两个动词。从 1.0 开始，必须在尾部添加协议版本。在 1.0 中，也引入了状态码 (status code)、多字符集支持、多部分发送 (multi-part type)、权限 (authorization)、缓存 (cache)、内容编码 (content encoding) 等内容。&lt;/p&gt;
+&lt;p&gt;HTTP 1.0 版的主要缺点是，每个 TCP 连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。&lt;/p&gt;
+&lt;p&gt;TCP 连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢 (slow start)，所以，HTTP 1.0 版本的性能比较差。&lt;/p&gt;
+&lt;h2 id=&#34;http-11&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-11&#34;&gt;#&lt;/a&gt; HTTP 1.1&lt;/h2&gt;
+&lt;p&gt;1997 年 1 月，HTTP/1.1 版本发布，进一步完善了 HTTP 协议。1.1 版本主要是引入了持久连接、管道机制、Content-Length、分块传输编码等内容。管道机制即在同一个 TCP 连接里面，客户端可以同时发送多个请求，这样就改进了 HTTP 协议的效率。PUT、PATCH、HEAD、 OPTIONS、DELETE 等动词方法也是在 HTTP 1.1 版本引入的。另外 1.1 版本新增了 Host 字段，用于指定服务器的域名，这也是后来虚拟主机得以发展的基础。&lt;/p&gt;
+&lt;p&gt;虽然 1.1 版允许复用 TCP 连接，但是同一个 TCP 连接里面，所有的数据通信是按次序进行的。服务器只有处理完一个回应，才会进行下一个回应。如果有一个请求很慢，就会阻塞后面的请求。&lt;/p&gt;
+&lt;h2 id=&#34;spdy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spdy&#34;&gt;#&lt;/a&gt; SPDY&lt;/h2&gt;
+&lt;p&gt;2009 年，谷歌公开了自行研发的 SPDY 协议，用于解决 HTTP/1.1 效率不高的问题，而后被当做 HTTP/2 的基础。&lt;/p&gt;
+&lt;h2 id=&#34;http2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http2&#34;&gt;#&lt;/a&gt; HTTP/2&lt;/h2&gt;
+&lt;p&gt;2015 年，HTTP/2 发布，HTTP/2 是一个二进制协议，头信息和数据体都是二进制，统称为帧 (frame)，帧分为头信息帧和数据帧。HTTP/2 复用 TCP 连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序回应。&lt;/p&gt;
+&lt;h1 id=&#34;https&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#https&#34;&gt;#&lt;/a&gt; HTTPS&lt;/h1&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;HTTPS (HyperText Transfer Protocol over Secure Socket Layer) 可以理解为 HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。&lt;/p&gt;
+&lt;h2 id=&#34;交互&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互&#34;&gt;#&lt;/a&gt; 交互&lt;/h2&gt;
+&lt;h3 id=&#34;证书验证阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#证书验证阶段&#34;&gt;#&lt;/a&gt; 证书验证阶段&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器发起 HTTPS 请求&lt;/li&gt;
+&lt;li&gt;服务端返回 HTTPS 证书
+&lt;ul&gt;
+&lt;li&gt;其中证书包含：
+&lt;ul&gt;
+&lt;li&gt;颁发机构信息&lt;/li&gt;
+&lt;li&gt;公钥&lt;/li&gt;
+&lt;li&gt;公司信息&lt;/li&gt;
+&lt;li&gt;域名&lt;/li&gt;
+&lt;li&gt;有效期&lt;/li&gt;
+&lt;li&gt;指纹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;客户端验证证书是否合法，如果不合法则提示告警&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据传输阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据传输阶段&#34;&gt;#&lt;/a&gt; 数据传输阶段&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;当证书验证合法后，在本地生成随机数&lt;/li&gt;
+&lt;li&gt;通过公钥加密随机数，并把加密后的随机数传输到服务端&lt;/li&gt;
+&lt;li&gt;服务端通过私钥对随机数进行解密&lt;/li&gt;
+&lt;li&gt;服务端通过客户端传入的随机数构造对称加密算法，对返回结果内容进行加密后传输&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ca&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ca&#34;&gt;#&lt;/a&gt; CA&lt;/h2&gt;
+&lt;p&gt;CA (Certificate Authority) 是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。&lt;/p&gt;
+&lt;h1 id=&#34;websocket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#websocket&#34;&gt;#&lt;/a&gt; WebSocket&lt;/h1&gt;
+&lt;h2 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;WebSocket 是一种网络传输协议，可在单个 TCP 连接上进行全双工通信，位于 OSI 模型的应用层。WebSocket 协议在 2011 年由 IETF 标准化为 RFC 6455，后由 RFC 7936 补充规范。&lt;/p&gt;
+&lt;h2 id=&#34;交互-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互-2&#34;&gt;#&lt;/a&gt; 交互&lt;/h2&gt;
+&lt;h3 id=&#34;握手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#握手&#34;&gt;#&lt;/a&gt; 握手&lt;/h3&gt;
+&lt;p&gt;握手阶段和 HTTP 协议较为类似，RFC 文档中给出的握手示例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Origin: http://example.com
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中 Upgrade 的值必须为 websocket ，Connection 的值必须为 Upgrade ，合起来表示客户端喜欢连接升级到 Websocket 协议。&lt;/p&gt;
+&lt;p&gt;Sec-WebSocket-Key 是一个随机值，Sec-WebSocket-Accept 是 Sec-WebSocket-Key 拼接特定字符串  &lt;code&gt;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&lt;/code&gt;  计算 SHA1 摘要后的 Base64 编码的值。例子中  &lt;code&gt;s3pPLMBiTxaQ9kYGzzhZRbK+xOo=&lt;/code&gt;  就是  &lt;code&gt;dGhlIHNhbXBsZSBub25jZQ==258EAFA5-E914-47DA-95CA-C5AB0DC85B11&lt;/code&gt;  对应的 SHA1 摘要。&lt;/p&gt;
+&lt;h1 id=&#34;cookie&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cookie&#34;&gt;#&lt;/a&gt; Cookie&lt;/h1&gt;
+&lt;h2 id=&#34;2751-简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2751-简介&#34;&gt;#&lt;/a&gt; 2.7.5.1. 简介&lt;/h2&gt;
+&lt;p&gt;Cookie（复数形态 Cookies），类型为「小型文本文件」，指某些网站为了辨别用户身份而储存在用户本地终端上的数据。&lt;/p&gt;
+&lt;h2 id=&#34;2752-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2752-属性&#34;&gt;#&lt;/a&gt; 2.7.5.2. 属性&lt;/h2&gt;
+&lt;h3 id=&#34;name&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#name&#34;&gt;#&lt;/a&gt; name&lt;/h3&gt;
+&lt;p&gt;cookie 的名称。&lt;/p&gt;
+&lt;h3 id=&#34;value&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#value&#34;&gt;#&lt;/a&gt; value&lt;/h3&gt;
+&lt;p&gt;cookie 的值。&lt;/p&gt;
+&lt;h3 id=&#34;expires&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#expires&#34;&gt;#&lt;/a&gt; expires&lt;/h3&gt;
+&lt;p&gt;当 Expires 属性缺省时，表示是会话性 Cookie，在用户关闭浏览器时失效。&lt;/p&gt;
+&lt;h3 id=&#34;max-age&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#max-age&#34;&gt;#&lt;/a&gt; max-age&lt;/h3&gt;
+&lt;p&gt;max-age 可以为正数、负数、0。如果 max-age 属性为正数时，浏览器会将其持久化，当 max-age 属性为负数，则表示该 Cookie 只是一个会话性 Cookie。当 max-age 为 0 时，则会立即删除这个 Cookie。Expires 和 max-age 都存在的条件下，max-age 优先级更高。&lt;/p&gt;
+&lt;h3 id=&#34;domain&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#domain&#34;&gt;#&lt;/a&gt; domain&lt;/h3&gt;
+&lt;p&gt;指定 Cookie 的域名，默认是当前域名。domain 设置时可以设置为自身及其父域，子域可以访问父域的 Cookie，反之不能。&lt;/p&gt;
+&lt;h3 id=&#34;path&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#path&#34;&gt;#&lt;/a&gt; path&lt;/h3&gt;
+&lt;p&gt;指定一个 URL 路径，这个路径必须出现在要请求的资源的路径中才可以发送对应的 Cookie。&lt;/p&gt;
+&lt;h3 id=&#34;secure&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#secure&#34;&gt;#&lt;/a&gt; secure&lt;/h3&gt;
+&lt;p&gt;只能通过 HTTPS 传输。&lt;/p&gt;
+&lt;h3 id=&#34;httponly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#httponly&#34;&gt;#&lt;/a&gt; httponly&lt;/h3&gt;
+&lt;p&gt;限制 Cookie 仅在 HTTP 传输过程中被读取，一定程度上防御 XSS 攻击。&lt;/p&gt;
+&lt;h3 id=&#34;samesite&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#samesite&#34;&gt;#&lt;/a&gt; SameSite&lt;/h3&gt;
+&lt;p&gt;SameSite 支持 Strict / Lax / None 三种值。Strict 最为严格，完全禁止第三方 Cookie，跨站点时，任何情况下都不会发送 Cookie。Lax 允许部分第三方请求携带 Cookie，主要是链接、预加载、GET 表单三种情况。Cookie 的 SameSite 属性为 None ，且设置了 Secure 时，无论是否跨站都会发送 Cookie。&lt;/p&gt;
+&lt;h1 id=&#34;webdav&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webdav&#34;&gt;#&lt;/a&gt; WebDAV&lt;/h1&gt;
+&lt;h2 id=&#34;简介-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-3&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;WebDAV （Web-based Distributed Authoring and Versioning） 一种基于 HTTP 1.1 协议的通信协议。它扩展了 HTTP 1.1，在 GET、POST、HEAD 等几个 HTTP 标准方法以外添加了一些新的方法，使应用程序可对 Web Server 直接读写，并支持写文件锁定、解锁，以及版本控制等功能。&lt;/p&gt;
+&lt;p&gt;支持的方法具体为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OPTIONS
+&lt;ul&gt;
+&lt;li&gt;获取服务器的支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GET / PUT / POST / DELETE
+&lt;ul&gt;
+&lt;li&gt;资源操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TRACE
+&lt;ul&gt;
+&lt;li&gt;跟踪服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HEAD&lt;/li&gt;
+&lt;li&gt;MKCOL
+&lt;ul&gt;
+&lt;li&gt;创建集合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PROPFIND / PROPPATCH&lt;/li&gt;
+&lt;li&gt;COPY / MOVE&lt;/li&gt;
+&lt;li&gt;LOCK / UNLOCK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关cve&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关cve&#34;&gt;#&lt;/a&gt; 相关 CVE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CVE-2015-1833
+&lt;ul&gt;
+&lt;li&gt;Apache Jacrabbit WebDav XXE&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zZWN1cml0eWZvY3VzLmNvbS9hcmNoaXZlLzEvNTM1NTgy&#34;&gt;http://www.securityfocus.com/archive/1/535582&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CVE-2015-7326
+&lt;ul&gt;
+&lt;li&gt;Milton WebDav XXE&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zZWN1cml0eWZvY3VzLmNvbS9hcmNoaXZlLzEvNTM2ODEz&#34;&gt;http://www.securityfocus.com/archive/1/536813&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzMyNTM=&#34;&gt;RFC 3253&lt;/span&gt; Versioning Extensions to WebDAV (Web Distributed Authoring and Versioning)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM2NDg=&#34;&gt;RFC 3648&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) Ordered Collections Protocol&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM3NDQ=&#34;&gt;RFC 3744&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) Access Control Protocol&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQ0Mzc=&#34;&gt;RFC 4437&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) Redirect Reference Resources&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQ5MTg=&#34;&gt;RFC 4918&lt;/span&gt; HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUzMjM=&#34;&gt;RFC 5323&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) SEARCH&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzU4NDI=&#34;&gt;RFC 5842&lt;/span&gt; Binding Extensions to Web Distributed Authoring and Versioning (WebDAV)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXRhdHJhY2tlci5pZXRmLm9yZy9kb2MvaHRtbC9yZmM2NDU1&#34;&gt;The WebSocket Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXRhdHJhY2tlci5pZXRmLm9yZy9kb2MvaHRtbC9yZmM3OTM2&#34;&gt;Clarifying Registry Procedures for the WebSocket Subprotocol Name Registry&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blog&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#blog&#34;&gt;#&lt;/a&gt; Blog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzIwMTUuemVyb25pZ2h0cy5vcmcvYXNzZXRzL2ZpbGVzLzM1LUVnb3Jvdi5wZGY=&#34;&gt;What should a hacker know about WebDav&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTkvMDkvY29va2llLXNhbWVzaXRlLmh0bWw=&#34;&gt;Cookie 的 SameSite 属性&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTYvMDgvaHR0cC5odG1s&#34;&gt;HTTP 协议入门&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="HTTP" />
+        <updated>2022-11-25T03:05:41.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/DNS/</id>
+        <title>域名系统</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/DNS/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;DNS 是一个简单的请求 - 响应协议，是将域名和 IP 地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS 使用 TCP 和 UDP 协议的 53 端口。&lt;/p&gt;
+&lt;h1 id=&#34;请求响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请求响应&#34;&gt;#&lt;/a&gt; 请求响应&lt;/h1&gt;
+&lt;h2 id=&#34;dns记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns记录&#34;&gt;#&lt;/a&gt; DNS 记录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回域名对应的 IPv4 地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AAAA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;域名服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回该域名由哪台域名服务器解析&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PTR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;反向记录&lt;/li&gt;
+&lt;li&gt;从 IP 地址到域名的记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MX&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电子邮件交换记录&lt;/li&gt;
+&lt;li&gt;记录邮件域名对应的 IP 地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;响应码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应码&#34;&gt;#&lt;/a&gt; 响应码&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NOERROR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;No error condition
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;FORMERR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Format error - The name server was unable to interpret the query
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;SERVFAIL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Server failure - The name server was unable to process this query due to a problem with the name server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;NXDOMAIN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;this code signifies that the domain name referenced in the query does not exist
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;NOTIMP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Not Implemented - The name server does not support the requested kind of query
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;REFUSED&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Refused - The name server refuses to perform the specified operation for policy reasons
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;NODATA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;A pseudo RCODE which indicates that the name is valid, for the given class, but [there] are no records of the given type A NODATA response has to be inferred from the answer.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;域名系统工作原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名系统工作原理&#34;&gt;#&lt;/a&gt; 域名系统工作原理&lt;/h1&gt;
+&lt;h2 id=&#34;解析过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解析过程&#34;&gt;#&lt;/a&gt; 解析过程&lt;/h2&gt;
+&lt;p&gt;DNS 解析过程是递归查询的，具体过程如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户要访问域名 www.example.com 时，先查看本机 hosts 是否有记录或者本机是否有 DNS 缓存，如果有，直接返回结果，否则向递归服务器查询该域名的 IP 地址&lt;/li&gt;
+&lt;li&gt;递归缓存为空时，首先向根服务器查询 com 顶级域的 IP 地址&lt;/li&gt;
+&lt;li&gt;根服务器告知递归服务器 com 顶级域名服务器的 IP 地址&lt;/li&gt;
+&lt;li&gt;递归向 com 顶级域名服务器查询负责 example.com 的权威服务器的 IP&lt;/li&gt;
+&lt;li&gt;com 顶级域名服务器返回相应的 IP 地址&lt;/li&gt;
+&lt;li&gt;递归向 example.com 的权威服务器查询 www.example.com 的地址记录&lt;/li&gt;
+&lt;li&gt;权威服务器告知 www.example.com 的地址记录&lt;/li&gt;
+&lt;li&gt;递归服务器将查询结果返回客户端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;域传送&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域传送&#34;&gt;#&lt;/a&gt; 域传送&lt;/h2&gt;
+&lt;p&gt;DNS 服务器可以分为主服务器、备份服务器和缓存服务器。域传送是指备份服务器从主服务器拷贝数据，并使用得到的数据更新自身数据库。域传送是在主备服务器之间同步数据库的机制。&lt;/p&gt;
+&lt;h1 id=&#34;服务器类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器类型&#34;&gt;#&lt;/a&gt; 服务器类型&lt;/h1&gt;
+&lt;h2 id=&#34;根服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#根服务器&#34;&gt;#&lt;/a&gt; 根服务器&lt;/h2&gt;
+&lt;p&gt;根服务器是 DNS 的核心，负责互联网顶级域名的解析，用于维护域的权威信息，并将 DNS 查询引导到相应的域名服务器。&lt;/p&gt;
+&lt;p&gt;根服务器在域名树中代表最顶级的  &lt;code&gt;.&lt;/code&gt;  域， 一般省略。&lt;/p&gt;
+&lt;p&gt;13 台 IPv4 根服务器的域名标号为 a 到 m，即 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Eucm9vdC1zZXJ2ZXJzLm9yZw==&#34;&gt;a.root-servers.org&lt;/span&gt; 到 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL20ucm9vdC1zZXJ2ZXJzLm9yZw==&#34;&gt;m.root-servers.org&lt;/span&gt;，所有服务器存储的数据相同，仅包含 ICANN 批准的 TLD 域名权威信息。&lt;/p&gt;
+&lt;h2 id=&#34;权威服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权威服务器&#34;&gt;#&lt;/a&gt; 权威服务器&lt;/h2&gt;
+&lt;p&gt;权威服务器上存储域名 Zone 文件，维护域内域名的权威信息，递归服务器可以从权威服务器获得 DNS 查询的资源记录。&lt;/p&gt;
+&lt;p&gt;权威服务器需要在所承载的域名所属的 TLD 管理局注册，同一个权威服务器可以承载不同 TLD 域名，同一个域也可以有多个权威服务器。&lt;/p&gt;
+&lt;h2 id=&#34;递归服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归服务器&#34;&gt;#&lt;/a&gt; 递归服务器&lt;/h2&gt;
+&lt;p&gt;递归服务器负责接收用户的查询请求，进行递归查询并响应用户查询请求。在初始时递归服务器仅有记录了根域名的 Hint 文件。&lt;/p&gt;
+&lt;h1 id=&#34;加密方案&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加密方案&#34;&gt;#&lt;/a&gt; 加密方案&lt;/h1&gt;
+&lt;p&gt;作为主流的防御方案，DNS 加密有五种方案，分别是 DNS-over-TLS (DoT)、DNS-over-DTLS、DNS-over-HTTPS (DoH)、DNS-over-QUIC 以及 DNSCrypt。&lt;/p&gt;
+&lt;h2 id=&#34;dot&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dot&#34;&gt;#&lt;/a&gt; DoT&lt;/h2&gt;
+&lt;p&gt;DoT 方案在 2016 年发表于 RFC7858，使用 853 端口。主要思想是 Client 和 Server 通过 TCP 协议建立 TLS 会话后再进行 DNS 传输，Client 通过 SSL 证书验证服务器身份。&lt;/p&gt;
+&lt;h2 id=&#34;dns-over-dtls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns-over-dtls&#34;&gt;#&lt;/a&gt; DNS-over-DTLS&lt;/h2&gt;
+&lt;p&gt;DNS-over-DTLS 和 DoT 类似，区别在于使用 UDP 协议而不是 TCP 协议。&lt;/p&gt;
+&lt;h2 id=&#34;doh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#doh&#34;&gt;#&lt;/a&gt; DoH&lt;/h2&gt;
+&lt;p&gt;DoH 方案在发表 RFC8484，使用  &lt;code&gt;https://dns.example.com/dns-query&amp;#123;?dns&amp;#125;&lt;/code&gt;  来查询服务器的 IP，复用 https 的 443 端口，流量特征比较小。DoH 会对 DNS 服务器进行加密认证，不提供 fallback 选项。目前 Cloudflare、Google 等服务商对 DoH 提供了支持。&lt;/p&gt;
+&lt;h2 id=&#34;dns-over-quic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns-over-quic&#34;&gt;#&lt;/a&gt; DNS-over-QUIC&lt;/h2&gt;
+&lt;p&gt;DNS-over-QUIC 安全特性和 DoT 类似，但是性能更高，目前没有合适的软件实现。&lt;/p&gt;
+&lt;h2 id=&#34;dnscrypt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dnscrypt&#34;&gt;#&lt;/a&gt; DNSCrypt&lt;/h2&gt;
+&lt;p&gt;DNSCrypt 使用 X25519-XSalsa20Poly1305 而非标准的 TLS，且 DNSCrypt 的 Client 需要额外的软件，Server 需要的专门的证书。&lt;/p&gt;
+&lt;h1 id=&#34;dns利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns利用&#34;&gt;#&lt;/a&gt; DNS 利用&lt;/h1&gt;
+&lt;h2 id=&#34;dga&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dga&#34;&gt;#&lt;/a&gt; DGA&lt;/h2&gt;
+&lt;p&gt;DGA（Domain Generate Algorithm，域名生成算法）是一种利用随机字符来生成 C&amp;amp;C 域名，从而逃避域名黑名单检测的技术手段，常见于 botnet 中。一般来说，一个 DGA 域名的存活时间约在 1-7 天左右。&lt;/p&gt;
+&lt;p&gt;通信时，客户端和服务端都运行同一套 DGA 算法，生成相同的备选域名列表，当需要发动攻击的时候，选择其中少量进行注册，便可以建立通信，并且可以对注册的域名应用速变 IP 技术，快速变换 IP，从而域名和 IP 都可以进行快速变化。&lt;/p&gt;
+&lt;p&gt;DGA 域名有多种生成方式，根据种子类型可以分为确定性和不确定性的生成。不确定性的种子可能会选用当天的一些即时数据，如汇率信息等。&lt;/p&gt;
+&lt;h2 id=&#34;dns隧道&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns隧道&#34;&gt;#&lt;/a&gt; DNS 隧道&lt;/h2&gt;
+&lt;p&gt;DNS 隧道工具将进入隧道的其他协议流量封装到 DNS 协议内，在隧道上传输。这些数据包出隧道时进行解封装，还原数据。&lt;/p&gt;
+&lt;h1 id=&#34;rdap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdap&#34;&gt;#&lt;/a&gt; RDAP&lt;/h1&gt;
+&lt;p&gt;RDAP (Registration Data Access Protocol) 协议是 Whois 协议的后继，和 Whois 协议类似，RDAP 协议提供了域名、自治系统、IP 地址的信息查询。&lt;/p&gt;
+&lt;h1 id=&#34;相关漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关漏洞&#34;&gt;#&lt;/a&gt; 相关漏洞&lt;/h1&gt;
+&lt;h2 id=&#34;dns劫持&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns劫持&#34;&gt;#&lt;/a&gt; DNS 劫持&lt;/h2&gt;
+&lt;p&gt;DNS 劫持有多种方式，比较早期的攻击方式是通过攻击域名解析服务器，或是伪造 DNS 响应的方法，来将域名解析到恶意的 IP 地址。&lt;/p&gt;
+&lt;p&gt;随着互联网应用的不断发展，出现了基于废弃记录的劫持方式。这种方式发生的场景是次级域名的解析记录指向第三方资源，而第三方资源被释放后，解析记录并没有取消，在这种场景下，可以对应申请第三方资源，以获取控制解析记录的能力。&lt;/p&gt;
+&lt;h2 id=&#34;拒绝服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拒绝服务&#34;&gt;#&lt;/a&gt; 拒绝服务&lt;/h2&gt;
+&lt;p&gt;DNS 服务通常会开启 UDP 端口，当 DNS 服务器拥有大量二级域 NS 记录时，通过 DNS 的 UDP 反射攻击可以实现高倍的拒绝服务。&lt;/p&gt;
+&lt;h1 id=&#34;相关机构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关机构&#34;&gt;#&lt;/a&gt; 相关机构&lt;/h1&gt;
+&lt;h2 id=&#34;icann&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#icann&#34;&gt;#&lt;/a&gt; ICANN&lt;/h2&gt;
+&lt;p&gt;互联网名称与数字地址分配机构 (Internet Corporation for Assigned Names and Numbers, ICANN) 创建于 1998 年 9 月 18 日，职能包括管理域名和 IP 地址的分配等与互联网相关的任务。&lt;/p&gt;
+&lt;h2 id=&#34;iana&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#iana&#34;&gt;#&lt;/a&gt; IANA&lt;/h2&gt;
+&lt;p&gt;互联网号码分配局 (Internet Assigned Numbers Authority, IANA) ，是一家互联网地址指派机构，管理国际互联网中使用的 IP 地址、域名和许多其它参数的机构。&lt;/p&gt;
+&lt;h1 id=&#34;术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#术语&#34;&gt;#&lt;/a&gt; 术语&lt;/h1&gt;
+&lt;h2 id=&#34;mdns&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mdns&#34;&gt;#&lt;/a&gt; mDNS&lt;/h2&gt;
+&lt;p&gt;Multicast DNS (mDNS)，多播 DNS，使用 5353 端口，组播地址为  &lt;code&gt;224.0.0.251&lt;/code&gt;  或  &lt;code&gt;[FF02::FB]&lt;/code&gt;  。在一个没有常规 DNS 服务器的小型网络内可以使用 mDNS 来实现类似 DNS 的编程接口、包格式和操作语义。mDNS 协议的报文与 DNS 的报文结构相同，但有些字段对于 mDNS 来说有新的含义。&lt;/p&gt;
+&lt;p&gt;启动 mDNS 的主机会在进入局域网后向所有主机组播消息，包含主机名、IP 等信息，其他拥有相应服务的主机也会响应含有主机名和 IP 的信息。&lt;/p&gt;
+&lt;p&gt;mDNS 的域名是用  &lt;code&gt;.local&lt;/code&gt;  和普通域名区分开的。&lt;/p&gt;
+&lt;h2 id=&#34;fqdn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fqdn&#34;&gt;#&lt;/a&gt; FQDN&lt;/h2&gt;
+&lt;p&gt;FQDN (Fully-Qualified Domain Name) 是域名的完全形态，主要是包含零长度的根标签，例如  &lt;code&gt;www.example.com.&lt;/code&gt;  。&lt;/p&gt;
+&lt;h2 id=&#34;tld&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tld&#34;&gt;#&lt;/a&gt; TLD&lt;/h2&gt;
+&lt;p&gt;Top-Level Domain (TLD) 是属于根域的一个域，例如  &lt;code&gt;com&lt;/code&gt;  或  &lt;code&gt;jp&lt;/code&gt;  。&lt;/p&gt;
+&lt;p&gt;TLD 一般可以分为 Country Code Top-Level Domains (ccTLDs) 、Generic Top-Level Domains (gTLDs) 以及其它。&lt;/p&gt;
+&lt;h2 id=&#34;idn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#idn&#34;&gt;#&lt;/a&gt; IDN&lt;/h2&gt;
+&lt;p&gt;Internationalized Domain Names for Applications (IDNA) 是为了处理非 ASCII 字符的情况。&lt;/p&gt;
+&lt;h2 id=&#34;cname&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cname&#34;&gt;#&lt;/a&gt; CNAME&lt;/h2&gt;
+&lt;p&gt;CNAME 即 Canonical name，又称 alias，将域名指向另一个域名。&lt;/p&gt;
+&lt;h2 id=&#34;ttl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ttl&#34;&gt;#&lt;/a&gt; TTL&lt;/h2&gt;
+&lt;p&gt;Time To Live，无符号整数，记录 DNS 记录过期的时间，最小是 0，最大是 2147483647 (2^31 - 1)。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucmZjLWVkaXRvci5vcmcvcmZjL3JmYzkyMA==&#34;&gt;RFC 920 Domain Requirements&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzEwMzQ=&#34;&gt;RFC 1034 DOMAIN NAMES CONCEPTS AND FACILITIES&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzEwMzU=&#34;&gt;RFC 1035 DOMAIN NAMES IMPLEMENTATION AND SPECIFICATION&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzExMjM=&#34;&gt;RFC 1123 Requirements for Internet Hosts -- Application and Support&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI1MzU=&#34;&gt;RFC 2535 Domain Name System Security Extensions&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI5MzA=&#34;&gt;RFC 2930 Secret Key Establishment for DNS (TKEY RR)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI5MzE=&#34;&gt;RFC 2931 DNS Request and Transaction Signatures ( SIG(0)s )&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM1OTY=&#34;&gt;RFC 3596 Legacy Resolver Compatibility for Delegation Signer (DS)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM3NTU=&#34;&gt;RFC 3755 DNS Extensions to Support IP Version 6&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUwMDE=&#34;&gt;RFC 5001 Automated Updates of DNS Security (DNSSEC) Trust Anchors&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzU5MzY=&#34;&gt;RFC 5936 DNS Zone Transfer Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzU5NjY=&#34;&gt;RFC 5966 DNS Transport over TCP - Implementation Requirements&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzYzNzY=&#34;&gt;RFC 6376 DomainKeys Identified Mail (DKIM) Signatures&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzY3NjI=&#34;&gt;RFC 6762 Multicast DNS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzY4OTE=&#34;&gt;RFC 6891 Extension Mechanisms for DNS (EDNS(0))&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzY4OTU=&#34;&gt;RFC 6895 DNS IANA Considerations&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc3NjY=&#34;&gt;RFC 7766 DNS Transport over TCP - Implementation Requirements&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc4NTg=&#34;&gt;RFC 7858 Specification for DNS over Transport Layer Security (TLS)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc4NzE=&#34;&gt;RFC 7871 Client Subnet in DNS Queries&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgwODI=&#34;&gt;RFC 8082 NXDOMAIN&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0ODI=&#34;&gt;RFC 8482 Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0ODQ=&#34;&gt;RFC 8484 DNS Queries over HTTPS (DoH)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0OTA=&#34;&gt;RFC 8490 DNS Stateful Operations&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzg0OTk=&#34;&gt;RFC 8499 DNS Terminology&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;whois-相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#whois-相关&#34;&gt;#&lt;/a&gt; Whois 相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgxMg==&#34;&gt;RFC 812 NICNAME/WHOIS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzk1NA==&#34;&gt;RFC 954 NICNAME/WHOIS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzIxNjc=&#34;&gt;RFC 2167 Referral Whois (RWhois) Protocol V1.5&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM5MTI=&#34;&gt;RFC 3912 WHOIS Protocol Specification&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODU=&#34;&gt;RFC 7485 Inventory and Analysis of WHOIS Registration Objects&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rdap-相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdap-相关&#34;&gt;#&lt;/a&gt; RDAP 相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODA=&#34;&gt;RFC7480 HTTP Usage in the Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODE=&#34;&gt;RFC7481 Security Services for the Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc0ODQ=&#34;&gt;RFC7484 Finding the Authoritative Registration Data (RDAP) Service&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzgwNTY=&#34;&gt;RFC8056 Registration Data Access Protocol (RDAP) Object Tagging&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzkwODI=&#34;&gt;RFC9082 Registration Data Access Protocol (RDAP) Query Format&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzkwODM=&#34;&gt;RFC9083 JSON Responses for the Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关标准&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关标准&#34;&gt;#&lt;/a&gt; 相关标准&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hYm91dC5yZGFwLm9yZy8=&#34;&gt;Registration Data Access Protocol (RDAP)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL05MbmV0TGFicy91bmJvdW5k&#34;&gt;Unbound&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2lzYy1wcm9qZWN0cy9iaW5kOQ==&#34;&gt;bind9&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;研究文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#研究文章&#34;&gt;#&lt;/a&gt; 研究文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MveGJmMFFicHBrOFIwbng4OVBiNFlUZw==&#34;&gt;DGA 域名的今生前世：缘起、检测、与发展&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLnRoZWNqdy5tZS8/cD0xMjIx&#34;&gt;DNSSEC 原理和分析&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Plohmann D, Yakdan K, Klatt M, et al. A comprehensive measurement study of domain generating malware[C]//25th {USENIX} Security Symposium ({USENIX} Security 16). 2016: 263-278.&lt;/li&gt;
+&lt;li&gt;An End-to-End Large-Scale Measurement of DNS-over-Encryption: How Far Have We Come?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关cve&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关cve&#34;&gt;#&lt;/a&gt; 相关 CVE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZXNlYXJjaC5jaGVja3BvaW50LmNvbS8yMDIwL3Jlc29sdmluZy15b3VyLXdheS1pbnRvLWRvbWFpbi1hZG1pbi1leHBsb2l0aW5nLWEtMTcteWVhci1vbGQtYnVnLWluLXdpbmRvd3MtZG5zLXNlcnZlcnMv&#34;&gt;SIGRed – Resolving Your Way into Domain Admin: Exploiting a 17 Year-old Bug in Windows DNS Servers&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="域名" />
+        <category term="DNS" />
+        <category term="WEB" />
+        <updated>2022-11-25T02:06:09.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/protocol/</id>
+        <title>网络协议</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/protocol/"/>
+        <content type="html">&lt;h1 id=&#34;udp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp协议&#34;&gt;#&lt;/a&gt; UDP 协议&lt;/h1&gt;
+&lt;h2 id=&#34;主要特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要特点&#34;&gt;#&lt;/a&gt; 主要特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;协议开销小、效率高。&lt;/li&gt;
+&lt;li&gt;UDP 是无连接的，即发送数据之前不需要建立连接。&lt;/li&gt;
+&lt;li&gt;UDP 使用尽最大努力交付，即不保证可靠交付。&lt;/li&gt;
+&lt;li&gt;UDP 没有拥塞控制。&lt;/li&gt;
+&lt;li&gt;UDP 支持一对一、一对多、多对一和多对多交互通信。&lt;/li&gt;
+&lt;li&gt;UDP 的首部开销小，只有 8 个字节。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;tcp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp协议&#34;&gt;#&lt;/a&gt; TCP 协议&lt;/h1&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由 RFC 793 定义。&lt;/p&gt;
+&lt;h2 id=&#34;三次握手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三次握手&#34;&gt;#&lt;/a&gt; 三次握手&lt;/h2&gt;
+&lt;p&gt;三次握手（Three-Way Handshake）是指建立一个 TCP 连接时，需要客户端和服务端总共发送 3 个包以确认连接的建立。&lt;/p&gt;
+&lt;p&gt;第一次握手客户端将标志位 SYN 置为 1，随机产生一个值 seq=s ，并将该数据包发送给服务端，客户端进入 SYN_SENT 状态，等待服务端确认。&lt;/p&gt;
+&lt;p&gt;第二次握手服务端收到数据包后由标志位 SYN=1 知道客户端请求建立连接，服务端将标志位 SYN 和 ACK 都置为 1，ack=s+1，随机产生一个值 seq=k ，并将该数据包发送给客户端以确认连接请求，服务端进入 SYN_RCVD 状态。&lt;/p&gt;
+&lt;p&gt;第三次握手客户端收到确认后，检查 ack 值是否为 s+1，ACK 标志位是否为 1，如果正确则将标志位 ACK 置为 1，ack=k+1，并将该数据包发送给服务端，服务端检查 ack 值是否为 k+1，ACK 标志位是否为 1，如果正确则连接建立成功，客户端和服务端进入 ESTABLISHED 状态，完成三次握手。&lt;/p&gt;
+&lt;h2 id=&#34;四次挥手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四次挥手&#34;&gt;#&lt;/a&gt; 四次挥手&lt;/h2&gt;
+&lt;p&gt;四次挥手（Four-Way Wavehand）指断开一个 TCP 连接时，需要客户端和服务端总共发送 4 个包以确认连接的断开。&lt;/p&gt;
+&lt;p&gt;第一次挥手客户端发送一个 FIN ，用来关闭客户端到服务端的数据传送，客户端进入 FIN_WAIT_1 状态。&lt;/p&gt;
+&lt;p&gt;第二次挥手服务端收到 FIN 后，发送一个 ACK 给客户端，确认序号为收到序号 + 1，服务端进入 CLOSE_WAIT 状态。&lt;/p&gt;
+&lt;p&gt;第三次挥手服务端发送一个 FIN ，用来关闭服务端到客户端的数据传送，服务端进入 LAST_ACK 状态。&lt;/p&gt;
+&lt;p&gt;第四次挥手客户端收到 FIN 后，客户端进入 TIME_WAIT 状态，接着发送一个 ACK 给服务端，确认序号为收到序号 + 1，服务端进入 CLOSED 状态，完成四次挥手。&lt;/p&gt;
+&lt;h2 id=&#34;拥塞控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制&#34;&gt;#&lt;/a&gt; 拥塞控制&lt;/h2&gt;
+&lt;p&gt;拥塞是指网络中报文数量过多，使得服务端来不及处理，以致引起这部分乃至整个网络性能下降的现象，严重时甚至会导致网络通信业务陷入停顿即出现死锁现象。&lt;/p&gt;
+&lt;p&gt;TCP 采用拥塞控制算法来减少或者避免拥塞现象的发生，TCP 的拥塞算法有过多种实现，包括 Tahoe、Reno、NewReno、Vegas、Hybla、BIC 、CUBIC、SACK、Westwood、PRR、BBR 等。&lt;/p&gt;
+&lt;h1 id=&#34;dhcp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dhcp协议&#34;&gt;#&lt;/a&gt; DHCP 协议&lt;/h1&gt;
+&lt;h2 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;动态主机配置协议 (Dynamic Host Configuration Protocol，DHCP) 是一个用于局域网的网络协议，位于 OSI 模型的应用层，使用 UDP 协议工作，主要用于自动分配 IP 地址给用户，方便管理员进行统一管理。&lt;/p&gt;
+&lt;p&gt;DHCP 服务器端使用 67/udp，客户端使用 68/udp。DHCP 运行分为四个基本过程，分别为请求 IP 租约、提供 IP 租约、选择 IP 租约和确认 IP 租约。客户端在获得了一个 IP 地址以后，就可以发送一个 ARP 请求来避免由于 DHCP 服务器地址池重叠而引发的 IP 冲突。&lt;/p&gt;
+&lt;h2 id=&#34;dhcp报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dhcp报文格式&#34;&gt;#&lt;/a&gt; DHCP 报文格式&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     op (1)    |   htype (1)   |   hlen (1)    |   hops (1)    |
++---------------+---------------+---------------+---------------+
+|                            xid (4)                            |
++-------------------------------+-------------------------------+
+|           secs (2)            |           flags (2)           |
++-------------------------------+-------------------------------+
+|                          ciaddr  (4)                          |
++---------------------------------------------------------------+
+|                          yiaddr  (4)                          |
++---------------------------------------------------------------+
+|                          siaddr  (4)                          |
++---------------------------------------------------------------+
+|                          giaddr  (4)                          |
++---------------------------------------------------------------+
+|                          chaddr  (16)                         |
++---------------------------------------------------------------+
+|                          sname   (64)                         |
++---------------------------------------------------------------+
+|                          file    (128)                        |
++---------------------------------------------------------------+
+|                          options (variable)                   |
++---------------------------------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;路由算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由算法&#34;&gt;#&lt;/a&gt; 路由算法&lt;/h1&gt;
+&lt;h2 id=&#34;简介-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-3&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;路由算法是用于找到一条从源路由器到目的路由器的最佳路径的算法。存在着多种路由算法，每种算法对网络和路由器资源的影响都不同；由于路由算法使用多种度量标准 (metric)，所以不同路由算法的最佳路径选择也有所不同。&lt;/p&gt;
+&lt;h2 id=&#34;路由选择算法的功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由选择算法的功能&#34;&gt;#&lt;/a&gt; 路由选择算法的功能&lt;/h2&gt;
+&lt;p&gt;源 / 宿对之间的路径选择，以及选定路由之后将报文传送到它们的目的地。&lt;/p&gt;
+&lt;p&gt;路由选择算法的要求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性：确保分组从源节点传送到目的节点&lt;/li&gt;
+&lt;li&gt;简单性：实现方便，软硬件开销小&lt;/li&gt;
+&lt;li&gt;自适应性：也称健壮性，算法能够适应业务量和网络拓扑的变化&lt;/li&gt;
+&lt;li&gt;稳定性：能长时间无故障运行&lt;/li&gt;
+&lt;li&gt;公平性：每个节点都有机会传送信息&lt;/li&gt;
+&lt;li&gt;最优性：尽量选取好的路由&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;自治系统autonomous-system&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自治系统autonomous-system&#34;&gt;#&lt;/a&gt; 自治系统（Autonomous System）&lt;/h2&gt;
+&lt;p&gt;经典定义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由一个组织管理的一整套路由器和网络。&lt;/li&gt;
+&lt;li&gt;使用一种 AS 内部的路由选择协议和共同的度量以确定分组在该 AS 内的路由。&lt;/li&gt;
+&lt;li&gt;使用一种 AS 之间的路由选择协议用以确定分组在 AS 之间的路由。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尽管一个 AS 使用了多种内部路由选择协议和度量，但对其他 AS 表现出的是一个单一的和一致的路由选择策略。&lt;/p&gt;
+&lt;h2 id=&#34;rip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rip&#34;&gt;#&lt;/a&gt; RIP&lt;/h2&gt;
+&lt;p&gt;路由信息协议 (Routing Information Protocol, RIP) 是一种基于距离 向量的路由选择协议。RIP 协议要求网络中的每一个路由器都要维护从它自己到自治系统内其他每一个目的网络的距离和下一跳路由器地址。&lt;/p&gt;
+&lt;h2 id=&#34;ospf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ospf&#34;&gt;#&lt;/a&gt; OSPF&lt;/h2&gt;
+&lt;p&gt;开放最短路径优先 (Open Shortest Path First，OSPF)，这个算法名为 “最短路径优先” 是因为使用了 Dijkstra 提出的最短路径算法 SPF，只是一个协议的名字，它并不表示其他的路由选择协议不是 “最短路径优先”。&lt;/p&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="网络协议" />
+        <updated>2022-11-24T03:16:26.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/netw/</id>
+        <title>计算机网络基础</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/netw/"/>
+        <content type="html">&lt;h1 id=&#34;网络基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络基础&#34;&gt;#&lt;/a&gt; 网络基础&lt;/h1&gt;
+&lt;h2 id=&#34;计算机通信网的组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机通信网的组成&#34;&gt;#&lt;/a&gt; 计算机通信网的组成&lt;/h2&gt;
+&lt;p&gt;计算机网络由通信子网和资源子网组成。其中通信子网负责数据的无差错和有序传递，其处理功能包括差错控制、流量控制、路由选择、网络互连等。其中资源子网是计算机通信的本地系统环境，包括主机、终端和应用程序等，资源子网的主要功能是用户资源配置、数据的处理和管理、软件和硬件共享以及负载均衡等。总的来说，计算机通信网就是一个由通信子网承载的、传输和共享资源子网的各类信息的系统。&lt;/p&gt;
+&lt;h2 id=&#34;通信协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通信协议&#34;&gt;#&lt;/a&gt; 通信协议&lt;/h2&gt;
+&lt;p&gt;为了完成计算机之间有序的信息交换，提出了通信协议的概念，其定义是相互通信的双方（或多方）对如何进行信息交换所必须遵守的一整套规则。&lt;/p&gt;
+&lt;p&gt;协议涉及到三个要素，分别为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：语法是用户数据与控制信息的结构与格式，以及数据出现顺序的意义&lt;/li&gt;
+&lt;li&gt;语义：用于解释比特流的每一部分的意义&lt;/li&gt;
+&lt;li&gt;时序：事件实现顺序的详细说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;osi七层模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#osi七层模型&#34;&gt;#&lt;/a&gt; OSI 七层模型&lt;/h2&gt;
+&lt;h3 id=&#34;物理层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#物理层&#34;&gt;#&lt;/a&gt; 物理层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提供建立、维护和释放物理链路所需的机械、电气功能和规程等特性&lt;/li&gt;
+&lt;li&gt;通过传输介质进行数据流 (比特流) 的物理传输、故障监测和物理层管理&lt;/li&gt;
+&lt;li&gt;从数据链路层接收帧，将比特流转换成底层物理介质上的信号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;网络层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络层&#34;&gt;#&lt;/a&gt; 网络层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在物理链路的两端之间传输数据&lt;/li&gt;
+&lt;li&gt;在网络层实体间提供数据传输功能和控制&lt;/li&gt;
+&lt;li&gt;提供数据的流量控制&lt;/li&gt;
+&lt;li&gt;检测和纠正物理链路产生的差错&lt;/li&gt;
+&lt;li&gt;格式化的消息称为帧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;传输层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#传输层&#34;&gt;#&lt;/a&gt; 传输层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提供无差错的数据传输&lt;/li&gt;
+&lt;li&gt;接收来自会话层的数据，如果需要，将数据分割成更小的分组，向网络层传送分组并确保分组完整和正确到达它们的目的地&lt;/li&gt;
+&lt;li&gt;在系统之间提供可靠的透明的数据传输，提供端到端的错误恢复和流量控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;会话层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#会话层&#34;&gt;#&lt;/a&gt; 会话层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提供节点之间通信过程的协调&lt;/li&gt;
+&lt;li&gt;负责执行会话规则（如：连接是否允许半双工或全双工通信）、同步数据流以及当故障发生时重新建立连接&lt;/li&gt;
+&lt;li&gt;使用上面的表示层和下面的传输层的功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;表示层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表示层&#34;&gt;#&lt;/a&gt; 表示层&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提供数据格式、变换和编码转换&lt;/li&gt;
+&lt;li&gt;涉及正在传输数据的语法和语义&lt;/li&gt;
+&lt;li&gt;将消息以合适电子传输的格式编码&lt;/li&gt;
+&lt;li&gt;执行该层的数据压缩和加密&lt;/li&gt;
+&lt;li&gt;从应用层接收消息，转换格式，并传送到会话层，该层常合并在应用层中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用层&#34;&gt;#&lt;/a&gt; 应用层&lt;/h3&gt;
+&lt;p&gt;包括各种协议，它们定义了具体的面向用户的应用：如电子邮件、文件传输等&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
+&lt;p&gt;低三层模型属于通信子网，涉及为用户间提供透明连接，操作主要以每条链路（ hop-by-hop）为基础，在节点间的各条数据链路上进行通信。由网络层来控制各条链路上的通信，但要依赖于其他节点的协调操作。&lt;/p&gt;
+&lt;p&gt;高三层属于资源子网，主要涉及保证信息以正确可理解形式传送。&lt;/p&gt;
+&lt;p&gt;传输层是高三层和低三层之间的接口，它是第一个端到端的层次，保证透明的端到端连接，满足用户的服务质量（QoS）要求，并向高三层提供合适的信息形式。&lt;/p&gt;
+&lt;h2 id=&#34;tcpip四层模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcpip四层模型&#34;&gt;#&lt;/a&gt; TCP/IP 四层模型&lt;/h2&gt;
+&lt;h3 id=&#34;网络接口层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络接口层&#34;&gt;#&lt;/a&gt; 网络接口层&lt;/h3&gt;
+&lt;p&gt;网络接入层与 OSI 参考模型中的物理层和数据链路层相对应。它负责监视数据在主机和网络之间的交换。事实上，TCP/IP 本身并未定义该层的协议，而由参与互连的各网络使用自己的物理层和数据链路层协议，然后与 TCP/IP 的网络接入层进行连接。地址解析协议（ARP）工作在此层，即 OSI 参考模型的数据链路层。&lt;/p&gt;
+&lt;h3 id=&#34;网际层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网际层&#34;&gt;#&lt;/a&gt; 网际层&lt;/h3&gt;
+&lt;p&gt;网际层对应于 OSI 参考模型的网络层，主要解决主机到主机的通信问题。它所包含的协议设计数据包在整个网络上的逻辑传输。注重重新赋予主机一个 IP 地址来完成对主机的寻址，它还负责数据包在多种网络中的路由。该层有三个主要协议：网际协议（IP）、互联网组管理协议（IGMP）和互联网控制报文协议（ICMP）。&lt;/p&gt;
+&lt;h3 id=&#34;运输层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运输层&#34;&gt;#&lt;/a&gt; 运输层&lt;/h3&gt;
+&lt;p&gt;运输层对应于 OSI 参考模型的传输层，为应用层实体提供端到端的通信功能，保证了数据包的顺序传送及数据的完整性。该层定义了两个主要的协议：传输控制协议（TCP）和用户数据报协议（UDP)&lt;/p&gt;
+&lt;h3 id=&#34;应用层-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用层-2&#34;&gt;#&lt;/a&gt; 应用层&lt;/h3&gt;
+&lt;p&gt;应用层对应于 OSI 参考模型的高层，为用户提供所需要的各种服务，例如：FTP、Telnet、DNS、SMTP 等&lt;/p&gt;
+&lt;h2 id=&#34;osi模型与tcpip模型对比&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#osi模型与tcpip模型对比&#34;&gt;#&lt;/a&gt; OSI 模型与 TCP/IP 模型对比&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/11/24/7PVpnCLrqtSUDOM.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;共同点&lt;br /&gt;
+（1）OSI 参考模型和 TCP/IP 参考模型都采用了层次结构的概念。&lt;br /&gt;
+（2）都能够提供面向连接和无连接两种通信服务机制。&lt;br /&gt;
+不同点&lt;br /&gt;
+（1）OSI 采用的七层模型，而 TCP/IP 是四层结构。&lt;br /&gt;
+（2）TCP/IP 参考模型的网络接口层实际上并没有真正的定义，只是一些概念性的描述。而 OSI 参考模型不仅分了两层，而且每一层的功能都很详尽，甚至在数据链路层又分出一个介质访问子层，专门解决局域网的共享介质问题。&lt;br /&gt;
+（3）OSI 模型是在协议开发前设计的，具有通用性。TCP/IP 是先有协议集然后建立模型，不适用于非 TCP/IP 网络。&lt;br /&gt;
+（4）OSI 参考模型与 TCP/IP 参考模型的传输层功能基本相似，都是负责为用户提供真正的端对端的通信服务，也对高层屏蔽了底层网络的实现细节。所不同的是 TCP/IP 参考模型的传输层是建立在网络互联层基础之上的，而网络互联层只提供无连接的网络服务，所以面向连接的功能完全在 TCP 协议中实现，当然 TCP/IP 的传输层还提供无连接的服务，如 UDP；相反 OSI 参考模型的传输层是建立在网络层基础之上的，网络层既提供面向连接的服务，又提供无连接的服务，但传输层只提供面向连接的服务。&lt;br /&gt;
+（5）OSI 参考模型的抽象能力高，适合与描述各种网络；而 TCP/IP 是先有了协议，才制定 TCP/IP 模型的。&lt;br /&gt;
+（6）OSI 参考模型的概念划分清晰，但过于复杂；而 TCP/IP 参考模型在服务、接口和协议的 区别上不清楚，功能描述和实现细节混在一起。&lt;br /&gt;
+（7）TCP/IP 参考模型的网络接口层并不是真正的一层；OSI 参考模型的缺点是层次过多，划分意义不大但增加了复杂性。&lt;/p&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="网络协议" />
+        <updated>2022-11-24T02:45:44.000Z</updated>
+    </entry>
+</feed>

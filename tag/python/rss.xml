@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;python&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 27 Nov 2022 16:42:11 +0800</pubDate>
+        <lastBuildDate>Sun, 27 Nov 2022 16:42:11 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Python/</guid>
+            <title>Python</title>
+            <link>https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Python/</link>
+            <category>语言</category>
+            <category>反序列化</category>
+            <category>混淆</category>
+            <category>沙箱</category>
+            <category>Python</category>
+            <pubDate>Sun, 27 Nov 2022 16:42:11 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;格式化字符串&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#格式化字符串&#34;&gt;#&lt;/a&gt; 格式化字符串&lt;/h1&gt;
+&lt;p&gt;在 Python 中，有两种格式化字符串的方式，在 Python2 的较低版本中，格式化字符串的方式为  &lt;code&gt;&amp;quot;this is a %s&amp;quot; % &amp;quot;test&amp;quot;&lt;/code&gt;  ，之后增加了 format 的方式， 语法为  &lt;code&gt;&amp;quot;this is a &amp;#123;&amp;#125;&amp;quot;.format(&#39;test&#39;)&lt;/code&gt;  或者  &lt;code&gt;&amp;quot;this is a &amp;#123;test&amp;#125;&amp;quot;.format(test=&#39;test&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当格式化字符串由用户输入时，则可能会造成一些问题，下面是一个最简单的例子&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &#39;class of &amp;#123;0&amp;#125; is &amp;#123;0.__class__&amp;#125;&#39;.format(42)
+&amp;quot;class of 42 is &amp;lt;class &#39;int&#39;&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从上面这个简单的例子不难知道，当我们可以控制要 format 的字符串时，则可以使用  &lt;code&gt;__init__&lt;/code&gt;  /  &lt;code&gt;__globals__&lt;/code&gt;  等属性读取一些比较敏感的值，甚至任意执行代码。&lt;/p&gt;
+&lt;h1 id=&#34;反序列化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反序列化&#34;&gt;#&lt;/a&gt; 反序列化&lt;/h1&gt;
+&lt;h2 id=&#34;pickle-demo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pickle-demo&#34;&gt;#&lt;/a&gt; pickle demo&lt;/h2&gt;
+&lt;p&gt;Python Pickle 在反序列化时会调用  &lt;code&gt;__reduce__&lt;/code&gt;  ，可用自定义的  &lt;code&gt;__reduce__&lt;/code&gt;  函数来实现攻击。&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; pickle&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; pickletools&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; subprocess&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;__reduce__&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;subprocess&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Popen&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;cmd.exe&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;data &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; pickle&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;dumps&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;A&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pickletools&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;dis&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;data&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;其他序列化库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他序列化库&#34;&gt;#&lt;/a&gt; 其他序列化库&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PyYAML&lt;/li&gt;
+&lt;li&gt;marshal&lt;/li&gt;
+&lt;li&gt;shelve&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;沙箱&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#沙箱&#34;&gt;#&lt;/a&gt; 沙箱&lt;/h1&gt;
+&lt;h2 id=&#34;常用函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用函数&#34;&gt;#&lt;/a&gt; 常用函数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;eval / exec / compile&lt;/li&gt;
+&lt;li&gt;dir / type&lt;/li&gt;
+&lt;li&gt;globals / locals / vars&lt;/li&gt;
+&lt;li&gt;getattr / setattr&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;导入包方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导入包方式&#34;&gt;#&lt;/a&gt; 导入包方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import os&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;from os import *&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;__import__(&amp;quot;os&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;importlib&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;imp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reload(os)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;execfile&lt;/code&gt;  仅 Python2 支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过&#34;&gt;#&lt;/a&gt; 绕过&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dir(__builtins__)&lt;/code&gt;  查看内置模块&lt;/li&gt;
+&lt;li&gt;最简单的思路是在已有的模块中 import，如果那个模块中已经 import 可以利用的模块就可以使用了&lt;/li&gt;
+&lt;li&gt;在父类中寻找可用的模块，最常见 payload 是  &lt;code&gt;().__class__.__bases__[0].__subclasses__()&lt;/code&gt;  或者用魔术方法获取全局作用域  &lt;code&gt;__init__.__func__.__globals__&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;有些网站没有过滤 pickle 模块，可以使用 pickle 实现任意代码执行，生成 payload 可以使用  &lt;code&gt;https://gist.github.com/freddyb/3360650&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;有的沙箱把相关的模块代码都被删除了，则可以使用 libc 中的函数，Python 中调用一般可以使用 ctypes 或者 cffi。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;A&amp;quot;&amp;quot;B&amp;quot; == &amp;quot;AB&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御&#34;&gt;#&lt;/a&gt; 防御&lt;/h2&gt;
+&lt;p&gt;Python 官方给出了一些防御的建议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Jython 并尝试使用 Java 平台来锁定程序的权限&lt;/li&gt;
+&lt;li&gt;使用 fakeroot 来避免&lt;/li&gt;
+&lt;li&gt;使用一些 rootjail 的技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#框架&#34;&gt;#&lt;/a&gt; 框架&lt;/h1&gt;
+&lt;h2 id=&#34;django&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#django&#34;&gt;#&lt;/a&gt; Django&lt;/h2&gt;
+&lt;h3 id=&#34;历史漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#历史漏洞&#34;&gt;#&lt;/a&gt; 历史漏洞&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlci5zZWVidWcub3JnLzU4Lw==&#34;&gt;CVE-2016-7401 CSRF Bypass&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGphbmdvcHJvamVjdC5jb20vd2VibG9nLzIwMTcvYXByLzA0L3NlY3VyaXR5LXJlbGVhc2VzLw==&#34;&gt;CVE-2017-7233/7234 Open redirect vulnerability&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubGVhdmVzb25ncy5jb20vUEVORVRSQVRJT04vZGphbmdvLWRlYnVnLXBhZ2UteHNzLmh0bWw=&#34;&gt;CVE-2017-12794 debug page XSS&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;配置相关&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置相关&#34;&gt;#&lt;/a&gt; 配置相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Nginx 在为 Django 做反向代理时，静态文件目录配置错误会导致源码泄露。访问 /static.. 会 301 重定向到 /static../&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;flask&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#flask&#34;&gt;#&lt;/a&gt; Flask&lt;/h2&gt;
+&lt;p&gt;Flask 默认使用客户端 session，使得 session 可以被伪造&lt;/p&gt;
+&lt;h1 id=&#34;代码混淆&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码混淆&#34;&gt;#&lt;/a&gt; 代码混淆&lt;/h1&gt;
+&lt;h2 id=&#34;常见混淆方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见混淆方式&#34;&gt;#&lt;/a&gt; 常见混淆方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 AST 变换&lt;/li&gt;
+&lt;li&gt;编译为 pyc 文件&lt;/li&gt;
+&lt;li&gt;Pyinstaller&lt;/li&gt;
+&lt;li&gt;PyArmor&lt;/li&gt;
+&lt;li&gt;通过 AES 加密为 pye 文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;sink&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sink&#34;&gt;#&lt;/a&gt; Sink&lt;/h1&gt;
+&lt;h2 id=&#34;命令执行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命令执行&#34;&gt;#&lt;/a&gt; 命令执行&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;asyncio.new_event_loop().subprocess_exec&lt;/li&gt;
+&lt;li&gt;asyncio.subprocess&lt;/li&gt;
+&lt;li&gt;bdb.os&lt;/li&gt;
+&lt;li&gt;cgi.os.system&lt;/li&gt;
+&lt;li&gt;cgi.sys&lt;/li&gt;
+&lt;li&gt;code.InteractiveInterpreter&lt;/li&gt;
+&lt;li&gt;commands&lt;/li&gt;
+&lt;li&gt;ctypes.CDLL&lt;/li&gt;
+&lt;li&gt;eval&lt;/li&gt;
+&lt;li&gt;exec&lt;/li&gt;
+&lt;li&gt;execfile&lt;/li&gt;
+&lt;li&gt;input // python2 only&lt;/li&gt;
+&lt;li&gt;os.exec&lt;/li&gt;
+&lt;li&gt;os.exec*&lt;/li&gt;
+&lt;li&gt;os.fork&lt;/li&gt;
+&lt;li&gt;os.popen&lt;/li&gt;
+&lt;li&gt;os.spawn&lt;/li&gt;
+&lt;li&gt;os.system&lt;/li&gt;
+&lt;li&gt;platform.os&lt;/li&gt;
+&lt;li&gt;platform.popen&lt;/li&gt;
+&lt;li&gt;platform.sys&lt;/li&gt;
+&lt;li&gt;popen2&lt;/li&gt;
+&lt;li&gt;pty.os&lt;/li&gt;
+&lt;li&gt;pty.spawn&lt;/li&gt;
+&lt;li&gt;subprocess&lt;/li&gt;
+&lt;li&gt;timeit.sys&lt;/li&gt;
+&lt;li&gt;timeit.timeit&lt;/li&gt;
+&lt;li&gt;typing.get_type_hints() +  &lt;code&gt;__annotations__&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件读取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件读取&#34;&gt;#&lt;/a&gt; 文件读取&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;open&lt;/li&gt;
+&lt;li&gt;os.open&lt;/li&gt;
+&lt;li&gt;urllib.request.urlopen(&#39;[file:///](file:///)&#39;)&lt;/li&gt;
+&lt;li&gt;codecs.open&lt;/li&gt;
+&lt;li&gt;fileinput&lt;/li&gt;
+&lt;li&gt;仅 Python2
+&lt;ul&gt;
+&lt;li&gt;types.FileType&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;危险第三方库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#危险第三方库&#34;&gt;#&lt;/a&gt; 危险第三方库&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Template&lt;/li&gt;
+&lt;li&gt;subprocess32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;反序列化-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反序列化-2&#34;&gt;#&lt;/a&gt; 反序列化&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;marshal&lt;/li&gt;
+&lt;li&gt;PyYAML&lt;/li&gt;
+&lt;li&gt;pickle&lt;/li&gt;
+&lt;li&gt;cPickle&lt;/li&gt;
+&lt;li&gt;shelve&lt;/li&gt;
+&lt;li&gt;PIL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;反序列化-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反序列化-3&#34;&gt;#&lt;/a&gt; 反序列化&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy45MXJpLm9yZy85NTc2Lmh0bWw=&#34;&gt;Python pickle 反序列化&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLnB5dGhvbi5vcmcvbW9pbi9TYW5kYm94ZWRQeXRob24=&#34;&gt;Python 沙箱 官方 wiki&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;[Python eval 的常见错误封装及利用原理](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3h4bGVnZW5kLmNvbS8yMDE1LzA3LzMxL1B5dGhvbg==&#34;&gt;http://xxlegend.com/2015/07/31/Python&lt;/span&gt; eval 的常见错误封装及利用原理 /)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvemgtY24vMy9saWJyYXJ5L3BpY2tsZS5odG1s&#34;&gt;pickle Python 对象序列化&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tZWRpYS5ibGFja2hhdC5jb20vYmgtdXMtMTEvU2xhdmllcm8vQkhfVVNfMTFfU2xhdmllcm9fU291cl9QaWNrbGVzX1NsaWRlcy5wZGY=&#34;&gt;Sour Pickles A serialised exploitation guide in one part&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ydXNodGVyLmNvbS9ibG9nL3BpY2tsZS1zZXJpYWxpemF0aW9uLWludGVybmFscy8=&#34;&gt;How pickle works in Python&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;沙箱-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#沙箱-2&#34;&gt;#&lt;/a&gt; 沙箱&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvODYzNjY=&#34;&gt;Python 沙箱通用绕过&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvc3lzdGVtLzIwMzIwOC5odG1s&#34;&gt;一文看懂 Python 沙箱逃逸&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;格式化字符串-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#格式化字符串-2&#34;&gt;#&lt;/a&gt; 格式化字符串&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubGVhdmVzb25ncy5jb20vUEVORVRSQVRJT04vcHl0aG9uLXN0cmluZy1mb3JtYXQtdnVsbmVyYWJpbGl0eS5odG1s&#34;&gt;Python 字符串格式化漏洞&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2x1Y3Vtci5wb2Nvby5vcmcvMjAxNi8xMi8yOS9jYXJlZnVsLXdpdGgtc3RyLWZvcm1hdC8=&#34;&gt;Be Careful with Python&#39;s New-Style String Format&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;综合&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#综合&#34;&gt;#&lt;/a&gt; 综合&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ZzdGlubmVyL3B5dGhvbi1zZWN1cml0eS5naXQ=&#34;&gt;python security&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JpdDR3b28vcHl0aG9uX3NlYw==&#34;&gt;Python 安全和代码审计相关资料收集&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

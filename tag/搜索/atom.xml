@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;搜索&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T02:10:49.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/information%20gathering/search%20engine/</id>
+        <title>搜索引擎利用</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/information%20gathering/search%20engine/"/>
+        <content type="html">&lt;p&gt;恰当地使用搜索引擎（Google/Bing/Yahoo/Baidu 等）可以获取目标站点的较多信息。&lt;/p&gt;
+&lt;h1 id=&#34;搜索引擎处理流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎处理流程&#34;&gt;#&lt;/a&gt; 搜索引擎处理流程&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数据预处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;长度截断&lt;/li&gt;
+&lt;li&gt;大小写转化&lt;/li&gt;
+&lt;li&gt;去标点符号&lt;/li&gt;
+&lt;li&gt;简繁转换&lt;/li&gt;
+&lt;li&gt;数字归一化，中文数字、阿拉伯数字、罗马字&lt;/li&gt;
+&lt;li&gt;同义词改写&lt;/li&gt;
+&lt;li&gt;拼音改写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分词&lt;/li&gt;
+&lt;li&gt;关键词抽取&lt;/li&gt;
+&lt;li&gt;非法信息过滤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;搜索技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索技巧&#34;&gt;#&lt;/a&gt; 搜索技巧&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;site:www.hao123.com&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回此目标站点被搜索引擎抓取收录的所有内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;site:www.hao123.com keyword&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回此目标站点被搜索引擎抓取收录的包含此关键词的所有页面&lt;/li&gt;
+&lt;li&gt;此处可以将关键词设定为网站后台，管理后台，密码修改，密码找回等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;site:www.hao123.com inurl:admin.php&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回目标站点的地址中包含 admin.php 的所有页面，可以使用 admin.php/manage.php 或者其他关键词来寻找关键功能页面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;link:www.hao123.com&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回所有包含目标站点链接的页面，其中包括其开发人员的个人博客，开发日志，或者开放这个站点的第三方公司，合作伙伴等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;related:www.hao123.com&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回所有与目标站点” 相似” 的页面，可能会包含一些通用程序的信息等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;intitle:&amp;quot;500 Internal Server Error&amp;quot; &amp;quot;server at&amp;quot;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搜索出错的页面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;inurl:&amp;quot;nph-proxy.cgi&amp;quot; &amp;quot;Start browsing&amp;quot;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查找代理服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;除了以上的关键字，还有 allintile /allinurl/allintext /inanchor/intext /filetype/info /numberange/cache 等。&lt;/p&gt;
+&lt;h2 id=&#34;通配符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通配符&#34;&gt;#&lt;/a&gt; 通配符&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;  代表某一个单词&lt;/li&gt;
+&lt;li&gt;OR 或者 | 代表逻辑或&lt;/li&gt;
+&lt;li&gt;单词前跟  &lt;code&gt;+&lt;/code&gt;  表强制查询&lt;/li&gt;
+&lt;li&gt;单词前跟  &lt;code&gt;-&lt;/code&gt;  表排除对应关键字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;  强调关键字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tips&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tips&#34;&gt;#&lt;/a&gt; tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查询不区分大小写&lt;/li&gt;
+&lt;li&gt;括号会被忽略&lt;/li&gt;
+&lt;li&gt;默认用 and 逻辑进行搜索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;快照&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快照&#34;&gt;#&lt;/a&gt; 快照&lt;/h1&gt;
+&lt;p&gt;搜索引擎的快照中也常包含一些关键信息，如程序报错信息可以会泄漏网站具体路径，或者一些快照中会保存一些测试用的测试信息，比如说某个网站在开发了后台功能模块的时候，还没给所有页面增加权限鉴别，此时被搜索引擎抓取了快照，即使后来网站增加了权限鉴别，但搜索引擎的快照中仍会保留这些信息。&lt;/p&gt;
+&lt;p&gt;另外也有专门的站点快照提供快照功能，如 Wayback Machine 和 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcmNoaXZlLm9yZy8=&#34;&gt;Archive.org&lt;/span&gt; 等。&lt;/p&gt;
+&lt;h1 id=&#34;github&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#github&#34;&gt;#&lt;/a&gt; Github&lt;/h1&gt;
+&lt;p&gt;在 Github 中，可能会存在源码泄露、AccessKey 泄露、密码、服务器配置泄露等情况，常见的搜索技巧有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@example.com password/pass/pwd/secret/credentials/token&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@example.com username/user/key/login/ftp/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@example.com config/ftp/smtp/pop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@example.com security_credentials/connetionstring&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@example.com JDBC/ssh2_auth_password/send_keys&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="信息收集" />
+        <category term="搜索" />
+        <updated>2022-11-26T02:10:49.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/information%20gathering/website%20information/</id>
+        <title>站点信息</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/information%20gathering/website%20information/"/>
+        <content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;判断网站操作系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux 大小写敏感&lt;/li&gt;
+&lt;li&gt;Windows 大小写不敏感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扫描敏感文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;robots.txt&lt;/li&gt;
+&lt;li&gt;crossdomain.xml&lt;/li&gt;
+&lt;li&gt;sitemap.xml&lt;/li&gt;
+&lt;li&gt;xx.tar.gz&lt;/li&gt;
+&lt;li&gt;xx.bak 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确定网站采用的语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 PHP / Java / Python 等&lt;/li&gt;
+&lt;li&gt;找后缀，比如 php/asp/jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前端框架&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 jQuery / BootStrap / Vue / React / Angular 等&lt;/li&gt;
+&lt;li&gt;查看源代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中间服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 Apache / Nginx / IIS 等&lt;/li&gt;
+&lt;li&gt;查看 header 中的信息&lt;/li&gt;
+&lt;li&gt;根据报错信息判断&lt;/li&gt;
+&lt;li&gt;根据默认页面判断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web 容器服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 Tomcat / Jboss / Weblogic 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后端框架&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 Cookie 判断&lt;/li&gt;
+&lt;li&gt;根据 CSS / 图片等资源的 hash 值判断&lt;/li&gt;
+&lt;li&gt;根据 URL 路由判断
+&lt;ul&gt;
+&lt;li&gt;如 wp-admin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;根据网页中的关键字判断&lt;/li&gt;
+&lt;li&gt;根据响应头中的 X-Powered-By&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CDN 信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见的有 Cloudflare、yunjiasu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;探测有没有 WAF，如果有，什么类型的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有 WAF，找绕过方式&lt;/li&gt;
+&lt;li&gt;没有，进入下一步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扫描敏感目录，看是否存在信息泄漏&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扫描之前先自己尝试几个的 url，人为看看反应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用爬虫爬取网站信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿到一定信息后，通过拿到的目录名称，文件名称及文件扩展名了解网站开发人员的命名思路，确定其命名规则，推测出更多的目录及文件名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常见入口目标&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关注度低的系统&lt;/li&gt;
+&lt;li&gt;业务线较长的系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网站" />
+        <category term="信息收集" />
+        <category term="搜索" />
+        <updated>2022-11-26T02:03:09.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/</id>
+        <title>域名信息</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/"/>
+        <content type="html">&lt;h1 id=&#34;whois&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#whois&#34;&gt;#&lt;/a&gt; Whois&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2hvaXMuY29tLw==&#34;&gt;Whois&lt;/span&gt; 可以查询域名是否被注册，以及注册域名的详细信息的数据库，其中可能会存在一些有用的信息，例如域名所有人、域名注册商、邮箱等。&lt;/p&gt;
+&lt;h1 id=&#34;搜索引擎搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎搜索&#34;&gt;#&lt;/a&gt; 搜索引擎搜索&lt;/h1&gt;
+&lt;p&gt;搜索引擎通常会记录域名信息，可以通过  &lt;code&gt;site: domain&lt;/code&gt;  的语法来查询。&lt;/p&gt;
+&lt;h1 id=&#34;第三方查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第三方查询&#34;&gt;#&lt;/a&gt; 第三方查询&lt;/h1&gt;
+&lt;p&gt;网络中有相当多的第三方应用提供了子域的查询功能，下面有一些例子，更多的网站可以在 8.1 工具列表 中查找。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kbnNkdW1wc3Rlci5jb20v&#34;&gt;DNSDumpster&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudmlydXN0b3RhbC5jb20v&#34;&gt;Virustotal&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;CrtSearch&lt;/li&gt;
+&lt;li&gt;threatminer&lt;/li&gt;
+&lt;li&gt;Censys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;asn信息关联&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#asn信息关联&#34;&gt;#&lt;/a&gt; ASN 信息关联&lt;/h1&gt;
+&lt;p&gt;在网络中一个自治系统 (Autonomous System, AS) 是一个有权自主地决定在本系统中应采用何种路由协议的小型单位。这个网络单位可以是一个简单的网络也可以是一个由一个或多个普通的网络管理员来控制的网络群体，它是一个单独的可管理的网络单元 (例如一所大学，一个企业或者一个公司个体) 。&lt;/p&gt;
+&lt;p&gt;一个自治系统有时也被称为是一个路由选择域 (routing domain) 。一个自治系统将会分配一个全局的唯一的 16 位号码，这个号码被称为自治系统号 (ASN) 。因此可以通过 ASN 号来查找可能相关的 IP，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;whois -h whois.radb.net -- &#39;-i origin AS111111&#39; | grep -Eo &amp;quot;([0-9.]+)&amp;#123;4&amp;#125;/[0-9]+&amp;quot; | uniq
+nmap --script targets-asn --script-args targets-asn.asn=15169
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;域名相关性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名相关性&#34;&gt;#&lt;/a&gt; 域名相关性&lt;/h1&gt;
+&lt;p&gt;同一个企业 / 个人注册的多个域名通常具有一定的相关性，例如使用了同一个邮箱来注册、使用了同一个备案、同一个负责人来注册等，可以使用这种方式来查找关联的域名。一种操作步骤如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询域名注册邮箱&lt;/li&gt;
+&lt;li&gt;通过域名查询备案号&lt;/li&gt;
+&lt;li&gt;通过备案号查询域名&lt;/li&gt;
+&lt;li&gt;反查注册邮箱&lt;/li&gt;
+&lt;li&gt;反查注册人&lt;/li&gt;
+&lt;li&gt;通过注册人查询到的域名在查询邮箱&lt;/li&gt;
+&lt;li&gt;通过上一步邮箱去查询域名&lt;/li&gt;
+&lt;li&gt;查询以上获取出的域名的子域名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;网站信息利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网站信息利用&#34;&gt;#&lt;/a&gt; 网站信息利用&lt;/h1&gt;
+&lt;p&gt;网站中有相当多的信息，网站本身、各项安全策略、设置等都可能暴露出一些信息。&lt;/p&gt;
+&lt;p&gt;网站本身的交互通常不囿于单个域名，会和其他子域交互。对于这种情况，可以通过爬取网站，收集站点中的其他子域信息。这些信息通常出现在 JavaScript 文件、资源文件链接等位置。&lt;/p&gt;
+&lt;p&gt;网站的安全策略如跨域策略、CSP 规则等通常也包含相关域名的信息。有时候多个域名为了方便会使用同一个 SSL/TLS 证书，因此有时可通过证书来获取相关域名信息。&lt;/p&gt;
+&lt;h1 id=&#34;https证书&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#https证书&#34;&gt;#&lt;/a&gt; HTTPS 证书&lt;/h1&gt;
+&lt;h2 id=&#34;证书透明度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#证书透明度&#34;&gt;#&lt;/a&gt; 证书透明度&lt;/h2&gt;
+&lt;p&gt;为了保证 HTTPS 证书不会被误发或伪造，CA 会将证书记录到可公开验证、不可篡改且只能附加内容的日志中，任何感兴趣的相关方都可以查看由授权中心签发的所有证书。因此可以通过查询已授权证书的方式来获得相关域名。&lt;/p&gt;
+&lt;h2 id=&#34;san&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#san&#34;&gt;#&lt;/a&gt; SAN&lt;/h2&gt;
+&lt;p&gt;主题备用名称 (Subject Alternate Name, SAN)，简单来说，在需要多个域名，并将其用于各项服务时，多使用 SAN 证书。SAN 允许在安全证书中使用 subjectAltName 字段将多种值与证书关联，这些值被称为主题备用名称。&lt;/p&gt;
+&lt;h1 id=&#34;域传送漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域传送漏洞&#34;&gt;#&lt;/a&gt; 域传送漏洞&lt;/h1&gt;
+&lt;p&gt;DNS 域传送 (zone transfer) 指的是冗余备份服务器使用来自主服务器的数据刷新自己的域 (zone) 数据库。这是为了防止主服务器因意外不可用时影响到整个域名的解析。&lt;/p&gt;
+&lt;p&gt;一般来说，域传送操作应该只允许可信的备用 DNS 服务器发起，但是如果错误配置了授权，那么任意用户都可以获得整个 DNS 服务器的域名信息。这种错误授权被称作是 DNS 域传送漏洞。&lt;/p&gt;
+&lt;h1 id=&#34;passive-dns&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#passive-dns&#34;&gt;#&lt;/a&gt; Passive DNS&lt;/h1&gt;
+&lt;p&gt;Passive DNS 被动的从递归域名服务器记录来自不同域名服务器的响应，形成数据库。利用 Passive DNS 数据库可以知道域名曾绑定过哪些 IP，IP 曾关联到哪些域名，域名最早 / 最近出现的时间，为测试提供较大的帮助。Virustotal、passivetotal、CIRCL 等网站都提供了 Passive DNS 数据库的查询。&lt;/p&gt;
+&lt;h1 id=&#34;泛解析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#泛解析&#34;&gt;#&lt;/a&gt; 泛解析&lt;/h1&gt;
+&lt;p&gt;泛解析是把 *.example.com 的所有 A 记录都解析到某个 IP 地址上，在子域名枚举时需要处理这种情况以防生成大量无效的记录。&lt;/p&gt;
+&lt;h1 id=&#34;重要记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#重要记录&#34;&gt;#&lt;/a&gt; 重要记录&lt;/h1&gt;
+&lt;h2 id=&#34;cname&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cname&#34;&gt;#&lt;/a&gt; CNAME&lt;/h2&gt;
+&lt;p&gt;CNAME 即 Canonical name，又称 alias，将域名指向另一个域名。其中可能包含其他关联业务的信息。很多网站使用的 CDN 加速功能利用了该记录。&lt;/p&gt;
+&lt;h2 id=&#34;mx记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mx记录&#34;&gt;#&lt;/a&gt; MX 记录&lt;/h2&gt;
+&lt;p&gt;MX 记录即 Mail Exchanger，记录了发送电子邮件时域名对应的服务器地址。可以用来寻找 SMTP 服务器信息。&lt;/p&gt;
+&lt;h2 id=&#34;ns记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ns记录&#34;&gt;#&lt;/a&gt; NS 记录&lt;/h2&gt;
+&lt;p&gt;NS (Name Server) 记录是域名服务器的记录，用来指定域名由哪个 DNS 服务器来进行解析。&lt;/p&gt;
+&lt;h2 id=&#34;spf记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spf记录&#34;&gt;#&lt;/a&gt; SPF 记录&lt;/h2&gt;
+&lt;p&gt;SPF (Sender Policy Framework) 是为了防止垃圾邮件而提出来的一种 DNS 记录类型，是一种 TXT 类型的记录，用于登记某个域名拥有的用来外发邮件的所有 IP 地址。通过 SPF 记录可以获取相关的 IP 信息，常用命令为  &lt;code&gt;dig example.com txt&lt;/code&gt;  。&lt;/p&gt;
+&lt;h1 id=&#34;cdn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cdn&#34;&gt;#&lt;/a&gt; CDN&lt;/h1&gt;
+&lt;h2 id=&#34;cdn验证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cdn验证&#34;&gt;#&lt;/a&gt; CDN 验证&lt;/h2&gt;
+&lt;p&gt;可通过多地 ping 的方式确定目标是否使用了 CDN，常用的网站有  &lt;code&gt;http://ping.chinaz.com/&lt;/code&gt;   &lt;code&gt;https://asm.ca.com/en/ping.php&lt;/code&gt;  等。&lt;/p&gt;
+&lt;h2 id=&#34;域名查找&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名查找&#34;&gt;#&lt;/a&gt; 域名查找&lt;/h2&gt;
+&lt;p&gt;使用了 CDN 的域名的父域或者子域名不一定使用了 CDN，可以通过这种方式去查找对应的 IP。&lt;/p&gt;
+&lt;h2 id=&#34;历史记录查找&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#历史记录查找&#34;&gt;#&lt;/a&gt; 历史记录查找&lt;/h2&gt;
+&lt;p&gt;CDN 可能是在网站上线一段时间后才上线的，可以通过查找域名解析记录的方式去查找真实 IP。&lt;/p&gt;
+&lt;h2 id=&#34;邮件信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#邮件信息&#34;&gt;#&lt;/a&gt; 邮件信息&lt;/h2&gt;
+&lt;p&gt;通过社会工程学的方式进行邮件沟通，从邮件头中获取 IP 地址，IP 地址可能是网站的真实 IP 或者是目标的出口 IP。&lt;/p&gt;
+&lt;h1 id=&#34;子域爆破&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#子域爆破&#34;&gt;#&lt;/a&gt; 子域爆破&lt;/h1&gt;
+&lt;p&gt;在内网等不易用到以上技巧的环境，或者想监测新域名上线时，可以通过批量尝试的方式，找到有效的域名。&lt;/p&gt;
+&lt;h1 id=&#34;缓存探测技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存探测技术&#34;&gt;#&lt;/a&gt; 缓存探测技术&lt;/h1&gt;
+&lt;p&gt;在企业网络中通常都会配置 DNS 服务器为网络内的主机提供域名解析服务。域名缓存侦测（DNS Cache Snooping）技术就是向这些服务器发送域名解析请求，但并不要求使用递归模式，用于探测是否请求过某个域名。这种方式可以用来探测是否使用了某些软件，尤其是安全软件。&lt;/p&gt;
+</content>
+        <category term="域名" />
+        <category term="信息收集" />
+        <category term="搜索" />
+        <updated>2022-11-25T08:54:06.000Z</updated>
+    </entry>
+</feed>

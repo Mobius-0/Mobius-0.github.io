@@ -10,9 +10,6 @@
     <category term="网络安全" />
     <category term="工具" />
     <category term="虚拟机" />
-    <category term="计算机网络" />
-    <category term="网络协议" />
-    <category term="法律法规" />
     <category term="星际争霸2" />
     <category term="平衡" />
     <category term="杂谈" />
@@ -20,10 +17,72 @@
     <category term="江南" />
     <category term="龙族" />
     <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
     <entry>
-        <id>https://mobius-0.github.io/security/netwsecu/</id>
+        <id>https://mobius-0.github.io/security/WebNote/netwsecu/</id>
         <title>网络安全观</title>
-        <link rel="alternate" href="https://mobius-0.github.io/security/netwsecu/"/>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/netwsecu/"/>
         <content type="html">&lt;h1 id=&#34;网络安全定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络安全定义&#34;&gt;#&lt;/a&gt; 网络安全定义&lt;/h1&gt;
 &lt;p&gt;网络安全的一个通用定义指网络信息系统的硬件、软件及其系统中的数据受到保护，不因偶然的或者恶意的破坏、更改、泄露，系统能连续、可靠、正常地运行，服务不中断。网络安全简单的说是在网络环境下能够识别和消除不安全因素的能力。&lt;/p&gt;
 &lt;p&gt;网络安全在不同环境和应用中有不同的解释，例如系统运行的安全、系统信息内容的安全、信息通信与传播的安全等。&lt;/p&gt;

@@ -1,0 +1,1024 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;http&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-27T07:47:26.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/HTTP%20request/</id>
+        <title>HTTP请求走私</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/HTTP%20request/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;HTTP 请求走私是一种干扰网站处理 HTTP 请求序列方式的技术，最早在 2005 年的一篇 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2dpc2VjdXJpdHkuY29tL2xpYi9IVFRQLVJlcXVlc3QtU211Z2dsaW5nLnBkZg==&#34;&gt;文章&lt;/span&gt; 中被提出。&lt;/p&gt;
+&lt;h1 id=&#34;成因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#成因&#34;&gt;#&lt;/a&gt; 成因&lt;/h1&gt;
+&lt;p&gt;请求走私大多发生于前端服务器和后端服务器对客户端传入的数据理解不一致的情况。这是因为 HTTP 规范提供了两种不同的方法来指定请求的结束位置，即  &lt;code&gt;Content-Length&lt;/code&gt;  和  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  标头。&lt;/p&gt;
+&lt;h1 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CLTE：前端服务器使用  &lt;code&gt;Content-Length&lt;/code&gt;  头，后端服务器使用  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  头&lt;/li&gt;
+&lt;li&gt;TECL：前端服务器使用  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  标头，后端服务器使用  &lt;code&gt;Content-Length&lt;/code&gt;  标头。&lt;/li&gt;
+&lt;li&gt;TETE：前端和后端服务器都支持  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  标头，但是可以通过以某种方式来诱导其中一个服务器不处理它。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h1&gt;
+&lt;h2 id=&#34;cl不为0的get请求&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cl不为0的get请求&#34;&gt;#&lt;/a&gt; CL 不为 0 的 GET 请求&lt;/h2&gt;
+&lt;p&gt;当前端服务器允许 GET 请求携带请求体，而后端服务器不允许 GET 请求携带请求体，它会直接忽略掉 GET 请求中的  &lt;code&gt;Content-Length&lt;/code&gt;  头，不进行处理。例如下面这个例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET / HTTP/1.1\r\n
+Host: example.com\r\n
+Content-Length: 44\r\n
+
+GET /secret HTTP/1.1\r\n
+Host: example.com\r\n
+\r\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;前端服务器处理了  &lt;code&gt;Content-Length&lt;/code&gt;  ，而后端服务器没有处理  &lt;code&gt;Content-Length&lt;/code&gt;  ，基于 pipeline 机制认为这是两个独立的请求，就造成了漏洞的发生。&lt;/p&gt;
+&lt;h2 id=&#34;cl-cl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cl-cl&#34;&gt;#&lt;/a&gt; CL-CL&lt;/h2&gt;
+&lt;p&gt;根据 RFC 7230，当服务器收到的请求中包含两个  &lt;code&gt;Content-Length&lt;/code&gt;  ，而且两者的值不同时，需要返回 400 错误，但是有的服务器并没有严格实现这个规范。这种情况下，当前后端各取不同的  &lt;code&gt;Content-Length&lt;/code&gt;  值时，就会出现漏洞。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+Content-Length: 8\r\n
+Content-Length: 7\r\n
+
+12345\r\n
+a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个例子中 a 就会被带入下一个请求，变为  &lt;code&gt;aGET / HTTP/1.1\r\n&lt;/code&gt;  。&lt;/p&gt;
+&lt;h2 id=&#34;cl-te&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cl-te&#34;&gt;#&lt;/a&gt; CL-TE&lt;/h2&gt;
+&lt;p&gt;CL-TE 指前端服务器处理  &lt;code&gt;Content-Length&lt;/code&gt;  这一请求头，而后端服务器遵守 RFC2616 的规定，忽略掉  &lt;code&gt;Content-Length&lt;/code&gt;  ，处理  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+...
+Connection: keep-alive\r\n
+Content-Length: 6\r\n
+Transfer-Encoding: chunked\r\n
+\r\n
+0\r\n
+\r\n
+a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个例子中 a 同样会被带入下一个请求，变为  &lt;code&gt;aGET / HTTP/1.1\r\n&lt;/code&gt;  。&lt;/p&gt;
+&lt;h2 id=&#34;te-cl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#te-cl&#34;&gt;#&lt;/a&gt; TE-CL&lt;/h2&gt;
+&lt;p&gt;TE-CL 指前端服务器处理  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  请求头，而后端服务器处理  &lt;code&gt;Content-Length&lt;/code&gt;  请求头。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+...
+Content-Length: 4\r\n
+Transfer-Encoding: chunked\r\n
+\r\n
+12\r\n
+aPOST / HTTP/1.1\r\n
+\r\n
+0\r\n
+\r\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;te-te&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#te-te&#34;&gt;#&lt;/a&gt; TE-TE&lt;/h2&gt;
+&lt;p&gt;TE-TE 指前后端服务器都处理  &lt;code&gt;Transfer-Encoding&lt;/code&gt;  请求头，但是在容错性上表现不同，例如有的服务器可能会处理  &lt;code&gt;Transfer-encoding&lt;/code&gt;  ，测试例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST / HTTP/1.1\r\n
+Host: example.com\r\n
+...
+Content-length: 4\r\n
+Transfer-Encoding: chunked\r\n
+Transfer-encoding: cow\r\n
+\r\n
+5c\r\n
+aPOST / HTTP/1.1\r\n
+Content-Type: application/x-www-form-urlencoded\r\n
+Content-Length: 15\r\n
+\r\n
+x=1\r\n
+0\r\n
+\r\n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;防御&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#防御&#34;&gt;#&lt;/a&gt; 防御&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;禁用后端连接重用&lt;/li&gt;
+&lt;li&gt;确保连接中的所有服务器具有相同的配置&lt;/li&gt;
+&lt;li&gt;拒绝有二义性的请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzI2MTY=&#34;&gt;RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzcyMzA=&#34;&gt;RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing -- HTTP/1.1&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blog-whitepaper&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#blog-whitepaper&#34;&gt;#&lt;/a&gt; Blog / Whitepaper&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY2dpc2VjdXJpdHkuY29tL2xpYi9IVFRQLVJlcXVlc3QtU211Z2dsaW5nLnBkZg==&#34;&gt;HTTP Request Smuggling by chaiml&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3J0c3dpZ2dlci5uZXQvd2ViLXNlY3VyaXR5L3JlcXVlc3Qtc211Z2dsaW5n&#34;&gt;HTTP request smuggling by portswigger&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNjY1NA==&#34;&gt;从一道题到协议层攻击之 HTTP 请求走私&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2kuYmxhY2toYXQuY29tL1VTQS0yMC9XZWRuZXNkYXkvdXMtMjAtS2xlaW4tSFRUUC1SZXF1ZXN0LVNtdWdnbGluZy1Jbi0yMDIwLU5ldy1WYXJpYW50cy1OZXctRGVmZW5zZXMtQW5kLU5ldy1DaGFsbGVuZ2VzLnBkZg==&#34;&gt;HTTP Request Smuggling in 2020&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sYWJzLmJpc2hvcGZveC5jb20vdGVjaC1ibG9nL2gyYy1zbXVnZ2xpbmctcmVxdWVzdC1zbXVnZ2xpbmctdmlhLWh0dHAvMi1jbGVhcnRleHQtaDJj&#34;&gt;h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext (h2c)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络安全" />
+        <category term="HTTP" />
+        <category term="服务器" />
+        <updated>2022-11-27T07:47:26.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/HTTP/</id>
+        <title>HTTP协议簇</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/HTTP/"/>
+        <content type="html">&lt;h1 id=&#34;http标准&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http标准&#34;&gt;#&lt;/a&gt; HTTP 标准&lt;/h1&gt;
+&lt;h2 id=&#34;报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报文格式&#34;&gt;#&lt;/a&gt; 报文格式&lt;/h2&gt;
+&lt;h3 id=&#34;请求报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请求报文格式&#34;&gt;#&lt;/a&gt; 请求报文格式&lt;/h3&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;method&gt;&amp;lt;request-URL&gt;&amp;lt;version&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;headers&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;entity-body&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;响应报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应报文格式&#34;&gt;#&lt;/a&gt; 响应报文格式&lt;/h3&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;version&gt;&amp;lt;status&gt;&amp;lt;reason-phrase&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;headers&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;entity-body&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;字段解释&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#字段解释&#34;&gt;#&lt;/a&gt; 字段解释&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;method
+&lt;ul&gt;
+&lt;li&gt;HTTP 动词&lt;/li&gt;
+&lt;li&gt;常见方法：HEAD / GET / POST / PUT / DELETE / PATCH / OPTIONS / TRACE&lt;/li&gt;
+&lt;li&gt;扩展方法：LOCK / MKCOL / COPY / MOVE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;version
+&lt;ul&gt;
+&lt;li&gt;报文使用的 HTTP 版本&lt;/li&gt;
+&lt;li&gt;格式为 HTTP/&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;url
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;scheme&amp;gt;://&amp;lt;user&amp;gt;:&amp;lt;password&amp;gt;@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;path&amp;gt;;&amp;lt;params&amp;gt;?&amp;lt;query&amp;gt;#&amp;lt;frag&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;请求头列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#请求头列表&#34;&gt;#&lt;/a&gt; 请求头列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept
+&lt;ul&gt;
+&lt;li&gt;指定客户端能够接收的内容类型&lt;/li&gt;
+&lt;li&gt;Accept: text/plain, text/html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Charset
+&lt;ul&gt;
+&lt;li&gt;浏览器可以接受的字符编码集&lt;/li&gt;
+&lt;li&gt;Accept-Charset: iso-8859-5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Encoding
+&lt;ul&gt;
+&lt;li&gt;指定浏览器可以支持的 web 服务器返回内容压缩编码类型&lt;/li&gt;
+&lt;li&gt;Accept-Encoding: compress, gzip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Language
+&lt;ul&gt;
+&lt;li&gt;浏览器可接受的语言&lt;/li&gt;
+&lt;li&gt;Accept-Language: en,zh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept-Ranges
+&lt;ul&gt;
+&lt;li&gt;可以请求网页实体的一个或者多个子范围字段&lt;/li&gt;
+&lt;li&gt;Accept-Ranges: bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Authorization
+&lt;ul&gt;
+&lt;li&gt;HTTP 授权的授权证书&lt;/li&gt;
+&lt;li&gt;Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cache-Control
+&lt;ul&gt;
+&lt;li&gt;指定请求和响应遵循的缓存机制 Cache-Control: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connection
+&lt;ul&gt;
+&lt;li&gt;表示是否需要持久连接 // HTTP 1.1 默认进行持久连接&lt;/li&gt;
+&lt;li&gt;Connection: close&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cookie
+&lt;ul&gt;
+&lt;li&gt;HTTP 请求发送时，会把保存在该请求域名下的所有 cookie 值一起发送给 web 服务器&lt;/li&gt;
+&lt;li&gt;Cookie: role=admin;ssid=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Length
+&lt;ul&gt;
+&lt;li&gt;请求的内容长度&lt;/li&gt;
+&lt;li&gt;Content-Length: 348&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Type
+&lt;ul&gt;
+&lt;li&gt;请求的与实体对应的 MIME 信息&lt;/li&gt;
+&lt;li&gt;Content-Type: application/x-www-form-urlencoded&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Date
+&lt;ul&gt;
+&lt;li&gt;请求发送的日期和时间&lt;/li&gt;
+&lt;li&gt;Date: Tue, 15 Nov 2010 08:12:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expect
+&lt;ul&gt;
+&lt;li&gt;请求的特定的服务器行为&lt;/li&gt;
+&lt;li&gt;Expect: 100-continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;From
+&lt;ul&gt;
+&lt;li&gt;发出请求的用户的&lt;/li&gt;
+&lt;li&gt;EmailFrom: &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOnVzZXJAZW1haWwuY29t&#34;&gt;user@email.com&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Host
+&lt;ul&gt;
+&lt;li&gt;指定请求的服务器的域名和端口号&lt;/li&gt;
+&lt;li&gt;Host: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5naXRodWIuY29t&#34;&gt;www.github.com&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Match
+&lt;ul&gt;
+&lt;li&gt;只有请求内容与实体相匹配才有效&lt;/li&gt;
+&lt;li&gt;If-Match: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Modified-Since
+&lt;ul&gt;
+&lt;li&gt;如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回 304 代码&lt;/li&gt;
+&lt;li&gt;If-Modified-Since: Sat, 29 Oct 2018 19:43:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-None-Match
+&lt;ul&gt;
+&lt;li&gt;如果内容未改变返回 304 代码，参数为服务器先前发送的 Etag，与服务器回应的 Etag 比较判断是否改变&lt;/li&gt;
+&lt;li&gt;If-None-Match: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Range
+&lt;ul&gt;
+&lt;li&gt;如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为 Etag&lt;/li&gt;
+&lt;li&gt;If-Range: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If-Unmodified-Since
+&lt;ul&gt;
+&lt;li&gt;只在实体在指定时间之后未被修改才请求成功&lt;/li&gt;
+&lt;li&gt;If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Max-Forwards
+&lt;ul&gt;
+&lt;li&gt;限制信息通过代理和网关传送的时间&lt;/li&gt;
+&lt;li&gt;Max-Forwards: 10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pragma
+&lt;ul&gt;
+&lt;li&gt;用来包含实现特定的指令&lt;/li&gt;
+&lt;li&gt;Pragma: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proxy-Authorization
+&lt;ul&gt;
+&lt;li&gt;连接到代理的授权证书&lt;/li&gt;
+&lt;li&gt;Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Range
+&lt;ul&gt;
+&lt;li&gt;只请求实体的一部分，指定范围&lt;/li&gt;
+&lt;li&gt;Range: bytes=500-999&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Referer
+&lt;ul&gt;
+&lt;li&gt;先前网页的地址，当前请求网页紧随其后，即来路&lt;/li&gt;
+&lt;li&gt;Referer: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy56Y21oaS5jb20vYXJjaGl2ZXMvNzEuaHRtbA==&#34;&gt;http://www.zcmhi.com/archives/71.html&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TE
+&lt;ul&gt;
+&lt;li&gt;客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息&lt;/li&gt;
+&lt;li&gt;TE: trailers,deflate;q=0.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Upgrade
+&lt;ul&gt;
+&lt;li&gt;向服务器指定某种传输协议以便服务器进行转换（如果支持）&lt;/li&gt;
+&lt;li&gt;Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User-Agent
+&lt;ul&gt;
+&lt;li&gt;User-Agent 的内容包含发出请求的用户信息&lt;/li&gt;
+&lt;li&gt;User-Agent: Mozilla/5.0 (Linux; X11)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Via
+&lt;ul&gt;
+&lt;li&gt;通知中间网关或代理服务器地址，通信协议&lt;/li&gt;
+&lt;li&gt;Via: 1.0 fred, 1.1 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vd2hlcmUuY29t&#34;&gt;nowhere.com&lt;/span&gt; (Apache/1.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Warning
+&lt;ul&gt;
+&lt;li&gt;关于消息实体的警告信息&lt;/li&gt;
+&lt;li&gt;Warn: 199 Miscellaneous warning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;响应头列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应头列表&#34;&gt;#&lt;/a&gt; 响应头列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept-Ranges
+&lt;ul&gt;
+&lt;li&gt;表明服务器是否支持指定范围请求及哪种类型的分段请求&lt;/li&gt;
+&lt;li&gt;Accept-Ranges: bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Access-Control-Allow-Origin
+&lt;ul&gt;
+&lt;li&gt;配置有权限访问资源的域&lt;/li&gt;
+&lt;li&gt;Access-Control-Allow-Origin: &amp;lt;origin&amp;gt;|*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Age
+&lt;ul&gt;
+&lt;li&gt;从原始服务器到代理缓存形成的估算时间（以秒计，非负）&lt;/li&gt;
+&lt;li&gt;Age: 12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Allow
+&lt;ul&gt;
+&lt;li&gt;对某网络资源的有效的请求行为，不允许则返回 405&lt;/li&gt;
+&lt;li&gt;Allow: GET, HEAD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cache-Control
+&lt;ul&gt;
+&lt;li&gt;告诉所有的缓存机制是否可以缓存及哪种类型&lt;/li&gt;
+&lt;li&gt;Cache-Control: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Encoding
+&lt;ul&gt;
+&lt;li&gt;web 服务器支持的返回内容压缩编码类型&lt;/li&gt;
+&lt;li&gt;Content-Encoding: gzip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Language
+&lt;ul&gt;
+&lt;li&gt;响应体的语言&lt;/li&gt;
+&lt;li&gt;Content-Language: en,zh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Length
+&lt;ul&gt;
+&lt;li&gt;响应体的长度&lt;/li&gt;
+&lt;li&gt;Content-Length: 348&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Location
+&lt;ul&gt;
+&lt;li&gt;请求资源可替代的备用的另一地址&lt;/li&gt;
+&lt;li&gt;Content-Location: /index.htm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-MD5
+&lt;ul&gt;
+&lt;li&gt;返回资源的 MD5 校验值&lt;/li&gt;
+&lt;li&gt;Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Range
+&lt;ul&gt;
+&lt;li&gt;在整个返回体中本部分的字节位置&lt;/li&gt;
+&lt;li&gt;Content-Range: bytes 21010-47021/47022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Content-Type
+&lt;ul&gt;
+&lt;li&gt;返回内容的 MIME 类型&lt;/li&gt;
+&lt;li&gt;Content-Type: text/html; charset=utf-8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Date
+&lt;ul&gt;
+&lt;li&gt;原始服务器消息发出的时间&lt;/li&gt;
+&lt;li&gt;Date: Tue, 15 Nov 2010 08:12:31 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ETag
+&lt;ul&gt;
+&lt;li&gt;请求变量的实体标签的当前值&lt;/li&gt;
+&lt;li&gt;ETag: &amp;quot;737060cd8c284d8af7ad3082f209582d&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expires
+&lt;ul&gt;
+&lt;li&gt;响应过期的日期和时间&lt;/li&gt;
+&lt;li&gt;Expires: Thu, 01 Dec 2010 16:00:00 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Last-Modified
+&lt;ul&gt;
+&lt;li&gt;请求资源的最后修改时间&lt;/li&gt;
+&lt;li&gt;Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Location
+&lt;ul&gt;
+&lt;li&gt;用来重定向接收方到非请求 URL 的位置来完成请求或标识新的资源&lt;/li&gt;
+&lt;li&gt;Location: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy56Y21oaS5jb20vYXJjaGl2ZXMvOTQuaHRtbA==&#34;&gt;http://www.zcmhi.com/archives/94.html&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pragma
+&lt;ul&gt;
+&lt;li&gt;包括实现特定的指令，它可应用到响应链上的任何接收方&lt;/li&gt;
+&lt;li&gt;Pragma: no-cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proxy-Authenticate
+&lt;ul&gt;
+&lt;li&gt;它指出认证方案和可应用到代理的该 URL 上的参数&lt;/li&gt;
+&lt;li&gt;Proxy-Authenticate: Basic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Refresh
+&lt;ul&gt;
+&lt;li&gt;应用于重定向或一个新的资源被创造，在 5 秒之后重定向（由网景提出，被大部分浏览器支持）&lt;/li&gt;
+&lt;li&gt;Refresh: 5; url=http://www.zcmhi.com/archives/94.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Retry-After
+&lt;ul&gt;
+&lt;li&gt;如果实体暂时不可取，通知客户端在指定时间之后再次尝试&lt;/li&gt;
+&lt;li&gt;Retry-After: 120&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Server
+&lt;ul&gt;
+&lt;li&gt;web 服务器软件名称&lt;/li&gt;
+&lt;li&gt;Server: Apache/1.3.27 (Unix) (Red-Hat/Linux)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set-Cookie
+&lt;ul&gt;
+&lt;li&gt;设置 Http Cookie&lt;/li&gt;
+&lt;li&gt;Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security
+&lt;ul&gt;
+&lt;li&gt;设置浏览器强制使用 HTTPS 访问&lt;/li&gt;
+&lt;li&gt;max-age: x 秒的时间内 访问对应域名都使用 HTTPS 请求&lt;/li&gt;
+&lt;li&gt;includeSubDomains: 网站的子域名也启用规则&lt;/li&gt;
+&lt;li&gt;Strict-Transport-Security: max-age=1000; includeSubDomains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Trailer
+&lt;ul&gt;
+&lt;li&gt;指出头域在分块传输编码的尾部存在&lt;/li&gt;
+&lt;li&gt;Trailer: Max-Forwards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transfer-Encoding
+&lt;ul&gt;
+&lt;li&gt;文件传输编码&lt;/li&gt;
+&lt;li&gt;Transfer-Encoding:chunked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vary
+&lt;ul&gt;
+&lt;li&gt;告诉下游代理是使用缓存响应还是从原始服务器请求&lt;/li&gt;
+&lt;li&gt;Vary: *&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Via
+&lt;ul&gt;
+&lt;li&gt;告知代理客户端响应是通过哪里发送的&lt;/li&gt;
+&lt;li&gt;Via: 1.0 fred, 1.1 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vd2hlcmUuY29t&#34;&gt;nowhere.com&lt;/span&gt; (Apache/1.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Warning
+&lt;ul&gt;
+&lt;li&gt;警告实体可能存在的问题&lt;/li&gt;
+&lt;li&gt;Warning: 199 Miscellaneous warning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WWW-Authenticate
+&lt;ul&gt;
+&lt;li&gt;表明客户端请求实体应该使用的授权方案&lt;/li&gt;
+&lt;li&gt;WWW-Authenticate: Basic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;X-Content-Type-Options
+&lt;ul&gt;
+&lt;li&gt;配置禁止 MIME 类型嗅探&lt;/li&gt;
+&lt;li&gt;X-Content-Type-Options: nosniff&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;X-Frame-Options
+&lt;ul&gt;
+&lt;li&gt;配置页面是否能出现在 &amp;lt;frame&amp;gt;, &amp;lt;iframe&amp;gt;, &amp;lt;embed&amp;gt;, &amp;lt;object&amp;gt; 等标签中，防止点击劫持&lt;/li&gt;
+&lt;li&gt;X-Frame-Options: deny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;X-XSS-Protection
+&lt;ul&gt;
+&lt;li&gt;配置 XSS 防护机制&lt;/li&gt;
+&lt;li&gt;X-XSS-Protection: 1; mode=block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;http状态返回代码-1xx临时响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-1xx临时响应&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 1xx（临时响应）&lt;/h2&gt;
+&lt;p&gt;表示临时响应并需要请求者继续执行操作的状态代码。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;继续&lt;/td&gt;
+&lt;td&gt;服务器返回此代码表示已收到请求的第一部分，正在等待其余部分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;101&lt;/td&gt;
+&lt;td&gt;切换协议&lt;/td&gt;
+&lt;td&gt;请求者已要求服务器切换协议，服务器已确认并准备切换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-2xx-成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-2xx-成功&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 2xx （成功）&lt;/h2&gt;
+&lt;p&gt;表示成功处理了请求的状态代码。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;成功&lt;/td&gt;
+&lt;td&gt;服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;201&lt;/td&gt;
+&lt;td&gt;已创建&lt;/td&gt;
+&lt;td&gt;请求成功并且服务器创建了新的资源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;202&lt;/td&gt;
+&lt;td&gt;已接受&lt;/td&gt;
+&lt;td&gt;服务器已接受请求，但尚未处理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;203&lt;/td&gt;
+&lt;td&gt;非授权信息&lt;/td&gt;
+&lt;td&gt;服务器已成功处理了请求，但返回的信息可能来自另一来源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;无内容&lt;/td&gt;
+&lt;td&gt;服务器成功处理了请求，但没有返回任何内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;205&lt;/td&gt;
+&lt;td&gt;重置内容&lt;/td&gt;
+&lt;td&gt;m 服务器成功处理了请求，但没有返回任何内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;206&lt;/td&gt;
+&lt;td&gt;部分内容&lt;/td&gt;
+&lt;td&gt;服务器成功处理了部分 GET 请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-3xx-重定向&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-3xx-重定向&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 3xx （重定向）&lt;/h2&gt;
+&lt;p&gt;表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;td&gt;多种选择&lt;/td&gt;
+&lt;td&gt;针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;301&lt;/td&gt;
+&lt;td&gt;永久移动&lt;/td&gt;
+&lt;td&gt;请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;302&lt;/td&gt;
+&lt;td&gt;临时移动&lt;/td&gt;
+&lt;td&gt;服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;303&lt;/td&gt;
+&lt;td&gt;查看其他位置&lt;/td&gt;
+&lt;td&gt;请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;304&lt;/td&gt;
+&lt;td&gt;未修改&lt;/td&gt;
+&lt;td&gt;自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;305&lt;/td&gt;
+&lt;td&gt;使用代理&lt;/td&gt;
+&lt;td&gt;请求者只能使用代理访问请求的网页。如果服务器返回此响应，还表示请求者应使用代理。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;307&lt;/td&gt;
+&lt;td&gt;临时重定向&lt;/td&gt;
+&lt;td&gt;服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-4xx请求错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-4xx请求错误&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 4xx（请求错误）&lt;/h2&gt;
+&lt;p&gt;这些状态代码表示请求可能出错，妨碍了服务器的处理。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;400&lt;/td&gt;
+&lt;td&gt;错误请求&lt;/td&gt;
+&lt;td&gt;服务器不理解请求的语法。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;未授权&lt;/td&gt;
+&lt;td&gt;请求要求身份验证。对于需要登录的网页，服务器可能返回此响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;禁止&lt;/td&gt;
+&lt;td&gt;服务器拒绝请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;td&gt;未找到&lt;/td&gt;
+&lt;td&gt;服务器找不到请求的网页。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;405&lt;/td&gt;
+&lt;td&gt;方法禁用&lt;/td&gt;
+&lt;td&gt;禁用请求中指定的方法。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;406&lt;/td&gt;
+&lt;td&gt;不接受&lt;/td&gt;
+&lt;td&gt;无法使用请求的内容特性响应请求的网页。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;407&lt;/td&gt;
+&lt;td&gt;需要代理授权&lt;/td&gt;
+&lt;td&gt;此状态代码与 401（未授权）类似，但指定请求者应当授权使用代理。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;408&lt;/td&gt;
+&lt;td&gt;请求超时&lt;/td&gt;
+&lt;td&gt;服务器等候请求时发生超时。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;409&lt;/td&gt;
+&lt;td&gt;冲突&lt;/td&gt;
+&lt;td&gt;服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;410&lt;/td&gt;
+&lt;td&gt;已删除&lt;/td&gt;
+&lt;td&gt;如果请求的资源已永久删除，服务器就会返回此响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;411&lt;/td&gt;
+&lt;td&gt;需要有效长度&lt;/td&gt;
+&lt;td&gt;服务器不接受不含有效内容长度标头字段的请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;412&lt;/td&gt;
+&lt;td&gt;未满足前提条件&lt;/td&gt;
+&lt;td&gt;服务器未满足请求者在请求中设置的其中一个前提条件。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;413&lt;/td&gt;
+&lt;td&gt;请求实体过大&lt;/td&gt;
+&lt;td&gt;服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;414&lt;/td&gt;
+&lt;td&gt;请求的 URI 过长&lt;/td&gt;
+&lt;td&gt;请求的 URI（通常为网址）过长，服务器无法处理。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;415&lt;/td&gt;
+&lt;td&gt;不支持的媒体类型&lt;/td&gt;
+&lt;td&gt;请求的格式不受请求页面的支持。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;416&lt;/td&gt;
+&lt;td&gt;请求范围不符合要求&lt;/td&gt;
+&lt;td&gt;如果页面无法提供请求的范围，则服务器会返回此状态代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;417&lt;/td&gt;
+&lt;td&gt;未满足期望值&lt;/td&gt;
+&lt;td&gt;服务器未满足 &amp;quot;期望&amp;quot; 请求标头字段的要求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;http状态返回代码-5xx服务器错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http状态返回代码-5xx服务器错误&#34;&gt;#&lt;/a&gt; HTTP 状态返回代码 5xx（服务器错误）&lt;/h2&gt;
+&lt;p&gt;这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;代码&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;td&gt;服务器内部错误&lt;/td&gt;
+&lt;td&gt;服务器遇到错误，无法完成请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;501&lt;/td&gt;
+&lt;td&gt;尚未实施&lt;/td&gt;
+&lt;td&gt;服务器不具备完成请求的功能。例如，服务器无法识别请求方法时可能会返回此代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;502&lt;/td&gt;
+&lt;td&gt;错误网关&lt;/td&gt;
+&lt;td&gt;服务器作为网关或代理，从上游服务器收到无效响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;503&lt;/td&gt;
+&lt;td&gt;服务不可用&lt;/td&gt;
+&lt;td&gt;服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;504&lt;/td&gt;
+&lt;td&gt;网关超时&lt;/td&gt;
+&lt;td&gt;服务器作为网关或代理，但是没有及时从上游服务器收到请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;505&lt;/td&gt;
+&lt;td&gt;HTTP 版本不受支持&lt;/td&gt;
+&lt;td&gt;服务器不支持请求中所用的 HTTP 协议版本。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;http-版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-版本&#34;&gt;#&lt;/a&gt; HTTP 版本&lt;/h1&gt;
+&lt;h2 id=&#34;http&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http&#34;&gt;#&lt;/a&gt; HTTP&lt;/h2&gt;
+&lt;p&gt;HTTP 是基于 TCP/IP 协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用 80 端口。&lt;/p&gt;
+&lt;h2 id=&#34;http-09&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-09&#34;&gt;#&lt;/a&gt; HTTP 0.9&lt;/h2&gt;
+&lt;p&gt;HTTP 0.9 最早在 1991 年发布，仅支持 GET 命令，请求格式只有简单的  &lt;code&gt;GET /url&lt;/code&gt;  ，服务端仅响应 HTML，响应完毕后关闭 TCP 连接。&lt;/p&gt;
+&lt;h2 id=&#34;http-10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-10&#34;&gt;#&lt;/a&gt; HTTP 1.0&lt;/h2&gt;
+&lt;p&gt;1996 年 5 月，HTTP/1.0 版本发布，丰富了传输的格式和内容，还引入了 POST、HEAD 两个动词。从 1.0 开始，必须在尾部添加协议版本。在 1.0 中，也引入了状态码 (status code)、多字符集支持、多部分发送 (multi-part type)、权限 (authorization)、缓存 (cache)、内容编码 (content encoding) 等内容。&lt;/p&gt;
+&lt;p&gt;HTTP 1.0 版的主要缺点是，每个 TCP 连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。&lt;/p&gt;
+&lt;p&gt;TCP 连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢 (slow start)，所以，HTTP 1.0 版本的性能比较差。&lt;/p&gt;
+&lt;h2 id=&#34;http-11&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http-11&#34;&gt;#&lt;/a&gt; HTTP 1.1&lt;/h2&gt;
+&lt;p&gt;1997 年 1 月，HTTP/1.1 版本发布，进一步完善了 HTTP 协议。1.1 版本主要是引入了持久连接、管道机制、Content-Length、分块传输编码等内容。管道机制即在同一个 TCP 连接里面，客户端可以同时发送多个请求，这样就改进了 HTTP 协议的效率。PUT、PATCH、HEAD、 OPTIONS、DELETE 等动词方法也是在 HTTP 1.1 版本引入的。另外 1.1 版本新增了 Host 字段，用于指定服务器的域名，这也是后来虚拟主机得以发展的基础。&lt;/p&gt;
+&lt;p&gt;虽然 1.1 版允许复用 TCP 连接，但是同一个 TCP 连接里面，所有的数据通信是按次序进行的。服务器只有处理完一个回应，才会进行下一个回应。如果有一个请求很慢，就会阻塞后面的请求。&lt;/p&gt;
+&lt;h2 id=&#34;spdy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spdy&#34;&gt;#&lt;/a&gt; SPDY&lt;/h2&gt;
+&lt;p&gt;2009 年，谷歌公开了自行研发的 SPDY 协议，用于解决 HTTP/1.1 效率不高的问题，而后被当做 HTTP/2 的基础。&lt;/p&gt;
+&lt;h2 id=&#34;http2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http2&#34;&gt;#&lt;/a&gt; HTTP/2&lt;/h2&gt;
+&lt;p&gt;2015 年，HTTP/2 发布，HTTP/2 是一个二进制协议，头信息和数据体都是二进制，统称为帧 (frame)，帧分为头信息帧和数据帧。HTTP/2 复用 TCP 连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序回应。&lt;/p&gt;
+&lt;h1 id=&#34;https&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#https&#34;&gt;#&lt;/a&gt; HTTPS&lt;/h1&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;HTTPS (HyperText Transfer Protocol over Secure Socket Layer) 可以理解为 HTTP+SSL/TLS， 即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL。&lt;/p&gt;
+&lt;h2 id=&#34;交互&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互&#34;&gt;#&lt;/a&gt; 交互&lt;/h2&gt;
+&lt;h3 id=&#34;证书验证阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#证书验证阶段&#34;&gt;#&lt;/a&gt; 证书验证阶段&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器发起 HTTPS 请求&lt;/li&gt;
+&lt;li&gt;服务端返回 HTTPS 证书
+&lt;ul&gt;
+&lt;li&gt;其中证书包含：
+&lt;ul&gt;
+&lt;li&gt;颁发机构信息&lt;/li&gt;
+&lt;li&gt;公钥&lt;/li&gt;
+&lt;li&gt;公司信息&lt;/li&gt;
+&lt;li&gt;域名&lt;/li&gt;
+&lt;li&gt;有效期&lt;/li&gt;
+&lt;li&gt;指纹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;客户端验证证书是否合法，如果不合法则提示告警&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据传输阶段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据传输阶段&#34;&gt;#&lt;/a&gt; 数据传输阶段&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;当证书验证合法后，在本地生成随机数&lt;/li&gt;
+&lt;li&gt;通过公钥加密随机数，并把加密后的随机数传输到服务端&lt;/li&gt;
+&lt;li&gt;服务端通过私钥对随机数进行解密&lt;/li&gt;
+&lt;li&gt;服务端通过客户端传入的随机数构造对称加密算法，对返回结果内容进行加密后传输&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ca&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ca&#34;&gt;#&lt;/a&gt; CA&lt;/h2&gt;
+&lt;p&gt;CA (Certificate Authority) 是颁发数字证书的机构。是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。&lt;/p&gt;
+&lt;h1 id=&#34;websocket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#websocket&#34;&gt;#&lt;/a&gt; WebSocket&lt;/h1&gt;
+&lt;h2 id=&#34;简介-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-2&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;WebSocket 是一种网络传输协议，可在单个 TCP 连接上进行全双工通信，位于 OSI 模型的应用层。WebSocket 协议在 2011 年由 IETF 标准化为 RFC 6455，后由 RFC 7936 补充规范。&lt;/p&gt;
+&lt;h2 id=&#34;交互-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#交互-2&#34;&gt;#&lt;/a&gt; 交互&lt;/h2&gt;
+&lt;h3 id=&#34;握手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#握手&#34;&gt;#&lt;/a&gt; 握手&lt;/h3&gt;
+&lt;p&gt;握手阶段和 HTTP 协议较为类似，RFC 文档中给出的握手示例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Origin: http://example.com
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中 Upgrade 的值必须为 websocket ，Connection 的值必须为 Upgrade ，合起来表示客户端喜欢连接升级到 Websocket 协议。&lt;/p&gt;
+&lt;p&gt;Sec-WebSocket-Key 是一个随机值，Sec-WebSocket-Accept 是 Sec-WebSocket-Key 拼接特定字符串  &lt;code&gt;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&lt;/code&gt;  计算 SHA1 摘要后的 Base64 编码的值。例子中  &lt;code&gt;s3pPLMBiTxaQ9kYGzzhZRbK+xOo=&lt;/code&gt;  就是  &lt;code&gt;dGhlIHNhbXBsZSBub25jZQ==258EAFA5-E914-47DA-95CA-C5AB0DC85B11&lt;/code&gt;  对应的 SHA1 摘要。&lt;/p&gt;
+&lt;h1 id=&#34;cookie&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cookie&#34;&gt;#&lt;/a&gt; Cookie&lt;/h1&gt;
+&lt;h2 id=&#34;2751-简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2751-简介&#34;&gt;#&lt;/a&gt; 2.7.5.1. 简介&lt;/h2&gt;
+&lt;p&gt;Cookie（复数形态 Cookies），类型为「小型文本文件」，指某些网站为了辨别用户身份而储存在用户本地终端上的数据。&lt;/p&gt;
+&lt;h2 id=&#34;2752-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2752-属性&#34;&gt;#&lt;/a&gt; 2.7.5.2. 属性&lt;/h2&gt;
+&lt;h3 id=&#34;name&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#name&#34;&gt;#&lt;/a&gt; name&lt;/h3&gt;
+&lt;p&gt;cookie 的名称。&lt;/p&gt;
+&lt;h3 id=&#34;value&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#value&#34;&gt;#&lt;/a&gt; value&lt;/h3&gt;
+&lt;p&gt;cookie 的值。&lt;/p&gt;
+&lt;h3 id=&#34;expires&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#expires&#34;&gt;#&lt;/a&gt; expires&lt;/h3&gt;
+&lt;p&gt;当 Expires 属性缺省时，表示是会话性 Cookie，在用户关闭浏览器时失效。&lt;/p&gt;
+&lt;h3 id=&#34;max-age&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#max-age&#34;&gt;#&lt;/a&gt; max-age&lt;/h3&gt;
+&lt;p&gt;max-age 可以为正数、负数、0。如果 max-age 属性为正数时，浏览器会将其持久化，当 max-age 属性为负数，则表示该 Cookie 只是一个会话性 Cookie。当 max-age 为 0 时，则会立即删除这个 Cookie。Expires 和 max-age 都存在的条件下，max-age 优先级更高。&lt;/p&gt;
+&lt;h3 id=&#34;domain&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#domain&#34;&gt;#&lt;/a&gt; domain&lt;/h3&gt;
+&lt;p&gt;指定 Cookie 的域名，默认是当前域名。domain 设置时可以设置为自身及其父域，子域可以访问父域的 Cookie，反之不能。&lt;/p&gt;
+&lt;h3 id=&#34;path&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#path&#34;&gt;#&lt;/a&gt; path&lt;/h3&gt;
+&lt;p&gt;指定一个 URL 路径，这个路径必须出现在要请求的资源的路径中才可以发送对应的 Cookie。&lt;/p&gt;
+&lt;h3 id=&#34;secure&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#secure&#34;&gt;#&lt;/a&gt; secure&lt;/h3&gt;
+&lt;p&gt;只能通过 HTTPS 传输。&lt;/p&gt;
+&lt;h3 id=&#34;httponly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#httponly&#34;&gt;#&lt;/a&gt; httponly&lt;/h3&gt;
+&lt;p&gt;限制 Cookie 仅在 HTTP 传输过程中被读取，一定程度上防御 XSS 攻击。&lt;/p&gt;
+&lt;h3 id=&#34;samesite&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#samesite&#34;&gt;#&lt;/a&gt; SameSite&lt;/h3&gt;
+&lt;p&gt;SameSite 支持 Strict / Lax / None 三种值。Strict 最为严格，完全禁止第三方 Cookie，跨站点时，任何情况下都不会发送 Cookie。Lax 允许部分第三方请求携带 Cookie，主要是链接、预加载、GET 表单三种情况。Cookie 的 SameSite 属性为 None ，且设置了 Secure 时，无论是否跨站都会发送 Cookie。&lt;/p&gt;
+&lt;h1 id=&#34;webdav&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webdav&#34;&gt;#&lt;/a&gt; WebDAV&lt;/h1&gt;
+&lt;h2 id=&#34;简介-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介-3&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;WebDAV （Web-based Distributed Authoring and Versioning） 一种基于 HTTP 1.1 协议的通信协议。它扩展了 HTTP 1.1，在 GET、POST、HEAD 等几个 HTTP 标准方法以外添加了一些新的方法，使应用程序可对 Web Server 直接读写，并支持写文件锁定、解锁，以及版本控制等功能。&lt;/p&gt;
+&lt;p&gt;支持的方法具体为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OPTIONS
+&lt;ul&gt;
+&lt;li&gt;获取服务器的支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GET / PUT / POST / DELETE
+&lt;ul&gt;
+&lt;li&gt;资源操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TRACE
+&lt;ul&gt;
+&lt;li&gt;跟踪服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HEAD&lt;/li&gt;
+&lt;li&gt;MKCOL
+&lt;ul&gt;
+&lt;li&gt;创建集合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PROPFIND / PROPPATCH&lt;/li&gt;
+&lt;li&gt;COPY / MOVE&lt;/li&gt;
+&lt;li&gt;LOCK / UNLOCK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关cve&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关cve&#34;&gt;#&lt;/a&gt; 相关 CVE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CVE-2015-1833
+&lt;ul&gt;
+&lt;li&gt;Apache Jacrabbit WebDav XXE&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zZWN1cml0eWZvY3VzLmNvbS9hcmNoaXZlLzEvNTM1NTgy&#34;&gt;http://www.securityfocus.com/archive/1/535582&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CVE-2015-7326
+&lt;ul&gt;
+&lt;li&gt;Milton WebDav XXE&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zZWN1cml0eWZvY3VzLmNvbS9hcmNoaXZlLzEvNTM2ODEz&#34;&gt;http://www.securityfocus.com/archive/1/536813&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;rfc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rfc&#34;&gt;#&lt;/a&gt; RFC&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzMyNTM=&#34;&gt;RFC 3253&lt;/span&gt; Versioning Extensions to WebDAV (Web Distributed Authoring and Versioning)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM2NDg=&#34;&gt;RFC 3648&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) Ordered Collections Protocol&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM3NDQ=&#34;&gt;RFC 3744&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) Access Control Protocol&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQ0Mzc=&#34;&gt;RFC 4437&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) Redirect Reference Resources&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzQ5MTg=&#34;&gt;RFC 4918&lt;/span&gt; HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzUzMjM=&#34;&gt;RFC 5323&lt;/span&gt; Web Distributed Authoring and Versioning (WebDAV) SEARCH&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzU4NDI=&#34;&gt;RFC 5842&lt;/span&gt; Binding Extensions to Web Distributed Authoring and Versioning (WebDAV)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXRhdHJhY2tlci5pZXRmLm9yZy9kb2MvaHRtbC9yZmM2NDU1&#34;&gt;The WebSocket Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXRhdHJhY2tlci5pZXRmLm9yZy9kb2MvaHRtbC9yZmM3OTM2&#34;&gt;Clarifying Registry Procedures for the WebSocket Subprotocol Name Registry&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blog&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#blog&#34;&gt;#&lt;/a&gt; Blog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzIwMTUuemVyb25pZ2h0cy5vcmcvYXNzZXRzL2ZpbGVzLzM1LUVnb3Jvdi5wZGY=&#34;&gt;What should a hacker know about WebDav&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTkvMDkvY29va2llLXNhbWVzaXRlLmh0bWw=&#34;&gt;Cookie 的 SameSite 属性&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTYvMDgvaHR0cC5odG1s&#34;&gt;HTTP 协议入门&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="HTTP" />
+        <updated>2022-11-25T03:05:41.000Z</updated>
+    </entry>
+</feed>

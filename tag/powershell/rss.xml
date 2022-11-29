@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;powershell&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 28 Nov 2022 10:40:11 +0800</pubDate>
+        <lastBuildDate>Mon, 28 Nov 2022 10:40:11 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/PowerShell/</guid>
+            <title>PowerShell</title>
+            <link>https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/PowerShell/</link>
+            <category>PowerShell</category>
+            <pubDate>Mon, 28 Nov 2022 10:40:11 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;执行策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行策略&#34;&gt;#&lt;/a&gt; 执行策略&lt;/h1&gt;
+&lt;p&gt;PowerShell 提供了 Restricted、AllSigned、RemoteSigned、Unrestricted、Bypass、Undefined 六种类型的执行策略。&lt;/p&gt;
+&lt;p&gt;Restricted 策略可以执行单个的命令，但是不能执行脚本，Windows 8、 Windows Server 2012 中默认使用该策略。&lt;/p&gt;
+&lt;p&gt;AllSigned 策略允许执行所有具有数字签名的脚本。&lt;/p&gt;
+&lt;p&gt;RemoteSigned 当执行从网络上下载的脚本时，需要脚本具有数字签名，否则不会运行这个脚本。如果是在本地创建的脚本则可以直接执行，不要求脚本具有数字签名。&lt;/p&gt;
+&lt;p&gt;Unrestricted 这是一种比较宽容的策略，允许运行未签名的脚本。对于从网络上下载的脚本，在运行前会进行安全性提示。&lt;/p&gt;
+&lt;p&gt;BypassBypass 执行策略对脚本的执行不设任何的限制，任何脚本都可以执行，并且不会有安全性提示。&lt;/p&gt;
+&lt;p&gt;UndefinedUndefined 表示没有设置脚本策略，会继承或使用默认的脚本策略。&lt;/p&gt;
+&lt;h1 id=&#34;混淆&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#混淆&#34;&gt;#&lt;/a&gt; 混淆&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-EC&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-EncodedCommand&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-EncodedComman&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-EncodedComma&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-EncodedComm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;常见功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见功能&#34;&gt;#&lt;/a&gt; 常见功能&lt;/h1&gt;
+&lt;h2 id=&#34;计划任务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计划任务&#34;&gt;#&lt;/a&gt; 计划任务&lt;/h2&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$Action&lt;/span&gt; = &lt;span class=&#34;token function&#34;&gt;New-ScheduledTaskAction&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Execute &lt;span class=&#34;token string&#34;&gt;&#34;calc.exe&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$Trigger&lt;/span&gt; = &lt;span class=&#34;token function&#34;&gt;New-ScheduledTaskTrigger&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;AtLogon&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$User&lt;/span&gt; = &lt;span class=&#34;token function&#34;&gt;New-ScheduledTaskPrincipal&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;GroupId &lt;span class=&#34;token string&#34;&gt;&#34;BUILTIN\Administrators&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;RunLevel Highest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$Set&lt;/span&gt; = &lt;span class=&#34;token function&#34;&gt;New-ScheduledTaskSettingsSet&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$object&lt;/span&gt; = &lt;span class=&#34;token function&#34;&gt;New-ScheduledTask&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Action &lt;span class=&#34;token variable&#34;&gt;$Action&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Principal &lt;span class=&#34;token variable&#34;&gt;$User&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Trigger &lt;span class=&#34;token variable&#34;&gt;$Trigger&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Settings &lt;span class=&#34;token variable&#34;&gt;$Set&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Register-ScheduledTask&lt;/span&gt; AtomicTask &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;InputObject &lt;span class=&#34;token variable&#34;&gt;$object&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Unregister-ScheduledTask&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;TaskName &lt;span class=&#34;token string&#34;&gt;&#34;AtomicTask&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;confirm:&lt;span class=&#34;token boolean&#34;&gt;$false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;创建链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建链接&#34;&gt;#&lt;/a&gt; 创建链接&lt;/h2&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$Shell&lt;/span&gt; = &lt;span class=&#34;token function&#34;&gt;New-Object&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;ComObject &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;WScript.Shell&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$ShortCut&lt;/span&gt; = &lt;span class=&#34;token variable&#34;&gt;$Shell&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;CreateShortcut&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;&lt;span class=&#34;token variable&#34;&gt;$env&lt;/span&gt;:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\test.lnk&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$ShortCut&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;TargetPath=&lt;span class=&#34;token string&#34;&gt;&#34;cmd.exe&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$ShortCut&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;WorkingDirectory = &lt;span class=&#34;token string&#34;&gt;&#34;C:\Windows\System32&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$ShortCut&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;WindowStyle = 1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$ShortCut&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Description = &lt;span class=&#34;token string&#34;&gt;&#34;test.&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$ShortCut&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Save&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编码&#34;&gt;#&lt;/a&gt; 编码&lt;/h2&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$OriginalCommand&lt;/span&gt; = &lt;span class=&#34;token string&#34;&gt;&#39;#&amp;#123;powershell_command&amp;#125;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$Bytes&lt;/span&gt; = &lt;span class=&#34;token namespace&#34;&gt;[System.Text.Encoding]&lt;/span&gt;::Unicode&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;GetBytes&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$OriginalCommand&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$EncodedCommand&lt;/span&gt; =&lt;span class=&#34;token namespace&#34;&gt;[Convert]&lt;/span&gt;::ToBase64String&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$Bytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;别名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alias&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Invoke-WebRequest &amp;quot;https://example.com/test.zip&amp;quot; -OutFile &amp;quot;$env:TEMP\test.zip&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压缩&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Expand-Archive $env:TEMP\test.zip $env:TEMP\test -Force&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启动进程  &lt;code&gt;Start-Process calc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;停止进程  &lt;code&gt;Stop-Process -ID $pid&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新建文件  &lt;code&gt;New-Item #&amp;#123;file_path&amp;#125; -Force | Out-Null&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;设置文件内容  &lt;code&gt;Set-Content -Path #&amp;#123;file_path&amp;#125; -Value &amp;quot;#&amp;#123;Content&amp;#125;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;追加文件内容  &lt;code&gt;Add-Content -Path #&amp;#123;file_path&amp;#125; -Value &amp;quot;#&amp;#123;Content&amp;#125;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;复制文件  &lt;code&gt;Copy-Item src dst&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除文件  &lt;code&gt;Remove-Item #&amp;#123;outputfile&amp;#125; -Force -ErrorAction Ignore&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;子目录  &lt;code&gt;Get-ChildItem #&amp;#123;file_path&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;获取服务  &lt;code&gt;Get-Service -Name &amp;quot;#&amp;#123;service_name&amp;#125;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;启动服务  &lt;code&gt;Start-Service -Name &amp;quot;#&amp;#123;service_name&amp;#125;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;停止服务  &lt;code&gt;Stop-Service -Name &amp;quot;#&amp;#123;service_name&amp;#125;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除服务  &lt;code&gt;Remove-Service -Name &amp;quot;#&amp;#123;service_name&amp;#125;&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取 WMI 支持  &lt;code&gt;Get-WmiObject -list&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vcG93ZXJzaGVsbC8=&#34;&gt;PowerShell 官方文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;wifi&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T08:48:19.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/</id>
+        <title>WiFi</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Wi-Fi 又称 “无线热点” 或 “无线网络”，是 Wi-Fi 联盟的商标，一个基于 IEEE 802.11 标准的无线局域网技术。&lt;/p&gt;
+&lt;h1 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h1&gt;
+&lt;h2 id=&#34;暴力破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#暴力破解&#34;&gt;#&lt;/a&gt; 暴力破解&lt;/h2&gt;
+&lt;p&gt;WiFi 密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。&lt;/p&gt;
+&lt;h2 id=&#34;伪造热点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#伪造热点&#34;&gt;#&lt;/a&gt; 伪造热点&lt;/h2&gt;
+&lt;p&gt;AP 可以动态的广播自己，客户也可以主动发送探针请求。可以伪造 AP 发送对探针请求的响应包，来让客户端错误的识别。&lt;/p&gt;
+&lt;h2 id=&#34;秘钥重装攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#秘钥重装攻击&#34;&gt;#&lt;/a&gt; 秘钥重装攻击&lt;/h2&gt;
+&lt;p&gt;该漏洞由 Vanhoef 发现。Wi-Fi 在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。&lt;/p&gt;
+&lt;h2 id=&#34;dragonblood&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dragonblood&#34;&gt;#&lt;/a&gt; Dragonblood&lt;/h2&gt;
+&lt;p&gt;最新版的 WPA3 标准在实现上存在一些问题，同样由 Vanhoef 发现。包含拒绝服务攻击、降级攻击、侧信道泄露等。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2ktZmkub3JnLw==&#34;&gt;Wi-Fi Alliance&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9kcmFnb25ibG9vZC5wZGY=&#34;&gt;Dragonblood&lt;/span&gt; : Analyzing the Dragonfly Handshake of WPA3 and EAP-pwd&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ub3Jkc2VjMjAxOS5wZGY=&#34;&gt;Improving Privacy through Fast Passive Wi-Fi Scanning&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9hc2lhY2NzMjAxOS5wZGY=&#34;&gt;Practical Side-Channel Attacks against WPA-TKIP&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYXBlcnMubWF0aHl2YW5ob2VmLmNvbS9ibGFja2hhdC1ldTIwMTcucGRm&#34;&gt;Key Reinstallation Attacks: Breaking the WPA2 Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc2NjQ=&#34;&gt;RFC 7664 Dragonfly Key Exchange&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="WiFi" />
+        <updated>2022-11-26T08:48:19.000Z</updated>
+    </entry>
+</feed>

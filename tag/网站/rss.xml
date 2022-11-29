@@ -5,17 +5,14 @@
         <link>https://mobius-0.github.io</link>
         <description>GLHF</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 16 Nov 2022 17:35:36 +0800</pubDate>
-        <lastBuildDate>Wed, 16 Nov 2022 17:35:36 +0800</lastBuildDate>
+        <pubDate>Sat, 26 Nov 2022 10:03:09 +0800</pubDate>
+        <lastBuildDate>Sat, 26 Nov 2022 10:03:09 +0800</lastBuildDate>
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
         <category>网络安全</category>
         <category>工具</category>
         <category>虚拟机</category>
-        <category>计算机网络</category>
-        <category>网络协议</category>
-        <category>法律法规</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -23,6 +20,172 @@
         <category>江南</category>
         <category>龙族</category>
         <category>动画</category>
+        <category>法律法规</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Linux</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>Windows</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>Shell</category>
+        <category>漏洞</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XSS</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/information%20gathering/website%20information/</guid>
+            <title>站点信息</title>
+            <link>https://mobius-0.github.io/security/WebNote/information%20gathering/website%20information/</link>
+            <category>网站</category>
+            <category>信息收集</category>
+            <category>搜索</category>
+            <pubDate>Sat, 26 Nov 2022 10:03:09 +0800</pubDate>
+            <description><![CDATA[ &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;判断网站操作系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux 大小写敏感&lt;/li&gt;
+&lt;li&gt;Windows 大小写不敏感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扫描敏感文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;robots.txt&lt;/li&gt;
+&lt;li&gt;crossdomain.xml&lt;/li&gt;
+&lt;li&gt;sitemap.xml&lt;/li&gt;
+&lt;li&gt;xx.tar.gz&lt;/li&gt;
+&lt;li&gt;xx.bak 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确定网站采用的语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 PHP / Java / Python 等&lt;/li&gt;
+&lt;li&gt;找后缀，比如 php/asp/jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前端框架&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 jQuery / BootStrap / Vue / React / Angular 等&lt;/li&gt;
+&lt;li&gt;查看源代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中间服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 Apache / Nginx / IIS 等&lt;/li&gt;
+&lt;li&gt;查看 header 中的信息&lt;/li&gt;
+&lt;li&gt;根据报错信息判断&lt;/li&gt;
+&lt;li&gt;根据默认页面判断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web 容器服务器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如 Tomcat / Jboss / Weblogic 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后端框架&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 Cookie 判断&lt;/li&gt;
+&lt;li&gt;根据 CSS / 图片等资源的 hash 值判断&lt;/li&gt;
+&lt;li&gt;根据 URL 路由判断
+&lt;ul&gt;
+&lt;li&gt;如 wp-admin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;根据网页中的关键字判断&lt;/li&gt;
+&lt;li&gt;根据响应头中的 X-Powered-By&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CDN 信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见的有 Cloudflare、yunjiasu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;探测有没有 WAF，如果有，什么类型的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有 WAF，找绕过方式&lt;/li&gt;
+&lt;li&gt;没有，进入下一步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扫描敏感目录，看是否存在信息泄漏&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扫描之前先自己尝试几个的 url，人为看看反应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用爬虫爬取网站信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿到一定信息后，通过拿到的目录名称，文件名称及文件扩展名了解网站开发人员的命名思路，确定其命名规则，推测出更多的目录及文件名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常见入口目标&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关注度低的系统&lt;/li&gt;
+&lt;li&gt;业务线较长的系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://mobius-0.github.io/hexo/hexo/</guid>
             <title>关于hexo-shoka主题配置过程的补充</title>

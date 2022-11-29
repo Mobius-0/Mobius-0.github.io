@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"golang\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Golang/",
+            "url": "https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Golang/",
+            "title": "Golang",
+            "date_published": "2022-11-28T02:34:11.000Z",
+            "content_html": "<h1 id=\"golang-runtime\"><a class=\"anchor\" href=\"#golang-runtime\">#</a> Golang Runtime</h1>\n<p>Go 中的线程被称为 Goroutine 或 G，内核线程被称为 M。这些 G 被调度到 M 上，即所谓的 G：M 线程模型，或更常用的 M：N 线程模型，用户空间线程或 green 线程模型。</p>\n<h1 id=\"字符串处理\"><a class=\"anchor\" href=\"#字符串处理\">#</a> 字符串处理</h1>\n<ul>\n<li>Go 源代码始终为 UTF-8</li>\n<li>代表 Unicode 码点的字节序列称为  <code>rune</code></li>\n<li>Go 不保证字符串中的字符被规范化</li>\n<li>字符串可以包含任意字节</li>\n<li>字符串中不包含字节级转义符时，字符串始终包含有效的 UTF-8 序列</li>\n</ul>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmdvbGFuZy5vcmcvc3RyaW5ncw==\">Strings, bytes, runes and characters in Go</span></li>\n</ul>\n",
+            "tags": [
+                "Golang"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,511 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="域名,信息收集,搜索" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/">
+
+
+
+  <title>
+域名信息 - 信息收集 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">域名信息
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-25 16:54:06">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-25T16:54:06+08:00">2022-11-25</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/PO3njRwt9WQKEhl.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/rRTmkg1eG8SBXuw.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/25/ub4WJPITVGQxkeo.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/25/Qfws978EmqxrHik.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/MkfuhclVLDZUI9Y.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/mJcbwPV4zuS28ra.png"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/information-gathering/" itemprop="item" rel="index" title="分类于 信息收集"><span itemprop="name">信息收集</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="whois"><a class="anchor" href="#whois">#</a> Whois</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cud2hvaXMuY29tLw==">Whois</span> 可以查询域名是否被注册，以及注册域名的详细信息的数据库，其中可能会存在一些有用的信息，例如域名所有人、域名注册商、邮箱等。</p>
+<h1 id="搜索引擎搜索"><a class="anchor" href="#搜索引擎搜索">#</a> 搜索引擎搜索</h1>
+<p>搜索引擎通常会记录域名信息，可以通过  <code>site: domain</code>  的语法来查询。</p>
+<h1 id="第三方查询"><a class="anchor" href="#第三方查询">#</a> 第三方查询</h1>
+<p>网络中有相当多的第三方应用提供了子域的查询功能，下面有一些例子，更多的网站可以在 8.1 工具列表 中查找。</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kbnNkdW1wc3Rlci5jb20v">DNSDumpster</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cudmlydXN0b3RhbC5jb20v">Virustotal</span></li>
+<li>CrtSearch</li>
+<li>threatminer</li>
+<li>Censys</li>
+</ul>
+<h1 id="asn信息关联"><a class="anchor" href="#asn信息关联">#</a> ASN 信息关联</h1>
+<p>在网络中一个自治系统 (Autonomous System, AS) 是一个有权自主地决定在本系统中应采用何种路由协议的小型单位。这个网络单位可以是一个简单的网络也可以是一个由一个或多个普通的网络管理员来控制的网络群体，它是一个单独的可管理的网络单元 (例如一所大学，一个企业或者一个公司个体) 。</p>
+<p>一个自治系统有时也被称为是一个路由选择域 (routing domain) 。一个自治系统将会分配一个全局的唯一的 16 位号码，这个号码被称为自治系统号 (ASN) 。因此可以通过 ASN 号来查找可能相关的 IP，例如：</p>
+<pre><code>whois -h whois.radb.net -- '-i origin AS111111' | grep -Eo &quot;([0-9.]+)&#123;4&#125;/[0-9]+&quot; | uniq
+nmap --script targets-asn --script-args targets-asn.asn=15169
+</code></pre>
+<h1 id="域名相关性"><a class="anchor" href="#域名相关性">#</a> 域名相关性</h1>
+<p>同一个企业 / 个人注册的多个域名通常具有一定的相关性，例如使用了同一个邮箱来注册、使用了同一个备案、同一个负责人来注册等，可以使用这种方式来查找关联的域名。一种操作步骤如下：</p>
+<ul>
+<li>查询域名注册邮箱</li>
+<li>通过域名查询备案号</li>
+<li>通过备案号查询域名</li>
+<li>反查注册邮箱</li>
+<li>反查注册人</li>
+<li>通过注册人查询到的域名在查询邮箱</li>
+<li>通过上一步邮箱去查询域名</li>
+<li>查询以上获取出的域名的子域名</li>
+</ul>
+<h1 id="网站信息利用"><a class="anchor" href="#网站信息利用">#</a> 网站信息利用</h1>
+<p>网站中有相当多的信息，网站本身、各项安全策略、设置等都可能暴露出一些信息。</p>
+<p>网站本身的交互通常不囿于单个域名，会和其他子域交互。对于这种情况，可以通过爬取网站，收集站点中的其他子域信息。这些信息通常出现在 JavaScript 文件、资源文件链接等位置。</p>
+<p>网站的安全策略如跨域策略、CSP 规则等通常也包含相关域名的信息。有时候多个域名为了方便会使用同一个 SSL/TLS 证书，因此有时可通过证书来获取相关域名信息。</p>
+<h1 id="https证书"><a class="anchor" href="#https证书">#</a> HTTPS 证书</h1>
+<h2 id="证书透明度"><a class="anchor" href="#证书透明度">#</a> 证书透明度</h2>
+<p>为了保证 HTTPS 证书不会被误发或伪造，CA 会将证书记录到可公开验证、不可篡改且只能附加内容的日志中，任何感兴趣的相关方都可以查看由授权中心签发的所有证书。因此可以通过查询已授权证书的方式来获得相关域名。</p>
+<h2 id="san"><a class="anchor" href="#san">#</a> SAN</h2>
+<p>主题备用名称 (Subject Alternate Name, SAN)，简单来说，在需要多个域名，并将其用于各项服务时，多使用 SAN 证书。SAN 允许在安全证书中使用 subjectAltName 字段将多种值与证书关联，这些值被称为主题备用名称。</p>
+<h1 id="域传送漏洞"><a class="anchor" href="#域传送漏洞">#</a> 域传送漏洞</h1>
+<p>DNS 域传送 (zone transfer) 指的是冗余备份服务器使用来自主服务器的数据刷新自己的域 (zone) 数据库。这是为了防止主服务器因意外不可用时影响到整个域名的解析。</p>
+<p>一般来说，域传送操作应该只允许可信的备用 DNS 服务器发起，但是如果错误配置了授权，那么任意用户都可以获得整个 DNS 服务器的域名信息。这种错误授权被称作是 DNS 域传送漏洞。</p>
+<h1 id="passive-dns"><a class="anchor" href="#passive-dns">#</a> Passive DNS</h1>
+<p>Passive DNS 被动的从递归域名服务器记录来自不同域名服务器的响应，形成数据库。利用 Passive DNS 数据库可以知道域名曾绑定过哪些 IP，IP 曾关联到哪些域名，域名最早 / 最近出现的时间，为测试提供较大的帮助。Virustotal、passivetotal、CIRCL 等网站都提供了 Passive DNS 数据库的查询。</p>
+<h1 id="泛解析"><a class="anchor" href="#泛解析">#</a> 泛解析</h1>
+<p>泛解析是把 *.example.com 的所有 A 记录都解析到某个 IP 地址上，在子域名枚举时需要处理这种情况以防生成大量无效的记录。</p>
+<h1 id="重要记录"><a class="anchor" href="#重要记录">#</a> 重要记录</h1>
+<h2 id="cname"><a class="anchor" href="#cname">#</a> CNAME</h2>
+<p>CNAME 即 Canonical name，又称 alias，将域名指向另一个域名。其中可能包含其他关联业务的信息。很多网站使用的 CDN 加速功能利用了该记录。</p>
+<h2 id="mx记录"><a class="anchor" href="#mx记录">#</a> MX 记录</h2>
+<p>MX 记录即 Mail Exchanger，记录了发送电子邮件时域名对应的服务器地址。可以用来寻找 SMTP 服务器信息。</p>
+<h2 id="ns记录"><a class="anchor" href="#ns记录">#</a> NS 记录</h2>
+<p>NS (Name Server) 记录是域名服务器的记录，用来指定域名由哪个 DNS 服务器来进行解析。</p>
+<h2 id="spf记录"><a class="anchor" href="#spf记录">#</a> SPF 记录</h2>
+<p>SPF (Sender Policy Framework) 是为了防止垃圾邮件而提出来的一种 DNS 记录类型，是一种 TXT 类型的记录，用于登记某个域名拥有的用来外发邮件的所有 IP 地址。通过 SPF 记录可以获取相关的 IP 信息，常用命令为  <code>dig example.com txt</code>  。</p>
+<h1 id="cdn"><a class="anchor" href="#cdn">#</a> CDN</h1>
+<h2 id="cdn验证"><a class="anchor" href="#cdn验证">#</a> CDN 验证</h2>
+<p>可通过多地 ping 的方式确定目标是否使用了 CDN，常用的网站有  <code>http://ping.chinaz.com/</code>   <code>https://asm.ca.com/en/ping.php</code>  等。</p>
+<h2 id="域名查找"><a class="anchor" href="#域名查找">#</a> 域名查找</h2>
+<p>使用了 CDN 的域名的父域或者子域名不一定使用了 CDN，可以通过这种方式去查找对应的 IP。</p>
+<h2 id="历史记录查找"><a class="anchor" href="#历史记录查找">#</a> 历史记录查找</h2>
+<p>CDN 可能是在网站上线一段时间后才上线的，可以通过查找域名解析记录的方式去查找真实 IP。</p>
+<h2 id="邮件信息"><a class="anchor" href="#邮件信息">#</a> 邮件信息</h2>
+<p>通过社会工程学的方式进行邮件沟通，从邮件头中获取 IP 地址，IP 地址可能是网站的真实 IP 或者是目标的出口 IP。</p>
+<h1 id="子域爆破"><a class="anchor" href="#子域爆破">#</a> 子域爆破</h1>
+<p>在内网等不易用到以上技巧的环境，或者想监测新域名上线时，可以通过批量尝试的方式，找到有效的域名。</p>
+<h1 id="缓存探测技术"><a class="anchor" href="#缓存探测技术">#</a> 缓存探测技术</h1>
+<p>在企业网络中通常都会配置 DNS 服务器为网络内的主机提供域名解析服务。域名缓存侦测（DNS Cache Snooping）技术就是向这些服务器发送域名解析请求，但并不要求使用递归模式，用于探测是否请求过某个域名。这种方式可以用来探测是否使用了某些软件，尤其是安全软件。</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%9F%9F%E5%90%8D/" rel="tag"><i class="ic i-tag"></i> 域名</a>
+          <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="tag"><i class="ic i-tag"></i> 信息收集</a>
+          <a href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag"><i class="ic i-tag"></i> 搜索</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-25 16:55:14" itemprop="dateModified" datetime="2022-11-25T16:55:14+08:00">2022-11-25</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/" title="域名信息">https://mobius-0.github.io/security/WebNote/information gathering/domain information/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/information%20gathering/network%20io/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;6HE4WPtjxwpvUoA.jpg" title="网络入口&#x2F;信息">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 信息收集</span>
+  <h3>网络入口/信息</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/information%20gathering/Ports/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;z9SAvjVkwOBf5L4.png" title="端口信息">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 信息收集</span>
+  <h3>端口信息</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#whois"><span class="toc-number">1.</span> <span class="toc-text"> Whois</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%90%9C%E7%B4%A2"><span class="toc-number">2.</span> <span class="toc-text"> 搜索引擎搜索</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E6%9F%A5%E8%AF%A2"><span class="toc-number">3.</span> <span class="toc-text"> 第三方查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#asn%E4%BF%A1%E6%81%AF%E5%85%B3%E8%81%94"><span class="toc-number">4.</span> <span class="toc-text"> ASN 信息关联</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text"> 域名相关性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E4%BF%A1%E6%81%AF%E5%88%A9%E7%94%A8"><span class="toc-number">6.</span> <span class="toc-text"> 网站信息利用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#https%E8%AF%81%E4%B9%A6"><span class="toc-number">7.</span> <span class="toc-text"> HTTPS 证书</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%81%E4%B9%A6%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-number">7.1.</span> <span class="toc-text"> 证书透明度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#san"><span class="toc-number">7.2.</span> <span class="toc-text"> SAN</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%9F%E4%BC%A0%E9%80%81%E6%BC%8F%E6%B4%9E"><span class="toc-number">8.</span> <span class="toc-text"> 域传送漏洞</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#passive-dns"><span class="toc-number">9.</span> <span class="toc-text"> Passive DNS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E8%A7%A3%E6%9E%90"><span class="toc-number">10.</span> <span class="toc-text"> 泛解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E8%AE%B0%E5%BD%95"><span class="toc-number">11.</span> <span class="toc-text"> 重要记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cname"><span class="toc-number">11.1.</span> <span class="toc-text"> CNAME</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mx%E8%AE%B0%E5%BD%95"><span class="toc-number">11.2.</span> <span class="toc-text"> MX 记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ns%E8%AE%B0%E5%BD%95"><span class="toc-number">11.3.</span> <span class="toc-text"> NS 记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spf%E8%AE%B0%E5%BD%95"><span class="toc-number">11.4.</span> <span class="toc-text"> SPF 记录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cdn"><span class="toc-number">12.</span> <span class="toc-text"> CDN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E9%AA%8C%E8%AF%81"><span class="toc-number">12.1.</span> <span class="toc-text"> CDN 验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E6%9F%A5%E6%89%BE"><span class="toc-number">12.2.</span> <span class="toc-text"> 域名查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E6%9F%A5%E6%89%BE"><span class="toc-number">12.3.</span> <span class="toc-text"> 历史记录查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%AE%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="toc-number">12.4.</span> <span class="toc-text"> 邮件信息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%90%E5%9F%9F%E7%88%86%E7%A0%B4"><span class="toc-number">13.</span> <span class="toc-text"> 子域爆破</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%8E%A2%E6%B5%8B%E6%8A%80%E6%9C%AF"><span class="toc-number">14.</span> <span class="toc-text"> 缓存探测技术</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/information%20gathering/network%20io/" rel="bookmark" title="网络入口/信息">网络入口/信息</a></li><li class="active"><a href="/security/WebNote/information%20gathering/domain%20information/" rel="bookmark" title="域名信息">域名信息</a></li><li><a href="/security/WebNote/information%20gathering/Ports/" rel="bookmark" title="端口信息">端口信息</a></li><li><a href="/security/WebNote/information%20gathering/website%20information/" rel="bookmark" title="站点信息">站点信息</a></li><li><a href="/security/WebNote/information%20gathering/search%20engine/" rel="bookmark" title="搜索引擎利用">搜索引擎利用</a></li><li><a href="/security/WebNote/information%20gathering/Social%20Engineering/" rel="bookmark" title="社会工程学">社会工程学</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">52</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">75</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/information%20gathering/network%20io/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/information%20gathering/Ports/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">174k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:31</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/information gathering/domain information/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

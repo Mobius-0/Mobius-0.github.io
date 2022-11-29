@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;vpn&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-26T08:47:59.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="Shell" />
+    <category term="漏洞" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XSS" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/</id>
+        <title>IPSec</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;IPsec（IP Security）是 IETF 制定的三层隧道加密协议，它为 Internet 上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在 IP 层通过加密与数据源认证等方式，提供了以下的安全服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据机密性（Confidentiality）：IPsec 发送方在通过网络传输包前对包进行加密。&lt;/li&gt;
+&lt;li&gt;数据完整性（Data Integrity）：IPsec 接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。&lt;/li&gt;
+&lt;li&gt;数据来源认证（Data Authentication）：IPsec 在接收端可以认证发送 IPsec 报文的发送端是否合法。&lt;/li&gt;
+&lt;li&gt;防重放（Anti-Replay）：IPsec 接收方可检测并拒绝接收过时或重复的报文。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h1&gt;
+&lt;p&gt;IPsec 具有以下优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 IKE（Internet Key Exchange，因特网密钥交换），可实现密钥的自动协商功能，减少了密钥协商的开销。可以通过 IKE 建立和维护 SA 的服务，简化了 IPsec 的使用和管理。&lt;/li&gt;
+&lt;li&gt;所有使用 IP 协议进行数据传输的应用系统和服务都可以使用 IPsec，而不必对这些应用系统和服务本身做任何修改。&lt;/li&gt;
+&lt;li&gt;对数据的加密是以数据包为单位的，而不是以整个数据流为单位，这不仅灵活而且有助于进一步提高 IP 数据包的安全性，可以有效防范网络攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;构成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构成&#34;&gt;#&lt;/a&gt; 构成&lt;/h1&gt;
+&lt;p&gt;IPsec 由四部分内容构成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责密钥管理的 Internet 密钥交换协议 IKE（Internet Key Exchange Protocol）&lt;/li&gt;
+&lt;li&gt;负责将安全服务与使用该服务的通信流相联系的安全关联 SA（Security Associations）&lt;/li&gt;
+&lt;li&gt;直接操作数据包的认证头协议 AH（IP Authentication Header）和安全载荷协议 ESP（IP Encapsulating Security Payload）&lt;/li&gt;
+&lt;li&gt;若干用于加密和认证的算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安全联盟security-associationsa&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全联盟security-associationsa&#34;&gt;#&lt;/a&gt; 安全联盟（Security Association，SA）&lt;/h1&gt;
+&lt;p&gt;IPsec 在两个端点之间提供安全通信，端点被称为 IPsec 对等体。&lt;/p&gt;
+&lt;p&gt;SA 是 IPsec 的基础，也是 IPsec 的本质。SA 是通信对等体间对某些要素的约定，例如，使用哪种协议（AH、ESP 还是两者结合使用）、协议的封装模式（传输模式和隧道模式）、加密算法（DES、3DES 和 AES）、特定流中保护数据的共享密钥以及密钥的生存周期等。建立 SA 的方式有手工配置和 IKE 自动协商两种。&lt;/p&gt;
+&lt;p&gt;SA 是单向的，在两个对等体之间的双向通信，最少需要两个 SA 来分别对两个方向的数据流进行安全保护。同时，如果两个对等体希望同时使用 AH 和 ESP 来进行安全通信，则每个对等体都会针对每一种协议来构建一个独立的 SA。&lt;/p&gt;
+&lt;p&gt;SA 由一个三元组来唯一标识，这个三元组包括 SPI（Security Parameter Index，安全参数索引）、目的 IP 地址、安全协议号（AH 或 ESP）。&lt;/p&gt;
+&lt;p&gt;SPI 是用于唯一标识 SA 的一个 32 比特数值，它在 AH 和 ESP 头中传输。在手工配置 SA 时，需要手工指定 SPI 的取值。使用 IKE 协商产生 SA 时，SPI 将随机生成。&lt;/p&gt;
+&lt;h1 id=&#34;ike&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ike&#34;&gt;#&lt;/a&gt; IKE&lt;/h1&gt;
+&lt;p&gt;IKE（RFC2407，RFC2408、RFC2409）属于一种混合型协议，由 Internet 安全关联和密钥管理协议（ISAKMP）和两种密钥交换协议 OAKLEY 与 SKEME 组成。IKE 创建在由 ISAKMP 定义的框架上，沿用了 OAKLEY 的密钥交换模式以及 SKEME 的共享和密钥更新技术，还定义了它自己的两种密钥交换方式。&lt;/p&gt;
+&lt;p&gt;IKE 使用了两个阶段的 ISAKMP：&lt;/p&gt;
+&lt;p&gt;第一阶段，协商创建一个通信信道（IKE SA），并对该信道进行验证，为双方进一步的 IKE 通信提供机密性、消息完整性以及消息源验证服务； 第二阶段，使用已建立的 IKE SA 建立 IPsec SA（V2 中叫 Child SA）。&lt;/p&gt;
+</content>
+        <category term="计算机网络" />
+        <category term="IPSec" />
+        <category term="VPN" />
+        <updated>2022-11-26T08:47:59.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"cache\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/Web%20Cache/",
+            "url": "https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/Web%20Cache/",
+            "title": "Web Cache欺骗攻击",
+            "date_published": "2022-11-27T07:42:19.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>网站通常都会通过如 CDN、负载均衡器、或者反向代理来实现 Web 缓存功能。通过缓存频繁访问的文件，降低服务器响应延迟。</p>\n<p>例如，网站  <code>htttp://www.example.com</code>  配置了反向代理。对于那些包含用户个人信息的页面，如  <code>http://www.example.com/home.php</code>  ，由于每个用户返回的内容有所不同，因此这类页面通常是动态生成，并不会在缓存服务器中进行缓存。通常缓存的主要是可公开访问的静态文件，如 css 文件、js 文件、txt 文件、图片等等。此外，很多最佳实践类的文章也建议，对于那些能公开访问的静态文件进行缓存，并且忽略 HTTP 缓存头。</p>\n<p>Web cache 攻击类似于 RPO 相对路径重写攻击，都依赖于浏览器与服务器对 URL 的解析方式。当访问不存在的 URL 时，如  <code>http://www.example.com/home.php/non-existent.css</code>  ，浏览器发送 get 请求，依赖于使用的技术与配置，服务器返回了页面  <code>http://www.example.com/home.php</code>  的内容，同时 URL 地址仍然是  <code>http://www.example.com/home.php/non-existent.css</code> ，http 头的内容也与直接访问  <code>http://www.example.com/home.php</code>  相同，cacheing header、content-type（此处为 text/html）也相同。</p>\n<h1 id=\"漏洞成因\"><a class=\"anchor\" href=\"#漏洞成因\">#</a> 漏洞成因</h1>\n<p>当代理服务器设置为缓存静态文件并忽略这类文件的 caching header 时，访问  <code>http://www.example.com/home.php/no-existent.css</code>  时，会发生什么呢？整个响应流程如下：</p>\n<ol>\n<li>浏览器请求  <code>http://www.example.com/home.php/no-existent.css</code>  ;</li>\n<li>服务器返回  <code>http://www.example.com/home.php</code>  的内容 (通常来说不会缓存该页面);</li>\n<li>响应经过代理服务器；</li>\n<li>代理识别该文件有 css 后缀；</li>\n<li>在缓存目录下，代理服务器创建目录  <code>home.php</code>  ，将返回的内容作为  <code>non-existent.css</code>  保存。</li>\n</ol>\n<h1 id=\"漏洞利用\"><a class=\"anchor\" href=\"#漏洞利用\">#</a> 漏洞利用</h1>\n<p>攻击者欺骗用户访问  <code>http://www.example.com/home.php/logo.png?www.myhack58.com</code>  , 导致含有用户个人信息的页面被缓存，从而能被公开访问到。更严重的情况下，如果返回的内容包含 session 标识、安全问题的答案，或者 csrf token。这样攻击者能接着获得这些信息，因为通常而言大部分网站静态资源都是公开可访问的。</p>\n<h1 id=\"漏洞存在的条件\"><a class=\"anchor\" href=\"#漏洞存在的条件\">#</a> 漏洞存在的条件</h1>\n<p>漏洞要存在，至少需要满足下面两个条件：</p>\n<ol>\n<li>web cache 功能根据扩展进行保存，并忽略 caching header;</li>\n<li>当访问如  <code>http://www.example.com/home.php/non-existent.css</code>  不存在的页面，会返回  <code>home.php</code>  的内容。</li>\n</ol>\n<h1 id=\"漏洞防御\"><a class=\"anchor\" href=\"#漏洞防御\">#</a> 漏洞防御</h1>\n<p>防御措施主要包括 3 点：</p>\n<ol>\n<li>设置缓存机制，仅仅缓存 http caching header 允许的文件，这能从根本上杜绝该问题；</li>\n<li>如果缓存组件提供选项，设置为根据 content-type 进行缓存；</li>\n<li>访问  <code>http://www.example.com/home.php/non-existent.css</code>  这类不存在页面，不返回  <code>home.php</code>  的内容，而返回 404 或者 302。</li>\n</ol>\n<h1 id=\"web-cache欺骗攻击实例\"><a class=\"anchor\" href=\"#web-cache欺骗攻击实例\">#</a> Web Cache 欺骗攻击实例</h1>\n<h2 id=\"paypal\"><a class=\"anchor\" href=\"#paypal\">#</a> Paypal</h2>\n<p>Paypal 在未修复之前，通过该攻击，可以获取的信息包括：用户姓名、账户金额、信用卡的最后 4 位数、交易数据、emaill 地址等信息。 受该攻击的部分页面包括：</p>\n<ul>\n<li><code>https://www.paypal.com/myaccount/home/attack.css</code></li>\n<li><code>https://www.paypal.com/myaccount/settings/notifications/attack.css</code></li>\n<li><code>https://history.paypal.com/cgi-bin/webscr/attack.css?cmd=_history-details</code>  。</li>\n</ul>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9wb3J0c3dpZ2dlci5uZXQvYmxvZy9wcmFjdGljYWwtd2ViLWNhY2hlLXBvaXNvbmluZw==\">practical web cache poisoning</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cudXNlbml4Lm9yZy9jb25mZXJlbmNlL3VzZW5peHNlY3VyaXR5MTgvcHJlc2VudGF0aW9uL2hhbw==\">End-Users Get Maneuvered: Empirical Analysis of Redirection Hijacking in Content Delivery Networks</span></li>\n</ul>\n",
+            "tags": [
+                "网络安全",
+                "漏洞",
+                "Cache"
+            ]
+        }
+    ]
+}
