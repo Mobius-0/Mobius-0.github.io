@@ -24,15 +24,9 @@
     <category term="渗透测试" />
     <category term="靶场" />
     <category term="pikachu" />
-    <category term="虚拟化" />
-    <category term="Docker" />
-    <category term="镜像" />
     <category term="标准" />
     <category term="OCI" />
     <category term="CRI" />
-    <category term="域名" />
-    <category term="DNS" />
-    <category term="WEB" />
     <category term="HTTP" />
     <category term="计算机网络" />
     <category term="IPSec" />
@@ -42,6 +36,17 @@
     <category term="WiFi" />
     <category term="邮件" />
     <category term="网络协议" />
+    <category term="Linux" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="Windows" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
     <category term="入侵检测" />
     <category term="IDS" />
     <category term="IPS" />
@@ -51,11 +56,8 @@
     <category term="职能" />
     <category term="情报" />
     <category term="运营" />
-    <category term="开发过程" />
     <category term="应急响应" />
     <category term="流程" />
-    <category term="Linux" />
-    <category term="Windows" />
     <category term="攻击溯源" />
     <category term="分析模型" />
     <category term="网络攻防" />
@@ -68,30 +70,6 @@
     <category term="框架" />
     <category term="风险" />
     <category term="控制" />
-    <category term="渗透" />
-    <category term="信息收集" />
-    <category term="痕迹清理" />
-    <category term="内网" />
-    <category term="后门" />
-    <category term="免杀" />
-    <category term="代理" />
-    <category term="Shell" />
-    <category term="远程连接" />
-    <category term="ASP" />
-    <category term="CSharp" />
-    <category term="Golang" />
-    <category term="Java" />
-    <category term="语言" />
-    <category term="反序列化" />
-    <category term="混淆" />
-    <category term="沙箱" />
-    <category term="类" />
-    <category term="JDK" />
-    <category term="JavaScript" />
-    <category term="PHP" />
-    <category term="PowerShell" />
-    <category term="Python" />
-    <category term="Ruby" />
     <category term="CSRF" />
     <category term="服务器" />
     <category term="SQL注入" />
@@ -113,8 +91,30 @@
     <category term="IIS" />
     <category term="Apache" />
     <category term="Nginx" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
     <category term="逻辑" />
     <category term="策略配置" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="开发过程" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
     <category term="端口" />
     <category term="社会工程学" />
     <category term="搜索" />
@@ -408,10 +408,10 @@
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91cy1jZXJ0LmNpc2EuZ292L25jYXMvYWxlcnRzL2FhMjAtMjQ1YQ==&#34;&gt;Technical Approaches to Uncovering and Remediating Malicious Activity&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="应急响应" />
-        <category term="流程" />
         <category term="Linux" />
         <category term="Windows" />
+        <category term="应急响应" />
+        <category term="流程" />
         <updated>2022-12-05T08:40:15.000Z</updated>
     </entry>
 </feed>
