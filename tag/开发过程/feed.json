@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"开发过程\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/",
+            "url": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/",
+            "title": "安全开发",
+            "date_published": "2022-12-05T07:58:41.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>安全开发生命周期（Security Development Lifecycle，SDL）是微软提出的从安全的角度来指导软件开发过程的管理模式。用于帮助开发人员构建更安全的软件、解决安全合规要求，并降低开发成本。</p>\n<h1 id=\"步骤\"><a class=\"anchor\" href=\"#步骤\">#</a> 步骤</h1>\n<h2 id=\"阶段1培训\"><a class=\"anchor\" href=\"#阶段1培训\">#</a> 阶段 1：培训</h2>\n<p>开发团队的所有成员都必须接受适当的安全培训，了解相关的安全知识。培训对象包括开发人员、测试人员、项目经理、产品经理等。</p>\n<h2 id=\"阶段2确定安全需求\"><a class=\"anchor\" href=\"#阶段2确定安全需求\">#</a> 阶段 2：确定安全需求</h2>\n<p>在项目确立之前，需要提前确定安全方面的需求，确定项目的计划时间，尽可能避免安全引起的需求变更。</p>\n<h2 id=\"阶段3设计\"><a class=\"anchor\" href=\"#阶段3设计\">#</a> 阶段 3：设计</h2>\n<p>在设计阶段确定安全的最低可接受级别。考虑项目涉及到哪些攻击面、是否能减小攻击面。</p>\n<p>对项目进行威胁建模，明确可能来自的攻击有哪些方面，并考虑项目哪些部分需要进行渗透测试。</p>\n<h2 id=\"阶段4实现\"><a class=\"anchor\" href=\"#阶段4实现\">#</a> 阶段 4：实现</h2>\n<p>实现阶段主要涉及到工具、不安全的函数、静态分析等方面。</p>\n<p>工具方面主要考虑到开发团队使用的编辑器、链接器等相关工具可能会涉及一些安全相关的问题，因此在使用工具的版本上，需要提前与安全团队进行沟通。</p>\n<p>函数方面主要考虑到许多常用函数可能存在安全隐患，应当禁用不安全的函数和 API，使用安全团队推荐的函数。</p>\n<p>代码静态分析可以由相关工具辅助完成，其结果与人工分析相结合。</p>\n<h2 id=\"阶段5验证\"><a class=\"anchor\" href=\"#阶段5验证\">#</a> 阶段 5：验证</h2>\n<p>验证阶段涉及到动态程序分析和攻击面再审计。动态分析对静态分析进行补充，常用的方式是模糊测试、渗透测试。模糊测试通过向应用程序引入特定格式或随机数据查找程序可能的问题。</p>\n<p>考虑到项目经常会因为需求变更等情况使得最终产品和初期目标不一致，因此需要在项目后期再次对威胁模型和攻击面进行分析和考虑，如果出现问题则进行纠正。</p>\n<h2 id=\"阶段6发布\"><a class=\"anchor\" href=\"#阶段6发布\">#</a> 阶段 6：发布</h2>\n<p>在程序发布后，需要对安全事件进行响应，需要预设好遇到安全问题时的处理方式。</p>\n<p>另外如果产品中包含第三方的代码，也需要考虑如何响应因为第三方依赖引入的问题。</p>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9zZWN1cml0eWVuZ2luZWVyaW5nL3NkbC9wcmFjdGljZXM=\">SDL Practices</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9zZWN1cml0eWVuZ2luZWVyaW5nL3NkbC90aHJlYXRtb2RlbGluZw==\">Threat Modeling</span></li>\n</ul>\n",
+            "tags": [
+                "开发过程"
+            ]
+        }
+    ]
+}

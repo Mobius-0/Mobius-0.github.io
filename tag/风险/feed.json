@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"风险\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6/",
+            "url": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6/",
+            "title": "风险控制",
+            "date_published": "2022-12-05T08:08:15.000Z",
+            "content_html": "<h2 id=\"常见风险\"><a class=\"anchor\" href=\"#常见风险\">#</a> 常见风险</h2>\n<ul>\n<li>会员\n<ul>\n<li>撞库盗号</li>\n<li>账号分享</li>\n<li>批量注册</li>\n</ul>\n</li>\n<li>视频\n<ul>\n<li>盗播盗看</li>\n<li>广告屏蔽</li>\n<li>刷量作弊</li>\n</ul>\n</li>\n<li>活动\n<ul>\n<li>恶意刷</li>\n<li>薅羊毛</li>\n</ul>\n</li>\n<li>直播\n<ul>\n<li>挂站人气</li>\n<li>恶意图文</li>\n</ul>\n</li>\n<li>电商\n<ul>\n<li>恶意下单</li>\n<li>订单欺诈</li>\n</ul>\n</li>\n<li>支付\n<ul>\n<li>盗号盗卡</li>\n<li>洗钱</li>\n<li>恶意下单</li>\n<li>恶意提现</li>\n</ul>\n</li>\n<li>其他\n<ul>\n<li>钓鱼邮件</li>\n<li>恶意爆破</li>\n<li>短信轰炸</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"872-防御策略\"><a class=\"anchor\" href=\"#872-防御策略\">#</a> 8.7.2. 防御策略</h2>\n<ul>\n<li>核身策略\n<ul>\n<li>同一收货手机号</li>\n<li>同一收货地址</li>\n<li>同一历史行为</li>\n<li>同一 IP</li>\n<li>同一设备</li>\n<li>同一支付 ID</li>\n<li>LBS</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"873-异常特征\"><a class=\"anchor\" href=\"#873-异常特征\">#</a> 8.7.3. 异常特征</h2>\n<ul>\n<li>APP 用户异常特征\n<ul>\n<li>IP</li>\n<li>设备为特定型号</li>\n<li>本地 APP 列表中有沙盒 APP</li>\n<li>Root 用户</li>\n<li>同设备登录过多个账号</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"874-参考链接\"><a class=\"anchor\" href=\"#874-参考链接\">#</a> 8.7.4. 参考链接</h2>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cDovL2RvYy5jb2NvbGlhbi5jbi9lc3NheS9yaXNrLzIwMTYvMTIvMTgvcmlzay0yLWRhdGFiYXNlLw==\">支付风控模型和流程分析</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpJME1qY3pNak0yTkE9PSZhbXA7bWlkPTIyNDc0ODM4MzYmYW1wO2lkeD0xJmFtcDtzbj1kNDY4NzVjOTU3Mjg5ZDhlMDM1MzQ1OTkyYWQ3MDUzZQ==\">爱奇艺业务安全风控体系的建设实践</span></li>\n</ul>\n",
+            "tags": [
+                "风险",
+                "控制"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;管理策略&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 05 Dec 2022 16:20:15 +0800</pubDate>
+        <lastBuildDate>Mon, 05 Dec 2022 16:20:15 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>安全</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/</guid>
+            <title>加固检查</title>
+            <link>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/</link>
+            <category>防御加固</category>
+            <category>管理策略</category>
+            <pubDate>Mon, 05 Dec 2022 16:20:15 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;网络设备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络设备&#34;&gt;#&lt;/a&gt; 网络设备&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;及时检查系统版本号&lt;/li&gt;
+&lt;li&gt;敏感服务设置访问 IP/MAC 白名单&lt;/li&gt;
+&lt;li&gt;开启权限分级控制&lt;/li&gt;
+&lt;li&gt;关闭不必要的服务&lt;/li&gt;
+&lt;li&gt;打开操作日志&lt;/li&gt;
+&lt;li&gt;配置异常告警&lt;/li&gt;
+&lt;li&gt;关闭 ICMP 回应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
+&lt;h2 id=&#34;linux&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux&#34;&gt;#&lt;/a&gt; Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;无用用户 / 用户组检查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空口令帐号检查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户密码策略&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/login.defs&lt;/li&gt;
+&lt;li&gt;/etc/pam.d/system-auth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;敏感文件权限配置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/passwd&lt;/li&gt;
+&lt;li&gt;/etc/shadow&lt;/li&gt;
+&lt;li&gt;~/.ssh/&lt;/li&gt;
+&lt;li&gt;/var/log/messages&lt;/li&gt;
+&lt;li&gt;/var/log/secure&lt;/li&gt;
+&lt;li&gt;/var/log/maillog&lt;/li&gt;
+&lt;li&gt;/var/log/cron&lt;/li&gt;
+&lt;li&gt;/var/log/spooler&lt;/li&gt;
+&lt;li&gt;/var/log/boot.log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;日志是否打开&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;及时安装补丁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开机自启&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/init.d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检查系统时钟&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#windows&#34;&gt;#&lt;/a&gt; Windows&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;异常进程监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;异常启动项监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;异常服务监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置系统日志&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户账户&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置口令有效期&lt;/li&gt;
+&lt;li&gt;设置口令强度限制&lt;/li&gt;
+&lt;li&gt;设置口令重试次数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装 EMET&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启用 PowerShell 日志&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;限制以下敏感文件的下载和执行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;限制会调起 wscript 的后缀&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bat, js, jse, vbe, vbs, wsf, wsh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;域&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;限制将计算机加入域的权限域账户使用最小权限原则减少非必要高权限账户的数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;应用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用&#34;&gt;#&lt;/a&gt; 应用&lt;/h1&gt;
+&lt;h2 id=&#34;ftp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ftp&#34;&gt;#&lt;/a&gt; FTP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;禁止匿名登录&lt;/li&gt;
+&lt;li&gt;修改 Banner&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ssh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ssh&#34;&gt;#&lt;/a&gt; SSH&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;是否禁用 ROOT 登录&lt;/li&gt;
+&lt;li&gt;是否禁用密码连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mysql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql&#34;&gt;#&lt;/a&gt; MySQL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;文件写权限设置&lt;/li&gt;
+&lt;li&gt;用户授权表管理&lt;/li&gt;
+&lt;li&gt;日志是否启用&lt;/li&gt;
+&lt;li&gt;版本是否最新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;web中间件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web中间件&#34;&gt;#&lt;/a&gt; Web 中间件&lt;/h1&gt;
+&lt;h2 id=&#34;apache&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#apache&#34;&gt;#&lt;/a&gt; Apache&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;版本号隐藏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;版本是否最新&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;禁用部分 HTTP 动词&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关闭 Trace&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;禁止  &lt;code&gt;server-status&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;上传文件大小限制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目录权限设置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;是否允许路由重写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;是否允许列目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;日志配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置超时时间防 DoS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非属主用户文件读写限制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;httpd.conf&lt;/li&gt;
+&lt;li&gt;access.log&lt;/li&gt;
+&lt;li&gt;error.log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nginx&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nginx&#34;&gt;#&lt;/a&gt; Nginx&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;禁用部分 HTTP 动词&lt;/li&gt;
+&lt;li&gt;禁用目录遍历&lt;/li&gt;
+&lt;li&gt;检查重定向配置&lt;/li&gt;
+&lt;li&gt;配置超时时间防 DoS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;iis&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#iis&#34;&gt;#&lt;/a&gt; IIS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;版本是否最新&lt;/li&gt;
+&lt;li&gt;日志配置&lt;/li&gt;
+&lt;li&gt;用户口令配置&lt;/li&gt;
+&lt;li&gt;ASP.NET 功能配置&lt;/li&gt;
+&lt;li&gt;配置超时时间防 DoS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;jboss&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jboss&#34;&gt;#&lt;/a&gt; JBoss&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;jmx console 配置&lt;/li&gt;
+&lt;li&gt;web console 配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tomcat&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tomcat&#34;&gt;#&lt;/a&gt; Tomcat&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;禁用部分 HTTP 动词&lt;/li&gt;
+&lt;li&gt;禁止列目录&lt;/li&gt;
+&lt;li&gt;禁止 manager 功能&lt;/li&gt;
+&lt;li&gt;用户密码配置&lt;/li&gt;
+&lt;li&gt;用户权限配置&lt;/li&gt;
+&lt;li&gt;配置超时时间防 DoS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;密码管理策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码管理策略&#34;&gt;#&lt;/a&gt; 密码管理策略&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;长度不少于 8 个字符&lt;/li&gt;
+&lt;li&gt;不存在于已有字典之中&lt;/li&gt;
+&lt;li&gt;不使用基于知识的认证方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1BhdWxTZWMvYXdlc29tZS13aW5kb3dzLWRvbWFpbi1oYXJkZW5pbmc=&#34;&gt;awesome windows domain hardening&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy9zZWN1cml0eS90aHJlYXQtcHJvdGVjdGlvbi9taWNyb3NvZnQtZGVmZW5kZXItYXRwL2N1c3RvbWl6ZS1hdHRhY2stc3VyZmFjZS1yZWR1Y3Rpb24=&#34;&gt;customize attack surface reduction&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

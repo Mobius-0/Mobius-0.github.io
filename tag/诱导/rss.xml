@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;诱导&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 05 Dec 2022 16:30:15 +0800</pubDate>
+        <lastBuildDate>Mon, 05 Dec 2022 16:30:15 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>安全</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/</guid>
+            <title>蜜罐技术</title>
+            <link>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/</link>
+            <category>蜜罐</category>
+            <category>隐藏</category>
+            <category>诱导</category>
+            <pubDate>Mon, 05 Dec 2022 16:30:15 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;蜜罐是对攻击者的欺骗技术，用以监视、检测、分析和溯源攻击行为，其没有业务上的用途，所有流入 / 流出蜜罐的流量都预示着扫描或者攻击行为，因此可以比较好的聚焦于攻击流量。&lt;/p&gt;
+&lt;p&gt;蜜罐可以实现对攻击者的主动诱捕，能够详细地记录攻击者攻击过程中的许多痕迹，可以收集到大量有价值的数据，如病毒或蠕虫的源码、黑客的操作等，从而便于提供丰富的溯源数据。另外蜜罐也可以消耗攻击者的时间，基于 JSONP 等方式来获取攻击者的画像。&lt;/p&gt;
+&lt;p&gt;但是蜜罐存在安全隐患，如果没有做好隔离，可能成为新的攻击源。&lt;/p&gt;
+&lt;h1 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h1&gt;
+&lt;p&gt;按用途分类，蜜罐可以分为研究型蜜罐和产品型蜜罐。研究型蜜罐一般是用于研究各类网络威胁，寻找应对的方式，不增加特定组织的安全性。产品型蜜罐主要是用于防护的商业产品。&lt;/p&gt;
+&lt;p&gt;按交互方式分类，蜜罐可以分为低交互蜜罐和高交互蜜罐。低交互蜜罐模拟网络服务响应和攻击者交互，容易部署和控制攻击，但是模拟能力会相对较弱，对攻击的捕获能力不强。高交互蜜罐不是简单模拟协议或服务，而是提供真实的系统，使得被发现的概率大幅度降低。但是高交互蜜罐部署不当时存在被攻击者利用的可能性。&lt;/p&gt;
+&lt;h1 id=&#34;隐藏技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏技术&#34;&gt;#&lt;/a&gt; 隐藏技术&lt;/h1&gt;
+&lt;p&gt;蜜罐主要涉及到的是伪装技术，主要涉及到进程隐藏、服务伪装等技术。&lt;/p&gt;
+&lt;p&gt;蜜罐之间的隐藏，要求蜜罐之间相互隐蔽。进程隐藏，蜜罐需要隐藏监控、信息收集等进程。伪服务和命令技术，需要对部分服务进行伪装，防止攻击者获取敏感信息或者入侵控制内核。数据文件伪装，需要生成合理的虚假数据的文件。&lt;/p&gt;
+&lt;h1 id=&#34;牵引技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#牵引技术&#34;&gt;#&lt;/a&gt; 牵引技术&lt;/h1&gt;
+&lt;p&gt;蜜罐牵引技术是在识别到攻击者流量后，通过在正式环境中改变路由、返回特定响应的方式将攻击者牵引到特定的蜜罐地址。 常见的牵引技术有下面几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;防火墙牵引&lt;/li&gt;
+&lt;li&gt;SDN 牵引&lt;/li&gt;
+&lt;li&gt;ARP 牵引&lt;/li&gt;
+&lt;li&gt;WAF 牵引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;诱饵技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#诱饵技术&#34;&gt;#&lt;/a&gt; 诱饵技术&lt;/h1&gt;
+&lt;p&gt;可以在互联网中部署一定的诱饵来吸引攻击者进入特定的蜜罐中。 常见的诱饵有域名诱饵、Github 诱饵、网盘诱饵、邮件诱饵、主机诱饵、文件诱饵、漏洞诱饵等。&lt;/p&gt;
+&lt;p&gt;域名诱饵指使用特定的在字典中且有意义的主域名做为诱饵，比如  &lt;code&gt;vpn.example.com&lt;/code&gt;  /  &lt;code&gt;oa.example.com&lt;/code&gt;  等。&lt;/p&gt;
+&lt;p&gt;Github 诱饵指在 Github 中放置代码文件、失陷凭证的方式。&lt;/p&gt;
+&lt;p&gt;文件诱饵是在容易失陷的主机中放置虚假的拓扑图，关键系统 IP 的文件，从而诱导攻击者的方式。&lt;/p&gt;
+&lt;p&gt;漏洞诱饵通过部署存在特定漏洞特征的蜜罐站，吸引攻击者攻击。&lt;/p&gt;
+&lt;h1 id=&#34;反制技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反制技术&#34;&gt;#&lt;/a&gt; 反制技术&lt;/h1&gt;
+&lt;p&gt;蜜罐可以使用一些方式对攻击者进行反制，常见的方式有 Jsonp、安全工具漏洞、Client 漏洞反制、文件反制等方式。&lt;/p&gt;
+&lt;p&gt;Jsonp 主要是使用各大网站的 Jsonp 获取攻击者已经登录的社交账号，用以溯源。 另外如果攻击者使用流量的方式访问蜜罐网站，可以使用运营商接口获取攻击者的手机号。&lt;/p&gt;
+&lt;p&gt;安全工具漏洞是指使用安全工具的漏洞进行反制，例如 Git 泄露工具存在的文件泄露漏洞，基于 Electron 的工具存在的 XSS to RCE 等。&lt;/p&gt;
+&lt;p&gt;Client 反制，指使用虚假的 Server 对存在漏洞的客户端进行反制，例如通过 MySQL Client 读取文件，基于 RDP/SMB 的漏洞进行 RCE。&lt;/p&gt;
+&lt;p&gt;反制文件，指在蜜罐环境中设置特定的文件，例如伪装的 VPN 客户端、特定插件来诱导攻击者点击。&lt;/p&gt;
+&lt;p&gt;DoS 反制，在获取到攻击者的 C2 样本后，可以通过批量上线的方式影响 C2 攻击者的控制服务器。&lt;/p&gt;
+&lt;h1 id=&#34;识别技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#识别技术&#34;&gt;#&lt;/a&gt; 识别技术&lt;/h1&gt;
+&lt;p&gt;攻击者也会尝试对蜜罐进行识别。比较容易的识别的是低交互的蜜罐，尝试一些比较复杂且少见的操作能比较容易的识别低交互的蜜罐。相对困难的是高交互蜜罐的识别，因为高交互蜜罐通常以真实系统为基础来构建，和真实系统比较近似。对这种情况，通常会基于虚拟文件系统和注册表的信息、内存分配特征、硬件特征、特殊指令等来识别。&lt;/p&gt;
+&lt;h2 id=&#34;协议实现识别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议实现识别&#34;&gt;#&lt;/a&gt; 协议实现识别&lt;/h2&gt;
+&lt;p&gt;部分蜜罐在实现的过程中，协议的部分参数固定或随机的范围有限，可以通过特定参数的范围来识别蜜罐。&lt;/p&gt;
+&lt;p&gt;部分蜜罐协议支持的版本范围为某一特定版本范围，可以通过对应的版本范围来推测是否为蜜罐。&lt;/p&gt;
+&lt;p&gt;部分蜜罐在交互过程中有探测客户端特征的交互，可以通过这些交互过程来识别蜜罐。&lt;/p&gt;
+&lt;p&gt;部分蜜罐对不正确的请求也返回正常的相应，可以通过这种特征来判定蜜罐。&lt;/p&gt;
+&lt;h2 id=&#34;环境特征&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境特征&#34;&gt;#&lt;/a&gt; 环境特征&lt;/h2&gt;
+&lt;p&gt;部分蜜罐的用户名、密码固定，或内存使用、进程占用等动态特征变化较为规律，可以通过这种方式来判断是否为蜜罐。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSG9uZXlwb3RfKGNvbXB1dGluZyk=&#34;&gt;honeypot wiki&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3RocmVhdHN0cmVhbS5naXRodWIuaW8vbWhuLw==&#34;&gt;Modern Honey Network&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubW9yZXNlYy5jbi9tYWdpYy1zaGllbGQuaHRtbA==&#34;&gt;默安科技：幻阵&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvOTk4&#34;&gt;蜜罐与内网安全从 0 到 1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXprME56RTRNREUyTkE9PSZhbXA7bWlkPTIyNDc0ODM5MDgmYW1wO2lkeD0xJmFtcDtzbj1lNmEzMTllMjJjM2NkNTQ2NTBiZGJiYTUxMWU1OGE0Mw==&#34;&gt;浅析开源蜜罐识别与全网测绘&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

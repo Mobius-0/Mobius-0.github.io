@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;网络攻防&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-29T09:12:49.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="XSS" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="Linux" />
+    <category term="Windows" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/</id>
+        <title>红蓝对抗</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/"/>
+        <content type="html">&lt;h1 id=&#34;概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概念&#34;&gt;#&lt;/a&gt; 概念&lt;/h1&gt;
+&lt;p&gt;红蓝对抗的概念最早来源于 20 世纪 60 年代的美国演习，演习是专指军队进行大规模的实兵演习，演习中通常分为红军、蓝军，其中蓝军通常是指在部队模拟对抗演习专门扮演假想敌的部队，与红军 (代表我方正面部队) 进行针对性的训练，这种方式也被称作 Red Teaming。&lt;/p&gt;
+&lt;p&gt;网络安全红蓝对抗的概念就源自于此。红军作为企业防守方，通过安全加固、攻击监测、应急处置等手段来保障企业安全。而蓝军作为攻击方，以发现安全漏洞，获取业务权限或数据为目标，利用各种攻击手段，试图绕过红军层层防护，达成既定目标。可能会造成混淆的是，在欧美一般采用红队代表攻击方，蓝队代表防守方，颜色代表正好相反。&lt;/p&gt;
+&lt;h1 id=&#34;网络攻防演习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络攻防演习&#34;&gt;#&lt;/a&gt; 网络攻防演习&lt;/h1&gt;
+&lt;p&gt;比较有影响力的演习有 “锁盾”(Locked Shields)、“网络风暴” 等。其中 “锁盾” 由北约卓越网络防御合作中心 (CCDCOE，Cooperative Cyber Defence Centre of Excellence) 每年举办一次。“网络风暴” 由美国国土安全部 (DHS) 主导，2006 年开始，每两年举行一次。&lt;/p&gt;
+&lt;p&gt;和 APT 攻击相比，攻防演习相对时长较短，只有 1~4 周，有个防守目标。而 APT 攻击目标唯一，时长可达数月至数年，更有隐蔽性。&lt;/p&gt;
+&lt;h1 id=&#34;侧重&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#侧重&#34;&gt;#&lt;/a&gt; 侧重&lt;/h1&gt;
+&lt;p&gt;企业网络蓝军工作内容主要包括渗透测试和红蓝对抗，这两种方式所使用的技术基本相同，但是侧重点不同。&lt;/p&gt;
+&lt;p&gt;渗透测试侧重用较短的时间去挖掘更多的安全漏洞，一般不太关注攻击行为是否被监测发现，目的是帮助业务系统暴露和收敛更多风险。&lt;/p&gt;
+&lt;p&gt;红蓝对抗更接近真实场景，偏向于实战，面对的场景复杂、技术繁多。侧重绕过防御体系，毫无声息达成获取业务权限或数据的目标。不求发现全部风险点，因为攻击动作越多被发现的概率越大，一旦被发现，红军就会把蓝军踢出战场。红蓝对抗的目的是检验在真实攻击中纵深防御能力、告警运营质量、应急处置能力。&lt;/p&gt;
+&lt;h1 id=&#34;目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目标&#34;&gt;#&lt;/a&gt; 目标&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;评估现有防御能力的有效性、识别防御体系的弱点并提出具体的应对方案&lt;/li&gt;
+&lt;li&gt;利用真实有效的模拟攻击来评估因为安全问题所造成的潜在的业务影响，为安全管理提供有效的数据来量化安全投入的 ROI&lt;/li&gt;
+&lt;li&gt;提高公司安全成熟度及其检测和响应攻击的能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;前期准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前期准备&#34;&gt;#&lt;/a&gt; 前期准备&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;组织结构图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;全网拓扑图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各系统逻辑结构图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各系统之间的调用关系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据流关系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;资产梳理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核心资产清单&lt;/li&gt;
+&lt;li&gt;业务系统资产&lt;/li&gt;
+&lt;li&gt;设备资产&lt;/li&gt;
+&lt;li&gt;外包 / 第三方服务资产&lt;/li&gt;
+&lt;li&gt;历史遗留资产&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;业务资产信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;业务系统名称&lt;/li&gt;
+&lt;li&gt;业务系统类型&lt;/li&gt;
+&lt;li&gt;服务器类型&lt;/li&gt;
+&lt;li&gt;域名 / IP 地址&lt;/li&gt;
+&lt;li&gt;服务端口&lt;/li&gt;
+&lt;li&gt;版本&lt;/li&gt;
+&lt;li&gt;系统部署位置&lt;/li&gt;
+&lt;li&gt;开发框架&lt;/li&gt;
+&lt;li&gt;中间件&lt;/li&gt;
+&lt;li&gt;数据库&lt;/li&gt;
+&lt;li&gt;责任人&lt;/li&gt;
+&lt;li&gt;维护人员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设备资产信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设备名称&lt;/li&gt;
+&lt;li&gt;设备版本号&lt;/li&gt;
+&lt;li&gt;固件版本号&lt;/li&gt;
+&lt;li&gt;IP 地址&lt;/li&gt;
+&lt;li&gt;部署位置&lt;/li&gt;
+&lt;li&gt;责任人&lt;/li&gt;
+&lt;li&gt;维护人员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外包 / 第三方服务资产信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;厂商联系方式&lt;/li&gt;
+&lt;li&gt;系统名称&lt;/li&gt;
+&lt;li&gt;系统类型&lt;/li&gt;
+&lt;li&gt;IP/URL 地址&lt;/li&gt;
+&lt;li&gt;部署位置&lt;/li&gt;
+&lt;li&gt;责任人&lt;/li&gt;
+&lt;li&gt;维护人员&lt;/li&gt;
+&lt;li&gt;厂商联系方式&lt;/li&gt;
+&lt;li&gt;第三方值班人员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;风险梳理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基础设施风险&lt;/li&gt;
+&lt;li&gt;帐号权限梳理&lt;/li&gt;
+&lt;li&gt;互联网风险排查&lt;/li&gt;
+&lt;li&gt;收敛攻击面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应急响应计划&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;业务连续性计划&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;灾难恢复计划&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;行动流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行动流程&#34;&gt;#&lt;/a&gt; 行动流程&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;攻击准备&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;明确授权范围、测试目标、限制条件等&lt;/li&gt;
+&lt;li&gt;报备与授权流程&lt;/li&gt;
+&lt;li&gt;行动成本与预算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;攻击执行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;备案的时间区间内&lt;/li&gt;
+&lt;li&gt;备案的目标范围内&lt;/li&gt;
+&lt;li&gt;备案的攻击 IP 与网络环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;攻击完成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;恢复所有修改&lt;/li&gt;
+&lt;li&gt;移除所有持久化控制&lt;/li&gt;
+&lt;li&gt;提交攻击报告与改进建议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;注意事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意事项&#34;&gt;#&lt;/a&gt; 注意事项&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;测试前进行报备&lt;/li&gt;
+&lt;li&gt;有可能会影响到业务的操作时候提前沟通&lt;/li&gt;
+&lt;li&gt;漏洞和业务沟通确认后再发工单修复&lt;/li&gt;
+&lt;li&gt;漏洞闭环&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvOGlKczJPTjY2TlkxSmRidDdjLUJUQQ==&#34;&gt;以攻促防 企业蓝军建设思考&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2F2ZmlzaGVyLndpbi9hcmNoaXZlcy8xMTc1&#34;&gt;云上攻防：Red Teaming for Cloud&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvbmVvcG9pbnRzLzI1MjIyOS5odG1s&#34;&gt;网络攻防演练之企业蓝队建设指南&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网络攻防" />
+        <updated>2022-11-29T09:12:49.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"运营\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/",
+            "url": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/",
+            "title": "安全建设",
+            "date_published": "2022-12-05T08:00:21.000Z",
+            "content_html": "<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<h1 id=\"安全运营\"><a class=\"anchor\" href=\"#安全运营\">#</a> 安全运营</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zOTQ2NzIwMQ==\">我理解的安全运营 by 职业欠钱</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC84NDU5MTA5NQ==\">再谈安全运营 by 职业欠钱</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpJek1UQXpOelV4TVE9PSZhbXA7bWlkPTI2NTI4OTM2MTYmYW1wO2lkeD0xJmFtcDtzbj02NzM4YTRlMzMwNTBlZDA4NGQxNTM1MTk2YWVjNjA2MQ==\">我们谈安全运营时在谈什么 by 聂君</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly8zNmtyLmNvbS9wLzE3MjEyMzY2MzU2NDk=\">金融行业企业安全运营之路 by 聂君</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpJMk1qUTFOVEE0TUE9PSZhbXA7bWlkPTIyNDc0ODUwNjImYW1wO2lkeD0xJmFtcDtzbj05NGM5ZmE0MGVkZWY2ZGUwZWE0NmM0NTM0MDVlMzY4Nw==\">秦波：大型互联网应用安全 SDL 体系建设实践</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpJMk1qUTFOVEE0TUE9PSZhbXA7bWlkPTIyNDc0ODU0MDUmYW1wO2lkeD0xJmFtcDtzbj1iZGE5MjgzMzI5ZjZkYjE1ZDY5ZDRjZGYzN2M2MDlkMg==\">谭晓生：论 CISO 的个人修养</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvZXMvMjAwMDI0Lmh0bWw=\">赵彦的 CISO 闪电战 两年甲方安全修炼之路</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpJMk1qUTFOVEE0TUE9PSZhbXA7bWlkPTIyNDc0ODQ3MzUmYW1wO2lkeD0xJmFtcDtzbj0wMmUwNmRkODRlZTAzMjJkZDJmOWZlNzYxYjI0NDAxMw==\">胡珀谈安全运营 by lake2</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvcmM2WDVTbHNvUnA2czdSQ0VaNjdtQQ==\">小步快跑，快速迭代：安全运营的器术法道</span></li>\n</ul>\n<h2 id=\"资产管理\"><a class=\"anchor\" href=\"#资产管理\">#</a> 资产管理</h2>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpBNU1EWTNNek15T1E9PSZhbXA7bWlkPTI2NDk0Mzk3NTEmYW1wO2lkeD0xJmFtcDtzbj0xOGFjNDlhZmY3NWVlNGIxNDMzZTQyOWRmNTZiYTQ0Yg==\">资产管理的难点</span></li>\n</ul>\n",
+            "tags": [
+                "运营"
+            ]
+        }
+    ]
+}

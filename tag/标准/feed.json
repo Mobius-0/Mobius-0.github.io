@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"标准\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/",
+            "url": "https://mobius-0.github.io/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/",
+            "title": "容器",
+            "date_published": "2022-11-29T08:21:20.000Z",
+            "content_html": "<h1 id=\"oci\"><a class=\"anchor\" href=\"#oci\">#</a> OCI</h1>\n<p>开放容器标准 (Open Container Initiative, OCI) 是用于规范容器格式和运行时行业标准。目前 OCI 提出的规范有：</p>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL3J1bnRpbWUtc3BlYw==\">OCI Runtime Specification</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL2ltYWdlLXNwZWM=\">OCI Image Format</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL2Rpc3RyaWJ1dGlvbi1zcGVj\">OCI Distribution Specification</span></li>\n</ul>\n<h1 id=\"cri\"><a class=\"anchor\" href=\"#cri\">#</a> CRI</h1>\n<p>容器运行时 (Container Runtime Interface, CRI) 定义了容器和镜像的接口，目前官方支持的容器运行时包括 Docker、Containerd、CRI-O 和 frakti。</p>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<h2 id=\"文档\"><a class=\"anchor\" href=\"#文档\">#</a> 文档</h2>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9rdWJlcm5ldGVzLmlvL2Jsb2cvMjAxNi8xMi9jb250YWluZXItcnVudGltZS1pbnRlcmZhY2UtY3JpLWluLWt1YmVybmV0ZXMv\">Introducing Container Runtime Interface (CRI) in Kubernetes</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9jcmktby5pby8=\">cri-o</span></li>\n</ul>\n<h2 id=\"实现\"><a class=\"anchor\" href=\"#实现\">#</a> 实现</h2>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL3J1bmM=\">runc</span> OCI Runtime 的参考实现</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL2thdGEtY29udGFpbmVycy9rYXRhLWNvbnRhaW5lcnM=\">Kata Containers</span> 提供高性能的硬件虚拟化容器运行时</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL2dvb2dsZS9ndmlzb3I=\">gvisor</span> Go 实现的基于用户态内核的容器运行时</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL21vYnkvYnVpbGRraXQ=\">buildkit</span> docker build 拆分出来的 build 项目</li>\n</ul>\n",
+            "tags": [
+                "标准",
+                "OCI",
+                "CRI"
+            ]
+        }
+    ]
+}

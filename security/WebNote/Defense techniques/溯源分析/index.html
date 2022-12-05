@@ -1,0 +1,512 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="攻击溯源,分析模型" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/">
+
+
+
+  <title>
+溯源分析 - 防御技术 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">溯源分析
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-05 16:45:22">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-05T16:45:22+08:00">2022-12-05</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/4iEyKnCbYIhSdv8.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/6peIAjNdGnvE8rL.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/24/nxardNToLgEz5qh.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/dMYmSTcNuyzkUEX.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/27/mhkPB2Do5UAej3y.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/HO8gbQk5LjZ97Fp.png"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Defense-techniques/" itemprop="item" rel="index" title="分类于 防御技术"><span itemprop="name">防御技术</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="攻击机溯源技术"><a class="anchor" href="#攻击机溯源技术">#</a> 攻击机溯源技术</h1>
+<h2 id="基于日志的溯源"><a class="anchor" href="#基于日志的溯源">#</a> 基于日志的溯源</h2>
+<p>使用路由器、主机等设备记录网络传输的数据流中的关键信息 (时间、源地址、目的地址)，追踪时基于日志查询做反向追踪。</p>
+<p>这种方式的优点在于兼容性强、支持事后追溯、网络开销较小。但是同时该方法也受性能、空间和隐私保护等的限制，考虑到以上的因素，可以限制记录的数据特征和数据数量。另外可以使用流量镜像等技术来减小对网络性能的影响。</p>
+<h2 id="路由输入调试技术"><a class="anchor" href="#路由输入调试技术">#</a> 路由输入调试技术</h2>
+<p>在攻击持续发送数据，且特性较为稳定的场景下，可以使用路由器的输入调试技术，在匹配到攻击流量时动态的向上追踪。这种方式在 DDoS 攻击追溯中比较有效，且网络开销较小。</p>
+<h2 id="可控洪泛技术"><a class="anchor" href="#可控洪泛技术">#</a> 可控洪泛技术</h2>
+<p>追踪时向潜在的上游路由器进行洪泛攻击，如果发现收到的攻击流量变少则攻击流量会流经相应的路由。这种方式的优点在于不需要预先部署，对协同的需求比较少。但是这种方式本身是一种攻击，会对网络有所影响。</p>
+<h2 id="基于包数据修改追溯技术"><a class="anchor" href="#基于包数据修改追溯技术">#</a> 基于包数据修改追溯技术</h2>
+<p>这种溯源方式直接对数据包进行修改，加入编码或者标记信息，在接收端对传输路径进行重构。这种方式人力投入较少，支持事后分析，但是对某些协议的支持性不太好。</p>
+<p>基于这种方式衍生出了随机标记技术，各路由以一定概率对数据包进行标识，接收端收集到多个包后进行重构。</p>
+<h1 id="基于蜜罐溯源"><a class="anchor" href="#基于蜜罐溯源">#</a> 基于蜜罐溯源</h1>
+<ul>
+<li>社交网络 jsonp API</li>
+<li>获取攻击者 IP</li>
+<li>获取 burp 信息</li>
+</ul>
+<h1 id="分析模型"><a class="anchor" href="#分析模型">#</a> 分析模型</h1>
+<h2 id="杀伤链kill-kain模型"><a class="anchor" href="#杀伤链kill-kain模型">#</a> 杀伤链 (Kill Kain) 模型</h2>
+<p>杀伤链这个概念源自军事领域，它是一个描述攻击环节的模型。一般杀伤链有认为侦查跟踪 (Reconnaissance)、武器构建 (Weaponization)、载荷投递 (Delivery)、漏洞利用 (Exploitation)、安装植入 (Installation)、通信控制 (Command&amp;Control)、达成目标 (Actions on Objective) 等几个阶段。</p>
+<p>在越早的杀伤链环节阻止攻击，防护效果就越好，因此杀伤链的概念也可以用来反制攻击。</p>
+<p>在跟踪阶段，攻击者通常会采用扫描和搜索等方式来寻找可能的目标信息并评估攻击成本。在这个阶段可以通过日志分析、邮件分析等方式来发现，这阶段也可以采用威胁情报等方式来获取攻击信息。</p>
+<p>武器构建阶段攻击者通常已经准备好了攻击工具，并进行尝试性的攻击，在这个阶段 IDS 中可能有攻击记录，外网应用、邮箱等帐号可能有密码爆破的记录。有一些攻击者会使用公开攻击工具，会带有一定的已知特征。</p>
+<p>载荷投递阶段攻击者通常会采用网络漏洞、鱼叉、水坑、网络劫持、U 盘等方式投送恶意代码。此阶段已经有人员在对应的途径收到了攻击载荷，对人员进行充分的安全培训可以做到一定程度的防御。</p>
+<p>突防利用阶段攻击者会执行恶意代码来获取系统控制权限，此时木马程序已经执行，此阶段可以依靠杀毒软件、异常行为告警等方式来找到相应的攻击。</p>
+<p>安装植入阶段攻击者通常会在 web 服务器上安装 Webshell 或植入后门、rootkit 等来实现对服务器的持久化控制。可以通过对样本进行逆向工程来找到这些植入。</p>
+<p>通信控制阶段攻击者已经实现了远程通信控制，木马会通过 Web 三方网站、DNS 隧道、邮件等方式和控制服务器进行通信。此时可以通过对日志进行分析来找到木马的痕迹。</p>
+<p>达成目标阶段时，攻击者开始完成自己的目的，可能是破坏系统正常运行、窃取目标数据、敲诈勒索、横向移动等。此时受控机器中可能已经有攻击者的上传的攻击利用工具，此阶段可以使用蜜罐等方式来发现。</p>
+<h2 id="钻石diamond模型"><a class="anchor" href="#钻石diamond模型">#</a> 钻石 (Diamond) 模型</h2>
+<p>钻石模型由网络情报分析与威胁研究中心 (The Center for Cyber Intelligence Anaysis and Threat Research，CCIATR) 机构的 Sergio Catagirone 等人在 2013 年提出。</p>
+<p>该模型把所有的安全事件 (Event) 分为四个核心元素，即敌手 (Adversary)，能力 (Capability)，基础设施 (Infrastructure) 和受害者 (Victim)，以菱形连线代表它们之间的关系，因而命名为 “钻石模型”。</p>
+<p>杀伤链模型的特点是可说明攻击线路和攻击的进程，而钻石模型的特点是可说明攻击者在单个事件中的攻击目的和所使用攻击手法。</p>
+<p>在使用钻石模型分析时，通常使用支点分析的方式。支点 (Pivoting) 指提取一个元素，并利用该元素与数据源相结合以发现相关元素的分析技术。分析中可以随时变换支点，四个核心特征以及两个扩展特征 (社会政治、技术) 都可能成为当时的分析支点。</p>
+<h1 id="关联分析方法"><a class="anchor" href="#关联分析方法">#</a> 关联分析方法</h1>
+<p>关联分析用于把多个不同的攻击样本结合起来。</p>
+<h2 id="文档类"><a class="anchor" href="#文档类">#</a> 文档类</h2>
+<ul>
+<li>hash</li>
+<li>ssdeep</li>
+<li>版本信息 (公司 / 作者 / 最后修改作者 / 创建时间 / 最后修改时间)</li>
+</ul>
+<h2 id="行为分析"><a class="anchor" href="#行为分析">#</a> 行为分析</h2>
+<ul>
+<li>
+<p>基于网络行为</p>
+<ul>
+<li>类似的交互方式</li>
+</ul>
+</li>
+</ul>
+<h2 id="可执行文件相似性分析"><a class="anchor" href="#可执行文件相似性分析">#</a> 可执行文件相似性分析</h2>
+<ul>
+<li>
+<p>特殊端口</p>
+</li>
+<li>
+<p>特殊字符串 / 密钥</p>
+</li>
+<li>
+<p>PDB 文件路径</p>
+<ul>
+<li>相似的文件夹</li>
+</ul>
+</li>
+<li>
+<p>代码复用</p>
+<ul>
+<li>相似的代码片段</li>
+</ul>
+</li>
+</ul>
+<h1 id="清除日志方式"><a class="anchor" href="#清除日志方式">#</a> 清除日志方式</h1>
+<ul>
+<li><code>kill &lt;bash process ID&gt;</code>  不会存储</li>
+<li><code>set +o history</code>  不写入历史记录</li>
+<li><code>unset HISTFILE</code>  清除历史记录的环境变量</li>
+</ul>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvdmxyMlg2OHRNVGdEaGREazRhb3cwZw==">利用社交账号精准溯源的蜜罐技术</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E6%94%BB%E5%87%BB%E6%BA%AF%E6%BA%90/" rel="tag"><i class="ic i-tag"></i> 攻击溯源</a>
+          <a href="/tags/%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="ic i-tag"></i> 分析模型</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-12-05 16:46:27" itemprop="dateModified" datetime="2022-12-05T16:46:27+08:00">2022-12-05</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" title="溯源分析">https://mobius-0.github.io/security/WebNote/Defense techniques/溯源分析/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;hcztLMjJBGdaslK.png" title="应急响应">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>应急响应</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%9C%BA%E6%BA%AF%E6%BA%90%E6%8A%80%E6%9C%AF"><span class="toc-number">1.</span> <span class="toc-text"> 攻击机溯源技术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%97%A5%E5%BF%97%E7%9A%84%E6%BA%AF%E6%BA%90"><span class="toc-number">1.1.</span> <span class="toc-text"> 基于日志的溯源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E8%BE%93%E5%85%A5%E8%B0%83%E8%AF%95%E6%8A%80%E6%9C%AF"><span class="toc-number">1.2.</span> <span class="toc-text"> 路由输入调试技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%8E%A7%E6%B4%AA%E6%B3%9B%E6%8A%80%E6%9C%AF"><span class="toc-number">1.3.</span> <span class="toc-text"> 可控洪泛技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%8C%85%E6%95%B0%E6%8D%AE%E4%BF%AE%E6%94%B9%E8%BF%BD%E6%BA%AF%E6%8A%80%E6%9C%AF"><span class="toc-number">1.4.</span> <span class="toc-text"> 基于包数据修改追溯技术</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E8%9C%9C%E7%BD%90%E6%BA%AF%E6%BA%90"><span class="toc-number">2.</span> <span class="toc-text"> 基于蜜罐溯源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 分析模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%80%E4%BC%A4%E9%93%BEkill-kain%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> 杀伤链 (Kill Kain) 模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%BB%E7%9F%B3diamond%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text"> 钻石 (Diamond) 模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text"> 关联分析方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="toc-number">4.1.</span> <span class="toc-text"> 文档类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90"><span class="toc-number">4.2.</span> <span class="toc-text"> 行为分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%88%86%E6%9E%90"><span class="toc-number">4.3.</span> <span class="toc-text"> 可执行文件相似性分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%85%E9%99%A4%E6%97%A5%E5%BF%97%E6%96%B9%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text"> 清除日志方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text"> 参考链接</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Defense%20techniques/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="团队建设">团队建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/" rel="bookmark" title="红蓝对抗">红蓝对抗</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/" rel="bookmark" title="安全开发">安全开发</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="安全建设">安全建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" rel="bookmark" title="威胁情报">威胁情报</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6/" rel="bookmark" title="风险控制">风险控制</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%98%B2%E5%BE%A1%E6%A1%86%E6%9E%B6/" rel="bookmark" title="防御框架">防御框架</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/" rel="bookmark" title="加固检查">加固检查</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" rel="bookmark" title="入侵检测">入侵检测</a></li><li><a href="/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" rel="bookmark" title="蜜罐技术">蜜罐技术</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="bookmark" title="应急响应">应急响应</a></li><li class="active"><a href="/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" rel="bookmark" title="溯源分析">溯源分析</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">73</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">114</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">201k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:03</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Defense techniques/溯源分析/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -3,13 +3,14 @@
     <id>https://mobius-0.github.io</id>
     <title>Khala • Posts by &#34;工具&#34; tag</title>
     <link href="https://mobius-0.github.io" />
-    <updated>2022-11-23T02:52:33.000Z</updated>
+    <updated>2022-12-03T02:36:21.000Z</updated>
     <category term="Hexo" />
     <category term="shoya" />
     <category term="网站" />
     <category term="网络安全" />
     <category term="工具" />
     <category term="虚拟机" />
+    <category term="安全" />
     <category term="星际争霸2" />
     <category term="平衡" />
     <category term="杂谈" />
@@ -18,6 +19,17 @@
     <category term="龙族" />
     <category term="动画" />
     <category term="法律法规" />
+    <category term="XSS" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
     <category term="域名" />
     <category term="DNS" />
     <category term="WEB" />
@@ -30,11 +42,41 @@
     <category term="WiFi" />
     <category term="邮件" />
     <category term="网络协议" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
     <category term="Linux" />
+    <category term="Windows" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <category term="风险" />
+    <category term="控制" />
     <category term="渗透" />
     <category term="信息收集" />
     <category term="痕迹清理" />
-    <category term="Windows" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
     <category term="ASP" />
     <category term="CSharp" />
     <category term="Golang" />
@@ -50,14 +92,11 @@
     <category term="PowerShell" />
     <category term="Python" />
     <category term="Ruby" />
-    <category term="Shell" />
-    <category term="漏洞" />
     <category term="CSRF" />
     <category term="服务器" />
     <category term="SQL注入" />
     <category term="SSRF" />
     <category term="Cache" />
-    <category term="XSS" />
     <category term="XXE" />
     <category term="XML" />
     <category term="Xpath" />
@@ -79,6 +118,52 @@
     <category term="端口" />
     <category term="社会工程学" />
     <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/phpstudy+pikachu/</id>
+        <title>phpstudy平台和pikachu漏洞平台的搭建</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/phpstudy+pikachu/"/>
+        <content type="html">&lt;h1 id=&#34;phpstudy平台搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#phpstudy平台搭建&#34;&gt;#&lt;/a&gt; phpstudy 平台搭建&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;首先进入下载网站: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueHAuY24=&#34;&gt;https://www.xp.cn&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;根据自己需要选择下载&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/C4cAK6SHk5xhQrq.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;下载完成后双击 exe 进行安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;安装选项如安装目录等根据自己需要进行修改&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/WyOjEk2fQsnBq3b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装成功后进入面板，启动一下两项服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/kS1ecHqsj47Dg8o.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;访问其内置默认网站 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdDo4MC8=&#34;&gt;http://localhost:80/&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;出现以下结果说明安装成功&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/sBQCwSrkJdRWOlx.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;pikachu靶场搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pikachu靶场搭建&#34;&gt;#&lt;/a&gt; pikachu 靶场搭建&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先下载 pikachu 源代码 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3podWlmZW5nc2hhb25pYW5oYW5sdS9waWthY2h1&#34;&gt;https://github.com/zhuifengshaonianhanlu/pikachu&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载完成后将其解压至 phpstudy 安装目录下的 WWW 文件夹里&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随后修改解压文件 inc 文件夹下的 config.inc.php 文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;根据自己需要修改连接的用户名和密码&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/HVLdcTv8uO4bfwE.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;接下来直接访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdDo4MDgwL3Bpa2FjaHUtbWFzdGVy&#34;&gt;http://localhost:8080/pikachu-master&lt;/span&gt; 即可进入靶场首页&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="工具" />
+        <category term="安全" />
+        <updated>2022-12-03T02:36:21.000Z</updated>
+    </entry>
     <entry>
         <id>https://mobius-0.github.io/security/VMware/</id>
         <title>虚拟机安装</title>

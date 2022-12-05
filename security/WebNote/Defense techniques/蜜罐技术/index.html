@@ -1,0 +1,490 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="蜜罐,隐藏,诱导" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/">
+
+
+
+  <title>
+蜜罐技术 - 防御技术 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">蜜罐技术
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-05 16:30:15">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-05T16:30:15+08:00">2022-12-05</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/rGBCVcvwzhqFbe8.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/mJcbwPV4zuS28ra.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/zxn9Em7OPLHZGBI.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/YPuHvj4Vst7gc6k.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/rUQouBDiPVOIltY.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/vgu8tFAr9In4Peo.png"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Defense-techniques/" itemprop="item" rel="index" title="分类于 防御技术"><span itemprop="name">防御技术</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="简介"><a class="anchor" href="#简介">#</a> 简介</h1>
+<p>蜜罐是对攻击者的欺骗技术，用以监视、检测、分析和溯源攻击行为，其没有业务上的用途，所有流入 / 流出蜜罐的流量都预示着扫描或者攻击行为，因此可以比较好的聚焦于攻击流量。</p>
+<p>蜜罐可以实现对攻击者的主动诱捕，能够详细地记录攻击者攻击过程中的许多痕迹，可以收集到大量有价值的数据，如病毒或蠕虫的源码、黑客的操作等，从而便于提供丰富的溯源数据。另外蜜罐也可以消耗攻击者的时间，基于 JSONP 等方式来获取攻击者的画像。</p>
+<p>但是蜜罐存在安全隐患，如果没有做好隔离，可能成为新的攻击源。</p>
+<h1 id="分类"><a class="anchor" href="#分类">#</a> 分类</h1>
+<p>按用途分类，蜜罐可以分为研究型蜜罐和产品型蜜罐。研究型蜜罐一般是用于研究各类网络威胁，寻找应对的方式，不增加特定组织的安全性。产品型蜜罐主要是用于防护的商业产品。</p>
+<p>按交互方式分类，蜜罐可以分为低交互蜜罐和高交互蜜罐。低交互蜜罐模拟网络服务响应和攻击者交互，容易部署和控制攻击，但是模拟能力会相对较弱，对攻击的捕获能力不强。高交互蜜罐不是简单模拟协议或服务，而是提供真实的系统，使得被发现的概率大幅度降低。但是高交互蜜罐部署不当时存在被攻击者利用的可能性。</p>
+<h1 id="隐藏技术"><a class="anchor" href="#隐藏技术">#</a> 隐藏技术</h1>
+<p>蜜罐主要涉及到的是伪装技术，主要涉及到进程隐藏、服务伪装等技术。</p>
+<p>蜜罐之间的隐藏，要求蜜罐之间相互隐蔽。进程隐藏，蜜罐需要隐藏监控、信息收集等进程。伪服务和命令技术，需要对部分服务进行伪装，防止攻击者获取敏感信息或者入侵控制内核。数据文件伪装，需要生成合理的虚假数据的文件。</p>
+<h1 id="牵引技术"><a class="anchor" href="#牵引技术">#</a> 牵引技术</h1>
+<p>蜜罐牵引技术是在识别到攻击者流量后，通过在正式环境中改变路由、返回特定响应的方式将攻击者牵引到特定的蜜罐地址。 常见的牵引技术有下面几种：</p>
+<ul>
+<li>防火墙牵引</li>
+<li>SDN 牵引</li>
+<li>ARP 牵引</li>
+<li>WAF 牵引</li>
+</ul>
+<h1 id="诱饵技术"><a class="anchor" href="#诱饵技术">#</a> 诱饵技术</h1>
+<p>可以在互联网中部署一定的诱饵来吸引攻击者进入特定的蜜罐中。 常见的诱饵有域名诱饵、Github 诱饵、网盘诱饵、邮件诱饵、主机诱饵、文件诱饵、漏洞诱饵等。</p>
+<p>域名诱饵指使用特定的在字典中且有意义的主域名做为诱饵，比如  <code>vpn.example.com</code>  /  <code>oa.example.com</code>  等。</p>
+<p>Github 诱饵指在 Github 中放置代码文件、失陷凭证的方式。</p>
+<p>文件诱饵是在容易失陷的主机中放置虚假的拓扑图，关键系统 IP 的文件，从而诱导攻击者的方式。</p>
+<p>漏洞诱饵通过部署存在特定漏洞特征的蜜罐站，吸引攻击者攻击。</p>
+<h1 id="反制技术"><a class="anchor" href="#反制技术">#</a> 反制技术</h1>
+<p>蜜罐可以使用一些方式对攻击者进行反制，常见的方式有 Jsonp、安全工具漏洞、Client 漏洞反制、文件反制等方式。</p>
+<p>Jsonp 主要是使用各大网站的 Jsonp 获取攻击者已经登录的社交账号，用以溯源。 另外如果攻击者使用流量的方式访问蜜罐网站，可以使用运营商接口获取攻击者的手机号。</p>
+<p>安全工具漏洞是指使用安全工具的漏洞进行反制，例如 Git 泄露工具存在的文件泄露漏洞，基于 Electron 的工具存在的 XSS to RCE 等。</p>
+<p>Client 反制，指使用虚假的 Server 对存在漏洞的客户端进行反制，例如通过 MySQL Client 读取文件，基于 RDP/SMB 的漏洞进行 RCE。</p>
+<p>反制文件，指在蜜罐环境中设置特定的文件，例如伪装的 VPN 客户端、特定插件来诱导攻击者点击。</p>
+<p>DoS 反制，在获取到攻击者的 C2 样本后，可以通过批量上线的方式影响 C2 攻击者的控制服务器。</p>
+<h1 id="识别技术"><a class="anchor" href="#识别技术">#</a> 识别技术</h1>
+<p>攻击者也会尝试对蜜罐进行识别。比较容易的识别的是低交互的蜜罐，尝试一些比较复杂且少见的操作能比较容易的识别低交互的蜜罐。相对困难的是高交互蜜罐的识别，因为高交互蜜罐通常以真实系统为基础来构建，和真实系统比较近似。对这种情况，通常会基于虚拟文件系统和注册表的信息、内存分配特征、硬件特征、特殊指令等来识别。</p>
+<h2 id="协议实现识别"><a class="anchor" href="#协议实现识别">#</a> 协议实现识别</h2>
+<p>部分蜜罐在实现的过程中，协议的部分参数固定或随机的范围有限，可以通过特定参数的范围来识别蜜罐。</p>
+<p>部分蜜罐协议支持的版本范围为某一特定版本范围，可以通过对应的版本范围来推测是否为蜜罐。</p>
+<p>部分蜜罐在交互过程中有探测客户端特征的交互，可以通过这些交互过程来识别蜜罐。</p>
+<p>部分蜜罐对不正确的请求也返回正常的相应，可以通过这种特征来判定蜜罐。</p>
+<h2 id="环境特征"><a class="anchor" href="#环境特征">#</a> 环境特征</h2>
+<p>部分蜜罐的用户名、密码固定，或内存使用、进程占用等动态特征变化较为规律，可以通过这种方式来判断是否为蜜罐。</p>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSG9uZXlwb3RfKGNvbXB1dGluZyk=">honeypot wiki</span></li>
+<li><span class="exturl" data-url="aHR0cDovL3RocmVhdHN0cmVhbS5naXRodWIuaW8vbWhuLw==">Modern Honey Network</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9yZXNlYy5jbi9tYWdpYy1zaGllbGQuaHRtbA==">默安科技：幻阵</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvOTk4">蜜罐与内网安全从 0 到 1</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXprME56RTRNREUyTkE9PSZhbXA7bWlkPTIyNDc0ODM5MDgmYW1wO2lkeD0xJmFtcDtzbj1lNmEzMTllMjJjM2NkNTQ2NTBiZGJiYTUxMWU1OGE0Mw==">浅析开源蜜罐识别与全网测绘</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E8%9C%9C%E7%BD%90/" rel="tag"><i class="ic i-tag"></i> 蜜罐</a>
+          <a href="/tags/%E9%9A%90%E8%97%8F/" rel="tag"><i class="ic i-tag"></i> 隐藏</a>
+          <a href="/tags/%E8%AF%B1%E5%AF%BC/" rel="tag"><i class="ic i-tag"></i> 诱导</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-12-05 16:33:34" itemprop="dateModified" datetime="2022-12-05T16:33:34+08:00">2022-12-05</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" title="蜜罐技术">https://mobius-0.github.io/security/WebNote/Defense techniques/蜜罐技术/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;29&#x2F;B8nmzHVjJof6F5P.png" title="入侵检测">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>入侵检测</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;T8xpL5w2hfUtkCJ.jpg" title="应急响应">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>应急响应</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text"> 分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E6%8A%80%E6%9C%AF"><span class="toc-number">3.</span> <span class="toc-text"> 隐藏技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B5%E5%BC%95%E6%8A%80%E6%9C%AF"><span class="toc-number">4.</span> <span class="toc-text"> 牵引技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%B1%E9%A5%B5%E6%8A%80%E6%9C%AF"><span class="toc-number">5.</span> <span class="toc-text"> 诱饵技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%88%B6%E6%8A%80%E6%9C%AF"><span class="toc-number">6.</span> <span class="toc-text"> 反制技术</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF"><span class="toc-number">7.</span> <span class="toc-text"> 识别技术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE%E5%AE%9E%E7%8E%B0%E8%AF%86%E5%88%AB"><span class="toc-number">7.1.</span> <span class="toc-text"> 协议实现识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E7%89%B9%E5%BE%81"><span class="toc-number">7.2.</span> <span class="toc-text"> 环境特征</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text"> 参考链接</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Defense%20techniques/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="团队建设">团队建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/" rel="bookmark" title="红蓝对抗">红蓝对抗</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/" rel="bookmark" title="安全开发">安全开发</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="安全建设">安全建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" rel="bookmark" title="威胁情报">威胁情报</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6/" rel="bookmark" title="风险控制">风险控制</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%98%B2%E5%BE%A1%E6%A1%86%E6%9E%B6/" rel="bookmark" title="防御框架">防御框架</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/" rel="bookmark" title="加固检查">加固检查</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" rel="bookmark" title="入侵检测">入侵检测</a></li><li class="active"><a href="/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" rel="bookmark" title="蜜罐技术">蜜罐技术</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="bookmark" title="应急响应">应急响应</a></li><li><a href="/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" rel="bookmark" title="溯源分析">溯源分析</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">73</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">114</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">201k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:03</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Defense techniques/蜜罐技术/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

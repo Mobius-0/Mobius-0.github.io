@@ -1,0 +1,728 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="应急响应,流程,Linux,Windows" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">
+
+
+
+  <title>
+应急响应 - 防御技术 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">应急响应
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-05 16:40:15">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-05T16:40:15+08:00">2022-12-05</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/4iEyKnCbYIhSdv8.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/ySTw4XIBxPWReLv.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/YNTkHlOtmzKLupR.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/5xS8irIm4FqtwMC.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/CBtsQKYJU5jMuag.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/g2yRxptwc9Q6XBu.jpg"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Defense-techniques/" itemprop="item" rel="index" title="分类于 防御技术"><span itemprop="name">防御技术</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="响应流程"><a class="anchor" href="#响应流程">#</a> 响应流程</h1>
+<h2 id="事件发生"><a class="anchor" href="#事件发生">#</a> 事件发生</h2>
+<p>运维监控人员、客服审核人员等发现问题，向上通报。</p>
+<h2 id="事件确认"><a class="anchor" href="#事件确认">#</a> 事件确认</h2>
+<p>收集事件信息、分析网络活动相关程序，日志和数据，判断事件的严重性，评估出问题的严重等级，是否向上进行汇报等。</p>
+<h2 id="事件响应"><a class="anchor" href="#事件响应">#</a> 事件响应</h2>
+<p>各部门通力合作，处理安全问题，具体解决问题，避免存在漏洞未修补、后门未清除等残留问题。</p>
+<h2 id="事件关闭"><a class="anchor" href="#事件关闭">#</a> 事件关闭</h2>
+<p>处理完事件之后，需要关闭事件，并写出安全应急处理分析报告，完成整个应急过程。</p>
+<h1 id="事件分类"><a class="anchor" href="#事件分类">#</a> 事件分类</h1>
+<ul>
+<li>
+<p>病毒、木马、蠕虫事件</p>
+</li>
+<li>
+<p>Web 服务器入侵事件</p>
+</li>
+<li>
+<p>第三方服务入侵事件</p>
+</li>
+<li>
+<p>系统入侵事件</p>
+<ul>
+<li>利用 Windows 漏洞攻击操作系统</li>
+</ul>
+</li>
+<li>
+<p>网络攻击事件</p>
+<ul>
+<li>DDoS / ARP 欺骗 / DNS 劫持等</li>
+</ul>
+</li>
+</ul>
+<h1 id="分析方向"><a class="anchor" href="#分析方向">#</a> 分析方向</h1>
+<h2 id="文件分析"><a class="anchor" href="#文件分析">#</a> 文件分析</h2>
+<ul>
+<li>
+<p>基于变化的分析</p>
+<ul>
+<li>日期</li>
+<li>文件增改</li>
+<li>最近使用文件</li>
+</ul>
+</li>
+<li>
+<p>源码分析</p>
+<ul>
+<li>检查源码改动</li>
+<li>查杀 WebShell 等后门</li>
+</ul>
+</li>
+<li>
+<p>系统日志分析</p>
+</li>
+<li>
+<p>应用日志分析</p>
+<ul>
+<li>分析 User-Agent，e.g.  <code>awvs / burpsuite / w3af / nessus / openvas</code></li>
+<li>对每种攻击进行关键字匹配，e.g.  <code>select/alert/eval</code></li>
+<li>异常请求，连续的 404 或者 500</li>
+</ul>
+</li>
+<li>
+<p><code>md5sum</code>  检查常用命令二进制文件的哈希，检查是否被植入 rootkit</p>
+</li>
+</ul>
+<h2 id="进程分析"><a class="anchor" href="#进程分析">#</a> 进程分析</h2>
+<ul>
+<li>
+<p>符合以下特征的进程</p>
+<ul>
+<li>CPU 或内存资源占用长时间过高</li>
+<li>没有签名验证信息</li>
+<li>没有描述信息的进程</li>
+<li>进程的路径不合法</li>
+</ul>
+</li>
+<li>
+<p>dump 系统内存进行分析</p>
+</li>
+<li>
+<p>正在运行的进程</p>
+</li>
+<li>
+<p>正在运行的服务</p>
+</li>
+<li>
+<p>父进程和子进程</p>
+</li>
+<li>
+<p>后台可执行文件的完整哈希</p>
+</li>
+<li>
+<p>已安装的应用程序</p>
+</li>
+<li>
+<p>运行着密钥或其他正在自动运行的持久化程序</p>
+</li>
+<li>
+<p>计划任务</p>
+</li>
+</ul>
+<h2 id="身份信息分析"><a class="anchor" href="#身份信息分析">#</a> 身份信息分析</h2>
+<ul>
+<li>本地以及域账号用户</li>
+<li>异常的身份验证</li>
+<li>非标准格式的用户名</li>
+</ul>
+<h2 id="日志分析"><a class="anchor" href="#日志分析">#</a> 日志分析</h2>
+<ul>
+<li>杀软检测记录</li>
+</ul>
+<h2 id="网络分析"><a class="anchor" href="#网络分析">#</a> 网络分析</h2>
+<ul>
+<li>防火墙配置</li>
+<li>DNS 配置</li>
+<li>路由配置</li>
+<li>监听端口和相关服务</li>
+<li>最近建立的网络连接</li>
+<li>RDP / VPN / SSH 等会话</li>
+</ul>
+<h2 id="配置分析"><a class="anchor" href="#配置分析">#</a> 配置分析</h2>
+<ul>
+<li>查看 Linux SE 等配置</li>
+<li>查看环境变量</li>
+<li>查看配套的注册表信息检索，SAM 文件</li>
+<li>内核模块</li>
+</ul>
+<h1 id="linux应急响应"><a class="anchor" href="#linux应急响应">#</a> Linux 应急响应</h1>
+<h2 id="文件分析-2"><a class="anchor" href="#文件分析-2">#</a> 文件分析</h2>
+<ul>
+<li>
+<p>最近使用文件</p>
+<ul>
+<li><code>find / -ctime -2</code></li>
+<li><code>C:\Documents and Settings\Administrator\Recent</code></li>
+<li><code>C:\Documents and Settings\Default User\Recent</code></li>
+<li><code>%UserProfile%\Recent</code></li>
+</ul>
+</li>
+<li>
+<p>系统日志分析</p>
+<ul>
+<li>/var/log/</li>
+</ul>
+</li>
+<li>
+<p>重点分析位置</p>
+<ul>
+<li><code>/var/log/wtmp</code>  登录进入，退出，数据交换、关机和重启纪录</li>
+<li><code>/var/run/utmp</code>  有关当前登录用户的信息记录</li>
+<li><code>/var/log/lastlog</code>  文件记录用户最后登录的信息，可用 lastlog 命令来查看。</li>
+<li><code>/var/log/secure</code>  记录登入系统存取数据的文件，例如 pop3/ssh/telnet/ftp 等都会被记录。</li>
+<li><code>/var/log/cron</code>  与定时任务相关的日志信息</li>
+<li><code>/var/log/message</code>  系统启动后的信息和错误日志</li>
+<li><code>/var/log/apache2/access.log</code>  apache access log</li>
+<li><code>/etc/passwd</code>  用户列表</li>
+<li><code>/etc/init.d/</code>  开机启动项</li>
+<li><code>/etc/cron*</code>  定时任务</li>
+<li><code>/tmp</code>  临时目录</li>
+<li><code>~/.ssh</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="用户分析"><a class="anchor" href="#用户分析">#</a> 用户分析</h2>
+<ul>
+<li><code>/etc/shadow</code>  密码登陆相关信息</li>
+<li><code>uptime</code>  查看用户登陆时间</li>
+<li><code>/etc/sudoers</code>  sudo 用户列表</li>
+</ul>
+<h2 id="进程分析-2"><a class="anchor" href="#进程分析-2">#</a> 进程分析</h2>
+<ul>
+<li>
+<p><code>netstat -ano</code>  查看是否打开了可疑端口</p>
+</li>
+<li>
+<p><code>w</code>  命令，查看用户及其进程</p>
+</li>
+<li>
+<p>分析开机自启程序 / 脚本</p>
+<ul>
+<li><code>/etc/init.d</code></li>
+<li><code>~/.bashrc</code></li>
+</ul>
+</li>
+<li>
+<p>查看计划或定时任务</p>
+<ul>
+<li><code>crontab -l</code></li>
+</ul>
+</li>
+<li>
+<p><code>netstat -an</code>  /  <code>lsof</code>  查看进程端口占用</p>
+</li>
+</ul>
+<h1 id="windows应急响应"><a class="anchor" href="#windows应急响应">#</a> Windows 应急响应</h1>
+<h2 id="文件分析-3"><a class="anchor" href="#文件分析-3">#</a> 文件分析</h2>
+<ul>
+<li>
+<p>最近使用文件</p>
+<ul>
+<li><code>C:\Documents and Settings\Administrator\Recent</code></li>
+<li><code>C:\Documents and Settings\Default User\Recent</code></li>
+<li><code>%UserProfile%\Recent</code></li>
+</ul>
+</li>
+<li>
+<p>系统日志分析</p>
+<ul>
+<li>事件查看器  <code>eventvwr.msc</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="用户分析-2"><a class="anchor" href="#用户分析-2">#</a> 用户分析</h2>
+<ul>
+<li>查看是否有新增用户</li>
+<li>查看服务器是否有弱口令</li>
+<li>查看管理员对应键值</li>
+<li><code>lusrmgr.msc</code>  查看账户变化</li>
+<li><code>net user</code>  列出当前登录账户</li>
+<li><code>wmic UserAccount get</code>  列出当前系统所有账户</li>
+</ul>
+<h2 id="进程分析-3"><a class="anchor" href="#进程分析-3">#</a> 进程分析</h2>
+<ul>
+<li>
+<p><code>netstat -ano</code>  查看是否打开了可疑端口</p>
+</li>
+<li>
+<p><code>tasklist</code>  查看是否有可疑进程</p>
+</li>
+<li>
+<p>分析开机自启程序</p>
+<ul>
+<li><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run</code></li>
+<li><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce</code></li>
+<li><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices</code></li>
+<li><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce</code></li>
+<li><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run</code></li>
+<li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code></li>
+<li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce</code></li>
+<li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices</code></li>
+<li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce</code></li>
+<li><code>(ProfilePath)\Start Menu\Programs\Startup</code>  启动项</li>
+<li><code>msconfig</code>  启动选项卡</li>
+<li><code>gpedit.msc</code>  组策略编辑器</li>
+</ul>
+</li>
+<li>
+<p>查看计划或定时任务</p>
+<ul>
+<li><code>C:\Windows\System32\Tasks\</code></li>
+<li><code>C:\Windows\SysWOW64\Tasks\</code></li>
+<li><code>C:\Windows\tasks\</code></li>
+<li><code>schtasks</code></li>
+<li><code>taskschd.msc</code></li>
+<li><code>compmgmt.msc</code></li>
+</ul>
+</li>
+<li>
+<p>查看启动服务</p>
+<ul>
+<li><code>services.msc</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="日志分析-2"><a class="anchor" href="#日志分析-2">#</a> 日志分析</h2>
+<ul>
+<li>事件查看
+<ul>
+<li><code>eventvwr.msc</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="其他"><a class="anchor" href="#其他">#</a> 其他</h2>
+<ul>
+<li>查看系统环境变量</li>
+</ul>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTE0MA==">黑客入侵应急分析手工排查</span></li>
+<li><span class="exturl" data-url="aHR0cDovL3d3dy5mcmVlYnVmLmNvbS9jb2x1bW4vMTQ3OTI5Lmh0bWw=">取证入门 web 篇</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMjUyNA==">Windows 系统安全事件应急响应</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTYzMg==">企业安全应急响应</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly91cy1jZXJ0LmNpc2EuZ292L25jYXMvYWxlcnRzL2FhMjAtMjQ1YQ==">Technical Approaches to Uncovering and Remediating Malicious Activity</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="tag"><i class="ic i-tag"></i> 应急响应</a>
+          <a href="/tags/%E6%B5%81%E7%A8%8B/" rel="tag"><i class="ic i-tag"></i> 流程</a>
+          <a href="/tags/Linux/" rel="tag"><i class="ic i-tag"></i> Linux</a>
+          <a href="/tags/Windows/" rel="tag"><i class="ic i-tag"></i> Windows</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-12-05 16:43:33" itemprop="dateModified" datetime="2022-12-05T16:43:33+08:00">2022-12-05</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" title="应急响应">https://mobius-0.github.io/security/WebNote/Defense techniques/应急响应/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;25&#x2F;I1DlFOHuRYVXdKb.jpg" title="蜜罐技术">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>蜜罐技术</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;13&#x2F;5xS8irIm4FqtwMC.png" title="溯源分析">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>溯源分析</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text"> 响应流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%8F%91%E7%94%9F"><span class="toc-number">1.1.</span> <span class="toc-text"> 事件发生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%A1%AE%E8%AE%A4"><span class="toc-number">1.2.</span> <span class="toc-text"> 事件确认</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94"><span class="toc-number">1.3.</span> <span class="toc-text"> 事件响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%85%B3%E9%97%AD"><span class="toc-number">1.4.</span> <span class="toc-text"> 事件关闭</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text"> 事件分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E6%96%B9%E5%90%91"><span class="toc-number">3.</span> <span class="toc-text"> 分析方向</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90"><span class="toc-number">3.1.</span> <span class="toc-text"> 文件分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">3.2.</span> <span class="toc-text"> 进程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90"><span class="toc-number">3.3.</span> <span class="toc-text"> 身份信息分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90"><span class="toc-number">3.4.</span> <span class="toc-text"> 日志分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90"><span class="toc-number">3.5.</span> <span class="toc-text"> 网络分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%88%86%E6%9E%90"><span class="toc-number">3.6.</span> <span class="toc-text"> 配置分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94"><span class="toc-number">4.</span> <span class="toc-text"> Linux 应急响应</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90-2"><span class="toc-number">4.1.</span> <span class="toc-text"> 文件分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%88%86%E6%9E%90"><span class="toc-number">4.2.</span> <span class="toc-text"> 用户分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%88%86%E6%9E%90-2"><span class="toc-number">4.3.</span> <span class="toc-text"> 进程分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#windows%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94"><span class="toc-number">5.</span> <span class="toc-text"> Windows 应急响应</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90-3"><span class="toc-number">5.1.</span> <span class="toc-text"> 文件分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%88%86%E6%9E%90-2"><span class="toc-number">5.2.</span> <span class="toc-text"> 用户分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%88%86%E6%9E%90-3"><span class="toc-number">5.3.</span> <span class="toc-text"> 进程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90-2"><span class="toc-number">5.4.</span> <span class="toc-text"> 日志分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">5.5.</span> <span class="toc-text"> 其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text"> 参考链接</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Defense%20techniques/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="团队建设">团队建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/" rel="bookmark" title="红蓝对抗">红蓝对抗</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/" rel="bookmark" title="安全开发">安全开发</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="安全建设">安全建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" rel="bookmark" title="威胁情报">威胁情报</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6/" rel="bookmark" title="风险控制">风险控制</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%98%B2%E5%BE%A1%E6%A1%86%E6%9E%B6/" rel="bookmark" title="防御框架">防御框架</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/" rel="bookmark" title="加固检查">加固检查</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" rel="bookmark" title="入侵检测">入侵检测</a></li><li><a href="/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" rel="bookmark" title="蜜罐技术">蜜罐技术</a></li><li class="active"><a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="bookmark" title="应急响应">应急响应</a></li><li><a href="/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" rel="bookmark" title="溯源分析">溯源分析</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">73</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">114</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">201k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:03</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Defense techniques/应急响应/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

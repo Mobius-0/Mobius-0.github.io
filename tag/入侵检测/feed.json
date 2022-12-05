@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"入侵检测\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/",
+            "url": "https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/",
+            "title": "入侵检测",
+            "date_published": "2022-12-05T08:25:15.000Z",
+            "content_html": "<h1 id=\"ids与ips\"><a class=\"anchor\" href=\"#ids与ips\">#</a> IDS 与 IPS</h1>\n<p>IDS 与 IPS 是常见的防护设备，IPS 相对 IDS 的不同点在于，IPS 通常具有阻断能力。</p>\n<h1 id=\"常见入侵点\"><a class=\"anchor\" href=\"#常见入侵点\">#</a> 常见入侵点</h1>\n<ul>\n<li>Web 入侵</li>\n<li>高危服务入侵</li>\n</ul>\n<h1 id=\"监控实现\"><a class=\"anchor\" href=\"#监控实现\">#</a> 监控实现</h1>\n<h2 id=\"客户端监控\"><a class=\"anchor\" href=\"#客户端监控\">#</a> 客户端监控</h2>\n<ul>\n<li>\n<p>监控敏感配置文件</p>\n</li>\n<li>\n<p>常用命令 ELF 文件完整性监控</p>\n<ul>\n<li><code>ps</code></li>\n<li><code>lsof</code></li>\n<li>...</li>\n</ul>\n</li>\n<li>\n<p>rootkit 监控</p>\n</li>\n<li>\n<p>资源使用报警</p>\n<ul>\n<li>内存使用率</li>\n<li>CPU 使用率</li>\n<li>IO 使用率</li>\n<li>网络使用率</li>\n</ul>\n</li>\n<li>\n<p>新出现进程监控</p>\n</li>\n<li>\n<p>基于 inotify 的文件监控</p>\n</li>\n</ul>\n<h2 id=\"网络检测\"><a class=\"anchor\" href=\"#网络检测\">#</a> 网络检测</h2>\n<p>基于网络层面的攻击向量做检测，如 Snort 等。</p>\n<h2 id=\"日志分析\"><a class=\"anchor\" href=\"#日志分析\">#</a> 日志分析</h2>\n<p>将主机系统安全日志 / 操作日志、网络设备流量日志、Web 应用访问日志、SQL 应用访问日志等日志集中到一个统一的后台，在后台中对各类日志进行综合的分析。</p>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvZXMvMTk0NTEwLmh0bWw=\">企业安全建设之 HIDS</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTYyNi8=\">大型互联网企业入侵检测实战总结</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3Mva3plQUV2ei1lakxENzFmZ2I1dDh0QQ==\">同程入侵检测系统</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMjEzNg==\">Web 日志安全分析系统实践</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTEyMQ==\">Web 日志安全分析浅谈</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUUplVzdLLUtUaFlIZ2dXdEotRmgzdw==\">网络层绕过 IDS/IPS 的一些探索</span></li>\n</ul>\n",
+            "tags": [
+                "入侵检测",
+                "IDS",
+                "IPS"
+            ]
+        }
+    ]
+}

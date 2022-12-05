@@ -13,6 +13,7 @@
         <category>网络安全</category>
         <category>工具</category>
         <category>虚拟机</category>
+        <category>安全</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -21,6 +22,17 @@
         <category>龙族</category>
         <category>动画</category>
         <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
         <category>域名</category>
         <category>DNS</category>
         <category>WEB</category>
@@ -33,11 +45,41 @@
         <category>WiFi</category>
         <category>邮件</category>
         <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
         <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
         <category>渗透</category>
         <category>信息收集</category>
         <category>痕迹清理</category>
-        <category>Windows</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
         <category>ASP</category>
         <category>CSharp</category>
         <category>Golang</category>
@@ -53,14 +95,11 @@
         <category>PowerShell</category>
         <category>Python</category>
         <category>Ruby</category>
-        <category>Shell</category>
-        <category>漏洞</category>
         <category>CSRF</category>
         <category>服务器</category>
         <category>SQL注入</category>
         <category>SSRF</category>
         <category>Cache</category>
-        <category>XSS</category>
         <category>XXE</category>
         <category>XML</category>
         <category>Xpath</category>
@@ -415,10 +454,10 @@
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
             <title>Windows内网渗透</title>
             <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</link>
+            <category>Windows</category>
             <category>渗透</category>
             <category>信息收集</category>
             <category>痕迹清理</category>
-            <category>Windows</category>
             <pubDate>Mon, 28 Nov 2022 11:20:20 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;h2 id=&#34;基本命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本命令&#34;&gt;#&lt;/a&gt; 基本命令&lt;/h2&gt;
@@ -1598,8 +1637,8 @@
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/information%20gathering/Ports/</guid>
             <title>端口信息</title>
             <link>https://mobius-0.github.io/security/WebNote/information%20gathering/Ports/</link>
-            <category>信息收集</category>
             <category>漏洞</category>
+            <category>信息收集</category>
             <category>端口</category>
             <pubDate>Fri, 25 Nov 2022 17:02:36 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;常见端口及其脆弱点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见端口及其脆弱点&#34;&gt;#&lt;/a&gt; 常见端口及其脆弱点&lt;/h1&gt;

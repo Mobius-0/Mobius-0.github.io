@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;情报&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 05 Dec 2022 16:01:21 +0800</pubDate>
+        <lastBuildDate>Mon, 05 Dec 2022 16:01:21 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>安全</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/</guid>
+            <title>威胁情报</title>
+            <link>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/</link>
+            <category>情报</category>
+            <pubDate>Mon, 05 Dec 2022 16:01:21 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;h2 id=&#34;产生原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#产生原因&#34;&gt;#&lt;/a&gt; 产生原因&lt;/h2&gt;
+&lt;p&gt;新一代的攻击者常常向企业和组织发起针对性的网络攻击，这种针对性强的攻击，一般经过了精心的策划，攻击方法、途径复杂，后果严重。在面对这种攻击时，攻防存在着严重的不对等，为了尽可能消除这种不对等，威胁情报 (Threat Intelligence) 应运而生。&lt;/p&gt;
+&lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
+&lt;p&gt;威胁情报 (Threat Intelligence)，也被称作安全情报 (Security Intelligence)、安全威胁情报 (Security Threat Intelligence)。&lt;/p&gt;
+&lt;p&gt;关于威胁情报的定义有很多，一般是指从安全数据中提炼的，与网络空间威胁相关的信息，包括威胁来源、攻击意图、攻击手法、攻击目标信息，以及可用于解决威胁或应对危害的知识。广义的威胁情报也包括情报的加工生产、分析应用及协同共享机制。相关的概念有资产、威胁、脆弱性等，具体定义如下。&lt;/p&gt;
+&lt;p&gt;一般威胁情报需要包含威胁源、攻击目的、攻击对象、攻击手法、漏洞、攻击特征、防御措施等。威胁情报在事前可以起到预警的作用，在威胁发生时可以协助进行检测和响应，在事后可以用于分析和溯源。&lt;/p&gt;
+&lt;p&gt;常见的网络威胁情报服务有黑客或欺诈团体分析、社会媒体和开源信息监控、定向漏洞研究、定制的人工分析、实时事件通知、凭据恢复、事故调查、伪造域名检测等。&lt;/p&gt;
+&lt;p&gt;在威胁情报方面，比较有代表性的厂商有 BAE Systems Applied Intelligence、Booz Allen、RSA、IBM、McAfee、赛门铁克、FireEye 等。&lt;/p&gt;
+&lt;h1 id=&#34;相关概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关概念&#34;&gt;#&lt;/a&gt; 相关概念&lt;/h1&gt;
+&lt;h2 id=&#34;资产asset&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#资产asset&#34;&gt;#&lt;/a&gt; 资产 (Asset)&lt;/h2&gt;
+&lt;p&gt;对组织具有价值的信息或资源，属于内部情报，通过资产测绘等方式发现。&lt;/p&gt;
+&lt;h2 id=&#34;威胁threat&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#威胁threat&#34;&gt;#&lt;/a&gt; 威胁 (Threat)&lt;/h2&gt;
+&lt;p&gt;能够通过未授权访问、毁坏、揭露、数据修改和或拒绝服务对系统造成潜在危害的起因，威胁可由威胁的主体 (威胁源)、能力、资源、动机、途径、可能性和后果等多种属性来刻画&lt;/p&gt;
+&lt;h2 id=&#34;脆弱性-漏洞vulnerability&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#脆弱性-漏洞vulnerability&#34;&gt;#&lt;/a&gt; 脆弱性 / 漏洞 (Vulnerability)&lt;/h2&gt;
+&lt;p&gt;可能被威胁如攻击者利用的资产或若干资产薄弱环节。&lt;/p&gt;
+&lt;p&gt;漏洞存在多个周期，最开始由安全研究员或者攻击者发现，而后出现在社区公告 / 官方邮件 / 博客中。随着信息的不断地传递，漏洞情报出现在开源社区等地方，并带有 PoC 和漏洞细节分析。再之后出现自动化工具开始大规模传播，部分漏洞会造成社会影响并被媒体报道，最后漏洞基本修复。&lt;/p&gt;
+&lt;h2 id=&#34;风险risk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#风险risk&#34;&gt;#&lt;/a&gt; 风险 (Risk)&lt;/h2&gt;
+&lt;p&gt;威胁利用资产或一组资产的脆弱性对组织机构造成伤害的潜在可能。&lt;/p&gt;
+&lt;h2 id=&#34;安全事件event&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全事件event&#34;&gt;#&lt;/a&gt; 安全事件 (Event)&lt;/h2&gt;
+&lt;p&gt;威胁利用资产的脆弱性后实际产生危害的情景。&lt;/p&gt;
+&lt;h1 id=&#34;情报来源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#情报来源&#34;&gt;#&lt;/a&gt; 情报来源&lt;/h1&gt;
+&lt;p&gt;为了实现情报的同步和交换，各组织都制定了相应的标准和规范。主要有国标，美国联邦政府标准等。&lt;/p&gt;
+&lt;p&gt;除了国家外，企业也有各自的情报来源，例如厂商、CERT、开发者社区、安全媒体、漏洞作者或团队、公众号、个人博客、代码仓库等。&lt;/p&gt;
+&lt;h1 id=&#34;威胁框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#威胁框架&#34;&gt;#&lt;/a&gt; 威胁框架&lt;/h1&gt;
+&lt;p&gt;比较有影响力的威胁框架主要有洛克希德 - 马丁的杀伤链框架 (Cyber Kill Chain Framework)、MITRE 的 ATT&amp;amp;CK 框架 (Common Knowledge base of Adversary Tactics and Techniques)、ODNI 的 CCTF 框架 (Common Cyber Threat Framework，公共网空威胁框架)，以及 NSA 的 TCTF 框架 (Technical Cyber Threat Framework，技术性网空威胁框架)。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[Executive Perspectives on Cyber Threat Intelligence](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zY2FkYWhhY2tlci5jb20vbGlicmFyeS9Eb2N1bWVudHMvVGhyZWF0X0ludGVsbGlnZW5jZS9pU2lnaHQ=&#34;&gt;https://scadahacker.com/library/Documents/Threat_Intelligence/iSight&lt;/span&gt; Partners - Executive Perspectives on Cyber Threat Intelligence.pdf)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGFya3JlYWRpbmcuY29tL2FuYWx5dGljcy90aHJlYXQtaW50ZWxsaWdlbmNlL2N5YmVyLXRocmVhdHMtaW5mb3JtYXRpb24tdnMtaW50ZWxsaWdlbmNlL2EvZC1pZC8xMzE2ODUx&#34;&gt;Cyber Threats: Information vs. Intelligence&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vY29sdW1uLzEzNjc2My5odG1s&#34;&gt;威胁情报简介及市场浅析&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

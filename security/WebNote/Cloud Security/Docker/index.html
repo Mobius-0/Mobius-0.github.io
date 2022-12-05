@@ -1,0 +1,672 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="虚拟化,Docker,镜像" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Cloud%20Security/Docker/">
+
+
+
+  <title>
+Docker - 云安全 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Docker
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-29 16:23:20">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-29T16:23:20+08:00">2022-11-29</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>5.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/24/oNkcrabWOEpHVmw.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/iVIcWehQtdlNFma.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/24/NoH7WuwQF3cAVKR.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/rRTmkg1eG8SBXuw.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/24/nxardNToLgEz5qh.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/SzfACBlNGOxPMp5.png"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Cloud-Security/" itemprop="item" rel="index" title="分类于 云安全"><span itemprop="name">云安全</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Cloud%20Security/Docker/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="虚拟化技术与容器技术"><a class="anchor" href="#虚拟化技术与容器技术">#</a> 虚拟化技术与容器技术</h1>
+<h2 id="传统虚拟化技术"><a class="anchor" href="#传统虚拟化技术">#</a> 传统虚拟化技术</h2>
+<p>传统虚拟化技术通过添加 hypervisor 层，虚拟出网卡，内存，CPU 等虚拟硬件，再在其上建立客户机，每个客户机都有自己的系统内核。传统虚拟化技术以虚拟机为管理单元，各虚拟机拥有独立的操作系统内核，不共用宿主机的软件系统资源，因此具有良好的隔离性，适用于云计算环境中的多租户场景。</p>
+<h2 id="容器技术"><a class="anchor" href="#容器技术">#</a> 容器技术</h2>
+<p>容器技术可以看作一种轻量级的虚拟化方式，容器技术在操作系统层进行虚拟化，可在宿主机内核上运行多个虚拟化环境。相比于传统的应用测试与部署，容器的部署无需预先考虑应用的运行环境兼容性问题；相比于传统虚拟机，容器无需独立的操作系统内核就可在宿主机中运行，实现了更高的运行效率与资源利用率。</p>
+<h1 id="docker"><a class="anchor" href="#docker">#</a> Docker</h1>
+<p>Docker 是目前最具代表性的容器平台之一，具有持续部署与测试、跨云平台支持等优点。在基于 Kubernetes 等容器编排工具实现的容器云环境中，通过对跨主机集群资源的调度，容器云可提供资源共享与隔离、容器编排与部署、应用支撑等功能。</p>
+<h2 id="基本概念"><a class="anchor" href="#基本概念">#</a> 基本概念</h2>
+<p>Docker 有三个基本概念，镜像（Image）、容器（Container）、仓库（Repository）。镜像是一个只读的模版，由一组文件系统通过 Union FS 技术组成。</p>
+<p>镜像是静态的定义，容器是从镜像创建的运行实例。容器的本质是进程，拥有自己独立的命名空间。</p>
+<p>仓库（Repository） 是集中存放镜像文件的场所，用于存储、分发镜像。</p>
+<p>容器可以被启动、开始、停止、删除，每个容器都是相互隔离的，可以把容器看做是一个简易版的 Linux 环境（包括 root 用户权限、进程空间、用户空间和网络空间等）和运行在其中的应用程序。</p>
+<h2 id="组成"><a class="anchor" href="#组成">#</a> 组成</h2>
+<p>Docker 引擎由如下主要组件构成：Docker 客户端（Docker Client）、Docker 守护进程（Docker daemon）、containerd 以及 RunC，它们共同负责容器的创建和运行。</p>
+<p>Docker Client 是和 Docker Daemon 建立通信客户端，Docker Client 可以通过 http/unix socket 等方式 Daemon 建立通信。</p>
+<p>Docker Daemon 是容器管理的守护进程，在宿主机运行，作为服务端接受来自客户端的请求，主要功能包括镜像管理、镜像构建、REST API、身份验证、安全、核心网络以及编排。Docker daemon 通过位于  <code>/var/run/docker.sock</code>  的本地 IPC/Unix socket 来实现 Docker 远程 API，默认非 TLS 网络端口为 2375，TLS 默认端口为 2376。</p>
+<p>containerd 是容器技术标准化之后出现的，用于将容器运行时从 Docker Daemon 剥离。containerd 主要职责是镜像管理、容器执行。</p>
+<p>RunC 是 Docker 按照 OCF 标准制定的一种具体实现，实现了容器启动与停止、资源隔离等功能。</p>
+<h2 id="数据"><a class="anchor" href="#数据">#</a> 数据</h2>
+<p>Docker 的数据主要分为持久化和非持久化数据，默认情况下非持久化存储是自动创建生命周期与容器相同，删除容器也会删除非持久化数据，在 Linux 环境下，非持久化数据默认存储于  <code>/var/lib/docker/</code>  下。</p>
+<h2 id="网络"><a class="anchor" href="#网络">#</a> 网络</h2>
+<p>Docker 网络架构源自一种叫作容器网络模型的方案，主要由 CNM、Libnetwork、网络驱动构程。</p>
+<h1 id="安全风险与安全机制"><a class="anchor" href="#安全风险与安全机制">#</a> 安全风险与安全机制</h1>
+<p>在考虑 Docker 安全性的时候主要考虑以下几点</p>
+<ul>
+<li>内核本身的安全性及其对命名空间和 cgroups 的支持</li>
+<li>Docker 守护进程本身的攻击面</li>
+<li>内核的 “强化” 安全功能以及它们如何与容器进行交互</li>
+</ul>
+<h2 id="docker安全基线"><a class="anchor" href="#docker安全基线">#</a> Docker 安全基线</h2>
+<p><img data-src="https://s2.loli.net/2022/11/29/Xd5eqSFysvYKQm1.png" alt="" /></p>
+<h2 id="内核命名空间namespace"><a class="anchor" href="#内核命名空间namespace">#</a> 内核命名空间 /namespace</h2>
+<p>Docker 容器与 LXC 容器非常相似，并且具有相似的安全特性。当使用 docker 运行启动容器时，Docker 会在后台为容器创建一组命名空间和控制组。</p>
+<p>命名空间提供了一个最直接的隔离形式：在容器中运行的进程看不到或者无法影响在另一个容器或主机系统中运行的进程。</p>
+<p>每个容器也有自己的网络堆栈，这意味着一个容器不能获得对另一个容器的套接字或接口的特权访问。当然，如果主机系统相应设置，容器可以通过各自的网络接口交互。如果为容器指定公共端口或使用链接时，容器之间允许 IP 通信。</p>
+<p>它们可以相互 ping 通，发送 / 接收 UDP 数据包，并建立 TCP 连接，但是如果需要可以限制它们。从网络体系结构的角度来看，给定 Docker 主机上的所有容器都位于网桥接口上。这意味着它们就像通过普通的以太网交换机连接的物理机器一样。</p>
+<h2 id="control-group"><a class="anchor" href="#control-group">#</a> Control Group</h2>
+<p>控制组是 Linux 容器的另一个关键组件，主要作用是实施资源核算和限制。</p>
+<p>Cgroup 提供了许多有用的度量标准，但也有助于确保每个容器都能获得公平的内存，CPU 和磁盘 I/O; 更重要的是单个容器不能通过耗尽资源的方式来降低系统的性能。</p>
+<p>因此，尽管 Cgroup 不能阻止一个容器访问或影响另一个容器的数据和进程，但它们对于抵御一些拒绝服务攻击是至关重要的。它们对于多租户平台尤其重要，例如公共和私人 PaaS，即使在某些应用程序开始行为不当时也能保证一致的正常运行时间（和性能）。</p>
+<h2 id="守护进程的攻击面"><a class="anchor" href="#守护进程的攻击面">#</a> 守护进程的攻击面</h2>
+<p>使用 Docker 运行容器意味着运行 Docker 守护进程，而这个守护进程当前需要 root 权限，因此，守护进程是需要考虑的一个地方。</p>
+<p>首先，只有受信任的用户才能被允许控制 Docker 守护进程。具体来说，Docker 允许您在 Docker 主机和访客容器之间共享一个目录；它允许你这样做而不限制容器的访问权限。这意味着可以启动一个容器，其中 /host 目录将成为主机上的 / 目录，容器将能够不受任何限制地改变主机文件系统。</p>
+<p>这具有很强的安全意义：例如，如果通过 Web 服务器测试 Docker 以通过 API 配置容器，则应该更加仔细地进行参数检查，以确保恶意用户无法传递制作的参数，从而导致 Docker 创建任意容器。</p>
+<p>守护进程也可能容易受到其他输入的影响，例如从具有 docker 负载的磁盘或从具有 docker pull 的网络加载映像。</p>
+<p>最终，预计 Docker 守护进程将运行受限特权，将操作委托给审核良好的子进程，每个子进程都有自己的（非常有限的）Linux 功能范围，虚拟网络设置，文件系统管理等。也就是说，很可能，Docker 引擎本身的部分将在容器中运行。</p>
+<h2 id="capability"><a class="anchor" href="#capability">#</a> Capability</h2>
+<p>默认情况下，Docker 采用 Capability 机制来实现用户在以 root 身份运行容器的同时，限制部分 root 的操作。</p>
+<p>在大多数情况下，容器不需要真正的 root 权限。因此，Docker 可以运行一个 Capability 较低的集合，这意味着容器中的 root 比真正的 root 要少得多。例如：</p>
+<ul>
+<li>否认所有挂载操作</li>
+<li>拒绝访问原始套接字（防止数据包欺骗）</li>
+<li>拒绝访问某些文件系统操作，如创建新的设备节点，更改文件的所有者或修改属性（包括不可变标志）</li>
+<li>拒绝模块加载</li>
+<li>其他</li>
+</ul>
+<p>这意味着，即使入侵者在容器内获取 root 权限，进一步攻击也会困难很多。默认情况下，Docker 使用白名单而不是黑名单，去除了所有非必要的功能。</p>
+<h2 id="seccomp"><a class="anchor" href="#seccomp">#</a> Seccomp</h2>
+<p>Docker 使用 Seccomp 来限制容器对宿主机内核发起的系统调用。</p>
+<h1 id="攻击面分析"><a class="anchor" href="#攻击面分析">#</a> 攻击面分析</h1>
+<h2 id="供应链安全"><a class="anchor" href="#供应链安全">#</a> 供应链安全</h2>
+<p>在构建 Dockerfile 的过程中，即使是使用排名靠前的来源，也可能存在 CVE 漏洞、后门、镜像被污染、镜像中的依赖库存在漏洞等问题。</p>
+<h2 id="虚拟化风险"><a class="anchor" href="#虚拟化风险">#</a> 虚拟化风险</h2>
+<p>虽然 Docker 通过命名空间进行了文件系统资源的基本隔离，但仍有  <code>/sys</code>  、 <code>/proc/sys</code>  、  <code>/proc/bus</code>  、  <code>/dev</code>  、 <code>time</code>  、 <code>syslog</code>  等重要系统文件目录和命名空间信息未实现隔离，而是与宿主机共享相关资源。</p>
+<h2 id="利用内核漏洞逃逸"><a class="anchor" href="#利用内核漏洞逃逸">#</a> 利用内核漏洞逃逸</h2>
+<ul>
+<li>CVE-2022-0847 Dirty Pipe</li>
+<li>CVE-2021-4034 Polkit</li>
+<li>CVE-2018-18955</li>
+<li>CVE-2016-5195</li>
+</ul>
+<h2 id="容器逃逸漏洞"><a class="anchor" href="#容器逃逸漏洞">#</a> 容器逃逸漏洞</h2>
+<ul>
+<li>CVE-2021-41091</li>
+<li>CVE-2020-15257 Containerd 逃逸
+<ul>
+<li>需要网络设置为 host 模式</li>
+</ul>
+</li>
+<li>CVE-2019-14271 Docker cp</li>
+<li>CVE-2019-13139 Docker build code execution</li>
+<li>CVE-2019-5736 runC
+<ul>
+<li>Docker Version &lt; 18.09.2</li>
+<li>Version &lt;= 1.0-rc6</li>
+</ul>
+</li>
+</ul>
+<h2 id="配置不当"><a class="anchor" href="#配置不当">#</a> 配置不当</h2>
+<ul>
+<li>开启 privileged</li>
+<li>挂载宿主机敏感目录</li>
+<li>配置 cap 不当
+<ul>
+<li><code>--cap-add=SYS_ADMIN</code></li>
+</ul>
+</li>
+<li>绕过 namespace
+<ul>
+<li><code>--net=host</code></li>
+<li><code>--pid=host</code></li>
+<li><code>--ipc=host</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="拒绝服务"><a class="anchor" href="#拒绝服务">#</a> 拒绝服务</h2>
+<ul>
+<li>CPU 耗尽</li>
+<li>内存耗尽</li>
+<li>存储耗尽</li>
+<li>网络资源耗尽</li>
+</ul>
+<h2 id="危险挂载"><a class="anchor" href="#危险挂载">#</a> 危险挂载</h2>
+<ul>
+<li>挂载  <code>/var/run/docker.sock</code></li>
+<li>挂载宿主机  <code>/dev</code>   <code>/proc</code>  等危险目录</li>
+</ul>
+<h2 id="攻击-docker-守护进程"><a class="anchor" href="#攻击-docker-守护进程">#</a> 攻击 Docker 守护进程</h2>
+<p>虽然 Docker 容器具有很强的安全保护措施，但是 Docker 守护进程本身并没有被完善的保护。Docker 守护进程本身默认由 root 用户运行，并且该进程本身并没有使用 Seccomp 或者 AppArmor 等安全模块进行保护。这使得一旦攻击者成功找到漏洞控制 Docker 守护进程进行任意文件写或者代码执行，就可以顺利获得宿主机的 root 权限而不会受到各种安全机制的阻碍。值得一提的是，默认情况下 Docker 不会开启 User Namespace 隔离，这也意味着 Docker 内部的 root 与宿主机 root 对文件的读写权限相同。这导致一旦容器内部 root 进程获取读写宿主机文件的机会，文件权限将不会成为另一个问题。这一点在 CVE-2019-5636 利用中有所体现。</p>
+<h2 id="其他cve"><a class="anchor" href="#其他cve">#</a> 其他 CVE</h2>
+<ul>
+<li>CVE-2014-5277</li>
+<li>CVE-2014-6408</li>
+<li>CVE-2014-9357</li>
+<li>CVE-2014-9358</li>
+<li>CVE-2015-3627</li>
+<li>CVE-2015-3630</li>
+</ul>
+<h1 id="安全加固"><a class="anchor" href="#安全加固">#</a> 安全加固</h1>
+<ul>
+<li>最小安装
+<ul>
+<li>删除所有开发工具（编译器等）</li>
+</ul>
+</li>
+<li>更新系统源</li>
+<li>启用 AppArmor</li>
+<li>启用 SELinux</li>
+<li>限制运行容器的内核功能</li>
+<li>移除依赖构建</li>
+<li>配置严格的网络访问控制策略</li>
+<li>不使用 root 用户启动 docker</li>
+<li>不以 privileged 特权模式运行容器</li>
+<li>控制资源
+<ul>
+<li>CPU Share</li>
+<li>CPU 核数</li>
+<li>内存资源</li>
+<li>IO 资源</li>
+<li>磁盘资源</li>
+<li>硬件资源</li>
+<li>单位时间内进程数量上限</li>
+</ul>
+</li>
+<li>使用安全的基础镜像</li>
+<li>定期安全扫描和更新补丁</li>
+<li>删除镜像中的 setuid 和 setgid 权限
+<ul>
+<li><code>RUN find / -perm +6000-type f-exec chmod a-s &#123;&#125; \;|| true</code></li>
+</ul>
+</li>
+<li>配置 Docker 守护程序的 TLS 身份验证</li>
+<li>如非必要 禁止容器间通信</li>
+<li>rootless Docker
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9nZXQuZG9ja2VyLmNvbS9yb290bGVzcw==">https://get.docker.com/rootless</span></li>
+</ul>
+</li>
+<li>使用 Seccomp 限制 syscall</li>
+<li>构建环境和在线环境分开</li>
+<li>证书校验</li>
+</ul>
+<h1 id="docker-环境识别"><a class="anchor" href="#docker-环境识别">#</a> Docker 环境识别</h1>
+<h2 id="docker内"><a class="anchor" href="#docker内">#</a> Docker 内</h2>
+<ul>
+<li>MAC 地址为  <code>02:42:ac:11:00:00</code>  -  <code>02:42:ac:11:ff:ff</code></li>
+<li><code>ps aux</code>  大部分运行的程序 pid 都很小</li>
+<li><code>cat /proc/1/cgroup</code>  docker 的进程</li>
+<li>docker 环境下存在  <code>.dockerenv</code></li>
+<li>部分容器中缺少许多常用的命令如  <code>ping</code>  等</li>
+</ul>
+<h2 id="docker外"><a class="anchor" href="#docker外">#</a> Docker 外</h2>
+<ul>
+<li><code>/var/run/docker.sock</code>  文件存在</li>
+<li><code>2375</code>  /  <code>2376</code>  端口开启</li>
+</ul>
+<h1 id="容器内信息收集"><a class="anchor" href="#容器内信息收集">#</a> 容器内信息收集</h1>
+<ul>
+<li>用户信息 (当前用户、用户列表)</li>
+<li>操作系统与内核版本</li>
+<li>运行进程信息 (进程名、权限等)</li>
+<li>容器是否为特权容器</li>
+<li>环境变量</li>
+<li>判断容器挂载信息，尝试挂载 Docker Socket</li>
+<li>网络环境，判断可以到达的网段</li>
+<li>在云环境中，尝试获取元数据信息</li>
+</ul>
+<h1 id="镜像"><a class="anchor" href="#镜像">#</a> 镜像</h1>
+<h2 id="基本概念-2"><a class="anchor" href="#基本概念-2">#</a> 基本概念</h2>
+<p>Docker 镜像可以看作是一个特殊的文件系统，用于提供容器运行时所需的文件，同时镜像还包含了一些为运行时准备的一些信息（环境变量、用户等）。</p>
+<p>在构建之后镜像不会被改变，即是说镜像中不会包含动态的数据。</p>
+<h2 id="windows-镜像"><a class="anchor" href="#windows-镜像">#</a> Windows 镜像</h2>
+<p>由于 Windows 并不直接开放 syscall ，所有的 Windows 程序都必须通过 sys dll 与内核沟通，这就导致 Windows 镜像并不能直接通过 scratch 来构建，只能基于微软提供的几个基础镜像来构建。</p>
+<p>镜像包括：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL21pY3Jvc29mdC13aW5kb3dzLXNlcnZlcmNvcmU=">windows servercore</span> 功能最完整，包含传统的 .net framework 环境</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL21pY3Jvc29mdC13aW5kb3dzLW5hbm9zZXJ2ZXI=">windows nanoserver</span> 包含 .net core 运行环境</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL21pY3Jvc29mdC13aW5kb3dz">windows</span> 提供完整的 windows server api，正在被 windows server 替代</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL21pY3Jvc29mdC13aW5kb3dzLXNlcnZlci8=">windows server</span> 提供完整的 windows server api</li>
+</ul>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<h2 id="安全分析"><a class="anchor" href="#安全分析">#</a> 安全分析</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmhlcm9rdS5jb20vZXhwbG9yYXRpb24tb2Ytc2VjdXJpdHktd2hlbi1idWlsZGluZy1kb2NrZXItY29udGFpbmVycw==">A House of Cards An Exploration of Security When Building Docker Containers</span></li>
+<li><span class="exturl" data-url="aHR0cDovL29icm93bi5pby8yMDE2LzAyLzE1L3ByaXZpbGVnZWQtY29udGFpbmVycy5odG1s">Privileged Docker Containers</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9raXRjdGYuZGUvd3JpdGV1cHMvMzJjM2N0Zi9kb2NrZXI=">32c3 docker writeup</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnFpbml1LmNvbS9hcmNoaXZlcy83NzQz">打造安全的容器云平台</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL3NlY3VyaXR5L3NlY3VyaXR5Lw==">Docker security</span></li>
+<li><span class="exturl" data-url="aHR0cDovL2Jsb2cubnNmb2N1cy5uZXQvZG9ja2VyLW1pcnJvci1zZWN1cml0eS8=">容器安全</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9zdHJtLnNoL3Bvc3QvYWJ1c2luZy1pbnNlY3VyZS1kb2NrZXItZGVwbG95bWVudHMv">CVE-2017-7494 Docker 沙箱逃逸</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvc3lzdGVtLzIyMTMxOS5odG1s">Docker 容器安全性分析</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL3NlY3VyaXR5L2FwcGFybW9yLw==">AppArmor security profiles for Docker</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvY2tlci9kb2NrZXItYmVuY2gtc2VjdXJpdHk=">Docker Bench for Security</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvZDlEM3oxM3VDT0pvSnpwbHB1M1dKUQ==">Docker 安全性与攻击面分析</span></li>
+<li>Pfleeger C P , Pfleeger S L , Theofanos M F . A methodology for penetration testing[J]. Computers &amp; Security, 1989, 8(7):613-620.</li>
+</ul>
+<h2 id="windows"><a class="anchor" href="#windows">#</a> Windows</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3ZpcnR1YWxpemF0aW9uL3dpbmRvd3Njb250YWluZXJzL21hbmFnZS1jb250YWluZXJzL2NvbnRhaW5lci1iYXNlLWltYWdlcw==">Container Base Images</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/" rel="tag"><i class="ic i-tag"></i> 虚拟化</a>
+          <a href="/tags/Docker/" rel="tag"><i class="ic i-tag"></i> Docker</a>
+          <a href="/tags/%E9%95%9C%E5%83%8F/" rel="tag"><i class="ic i-tag"></i> 镜像</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-29 16:43:26" itemprop="dateModified" datetime="2022-11-29T16:43:26+08:00">2022-11-29</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Cloud%20Security/Docker/" title="Docker">https://mobius-0.github.io/security/WebNote/Cloud Security/Docker/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;WVDdEUPuXiHp4cj.jpg" title="容器">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 云安全</span>
+  <h3>容器</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Cloud%20Security/%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;Wxic1MRsPF39X7C.png" title="参考链接">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 云安全</span>
+  <h3>参考链接</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF"><span class="toc-number">1.</span> <span class="toc-text"> 虚拟化技术与容器技术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF"><span class="toc-number">1.1.</span> <span class="toc-text"> 传统虚拟化技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF"><span class="toc-number">1.2.</span> <span class="toc-text"> 容器技术</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker"><span class="toc-number">2.</span> <span class="toc-text"> Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.</span> <span class="toc-text"> 基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E6%88%90"><span class="toc-number">2.2.</span> <span class="toc-text"> 组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE"><span class="toc-number">2.3.</span> <span class="toc-text"> 数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-number">2.4.</span> <span class="toc-text"> 网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="toc-number">3.</span> <span class="toc-text"> 安全风险与安全机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E5%AE%89%E5%85%A8%E5%9F%BA%E7%BA%BF"><span class="toc-number">3.1.</span> <span class="toc-text"> Docker 安全基线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E6%A0%B8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4namespace"><span class="toc-number">3.2.</span> <span class="toc-text"> 内核命名空间 &#x2F;namespace</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#control-group"><span class="toc-number">3.3.</span> <span class="toc-text"> Control Group</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%94%BB%E5%87%BB%E9%9D%A2"><span class="toc-number">3.4.</span> <span class="toc-text"> 守护进程的攻击面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#capability"><span class="toc-number">3.5.</span> <span class="toc-text"> Capability</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#seccomp"><span class="toc-number">3.6.</span> <span class="toc-text"> Seccomp</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E9%9D%A2%E5%88%86%E6%9E%90"><span class="toc-number">4.</span> <span class="toc-text"> 攻击面分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9B%E5%BA%94%E9%93%BE%E5%AE%89%E5%85%A8"><span class="toc-number">4.1.</span> <span class="toc-text"> 供应链安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%8C%96%E9%A3%8E%E9%99%A9"><span class="toc-number">4.2.</span> <span class="toc-text"> 虚拟化风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E5%86%85%E6%A0%B8%E6%BC%8F%E6%B4%9E%E9%80%83%E9%80%B8"><span class="toc-number">4.3.</span> <span class="toc-text"> 利用内核漏洞逃逸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E9%80%83%E9%80%B8%E6%BC%8F%E6%B4%9E"><span class="toc-number">4.4.</span> <span class="toc-text"> 容器逃逸漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%BD%93"><span class="toc-number">4.5.</span> <span class="toc-text"> 配置不当</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1"><span class="toc-number">4.6.</span> <span class="toc-text"> 拒绝服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B1%E9%99%A9%E6%8C%82%E8%BD%BD"><span class="toc-number">4.7.</span> <span class="toc-text"> 危险挂载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB-docker-%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B"><span class="toc-number">4.8.</span> <span class="toc-text"> 攻击 Docker 守护进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96cve"><span class="toc-number">4.9.</span> <span class="toc-text"> 其他 CVE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA"><span class="toc-number">5.</span> <span class="toc-text"> 安全加固</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker-%E7%8E%AF%E5%A2%83%E8%AF%86%E5%88%AB"><span class="toc-number">6.</span> <span class="toc-text"> Docker 环境识别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E5%86%85"><span class="toc-number">6.1.</span> <span class="toc-text"> Docker 内</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker%E5%A4%96"><span class="toc-number">6.2.</span> <span class="toc-text"> Docker 外</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%86%85%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-number">7.</span> <span class="toc-text"> 容器内信息收集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%95%9C%E5%83%8F"><span class="toc-number">8.</span> <span class="toc-text"> 镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-2"><span class="toc-number">8.1.</span> <span class="toc-text"> 基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows-%E9%95%9C%E5%83%8F"><span class="toc-number">8.2.</span> <span class="toc-text"> Windows 镜像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text"> 参考链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90"><span class="toc-number">9.1.</span> <span class="toc-text"> 安全分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows"><span class="toc-number">9.2.</span> <span class="toc-text"> Windows</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/" rel="bookmark" title="容器">容器</a></li><li class="active"><a href="/security/WebNote/Cloud%20Security/Docker/" rel="bookmark" title="Docker">Docker</a></li><li><a href="/security/WebNote/Cloud%20Security/%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5/" rel="bookmark" title="参考链接">参考链接</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">73</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">114</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Cloud%20Security/%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">201k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:03</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Cloud Security/Docker/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

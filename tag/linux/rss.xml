@@ -5,14 +5,15 @@
         <link>https://mobius-0.github.io</link>
         <description>GLHF</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 28 Nov 2022 21:35:20 +0800</pubDate>
-        <lastBuildDate>Mon, 28 Nov 2022 21:35:20 +0800</lastBuildDate>
+        <pubDate>Mon, 05 Dec 2022 16:40:15 +0800</pubDate>
+        <lastBuildDate>Mon, 05 Dec 2022 16:40:15 +0800</lastBuildDate>
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
         <category>网络安全</category>
         <category>工具</category>
         <category>虚拟机</category>
+        <category>安全</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -21,6 +22,17 @@
         <category>龙族</category>
         <category>动画</category>
         <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
         <category>域名</category>
         <category>DNS</category>
         <category>WEB</category>
@@ -33,11 +45,41 @@
         <category>WiFi</category>
         <category>邮件</category>
         <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
         <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
         <category>渗透</category>
         <category>信息收集</category>
         <category>痕迹清理</category>
-        <category>Windows</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
         <category>ASP</category>
         <category>CSharp</category>
         <category>Golang</category>
@@ -53,14 +95,11 @@
         <category>PowerShell</category>
         <category>Python</category>
         <category>Ruby</category>
-        <category>Shell</category>
-        <category>漏洞</category>
         <category>CSRF</category>
         <category>服务器</category>
         <category>SQL注入</category>
         <category>SSRF</category>
         <category>Cache</category>
-        <category>XSS</category>
         <category>XXE</category>
         <category>XML</category>
         <category>Xpath</category>
@@ -82,6 +121,302 @@
         <category>端口</category>
         <category>社会工程学</category>
         <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/</guid>
+            <title>应急响应</title>
+            <link>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/</link>
+            <category>应急响应</category>
+            <category>流程</category>
+            <category>Linux</category>
+            <category>Windows</category>
+            <pubDate>Mon, 05 Dec 2022 16:40:15 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;响应流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应流程&#34;&gt;#&lt;/a&gt; 响应流程&lt;/h1&gt;
+&lt;h2 id=&#34;事件发生&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件发生&#34;&gt;#&lt;/a&gt; 事件发生&lt;/h2&gt;
+&lt;p&gt;运维监控人员、客服审核人员等发现问题，向上通报。&lt;/p&gt;
+&lt;h2 id=&#34;事件确认&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件确认&#34;&gt;#&lt;/a&gt; 事件确认&lt;/h2&gt;
+&lt;p&gt;收集事件信息、分析网络活动相关程序，日志和数据，判断事件的严重性，评估出问题的严重等级，是否向上进行汇报等。&lt;/p&gt;
+&lt;h2 id=&#34;事件响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件响应&#34;&gt;#&lt;/a&gt; 事件响应&lt;/h2&gt;
+&lt;p&gt;各部门通力合作，处理安全问题，具体解决问题，避免存在漏洞未修补、后门未清除等残留问题。&lt;/p&gt;
+&lt;h2 id=&#34;事件关闭&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件关闭&#34;&gt;#&lt;/a&gt; 事件关闭&lt;/h2&gt;
+&lt;p&gt;处理完事件之后，需要关闭事件，并写出安全应急处理分析报告，完成整个应急过程。&lt;/p&gt;
+&lt;h1 id=&#34;事件分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事件分类&#34;&gt;#&lt;/a&gt; 事件分类&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;病毒、木马、蠕虫事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web 服务器入侵事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三方服务入侵事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统入侵事件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;利用 Windows 漏洞攻击操作系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网络攻击事件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DDoS / ARP 欺骗 / DNS 劫持等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;分析方向&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分析方向&#34;&gt;#&lt;/a&gt; 分析方向&lt;/h1&gt;
+&lt;h2 id=&#34;文件分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件分析&#34;&gt;#&lt;/a&gt; 文件分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;基于变化的分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日期&lt;/li&gt;
+&lt;li&gt;文件增改&lt;/li&gt;
+&lt;li&gt;最近使用文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;源码分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查源码改动&lt;/li&gt;
+&lt;li&gt;查杀 WebShell 等后门&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统日志分析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应用日志分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分析 User-Agent，e.g.  &lt;code&gt;awvs / burpsuite / w3af / nessus / openvas&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;对每种攻击进行关键字匹配，e.g.  &lt;code&gt;select/alert/eval&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;异常请求，连续的 404 或者 500&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;md5sum&lt;/code&gt;  检查常用命令二进制文件的哈希，检查是否被植入 rootkit&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程分析&#34;&gt;#&lt;/a&gt; 进程分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;符合以下特征的进程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU 或内存资源占用长时间过高&lt;/li&gt;
+&lt;li&gt;没有签名验证信息&lt;/li&gt;
+&lt;li&gt;没有描述信息的进程&lt;/li&gt;
+&lt;li&gt;进程的路径不合法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;dump 系统内存进行分析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正在运行的进程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正在运行的服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;父进程和子进程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后台可执行文件的完整哈希&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;已安装的应用程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行着密钥或其他正在自动运行的持久化程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计划任务&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;身份信息分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#身份信息分析&#34;&gt;#&lt;/a&gt; 身份信息分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;本地以及域账号用户&lt;/li&gt;
+&lt;li&gt;异常的身份验证&lt;/li&gt;
+&lt;li&gt;非标准格式的用户名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志分析&#34;&gt;#&lt;/a&gt; 日志分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;杀软检测记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络分析&#34;&gt;#&lt;/a&gt; 网络分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;防火墙配置&lt;/li&gt;
+&lt;li&gt;DNS 配置&lt;/li&gt;
+&lt;li&gt;路由配置&lt;/li&gt;
+&lt;li&gt;监听端口和相关服务&lt;/li&gt;
+&lt;li&gt;最近建立的网络连接&lt;/li&gt;
+&lt;li&gt;RDP / VPN / SSH 等会话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置分析&#34;&gt;#&lt;/a&gt; 配置分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 Linux SE 等配置&lt;/li&gt;
+&lt;li&gt;查看环境变量&lt;/li&gt;
+&lt;li&gt;查看配套的注册表信息检索，SAM 文件&lt;/li&gt;
+&lt;li&gt;内核模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;linux应急响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux应急响应&#34;&gt;#&lt;/a&gt; Linux 应急响应&lt;/h1&gt;
+&lt;h2 id=&#34;文件分析-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件分析-2&#34;&gt;#&lt;/a&gt; 文件分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;最近使用文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;find / -ctime -2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Documents and Settings\Administrator\Recent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Documents and Settings\Default User\Recent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%UserProfile%\Recent&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统日志分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/var/log/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重点分析位置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/var/log/wtmp&lt;/code&gt;  登录进入，退出，数据交换、关机和重启纪录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/run/utmp&lt;/code&gt;  有关当前登录用户的信息记录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/lastlog&lt;/code&gt;  文件记录用户最后登录的信息，可用 lastlog 命令来查看。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/secure&lt;/code&gt;  记录登入系统存取数据的文件，例如 pop3/ssh/telnet/ftp 等都会被记录。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/cron&lt;/code&gt;  与定时任务相关的日志信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/message&lt;/code&gt;  系统启动后的信息和错误日志&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/apache2/access.log&lt;/code&gt;  apache access log&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/passwd&lt;/code&gt;  用户列表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/init.d/&lt;/code&gt;  开机启动项&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/cron*&lt;/code&gt;  定时任务&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/tmp&lt;/code&gt;  临时目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~/.ssh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户分析&#34;&gt;#&lt;/a&gt; 用户分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/shadow&lt;/code&gt;  密码登陆相关信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uptime&lt;/code&gt;  查看用户登陆时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/sudoers&lt;/code&gt;  sudo 用户列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程分析-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程分析-2&#34;&gt;#&lt;/a&gt; 进程分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;netstat -ano&lt;/code&gt;  查看是否打开了可疑端口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt;  命令，查看用户及其进程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分析开机自启程序 / 脚本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/init.d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看计划或定时任务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;netstat -an&lt;/code&gt;  /  &lt;code&gt;lsof&lt;/code&gt;  查看进程端口占用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;windows应急响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#windows应急响应&#34;&gt;#&lt;/a&gt; Windows 应急响应&lt;/h1&gt;
+&lt;h2 id=&#34;文件分析-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件分析-3&#34;&gt;#&lt;/a&gt; 文件分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;最近使用文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\Documents and Settings\Administrator\Recent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Documents and Settings\Default User\Recent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%UserProfile%\Recent&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统日志分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事件查看器  &lt;code&gt;eventvwr.msc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用户分析-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户分析-2&#34;&gt;#&lt;/a&gt; 用户分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看是否有新增用户&lt;/li&gt;
+&lt;li&gt;查看服务器是否有弱口令&lt;/li&gt;
+&lt;li&gt;查看管理员对应键值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lusrmgr.msc&lt;/code&gt;  查看账户变化&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;net user&lt;/code&gt;  列出当前登录账户&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wmic UserAccount get&lt;/code&gt;  列出当前系统所有账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程分析-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程分析-3&#34;&gt;#&lt;/a&gt; 进程分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;netstat -ano&lt;/code&gt;  查看是否打开了可疑端口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tasklist&lt;/code&gt;  查看是否有可疑进程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分析开机自启程序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Runonce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(ProfilePath)\Start Menu\Programs\Startup&lt;/code&gt;  启动项&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;msconfig&lt;/code&gt;  启动选项卡&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpedit.msc&lt;/code&gt;  组策略编辑器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看计划或定时任务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\Windows\System32\Tasks\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Windows\SysWOW64\Tasks\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\Windows\tasks\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;schtasks&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;taskschd.msc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;compmgmt.msc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看启动服务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;services.msc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;日志分析-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志分析-2&#34;&gt;#&lt;/a&gt; 日志分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;事件查看
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;eventvwr.msc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看系统环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTE0MA==&#34;&gt;黑客入侵应急分析手工排查&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5mcmVlYnVmLmNvbS9jb2x1bW4vMTQ3OTI5Lmh0bWw=&#34;&gt;取证入门 web 篇&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMjUyNA==&#34;&gt;Windows 系统安全事件应急响应&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTYzMg==&#34;&gt;企业安全应急响应&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91cy1jZXJ0LmNpc2EuZ292L25jYXMvYWxlcnRzL2FhMjAtMjQ1YQ==&#34;&gt;Technical Approaches to Uncovering and Remediating Malicious Activity&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
             <title>Linux内网渗透</title>

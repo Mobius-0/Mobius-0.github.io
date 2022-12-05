@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;开发过程&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 05 Dec 2022 15:58:41 +0800</pubDate>
+        <lastBuildDate>Mon, 05 Dec 2022 15:58:41 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>网络安全</category>
+        <category>工具</category>
+        <category>虚拟机</category>
+        <category>安全</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>渗透</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/</guid>
+            <title>安全开发</title>
+            <link>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/</link>
+            <category>开发过程</category>
+            <pubDate>Mon, 05 Dec 2022 15:58:41 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;安全开发生命周期（Security Development Lifecycle，SDL）是微软提出的从安全的角度来指导软件开发过程的管理模式。用于帮助开发人员构建更安全的软件、解决安全合规要求，并降低开发成本。&lt;/p&gt;
+&lt;h1 id=&#34;步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤&#34;&gt;#&lt;/a&gt; 步骤&lt;/h1&gt;
+&lt;h2 id=&#34;阶段1培训&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阶段1培训&#34;&gt;#&lt;/a&gt; 阶段 1：培训&lt;/h2&gt;
+&lt;p&gt;开发团队的所有成员都必须接受适当的安全培训，了解相关的安全知识。培训对象包括开发人员、测试人员、项目经理、产品经理等。&lt;/p&gt;
+&lt;h2 id=&#34;阶段2确定安全需求&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阶段2确定安全需求&#34;&gt;#&lt;/a&gt; 阶段 2：确定安全需求&lt;/h2&gt;
+&lt;p&gt;在项目确立之前，需要提前确定安全方面的需求，确定项目的计划时间，尽可能避免安全引起的需求变更。&lt;/p&gt;
+&lt;h2 id=&#34;阶段3设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阶段3设计&#34;&gt;#&lt;/a&gt; 阶段 3：设计&lt;/h2&gt;
+&lt;p&gt;在设计阶段确定安全的最低可接受级别。考虑项目涉及到哪些攻击面、是否能减小攻击面。&lt;/p&gt;
+&lt;p&gt;对项目进行威胁建模，明确可能来自的攻击有哪些方面，并考虑项目哪些部分需要进行渗透测试。&lt;/p&gt;
+&lt;h2 id=&#34;阶段4实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阶段4实现&#34;&gt;#&lt;/a&gt; 阶段 4：实现&lt;/h2&gt;
+&lt;p&gt;实现阶段主要涉及到工具、不安全的函数、静态分析等方面。&lt;/p&gt;
+&lt;p&gt;工具方面主要考虑到开发团队使用的编辑器、链接器等相关工具可能会涉及一些安全相关的问题，因此在使用工具的版本上，需要提前与安全团队进行沟通。&lt;/p&gt;
+&lt;p&gt;函数方面主要考虑到许多常用函数可能存在安全隐患，应当禁用不安全的函数和 API，使用安全团队推荐的函数。&lt;/p&gt;
+&lt;p&gt;代码静态分析可以由相关工具辅助完成，其结果与人工分析相结合。&lt;/p&gt;
+&lt;h2 id=&#34;阶段5验证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阶段5验证&#34;&gt;#&lt;/a&gt; 阶段 5：验证&lt;/h2&gt;
+&lt;p&gt;验证阶段涉及到动态程序分析和攻击面再审计。动态分析对静态分析进行补充，常用的方式是模糊测试、渗透测试。模糊测试通过向应用程序引入特定格式或随机数据查找程序可能的问题。&lt;/p&gt;
+&lt;p&gt;考虑到项目经常会因为需求变更等情况使得最终产品和初期目标不一致，因此需要在项目后期再次对威胁模型和攻击面进行分析和考虑，如果出现问题则进行纠正。&lt;/p&gt;
+&lt;h2 id=&#34;阶段6发布&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阶段6发布&#34;&gt;#&lt;/a&gt; 阶段 6：发布&lt;/h2&gt;
+&lt;p&gt;在程序发布后，需要对安全事件进行响应，需要预设好遇到安全问题时的处理方式。&lt;/p&gt;
+&lt;p&gt;另外如果产品中包含第三方的代码，也需要考虑如何响应因为第三方依赖引入的问题。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9zZWN1cml0eWVuZ2luZWVyaW5nL3NkbC9wcmFjdGljZXM=&#34;&gt;SDL Practices&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9zZWN1cml0eWVuZ2luZWVyaW5nL3NkbC90aHJlYXRtb2RlbGluZw==&#34;&gt;Threat Modeling&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

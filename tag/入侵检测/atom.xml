@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;入侵检测&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-12-05T08:25:15.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="XSS" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="Linux" />
+    <category term="Windows" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/</id>
+        <title>入侵检测</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/"/>
+        <content type="html">&lt;h1 id=&#34;ids与ips&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ids与ips&#34;&gt;#&lt;/a&gt; IDS 与 IPS&lt;/h1&gt;
+&lt;p&gt;IDS 与 IPS 是常见的防护设备，IPS 相对 IDS 的不同点在于，IPS 通常具有阻断能力。&lt;/p&gt;
+&lt;h1 id=&#34;常见入侵点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见入侵点&#34;&gt;#&lt;/a&gt; 常见入侵点&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Web 入侵&lt;/li&gt;
+&lt;li&gt;高危服务入侵&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;监控实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#监控实现&#34;&gt;#&lt;/a&gt; 监控实现&lt;/h1&gt;
+&lt;h2 id=&#34;客户端监控&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#客户端监控&#34;&gt;#&lt;/a&gt; 客户端监控&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;监控敏感配置文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用命令 ELF 文件完整性监控&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lsof&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rootkit 监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;资源使用报警&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内存使用率&lt;/li&gt;
+&lt;li&gt;CPU 使用率&lt;/li&gt;
+&lt;li&gt;IO 使用率&lt;/li&gt;
+&lt;li&gt;网络使用率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新出现进程监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于 inotify 的文件监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络检测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络检测&#34;&gt;#&lt;/a&gt; 网络检测&lt;/h2&gt;
+&lt;p&gt;基于网络层面的攻击向量做检测，如 Snort 等。&lt;/p&gt;
+&lt;h2 id=&#34;日志分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志分析&#34;&gt;#&lt;/a&gt; 日志分析&lt;/h2&gt;
+&lt;p&gt;将主机系统安全日志 / 操作日志、网络设备流量日志、Web 应用访问日志、SQL 应用访问日志等日志集中到一个统一的后台，在后台中对各类日志进行综合的分析。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJlZWJ1Zi5jb20vYXJ0aWNsZXMvZXMvMTk0NTEwLmh0bWw=&#34;&gt;企业安全建设之 HIDS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTYyNi8=&#34;&gt;大型互联网企业入侵检测实战总结&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3Mva3plQUV2ei1lakxENzFmZ2I1dDh0QQ==&#34;&gt;同程入侵检测系统&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMjEzNg==&#34;&gt;Web 日志安全分析系统实践&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94ei5hbGl5dW4uY29tL3QvMTEyMQ==&#34;&gt;Web 日志安全分析浅谈&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUUplVzdLLUtUaFlIZ2dXdEotRmgzdw==&#34;&gt;网络层绕过 IDS/IPS 的一些探索&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="入侵检测" />
+        <category term="IDS" />
+        <category term="IPS" />
+        <updated>2022-12-05T08:25:15.000Z</updated>
+    </entry>
+</feed>

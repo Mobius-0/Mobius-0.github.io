@@ -1,0 +1,595 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="XSS,漏洞,渗透测试,靶场,pikachu" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/pikachu/pikachu-xss/">
+
+
+
+  <title>
+pikachu-XSS - pikachu - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">pikachu-XSS
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-03 20:20:55">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-03T20:20:55+08:00">2022-12-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/SWXIETdmzxOL6Ak.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/iplx6OcZQyUnJuP.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/24/gzp8JE3YVd2ua4K.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/4iEyKnCbYIhSdv8.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/jYy2vELw5eBoI9l.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/UTVziJwLR5PvNhp.jpg"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/pikachu/" itemprop="item" rel="index" title="分类于 pikachu"><span itemprop="name">pikachu</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/pikachu/pikachu-xss/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="反射型xssget"><a class="anchor" href="#反射型xssget">#</a> 反射型 XSS（get）</h1>
+<h2 id="过程"><a class="anchor" href="#过程">#</a> 过程</h2>
+<ol>
+<li>在输入框中输入任意字段，查看页面代码可以发现输入字段已经被插入到了页面之中</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/V5JlmdS31TrwkxC.png" alt="" /></p>
+<ol start="2">
+<li>这里可以尝试直接输入相应的 XSS payload，如</li>
+</ol>
+<pre><code>&lt;script&gt;alert(1)&lt;/script&gt;
+&lt;details+open+ontoggle=prompt(1)&gt;
+&lt;svg/onload=confirm(1)&gt;
+</code></pre>
+<p>等</p>
+<ol start="3">
+<li>输入的时候可以发现输入框有输入字符的上限（并且该输入框在测试时还可以发现其对输入字符髌骨无限制，特殊字符如 / 等可以直接插入到前端代码中），但这些不算很重要，我们可以直接在前端的代码上修改，也可以在网页的 url 上根据规律进行插入</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/Vbk6tW7wDxhspGz.png" alt="" /></p>
+<ol start="4">
+<li>反弹结果</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/AB1TUmItyG54pMq.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/03/OqeGpAaHP6uxFit.png" alt="" /></p>
+<h2 id="总结"><a class="anchor" href="#总结">#</a> 总结</h2>
+<p>GET 方式要更容易被利用，因为相关元素可以直接通过网页 URL 直接提交，通常的利用形式为将带有跨站脚本的 URL 伪装后发送给目标</p>
+<h1 id="反射型xsspost"><a class="anchor" href="#反射型xsspost">#</a> 反射型 XSS（post）</h1>
+<h2 id="过程-2"><a class="anchor" href="#过程-2">#</a> 过程</h2>
+<ol>
+<li>由于使用的是 post 方法，这里需要使用 burp suite 进行数据包的抓取</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/ULb8cZdWiSGvr7P.png" alt="" /></p>
+<ol start="2">
+<li>根据重放可知字符也已经插入页面代码</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/I72ifcL89ymE1eR.png" alt="" /></p>
+<ol start="3">
+<li>修改抓取的数据包，将 message 修改为 XSS 的 payload</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/aBiIjJ1vV8hQkuC.png" alt="" /></p>
+<ol start="4">
+<li>放行后输出结果，可以看到 payload 已经插入页面代码中</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/QzElqaYN67yZdpF.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/03/iMCDozdOaXBhxHm.png" alt="" /></p>
+<h2 id="总结-2"><a class="anchor" href="#总结-2">#</a> 总结</h2>
+<p>POST 方式相对 GET 要更难被利用，但这同样存在安全隐患，这里就通过对数据包的篡改完成了 XSS 的 payload 插入，主要的利用方式会在 XSS 之盲打中会介绍</p>
+<h1 id="存储型xss"><a class="anchor" href="#存储型xss">#</a> 存储型 XSS</h1>
+<h2 id="过程-3"><a class="anchor" href="#过程-3">#</a> 过程</h2>
+<ol>
+<li>首先同样输入任意值，测试其是否存在对特殊字符的过滤</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/dtBg7R6PXwze3Mv.png" alt="" /></p>
+<ol start="2">
+<li>直接输入 XSS 的 payload，反弹结果，同时可以查看页面代码，发现 payload 已经被插入其中</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/03/gxzHjGslwbOYSq9.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/03/smBoa5QdLlWzgTf.png" alt="" /></p>
+<h2 id="总结-3"><a class="anchor" href="#总结-3">#</a> 总结</h2>
+<p>存储型 XSS 在道理上和反射型差不多，区别在于存储型会被存储起来，而反射型则是一次性的</p>
+<h1 id="dom型xss"><a class="anchor" href="#dom型xss">#</a> DOM 型 XSS</h1>
+<h2 id="过程-4"><a class="anchor" href="#过程-4">#</a> 过程</h2>
+<ol>
+<li>同样首先输入任意字符，查看页面元素可知字符已被插入到前端中</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/coW2JHhNR79Qv16.png" alt="" /></p>
+<ol start="2">
+<li>输入 payload： <code>javascript:alert(1)</code>  尝试触发漏洞，查看页面元素可知 payload 已被插入到前端，点击 <code>what do you see？</code> 可以看到漏洞已触发</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/qJwzxBHbT5e1jNm.png" alt="" /></p>
+<h2 id="总结-4"><a class="anchor" href="#总结-4">#</a> 总结</h2>
+<p>这类型漏洞危害性不算非常大，但依旧需要留意</p>
+<h1 id="dom型xss-x"><a class="anchor" href="#dom型xss-x">#</a> DOM 型 XSS-X</h1>
+<h2 id="过程-5"><a class="anchor" href="#过程-5">#</a> 过程</h2>
+<ol>
+<li>与上一个关卡相同，先输入任意值，在页面元素中查看相关信息</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/CoBtrZPh4djYGKw.png" alt="" /></p>
+<ol start="2">
+<li>然后输入 payload 尝试触发漏洞，随后查看 payload 是否已经插入至页面元素中</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/j98Bvde3KuTPcEx.png" alt="" /></p>
+<h2 id="总结-5"><a class="anchor" href="#总结-5">#</a> 总结</h2>
+<p>这类型漏洞在某些方面与反射型 XSS 类似，它们同样都是通过 url 来获取输入，实际上在观察 url 内容后就可以发现 url 中有我们先前的输入 <code>javascript%3Aalert(1)</code> ，其中 <code>:</code>  在 url 内表现为 <code>%3A</code> ，这些符号都有固定的翻译对应，例如空格就会翻译为 <code>%20</code> 。</p>
+<h1 id="xss之盲打"><a class="anchor" href="#xss之盲打">#</a> XSS 之盲打</h1>
+<h2 id="过程-6"><a class="anchor" href="#过程-6">#</a> 过程</h2>
+<ol>
+<li>老规矩，先输入任意值，在前端代码中并没有看到相应的输出，所以这里需要登录管理后台查看结果</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/WasLb8V4YG7tCju.png" alt="" /></p>
+<ol start="2">
+<li>随后输入 payload <code>&lt;script&gt;alert(1)&lt;/script&gt;</code>  尝试触发漏洞，由于前端并没有对应代码显示，所以需要到后台查看漏洞是否被触发。可以看到弹窗，漏洞已经被触发。</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/9PvRs8C3tpLwmMy.png" alt="" /></p>
+<h2 id="总结-6"><a class="anchor" href="#总结-6">#</a> 总结</h2>
+<p>盲打主要指的是这么一种攻击场景，前端输入的内容只有在后端才能看到，这类型的攻击通常具有随机性，首先输入框有可能存在对特殊字符和语句的过滤，导致跨站脚本上传失败，即使能够上传成功，在后端也有可能有过滤或验证，导致脚本不一定会被触发。但是危害同样很大，如果不存在上述验证，那么完全可以将脚本替换为获取 cookie 的脚本，如果管理员登陆就有可能会被盗取 cookie，导致管理权限的外泄。</p>
+<h1 id="xss过滤"><a class="anchor" href="#xss过滤">#</a> XSS 过滤</h1>
+<h2 id="过程-7"><a class="anchor" href="#过程-7">#</a> 过程</h2>
+<ol>
+<li>
+<p>依旧是老规矩，首先随意输入查看过滤情况，可以发现如 <code>&lt;script&gt;</code>  或双写关键词 <code>&lt;scrscriptipt&gt;</code>  等都被过滤掉了</p>
+</li>
+<li>
+<p>尝试修改 payload 格式，发现大写形式是不会被过滤的，写入后成功触发漏洞</p>
+</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/x6XeM7ckWntEDhH.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/04/vfBMTFm1Qa4qglS.png" alt="" /></p>
+<h2 id="总结-7"><a class="anchor" href="#总结-7">#</a> 总结</h2>
+<p>这里漏洞的问题还是在于过滤的规则不够完善，查看源代码可以发现，实际上是只对 <code>&lt;script</code>  进行了过滤，简单点的绕过可以通过改变大小写来实现，同时也可以使用其他 payload 如 img 的标签 <code>&lt;img src=x onerror=&quot;alert(1)&quot;&gt;</code>  来实现绕过</p>
+<h1 id="xss之htmlspecialchars"><a class="anchor" href="#xss之htmlspecialchars">#</a> XSS 之 htmlspecialchars</h1>
+<h2 id="过程-8"><a class="anchor" href="#过程-8">#</a> 过程</h2>
+<ol>
+<li>仍旧老规矩，随意输入字符，查看是否插入至前端中</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/UKlvPJfGhw9qraN.png" alt="" /></p>
+<ol start="2">
+<li>根据 htmlspecialchars 方法默认不对 <code>'</code>  进行处理的特点，我们可以构造 payload <code>1' oneclick='alert(1)'</code> ，输入后查看结果</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/imwbCQnuKe5stIf.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/04/Q8Hi6MuhG2zmelE.png" alt="" /></p>
+<h2 id="总结-8"><a class="anchor" href="#总结-8">#</a> 总结</h2>
+<p>htmlspecialchars () 函数功能为把预定的字符转换为 HTML 实体，当前预定义的字符有：</p>
+<pre><code> &amp; → &amp;amp
+ &quot; → &amp;quot
+ ' → &amp;apos
+ &lt; → &amp;lt
+ &gt; → &amp;gt
+</code></pre>
+<h1 id="xss之href输出"><a class="anchor" href="#xss之href输出">#</a> XSS 之 href 输出</h1>
+<h2 id="过程-9"><a class="anchor" href="#过程-9">#</a> 过程</h2>
+<ol>
+<li>随意输入字符，查看页面源代码插入位置</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/ZAHn1MfB73sbXTz.png" alt="" /></p>
+<ol start="2">
+<li>此处可以直接构造 payload <code>javascript:alert(1)</code> ，输入后查看结果</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/3XBuyI1HLkNDaMT.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/04/qBDJt5mx3flyzCF.png" alt="" /></p>
+<h2 id="总结-9"><a class="anchor" href="#总结-9">#</a> 总结</h2>
+<p>这个漏洞比较简单，此处我们可以只允许 http、https，其次再进行 htmlspecialchars 处理</p>
+<h1 id="xss之js输出"><a class="anchor" href="#xss之js输出">#</a> XSS 之 js 输出</h1>
+<h2 id="过程-10"><a class="anchor" href="#过程-10">#</a> 过程</h2>
+<ol>
+<li>首先随意输入字符，发现代码中使用 $ms 来传递参数</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/m3NqsvaHCuiAyZY.png" alt="" /></p>
+<ol start="2">
+<li>构造 payload 尝试闭合掉下方的 if 判断句 <code>1'&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;</code></li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/12/04/2lPxNofSVdvamrB.png" alt="" /></p>
+<p><img data-src="https://s2.loli.net/2022/12/04/yjbYkTQBXlG7zWg.png" alt="" /></p>
+<h2 id="总结-10"><a class="anchor" href="#总结-10">#</a> 总结</h2>
+<p>这里主要的操作是再输入框后增加前端代码完成对原有代码的闭合，将原来的判断语句直接排除在外，这样就避免了 if 的验证，实现绕过。</p>
+
+      <div class="tags">
+          <a href="/tags/XSS/" rel="tag"><i class="ic i-tag"></i> XSS</a>
+          <a href="/tags/%E6%BC%8F%E6%B4%9E/" rel="tag"><i class="ic i-tag"></i> 漏洞</a>
+          <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" rel="tag"><i class="ic i-tag"></i> 渗透测试</a>
+          <a href="/tags/%E9%9D%B6%E5%9C%BA/" rel="tag"><i class="ic i-tag"></i> 靶场</a>
+          <a href="/tags/pikachu/" rel="tag"><i class="ic i-tag"></i> pikachu</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-12-04 19:55:54" itemprop="dateModified" datetime="2022-12-04T19:55:54+08:00">2022-12-04</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/pikachu/pikachu-xss/" title="pikachu-XSS">https://mobius-0.github.io/security/pikachu/pikachu-xss/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/pikachu/pikachu-%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;g2yRxptwc9Q6XBu.jpg" title="pikachu-暴力破解">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> pikachu</span>
+  <h3>pikachu-暴力破解</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;24&#x2F;xqhs7CkaWt8Urvn.jpg" title="安全开发">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>安全开发</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E5%9E%8Bxssget"><span class="toc-number">1.</span> <span class="toc-text"> 反射型 XSS（get）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E5%9E%8Bxsspost"><span class="toc-number">2.</span> <span class="toc-text"> 反射型 XSS（post）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-2"><span class="toc-number">2.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-number">2.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%9E%8Bxss"><span class="toc-number">3.</span> <span class="toc-text"> 存储型 XSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-3"><span class="toc-number">3.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-3"><span class="toc-number">3.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dom%E5%9E%8Bxss"><span class="toc-number">4.</span> <span class="toc-text"> DOM 型 XSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-4"><span class="toc-number">4.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-4"><span class="toc-number">4.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dom%E5%9E%8Bxss-x"><span class="toc-number">5.</span> <span class="toc-text"> DOM 型 XSS-X</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-5"><span class="toc-number">5.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-5"><span class="toc-number">5.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xss%E4%B9%8B%E7%9B%B2%E6%89%93"><span class="toc-number">6.</span> <span class="toc-text"> XSS 之盲打</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-6"><span class="toc-number">6.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-6"><span class="toc-number">6.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xss%E8%BF%87%E6%BB%A4"><span class="toc-number">7.</span> <span class="toc-text"> XSS 过滤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-7"><span class="toc-number">7.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-7"><span class="toc-number">7.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xss%E4%B9%8Bhtmlspecialchars"><span class="toc-number">8.</span> <span class="toc-text"> XSS 之 htmlspecialchars</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-8"><span class="toc-number">8.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-8"><span class="toc-number">8.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xss%E4%B9%8Bhref%E8%BE%93%E5%87%BA"><span class="toc-number">9.</span> <span class="toc-text"> XSS 之 href 输出</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-9"><span class="toc-number">9.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-9"><span class="toc-number">9.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xss%E4%B9%8Bjs%E8%BE%93%E5%87%BA"><span class="toc-number">10.</span> <span class="toc-text"> XSS 之 js 输出</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B-10"><span class="toc-number">10.1.</span> <span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-10"><span class="toc-number">10.2.</span> <span class="toc-text"> 总结</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/pikachu/pikachu-%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" rel="bookmark" title="pikachu-暴力破解">pikachu-暴力破解</a></li><li class="active"><a href="/security/pikachu/pikachu-xss/" rel="bookmark" title="pikachu-XSS">pikachu-XSS</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">73</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">114</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/pikachu/pikachu-%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">201k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:03</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/pikachu/pikachu-xss/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

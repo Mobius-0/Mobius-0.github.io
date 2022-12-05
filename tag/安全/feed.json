@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"安全\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/phpstudy+pikachu/",
+            "url": "https://mobius-0.github.io/security/phpstudy+pikachu/",
+            "title": "phpstudy平台和pikachu漏洞平台的搭建",
+            "date_published": "2022-12-03T02:36:21.000Z",
+            "content_html": "<h1 id=\"phpstudy平台搭建\"><a class=\"anchor\" href=\"#phpstudy平台搭建\">#</a> phpstudy 平台搭建</h1>\n<ol>\n<li>首先进入下载网站: <span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cueHAuY24=\">https://www.xp.cn</span></li>\n</ol>\n<p>根据自己需要选择下载</p>\n<p><img data-src=\"https://s2.loli.net/2022/12/03/C4cAK6SHk5xhQrq.png\" alt=\"\" /></p>\n<ol start=\"2\">\n<li>下载完成后双击 exe 进行安装</li>\n</ol>\n<p>安装选项如安装目录等根据自己需要进行修改</p>\n<p><img data-src=\"https://s2.loli.net/2022/12/03/WyOjEk2fQsnBq3b.png\" alt=\"\" /></p>\n<ol start=\"3\">\n<li>安装成功后进入面板，启动一下两项服务</li>\n</ol>\n<p><img data-src=\"https://s2.loli.net/2022/12/03/kS1ecHqsj47Dg8o.png\" alt=\"\" /></p>\n<ol start=\"4\">\n<li>访问其内置默认网站 <span class=\"exturl\" data-url=\"aHR0cDovL2xvY2FsaG9zdDo4MC8=\">http://localhost:80/</span></li>\n</ol>\n<p>出现以下结果说明安装成功</p>\n<p><img data-src=\"https://s2.loli.net/2022/12/03/sBQCwSrkJdRWOlx.png\" alt=\"\" /></p>\n<h1 id=\"pikachu靶场搭建\"><a class=\"anchor\" href=\"#pikachu靶场搭建\">#</a> pikachu 靶场搭建</h1>\n<ol>\n<li>\n<p>首先下载 pikachu 源代码 <span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL3podWlmZW5nc2hhb25pYW5oYW5sdS9waWthY2h1\">https://github.com/zhuifengshaonianhanlu/pikachu</span></p>\n</li>\n<li>\n<p>下载完成后将其解压至 phpstudy 安装目录下的 WWW 文件夹里</p>\n</li>\n<li>\n<p>随后修改解压文件 inc 文件夹下的 config.inc.php 文件</p>\n</li>\n</ol>\n<p>根据自己需要修改连接的用户名和密码</p>\n<p><img data-src=\"https://s2.loli.net/2022/12/03/HVLdcTv8uO4bfwE.png\" alt=\"\" /></p>\n<ol start=\"4\">\n<li>接下来直接访问 <span class=\"exturl\" data-url=\"aHR0cDovL2xvY2FsaG9zdDo4MDgwL3Bpa2FjaHUtbWFzdGVy\">http://localhost:8080/pikachu-master</span> 即可进入靶场首页</li>\n</ol>\n",
+            "tags": [
+                "工具",
+                "安全"
+            ]
+        }
+    ]
+}

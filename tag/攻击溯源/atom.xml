@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;攻击溯源&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-12-05T08:45:22.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="XSS" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="Linux" />
+    <category term="Windows" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/</id>
+        <title>溯源分析</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/"/>
+        <content type="html">&lt;h1 id=&#34;攻击机溯源技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击机溯源技术&#34;&gt;#&lt;/a&gt; 攻击机溯源技术&lt;/h1&gt;
+&lt;h2 id=&#34;基于日志的溯源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于日志的溯源&#34;&gt;#&lt;/a&gt; 基于日志的溯源&lt;/h2&gt;
+&lt;p&gt;使用路由器、主机等设备记录网络传输的数据流中的关键信息 (时间、源地址、目的地址)，追踪时基于日志查询做反向追踪。&lt;/p&gt;
+&lt;p&gt;这种方式的优点在于兼容性强、支持事后追溯、网络开销较小。但是同时该方法也受性能、空间和隐私保护等的限制，考虑到以上的因素，可以限制记录的数据特征和数据数量。另外可以使用流量镜像等技术来减小对网络性能的影响。&lt;/p&gt;
+&lt;h2 id=&#34;路由输入调试技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由输入调试技术&#34;&gt;#&lt;/a&gt; 路由输入调试技术&lt;/h2&gt;
+&lt;p&gt;在攻击持续发送数据，且特性较为稳定的场景下，可以使用路由器的输入调试技术，在匹配到攻击流量时动态的向上追踪。这种方式在 DDoS 攻击追溯中比较有效，且网络开销较小。&lt;/p&gt;
+&lt;h2 id=&#34;可控洪泛技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可控洪泛技术&#34;&gt;#&lt;/a&gt; 可控洪泛技术&lt;/h2&gt;
+&lt;p&gt;追踪时向潜在的上游路由器进行洪泛攻击，如果发现收到的攻击流量变少则攻击流量会流经相应的路由。这种方式的优点在于不需要预先部署，对协同的需求比较少。但是这种方式本身是一种攻击，会对网络有所影响。&lt;/p&gt;
+&lt;h2 id=&#34;基于包数据修改追溯技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于包数据修改追溯技术&#34;&gt;#&lt;/a&gt; 基于包数据修改追溯技术&lt;/h2&gt;
+&lt;p&gt;这种溯源方式直接对数据包进行修改，加入编码或者标记信息，在接收端对传输路径进行重构。这种方式人力投入较少，支持事后分析，但是对某些协议的支持性不太好。&lt;/p&gt;
+&lt;p&gt;基于这种方式衍生出了随机标记技术，各路由以一定概率对数据包进行标识，接收端收集到多个包后进行重构。&lt;/p&gt;
+&lt;h1 id=&#34;基于蜜罐溯源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于蜜罐溯源&#34;&gt;#&lt;/a&gt; 基于蜜罐溯源&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;社交网络 jsonp API&lt;/li&gt;
+&lt;li&gt;获取攻击者 IP&lt;/li&gt;
+&lt;li&gt;获取 burp 信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;分析模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分析模型&#34;&gt;#&lt;/a&gt; 分析模型&lt;/h1&gt;
+&lt;h2 id=&#34;杀伤链kill-kain模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#杀伤链kill-kain模型&#34;&gt;#&lt;/a&gt; 杀伤链 (Kill Kain) 模型&lt;/h2&gt;
+&lt;p&gt;杀伤链这个概念源自军事领域，它是一个描述攻击环节的模型。一般杀伤链有认为侦查跟踪 (Reconnaissance)、武器构建 (Weaponization)、载荷投递 (Delivery)、漏洞利用 (Exploitation)、安装植入 (Installation)、通信控制 (Command&amp;amp;Control)、达成目标 (Actions on Objective) 等几个阶段。&lt;/p&gt;
+&lt;p&gt;在越早的杀伤链环节阻止攻击，防护效果就越好，因此杀伤链的概念也可以用来反制攻击。&lt;/p&gt;
+&lt;p&gt;在跟踪阶段，攻击者通常会采用扫描和搜索等方式来寻找可能的目标信息并评估攻击成本。在这个阶段可以通过日志分析、邮件分析等方式来发现，这阶段也可以采用威胁情报等方式来获取攻击信息。&lt;/p&gt;
+&lt;p&gt;武器构建阶段攻击者通常已经准备好了攻击工具，并进行尝试性的攻击，在这个阶段 IDS 中可能有攻击记录，外网应用、邮箱等帐号可能有密码爆破的记录。有一些攻击者会使用公开攻击工具，会带有一定的已知特征。&lt;/p&gt;
+&lt;p&gt;载荷投递阶段攻击者通常会采用网络漏洞、鱼叉、水坑、网络劫持、U 盘等方式投送恶意代码。此阶段已经有人员在对应的途径收到了攻击载荷，对人员进行充分的安全培训可以做到一定程度的防御。&lt;/p&gt;
+&lt;p&gt;突防利用阶段攻击者会执行恶意代码来获取系统控制权限，此时木马程序已经执行，此阶段可以依靠杀毒软件、异常行为告警等方式来找到相应的攻击。&lt;/p&gt;
+&lt;p&gt;安装植入阶段攻击者通常会在 web 服务器上安装 Webshell 或植入后门、rootkit 等来实现对服务器的持久化控制。可以通过对样本进行逆向工程来找到这些植入。&lt;/p&gt;
+&lt;p&gt;通信控制阶段攻击者已经实现了远程通信控制，木马会通过 Web 三方网站、DNS 隧道、邮件等方式和控制服务器进行通信。此时可以通过对日志进行分析来找到木马的痕迹。&lt;/p&gt;
+&lt;p&gt;达成目标阶段时，攻击者开始完成自己的目的，可能是破坏系统正常运行、窃取目标数据、敲诈勒索、横向移动等。此时受控机器中可能已经有攻击者的上传的攻击利用工具，此阶段可以使用蜜罐等方式来发现。&lt;/p&gt;
+&lt;h2 id=&#34;钻石diamond模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#钻石diamond模型&#34;&gt;#&lt;/a&gt; 钻石 (Diamond) 模型&lt;/h2&gt;
+&lt;p&gt;钻石模型由网络情报分析与威胁研究中心 (The Center for Cyber Intelligence Anaysis and Threat Research，CCIATR) 机构的 Sergio Catagirone 等人在 2013 年提出。&lt;/p&gt;
+&lt;p&gt;该模型把所有的安全事件 (Event) 分为四个核心元素，即敌手 (Adversary)，能力 (Capability)，基础设施 (Infrastructure) 和受害者 (Victim)，以菱形连线代表它们之间的关系，因而命名为 “钻石模型”。&lt;/p&gt;
+&lt;p&gt;杀伤链模型的特点是可说明攻击线路和攻击的进程，而钻石模型的特点是可说明攻击者在单个事件中的攻击目的和所使用攻击手法。&lt;/p&gt;
+&lt;p&gt;在使用钻石模型分析时，通常使用支点分析的方式。支点 (Pivoting) 指提取一个元素，并利用该元素与数据源相结合以发现相关元素的分析技术。分析中可以随时变换支点，四个核心特征以及两个扩展特征 (社会政治、技术) 都可能成为当时的分析支点。&lt;/p&gt;
+&lt;h1 id=&#34;关联分析方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关联分析方法&#34;&gt;#&lt;/a&gt; 关联分析方法&lt;/h1&gt;
+&lt;p&gt;关联分析用于把多个不同的攻击样本结合起来。&lt;/p&gt;
+&lt;h2 id=&#34;文档类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文档类&#34;&gt;#&lt;/a&gt; 文档类&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hash&lt;/li&gt;
+&lt;li&gt;ssdeep&lt;/li&gt;
+&lt;li&gt;版本信息 (公司 / 作者 / 最后修改作者 / 创建时间 / 最后修改时间)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;行为分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行为分析&#34;&gt;#&lt;/a&gt; 行为分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;基于网络行为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类似的交互方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;可执行文件相似性分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可执行文件相似性分析&#34;&gt;#&lt;/a&gt; 可执行文件相似性分析&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;特殊端口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特殊字符串 / 密钥&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDB 文件路径&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相似的文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;代码复用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相似的代码片段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;清除日志方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#清除日志方式&#34;&gt;#&lt;/a&gt; 清除日志方式&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;kill &amp;lt;bash process ID&amp;gt;&lt;/code&gt;  不会存储&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set +o history&lt;/code&gt;  不写入历史记录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;unset HISTFILE&lt;/code&gt;  清除历史记录的环境变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvdmxyMlg2OHRNVGdEaGREazRhb3cwZw==&#34;&gt;利用社交账号精准溯源的蜜罐技术&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="攻击溯源" />
+        <category term="分析模型" />
+        <updated>2022-12-05T08:45:22.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;oci&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-11-29T08:21:20.000Z</updated>
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
+    <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="法律法规" />
+    <category term="XSS" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="Linux" />
+    <category term="Windows" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/</id>
+        <title>容器</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Cloud%20Security/%E5%AE%B9%E5%99%A8/"/>
+        <content type="html">&lt;h1 id=&#34;oci&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oci&#34;&gt;#&lt;/a&gt; OCI&lt;/h1&gt;
+&lt;p&gt;开放容器标准 (Open Container Initiative, OCI) 是用于规范容器格式和运行时行业标准。目前 OCI 提出的规范有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL3J1bnRpbWUtc3BlYw==&#34;&gt;OCI Runtime Specification&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL2ltYWdlLXNwZWM=&#34;&gt;OCI Image Format&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL2Rpc3RyaWJ1dGlvbi1zcGVj&#34;&gt;OCI Distribution Specification&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;cri&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cri&#34;&gt;#&lt;/a&gt; CRI&lt;/h1&gt;
+&lt;p&gt;容器运行时 (Container Runtime Interface, CRI) 定义了容器和镜像的接口，目前官方支持的容器运行时包括 Docker、Containerd、CRI-O 和 frakti。&lt;/p&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;文档&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文档&#34;&gt;#&lt;/a&gt; 文档&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9rdWJlcm5ldGVzLmlvL2Jsb2cvMjAxNi8xMi9jb250YWluZXItcnVudGltZS1pbnRlcmZhY2UtY3JpLWluLWt1YmVybmV0ZXMv&#34;&gt;Introducing Container Runtime Interface (CRI) in Kubernetes&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jcmktby5pby8=&#34;&gt;cri-o&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实现&#34;&gt;#&lt;/a&gt; 实现&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29wZW5jb250YWluZXJzL3J1bmM=&#34;&gt;runc&lt;/span&gt; OCI Runtime 的参考实现&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2thdGEtY29udGFpbmVycy9rYXRhLWNvbnRhaW5lcnM=&#34;&gt;Kata Containers&lt;/span&gt; 提供高性能的硬件虚拟化容器运行时&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dvb2dsZS9ndmlzb3I=&#34;&gt;gvisor&lt;/span&gt; Go 实现的基于用户态内核的容器运行时&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21vYnkvYnVpbGRraXQ=&#34;&gt;buildkit&lt;/span&gt; docker build 拆分出来的 build 项目&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="标准" />
+        <category term="OCI" />
+        <category term="CRI" />
+        <updated>2022-11-29T08:21:20.000Z</updated>
+    </entry>
+</feed>

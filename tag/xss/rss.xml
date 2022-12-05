@@ -5,14 +5,15 @@
         <link>https://mobius-0.github.io</link>
         <description>GLHF</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 26 Nov 2022 11:55:09 +0800</pubDate>
-        <lastBuildDate>Sat, 26 Nov 2022 11:55:09 +0800</lastBuildDate>
+        <pubDate>Sat, 03 Dec 2022 20:20:55 +0800</pubDate>
+        <lastBuildDate>Sat, 03 Dec 2022 20:20:55 +0800</lastBuildDate>
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
         <category>网络安全</category>
         <category>工具</category>
         <category>虚拟机</category>
+        <category>安全</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -21,6 +22,17 @@
         <category>龙族</category>
         <category>动画</category>
         <category>法律法规</category>
+        <category>XSS</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
         <category>域名</category>
         <category>DNS</category>
         <category>WEB</category>
@@ -33,11 +45,41 @@
         <category>WiFi</category>
         <category>邮件</category>
         <category>网络协议</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
         <category>Linux</category>
+        <category>Windows</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <category>风险</category>
+        <category>控制</category>
         <category>渗透</category>
         <category>信息收集</category>
         <category>痕迹清理</category>
-        <category>Windows</category>
+        <category>内网</category>
+        <category>后门</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
         <category>ASP</category>
         <category>CSharp</category>
         <category>Golang</category>
@@ -53,14 +95,11 @@
         <category>PowerShell</category>
         <category>Python</category>
         <category>Ruby</category>
-        <category>Shell</category>
-        <category>漏洞</category>
         <category>CSRF</category>
         <category>服务器</category>
         <category>SQL注入</category>
         <category>SSRF</category>
         <category>Cache</category>
-        <category>XSS</category>
         <category>XXE</category>
         <category>XML</category>
         <category>Xpath</category>
@@ -83,12 +122,178 @@
         <category>社会工程学</category>
         <category>搜索</category>
         <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/pikachu/pikachu-xss/</guid>
+            <title>pikachu-XSS</title>
+            <link>https://mobius-0.github.io/security/pikachu/pikachu-xss/</link>
+            <category>XSS</category>
+            <category>漏洞</category>
+            <category>渗透测试</category>
+            <category>靶场</category>
+            <category>pikachu</category>
+            <pubDate>Sat, 03 Dec 2022 20:20:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;反射型xssget&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反射型xssget&#34;&gt;#&lt;/a&gt; 反射型 XSS（get）&lt;/h1&gt;
+&lt;h2 id=&#34;过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在输入框中输入任意字段，查看页面代码可以发现输入字段已经被插入到了页面之中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/V5JlmdS31TrwkxC.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;这里可以尝试直接输入相应的 XSS payload，如&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;
+&amp;lt;details+open+ontoggle=prompt(1)&amp;gt;
+&amp;lt;svg/onload=confirm(1)&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;等&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;输入的时候可以发现输入框有输入字符的上限（并且该输入框在测试时还可以发现其对输入字符髌骨无限制，特殊字符如 / 等可以直接插入到前端代码中），但这些不算很重要，我们可以直接在前端的代码上修改，也可以在网页的 url 上根据规律进行插入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/Vbk6tW7wDxhspGz.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;反弹结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/AB1TUmItyG54pMq.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/OqeGpAaHP6uxFit.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;GET 方式要更容易被利用，因为相关元素可以直接通过网页 URL 直接提交，通常的利用形式为将带有跨站脚本的 URL 伪装后发送给目标&lt;/p&gt;
+&lt;h1 id=&#34;反射型xsspost&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反射型xsspost&#34;&gt;#&lt;/a&gt; 反射型 XSS（post）&lt;/h1&gt;
+&lt;h2 id=&#34;过程-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-2&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;由于使用的是 post 方法，这里需要使用 burp suite 进行数据包的抓取&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/ULb8cZdWiSGvr7P.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;根据重放可知字符也已经插入页面代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/I72ifcL89ymE1eR.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;修改抓取的数据包，将 message 修改为 XSS 的 payload&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/aBiIjJ1vV8hQkuC.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;放行后输出结果，可以看到 payload 已经插入页面代码中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/QzElqaYN67yZdpF.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/iMCDozdOaXBhxHm.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-2&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;POST 方式相对 GET 要更难被利用，但这同样存在安全隐患，这里就通过对数据包的篡改完成了 XSS 的 payload 插入，主要的利用方式会在 XSS 之盲打中会介绍&lt;/p&gt;
+&lt;h1 id=&#34;存储型xss&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#存储型xss&#34;&gt;#&lt;/a&gt; 存储型 XSS&lt;/h1&gt;
+&lt;h2 id=&#34;过程-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-3&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;首先同样输入任意值，测试其是否存在对特殊字符的过滤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/dtBg7R6PXwze3Mv.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;直接输入 XSS 的 payload，反弹结果，同时可以查看页面代码，发现 payload 已经被插入其中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/gxzHjGslwbOYSq9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/03/smBoa5QdLlWzgTf.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-3&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;存储型 XSS 在道理上和反射型差不多，区别在于存储型会被存储起来，而反射型则是一次性的&lt;/p&gt;
+&lt;h1 id=&#34;dom型xss&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom型xss&#34;&gt;#&lt;/a&gt; DOM 型 XSS&lt;/h1&gt;
+&lt;h2 id=&#34;过程-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-4&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;同样首先输入任意字符，查看页面元素可知字符已被插入到前端中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/coW2JHhNR79Qv16.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;输入 payload： &lt;code&gt;javascript:alert(1)&lt;/code&gt;  尝试触发漏洞，查看页面元素可知 payload 已被插入到前端，点击 &lt;code&gt;what do you see？&lt;/code&gt; 可以看到漏洞已触发&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/qJwzxBHbT5e1jNm.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-4&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;这类型漏洞危害性不算非常大，但依旧需要留意&lt;/p&gt;
+&lt;h1 id=&#34;dom型xss-x&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom型xss-x&#34;&gt;#&lt;/a&gt; DOM 型 XSS-X&lt;/h1&gt;
+&lt;h2 id=&#34;过程-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-5&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;与上一个关卡相同，先输入任意值，在页面元素中查看相关信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/CoBtrZPh4djYGKw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;然后输入 payload 尝试触发漏洞，随后查看 payload 是否已经插入至页面元素中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/j98Bvde3KuTPcEx.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-5&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;这类型漏洞在某些方面与反射型 XSS 类似，它们同样都是通过 url 来获取输入，实际上在观察 url 内容后就可以发现 url 中有我们先前的输入 &lt;code&gt;javascript%3Aalert(1)&lt;/code&gt; ，其中 &lt;code&gt;:&lt;/code&gt;  在 url 内表现为 &lt;code&gt;%3A&lt;/code&gt; ，这些符号都有固定的翻译对应，例如空格就会翻译为 &lt;code&gt;%20&lt;/code&gt; 。&lt;/p&gt;
+&lt;h1 id=&#34;xss之盲打&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss之盲打&#34;&gt;#&lt;/a&gt; XSS 之盲打&lt;/h1&gt;
+&lt;h2 id=&#34;过程-6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-6&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;老规矩，先输入任意值，在前端代码中并没有看到相应的输出，所以这里需要登录管理后台查看结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/WasLb8V4YG7tCju.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;随后输入 payload &lt;code&gt;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&lt;/code&gt;  尝试触发漏洞，由于前端并没有对应代码显示，所以需要到后台查看漏洞是否被触发。可以看到弹窗，漏洞已经被触发。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/9PvRs8C3tpLwmMy.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-6&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;盲打主要指的是这么一种攻击场景，前端输入的内容只有在后端才能看到，这类型的攻击通常具有随机性，首先输入框有可能存在对特殊字符和语句的过滤，导致跨站脚本上传失败，即使能够上传成功，在后端也有可能有过滤或验证，导致脚本不一定会被触发。但是危害同样很大，如果不存在上述验证，那么完全可以将脚本替换为获取 cookie 的脚本，如果管理员登陆就有可能会被盗取 cookie，导致管理权限的外泄。&lt;/p&gt;
+&lt;h1 id=&#34;xss过滤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss过滤&#34;&gt;#&lt;/a&gt; XSS 过滤&lt;/h1&gt;
+&lt;h2 id=&#34;过程-7&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-7&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;依旧是老规矩，首先随意输入查看过滤情况，可以发现如 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;  或双写关键词 &lt;code&gt;&amp;lt;scrscriptipt&amp;gt;&lt;/code&gt;  等都被过滤掉了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;尝试修改 payload 格式，发现大写形式是不会被过滤的，写入后成功触发漏洞&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/x6XeM7ckWntEDhH.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/vfBMTFm1Qa4qglS.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-7&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-7&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;这里漏洞的问题还是在于过滤的规则不够完善，查看源代码可以发现，实际上是只对 &lt;code&gt;&amp;lt;script&lt;/code&gt;  进行了过滤，简单点的绕过可以通过改变大小写来实现，同时也可以使用其他 payload 如 img 的标签 &lt;code&gt;&amp;lt;img src=x onerror=&amp;quot;alert(1)&amp;quot;&amp;gt;&lt;/code&gt;  来实现绕过&lt;/p&gt;
+&lt;h1 id=&#34;xss之htmlspecialchars&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss之htmlspecialchars&#34;&gt;#&lt;/a&gt; XSS 之 htmlspecialchars&lt;/h1&gt;
+&lt;h2 id=&#34;过程-8&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-8&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;仍旧老规矩，随意输入字符，查看是否插入至前端中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/UKlvPJfGhw9qraN.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;根据 htmlspecialchars 方法默认不对 &lt;code&gt;&#39;&lt;/code&gt;  进行处理的特点，我们可以构造 payload &lt;code&gt;1&#39; oneclick=&#39;alert(1)&#39;&lt;/code&gt; ，输入后查看结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/imwbCQnuKe5stIf.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/Q8Hi6MuhG2zmelE.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-8&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-8&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;htmlspecialchars () 函数功能为把预定的字符转换为 HTML 实体，当前预定义的字符有：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; &amp;amp; → &amp;amp;amp
+ &amp;quot; → &amp;amp;quot
+ &#39; → &amp;amp;apos
+ &amp;lt; → &amp;amp;lt
+ &amp;gt; → &amp;amp;gt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;xss之href输出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss之href输出&#34;&gt;#&lt;/a&gt; XSS 之 href 输出&lt;/h1&gt;
+&lt;h2 id=&#34;过程-9&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-9&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;随意输入字符，查看页面源代码插入位置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/ZAHn1MfB73sbXTz.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;此处可以直接构造 payload &lt;code&gt;javascript:alert(1)&lt;/code&gt; ，输入后查看结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/3XBuyI1HLkNDaMT.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/qBDJt5mx3flyzCF.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-9&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-9&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;这个漏洞比较简单，此处我们可以只允许 http、https，其次再进行 htmlspecialchars 处理&lt;/p&gt;
+&lt;h1 id=&#34;xss之js输出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss之js输出&#34;&gt;#&lt;/a&gt; XSS 之 js 输出&lt;/h1&gt;
+&lt;h2 id=&#34;过程-10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程-10&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;首先随意输入字符，发现代码中使用 $ms 来传递参数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/m3NqsvaHCuiAyZY.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;构造 payload 尝试闭合掉下方的 if 判断句 &lt;code&gt;1&#39;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/2lPxNofSVdvamrB.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/04/yjbYkTQBXlG7zWg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结-10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-10&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;这里主要的操作是再输入框后增加前端代码完成对原有代码的闭合，将原来的判断语句直接排除在外，这样就避免了 if 的验证，实现绕过。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/</guid>
             <title>XSS</title>
             <link>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/</link>
             <category>网络安全</category>
-            <category>漏洞</category>
             <category>XSS</category>
+            <category>漏洞</category>
             <pubDate>Sat, 26 Nov 2022 11:55:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h1&gt;
 &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;

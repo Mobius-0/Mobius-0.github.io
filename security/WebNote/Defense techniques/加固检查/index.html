@@ -1,0 +1,647 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Khala" href="https://mobius-0.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Khala" href="https://mobius-0.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Khala" href="https://mobius-0.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="防御加固,管理策略" />
+
+
+<link rel="canonical" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/">
+
+
+
+  <title>
+加固检查 - 防御技术 - WEB安全学习笔记 - 安全 |
+FAF MAVE = Khala = 若要想看见妖精，就要有妖精的眼</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">加固检查
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-05 16:20:15">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-05T16:20:15+08:00">2022-12-05</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">FAF MAVE</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/lmJH8w3E6eC2PMG.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/EtpC9r4V6lMFQuv.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/MkfuhclVLDZUI9Y.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/ShP9LnyoOJUwBcj.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/27/9NQXTSUlr4W37qg.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/OMa6wcNPYfL94Id.jpg"></li>
+        </ul>
+      </div>
+    
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    </header>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/" itemprop="item" rel="index" title="分类于 安全"><span itemprop="name">安全</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/" itemprop="item" rel="index" title="分类于 WEB安全学习笔记"><span itemprop="name">WEB安全学习笔记</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/security/WebNote/Defense-techniques/" itemprop="item" rel="index" title="分类于 防御技术"><span itemprop="name">防御技术</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="晓楼">
+    <meta itemprop="description" content="若要想看见妖精，就要有妖精的眼, GLHF">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Khala">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="网络设备"><a class="anchor" href="#网络设备">#</a> 网络设备</h1>
+<ul>
+<li>及时检查系统版本号</li>
+<li>敏感服务设置访问 IP/MAC 白名单</li>
+<li>开启权限分级控制</li>
+<li>关闭不必要的服务</li>
+<li>打开操作日志</li>
+<li>配置异常告警</li>
+<li>关闭 ICMP 回应</li>
+</ul>
+<h1 id="操作系统"><a class="anchor" href="#操作系统">#</a> 操作系统</h1>
+<h2 id="linux"><a class="anchor" href="#linux">#</a> Linux</h2>
+<ul>
+<li>
+<p>无用用户 / 用户组检查</p>
+</li>
+<li>
+<p>空口令帐号检查</p>
+</li>
+<li>
+<p>用户密码策略</p>
+<ul>
+<li>/etc/login.defs</li>
+<li>/etc/pam.d/system-auth</li>
+</ul>
+</li>
+<li>
+<p>敏感文件权限配置</p>
+<ul>
+<li>/etc/passwd</li>
+<li>/etc/shadow</li>
+<li>~/.ssh/</li>
+<li>/var/log/messages</li>
+<li>/var/log/secure</li>
+<li>/var/log/maillog</li>
+<li>/var/log/cron</li>
+<li>/var/log/spooler</li>
+<li>/var/log/boot.log</li>
+</ul>
+</li>
+<li>
+<p>日志是否打开</p>
+</li>
+<li>
+<p>及时安装补丁</p>
+</li>
+<li>
+<p>开机自启</p>
+<ul>
+<li>/etc/init.d</li>
+</ul>
+</li>
+<li>
+<p>检查系统时钟</p>
+</li>
+</ul>
+<h2 id="windows"><a class="anchor" href="#windows">#</a> Windows</h2>
+<ul>
+<li>
+<p>异常进程监控</p>
+</li>
+<li>
+<p>异常启动项监控</p>
+</li>
+<li>
+<p>异常服务监控</p>
+</li>
+<li>
+<p>配置系统日志</p>
+</li>
+<li>
+<p>用户账户</p>
+<ul>
+<li>设置口令有效期</li>
+<li>设置口令强度限制</li>
+<li>设置口令重试次数</li>
+</ul>
+</li>
+<li>
+<p>安装 EMET</p>
+</li>
+<li>
+<p>启用 PowerShell 日志</p>
+</li>
+<li>
+<p>限制以下敏感文件的下载和执行</p>
+<ul>
+<li>ade, adp, ani, bas, bat, chm, cmd, com, cpl, crt, hlp, ht, hta, inf, ins, isp, job, js, jse, lnk, mda, mdb, mde, mdz, msc, msi, msp, mst, pcd, pif, reg, scr, sct, shs, url, vb, vbe, vbs, wsc, wsf, wsh, exe, pif</li>
+</ul>
+</li>
+<li>
+<p>限制会调起 wscript 的后缀</p>
+<ul>
+<li>bat, js, jse, vbe, vbs, wsf, wsh</li>
+</ul>
+</li>
+<li>
+<p>域</p>
+<ul>
+<li>限制将计算机加入域的权限域账户使用最小权限原则减少非必要高权限账户的数量</li>
+</ul>
+</li>
+</ul>
+<h1 id="应用"><a class="anchor" href="#应用">#</a> 应用</h1>
+<h2 id="ftp"><a class="anchor" href="#ftp">#</a> FTP</h2>
+<ul>
+<li>禁止匿名登录</li>
+<li>修改 Banner</li>
+</ul>
+<h2 id="ssh"><a class="anchor" href="#ssh">#</a> SSH</h2>
+<ul>
+<li>是否禁用 ROOT 登录</li>
+<li>是否禁用密码连接</li>
+</ul>
+<h2 id="mysql"><a class="anchor" href="#mysql">#</a> MySQL</h2>
+<ul>
+<li>文件写权限设置</li>
+<li>用户授权表管理</li>
+<li>日志是否启用</li>
+<li>版本是否最新</li>
+</ul>
+<h1 id="web中间件"><a class="anchor" href="#web中间件">#</a> Web 中间件</h1>
+<h2 id="apache"><a class="anchor" href="#apache">#</a> Apache</h2>
+<ul>
+<li>
+<p>版本号隐藏</p>
+</li>
+<li>
+<p>版本是否最新</p>
+</li>
+<li>
+<p>禁用部分 HTTP 动词</p>
+</li>
+<li>
+<p>关闭 Trace</p>
+</li>
+<li>
+<p>禁止  <code>server-status</code></p>
+</li>
+<li>
+<p>上传文件大小限制</p>
+</li>
+<li>
+<p>目录权限设置</p>
+</li>
+<li>
+<p>是否允许路由重写</p>
+</li>
+<li>
+<p>是否允许列目录</p>
+</li>
+<li>
+<p>日志配置</p>
+</li>
+<li>
+<p>配置超时时间防 DoS</p>
+</li>
+<li>
+<p>非属主用户文件读写限制</p>
+<ul>
+<li>httpd.conf</li>
+<li>access.log</li>
+<li>error.log</li>
+</ul>
+</li>
+</ul>
+<h2 id="nginx"><a class="anchor" href="#nginx">#</a> Nginx</h2>
+<ul>
+<li>禁用部分 HTTP 动词</li>
+<li>禁用目录遍历</li>
+<li>检查重定向配置</li>
+<li>配置超时时间防 DoS</li>
+</ul>
+<h2 id="iis"><a class="anchor" href="#iis">#</a> IIS</h2>
+<ul>
+<li>版本是否最新</li>
+<li>日志配置</li>
+<li>用户口令配置</li>
+<li>ASP.NET 功能配置</li>
+<li>配置超时时间防 DoS</li>
+</ul>
+<h2 id="jboss"><a class="anchor" href="#jboss">#</a> JBoss</h2>
+<ul>
+<li>jmx console 配置</li>
+<li>web console 配置</li>
+</ul>
+<h2 id="tomcat"><a class="anchor" href="#tomcat">#</a> Tomcat</h2>
+<ul>
+<li>禁用部分 HTTP 动词</li>
+<li>禁止列目录</li>
+<li>禁止 manager 功能</li>
+<li>用户密码配置</li>
+<li>用户权限配置</li>
+<li>配置超时时间防 DoS</li>
+</ul>
+<h1 id="密码管理策略"><a class="anchor" href="#密码管理策略">#</a> 密码管理策略</h1>
+<ul>
+<li>长度不少于 8 个字符</li>
+<li>不存在于已有字典之中</li>
+<li>不使用基于知识的认证方式</li>
+</ul>
+<h1 id="参考链接"><a class="anchor" href="#参考链接">#</a> 参考链接</h1>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1BhdWxTZWMvYXdlc29tZS13aW5kb3dzLWRvbWFpbi1oYXJkZW5pbmc=">awesome windows domain hardening</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy9zZWN1cml0eS90aHJlYXQtcHJvdGVjdGlvbi9taWNyb3NvZnQtZGVmZW5kZXItYXRwL2N1c3RvbWl6ZS1hdHRhY2stc3VyZmFjZS1yZWR1Y3Rpb24=">customize attack surface reduction</span></li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E9%98%B2%E5%BE%A1%E5%8A%A0%E5%9B%BA/" rel="tag"><i class="ic i-tag"></i> 防御加固</a>
+          <a href="/tags/%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5/" rel="tag"><i class="ic i-tag"></i> 管理策略</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-12-05 16:20:56" itemprop="dateModified" datetime="2022-12-05T16:20:56+08:00">2022-12-05</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>晓楼 <i class="ic i-at"><em>@</em></i>Khala
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/" title="加固检查">https://mobius-0.github.io/security/WebNote/Defense techniques/加固检查/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E9%98%B2%E5%BE%A1%E6%A1%86%E6%9E%B6/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;18&#x2F;1ZogVUDzq4LGuJh.png" title="防御框架">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>防御框架</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2022&#x2F;11&#x2F;29&#x2F;UiW7EtRKXTpfbkM.png" title="入侵检测">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 防御技术</span>
+  <h3>入侵检测</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text"> 网络设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.</span> <span class="toc-text"> 操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux"><span class="toc-number">2.1.</span> <span class="toc-text"> Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows"><span class="toc-number">2.2.</span> <span class="toc-text"> Windows</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text"> 应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ftp"><span class="toc-number">3.1.</span> <span class="toc-text"> FTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh"><span class="toc-number">3.2.</span> <span class="toc-text"> SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql"><span class="toc-number">3.3.</span> <span class="toc-text"> MySQL</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text"> Web 中间件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#apache"><span class="toc-number">4.1.</span> <span class="toc-text"> Apache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx"><span class="toc-number">4.2.</span> <span class="toc-text"> Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iis"><span class="toc-number">4.3.</span> <span class="toc-text"> IIS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jboss"><span class="toc-number">4.4.</span> <span class="toc-text"> JBoss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tomcat"><span class="toc-number">4.5.</span> <span class="toc-text"> Tomcat</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="toc-number">5.</span> <span class="toc-text"> 密码管理策略</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text"> 参考链接</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/security/WebNote/Defense%20techniques/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="团队建设">团队建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/" rel="bookmark" title="红蓝对抗">红蓝对抗</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/" rel="bookmark" title="安全开发">安全开发</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/" rel="bookmark" title="安全建设">安全建设</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" rel="bookmark" title="威胁情报">威胁情报</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%A3%8E%E9%99%A9%E6%8E%A7%E5%88%B6/" rel="bookmark" title="风险控制">风险控制</a></li><li><a href="/security/WebNote/Defense%20techniques/%E9%98%B2%E5%BE%A1%E6%A1%86%E6%9E%B6/" rel="bookmark" title="防御框架">防御框架</a></li><li class="active"><a href="/security/WebNote/Defense%20techniques/%E5%8A%A0%E5%9B%BA%E6%A3%80%E6%9F%A5/" rel="bookmark" title="加固检查">加固检查</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" rel="bookmark" title="入侵检测">入侵检测</a></li><li><a href="/security/WebNote/Defense%20techniques/%E8%9C%9C%E7%BD%90%E6%8A%80%E6%9C%AF/" rel="bookmark" title="蜜罐技术">蜜罐技术</a></li><li><a href="/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="bookmark" title="应急响应">应急响应</a></li><li><a href="/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/" rel="bookmark" title="溯源分析">溯源分析</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="晓楼"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">晓楼</p>
+  <div class="description" itemprop="description">GLHF</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">73</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">114</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vYml1cy0w" title="https:&#x2F;&#x2F;github.com&#x2F;Mobius-0"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTIxMzQ0Mjk2ODU=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;2134429685"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnNlYWRyYWdvbjE1OUBvdXRsb29rLmNvbQ==" title="mailto:seadragon159@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/favorites/" rel="section"><i class="ic i-star"></i>收藏</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E9%98%B2%E5%BE%A1%E6%A1%86%E6%9E%B6/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/security/WebNote/Defense%20techniques/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">晓楼 @ FAF MAVE</span>
+  </div>
+  <div class="count">
+  
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">201k 字</span>
+
+    <span class="post-meta-divider">|</span>
+
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:03</span>
+    
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'security/WebNote/Defense techniques/加固检查/',
+    favicon: {
+      show: "Incomging Transmission…",
+      hide: "Target Loss"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
