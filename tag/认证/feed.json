@@ -1,0 +1,40 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"认证\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Authentication/Windows%E8%AE%A4%E8%AF%81/",
+            "url": "https://mobius-0.github.io/security/WebNote/Authentication/Windows%E8%AE%A4%E8%AF%81/",
+            "title": "Windows认证",
+            "date_published": "2022-12-06T03:18:09.000Z",
+            "content_html": "<h1 id=\"本地用户认证\"><a class=\"anchor\" href=\"#本地用户认证\">#</a> 本地用户认证</h1>\n<p>Windows 在进行本地登录认证时操作系统会使用用户输入的密码作为凭证去与系统中的密码进行对比验证。通过  <code>winlogon.exe</code>  接收用户输入传递至  <code>lsass.exe</code>  进行认证。</p>\n<p><code>winlogon.exe</code>  用于在用户注销、重启、锁屏后显示登录界面。  <code>lsass.exe</code>  用于将明文密码变成 NTLM Hash 的形式与 SAM 数据库比较认证。</p>\n<h1 id=\"sam\"><a class=\"anchor\" href=\"#sam\">#</a> SAM</h1>\n<p>安全帐户管理器 (Security Accounts Manager，SAM) 是 Windows 操作系统管理用户帐户的安全所使用的一种机制。用来存储 Windows 操作系统密码的数据库文件为了避免明文密码泄漏 SAM 文件中保存的是明文密码在经过一系列算法处理过的 Hash 值被保存的 Hash 分为 LM Hash、NTLM Hash。当用户进行身份认证时会将输入的 Hash 值与 SAM 文件中保存的 Hash 值进行对比。</p>\n<p>SAM 文件保存于  <code>%SystemRoot%\\system32\\config\\sam</code>  中，在注册表中保存在  <code>HKEY_LOCAL_MACHINE\\SAM\\SAM</code>  ，  <code>HKEY_LOCAL_MACHINE\\SECURITY\\SAM</code>  。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。</p>\n<h1 id=\"密码破解\"><a class=\"anchor\" href=\"#密码破解\">#</a> 密码破解</h1>\n<ul>\n<li>通过物理接触主机、启动其他操作系统来获取 Windows 分区上的  <code>%SystemRoot%\\system32\\config\\sam</code>  文件</li>\n<li>获取  <code>%SystemRoot%\\repair\\sam._</code>  文件。</li>\n<li>使用工具从注册表中导出 SAM 散列值</li>\n<li>从网络中嗅探分析 SMB 报文，从中获取密码散列</li>\n</ul>\n<h1 id=\"spnego\"><a class=\"anchor\" href=\"#spnego\">#</a> SPNEGO</h1>\n<p>SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation) 是微软提供的一种使用 GSS-API 认证机制的安全协议，用于使 Webserver 共享 Windows Credentials，它扩展了 Kerberos。</p>\n",
+            "tags": [
+                "认证",
+                "Windows"
+            ]
+        },
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Authentication/SSO/",
+            "url": "https://mobius-0.github.io/security/WebNote/Authentication/SSO/",
+            "title": "SSO",
+            "date_published": "2022-12-06T02:51:21.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>单点登录 (SingleSignOn，SSO) 指一个用户可以通过单一的 ID 和凭证（密码）访问多个相关但彼此独立的系统。</p>\n<h2 id=\"常见流程\"><a class=\"anchor\" href=\"#常见流程\">#</a> 常见流程</h2>\n<ol>\n<li>用户 (User) 向服务提供商 (Service Provider) 发起请求</li>\n<li>SP 重定向 User 至 SSO 身份校验服务 (Identity Provider)</li>\n<li>User 通过 IP 登录</li>\n<li>IP 返回凭证给 User</li>\n<li>User 将凭证发给 SP</li>\n<li>SP 返回受保护的资源给用户</li>\n</ol>\n<p>其中凭证要有以下属性</p>\n<ul>\n<li>\n<p>签发者的签名</p>\n</li>\n<li>\n<p>凭证的身份</p>\n</li>\n<li>\n<p>使用的时间</p>\n<ul>\n<li>过期时间</li>\n<li>生效时间</li>\n</ul>\n</li>\n</ul>\n<h1 id=\"可能的攻击漏洞\"><a class=\"anchor\" href=\"#可能的攻击漏洞\">#</a> 可能的攻击 / 漏洞</h1>\n<h2 id=\"信息泄漏\"><a class=\"anchor\" href=\"#信息泄漏\">#</a> 信息泄漏</h2>\n<p>若 SP 和 IP 之前使用明文传输信息，可能会被窃取。</p>\n<h2 id=\"伪造\"><a class=\"anchor\" href=\"#伪造\">#</a> 伪造</h2>\n<p>如果在通信过程中没有对关键信息进行签名，容易被伪造。</p>\n",
+            "tags": [
+                "认证",
+                "单点登录"
+            ]
+        },
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Authentication/%E5%A4%9A%E5%9B%A0%E5%AD%90%E8%AE%A4%E8%AF%81/",
+            "url": "https://mobius-0.github.io/security/WebNote/Authentication/%E5%A4%9A%E5%9B%A0%E5%AD%90%E8%AE%A4%E8%AF%81/",
+            "title": "多因子认证",
+            "date_published": "2022-12-06T02:49:21.000Z",
+            "content_html": "<p>多因子认证是在单因子认证不足以保证安全性时使用的方法，通常会引入多种方式对用户身份进行验证。身份验证方法可以基于知识的认证，即密码；也可以基于物品的认证，例如硬件密钥；也可以是基于特征的认证，例如包含指纹在内的生物特征等。</p>\n<p>具体来说，目前常用的生物特征有：指纹、人脸、虹膜、静脉、声纹、体态等。常用的评价指标主要是速度（注册、识别使用的时间），精确度（假阳性、假阴性）等。</p>\n",
+            "tags": [
+                "认证"
+            ]
+        }
+    ]
+}

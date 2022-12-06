@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;jwt&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-12-06T02:55:21.000Z</updated>
+    <category term="工具" />
+    <category term="安全" />
+    <category term="网络安全" />
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="虚拟机" />
+    <category term="法律法规" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="XSS" />
+    <category term="JWT" />
+    <category term="认证" />
+    <category term="挑战/应答" />
+    <category term="S/Key协议" />
+    <category term="权限设置" />
+    <category term="Kerberos认证" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="单点登录" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Windows" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="后门" />
+    <category term="渗透" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="Linux" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="内网" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Authentication/JWT/</id>
+        <title>JWT</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Authentication/JWT/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于 JSON 的开放标准（(RFC 7519). 该 token 被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT 的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该 token 也可直接被用于认证，也可被加密。&lt;/p&gt;
+&lt;h1 id=&#34;构成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构成&#34;&gt;#&lt;/a&gt; 构成&lt;/h1&gt;
+&lt;p&gt;分为三个部分，分别为头部（Header）、声明（Claims，也可以称为负载 Payload）、证书（Signature），三个部分以英文句号 &lt;code&gt;.&lt;/code&gt;  隔开。其中 header 是声明的类型和加密使用的算法。下面是一个用 HS256 生成 JWT 的代码例子： &lt;code&gt;HMACSHA256(base64UrlEncode(header) + &amp;quot;.&amp;quot; +base64UrlEncode(payload),secret)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;头部（Header）:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;
+  &amp;quot;alg&amp;quot;:&amp;quot;HS256&amp;quot;,
+  &amp;quot;typ&amp;quot;:&amp;quot;JWT&amp;quot;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;alg：是说明这个 JWT 的签名使用的算法的参数，常见值用 HS256（默认），HS512 等，也可以为 None。HS256 表示 HMAC SHA256。&lt;br /&gt;
+typ：说明这个 token 的类型为 JWT&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;声明（Claims）:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;
+  &amp;quot;exp&amp;quot;: 1416471934,
+  &amp;quot;user_name&amp;quot;: &amp;quot;user&amp;quot;,
+  &amp;quot;scope&amp;quot;: [
+    &amp;quot;read&amp;quot;,
+    &amp;quot;write&amp;quot;
+  ],
+  &amp;quot;authorities&amp;quot;: [
+    &amp;quot;ROLE_ADMIN&amp;quot;,
+    &amp;quot;ROLE_USER&amp;quot;
+  ],
+  &amp;quot;jti&amp;quot;: &amp;quot;9bc92a44-0b1a-4c5e-be70-da52075b9a84&amp;quot;,
+  &amp;quot;client_id&amp;quot;: &amp;quot;my-client-with-secret&amp;quot;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JWT 固定参数有：&lt;br /&gt;
+iss：发行人&lt;br /&gt;
+ exp：到期时间&lt;br /&gt;
+ sub：主题&lt;br /&gt;
+ aud：用户&lt;br /&gt;
+ nbf：在此之前不可用&lt;br /&gt;
+ iat：发布时间&lt;br /&gt;
+ jti：JWT ID 用于标识该 JWT&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;签名（Signature）:&lt;br /&gt;
+ 服务器有一个不会发送给客户端的密码（secret），用头部中指定的算法对头部和声明的内容用此密码进行加密，生成的字符串就是 JWT 的签名。&lt;/p&gt;
+&lt;h1 id=&#34;安全问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全问题&#34;&gt;#&lt;/a&gt; 安全问题&lt;/h1&gt;
+&lt;h2 id=&#34;header部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#header部分&#34;&gt;#&lt;/a&gt; Header 部分&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;是否支持修改算法为 none / 对称加密算法&lt;/li&gt;
+&lt;li&gt;删除签名&lt;/li&gt;
+&lt;li&gt;插入错误信息&lt;/li&gt;
+&lt;li&gt;直接在 header 中加入新的公钥&lt;/li&gt;
+&lt;li&gt;kid 字段是否有 SQL 注入 / 命令注入 / 目录遍历&lt;/li&gt;
+&lt;li&gt;结合业务功能通过 kid 直接下载对应公私钥&lt;/li&gt;
+&lt;li&gt;是否强制使用白名单上的加密算法&lt;/li&gt;
+&lt;li&gt;JWKS 劫持&lt;/li&gt;
+&lt;li&gt;JKU (JWK Set URL) / X5U (X.509 URL) 注入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;payload部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#payload部分&#34;&gt;#&lt;/a&gt; Payload 部分&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;其中是否存在敏感信息&lt;/li&gt;
+&lt;li&gt;检查过期策略，比如  &lt;code&gt;exp&lt;/code&gt;  ,  &lt;code&gt;iat&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;signature部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#signature部分&#34;&gt;#&lt;/a&gt; Signature 部分&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;检查是否强制检查签名&lt;/li&gt;
+&lt;li&gt;密钥是否可以爆破&lt;/li&gt;
+&lt;li&gt;是否可以通过其他方式拿到密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;重放&lt;/li&gt;
+&lt;li&gt;通过匹配校验的时间做时间攻击&lt;/li&gt;
+&lt;li&gt;修改算法 RS256 为 HS256&lt;/li&gt;
+&lt;li&gt;弱密钥破解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hdXRoMC5jb20vYmxvZy8=&#34;&gt;Critical vulnerabilities in JSON Web Token libraries&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qd3QuaW8vI2VuY29kZWQtand0&#34;&gt;JWT CODE&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="JWT" />
+        <updated>2022-12-06T02:55:21.000Z</updated>
+    </entry>
+</feed>

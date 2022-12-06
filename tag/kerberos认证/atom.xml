@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;kerberos认证&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-12-06T03:20:53.000Z</updated>
+    <category term="工具" />
+    <category term="安全" />
+    <category term="网络安全" />
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="虚拟机" />
+    <category term="法律法规" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="XSS" />
+    <category term="JWT" />
+    <category term="认证" />
+    <category term="挑战/应答" />
+    <category term="S/Key协议" />
+    <category term="权限设置" />
+    <category term="Kerberos认证" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="单点登录" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Windows" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="后门" />
+    <category term="渗透" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="Linux" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="内网" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Authentication/Kerberos/</id>
+        <title>Kerberos</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Authentication/Kerberos/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Kerberos 协议起源于美国麻省理工学院 Athena 项目，基于公私钥加密体制，为分布式环境提供双向验证，在 RFC 1510 中被采纳，Kerberos 是 Windows 域环境中的默认身份验证协议。&lt;/p&gt;
+&lt;p&gt;简单地说，Kerberos 提供了一种单点登录 (Single Sign-On, SSO) 的方法。考虑这样一个场景，在一个网络中有不同的服务器，比如，打印服务器、邮件服务器和文件服务器。这些服务器都有认证的需求。很自然的，不可能让每个服务器自己实现一套认证系统，而是提供一个中心认证服务器 (Authentication Server, AS) 供这些服务器使用。这样任何客户端就只需维护一个密码就能登录所有服务器。&lt;/p&gt;
+&lt;p&gt;Kerberos 协议是一个基于票据 (Ticket) 的系统，在 Kerberos 系统中至少有三个角色：认证服务器 (AS)，客户端 (Client) 和普通服务器 (Server)。&lt;/p&gt;
+&lt;p&gt;认证服务器对用户进行验证，并发行供用户用来请求会话票据的 TGT (票据授予票据)。票据授予服务 (TGS) 在发行给客户的 TGT 的基础上，为网络服务发行 ST (会话票据)。&lt;/p&gt;
+&lt;p&gt;在 Kerberos 系统中，客户端和服务器都有一个唯一的名字，叫做 Principal。同时，客户端和服务器都有自己的密码，并且它们的密码只有自己和认证服务器 AS 知道。&lt;/p&gt;
+&lt;h1 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Principal (安全个体)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;被认证的个体，有一个名字 (name) 和口令 (password)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KDC (Key Distribution Center)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提供 ticket 和临时的会话密钥的网络服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ticket&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个记录，用户可以用它来向服务器证明自己的身份，其中包括用户的标识、会话密钥、时间戳，以及其他一些信息。Ticket 中的大多数信息都被加密，密钥为服务器的密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Authenticator&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个记录，其中包含一些最近产生的信息，产生这些信息需要用到用户和服务器之间共享的会话密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Credentials&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个 ticket 加上一个秘密的会话密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Authentication Server (AS)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 long-term key 认证用户&lt;/li&gt;
+&lt;li&gt;AS 给予用户 ticket granting ticket 和 short-term key&lt;/li&gt;
+&lt;li&gt;认证服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ticket Granting Server (TGS)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 short-term key 和 Ticket Granting Ticket 认证用户&lt;/li&gt;
+&lt;li&gt;TGS 发放 tickets 给用户以访问其他的服务器&lt;/li&gt;
+&lt;li&gt;授权和访问控制服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;简化的认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简化的认证过程&#34;&gt;#&lt;/a&gt; 简化的认证过程&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;客户端向服务器发起请求，请求内容是：客户端的 principal，服务器的 principal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AS 收到请求之后，随机生成一个密码 Kc, s (session key), 并生成以下两个票据返回给客户端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给客户端的票据，用客户端的密码加密，内容为随机密码，session，server_principal&lt;/li&gt;
+&lt;li&gt;给服务器端的票据，用服务器的密码加密，内容为随机密码，session，client_principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端拿到了第二步中的两个票据后，首先用自己的密码解开票据，得到 Kc、s，然后生成一个 Authenticator，其中主要包括当前时间和 Ts,c 的校验码，并且用 SessionKey Kc,s 加密。之后客户端将 Authenticator 和给 server 的票据同时发给服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器首先用自己的密码解开票据，拿到 SessionKey Kc,s，然后用 Kc,s 解开 Authenticator，并做如下检查&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查 Authenticator 中的时间戳是不是在当前时间上下 5 分钟以内，并且检查该时间戳是否首次出现。如果该时间戳不是第一次出现，那说明有人截获了之前客户端发送的内容，进行 Replay 攻击。&lt;/li&gt;
+&lt;li&gt;检查 checksum 是否正确&lt;/li&gt;
+&lt;li&gt;如果都正确，客户端就通过了认证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器段可选择性地给客户端回复一条消息来完成双向认证，内容为用 session key 加密的时间戳&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;完整的认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#完整的认证过程&#34;&gt;#&lt;/a&gt; 完整的认证过程&lt;/h1&gt;
+&lt;p&gt;上方介绍的流程已经能够完成客户端和服务器的相互认证。但是，比较不方便的是每次认证都需要客户端输入自己的密码。&lt;/p&gt;
+&lt;p&gt;因此在 Kerberos 系统中，引入了一个新的角色叫做：票据授权服务 (TGS - Ticket Granting Service)，它的地位类似于一个普通的服务器，只是它提供的服务是为客户端发放用于和其他服务器认证的票据。&lt;/p&gt;
+&lt;p&gt;这样，Kerberos 系统中就有四个角色：认证服务器 (AS)，客户端 (Client)，普通服务器 (Server) 和票据授权服务 (TGS)。这样客户端初次和服务器通信的认证流程分成了以下 6 个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;客户端向 AS 发起请求，请求内容是：客户端的 principal，票据授权服务器的 rincipal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AS 收到请求之后，随机生成一个密码 Kc, s (session key), 并生成以下两个票据返回给客户端：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给客户端的票据，用客户端的密码加密，内容为随机密码，session，tgs_principal&lt;/li&gt;
+&lt;li&gt;给 tgs 的票据，用 tgs 的密码加密，内容为随机密码，session，client_principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端拿到了第二步中的两个票据后，首先用自己的密码解开票据，得到 Kc、s，然后生成一个 Authenticator，其中主要包括当前时间和 Ts,c 的校验码，并且用 SessionKey Kc,s 加密。之后客户端向 tgs 发起请求，内容包括:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authenticator&lt;/li&gt;
+&lt;li&gt;给 tgs 的票据同时发给服务器&lt;/li&gt;
+&lt;li&gt;server_principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TGS 首先用自己的密码解开票据，拿到 SessionKey Kc,s，然后用 Kc,s 解开 Authenticator，并做如下检查&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查 Authenticator 中的时间戳是不是在当前时间上下 5 分钟以内，并且检查该时间戳是否首次出现。如果该时间戳不是第一次出现，那说明有人截获了之前客户端发送的内容，进行 Replay 攻击。&lt;/li&gt;
+&lt;li&gt;检查 checksum 是否正确&lt;/li&gt;
+&lt;li&gt;如果都正确，客户端就通过了认证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tgs 生成一个 session key 组装两个票据给客户端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用客户端和 tgs 的 session key 加密的票据，包含新生成的 session key 和 server_principal&lt;/li&gt;
+&lt;li&gt;用服务器的密码加密的票据，包括新生成的 session key 和 client principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端收到两个票据后，解开自己的，然后生成一个 Authenticator，发请求给服务器，内容包括&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authenticator&lt;/li&gt;
+&lt;li&gt;给服务器的票据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器收到请求后，用自己的密码解开票据，得到 session key，然后用 session key 解开 authenticator 对可无端进行验证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器可以选择返回一个用 session key 加密的之前的是时间戳来完成双向验证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;优缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优缺点&#34;&gt;#&lt;/a&gt; 优缺点&lt;/h1&gt;
+&lt;h2 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;密码不易被窃听&lt;/li&gt;
+&lt;li&gt;密码不在网上传输&lt;/li&gt;
+&lt;li&gt;密码猜测更困难&lt;/li&gt;
+&lt;li&gt;票据被盗之后难以使用，因为需要配合认证头来使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9852-缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9852-缺点&#34;&gt;#&lt;/a&gt; 9.8.5.2. 缺点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缺乏撤销机制&lt;/li&gt;
+&lt;li&gt;引入了复杂的密钥管理&lt;/li&gt;
+&lt;li&gt;需要时钟同步&lt;/li&gt;
+&lt;li&gt;伸缩性受限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;规范&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#规范&#34;&gt;#&lt;/a&gt; 规范&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzE1MTA=&#34;&gt;RFC 1510 The Kerberos Network Authentication Service&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2pld2VzL2FydGljbGUvZGV0YWlscy8yMDc5MjAyMQ==&#34;&gt;Kerberos 认证流程详解&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmxhY2toYXQuY29tL2RvY3MvYXNpYS0xNy9tYXRlcmlhbHMvYXNpYS0xNy1IYXJ0LURlbGVnYXRlLVRvLVRoZS1Ub3AtQWJ1c2luZy1LZXJiZXJvcy1Gb3ItQXJiaXRyYXJ5LUltcGVyc29uYXRpb25zLUFuZC1SQ0Utd3AucGRm&#34;&gt;Delegate to the Top: Abusing Kerberos for arbitrary impersonations and RCE&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvb3BlbnNwZWNzL3dpbmRvd3NfcHJvdG9jb2xzL21zLXNmdS8zYmZmNTg2NC04MTM1LTQwMGUtYmRkOS0zM2I1NTIwNTFkOTQ/cmVkaXJlY3RlZGZyb209TVNETg==&#34;&gt;Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcHJldmlvdXMtdmVyc2lvbnMvbXNwLW4tcC9mZjY0OTQyOSh2PXBhbmRwLjEwKQ==&#34;&gt;Kerberos Technical Supplement for Windows&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hZHNlY3VyaXR5Lm9yZy8/cD0yMjkz&#34;&gt;Cracking Kerberos TGS Tickets Using Kerberoast – Exploiting Kerberos to Compromise the Active Directory Domain&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="Kerberos认证" />
+        <updated>2022-12-06T03:20:53.000Z</updated>
+    </entry>
+</feed>

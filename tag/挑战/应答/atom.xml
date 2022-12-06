@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;挑战/应答&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-12-06T03:42:53.000Z</updated>
+    <category term="工具" />
+    <category term="安全" />
+    <category term="网络安全" />
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="虚拟机" />
+    <category term="法律法规" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="XSS" />
+    <category term="JWT" />
+    <category term="认证" />
+    <category term="挑战/应答" />
+    <category term="S/Key协议" />
+    <category term="权限设置" />
+    <category term="Kerberos认证" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="单点登录" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Windows" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="后门" />
+    <category term="渗透" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="Linux" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="内网" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/</id>
+        <title>挑战/应答机制</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/"/>
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/06/jfn73rPNgUbDIA5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#认证过程&#34;&gt;#&lt;/a&gt; 认证过程&lt;/h1&gt;
+&lt;p&gt;顾名思义，基于挑战 / 应答（Challenge/Response）方式的身份认证系统就是每次认证时认证服务器端都给客户端发送一个不同的 &amp;quot;挑战&amp;quot; 字串，客户端程序收到这个 &amp;quot;挑战&amp;quot; 字串后，做出相应的 &amp;quot;应答&amp;quot;, 以此机制而研制的系统。认证过程为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户向认证服务器发出请求，要求进行身份认证；&lt;/li&gt;
+&lt;li&gt;认证服务器从用户数据库中查询用户是否是合法的用户，若不是，则不做进一步处理；&lt;/li&gt;
+&lt;li&gt;认证服务器内部产生一个随机数，作为 &amp;quot;提问&amp;quot;，发送给客户；&lt;/li&gt;
+&lt;li&gt;客户将用户名字和随机数合并，使用单向 Hash 函数（例如 MD5 算法）生成一个字节串作为应答；&lt;/li&gt;
+&lt;li&gt;认证服务器将应答串与自己的计算结果比较，若二者相同，则通过一次认证；否则，认证失败；&lt;/li&gt;
+&lt;li&gt;认证服务器通知&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQUUlQTIlRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=&#34;&gt;客户认证&lt;/span&gt;成功或失败。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以后的认证由客户不定时地发起，过程中没有了客户认证请求一步。两次认证的时间间的密钥隔不能太短，否则就给网络、客户和认证服务器带来太大的开销；也不能太长，否则不能保证用户不被他人盗用 IP 地址，一般定为 1-2 分钟。&lt;/p&gt;
+&lt;h1 id=&#34;密钥的分配和管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密钥的分配和管理&#34;&gt;#&lt;/a&gt; 密钥的分配和管理&lt;/h1&gt;
+&lt;p&gt;密钥的分配由维护模块负责，当用户进行注册时，自行设定自己的口令字。用户由口令字生成。&lt;/p&gt;
+&lt;p&gt;一个口令字必须经过两次口令字检查。第一次由注册程序检查，强制口令字必须有足够的长度（如 8 个字符）。口令字被加密后送入数据库中，这个口令字标记为 &#39; 未检查的 &#39;。第二次，由离线的口令字&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlQTMlODAlRTYlOUYlQTUlRTUlQjclQTUlRTUlODUlQjc=&#34;&gt;检查工具&lt;/span&gt;进行检查，将&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQkMlQjElRTUlOEYlQTMlRTQlQkIlQTQ=&#34;&gt;弱口令&lt;/span&gt;字进行标记，当下一次&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclOTQlQTglRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=&#34;&gt;用户认证&lt;/span&gt;时，认证服务器将强制用户修改口令字。&lt;/p&gt;
+&lt;p&gt;密钥的在线修改由认证服务器完成，它的过程与认证过程基本类似。&lt;/p&gt;
+</content>
+        <category term="挑战/应答" />
+        <category term="S/Key协议" />
+        <updated>2022-12-06T03:42:53.000Z</updated>
+    </entry>
+</feed>

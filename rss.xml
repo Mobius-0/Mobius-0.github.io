@@ -5,15 +5,16 @@
         <link>https://mobius-0.github.io</link>
         <description>GLHF</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 05 Dec 2022 16:45:22 +0800</pubDate>
-        <lastBuildDate>Mon, 05 Dec 2022 16:45:22 +0800</lastBuildDate>
+        <pubDate>Tue, 06 Dec 2022 11:50:35 +0800</pubDate>
+        <lastBuildDate>Tue, 06 Dec 2022 11:50:35 +0800</lastBuildDate>
+        <category>工具</category>
+        <category>安全</category>
+        <category>网络安全</category>
         <category>Hexo</category>
         <category>shoya</category>
         <category>网站</category>
-        <category>网络安全</category>
-        <category>工具</category>
         <category>虚拟机</category>
-        <category>安全</category>
+        <category>法律法规</category>
         <category>星际争霸2</category>
         <category>平衡</category>
         <category>杂谈</category>
@@ -21,15 +22,21 @@
         <category>江南</category>
         <category>龙族</category>
         <category>动画</category>
-        <category>法律法规</category>
-        <category>XSS</category>
         <category>漏洞</category>
         <category>渗透测试</category>
         <category>靶场</category>
         <category>pikachu</category>
+        <category>XSS</category>
+        <category>JWT</category>
+        <category>认证</category>
+        <category>挑战/应答</category>
+        <category>S/Key协议</category>
+        <category>权限设置</category>
+        <category>Kerberos认证</category>
         <category>标准</category>
         <category>OCI</category>
         <category>CRI</category>
+        <category>单点登录</category>
         <category>HTTP</category>
         <category>计算机网络</category>
         <category>IPSec</category>
@@ -39,13 +46,15 @@
         <category>WiFi</category>
         <category>邮件</category>
         <category>网络协议</category>
-        <category>Linux</category>
-        <category>渗透</category>
-        <category>信息收集</category>
-        <category>痕迹清理</category>
         <category>Windows</category>
-        <category>内网</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
         <category>后门</category>
+        <category>渗透</category>
         <category>免杀</category>
         <category>代理</category>
         <category>Shell</category>
@@ -53,12 +62,14 @@
         <category>入侵检测</category>
         <category>IDS</category>
         <category>IPS</category>
-        <category>防御加固</category>
-        <category>管理策略</category>
+        <category>Linux</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
         <category>分工</category>
         <category>职能</category>
         <category>情报</category>
         <category>运营</category>
+        <category>开发过程</category>
         <category>应急响应</category>
         <category>流程</category>
         <category>攻击溯源</category>
@@ -67,12 +78,24 @@
         <category>蜜罐</category>
         <category>隐藏</category>
         <category>诱导</category>
-        <category>防御纵深</category>
-        <category>访问控制</category>
-        <category>过滤</category>
-        <category>框架</category>
+        <category>内网</category>
         <category>风险</category>
         <category>控制</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
         <category>CSRF</category>
         <category>服务器</category>
         <category>SQL注入</category>
@@ -94,33 +117,406 @@
         <category>IIS</category>
         <category>Apache</category>
         <category>Nginx</category>
-        <category>域名</category>
-        <category>DNS</category>
-        <category>WEB</category>
-        <category>虚拟化</category>
-        <category>Docker</category>
-        <category>镜像</category>
         <category>逻辑</category>
         <category>策略配置</category>
-        <category>ASP</category>
-        <category>CSharp</category>
-        <category>Golang</category>
-        <category>Java</category>
-        <category>语言</category>
-        <category>反序列化</category>
-        <category>混淆</category>
-        <category>沙箱</category>
-        <category>类</category>
-        <category>JDK</category>
-        <category>开发过程</category>
-        <category>JavaScript</category>
-        <category>PHP</category>
-        <category>PowerShell</category>
-        <category>Python</category>
-        <category>Ruby</category>
         <category>端口</category>
         <category>社会工程学</category>
         <category>搜索</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</guid>
+            <title>权限系统设计模型</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</link>
+            <category>权限设置</category>
+            <pubDate>Tue, 06 Dec 2022 11:50:35 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;常见的权限设计模式有以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自主访问控制 (Discretionary Access Control, DAC)&lt;/li&gt;
+&lt;li&gt;强制访问控制 (Mandatory Access Control, MAC)&lt;/li&gt;
+&lt;li&gt;基于角色的访问控制 (Role-Based Access Control, RBAC)&lt;/li&gt;
+&lt;li&gt;基于属性的权限验证 (Attribute-Based Access Control, ABAC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用的概念有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户：发起操作的主体&lt;/li&gt;
+&lt;li&gt;对象：发起操作的客体，即操作的对象&lt;/li&gt;
+&lt;li&gt;权限：用来指代对某对象的一种 / 一类操作&lt;/li&gt;
+&lt;li&gt;权限控制表 (Access Control List, ACL): 描述用户与权限之间关系的数据表&lt;/li&gt;
+&lt;li&gt;权限控制矩阵 (Access Control Matrix): 一套抽象、形式化的安全性模型。这套模型描述了电脑系统中的安全保护状态，各别表示其下的每个附属子体，对于系统中的每个对象，其所拥有的权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DAC 根据 ACL 的信息来决定用户是否能对某个对象进行操作。而拥有某个对象权限的用户，又可以将该对象的权限分配给其他用户，所以这种模型被称为自主（Discretionary）访问控制。&lt;/p&gt;
+&lt;p&gt;由于 DAC 权限控制较为分散，每个用户和对象都有一些权限标识，所以引入了 MAC 。每个用户和对象都有权限标识，用户是否能操作取决于双方的权限标识关系。这种方式不能灵活的授权，适合权限控制较为严格的场景。&lt;/p&gt;
+&lt;p&gt;RBAC 则是迄今为止最为普及的权限设计模型，它引入了角色 (Role) 的概念。 每个用户可以关联一个或多个角色，每个角色也可以关联一个或多个权限。 当需要新的权限配置时，可以根据需求灵活创建角色。&lt;/p&gt;
+&lt;p&gt;不同于 RBAC 按角色进行关联， ABAC 根据属性进行关联。通常来说，属性分为几类：用户属性、环境属性（例如时间）、操作属性（当前操作）、对象属性。ABAC 则通过动态计算一个或一组属性来是否满足对应条件来进行授权判断。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/</guid>
+            <title>挑战/应答机制</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/</link>
+            <category>挑战/应答</category>
+            <category>S/Key协议</category>
+            <pubDate>Tue, 06 Dec 2022 11:42:53 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/06/jfn73rPNgUbDIA5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#认证过程&#34;&gt;#&lt;/a&gt; 认证过程&lt;/h1&gt;
+&lt;p&gt;顾名思义，基于挑战 / 应答（Challenge/Response）方式的身份认证系统就是每次认证时认证服务器端都给客户端发送一个不同的 &amp;quot;挑战&amp;quot; 字串，客户端程序收到这个 &amp;quot;挑战&amp;quot; 字串后，做出相应的 &amp;quot;应答&amp;quot;, 以此机制而研制的系统。认证过程为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户向认证服务器发出请求，要求进行身份认证；&lt;/li&gt;
+&lt;li&gt;认证服务器从用户数据库中查询用户是否是合法的用户，若不是，则不做进一步处理；&lt;/li&gt;
+&lt;li&gt;认证服务器内部产生一个随机数，作为 &amp;quot;提问&amp;quot;，发送给客户；&lt;/li&gt;
+&lt;li&gt;客户将用户名字和随机数合并，使用单向 Hash 函数（例如 MD5 算法）生成一个字节串作为应答；&lt;/li&gt;
+&lt;li&gt;认证服务器将应答串与自己的计算结果比较，若二者相同，则通过一次认证；否则，认证失败；&lt;/li&gt;
+&lt;li&gt;认证服务器通知&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQUUlQTIlRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=&#34;&gt;客户认证&lt;/span&gt;成功或失败。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以后的认证由客户不定时地发起，过程中没有了客户认证请求一步。两次认证的时间间的密钥隔不能太短，否则就给网络、客户和认证服务器带来太大的开销；也不能太长，否则不能保证用户不被他人盗用 IP 地址，一般定为 1-2 分钟。&lt;/p&gt;
+&lt;h1 id=&#34;密钥的分配和管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密钥的分配和管理&#34;&gt;#&lt;/a&gt; 密钥的分配和管理&lt;/h1&gt;
+&lt;p&gt;密钥的分配由维护模块负责，当用户进行注册时，自行设定自己的口令字。用户由口令字生成。&lt;/p&gt;
+&lt;p&gt;一个口令字必须经过两次口令字检查。第一次由注册程序检查，强制口令字必须有足够的长度（如 8 个字符）。口令字被加密后送入数据库中，这个口令字标记为 &#39; 未检查的 &#39;。第二次，由离线的口令字&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlQTMlODAlRTYlOUYlQTUlRTUlQjclQTUlRTUlODUlQjc=&#34;&gt;检查工具&lt;/span&gt;进行检查，将&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQkMlQjElRTUlOEYlQTMlRTQlQkIlQTQ=&#34;&gt;弱口令&lt;/span&gt;字进行标记，当下一次&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclOTQlQTglRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=&#34;&gt;用户认证&lt;/span&gt;时，认证服务器将强制用户修改口令字。&lt;/p&gt;
+&lt;p&gt;密钥的在线修改由认证服务器完成，它的过程与认证过程基本类似。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/Kerberos/</guid>
+            <title>Kerberos</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/Kerberos/</link>
+            <category>Kerberos认证</category>
+            <pubDate>Tue, 06 Dec 2022 11:20:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Kerberos 协议起源于美国麻省理工学院 Athena 项目，基于公私钥加密体制，为分布式环境提供双向验证，在 RFC 1510 中被采纳，Kerberos 是 Windows 域环境中的默认身份验证协议。&lt;/p&gt;
+&lt;p&gt;简单地说，Kerberos 提供了一种单点登录 (Single Sign-On, SSO) 的方法。考虑这样一个场景，在一个网络中有不同的服务器，比如，打印服务器、邮件服务器和文件服务器。这些服务器都有认证的需求。很自然的，不可能让每个服务器自己实现一套认证系统，而是提供一个中心认证服务器 (Authentication Server, AS) 供这些服务器使用。这样任何客户端就只需维护一个密码就能登录所有服务器。&lt;/p&gt;
+&lt;p&gt;Kerberos 协议是一个基于票据 (Ticket) 的系统，在 Kerberos 系统中至少有三个角色：认证服务器 (AS)，客户端 (Client) 和普通服务器 (Server)。&lt;/p&gt;
+&lt;p&gt;认证服务器对用户进行验证，并发行供用户用来请求会话票据的 TGT (票据授予票据)。票据授予服务 (TGS) 在发行给客户的 TGT 的基础上，为网络服务发行 ST (会话票据)。&lt;/p&gt;
+&lt;p&gt;在 Kerberos 系统中，客户端和服务器都有一个唯一的名字，叫做 Principal。同时，客户端和服务器都有自己的密码，并且它们的密码只有自己和认证服务器 AS 知道。&lt;/p&gt;
+&lt;h1 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Principal (安全个体)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;被认证的个体，有一个名字 (name) 和口令 (password)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KDC (Key Distribution Center)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提供 ticket 和临时的会话密钥的网络服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ticket&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个记录，用户可以用它来向服务器证明自己的身份，其中包括用户的标识、会话密钥、时间戳，以及其他一些信息。Ticket 中的大多数信息都被加密，密钥为服务器的密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Authenticator&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个记录，其中包含一些最近产生的信息，产生这些信息需要用到用户和服务器之间共享的会话密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Credentials&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个 ticket 加上一个秘密的会话密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Authentication Server (AS)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 long-term key 认证用户&lt;/li&gt;
+&lt;li&gt;AS 给予用户 ticket granting ticket 和 short-term key&lt;/li&gt;
+&lt;li&gt;认证服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ticket Granting Server (TGS)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 short-term key 和 Ticket Granting Ticket 认证用户&lt;/li&gt;
+&lt;li&gt;TGS 发放 tickets 给用户以访问其他的服务器&lt;/li&gt;
+&lt;li&gt;授权和访问控制服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;简化的认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简化的认证过程&#34;&gt;#&lt;/a&gt; 简化的认证过程&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;客户端向服务器发起请求，请求内容是：客户端的 principal，服务器的 principal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AS 收到请求之后，随机生成一个密码 Kc, s (session key), 并生成以下两个票据返回给客户端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给客户端的票据，用客户端的密码加密，内容为随机密码，session，server_principal&lt;/li&gt;
+&lt;li&gt;给服务器端的票据，用服务器的密码加密，内容为随机密码，session，client_principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端拿到了第二步中的两个票据后，首先用自己的密码解开票据，得到 Kc、s，然后生成一个 Authenticator，其中主要包括当前时间和 Ts,c 的校验码，并且用 SessionKey Kc,s 加密。之后客户端将 Authenticator 和给 server 的票据同时发给服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器首先用自己的密码解开票据，拿到 SessionKey Kc,s，然后用 Kc,s 解开 Authenticator，并做如下检查&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查 Authenticator 中的时间戳是不是在当前时间上下 5 分钟以内，并且检查该时间戳是否首次出现。如果该时间戳不是第一次出现，那说明有人截获了之前客户端发送的内容，进行 Replay 攻击。&lt;/li&gt;
+&lt;li&gt;检查 checksum 是否正确&lt;/li&gt;
+&lt;li&gt;如果都正确，客户端就通过了认证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器段可选择性地给客户端回复一条消息来完成双向认证，内容为用 session key 加密的时间戳&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;完整的认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#完整的认证过程&#34;&gt;#&lt;/a&gt; 完整的认证过程&lt;/h1&gt;
+&lt;p&gt;上方介绍的流程已经能够完成客户端和服务器的相互认证。但是，比较不方便的是每次认证都需要客户端输入自己的密码。&lt;/p&gt;
+&lt;p&gt;因此在 Kerberos 系统中，引入了一个新的角色叫做：票据授权服务 (TGS - Ticket Granting Service)，它的地位类似于一个普通的服务器，只是它提供的服务是为客户端发放用于和其他服务器认证的票据。&lt;/p&gt;
+&lt;p&gt;这样，Kerberos 系统中就有四个角色：认证服务器 (AS)，客户端 (Client)，普通服务器 (Server) 和票据授权服务 (TGS)。这样客户端初次和服务器通信的认证流程分成了以下 6 个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;客户端向 AS 发起请求，请求内容是：客户端的 principal，票据授权服务器的 rincipal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AS 收到请求之后，随机生成一个密码 Kc, s (session key), 并生成以下两个票据返回给客户端：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给客户端的票据，用客户端的密码加密，内容为随机密码，session，tgs_principal&lt;/li&gt;
+&lt;li&gt;给 tgs 的票据，用 tgs 的密码加密，内容为随机密码，session，client_principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端拿到了第二步中的两个票据后，首先用自己的密码解开票据，得到 Kc、s，然后生成一个 Authenticator，其中主要包括当前时间和 Ts,c 的校验码，并且用 SessionKey Kc,s 加密。之后客户端向 tgs 发起请求，内容包括:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authenticator&lt;/li&gt;
+&lt;li&gt;给 tgs 的票据同时发给服务器&lt;/li&gt;
+&lt;li&gt;server_principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TGS 首先用自己的密码解开票据，拿到 SessionKey Kc,s，然后用 Kc,s 解开 Authenticator，并做如下检查&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查 Authenticator 中的时间戳是不是在当前时间上下 5 分钟以内，并且检查该时间戳是否首次出现。如果该时间戳不是第一次出现，那说明有人截获了之前客户端发送的内容，进行 Replay 攻击。&lt;/li&gt;
+&lt;li&gt;检查 checksum 是否正确&lt;/li&gt;
+&lt;li&gt;如果都正确，客户端就通过了认证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tgs 生成一个 session key 组装两个票据给客户端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用客户端和 tgs 的 session key 加密的票据，包含新生成的 session key 和 server_principal&lt;/li&gt;
+&lt;li&gt;用服务器的密码加密的票据，包括新生成的 session key 和 client principal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端收到两个票据后，解开自己的，然后生成一个 Authenticator，发请求给服务器，内容包括&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authenticator&lt;/li&gt;
+&lt;li&gt;给服务器的票据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器收到请求后，用自己的密码解开票据，得到 session key，然后用 session key 解开 authenticator 对可无端进行验证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器可以选择返回一个用 session key 加密的之前的是时间戳来完成双向验证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;客户端通过解开消息，比较发回的时间戳和自己发送的时间戳是否一致，来验证服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;优缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优缺点&#34;&gt;#&lt;/a&gt; 优缺点&lt;/h1&gt;
+&lt;h2 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;密码不易被窃听&lt;/li&gt;
+&lt;li&gt;密码不在网上传输&lt;/li&gt;
+&lt;li&gt;密码猜测更困难&lt;/li&gt;
+&lt;li&gt;票据被盗之后难以使用，因为需要配合认证头来使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9852-缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9852-缺点&#34;&gt;#&lt;/a&gt; 9.8.5.2. 缺点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缺乏撤销机制&lt;/li&gt;
+&lt;li&gt;引入了复杂的密钥管理&lt;/li&gt;
+&lt;li&gt;需要时钟同步&lt;/li&gt;
+&lt;li&gt;伸缩性受限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;h2 id=&#34;规范&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#规范&#34;&gt;#&lt;/a&gt; 规范&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzE1MTA=&#34;&gt;RFC 1510 The Kerberos Network Authentication Service&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2pld2VzL2FydGljbGUvZGV0YWlscy8yMDc5MjAyMQ==&#34;&gt;Kerberos 认证流程详解&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmxhY2toYXQuY29tL2RvY3MvYXNpYS0xNy9tYXRlcmlhbHMvYXNpYS0xNy1IYXJ0LURlbGVnYXRlLVRvLVRoZS1Ub3AtQWJ1c2luZy1LZXJiZXJvcy1Gb3ItQXJiaXRyYXJ5LUltcGVyc29uYXRpb25zLUFuZC1SQ0Utd3AucGRm&#34;&gt;Delegate to the Top: Abusing Kerberos for arbitrary impersonations and RCE&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvb3BlbnNwZWNzL3dpbmRvd3NfcHJvdG9jb2xzL21zLXNmdS8zYmZmNTg2NC04MTM1LTQwMGUtYmRkOS0zM2I1NTIwNTFkOTQ/cmVkaXJlY3RlZGZyb209TVNETg==&#34;&gt;Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcHJldmlvdXMtdmVyc2lvbnMvbXNwLW4tcC9mZjY0OTQyOSh2PXBhbmRwLjEwKQ==&#34;&gt;Kerberos Technical Supplement for Windows&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hZHNlY3VyaXR5Lm9yZy8/cD0yMjkz&#34;&gt;Cracking Kerberos TGS Tickets Using Kerberoast – Exploiting Kerberos to Compromise the Active Directory Domain&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/Windows%E8%AE%A4%E8%AF%81/</guid>
+            <title>Windows认证</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/Windows%E8%AE%A4%E8%AF%81/</link>
+            <category>认证</category>
+            <category>Windows</category>
+            <pubDate>Tue, 06 Dec 2022 11:18:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;本地用户认证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地用户认证&#34;&gt;#&lt;/a&gt; 本地用户认证&lt;/h1&gt;
+&lt;p&gt;Windows 在进行本地登录认证时操作系统会使用用户输入的密码作为凭证去与系统中的密码进行对比验证。通过  &lt;code&gt;winlogon.exe&lt;/code&gt;  接收用户输入传递至  &lt;code&gt;lsass.exe&lt;/code&gt;  进行认证。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winlogon.exe&lt;/code&gt;  用于在用户注销、重启、锁屏后显示登录界面。  &lt;code&gt;lsass.exe&lt;/code&gt;  用于将明文密码变成 NTLM Hash 的形式与 SAM 数据库比较认证。&lt;/p&gt;
+&lt;h1 id=&#34;sam&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sam&#34;&gt;#&lt;/a&gt; SAM&lt;/h1&gt;
+&lt;p&gt;安全帐户管理器 (Security Accounts Manager，SAM) 是 Windows 操作系统管理用户帐户的安全所使用的一种机制。用来存储 Windows 操作系统密码的数据库文件为了避免明文密码泄漏 SAM 文件中保存的是明文密码在经过一系列算法处理过的 Hash 值被保存的 Hash 分为 LM Hash、NTLM Hash。当用户进行身份认证时会将输入的 Hash 值与 SAM 文件中保存的 Hash 值进行对比。&lt;/p&gt;
+&lt;p&gt;SAM 文件保存于  &lt;code&gt;%SystemRoot%\system32\config\sam&lt;/code&gt;  中，在注册表中保存在  &lt;code&gt;HKEY_LOCAL_MACHINE\SAM\SAM&lt;/code&gt;  ，  &lt;code&gt;HKEY_LOCAL_MACHINE\SECURITY\SAM&lt;/code&gt;  。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。&lt;/p&gt;
+&lt;h1 id=&#34;密码破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码破解&#34;&gt;#&lt;/a&gt; 密码破解&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;通过物理接触主机、启动其他操作系统来获取 Windows 分区上的  &lt;code&gt;%SystemRoot%\system32\config\sam&lt;/code&gt;  文件&lt;/li&gt;
+&lt;li&gt;获取  &lt;code&gt;%SystemRoot%\repair\sam._&lt;/code&gt;  文件。&lt;/li&gt;
+&lt;li&gt;使用工具从注册表中导出 SAM 散列值&lt;/li&gt;
+&lt;li&gt;从网络中嗅探分析 SMB 报文，从中获取密码散列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;spnego&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spnego&#34;&gt;#&lt;/a&gt; SPNEGO&lt;/h1&gt;
+&lt;p&gt;SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation) 是微软提供的一种使用 GSS-API 认证机制的安全协议，用于使 Webserver 共享 Windows Credentials，它扩展了 Kerberos。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/JWT/</guid>
+            <title>JWT</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/JWT/</link>
+            <category>JWT</category>
+            <pubDate>Tue, 06 Dec 2022 10:55:21 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于 JSON 的开放标准（(RFC 7519). 该 token 被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT 的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该 token 也可直接被用于认证，也可被加密。&lt;/p&gt;
+&lt;h1 id=&#34;构成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构成&#34;&gt;#&lt;/a&gt; 构成&lt;/h1&gt;
+&lt;p&gt;分为三个部分，分别为头部（Header）、声明（Claims，也可以称为负载 Payload）、证书（Signature），三个部分以英文句号 &lt;code&gt;.&lt;/code&gt;  隔开。其中 header 是声明的类型和加密使用的算法。下面是一个用 HS256 生成 JWT 的代码例子： &lt;code&gt;HMACSHA256(base64UrlEncode(header) + &amp;quot;.&amp;quot; +base64UrlEncode(payload),secret)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;头部（Header）:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;
+  &amp;quot;alg&amp;quot;:&amp;quot;HS256&amp;quot;,
+  &amp;quot;typ&amp;quot;:&amp;quot;JWT&amp;quot;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;alg：是说明这个 JWT 的签名使用的算法的参数，常见值用 HS256（默认），HS512 等，也可以为 None。HS256 表示 HMAC SHA256。&lt;br /&gt;
+typ：说明这个 token 的类型为 JWT&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;声明（Claims）:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;
+  &amp;quot;exp&amp;quot;: 1416471934,
+  &amp;quot;user_name&amp;quot;: &amp;quot;user&amp;quot;,
+  &amp;quot;scope&amp;quot;: [
+    &amp;quot;read&amp;quot;,
+    &amp;quot;write&amp;quot;
+  ],
+  &amp;quot;authorities&amp;quot;: [
+    &amp;quot;ROLE_ADMIN&amp;quot;,
+    &amp;quot;ROLE_USER&amp;quot;
+  ],
+  &amp;quot;jti&amp;quot;: &amp;quot;9bc92a44-0b1a-4c5e-be70-da52075b9a84&amp;quot;,
+  &amp;quot;client_id&amp;quot;: &amp;quot;my-client-with-secret&amp;quot;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JWT 固定参数有：&lt;br /&gt;
+iss：发行人&lt;br /&gt;
+ exp：到期时间&lt;br /&gt;
+ sub：主题&lt;br /&gt;
+ aud：用户&lt;br /&gt;
+ nbf：在此之前不可用&lt;br /&gt;
+ iat：发布时间&lt;br /&gt;
+ jti：JWT ID 用于标识该 JWT&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;签名（Signature）:&lt;br /&gt;
+ 服务器有一个不会发送给客户端的密码（secret），用头部中指定的算法对头部和声明的内容用此密码进行加密，生成的字符串就是 JWT 的签名。&lt;/p&gt;
+&lt;h1 id=&#34;安全问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全问题&#34;&gt;#&lt;/a&gt; 安全问题&lt;/h1&gt;
+&lt;h2 id=&#34;header部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#header部分&#34;&gt;#&lt;/a&gt; Header 部分&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;是否支持修改算法为 none / 对称加密算法&lt;/li&gt;
+&lt;li&gt;删除签名&lt;/li&gt;
+&lt;li&gt;插入错误信息&lt;/li&gt;
+&lt;li&gt;直接在 header 中加入新的公钥&lt;/li&gt;
+&lt;li&gt;kid 字段是否有 SQL 注入 / 命令注入 / 目录遍历&lt;/li&gt;
+&lt;li&gt;结合业务功能通过 kid 直接下载对应公私钥&lt;/li&gt;
+&lt;li&gt;是否强制使用白名单上的加密算法&lt;/li&gt;
+&lt;li&gt;JWKS 劫持&lt;/li&gt;
+&lt;li&gt;JKU (JWK Set URL) / X5U (X.509 URL) 注入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;payload部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#payload部分&#34;&gt;#&lt;/a&gt; Payload 部分&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;其中是否存在敏感信息&lt;/li&gt;
+&lt;li&gt;检查过期策略，比如  &lt;code&gt;exp&lt;/code&gt;  ,  &lt;code&gt;iat&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;signature部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#signature部分&#34;&gt;#&lt;/a&gt; Signature 部分&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;检查是否强制检查签名&lt;/li&gt;
+&lt;li&gt;密钥是否可以爆破&lt;/li&gt;
+&lt;li&gt;是否可以通过其他方式拿到密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;重放&lt;/li&gt;
+&lt;li&gt;通过匹配校验的时间做时间攻击&lt;/li&gt;
+&lt;li&gt;修改算法 RS256 为 HS256&lt;/li&gt;
+&lt;li&gt;弱密钥破解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hdXRoMC5jb20vYmxvZy8=&#34;&gt;Critical vulnerabilities in JSON Web Token libraries&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qd3QuaW8vI2VuY29kZWQtand0&#34;&gt;JWT CODE&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/SSO/</guid>
+            <title>SSO</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/SSO/</link>
+            <category>认证</category>
+            <category>单点登录</category>
+            <pubDate>Tue, 06 Dec 2022 10:51:21 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;单点登录 (SingleSignOn，SSO) 指一个用户可以通过单一的 ID 和凭证（密码）访问多个相关但彼此独立的系统。&lt;/p&gt;
+&lt;h2 id=&#34;常见流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见流程&#34;&gt;#&lt;/a&gt; 常见流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用户 (User) 向服务提供商 (Service Provider) 发起请求&lt;/li&gt;
+&lt;li&gt;SP 重定向 User 至 SSO 身份校验服务 (Identity Provider)&lt;/li&gt;
+&lt;li&gt;User 通过 IP 登录&lt;/li&gt;
+&lt;li&gt;IP 返回凭证给 User&lt;/li&gt;
+&lt;li&gt;User 将凭证发给 SP&lt;/li&gt;
+&lt;li&gt;SP 返回受保护的资源给用户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中凭证要有以下属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;签发者的签名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;凭证的身份&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用的时间&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;过期时间&lt;/li&gt;
+&lt;li&gt;生效时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;可能的攻击漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可能的攻击漏洞&#34;&gt;#&lt;/a&gt; 可能的攻击 / 漏洞&lt;/h1&gt;
+&lt;h2 id=&#34;信息泄漏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息泄漏&#34;&gt;#&lt;/a&gt; 信息泄漏&lt;/h2&gt;
+&lt;p&gt;若 SP 和 IP 之前使用明文传输信息，可能会被窃取。&lt;/p&gt;
+&lt;h2 id=&#34;伪造&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#伪造&#34;&gt;#&lt;/a&gt; 伪造&lt;/h2&gt;
+&lt;p&gt;如果在通信过程中没有对关键信息进行签名，容易被伪造。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/%E5%A4%9A%E5%9B%A0%E5%AD%90%E8%AE%A4%E8%AF%81/</guid>
+            <title>多因子认证</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/%E5%A4%9A%E5%9B%A0%E5%AD%90%E8%AE%A4%E8%AF%81/</link>
+            <category>认证</category>
+            <pubDate>Tue, 06 Dec 2022 10:49:21 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;多因子认证是在单因子认证不足以保证安全性时使用的方法，通常会引入多种方式对用户身份进行验证。身份验证方法可以基于知识的认证，即密码；也可以基于物品的认证，例如硬件密钥；也可以是基于特征的认证，例如包含指纹在内的生物特征等。&lt;/p&gt;
+&lt;p&gt;具体来说，目前常用的生物特征有：指纹、人脸、虹膜、静脉、声纹、体态等。常用的评价指标主要是速度（注册、识别使用的时间），精确度（假阳性、假阴性）等。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E6%BA%AF%E6%BA%90%E5%88%86%E6%9E%90/</guid>
             <title>溯源分析</title>
@@ -215,8 +611,8 @@
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/</guid>
             <title>应急响应</title>
             <link>https://mobius-0.github.io/security/WebNote/Defense%20techniques/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/</link>
-            <category>Linux</category>
             <category>Windows</category>
+            <category>Linux</category>
             <category>应急响应</category>
             <category>流程</category>
             <pubDate>Mon, 05 Dec 2022 16:40:15 +0800</pubDate>
@@ -1084,11 +1480,11 @@
             <guid isPermalink="true">https://mobius-0.github.io/security/pikachu/pikachu-xss/</guid>
             <title>pikachu-XSS</title>
             <link>https://mobius-0.github.io/security/pikachu/pikachu-xss/</link>
-            <category>XSS</category>
             <category>漏洞</category>
             <category>渗透测试</category>
             <category>靶场</category>
             <category>pikachu</category>
+            <category>XSS</category>
             <pubDate>Sat, 03 Dec 2022 20:20:55 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;反射型xssget&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反射型xssget&#34;&gt;#&lt;/a&gt; 反射型 XSS（get）&lt;/h1&gt;
 &lt;h2 id=&#34;过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过程&#34;&gt;#&lt;/a&gt; 过程&lt;/h2&gt;
@@ -2078,8 +2474,8 @@ nc.exe -e cmd.exe -lp 1234
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E5%90%8E%E9%97%A8%E6%8A%80%E6%9C%AF/</guid>
             <title>后门技术</title>
             <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/%E5%90%8E%E9%97%A8%E6%8A%80%E6%9C%AF/</link>
-            <category>渗透</category>
             <category>后门</category>
+            <category>渗透</category>
             <category>免杀</category>
             <pubDate>Tue, 29 Nov 2022 15:45:20 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;开发技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开发技术&#34;&gt;#&lt;/a&gt; 开发技术&lt;/h1&gt;
@@ -2227,8 +2623,8 @@ nc.exe -e cmd.exe -lp 1234
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
             <title>Linux内网渗透</title>
             <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Linux%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</link>
-            <category>Linux</category>
             <category>渗透</category>
+            <category>Linux</category>
             <category>信息收集</category>
             <category>痕迹清理</category>
             <pubDate>Mon, 28 Nov 2022 21:35:20 +0800</pubDate>
@@ -2556,10 +2952,10 @@ nc.exe -e cmd.exe -lp 1234
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</guid>
             <title>Windows内网渗透</title>
             <link>https://mobius-0.github.io/security/WebNote/Intranet%20penetration/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</link>
+            <category>Windows</category>
             <category>渗透</category>
             <category>信息收集</category>
             <category>痕迹清理</category>
-            <category>Windows</category>
             <pubDate>Mon, 28 Nov 2022 11:20:20 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;h2 id=&#34;基本命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本命令&#34;&gt;#&lt;/a&gt; 基本命令&lt;/h2&gt;
@@ -3519,8 +3915,8 @@ nc.exe -e cmd.exe -lp 1234
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Shell/</guid>
             <title>Shell</title>
             <link>https://mobius-0.github.io/security/WebNote/Languages%20and%20Frameworks/Shell/</link>
-            <category>Linux</category>
             <category>Shell</category>
+            <category>Linux</category>
             <pubDate>Mon, 28 Nov 2022 10:48:11 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;Shell 是一个特殊的程序，是用户使用 Linux 的桥梁。Shell 既是一种命令，又是一种程序设计语言。&lt;/p&gt;
@@ -6803,8 +7199,8 @@ curl -vvv &#39;gopher://127.0.0.1:6379/_*1%0d%0a$8%0d%0aflushall%0d%0a*3%0d%0a$3
             <title>XSS</title>
             <link>https://mobius-0.github.io/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/</link>
             <category>网络安全</category>
-            <category>XSS</category>
             <category>漏洞</category>
+            <category>XSS</category>
             <pubDate>Sat, 26 Nov 2022 11:55:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h1&gt;
 &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
@@ -8995,8 +9391,8 @@ set global general_log = off;
             <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/</guid>
             <title>域名信息</title>
             <link>https://mobius-0.github.io/security/WebNote/information%20gathering/domain%20information/</link>
-            <category>信息收集</category>
             <category>域名</category>
+            <category>信息收集</category>
             <category>搜索</category>
             <pubDate>Fri, 25 Nov 2022 16:54:06 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;whois&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#whois&#34;&gt;#&lt;/a&gt; Whois&lt;/h1&gt;
@@ -10429,8 +10825,8 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
             <guid isPermalink="true">https://mobius-0.github.io/security/VMware/</guid>
             <title>虚拟机安装</title>
             <link>https://mobius-0.github.io/security/VMware/</link>
-            <category>网络安全</category>
             <category>工具</category>
+            <category>网络安全</category>
             <category>虚拟机</category>
             <pubDate>Wed, 23 Nov 2022 10:52:33 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;关于虚拟化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于虚拟化&#34;&gt;#&lt;/a&gt; 关于虚拟化&lt;/h1&gt;
@@ -10551,131 +10947,11 @@ ZF3NU-D6XEJ-48E7Q-27YNC-PC8ED
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://mobius-0.github.io/security/tools-1/</guid>
-            <title>工具集（长期更新……大概？）</title>
-            <link>https://mobius-0.github.io/security/tools-1/</link>
-            <category>网络安全</category>
-            <category>工具</category>
-            <pubDate>Wed, 16 Nov 2022 19:28:43 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Burp suite&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Wireshark&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;实用的网络抓包分析软件&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;WinHex&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;masscan&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;nmap&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;但是通常都很慢&lt;/span&gt; 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;sqlmap&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;VirtualBox&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;VMware Workstation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;Adobe Photoshop&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;常用的图像处理软件&lt;/p&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;Adobe Audition&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;常用的音频处理软件&lt;/p&gt;
-&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;AntSword&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开源的跨平台网站管理工具&lt;/p&gt;
-&lt;ol start=&#34;12&#34;&gt;
-&lt;li&gt;IDA Pro&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款功能丰富的跨平台多处理器反汇编程序和调试器&lt;/p&gt;
-&lt;ol start=&#34;13&#34;&gt;
-&lt;li&gt;Elcomsoft Forensic Disk Decryptor&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。&lt;/p&gt;
-&lt;ol start=&#34;14&#34;&gt;
-&lt;li&gt;Elcomsoft Wireless Security Auditor&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码&lt;/p&gt;
-&lt;ol start=&#34;15&#34;&gt;
-&lt;li&gt;Advanced Archive Password Recovery&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件&lt;/p&gt;
-&lt;ol start=&#34;16&#34;&gt;
-&lt;li&gt;Notepad++&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;功能强大的记事本 max pro plus（bushi）&lt;/p&gt;
-&lt;h1 id=&#34;浏览器插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浏览器插件&#34;&gt;#&lt;/a&gt; 浏览器插件&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Tamermonkey&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Wappalyzer&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Shodan&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;FoxyProxy&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Firefox 浏览器上的一款代理管理工具&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Proxy SwitchyOmega&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款代理管理插件，可轻松快捷地管理和切换多个代理设置&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;HackBar&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Firefox 浏览器上的一款网站 URL 渗透工具&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;Flagfox&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Firefox 浏览器上的一款显示当前服务器位置国旗的插件&lt;/p&gt;
-&lt;h1 id=&#34;搜索引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎&#34;&gt;#&lt;/a&gt; 搜索引擎&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;fofa&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb2ZhLmluZm8v&#34;&gt;FOFA&lt;/span&gt; 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Zoomeye&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv&#34;&gt;ZoomEye&lt;/span&gt;（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;shodan&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==&#34;&gt;shodan&lt;/span&gt; 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;360quake&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=&#34;&gt;360 QUAKE Vscan&lt;/span&gt; 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://mobius-0.github.io/security/tools/</guid>
             <title>渗透测试工具收集</title>
             <link>https://mobius-0.github.io/security/tools/</link>
-            <category>网络安全</category>
             <category>工具</category>
+            <category>网络安全</category>
             <pubDate>Wed, 16 Nov 2022 19:28:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;h2 id=&#34;综合工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#综合工具&#34;&gt;#&lt;/a&gt; 综合工具&lt;/h2&gt;
@@ -11317,6 +11593,126 @@ Lynis 是 Unix/Linux 系统用于软件补丁管理，恶意软件扫描和漏�
 &lt;p&gt;一个简单的集成化渗透测试工具，该工具在于帮助您更好的完成渗透测试&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0Vyb3Npb24yMDIwL1NwYWNlQ29yZQ==&#34;&gt;https://github.com/Erosion2020/SpaceCore&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/tools-1/</guid>
+            <title>工具集（长期更新……大概？）</title>
+            <link>https://mobius-0.github.io/security/tools-1/</link>
+            <category>工具</category>
+            <category>网络安全</category>
+            <pubDate>Wed, 16 Nov 2022 19:28:43 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Burp suite&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Wireshark&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实用的网络抓包分析软件&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;WinHex&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;masscan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;nmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;但是通常都很慢&lt;/span&gt; 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;sqlmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;VirtualBox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;VMware Workstation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Adobe Photoshop&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的图像处理软件&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;Adobe Audition&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的音频处理软件&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;AntSword&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的跨平台网站管理工具&lt;/p&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;IDA Pro&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款功能丰富的跨平台多处理器反汇编程序和调试器&lt;/p&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Elcomsoft Forensic Disk Decryptor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。&lt;/p&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;Elcomsoft Wireless Security Auditor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码&lt;/p&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;Advanced Archive Password Recovery&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件&lt;/p&gt;
+&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;Notepad++&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;功能强大的记事本 max pro plus（bushi）&lt;/p&gt;
+&lt;h1 id=&#34;浏览器插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浏览器插件&#34;&gt;#&lt;/a&gt; 浏览器插件&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Tamermonkey&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Wappalyzer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Shodan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;FoxyProxy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款代理管理工具&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Proxy SwitchyOmega&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款代理管理插件，可轻松快捷地管理和切换多个代理设置&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;HackBar&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款网站 URL 渗透工具&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Flagfox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款显示当前服务器位置国旗的插件&lt;/p&gt;
+&lt;h1 id=&#34;搜索引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎&#34;&gt;#&lt;/a&gt; 搜索引擎&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;fofa&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb2ZhLmluZm8v&#34;&gt;FOFA&lt;/span&gt; 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Zoomeye&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv&#34;&gt;ZoomEye&lt;/span&gt;（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;shodan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==&#34;&gt;shodan&lt;/span&gt; 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;360quake&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=&#34;&gt;360 QUAKE Vscan&lt;/span&gt; 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险&lt;/p&gt;
  ]]></description>
         </item>
         <item>

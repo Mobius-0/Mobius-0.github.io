@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;s/key协议&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 06 Dec 2022 11:42:53 +0800</pubDate>
+        <lastBuildDate>Tue, 06 Dec 2022 11:42:53 +0800</lastBuildDate>
+        <category>工具</category>
+        <category>安全</category>
+        <category>网络安全</category>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>虚拟机</category>
+        <category>法律法规</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>XSS</category>
+        <category>JWT</category>
+        <category>认证</category>
+        <category>挑战/应答</category>
+        <category>S/Key协议</category>
+        <category>权限设置</category>
+        <category>Kerberos认证</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>单点登录</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Windows</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>后门</category>
+        <category>渗透</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>Linux</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>内网</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/</guid>
+            <title>挑战/应答机制</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/</link>
+            <category>挑战/应答</category>
+            <category>S/Key协议</category>
+            <pubDate>Tue, 06 Dec 2022 11:42:53 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2022/12/06/jfn73rPNgUbDIA5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;认证过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#认证过程&#34;&gt;#&lt;/a&gt; 认证过程&lt;/h1&gt;
+&lt;p&gt;顾名思义，基于挑战 / 应答（Challenge/Response）方式的身份认证系统就是每次认证时认证服务器端都给客户端发送一个不同的 &amp;quot;挑战&amp;quot; 字串，客户端程序收到这个 &amp;quot;挑战&amp;quot; 字串后，做出相应的 &amp;quot;应答&amp;quot;, 以此机制而研制的系统。认证过程为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户向认证服务器发出请求，要求进行身份认证；&lt;/li&gt;
+&lt;li&gt;认证服务器从用户数据库中查询用户是否是合法的用户，若不是，则不做进一步处理；&lt;/li&gt;
+&lt;li&gt;认证服务器内部产生一个随机数，作为 &amp;quot;提问&amp;quot;，发送给客户；&lt;/li&gt;
+&lt;li&gt;客户将用户名字和随机数合并，使用单向 Hash 函数（例如 MD5 算法）生成一个字节串作为应答；&lt;/li&gt;
+&lt;li&gt;认证服务器将应答串与自己的计算结果比较，若二者相同，则通过一次认证；否则，认证失败；&lt;/li&gt;
+&lt;li&gt;认证服务器通知&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQUUlQTIlRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=&#34;&gt;客户认证&lt;/span&gt;成功或失败。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以后的认证由客户不定时地发起，过程中没有了客户认证请求一步。两次认证的时间间的密钥隔不能太短，否则就给网络、客户和认证服务器带来太大的开销；也不能太长，否则不能保证用户不被他人盗用 IP 地址，一般定为 1-2 分钟。&lt;/p&gt;
+&lt;h1 id=&#34;密钥的分配和管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密钥的分配和管理&#34;&gt;#&lt;/a&gt; 密钥的分配和管理&lt;/h1&gt;
+&lt;p&gt;密钥的分配由维护模块负责，当用户进行注册时，自行设定自己的口令字。用户由口令字生成。&lt;/p&gt;
+&lt;p&gt;一个口令字必须经过两次口令字检查。第一次由注册程序检查，强制口令字必须有足够的长度（如 8 个字符）。口令字被加密后送入数据库中，这个口令字标记为 &#39; 未检查的 &#39;。第二次，由离线的口令字&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlQTMlODAlRTYlOUYlQTUlRTUlQjclQTUlRTUlODUlQjc=&#34;&gt;检查工具&lt;/span&gt;进行检查，将&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQkMlQjElRTUlOEYlQTMlRTQlQkIlQTQ=&#34;&gt;弱口令&lt;/span&gt;字进行标记，当下一次&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclOTQlQTglRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=&#34;&gt;用户认证&lt;/span&gt;时，认证服务器将强制用户修改口令字。&lt;/p&gt;
+&lt;p&gt;密钥的在线修改由认证服务器完成，它的过程与认证过程基本类似。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

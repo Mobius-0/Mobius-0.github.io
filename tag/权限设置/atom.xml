@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mobius-0.github.io</id>
+    <title>Khala • Posts by &#34;权限设置&#34; tag</title>
+    <link href="https://mobius-0.github.io" />
+    <updated>2022-12-06T03:50:35.000Z</updated>
+    <category term="工具" />
+    <category term="安全" />
+    <category term="网络安全" />
+    <category term="Hexo" />
+    <category term="shoya" />
+    <category term="网站" />
+    <category term="虚拟机" />
+    <category term="法律法规" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
+    <category term="漏洞" />
+    <category term="渗透测试" />
+    <category term="靶场" />
+    <category term="pikachu" />
+    <category term="XSS" />
+    <category term="JWT" />
+    <category term="认证" />
+    <category term="挑战/应答" />
+    <category term="S/Key协议" />
+    <category term="权限设置" />
+    <category term="Kerberos认证" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="单点登录" />
+    <category term="HTTP" />
+    <category term="计算机网络" />
+    <category term="IPSec" />
+    <category term="VPN" />
+    <category term="SSL" />
+    <category term="TLS" />
+    <category term="WiFi" />
+    <category term="邮件" />
+    <category term="网络协议" />
+    <category term="Windows" />
+    <category term="虚拟化" />
+    <category term="Docker" />
+    <category term="镜像" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
+    <category term="后门" />
+    <category term="渗透" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="入侵检测" />
+    <category term="IDS" />
+    <category term="IPS" />
+    <category term="Linux" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="分工" />
+    <category term="职能" />
+    <category term="情报" />
+    <category term="运营" />
+    <category term="开发过程" />
+    <category term="应急响应" />
+    <category term="流程" />
+    <category term="攻击溯源" />
+    <category term="分析模型" />
+    <category term="网络攻防" />
+    <category term="蜜罐" />
+    <category term="隐藏" />
+    <category term="诱导" />
+    <category term="内网" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="ASP" />
+    <category term="CSharp" />
+    <category term="Golang" />
+    <category term="Java" />
+    <category term="语言" />
+    <category term="反序列化" />
+    <category term="混淆" />
+    <category term="沙箱" />
+    <category term="类" />
+    <category term="JDK" />
+    <category term="JavaScript" />
+    <category term="PHP" />
+    <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
+    <category term="服务器" />
+    <category term="SQL注入" />
+    <category term="SSRF" />
+    <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
+    <category term="Xpath" />
+    <category term="注入" />
+    <category term="函数" />
+    <category term="绕过" />
+    <category term="遍历" />
+    <category term="包含" />
+    <category term="文件" />
+    <category term="目录" />
+    <category term="读取" />
+    <category term="上传" />
+    <category term="中间件" />
+    <category term="IIS" />
+    <category term="Apache" />
+    <category term="Nginx" />
+    <category term="逻辑" />
+    <category term="策略配置" />
+    <category term="端口" />
+    <category term="社会工程学" />
+    <category term="搜索" />
+    <category term="防御加固" />
+    <category term="管理策略" />
+    <category term="防御纵深" />
+    <category term="访问控制" />
+    <category term="过滤" />
+    <category term="框架" />
+    <entry>
+        <id>https://mobius-0.github.io/security/WebNote/Authentication/%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</id>
+        <title>权限系统设计模型</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/WebNote/Authentication/%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/"/>
+        <content type="html">&lt;p&gt;常见的权限设计模式有以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自主访问控制 (Discretionary Access Control, DAC)&lt;/li&gt;
+&lt;li&gt;强制访问控制 (Mandatory Access Control, MAC)&lt;/li&gt;
+&lt;li&gt;基于角色的访问控制 (Role-Based Access Control, RBAC)&lt;/li&gt;
+&lt;li&gt;基于属性的权限验证 (Attribute-Based Access Control, ABAC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用的概念有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户：发起操作的主体&lt;/li&gt;
+&lt;li&gt;对象：发起操作的客体，即操作的对象&lt;/li&gt;
+&lt;li&gt;权限：用来指代对某对象的一种 / 一类操作&lt;/li&gt;
+&lt;li&gt;权限控制表 (Access Control List, ACL): 描述用户与权限之间关系的数据表&lt;/li&gt;
+&lt;li&gt;权限控制矩阵 (Access Control Matrix): 一套抽象、形式化的安全性模型。这套模型描述了电脑系统中的安全保护状态，各别表示其下的每个附属子体，对于系统中的每个对象，其所拥有的权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DAC 根据 ACL 的信息来决定用户是否能对某个对象进行操作。而拥有某个对象权限的用户，又可以将该对象的权限分配给其他用户，所以这种模型被称为自主（Discretionary）访问控制。&lt;/p&gt;
+&lt;p&gt;由于 DAC 权限控制较为分散，每个用户和对象都有一些权限标识，所以引入了 MAC 。每个用户和对象都有权限标识，用户是否能操作取决于双方的权限标识关系。这种方式不能灵活的授权，适合权限控制较为严格的场景。&lt;/p&gt;
+&lt;p&gt;RBAC 则是迄今为止最为普及的权限设计模型，它引入了角色 (Role) 的概念。 每个用户可以关联一个或多个角色，每个角色也可以关联一个或多个权限。 当需要新的权限配置时，可以根据需求灵活创建角色。&lt;/p&gt;
+&lt;p&gt;不同于 RBAC 按角色进行关联， ABAC 根据属性进行关联。通常来说，属性分为几类：用户属性、环境属性（例如时间）、操作属性（当前操作）、对象属性。ABAC 则通过动态计算一个或一组属性来是否满足对应条件来进行授权判断。&lt;/p&gt;
+</content>
+        <category term="权限设置" />
+        <updated>2022-12-06T03:50:35.000Z</updated>
+    </entry>
+</feed>

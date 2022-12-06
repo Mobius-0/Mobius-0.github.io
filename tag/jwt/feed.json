@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"jwt\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Authentication/JWT/",
+            "url": "https://mobius-0.github.io/security/WebNote/Authentication/JWT/",
+            "title": "JWT",
+            "date_published": "2022-12-06T02:55:21.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于 JSON 的开放标准（(RFC 7519). 该 token 被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT 的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该 token 也可直接被用于认证，也可被加密。</p>\n<h1 id=\"构成\"><a class=\"anchor\" href=\"#构成\">#</a> 构成</h1>\n<p>分为三个部分，分别为头部（Header）、声明（Claims，也可以称为负载 Payload）、证书（Signature），三个部分以英文句号 <code>.</code>  隔开。其中 header 是声明的类型和加密使用的算法。下面是一个用 HS256 生成 JWT 的代码例子： <code>HMACSHA256(base64UrlEncode(header) + &quot;.&quot; +base64UrlEncode(payload),secret)</code></p>\n<p>头部（Header）:</p>\n<pre><code>&#123;\n  &quot;alg&quot;:&quot;HS256&quot;,\n  &quot;typ&quot;:&quot;JWT&quot;\n&#125;\n</code></pre>\n<blockquote>\n<p>alg：是说明这个 JWT 的签名使用的算法的参数，常见值用 HS256（默认），HS512 等，也可以为 None。HS256 表示 HMAC SHA256。<br />\ntyp：说明这个 token 的类型为 JWT</p>\n</blockquote>\n<p>声明（Claims）:</p>\n<pre><code>&#123;\n  &quot;exp&quot;: 1416471934,\n  &quot;user_name&quot;: &quot;user&quot;,\n  &quot;scope&quot;: [\n    &quot;read&quot;,\n    &quot;write&quot;\n  ],\n  &quot;authorities&quot;: [\n    &quot;ROLE_ADMIN&quot;,\n    &quot;ROLE_USER&quot;\n  ],\n  &quot;jti&quot;: &quot;9bc92a44-0b1a-4c5e-be70-da52075b9a84&quot;,\n  &quot;client_id&quot;: &quot;my-client-with-secret&quot;\n&#125;\n</code></pre>\n<blockquote>\n<p>JWT 固定参数有：<br />\niss：发行人<br />\n exp：到期时间<br />\n sub：主题<br />\n aud：用户<br />\n nbf：在此之前不可用<br />\n iat：发布时间<br />\n jti：JWT ID 用于标识该 JWT</p>\n</blockquote>\n<p>签名（Signature）:<br />\n 服务器有一个不会发送给客户端的密码（secret），用头部中指定的算法对头部和声明的内容用此密码进行加密，生成的字符串就是 JWT 的签名。</p>\n<h1 id=\"安全问题\"><a class=\"anchor\" href=\"#安全问题\">#</a> 安全问题</h1>\n<h2 id=\"header部分\"><a class=\"anchor\" href=\"#header部分\">#</a> Header 部分</h2>\n<ul>\n<li>是否支持修改算法为 none / 对称加密算法</li>\n<li>删除签名</li>\n<li>插入错误信息</li>\n<li>直接在 header 中加入新的公钥</li>\n<li>kid 字段是否有 SQL 注入 / 命令注入 / 目录遍历</li>\n<li>结合业务功能通过 kid 直接下载对应公私钥</li>\n<li>是否强制使用白名单上的加密算法</li>\n<li>JWKS 劫持</li>\n<li>JKU (JWK Set URL) / X5U (X.509 URL) 注入</li>\n</ul>\n<h2 id=\"payload部分\"><a class=\"anchor\" href=\"#payload部分\">#</a> Payload 部分</h2>\n<ul>\n<li>其中是否存在敏感信息</li>\n<li>检查过期策略，比如  <code>exp</code>  ,  <code>iat</code></li>\n</ul>\n<h2 id=\"signature部分\"><a class=\"anchor\" href=\"#signature部分\">#</a> Signature 部分</h2>\n<ul>\n<li>检查是否强制检查签名</li>\n<li>密钥是否可以爆破</li>\n<li>是否可以通过其他方式拿到密钥</li>\n</ul>\n<h2 id=\"其他\"><a class=\"anchor\" href=\"#其他\">#</a> 其他</h2>\n<ul>\n<li>重放</li>\n<li>通过匹配校验的时间做时间攻击</li>\n<li>修改算法 RS256 为 HS256</li>\n<li>弱密钥破解</li>\n</ul>\n<h1 id=\"参考链接\"><a class=\"anchor\" href=\"#参考链接\">#</a> 参考链接</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9hdXRoMC5jb20vYmxvZy8=\">Critical vulnerabilities in JSON Web Token libraries</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9qd3QuaW8vI2VuY29kZWQtand0\">JWT CODE</span></li>\n</ul>\n",
+            "tags": [
+                "JWT"
+            ]
+        }
+    ]
+}

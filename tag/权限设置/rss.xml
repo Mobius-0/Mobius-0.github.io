@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;权限设置&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 06 Dec 2022 11:50:35 +0800</pubDate>
+        <lastBuildDate>Tue, 06 Dec 2022 11:50:35 +0800</lastBuildDate>
+        <category>工具</category>
+        <category>安全</category>
+        <category>网络安全</category>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>虚拟机</category>
+        <category>法律法规</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>XSS</category>
+        <category>JWT</category>
+        <category>认证</category>
+        <category>挑战/应答</category>
+        <category>S/Key协议</category>
+        <category>权限设置</category>
+        <category>Kerberos认证</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>单点登录</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Windows</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>后门</category>
+        <category>渗透</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>Linux</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>内网</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</guid>
+            <title>权限系统设计模型</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</link>
+            <category>权限设置</category>
+            <pubDate>Tue, 06 Dec 2022 11:50:35 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;常见的权限设计模式有以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自主访问控制 (Discretionary Access Control, DAC)&lt;/li&gt;
+&lt;li&gt;强制访问控制 (Mandatory Access Control, MAC)&lt;/li&gt;
+&lt;li&gt;基于角色的访问控制 (Role-Based Access Control, RBAC)&lt;/li&gt;
+&lt;li&gt;基于属性的权限验证 (Attribute-Based Access Control, ABAC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用的概念有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户：发起操作的主体&lt;/li&gt;
+&lt;li&gt;对象：发起操作的客体，即操作的对象&lt;/li&gt;
+&lt;li&gt;权限：用来指代对某对象的一种 / 一类操作&lt;/li&gt;
+&lt;li&gt;权限控制表 (Access Control List, ACL): 描述用户与权限之间关系的数据表&lt;/li&gt;
+&lt;li&gt;权限控制矩阵 (Access Control Matrix): 一套抽象、形式化的安全性模型。这套模型描述了电脑系统中的安全保护状态，各别表示其下的每个附属子体，对于系统中的每个对象，其所拥有的权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DAC 根据 ACL 的信息来决定用户是否能对某个对象进行操作。而拥有某个对象权限的用户，又可以将该对象的权限分配给其他用户，所以这种模型被称为自主（Discretionary）访问控制。&lt;/p&gt;
+&lt;p&gt;由于 DAC 权限控制较为分散，每个用户和对象都有一些权限标识，所以引入了 MAC 。每个用户和对象都有权限标识，用户是否能操作取决于双方的权限标识关系。这种方式不能灵活的授权，适合权限控制较为严格的场景。&lt;/p&gt;
+&lt;p&gt;RBAC 则是迄今为止最为普及的权限设计模型，它引入了角色 (Role) 的概念。 每个用户可以关联一个或多个角色，每个角色也可以关联一个或多个权限。 当需要新的权限配置时，可以根据需求灵活创建角色。&lt;/p&gt;
+&lt;p&gt;不同于 RBAC 按角色进行关联， ABAC 根据属性进行关联。通常来说，属性分为几类：用户属性、环境属性（例如时间）、操作属性（当前操作）、对象属性。ABAC 则通过动态计算一个或一组属性来是否满足对应条件来进行授权判断。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

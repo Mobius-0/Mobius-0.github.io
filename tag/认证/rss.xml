@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Khala • Posts by &#34;认证&#34; tag</title>
+        <link>https://mobius-0.github.io</link>
+        <description>GLHF</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 06 Dec 2022 11:18:09 +0800</pubDate>
+        <lastBuildDate>Tue, 06 Dec 2022 11:18:09 +0800</lastBuildDate>
+        <category>工具</category>
+        <category>安全</category>
+        <category>网络安全</category>
+        <category>Hexo</category>
+        <category>shoya</category>
+        <category>网站</category>
+        <category>虚拟机</category>
+        <category>法律法规</category>
+        <category>星际争霸2</category>
+        <category>平衡</category>
+        <category>杂谈</category>
+        <category>小说</category>
+        <category>江南</category>
+        <category>龙族</category>
+        <category>动画</category>
+        <category>漏洞</category>
+        <category>渗透测试</category>
+        <category>靶场</category>
+        <category>pikachu</category>
+        <category>XSS</category>
+        <category>JWT</category>
+        <category>认证</category>
+        <category>挑战/应答</category>
+        <category>S/Key协议</category>
+        <category>权限设置</category>
+        <category>Kerberos认证</category>
+        <category>标准</category>
+        <category>OCI</category>
+        <category>CRI</category>
+        <category>单点登录</category>
+        <category>HTTP</category>
+        <category>计算机网络</category>
+        <category>IPSec</category>
+        <category>VPN</category>
+        <category>SSL</category>
+        <category>TLS</category>
+        <category>WiFi</category>
+        <category>邮件</category>
+        <category>网络协议</category>
+        <category>Windows</category>
+        <category>虚拟化</category>
+        <category>Docker</category>
+        <category>镜像</category>
+        <category>域名</category>
+        <category>DNS</category>
+        <category>WEB</category>
+        <category>后门</category>
+        <category>渗透</category>
+        <category>免杀</category>
+        <category>代理</category>
+        <category>Shell</category>
+        <category>远程连接</category>
+        <category>入侵检测</category>
+        <category>IDS</category>
+        <category>IPS</category>
+        <category>Linux</category>
+        <category>信息收集</category>
+        <category>痕迹清理</category>
+        <category>分工</category>
+        <category>职能</category>
+        <category>情报</category>
+        <category>运营</category>
+        <category>开发过程</category>
+        <category>应急响应</category>
+        <category>流程</category>
+        <category>攻击溯源</category>
+        <category>分析模型</category>
+        <category>网络攻防</category>
+        <category>蜜罐</category>
+        <category>隐藏</category>
+        <category>诱导</category>
+        <category>内网</category>
+        <category>风险</category>
+        <category>控制</category>
+        <category>ASP</category>
+        <category>CSharp</category>
+        <category>Golang</category>
+        <category>Java</category>
+        <category>语言</category>
+        <category>反序列化</category>
+        <category>混淆</category>
+        <category>沙箱</category>
+        <category>类</category>
+        <category>JDK</category>
+        <category>JavaScript</category>
+        <category>PHP</category>
+        <category>PowerShell</category>
+        <category>Python</category>
+        <category>Ruby</category>
+        <category>CSRF</category>
+        <category>服务器</category>
+        <category>SQL注入</category>
+        <category>SSRF</category>
+        <category>Cache</category>
+        <category>XXE</category>
+        <category>XML</category>
+        <category>Xpath</category>
+        <category>注入</category>
+        <category>函数</category>
+        <category>绕过</category>
+        <category>遍历</category>
+        <category>包含</category>
+        <category>文件</category>
+        <category>目录</category>
+        <category>读取</category>
+        <category>上传</category>
+        <category>中间件</category>
+        <category>IIS</category>
+        <category>Apache</category>
+        <category>Nginx</category>
+        <category>逻辑</category>
+        <category>策略配置</category>
+        <category>端口</category>
+        <category>社会工程学</category>
+        <category>搜索</category>
+        <category>防御加固</category>
+        <category>管理策略</category>
+        <category>防御纵深</category>
+        <category>访问控制</category>
+        <category>过滤</category>
+        <category>框架</category>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/Windows%E8%AE%A4%E8%AF%81/</guid>
+            <title>Windows认证</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/Windows%E8%AE%A4%E8%AF%81/</link>
+            <category>认证</category>
+            <category>Windows</category>
+            <pubDate>Tue, 06 Dec 2022 11:18:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;本地用户认证&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地用户认证&#34;&gt;#&lt;/a&gt; 本地用户认证&lt;/h1&gt;
+&lt;p&gt;Windows 在进行本地登录认证时操作系统会使用用户输入的密码作为凭证去与系统中的密码进行对比验证。通过  &lt;code&gt;winlogon.exe&lt;/code&gt;  接收用户输入传递至  &lt;code&gt;lsass.exe&lt;/code&gt;  进行认证。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;winlogon.exe&lt;/code&gt;  用于在用户注销、重启、锁屏后显示登录界面。  &lt;code&gt;lsass.exe&lt;/code&gt;  用于将明文密码变成 NTLM Hash 的形式与 SAM 数据库比较认证。&lt;/p&gt;
+&lt;h1 id=&#34;sam&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sam&#34;&gt;#&lt;/a&gt; SAM&lt;/h1&gt;
+&lt;p&gt;安全帐户管理器 (Security Accounts Manager，SAM) 是 Windows 操作系统管理用户帐户的安全所使用的一种机制。用来存储 Windows 操作系统密码的数据库文件为了避免明文密码泄漏 SAM 文件中保存的是明文密码在经过一系列算法处理过的 Hash 值被保存的 Hash 分为 LM Hash、NTLM Hash。当用户进行身份认证时会将输入的 Hash 值与 SAM 文件中保存的 Hash 值进行对比。&lt;/p&gt;
+&lt;p&gt;SAM 文件保存于  &lt;code&gt;%SystemRoot%\system32\config\sam&lt;/code&gt;  中，在注册表中保存在  &lt;code&gt;HKEY_LOCAL_MACHINE\SAM\SAM&lt;/code&gt;  ，  &lt;code&gt;HKEY_LOCAL_MACHINE\SECURITY\SAM&lt;/code&gt;  。 在正常情况下 SAM 文件处于锁定状态不可直接访问、复制、移动仅有 system 用户权限才可以读写该文件。&lt;/p&gt;
+&lt;h1 id=&#34;密码破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码破解&#34;&gt;#&lt;/a&gt; 密码破解&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;通过物理接触主机、启动其他操作系统来获取 Windows 分区上的  &lt;code&gt;%SystemRoot%\system32\config\sam&lt;/code&gt;  文件&lt;/li&gt;
+&lt;li&gt;获取  &lt;code&gt;%SystemRoot%\repair\sam._&lt;/code&gt;  文件。&lt;/li&gt;
+&lt;li&gt;使用工具从注册表中导出 SAM 散列值&lt;/li&gt;
+&lt;li&gt;从网络中嗅探分析 SMB 报文，从中获取密码散列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;spnego&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spnego&#34;&gt;#&lt;/a&gt; SPNEGO&lt;/h1&gt;
+&lt;p&gt;SPNEGO (SPNEGO: Simple and Protected GSS-API Negotiation) 是微软提供的一种使用 GSS-API 认证机制的安全协议，用于使 Webserver 共享 Windows Credentials，它扩展了 Kerberos。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/SSO/</guid>
+            <title>SSO</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/SSO/</link>
+            <category>认证</category>
+            <category>单点登录</category>
+            <pubDate>Tue, 06 Dec 2022 10:51:21 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;单点登录 (SingleSignOn，SSO) 指一个用户可以通过单一的 ID 和凭证（密码）访问多个相关但彼此独立的系统。&lt;/p&gt;
+&lt;h2 id=&#34;常见流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见流程&#34;&gt;#&lt;/a&gt; 常见流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用户 (User) 向服务提供商 (Service Provider) 发起请求&lt;/li&gt;
+&lt;li&gt;SP 重定向 User 至 SSO 身份校验服务 (Identity Provider)&lt;/li&gt;
+&lt;li&gt;User 通过 IP 登录&lt;/li&gt;
+&lt;li&gt;IP 返回凭证给 User&lt;/li&gt;
+&lt;li&gt;User 将凭证发给 SP&lt;/li&gt;
+&lt;li&gt;SP 返回受保护的资源给用户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中凭证要有以下属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;签发者的签名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;凭证的身份&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用的时间&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;过期时间&lt;/li&gt;
+&lt;li&gt;生效时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;可能的攻击漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可能的攻击漏洞&#34;&gt;#&lt;/a&gt; 可能的攻击 / 漏洞&lt;/h1&gt;
+&lt;h2 id=&#34;信息泄漏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息泄漏&#34;&gt;#&lt;/a&gt; 信息泄漏&lt;/h2&gt;
+&lt;p&gt;若 SP 和 IP 之前使用明文传输信息，可能会被窃取。&lt;/p&gt;
+&lt;h2 id=&#34;伪造&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#伪造&#34;&gt;#&lt;/a&gt; 伪造&lt;/h2&gt;
+&lt;p&gt;如果在通信过程中没有对关键信息进行签名，容易被伪造。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://mobius-0.github.io/security/WebNote/Authentication/%E5%A4%9A%E5%9B%A0%E5%AD%90%E8%AE%A4%E8%AF%81/</guid>
+            <title>多因子认证</title>
+            <link>https://mobius-0.github.io/security/WebNote/Authentication/%E5%A4%9A%E5%9B%A0%E5%AD%90%E8%AE%A4%E8%AF%81/</link>
+            <category>认证</category>
+            <pubDate>Tue, 06 Dec 2022 10:49:21 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;多因子认证是在单因子认证不足以保证安全性时使用的方法，通常会引入多种方式对用户身份进行验证。身份验证方法可以基于知识的认证，即密码；也可以基于物品的认证，例如硬件密钥；也可以是基于特征的认证，例如包含指纹在内的生物特征等。&lt;/p&gt;
+&lt;p&gt;具体来说，目前常用的生物特征有：指纹、人脸、虹膜、静脉、声纹、体态等。常用的评价指标主要是速度（注册、识别使用的时间），精确度（假阳性、假阴性）等。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

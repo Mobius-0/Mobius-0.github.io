@@ -23,8 +23,8 @@
             "date_published": "2022-11-28T02:48:11.000Z",
             "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>Shell 是一个特殊的程序，是用户使用 Linux 的桥梁。Shell 既是一种命令，又是一种程序设计语言。</p>\n<p>Linux 包含多种 Shell ，常见的有：</p>\n<ul>\n<li>Bourne Shell（ATT 的 Bourne 开发，名为 sh）</li>\n<li>Bourne Again Shell（/bin/bash）</li>\n<li>C Shell（Bill Joy 开发，名为 csh）</li>\n<li>K Shell（ATT 的 David G.koun 开发，名为 ksh）</li>\n<li>Z Shell（Paul Falstad 开发，名为 zsh）</li>\n</ul>\n<h1 id=\"元字符\"><a class=\"anchor\" href=\"#元字符\">#</a> 元字符</h1>\n<p>shell 一般会有一系列特殊字符，用来实现的一定的效果，这种字符被称为元字符（Meta），不同的 Shell 支持的元字符可能会不相同。</p>\n<p>常见的元字符如下：</p>\n<ul>\n<li><code>IFS</code>  由 &lt;space&gt; 或 &lt;tab&gt; 或 &lt;enter&gt; 三者之一组成</li>\n<li><code>CR</code>  由 &lt;enter&gt; 产生。</li>\n<li><code>=</code>  设定变量</li>\n<li><code>$</code>  作变量或运算替换</li>\n<li><code>&gt;</code>  重定向 stdout</li>\n<li><code>&gt;&gt;</code>  追加到文件</li>\n<li><code>&lt;</code>  重定向 stdin</li>\n<li><code>|</code>  命令管道</li>\n<li><code>&amp;</code>  后台执行命令</li>\n<li><code>;</code>  在前一个命令结束后，执行下一个命令</li>\n<li><code>&amp;&amp;</code>  在前一个命令未报错执行后，执行下一个命令</li>\n<li><code>||</code>  在前一个命令执行报错后，执行下一个命令</li>\n<li><code>'</code>  在单引号内的命令会保留原来的值</li>\n<li><code>&quot;</code>  在双引号内的命令会允许变量替换</li>\n<li><code>`</code>  在反引号内的内容会当成命令执行并替换</li>\n<li><code>()</code>  在子 Shell 中执行命令</li>\n<li><code>&#123;&#125;</code>  在当前 Shell 中执行命令</li>\n<li><code>~</code>  当前用户的主目录</li>\n<li><code>!number</code>  执行历史命令，如  <code>!1</code></li>\n</ul>\n<h1 id=\"通配符\"><a class=\"anchor\" href=\"#通配符\">#</a> 通配符</h1>\n<p>除元字符外，通配符（wildcard）也是 shell 中的一种特殊字符。当 shell 在参数中遇到了通配符时，shell 会将其当作路径或文件名去在磁盘上搜寻可能的匹配：若符合要求的匹配存在，则进行替换，否则就将该通配符作为一个普通字符直接传递。</p>\n<p>常见的通配符如下：</p>\n<ul>\n<li><code>*</code>  匹配 0 或多个字符</li>\n<li><code>?</code>  匹配任意一个字符</li>\n<li><code>[list]</code>  匹配 list 中的任意一个字符</li>\n<li><code>[!list]</code>  匹配除 list 外的任意一个字符</li>\n<li><code>[a-c]</code>  匹配 a-c 中的任意一个字符</li>\n<li><code>&#123;string1,string2,...&#125;</code>  分别匹配其中字符串</li>\n</ul>\n",
             "tags": [
-                "Linux",
-                "Shell"
+                "Shell",
+                "Linux"
             ]
         }
     ]

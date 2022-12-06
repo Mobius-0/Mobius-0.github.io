@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"s/key协议\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/",
+            "url": "https://mobius-0.github.io/security/WebNote/Authentication/%E6%8C%91%E6%88%98%E5%BA%94%E7%AD%94%E6%9C%BA%E5%88%B6/",
+            "title": "挑战/应答机制",
+            "date_published": "2022-12-06T03:42:53.000Z",
+            "content_html": "<p><img data-src=\"https://s2.loli.net/2022/12/06/jfn73rPNgUbDIA5.png\" alt=\"\" /></p>\n<h1 id=\"认证过程\"><a class=\"anchor\" href=\"#认证过程\">#</a> 认证过程</h1>\n<p>顾名思义，基于挑战 / 应答（Challenge/Response）方式的身份认证系统就是每次认证时认证服务器端都给客户端发送一个不同的 &quot;挑战&quot; 字串，客户端程序收到这个 &quot;挑战&quot; 字串后，做出相应的 &quot;应答&quot;, 以此机制而研制的系统。认证过程为：</p>\n<ol>\n<li>客户向认证服务器发出请求，要求进行身份认证；</li>\n<li>认证服务器从用户数据库中查询用户是否是合法的用户，若不是，则不做进一步处理；</li>\n<li>认证服务器内部产生一个随机数，作为 &quot;提问&quot;，发送给客户；</li>\n<li>客户将用户名字和随机数合并，使用单向 Hash 函数（例如 MD5 算法）生成一个字节串作为应答；</li>\n<li>认证服务器将应答串与自己的计算结果比较，若二者相同，则通过一次认证；否则，认证失败；</li>\n<li>认证服务器通知<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQUUlQTIlRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=\">客户认证</span>成功或失败。</li>\n</ol>\n<p>以后的认证由客户不定时地发起，过程中没有了客户认证请求一步。两次认证的时间间的密钥隔不能太短，否则就给网络、客户和认证服务器带来太大的开销；也不能太长，否则不能保证用户不被他人盗用 IP 地址，一般定为 1-2 分钟。</p>\n<h1 id=\"密钥的分配和管理\"><a class=\"anchor\" href=\"#密钥的分配和管理\">#</a> 密钥的分配和管理</h1>\n<p>密钥的分配由维护模块负责，当用户进行注册时，自行设定自己的口令字。用户由口令字生成。</p>\n<p>一个口令字必须经过两次口令字检查。第一次由注册程序检查，强制口令字必须有足够的长度（如 8 个字符）。口令字被加密后送入数据库中，这个口令字标记为 ' 未检查的 '。第二次，由离线的口令字<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlQTMlODAlRTYlOUYlQTUlRTUlQjclQTUlRTUlODUlQjc=\">检查工具</span>进行检查，将<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQkMlQjElRTUlOEYlQTMlRTQlQkIlQTQ=\">弱口令</span>字进行标记，当下一次<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclOTQlQTglRTYlODglQjclRTglQUUlQTQlRTglQUYlODE=\">用户认证</span>时，认证服务器将强制用户修改口令字。</p>\n<p>密钥的在线修改由认证服务器完成，它的过程与认证过程基本类似。</p>\n",
+            "tags": [
+                "挑战/应答",
+                "S/Key协议"
+            ]
+        }
+    ]
+}

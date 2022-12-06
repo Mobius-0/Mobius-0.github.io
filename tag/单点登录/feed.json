@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Khala • All posts by \"单点登录\" tag",
+    "description": "GLHF",
+    "home_page_url": "https://mobius-0.github.io",
+    "items": [
+        {
+            "id": "https://mobius-0.github.io/security/WebNote/Authentication/SSO/",
+            "url": "https://mobius-0.github.io/security/WebNote/Authentication/SSO/",
+            "title": "SSO",
+            "date_published": "2022-12-06T02:51:21.000Z",
+            "content_html": "<h1 id=\"简介\"><a class=\"anchor\" href=\"#简介\">#</a> 简介</h1>\n<p>单点登录 (SingleSignOn，SSO) 指一个用户可以通过单一的 ID 和凭证（密码）访问多个相关但彼此独立的系统。</p>\n<h2 id=\"常见流程\"><a class=\"anchor\" href=\"#常见流程\">#</a> 常见流程</h2>\n<ol>\n<li>用户 (User) 向服务提供商 (Service Provider) 发起请求</li>\n<li>SP 重定向 User 至 SSO 身份校验服务 (Identity Provider)</li>\n<li>User 通过 IP 登录</li>\n<li>IP 返回凭证给 User</li>\n<li>User 将凭证发给 SP</li>\n<li>SP 返回受保护的资源给用户</li>\n</ol>\n<p>其中凭证要有以下属性</p>\n<ul>\n<li>\n<p>签发者的签名</p>\n</li>\n<li>\n<p>凭证的身份</p>\n</li>\n<li>\n<p>使用的时间</p>\n<ul>\n<li>过期时间</li>\n<li>生效时间</li>\n</ul>\n</li>\n</ul>\n<h1 id=\"可能的攻击漏洞\"><a class=\"anchor\" href=\"#可能的攻击漏洞\">#</a> 可能的攻击 / 漏洞</h1>\n<h2 id=\"信息泄漏\"><a class=\"anchor\" href=\"#信息泄漏\">#</a> 信息泄漏</h2>\n<p>若 SP 和 IP 之前使用明文传输信息，可能会被窃取。</p>\n<h2 id=\"伪造\"><a class=\"anchor\" href=\"#伪造\">#</a> 伪造</h2>\n<p>如果在通信过程中没有对关键信息进行签名，容易被伪造。</p>\n",
+            "tags": [
+                "认证",
+                "单点登录"
+            ]
+        }
+    ]
+}

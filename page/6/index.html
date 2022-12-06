@@ -91,12 +91,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/yzjeotElGkmcJAq.png"></li>
-          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/OMa6wcNPYfL94Id.jpg"></li>
-          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/FQtaDGONeSCp7KE.jpg"></li>
-          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/iVIcWehQtdlNFma.png"></li>
-          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/AdwtiUynu5Jjcmq.png"></li>
-          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/6HE4WPtjxwpvUoA.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/LdM6nuy1WChDaVA.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/FsDRNzyW3YfCE2S.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/13/AxdIBGQtLV3iM2p.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/K9DNG5pBs4tJlQf.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/18/5aSQYebPJtixMyH.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2022/11/29/tAlUb2jw8qYMVhC.png"></li>
         </ul>
       </div>
     
@@ -123,7 +123,402 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/" itemprop="url" title="SSL&#x2F;TLS"><img data-src="https://s2.loli.net/2022/11/29/YNTkHlOtmzKLupR.png"></a>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/readfile/" itemprop="url" title="文件读取"><img data-src="https://s2.loli.net/2022/11/18/PO3njRwt9WQKEhl.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 20:49:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T20:49:44+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>334</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/readfile/" itemprop="url" title="文件读取">文件读取</a></h3>
+    <div class="excerpt">
+        考虑读取可能有敏感信息的文件
+
+用户目录下的敏感文件
+
+.bash_history
+.zsh_history
+.profile
+.bashrc
+.gitconfig
+.viminfopasswd
+
+应用的配置文件
+
+/etc/apache2/apache2.conf
+/etc/nginx/nginx.conf
+
+应用的日志文件
+
+/var/log/apache2/access.log
+/var/log/nginx/access.log
+
+站点目录下的敏感文件
+
+.svn/entries
+.git/HEAD
+WEB-INF/web.xml
+.htaccess
+
+特殊的备份文件
+
+.swp
+.sw...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Vulnerability-Attack-and-defense/" itemprop="url" title="常见漏洞攻防"><i class="ic i-flag"></i>常见漏洞攻防</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/readfile/" itemprop="url" title="文件读取" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/directory%20traversal/" itemprop="url" title="目录穿越"><img data-src="https://s2.loli.net/2022/11/18/bfuZReITBJPaij3.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 20:44:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T20:44:44+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>529</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/directory%20traversal/" itemprop="url" title="目录穿越">目录穿越</a></h3>
+    <div class="excerpt">
+        # 简介
+目录穿越（也被称为目录遍历 /directory traversal/path traversal）是通过使用 ../ 等目录控制序列或者文件的绝对路径来访问存储在文件系统上的任意文件和目录，特别是应用程序源代码、配置文件、重要的系统文件等。
+# 攻击载荷
+# URL 参数
+
+../
+..\
+..;/
+
+# Nginx Off by Slash
+
+https://vuln.site.com/files../
+
+# UNC Bypass
+
+\\localhost\c$\windows\win.ini
+
+# 过滤绕过
+
+单次替换
+
+...//
+
+URL 编码
+
+16 位 Unicode...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Vulnerability-Attack-and-defense/" itemprop="url" title="常见漏洞攻防"><i class="ic i-flag"></i>常见漏洞攻防</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/directory%20traversal/" itemprop="url" title="目录穿越" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/" itemprop="url" title="命令注入"><img data-src="https://s2.loli.net/2022/11/18/6eOZhx1loqbSkKR.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 17:30:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T17:30:44+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/" itemprop="url" title="命令注入">命令注入</a></h3>
+    <div class="excerpt">
+        # 简介
+命令注入通常因为指 Web 应用在服务器上拼接系统命令而造成的漏洞。
+该类漏洞通常出现在调用外部程序完成一些功能的情景下。比如一些 Web 管理界面的配置主机名 / IP / 掩码 / 网关、查看系统信息以及关闭重启等功能，或者一些站点提供如 ping、nslookup、提供发送邮件、转换图片等功能都可能出现该类漏洞。
+# 常见危险函数
+# PHP
+
+system
+exec
+passthru
+shell_exec
+popen
+proc_open
+
+# Python
+
+system
+popen
+subprocess.call
+spawn
+
+#...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Vulnerability-Attack-and-defense/" itemprop="url" title="常见漏洞攻防"><i class="ic i-flag"></i>常见漏洞攻防</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/command%20insert/" itemprop="url" title="命令注入" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/SSRF/" itemprop="url" title="SSRF"><img data-src="https://s2.loli.net/2022/11/18/jvlFgWqEysSuMPa.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 16:59:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T16:59:44+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>4.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>5 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/SSRF/" itemprop="url" title="SSRF">SSRF</a></h3>
+    <div class="excerpt">
+        # 简介
+服务端请求伪造（Server Side Request Forgery, SSRF）指的是攻击者在未能取得服务器所有权限时，利用服务器漏洞以服务器的身份发送一条构造好的请求给服务器所在内网。SSRF 攻击通常针对外部网络无法直接访问的内部系统。
+# 漏洞危害
+SSRF 可以对外网、服务器所在内网、本地进行端口扫描，攻击运行在内网或本地的应用，或者利用 File 协议读取本地文件。
+内网服务防御相对外网服务来说一般会较弱，甚至部分内网服务为了运维方便并没有对内网的访问设置权限验证，所以存在 SSRF 时，通常会造成较大的危害。
+# 利用方式
+SSRF...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Vulnerability-Attack-and-defense/" itemprop="url" title="常见漏洞攻防"><i class="ic i-flag"></i>常见漏洞攻防</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/SSRF/" itemprop="url" title="SSRF" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/" itemprop="url" title="CSRF"><img data-src="https://s2.loli.net/2022/11/27/gDzC4luvO9pMZBG.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 16:58:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T16:58:44+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/" itemprop="url" title="CSRF">CSRF</a></h3>
+    <div class="excerpt">
+        # 简介
+跨站请求伪造 (Cross-Site Request Forgery, CSRF)，也被称为 One Click Attack 或者 Session Riding ，通常缩写为 CSRF，是一种对网站的恶意利用。尽管听起来像 XSS，但它与 XSS 非常不同，XSS 利用站点内的信任用户，而 CSRF 则通过伪装来自受信任用户的请求来利用受信任的网站。
+# 分类
+# 资源包含
+资源包含是在大多数介绍 CSRF 概念的演示或基础课程中可能看到的类型。这种类型归结为控制 HTML 标签（例如...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Vulnerability-Attack-and-defense/" itemprop="url" title="常见漏洞攻防"><i class="ic i-flag"></i>常见漏洞攻防</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/CSRF/" itemprop="url" title="CSRF" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/" itemprop="url" title="WiFi"><img data-src="https://s2.loli.net/2022/11/18/EsYrivtPFDJU2BV.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 16:48:19">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T16:48:19+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>544</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/" itemprop="url" title="WiFi">WiFi</a></h3>
+    <div class="excerpt">
+        # 简介
+Wi-Fi 又称 “无线热点” 或 “无线网络”，是 Wi-Fi 联盟的商标，一个基于 IEEE 802.11 标准的无线局域网技术。
+# 攻击
+# 暴力破解
+WiFi 密码是基于预置的秘钥，可以通过抓取报文的方式在本地快速的批量进行密码爆破尝试。
+# 伪造热点
+AP 可以动态的广播自己，客户也可以主动发送探针请求。可以伪造 AP 发送对探针请求的响应包，来让客户端错误的识别。
+# 秘钥重装攻击
+该漏洞由 Vanhoef 发现。Wi-Fi 在握手时双方会更新秘钥，该攻击通过重放握手信息，令客户端重新安装相同的秘钥。
+# Dragonblood
+最新版的 WPA3...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Computer-Network-and-Protocol/" itemprop="url" title="计算机网络与协议"><i class="ic i-flag"></i>计算机网络与协议</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/WiFi/" itemprop="url" title="WiFi" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/" itemprop="url" title="IPSec"><img data-src="https://s2.loli.net/2022/11/29/Nc9sGEKdPOmxXL3.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-26 16:47:59">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-26T16:47:59+08:00">2022-11-26</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/" itemprop="url" title="IPSec">IPSec</a></h3>
+    <div class="excerpt">
+        # 简介
+IPsec（IP Security）是 IETF 制定的三层隧道加密协议，它为 Internet 上传输的数据提供了高质量的、可互操作的、基于密码学的安全保证。特定的通信方之间在 IP 层通过加密与数据源认证等方式，提供了以下的安全服务：
+
+数据机密性（Confidentiality）：IPsec 发送方在通过网络传输包前对包进行加密。
+数据完整性（Data Integrity）：IPsec 接收方对发送方发送来的包进行认证，以确保数据在传输过程中没有被篡改。
+数据来源认证（Data Authentication）：IPsec 在接收端可以认证发送 IPsec...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/security/WebNote/Computer-Network-and-Protocol/" itemprop="url" title="计算机网络与协议"><i class="ic i-flag"></i>计算机网络与协议</a>
+      </span>
+    </div>
+    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/IPSec/" itemprop="url" title="IPSec" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/SSL%E3%80%81TLS/" itemprop="url" title="SSL&#x2F;TLS"><img data-src="https://s2.loli.net/2022/11/29/kejoy1n3lvAXhpC.png"></a>
   </div>
   <div class="info">
     
@@ -167,7 +562,7 @@ SSL 最初的几个版本 (SSL 1.0、SSL2.0、SSL 3.0) 由网景公司设计和�
         
 <article class="item">
   <div class="cover">
-    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/" itemprop="url" title="XSS"><img data-src="https://s2.loli.net/2022/11/18/T8xpL5w2hfUtkCJ.jpg"></a>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/XSS/" itemprop="url" title="XSS"><img data-src="https://s2.loli.net/2022/11/18/EsYrivtPFDJU2BV.png"></a>
   </div>
   <div class="info">
     
@@ -213,7 +608,7 @@ XSS 全称为 Cross Site Scripting，为了和 CSS 分开简写为 XSS，中文�
         
 <article class="item">
   <div class="cover">
-    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/SQL/" itemprop="url" title="SQL注入"><img data-src="https://s2.loli.net/2022/11/13/GvDpbW8fxOVwH3r.png"></a>
+    <a href="/security/WebNote/Vulnerability%20Attack%20and%20defense/SQL/" itemprop="url" title="SQL注入"><img data-src="https://s2.loli.net/2022/11/18/e3McBIsWlNF8dHb.jpg"></a>
   </div>
   <div class="info">
     
@@ -272,449 +667,6 @@ SQL 注入是一种代码注入技术，用于攻击数据驱动的应用程序�
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/information%20gathering/Social%20Engineering/" itemprop="url" title="社会工程学"><img data-src="https://s2.loli.net/2022/11/18/PO3njRwt9WQKEhl.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-26 10:57:49">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-26T10:57:49+08:00">2022-11-26</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>858</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/information%20gathering/Social%20Engineering/" itemprop="url" title="社会工程学">社会工程学</a></h3>
-    <div class="excerpt">
-        # 企业信息收集
-一些网站如天眼查等，可以提供企业关系挖掘、工商信息、商标专利、企业年报等信息查询，可以提供企业的较为细致的信息。
-公司主站中会有业务方向、合作单位等信息。
-# 人员信息收集
-针对人员的信息收集考虑对目标重要人员、组织架构、社会关系的收集和分析。其中重要人员主要指高管、系统管理员、开发、运维、财务、人事、业务人员的个人电脑。
-人员信息收集较容易的入口点是网站，网站中可能包含网站的开发、管理维护等人员的信息。从网站联系功能中和代码的注释信息中都可能得到的所有开发及维护人员的姓名和邮件地址及其他联系方式。
-在获取这些信息后，可以在 Github/Linkedin...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/information-gathering/" itemprop="url" title="信息收集"><i class="ic i-flag"></i>信息收集</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/information%20gathering/Social%20Engineering/" itemprop="url" title="社会工程学" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/information%20gathering/search%20engine/" itemprop="url" title="搜索引擎利用"><img data-src="https://s2.loli.net/2022/11/18/LdM6nuy1WChDaVA.png"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-26 10:10:49">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-26T10:10:49+08:00">2022-11-26</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.3k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/information%20gathering/search%20engine/" itemprop="url" title="搜索引擎利用">搜索引擎利用</a></h3>
-    <div class="excerpt">
-        恰当地使用搜索引擎（Google/Bing/Yahoo/Baidu 等）可以获取目标站点的较多信息。
-# 搜索引擎处理流程
-
-数据预处理
-
-长度截断
-大小写转化
-去标点符号
-简繁转换
-数字归一化，中文数字、阿拉伯数字、罗马字
-同义词改写
-拼音改写
-
-处理
-
-分词
-关键词抽取
-非法信息过滤
-
-# 搜索技巧
-
-site:www.hao123.com
-
-返回此目标站点被搜索引擎抓取收录的所有内容
-
-site:www.hao123.com...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/information-gathering/" itemprop="url" title="信息收集"><i class="ic i-flag"></i>信息收集</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/information%20gathering/search%20engine/" itemprop="url" title="搜索引擎利用" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/information%20gathering/website%20information/" itemprop="url" title="站点信息"><img data-src="https://s2.loli.net/2022/11/18/kluYigS3G1cNOvx.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-26 10:03:09">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-26T10:03:09+08:00">2022-11-26</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>535</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/information%20gathering/website%20information/" itemprop="url" title="站点信息">站点信息</a></h3>
-    <div class="excerpt">
-        判断网站操作系统
-
-Linux 大小写敏感
-Windows 大小写不敏感
-
-扫描敏感文件
-
-robots.txt
-crossdomain.xml
-sitemap.xml
-xx.tar.gz
-xx.bak 等
-
-确定网站采用的语言
-
-如 PHP / Java / Python 等
-找后缀，比如 php/asp/jsp
-
-前端框架
-
-如 jQuery / BootStrap / Vue / React / Angular 等
-查看源代码
-
-中间服务器
-
-如 Apache / Nginx / IIS 等
-查看 header 中的信息
-根据报错信息判断
-根据默认页面判断
-
-Web 容器服务器
-
-如...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/information-gathering/" itemprop="url" title="信息收集"><i class="ic i-flag"></i>信息收集</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/information%20gathering/website%20information/" itemprop="url" title="站点信息" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/information%20gathering/Ports/" itemprop="url" title="端口信息"><img data-src="https://s2.loli.net/2022/11/13/HG4AMYUZjqP2EuK.png"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-25 17:02:36">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-25T17:02:36+08:00">2022-11-25</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>2k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/information%20gathering/Ports/" itemprop="url" title="端口信息">端口信息</a></h3>
-    <div class="excerpt">
-        # 常见端口及其脆弱点
-
-FTP (21/TCP)
-
-默认用户名密码 anonymous:anonymous
-暴力破解密码
-VSFTP 某版本后门
-
-SSH (22/TCP)
-
-部分版本 SSH 存在漏洞可枚举用户名
-暴力破解密码
-
-Telent (23/TCP)
-
-暴力破解密码
-嗅探抓取明文密码
-
-SMTP (25/TCP)
-
-无认证时可伪造发件人
-
-DNS (53/UDP &amp;amp; 53/TCP)
-
-域传送漏洞
-
-DNS 劫持
-
-DNS 缓存投毒
-
-DNS 欺骗
-
-SPF / DMARC Check
-
-DDoS
-
-DNS Query Flood
-
-DNS 反弹
-
-DNS...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/information-gathering/" itemprop="url" title="信息收集"><i class="ic i-flag"></i>信息收集</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/information%20gathering/Ports/" itemprop="url" title="端口信息" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/information%20gathering/domain%20information/" itemprop="url" title="域名信息"><img data-src="https://s2.loli.net/2022/11/13/yzjeotElGkmcJAq.png"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-25 16:54:06">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-25T16:54:06+08:00">2022-11-25</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>2.4k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>3 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/information%20gathering/domain%20information/" itemprop="url" title="域名信息">域名信息</a></h3>
-    <div class="excerpt">
-        # Whois
-Whois 可以查询域名是否被注册，以及注册域名的详细信息的数据库，其中可能会存在一些有用的信息，例如域名所有人、域名注册商、邮箱等。
-# 搜索引擎搜索
-搜索引擎通常会记录域名信息，可以通过 site: domain 的语法来查询。
-# 第三方查询
-网络中有相当多的第三方应用提供了子域的查询功能，下面有一些例子，更多的网站可以在 8.1 工具列表 中查找。
-
-DNSDumpster
-Virustotal
-CrtSearch
-threatminer
-Censys
-
-# ASN 信息关联
-在网络中一个自治系统 (Autonomous System, AS)...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/information-gathering/" itemprop="url" title="信息收集"><i class="ic i-flag"></i>信息收集</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/information%20gathering/domain%20information/" itemprop="url" title="域名信息" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/information%20gathering/network%20io/" itemprop="url" title="网络入口&#x2F;信息"><img data-src="https://s2.loli.net/2022/11/13/LSJsm6Nq2gb3PQv.png"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-25 16:44:06">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-25T16:44:06+08:00">2022-11-25</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>72</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/information%20gathering/network%20io/" itemprop="url" title="网络入口&#x2F;信息">网络入口/信息</a></h3>
-    <div class="excerpt">
-        网络拓扑信息
-
-外网出口
-
-IP 信息
-
-C 段
-
-线下网络
-
-Wi-Fi
-
-SSID
-认证信息
-
-VPN
-
-厂商
-登录方式
-
-邮件网关
-手机 APP
-小程序后台
-OA
-SSO
-边界网络设备
-上游运营商
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/information-gathering/" itemprop="url" title="信息收集"><i class="ic i-flag"></i>信息收集</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/information%20gathering/network%20io/" itemprop="url" title="网络入口&#x2F;信息" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/mail/" itemprop="url" title="邮件协议簇"><img data-src="https://s2.loli.net/2022/11/18/lmJH8w3E6eC2PMG.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-25 15:58:31">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-25T15:58:31+08:00">2022-11-25</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.5k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/security/WebNote/Computer%20Network%20and%20Protocol/mail/" itemprop="url" title="邮件协议簇">邮件协议簇</a></h3>
-    <div class="excerpt">
-        # 简介
-# SMTP
-SMTP (Simple Mail Transfer Protocol) 是一种电子邮件传输的协议，是一组用于从源地址到目的地址传输邮件的规范。不启用 SSL 时端口号为 25，启用 SSL 时端口号多为 465 或 994。
-# POP3
-POP3 (Post Office Protocol 3) 用于支持使用客户端远程管理在服务器上的电子邮件。不启用 SSL 时端口号为 110，启用 SSL 时端口号多为 995。
-# IMAP
-IMAP (Internet Mail Access Protocol)，即交互式邮件存取协议，它是跟 POP3...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/security/WebNote/Computer-Network-and-Protocol/" itemprop="url" title="计算机网络与协议"><i class="ic i-flag"></i>计算机网络与协议</a>
-      </span>
-    </div>
-    <a href="/security/WebNote/Computer%20Network%20and%20Protocol/mail/" itemprop="url" title="邮件协议簇" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -750,19 +702,19 @@ IMAP (Internet Mail Access Protocol)，即交互式邮件存取协议，它是�
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">73</span>
+        <span class="count">80</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">15</span>
+        <span class="count">16</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">114</span>
+        <span class="count">121</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -862,14 +814,14 @@ IMAP (Internet Mail Access Protocol)，即交互式邮件存取协议，它是�
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">201k 字</span>
+    <span title="站点总字数">208k 字</span>
 
     <span class="post-meta-divider">|</span>
 
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:03</span>
+    <span title="站点阅读时长">4:12</span>
     
   </div>
   <div class="powered-by">
