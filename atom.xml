@@ -4,53 +4,59 @@
     <title>Khala</title>
     <link href="https://mobius-0.github.io" />
     <updated>2022-12-06T03:50:35.000Z</updated>
-    <category term="工具" />
-    <category term="安全" />
-    <category term="网络安全" />
     <category term="Hexo" />
     <category term="shoya" />
     <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
     <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="网易" />
+    <category term="暴雪" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
     <category term="法律法规" />
     <category term="XSS" />
     <category term="漏洞" />
     <category term="渗透测试" />
     <category term="靶场" />
     <category term="pikachu" />
-    <category term="星际争霸2" />
-    <category term="平衡" />
-    <category term="杂谈" />
-    <category term="小说" />
-    <category term="江南" />
-    <category term="龙族" />
-    <category term="动画" />
-    <category term="标准" />
-    <category term="OCI" />
-    <category term="CRI" />
+    <category term="JWT" />
+    <category term="Kerberos认证" />
+    <category term="认证" />
+    <category term="单点登录" />
+    <category term="Windows" />
+    <category term="挑战/应答" />
+    <category term="S/Key协议" />
+    <category term="权限设置" />
     <category term="虚拟化" />
     <category term="Docker" />
     <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
     <category term="HTTP" />
     <category term="计算机网络" />
     <category term="IPSec" />
     <category term="VPN" />
+    <category term="WiFi" />
     <category term="SSL" />
     <category term="TLS" />
-    <category term="WiFi" />
     <category term="邮件" />
     <category term="网络协议" />
-    <category term="域名" />
-    <category term="DNS" />
-    <category term="WEB" />
-    <category term="JWT" />
-    <category term="Kerberos认证" />
-    <category term="认证" />
-    <category term="Windows" />
-    <category term="单点登录" />
-    <category term="权限设置" />
     <category term="入侵检测" />
     <category term="IDS" />
     <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
     <category term="分工" />
     <category term="职能" />
     <category term="情报" />
@@ -61,23 +67,28 @@
     <category term="Linux" />
     <category term="攻击溯源" />
     <category term="分析模型" />
-    <category term="防御加固" />
-    <category term="管理策略" />
     <category term="网络攻防" />
     <category term="蜜罐" />
     <category term="隐藏" />
     <category term="诱导" />
-    <category term="挑战/应答" />
-    <category term="S/Key协议" />
-    <category term="风险" />
-    <category term="控制" />
-    <category term="ASP" />
     <category term="防御纵深" />
     <category term="访问控制" />
     <category term="过滤" />
     <category term="框架" />
-    <category term="Golang" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
     <category term="CSharp" />
+    <category term="Golang" />
     <category term="Java" />
     <category term="语言" />
     <category term="反序列化" />
@@ -87,25 +98,24 @@
     <category term="JDK" />
     <category term="JavaScript" />
     <category term="PHP" />
-    <category term="Ruby" />
-    <category term="Shell" />
-    <category term="Python" />
-    <category term="CSRF" />
     <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
     <category term="服务器" />
-    <category term="SSRF" />
     <category term="SQL注入" />
+    <category term="SSRF" />
     <category term="Cache" />
     <category term="XXE" />
     <category term="XML" />
+    <category term="Xpath" />
     <category term="注入" />
     <category term="函数" />
     <category term="绕过" />
-    <category term="Xpath" />
+    <category term="遍历" />
     <category term="包含" />
     <category term="文件" />
     <category term="目录" />
-    <category term="遍历" />
     <category term="读取" />
     <category term="上传" />
     <category term="中间件" />
@@ -113,15 +123,7 @@
     <category term="Apache" />
     <category term="Nginx" />
     <category term="逻辑" />
-    <category term="渗透" />
-    <category term="信息收集" />
-    <category term="痕迹清理" />
     <category term="策略配置" />
-    <category term="内网" />
-    <category term="后门" />
-    <category term="免杀" />
-    <category term="代理" />
-    <category term="远程连接" />
     <category term="端口" />
     <category term="社会工程学" />
     <category term="搜索" />
@@ -2462,8 +2464,8 @@ nc.exe -e cmd.exe -lp 1234
 &lt;li&gt;PTH + compmgmt.msc&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="Shell" />
         <category term="代理" />
+        <category term="Shell" />
         <category term="远程连接" />
         <updated>2022-11-29T07:50:20.000Z</updated>
     </entry>
@@ -10904,8 +10906,8 @@ ZF3NU-D6XEJ-48E7Q-27YNC-PC8ED
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="工具" />
         <category term="网络安全" />
+        <category term="工具" />
         <category term="虚拟机" />
         <updated>2022-11-23T02:52:33.000Z</updated>
     </entry>
@@ -10942,6 +10944,143 @@ ZF3NU-D6XEJ-48E7Q-27YNC-PC8ED
         <category term="龙族" />
         <category term="动画" />
         <updated>2022-11-19T09:11:21.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/others/games/%E7%8E%BB%E7%92%83%E6%B8%A3%E5%AD%90/</id>
+        <title>网易暴雪“分手”有感</title>
+        <link rel="alternate" href="https://mobius-0.github.io/others/games/%E7%8E%BB%E7%92%83%E6%B8%A3%E5%AD%90/"/>
+        <content type="html">&lt;p&gt;暴雪和网易中止合作的消息多少是有点惊吓了，不仅仅对玩家和网易是这样，对暴雪内部的游戏开发团队也是这样。&lt;/p&gt;
+&lt;p&gt;2022 年 11 月 17 日，暴雪抢先宣布同网易中止合作，合同预计于 2023 年 1 月正式结束，随后网易才确认并发布终止合作的公告。目前还未知暴雪是否确定找到了下家接盘代理，但如果没有，就目前国内代理国外游戏版号的可持续性 “寒冬” 的情况，基本上 2023 年 1 月合同正式中止后，国服暴雪游戏将会面临不可预计的长时间的停服。&lt;/p&gt;
+&lt;p&gt;当时看到这个消息可以说情绪复杂，当初也是因为星际 2 接触的暴雪游戏，也曾经和暴白一样认为 “暴雪出品，必属精品”，但后来暴雪的操作越来越傲慢，加上网易这边的服务器质量确实不太行，渐渐地由一个暴白变成了暴黑，在 2022 年 10 月 16 日发布的星际 2 停更公告更是点燃了怒火，可以说从这一刻开始我对暴雪彻底失望。每天看到暴雪的日常就是问一问 “暴雪什么时候倒闭”。&lt;/p&gt;
+&lt;p&gt;到了现在暴雪已经因为各种傲慢操作一步一步送掉了自己过去积攒下来的口碑和家底，如今更是近乎于直接放弃国内市场，这谁看了不来一句 “好似，开香槟”？早在韩国利用星际 1 大搞电子竞技赛事的时候就已经初露端倪，暴雪其实想要的就是比赛的举办权，并由此向各个赛事发出授权以此获取大量授权费，但那个时候暴雪的创始人还在，能够把控住大局。到后来的天城代理，暴雪也可能是脑子真的出了点问题，像星际 2 这种类型的游戏还在以售卖点卡的形式来游玩，这里其实已经打击了相当一部分玩家，为后来埋下祸根。接着就是网易接盘代理，那时暴雪也确实算得上是 “抢手货”，网易和暴雪欠下的代理合同也有些许让步的意思，最后的结果就是网易成功代替天城接替国服代理，同时让步也意味着网易话语权相对较小，也为后来的事情埋下祸根。再后来就是各式各样的滚雪球了，在 “甲级战犯” 考迪克的 “细心操作” 下，最终成功促成本次合作谈判破裂，需要指出的是，此人不仅深陷性丑闻之中，同时也是逼走原暴雪老员工的始作俑者之一。&lt;/p&gt;
+&lt;p&gt;至此暴雪已经成功地把自己从国内市场踢了出去，损失最大的只有玩家。但是平心而论，这波我站网易，虽然平时经常骂网易这不行那不行的，但这次网易已经仁至义尽、对不起谁都对得起你了。停掉风暴的比赛、砍掉星际等等游戏的比赛、重置魔兽炒冷饭还没炒好等等，最后风暴凉了，国内也是网易自己掏钱办比赛，炉石在国内已知不温不火，也是网易帮着运营操作办比赛，星际 2 更不用多说，老仙他们自己掏钱版的比赛少了？不还是为了国内星际的环境。&lt;/p&gt;
+&lt;p&gt;总之，代理正式结束的那一刻我可能会惋惜一下，但现在，我只想开香槟&lt;/p&gt;
+&lt;p&gt;🍾🍾🍾🍾🍾🍾🍾&lt;/p&gt;
+</content>
+        <category term="杂谈" />
+        <category term="网易" />
+        <category term="暴雪" />
+        <updated>2022-11-19T08:24:27.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/security/tools-1/</id>
+        <title>工具集（长期更新……大概？）</title>
+        <link rel="alternate" href="https://mobius-0.github.io/security/tools-1/"/>
+        <content type="html">&lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Burp suite&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Wireshark&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实用的网络抓包分析软件&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;WinHex&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;masscan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;nmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;但是通常都很慢&lt;/span&gt; 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;sqlmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;VirtualBox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;VMware Workstation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Adobe Photoshop&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的图像处理软件&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;Adobe Audition&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常用的音频处理软件&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;AntSword&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款开源的跨平台网站管理工具&lt;/p&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;IDA Pro&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款功能丰富的跨平台多处理器反汇编程序和调试器&lt;/p&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Elcomsoft Forensic Disk Decryptor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。&lt;/p&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;Elcomsoft Wireless Security Auditor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码&lt;/p&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;Advanced Archive Password Recovery&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件&lt;/p&gt;
+&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;Notepad++&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;功能强大的记事本 max pro plus（bushi）&lt;/p&gt;
+&lt;h1 id=&#34;浏览器插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浏览器插件&#34;&gt;#&lt;/a&gt; 浏览器插件&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Tamermonkey&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Wappalyzer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Shodan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;FoxyProxy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款代理管理工具&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Proxy SwitchyOmega&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一款代理管理插件，可轻松快捷地管理和切换多个代理设置&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;HackBar&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款网站 URL 渗透工具&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Flagfox&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firefox 浏览器上的一款显示当前服务器位置国旗的插件&lt;/p&gt;
+&lt;h1 id=&#34;搜索引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎&#34;&gt;#&lt;/a&gt; 搜索引擎&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;fofa&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb2ZhLmluZm8v&#34;&gt;FOFA&lt;/span&gt; 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Zoomeye&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv&#34;&gt;ZoomEye&lt;/span&gt;（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;shodan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==&#34;&gt;shodan&lt;/span&gt; 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;360quake&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=&#34;&gt;360 QUAKE Vscan&lt;/span&gt; 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险&lt;/p&gt;
+</content>
+        <category term="网络安全" />
+        <category term="工具" />
+        <updated>2022-11-16T11:28:43.000Z</updated>
     </entry>
     <entry>
         <id>https://mobius-0.github.io/security/tools/</id>
@@ -11588,128 +11727,8 @@ Lynis 是 Unix/Linux 系统用于软件补丁管理，恶意软件扫描和漏�
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0Vyb3Npb24yMDIwL1NwYWNlQ29yZQ==&#34;&gt;https://github.com/Erosion2020/SpaceCore&lt;/span&gt;&lt;/p&gt;
 </content>
-        <category term="工具" />
         <category term="网络安全" />
-        <updated>2022-11-16T11:28:43.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://mobius-0.github.io/security/tools-1/</id>
-        <title>工具集（长期更新……大概？）</title>
-        <link rel="alternate" href="https://mobius-0.github.io/security/tools-1/"/>
-        <content type="html">&lt;h1 id=&#34;工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具&#34;&gt;#&lt;/a&gt; 工具&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Burp suite&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;渗透测试中常见的工具，基于 java 编写，尽管只有社区版免费，但功能依旧强大&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Wireshark&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;实用的网络抓包分析软件&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;WinHex&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;常用的十六进制分析工具，可用于检查和修复文件，也可以用来隐藏和复现某些信息&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;masscan&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开源的跨平台的端口扫描工具，速度较快，但漏报相应较多，通常在内网中使用&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;nmap&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开放源代码的网络探测和安全审核工具，设计目标是快速地扫描大型网络 &lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;但是通常都很慢&lt;/span&gt; 。除了端口扫描还可以对扫描目标的网络状态等进行判断，所以通常被用来做安全审查&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;sqlmap&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开源的渗透测试工具，可用于自动检测和利用 SQL 注入漏洞&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;VirtualBox&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;开源的虚拟机软件，可用于在 Windows 或 Linux 主机上安装运行各类系统的虚拟机&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;VMware Workstation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;业界知名的虚拟机软件，用户可在同一主机运行多台虚拟机进行各项测试&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;Adobe Photoshop&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;常用的图像处理软件&lt;/p&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;Adobe Audition&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;常用的音频处理软件&lt;/p&gt;
-&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;AntSword&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款开源的跨平台网站管理工具&lt;/p&gt;
-&lt;ol start=&#34;12&#34;&gt;
-&lt;li&gt;IDA Pro&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款功能丰富的跨平台多处理器反汇编程序和调试器&lt;/p&gt;
-&lt;ol start=&#34;13&#34;&gt;
-&lt;li&gt;Elcomsoft Forensic Disk Decryptor&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;实时解密 BitLocker、PGP 以及 TrueCrypt 加密磁盘，可完全解密所有的文件或实时解密文件，用户可以选择解密所有文件并访问或者实时解密文件。&lt;/p&gt;
-&lt;ol start=&#34;14&#34;&gt;
-&lt;li&gt;Elcomsoft Wireless Security Auditor&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款审核无线网络 Wi-Fi 的安全性，检查无线网络和信道的工具，可用于嗅探无线流量并破解 WPA/WPA2 密码&lt;/p&gt;
-&lt;ol start=&#34;15&#34;&gt;
-&lt;li&gt;Advanced Archive Password Recovery&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款破解 ZIP 和 RAR 文件的密码工具，完美底层优化有助于更快地完成工作，能够保证在一小时之内恢复特定类型的压缩文件&lt;/p&gt;
-&lt;ol start=&#34;16&#34;&gt;
-&lt;li&gt;Notepad++&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;功能强大的记事本 max pro plus（bushi）&lt;/p&gt;
-&lt;h1 id=&#34;浏览器插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浏览器插件&#34;&gt;#&lt;/a&gt; 浏览器插件&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Tamermonkey&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;实用的用户脚本管理器，可兼容 Firefox、Edge、chrome、Opera、Safari 等浏览器&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Wappalyzer&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款信息收集插件，可方便地查看当前站点的服务器型号、版本、服务器端语言等信息&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Shodan&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Shodan 插件能够告诉你网站在哪里托管 (国家，城市) ，谁拥有 IP 和其他服务 / 端口是开放的。&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;FoxyProxy&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Firefox 浏览器上的一款代理管理工具&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Proxy SwitchyOmega&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一款代理管理插件，可轻松快捷地管理和切换多个代理设置&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;HackBar&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Firefox 浏览器上的一款网站 URL 渗透工具&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;Flagfox&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Firefox 浏览器上的一款显示当前服务器位置国旗的插件&lt;/p&gt;
-&lt;h1 id=&#34;搜索引擎&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索引擎&#34;&gt;#&lt;/a&gt; 搜索引擎&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;fofa&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb2ZhLmluZm8v&#34;&gt;FOFA&lt;/span&gt; 是白帽汇推出的一款网络空间资产搜索引擎。它能够帮助用户迅速进行网络资产匹配、加快后续工作进程。例如进行漏洞影响范围分析、应用分布统计、应用流行度排名统计等&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Zoomeye&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuem9vbWV5ZS5vcmcv&#34;&gt;ZoomEye&lt;/span&gt;（“钟馗之眼”）—— 全球网络空间测绘的领导者，是知道创宇旗下 404 实验室驱动打造的中国第一款，同时也是全球著名的网络空间搜索引擎。通过分布在全球的大量测绘节点，针对全球范围内的 IPv4、IPv6 地址库及网站域名库进行 24 小时不间断探测、识别，根据对多个服务端口协议进行测绘，最终实现对整体或局部地区的网络空间画像。&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;shodan&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cvc2hvZGFuLmlvLw==&#34;&gt;shodan&lt;/span&gt; 世界上第一个互联网连接设备的搜索引擎，也是世界有名的网络空间搜索引擎&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;360quake&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFrZS4zNjAubmV0L3F1YWtlLyMvaW5kZXg=&#34;&gt;360 QUAKE Vscan&lt;/span&gt; 是 360 开发的一款网络空间测绘引擎，Quake 网络空间测绘系统是 360 安全大脑 - 测绘云的核心系统，持续性探测全球 IPv4、IPv6 地址，做到实时感知全球网络空间中各类资产并发现其安全风险&lt;/p&gt;
-</content>
         <category term="工具" />
-        <category term="网络安全" />
         <updated>2022-11-16T11:28:43.000Z</updated>
     </entry>
     <entry>

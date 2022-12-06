@@ -4,53 +4,59 @@
     <title>Khala • Posts by &#34;杂谈&#34; tag</title>
     <link href="https://mobius-0.github.io" />
     <updated>2022-11-19T09:11:21.000Z</updated>
-    <category term="工具" />
-    <category term="安全" />
-    <category term="网络安全" />
     <category term="Hexo" />
     <category term="shoya" />
     <category term="网站" />
+    <category term="网络安全" />
+    <category term="工具" />
     <category term="虚拟机" />
+    <category term="安全" />
+    <category term="星际争霸2" />
+    <category term="平衡" />
+    <category term="杂谈" />
+    <category term="网易" />
+    <category term="暴雪" />
+    <category term="小说" />
+    <category term="江南" />
+    <category term="龙族" />
+    <category term="动画" />
     <category term="法律法规" />
     <category term="XSS" />
     <category term="漏洞" />
     <category term="渗透测试" />
     <category term="靶场" />
     <category term="pikachu" />
-    <category term="星际争霸2" />
-    <category term="平衡" />
-    <category term="杂谈" />
-    <category term="小说" />
-    <category term="江南" />
-    <category term="龙族" />
-    <category term="动画" />
-    <category term="标准" />
-    <category term="OCI" />
-    <category term="CRI" />
+    <category term="JWT" />
+    <category term="Kerberos认证" />
+    <category term="认证" />
+    <category term="单点登录" />
+    <category term="Windows" />
+    <category term="挑战/应答" />
+    <category term="S/Key协议" />
+    <category term="权限设置" />
     <category term="虚拟化" />
     <category term="Docker" />
     <category term="镜像" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
+    <category term="域名" />
+    <category term="DNS" />
+    <category term="WEB" />
     <category term="HTTP" />
     <category term="计算机网络" />
     <category term="IPSec" />
     <category term="VPN" />
+    <category term="WiFi" />
     <category term="SSL" />
     <category term="TLS" />
-    <category term="WiFi" />
     <category term="邮件" />
     <category term="网络协议" />
-    <category term="域名" />
-    <category term="DNS" />
-    <category term="WEB" />
-    <category term="JWT" />
-    <category term="Kerberos认证" />
-    <category term="认证" />
-    <category term="Windows" />
-    <category term="单点登录" />
-    <category term="权限设置" />
     <category term="入侵检测" />
     <category term="IDS" />
     <category term="IPS" />
+    <category term="防御加固" />
+    <category term="管理策略" />
     <category term="分工" />
     <category term="职能" />
     <category term="情报" />
@@ -61,23 +67,28 @@
     <category term="Linux" />
     <category term="攻击溯源" />
     <category term="分析模型" />
-    <category term="防御加固" />
-    <category term="管理策略" />
     <category term="网络攻防" />
     <category term="蜜罐" />
     <category term="隐藏" />
     <category term="诱导" />
-    <category term="挑战/应答" />
-    <category term="S/Key协议" />
-    <category term="风险" />
-    <category term="控制" />
-    <category term="ASP" />
     <category term="防御纵深" />
     <category term="访问控制" />
     <category term="过滤" />
     <category term="框架" />
-    <category term="Golang" />
+    <category term="风险" />
+    <category term="控制" />
+    <category term="渗透" />
+    <category term="信息收集" />
+    <category term="痕迹清理" />
+    <category term="内网" />
+    <category term="后门" />
+    <category term="免杀" />
+    <category term="代理" />
+    <category term="Shell" />
+    <category term="远程连接" />
+    <category term="ASP" />
     <category term="CSharp" />
+    <category term="Golang" />
     <category term="Java" />
     <category term="语言" />
     <category term="反序列化" />
@@ -87,25 +98,24 @@
     <category term="JDK" />
     <category term="JavaScript" />
     <category term="PHP" />
-    <category term="Ruby" />
-    <category term="Shell" />
-    <category term="Python" />
-    <category term="CSRF" />
     <category term="PowerShell" />
+    <category term="Python" />
+    <category term="Ruby" />
+    <category term="CSRF" />
     <category term="服务器" />
-    <category term="SSRF" />
     <category term="SQL注入" />
+    <category term="SSRF" />
     <category term="Cache" />
     <category term="XXE" />
     <category term="XML" />
+    <category term="Xpath" />
     <category term="注入" />
     <category term="函数" />
     <category term="绕过" />
-    <category term="Xpath" />
+    <category term="遍历" />
     <category term="包含" />
     <category term="文件" />
     <category term="目录" />
-    <category term="遍历" />
     <category term="读取" />
     <category term="上传" />
     <category term="中间件" />
@@ -113,15 +123,7 @@
     <category term="Apache" />
     <category term="Nginx" />
     <category term="逻辑" />
-    <category term="渗透" />
-    <category term="信息收集" />
-    <category term="痕迹清理" />
     <category term="策略配置" />
-    <category term="内网" />
-    <category term="后门" />
-    <category term="免杀" />
-    <category term="代理" />
-    <category term="远程连接" />
     <category term="端口" />
     <category term="社会工程学" />
     <category term="搜索" />
@@ -158,6 +160,23 @@
         <category term="龙族" />
         <category term="动画" />
         <updated>2022-11-19T09:11:21.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/others/games/%E7%8E%BB%E7%92%83%E6%B8%A3%E5%AD%90/</id>
+        <title>网易暴雪“分手”有感</title>
+        <link rel="alternate" href="https://mobius-0.github.io/others/games/%E7%8E%BB%E7%92%83%E6%B8%A3%E5%AD%90/"/>
+        <content type="html">&lt;p&gt;暴雪和网易中止合作的消息多少是有点惊吓了，不仅仅对玩家和网易是这样，对暴雪内部的游戏开发团队也是这样。&lt;/p&gt;
+&lt;p&gt;2022 年 11 月 17 日，暴雪抢先宣布同网易中止合作，合同预计于 2023 年 1 月正式结束，随后网易才确认并发布终止合作的公告。目前还未知暴雪是否确定找到了下家接盘代理，但如果没有，就目前国内代理国外游戏版号的可持续性 “寒冬” 的情况，基本上 2023 年 1 月合同正式中止后，国服暴雪游戏将会面临不可预计的长时间的停服。&lt;/p&gt;
+&lt;p&gt;当时看到这个消息可以说情绪复杂，当初也是因为星际 2 接触的暴雪游戏，也曾经和暴白一样认为 “暴雪出品，必属精品”，但后来暴雪的操作越来越傲慢，加上网易这边的服务器质量确实不太行，渐渐地由一个暴白变成了暴黑，在 2022 年 10 月 16 日发布的星际 2 停更公告更是点燃了怒火，可以说从这一刻开始我对暴雪彻底失望。每天看到暴雪的日常就是问一问 “暴雪什么时候倒闭”。&lt;/p&gt;
+&lt;p&gt;到了现在暴雪已经因为各种傲慢操作一步一步送掉了自己过去积攒下来的口碑和家底，如今更是近乎于直接放弃国内市场，这谁看了不来一句 “好似，开香槟”？早在韩国利用星际 1 大搞电子竞技赛事的时候就已经初露端倪，暴雪其实想要的就是比赛的举办权，并由此向各个赛事发出授权以此获取大量授权费，但那个时候暴雪的创始人还在，能够把控住大局。到后来的天城代理，暴雪也可能是脑子真的出了点问题，像星际 2 这种类型的游戏还在以售卖点卡的形式来游玩，这里其实已经打击了相当一部分玩家，为后来埋下祸根。接着就是网易接盘代理，那时暴雪也确实算得上是 “抢手货”，网易和暴雪欠下的代理合同也有些许让步的意思，最后的结果就是网易成功代替天城接替国服代理，同时让步也意味着网易话语权相对较小，也为后来的事情埋下祸根。再后来就是各式各样的滚雪球了，在 “甲级战犯” 考迪克的 “细心操作” 下，最终成功促成本次合作谈判破裂，需要指出的是，此人不仅深陷性丑闻之中，同时也是逼走原暴雪老员工的始作俑者之一。&lt;/p&gt;
+&lt;p&gt;至此暴雪已经成功地把自己从国内市场踢了出去，损失最大的只有玩家。但是平心而论，这波我站网易，虽然平时经常骂网易这不行那不行的，但这次网易已经仁至义尽、对不起谁都对得起你了。停掉风暴的比赛、砍掉星际等等游戏的比赛、重置魔兽炒冷饭还没炒好等等，最后风暴凉了，国内也是网易自己掏钱办比赛，炉石在国内已知不温不火，也是网易帮着运营操作办比赛，星际 2 更不用多说，老仙他们自己掏钱版的比赛少了？不还是为了国内星际的环境。&lt;/p&gt;
+&lt;p&gt;总之，代理正式结束的那一刻我可能会惋惜一下，但现在，我只想开香槟&lt;/p&gt;
+&lt;p&gt;🍾🍾🍾🍾🍾🍾🍾&lt;/p&gt;
+</content>
+        <category term="杂谈" />
+        <category term="网易" />
+        <category term="暴雪" />
+        <updated>2022-11-19T08:24:27.000Z</updated>
     </entry>
     <entry>
         <id>https://mobius-0.github.io/others/games/%E6%98%9F%E9%99%85%E4%BA%94%E8%A1%8C%E7%9B%B8%E5%85%8B%E5%AD%A6%E8%AF%B4/</id>
