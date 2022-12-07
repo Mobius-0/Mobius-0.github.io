@@ -36,10 +36,10 @@
         <category>Windows</category>
         <category>挑战/应答</category>
         <category>S/Key协议</category>
-        <category>权限设置</category>
         <category>虚拟化</category>
         <category>Docker</category>
         <category>镜像</category>
+        <category>权限设置</category>
         <category>标准</category>
         <category>OCI</category>
         <category>CRI</category>
@@ -50,9 +50,9 @@
         <category>计算机网络</category>
         <category>IPSec</category>
         <category>VPN</category>
-        <category>WiFi</category>
         <category>SSL</category>
         <category>TLS</category>
+        <category>WiFi</category>
         <category>邮件</category>
         <category>网络协议</category>
         <category>入侵检测</category>
@@ -68,9 +68,9 @@
         <category>应急响应</category>
         <category>流程</category>
         <category>Linux</category>
+        <category>网络攻防</category>
         <category>攻击溯源</category>
         <category>分析模型</category>
-        <category>网络攻防</category>
         <category>蜜罐</category>
         <category>隐藏</category>
         <category>诱导</category>
@@ -86,10 +86,10 @@
         <category>内网</category>
         <category>后门</category>
         <category>免杀</category>
+        <category>ASP</category>
         <category>代理</category>
         <category>Shell</category>
         <category>远程连接</category>
-        <category>ASP</category>
         <category>CSharp</category>
         <category>Golang</category>
         <category>Java</category>
@@ -100,8 +100,8 @@
         <category>类</category>
         <category>JDK</category>
         <category>JavaScript</category>
-        <category>PHP</category>
         <category>PowerShell</category>
+        <category>PHP</category>
         <category>Python</category>
         <category>Ruby</category>
         <category>CSRF</category>
@@ -109,13 +109,13 @@
         <category>SQL注入</category>
         <category>SSRF</category>
         <category>Cache</category>
-        <category>XXE</category>
-        <category>XML</category>
         <category>Xpath</category>
         <category>注入</category>
         <category>函数</category>
         <category>绕过</category>
         <category>遍历</category>
+        <category>XXE</category>
+        <category>XML</category>
         <category>包含</category>
         <category>文件</category>
         <category>目录</category>
@@ -125,8 +125,8 @@
         <category>IIS</category>
         <category>Apache</category>
         <category>Nginx</category>
-        <category>逻辑</category>
         <category>策略配置</category>
+        <category>逻辑</category>
         <category>端口</category>
         <category>社会工程学</category>
         <category>搜索</category>
