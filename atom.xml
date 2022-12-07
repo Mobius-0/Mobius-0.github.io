@@ -16,37 +16,37 @@
     <category term="杂谈" />
     <category term="网易" />
     <category term="暴雪" />
-    <category term="小说" />
+    <category term="动画" />
     <category term="江南" />
     <category term="龙族" />
-    <category term="动画" />
+    <category term="小说" />
     <category term="法律法规" />
     <category term="XSS" />
     <category term="漏洞" />
     <category term="渗透测试" />
     <category term="靶场" />
     <category term="pikachu" />
-    <category term="JWT" />
     <category term="Kerberos认证" />
+    <category term="JWT" />
     <category term="认证" />
     <category term="单点登录" />
     <category term="Windows" />
     <category term="挑战/应答" />
     <category term="S/Key协议" />
+    <category term="权限设置" />
     <category term="虚拟化" />
     <category term="Docker" />
     <category term="镜像" />
-    <category term="权限设置" />
-    <category term="标准" />
-    <category term="OCI" />
-    <category term="CRI" />
     <category term="域名" />
     <category term="DNS" />
     <category term="WEB" />
-    <category term="HTTP" />
+    <category term="标准" />
+    <category term="OCI" />
+    <category term="CRI" />
     <category term="计算机网络" />
     <category term="IPSec" />
     <category term="VPN" />
+    <category term="HTTP" />
     <category term="SSL" />
     <category term="TLS" />
     <category term="WiFi" />
@@ -65,9 +65,9 @@
     <category term="应急响应" />
     <category term="流程" />
     <category term="Linux" />
-    <category term="网络攻防" />
     <category term="攻击溯源" />
     <category term="分析模型" />
+    <category term="网络攻防" />
     <category term="蜜罐" />
     <category term="隐藏" />
     <category term="诱导" />
@@ -83,10 +83,10 @@
     <category term="内网" />
     <category term="后门" />
     <category term="免杀" />
-    <category term="ASP" />
     <category term="代理" />
     <category term="Shell" />
     <category term="远程连接" />
+    <category term="ASP" />
     <category term="CSharp" />
     <category term="Golang" />
     <category term="Java" />
@@ -97,8 +97,8 @@
     <category term="类" />
     <category term="JDK" />
     <category term="JavaScript" />
-    <category term="PowerShell" />
     <category term="PHP" />
+    <category term="PowerShell" />
     <category term="Python" />
     <category term="Ruby" />
     <category term="CSRF" />
@@ -106,24 +106,24 @@
     <category term="SQL注入" />
     <category term="SSRF" />
     <category term="Cache" />
+    <category term="XXE" />
+    <category term="XML" />
     <category term="Xpath" />
     <category term="注入" />
     <category term="函数" />
     <category term="绕过" />
     <category term="遍历" />
-    <category term="XXE" />
-    <category term="XML" />
     <category term="包含" />
     <category term="文件" />
     <category term="目录" />
     <category term="读取" />
     <category term="上传" />
+    <category term="逻辑" />
     <category term="中间件" />
     <category term="IIS" />
     <category term="Apache" />
     <category term="Nginx" />
     <category term="策略配置" />
-    <category term="逻辑" />
     <category term="端口" />
     <category term="社会工程学" />
     <category term="搜索" />
@@ -10912,22 +10912,6 @@ ZF3NU-D6XEJ-48E7Q-27YNC-PC8ED
         <updated>2022-11-23T02:52:33.000Z</updated>
     </entry>
     <entry>
-        <id>https://mobius-0.github.io/others/literature/dragon%20raja/</id>
-        <title>谈谈《龙族》</title>
-        <link rel="alternate" href="https://mobius-0.github.io/others/literature/dragon%20raja/"/>
-        <content type="html">&lt;p&gt;《龙族》这两个字可以是让人又爱又恨，从一开始的第一部火之晨曦，到后来的 “所谓的” 第五步悼亡者的归来，我基本上都看了两遍多。&lt;/p&gt;
-&lt;p&gt;其实一开始我就很喜欢龙族，那时候在初中的时候班里一直在传龙族一的漫画单行本，只是大家一直在传，还没到我手上的时候就被班主任全部没收了，当时对小说漫画等等的版权管的还不是很严，有的网页或手机 app 非常大胆地盗版了下来，以至于我当时在盗版网站看完了龙族一的漫画。后来到了高中，班里有个壕同学，当然平时和我们一起打游戏，关系很好，几乎每周都会去买一本《知音漫客》或是《神漫》，每到周末的自由时间都可以去蹭他周刊的看，所以这个时候我看完了龙族二的漫画，另一位壕同学则是让我蹭完了《全职高手》，同时我还顺带在学校图书室看完了《三体》的三部曲、《龙族》一到四的小说、《盗墓笔记》全集、一部分的《斗罗大陆 3》以及一些现在已经记不起来名字的书。&lt;/p&gt;
-&lt;p&gt;当然到现在也很喜欢，有的读者说第四部拉了，说起来小说我还是先看的第四部，当时还觉得挺好看的，后来补完后又回头看看，只能说没那么差，但和第三部比起来还是差了不少，属于能看的那种。从一到四部之中选一个问题最大的，我肯定会选第一部，那个时候时间还早，老贼文笔青涩属于是可以接受的小问题，而且第一部已经展开了一个大致的世界观，作为系列开篇任务已经完成，接下来的只能交给续作了。到了第三部可以说是系列巅峰，分出了上中下三本，文本量和剧情发展确实超出我的想象，江南老狗写死绘梨衣到现在依旧是读者心中的痛，可以说第三部是口碑最好的一部。但是第三部也确实存在着对我个人而言无法接受的缺点，那就是即将临近终幕时零驾驶日本五代技术验证机 “心神” 和白王赫尔佐格战斗的剧情。这段剧情不了解的人看了可能会不明觉厉，觉得 “心神” 很厉害什么的，但实际上 “心神” 也并没有书中写的水平高超，“心神” 本身机型就小，不管是载弹量还是载油都少得可怜，双矢量发动机本身推力也不算很大，并且采用的还是损失推力较多的矢量方案，实际中并没有书中那般超机动狗斗的能力。现在看看当时写的就显得有点嘎吹的感觉了。第四部的问题主要在剧情上，单看写的还是过得去的，就是可能多少有点放飞自我导致第五部不知道怎么填坑了，所以导致第五部直接拉了，体验稀碎，在更了一段时间后就搁置了。&lt;/p&gt;
-&lt;p&gt;再后来就是现在的 “新书”《龙王：世界的重启》了，听说是《龙族 4》的重写，但是我还没怎么看，打算养一养到时候再说，因为这段时间以来江南狗贼干出的事不能说是爱上了钱，也只能说是和钱喜结连理了。卖出去的 IP 改编作品质量那可是惊为天人，后来又搞了《龙族》的动画，每一个都是口碑 “炸裂” 无一例外。同时期狗贼还把先前《龙族》一到四部的纸质书搞了个重置，修改了亿点小细节，比如把玩的魔兽换成王者荣耀等等，多少有点神志不清蹭热度了。所以我总感觉狗贼还会干出些什么我都不会意外，先稳一手，以后再看。&lt;/p&gt;
-&lt;p&gt;就当简单缅怀一下我的青春吧，狗贼也越来越像个商人了，希望接下来的更新还能做个灵长类的生物。&lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;江南狗贼还我绘梨衣！！&lt;/span&gt;&lt;/p&gt;
-</content>
-        <category term="杂谈" />
-        <category term="小说" />
-        <category term="江南" />
-        <category term="龙族" />
-        <updated>2022-11-19T09:11:21.000Z</updated>
-    </entry>
-    <entry>
         <id>https://mobius-0.github.io/others/movieTV-Works/dragonrajaTV/</id>
         <title>谈谈《龙族》动画</title>
         <link rel="alternate" href="https://mobius-0.github.io/others/movieTV-Works/dragonrajaTV/"/>
@@ -10940,9 +10924,25 @@ ZF3NU-D6XEJ-48E7Q-27YNC-PC8ED
 &lt;p&gt;现在想想还是很可惜，尽管第一部问题有点多，但是在还原上确实非常的不走心，有的地方甚至非常的出戏。有人说这个画风有点老，其实我觉得还行，画风更老的《战斗妖精雪风》我都看下去了，《popo 子和 pipi 美》的画风更为抽象，就这样的都看不下去就说画风老的多少有点主观审美了。&lt;/p&gt;
 </content>
         <category term="杂谈" />
+        <category term="动画" />
         <category term="江南" />
         <category term="龙族" />
-        <category term="动画" />
+        <updated>2022-11-19T09:11:21.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://mobius-0.github.io/others/literature/dragon%20raja/</id>
+        <title>谈谈《龙族》</title>
+        <link rel="alternate" href="https://mobius-0.github.io/others/literature/dragon%20raja/"/>
+        <content type="html">&lt;p&gt;《龙族》这两个字可以是让人又爱又恨，从一开始的第一部火之晨曦，到后来的 “所谓的” 第五步悼亡者的归来，我基本上都看了两遍多。&lt;/p&gt;
+&lt;p&gt;其实一开始我就很喜欢龙族，那时候在初中的时候班里一直在传龙族一的漫画单行本，只是大家一直在传，还没到我手上的时候就被班主任全部没收了，当时对小说漫画等等的版权管的还不是很严，有的网页或手机 app 非常大胆地盗版了下来，以至于我当时在盗版网站看完了龙族一的漫画。后来到了高中，班里有个壕同学，当然平时和我们一起打游戏，关系很好，几乎每周都会去买一本《知音漫客》或是《神漫》，每到周末的自由时间都可以去蹭他周刊的看，所以这个时候我看完了龙族二的漫画，另一位壕同学则是让我蹭完了《全职高手》，同时我还顺带在学校图书室看完了《三体》的三部曲、《龙族》一到四的小说、《盗墓笔记》全集、一部分的《斗罗大陆 3》以及一些现在已经记不起来名字的书。&lt;/p&gt;
+&lt;p&gt;当然到现在也很喜欢，有的读者说第四部拉了，说起来小说我还是先看的第四部，当时还觉得挺好看的，后来补完后又回头看看，只能说没那么差，但和第三部比起来还是差了不少，属于能看的那种。从一到四部之中选一个问题最大的，我肯定会选第一部，那个时候时间还早，老贼文笔青涩属于是可以接受的小问题，而且第一部已经展开了一个大致的世界观，作为系列开篇任务已经完成，接下来的只能交给续作了。到了第三部可以说是系列巅峰，分出了上中下三本，文本量和剧情发展确实超出我的想象，江南老狗写死绘梨衣到现在依旧是读者心中的痛，可以说第三部是口碑最好的一部。但是第三部也确实存在着对我个人而言无法接受的缺点，那就是即将临近终幕时零驾驶日本五代技术验证机 “心神” 和白王赫尔佐格战斗的剧情。这段剧情不了解的人看了可能会不明觉厉，觉得 “心神” 很厉害什么的，但实际上 “心神” 也并没有书中写的水平高超，“心神” 本身机型就小，不管是载弹量还是载油都少得可怜，双矢量发动机本身推力也不算很大，并且采用的还是损失推力较多的矢量方案，实际中并没有书中那般超机动狗斗的能力。现在看看当时写的就显得有点嘎吹的感觉了。第四部的问题主要在剧情上，单看写的还是过得去的，就是可能多少有点放飞自我导致第五部不知道怎么填坑了，所以导致第五部直接拉了，体验稀碎，在更了一段时间后就搁置了。&lt;/p&gt;
+&lt;p&gt;再后来就是现在的 “新书”《龙王：世界的重启》了，听说是《龙族 4》的重写，但是我还没怎么看，打算养一养到时候再说，因为这段时间以来江南狗贼干出的事不能说是爱上了钱，也只能说是和钱喜结连理了。卖出去的 IP 改编作品质量那可是惊为天人，后来又搞了《龙族》的动画，每一个都是口碑 “炸裂” 无一例外。同时期狗贼还把先前《龙族》一到四部的纸质书搞了个重置，修改了亿点小细节，比如把玩的魔兽换成王者荣耀等等，多少有点神志不清蹭热度了。所以我总感觉狗贼还会干出些什么我都不会意外，先稳一手，以后再看。&lt;/p&gt;
+&lt;p&gt;就当简单缅怀一下我的青春吧，狗贼也越来越像个商人了，希望接下来的更新还能做个灵长类的生物。&lt;span class=&#34;spoiler&#34; title=&#34;你知道的太多了&#34;&gt;江南狗贼还我绘梨衣！！&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="杂谈" />
+        <category term="江南" />
+        <category term="龙族" />
+        <category term="小说" />
         <updated>2022-11-19T09:11:21.000Z</updated>
     </entry>
     <entry>
